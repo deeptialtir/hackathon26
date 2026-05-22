@@ -1,0 +1,54 @@
+# 02-DEC25-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ 
+DB changes
+ : NA
+Connect
+ :  NA
+Platform
+ :  NA
+ 
+Branch
+  : 
+hotfix/2025.12.02
+ 
+ 
+Components Involved
+ 
+& Artefacts
+:
+Chip1 CRM WebUI        
+    
+                      
+    :
+ 
+2025.12.02.0
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+ Private (
+https://app.clickup.com/t/8651091/CHP-3611
+)
+ 
+
+## MC1 SANITY TESTS
+
+Note: The sanity tests to check will be selected based on the release
+ 
+
+## CRM SANITY TESTS:

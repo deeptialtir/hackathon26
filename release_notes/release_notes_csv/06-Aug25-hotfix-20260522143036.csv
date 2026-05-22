@@ -1,0 +1,145 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,@Deepti Vaidyula,,
+Metadata,Release Info,Release date,2025.08.06,,
+Metadata,Release Info,DB changes,Connect : No changes,,
+Metadata,Release Info,Platform,No changes,,
+Metadata,Release Info,Notification, hotfix/2025.08.06,,
+Metadata,Release Info,Branch,hotfix/2025.08.06,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2025.08.06.0,,
+Artefacts,Artefacts,Chip1 WebUI,2025.08.06.0,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,QE documentation link,https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh,,
+Deployed Items,General,Enabling BOM Health report,,,
+Deployed Items,General,"Adding Country of Origin to Excess
+//app.clickup.com/t/8651091/CHP-2700
+)
+//app.clickup.com/t/8651091/CHP-2697
+)
+//app.clickup.com/t/8651091/CHP-2696
+)
+//app.clickup.com/t/8651091/CHP-2702
+)
+//app.clickup.com/t/8651091/CHP-2703
+)
+## MC1 SANITY TESTS",,,
+Deployed Items,Private ( https,Feature/Flow,,,
+Deployed Items,Private ( https,Stage,,,
+Deployed Items,Private ( https,Prod,,,
+Deployed Items,Private ( https,Remarks,,,
+Deployed Items,Private ( https,"New User Signup from mc1
+yes",,,
+Deployed Items,Private ( https,"Mc1 user invite - signup
+yes",,,
+Deployed Items,Private ( https,On stage should suffice,,,
+Deployed Items,Private ( https,"Upload Bom & Excess and verify in CRM
+yes
+yes",,,
+Deployed Items,Private ( https,"Manual RFQ
+yes
+yes",,,
+Deployed Items,Private ( https,"Active Quote (create, edit)
+yes
+yes (create)",,,
+Deployed Items,Private ( https,"Sales Order
+(create,
+edit
+)
+yes
+yes(create)",,,
+Deployed Items,Private ( https,"Shipping & invoice
+yes",,,
+Deployed Items,Private ( https,"Lead Account & Transfer
+yes (basic. creation, bom, excess, rfq transfer)",,,
+Deployed Items,Private ( https,Bids,,,
+Deployed Items,Private ( https,"Parts Tracker
+yes",,,
+Deployed Items,Private ( https,"Search
+yes
+yes",,,
+Deployed Items,Private ( https,"Page Navigations
+yes
+yes",,,
+Deployed Items,Private ( https,"Edit Project
+yes
+yes",,,
+Deployed Items,Private ( https,"Notification Emails
+yes (quote, so, shipment)
+yes(quote, so)",,,
+Deployed Items,Private ( https,"Download excess and Bom Template, fill and upload.
+yes",,,
+Deployed Items,## CRM SANITY TESTS,Feature/Flow,,,
+Deployed Items,## CRM SANITY TESTS,Stage,,,
+Deployed Items,## CRM SANITY TESTS,Production,,,
+Deployed Items,## CRM SANITY TESTS,Remarks,,,
+Deployed Items,## CRM SANITY TESTS,"Create BOM in MC1, check in xcrm and new crm
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Create RFQ in MC1, check in xcrm and crm
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Upload BOM from CRM
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,Page Navigations,,,
+Deployed Items,## CRM SANITY TESTS,"Yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Deep links for Accounts, RFQs, Quotes and Orders
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Edit Project
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Global Search
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Filters
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Sorting of tables
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Page Search
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Download excess and Bom Template, fill and upload.
+yes
+yes
+#US25RQ07721 - US25QU00181 - US25SO00125 - DE25PO00091 - US25SO00125 - US25INV00066",,,
+Deployed Items,Stage,altir.test.6666.com,,@yopmail,
+Deployed Items,LA,altir.test.7890.com,,@yopmail,
+Deployed Items,Prod,US25QU03593 - US25SO00908,,,
+Deployed Items,Prod,"dvaidyula.co
+### CRM",,@altir,
+Deployed Items,CHP-2668,"Fix Create Project Button disabled issue in MyChip1 (
+)",,,
+Deployed Items,Feat,"Added country of origin column (MC1) (
+)",,,
+Deployed Items,Fix,"Added country of origin column on excess part details (CRM) (
+)",,,
+Deployed Items,CHP-2668,Fix Create Project Button disabled issue in MyChip1 (,,,
+Deployed Items,CHP-2668,") - refactoring of create project validation schema,",no changes in behavior,,
+Deployed Items,Fix,"Added country of origin column on excess part details (CRM) (
+)
+### MC1",,,
+Deployed Items,CHP-2583,Phone number - Add a new type and util function,,,
+Deployed Items,CHP-2615,"Share Project / Part URL to MC1 (
+)",,,
+Deployed Items,CHP-2656,"Create project - Allow contact selection in Account context, bind contacts list to account, some other fixes (
+)",,,
+Deployed Items,CHP-2668,"Fix Create Project Button disabled issue in MyChip1 (
+)
+update potential summary title to 'Opportunity Potential'",,,
+Deployed Items,Feat,"Added country of origin column (MC1) (
+)",,,
+Deployed Items,Fix,"Added country of origin column on excess part details (CRM) (
+)",,,
+Deployed Items,CHP-2656,"Create project - Allow contact selection in Account context, bind contacts list to account, some other fixes (
+) - validation schema changed on MC1 for create project",,,
+Deployed Items,CHP-2668,"Fix Create Project Button disabled issue in MyChip1 (
+)
+fixes validation schema issue from the commit above",,,
+Deployed Items,Feat,"Added country of origin column (MC1) (
+)",,,

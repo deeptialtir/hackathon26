@@ -1,0 +1,61 @@
+# 09-JAN26-HOTFIX🔥
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Harika Guntamukkala
+ 
+Release date
+ : 2026.01.09
+ 
+DB changes
+ : 
+Connect
+ : No changes
+Platform
+ : No changes
+Notification : 
+No changes
+ 
+Branch
+  : hotfix/2026.01.09
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Account                  
+  
+               
+  :
+ 
+2026.01.09.0
+Chip1 Transaction  
+    
+                      
+  : 2026.01.09.0
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+ Private (
+https://app.clickup.com/t/8651091/CHP-3827
+)
+ 
+
+## TESTING DONE
+
+Validations are done on one of the prod user(abhinay), create and patch working fine
+Basic smoke checks are done.

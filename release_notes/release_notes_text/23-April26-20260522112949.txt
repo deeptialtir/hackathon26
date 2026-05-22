@@ -1,0 +1,533 @@
+# 23-APRIL26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+, 
+@Umamahesh
+ 
+Release date
+ : 2026.04.23
+ 
+DB changes
+ : 
+Connect
+ : hotfix/2026.04.23
+Platform
+ : No change
+Notification : 
+No change
+ 
+Branch
+  : release/2026.04.24
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Account  
+    
+                        
+        : 2026.04.24.0
+Chip1 CRM WebUI                 
+    
+          
+ : 2026.04.24.1
+Chip1 Transaction                             
+    : 2026.04.22.0
+
+## TESTABLE ITEMS FROM RELEASE
+
+### RFQ MANAGEMENT@HARIKA GUNTAMUKKALA
+
+Bulk RFQ Status Update (#3713):
+ Verify "Update Status" action appears on RFQ list, RFQ details, Account RFQs, Contact RFQs, and Part RFQs when at least one line is selected - 
+Verified
+Bulk Status Modal fields:
+ Test Main Status, Detailed Status, and optional Reason field submission - 
+Verified
+FAB hiding:
+ Confirm layout FAB is hidden on RFQ tab in Contact/Part details (no stacked FABs)
+Verified
+Old "Close Lines" flow:
+ Verify it's fully removed/replaced 
+Verified
+Row-level Update Status (#3722):
+ Test "Update Status" option from row context menu -
+Verified
+Parent Request selection:
+ Verify selecting a Request auto-includes all child lines in update count 
+Verified
+Mixed selection handling:
+ Test Request-level + Line-level selections resolve correctly 
+Verified
+Single-line update:
+ Confirm 
+reason
+ field is sent via the same payload builder 
+Verified
+Risk Level column labels (#3713):
+ Verify labels use 
+riskAnalysis.levels.*
+ i18n keys 
+Verified
+Main RFQ list filter alignment (#3682):
+ Verify loader data matches component filter state
+Verified
+Record Offer mail sent flag (#3729):
+ Test flag updates correctly after sending offer
+Verified
+
+### ACCOUNT MANAGEMENT
+
+@Harika Guntamukkala
+ 
+Bulk SR create FAB (#3704):
+ Test bulk Sourcing Request creation from Account Detail FAB 
+Verified
+SR permissions (#3716):
+ Verify FAB SR option visibility by user role 
+Verified
+Feature flag migration (#3717):
+ Confirm 
+open-and-search-accounts
+ flag replaces old flags 
+Verified
+Search vs Open Accounts mode:
+ Verify "unassigned" is set correctly in each mode (including My Accounts) 
+Verified
+Read-only filters:
+ Confirm selector is disabled AND remove action is hidden
+Clear All button:
+ Verify disabled state when no clearable filters exist 
+Verified
+Role filters:
+ Confirm hidden in Open Accounts mode 
+Verified
+@Deepti Vaidyula
+ 
+Website search field:
+ Test website as a search field with filter mapping - 
+Link
+ - 
+Verified
+Request ownership FAB:
+ Verify shared mapper resolves default assignee correctly 
+Verified
+Ownership Request decoupling (#3712):
+ Test works in both Search mode AND Open Accounts mode 
+Verified
+Account Search Page background (#3712):
+ Visual check for 
+theme.palette.background.default
+ in light/dark themes 
+Verified
+Duplicate account prevention (#3735):
+ Rapid-click Create button — verify only one account created 
+Verified
+Loading state (#3735):
+ Confirm Create button disables during submission 
+Verified
+Error recovery (#3735):
+ Verify button re-enables after failed creation 
+Verified
+
+### ACCOUNT INVOICING@DEEPTI VAIDYULA
+
+Address autocomplete (#3712):
+ Verify filtered + normalized addresses appear in Invoice Postal Address Preview 
+Verified
+Credentials field (#3715):
+ Confirm single multiline Credentials field replaces username/password in Online mode -
+ Not enabled
+Credentials persistence:
+ Save and reload — verify data persists 
+ Not enabled
+Credentials validation:
+ Test schema validation on the new field
+ Not enabled
+Obsolete labels removed:
+ Confirm 
+invoicePortalUsername
+ / 
+invoicePortalPassword
+ no longer appear
+ Not enabled
+Placeholder text:
+ Verify 
+enterCredentials
+ placeholder displays
+ Not enabled
+Data migration:
+ Check behavior for accounts with legacy username/password data
+ Not enabled
+Notes field component (#3715):
+ Test extracted 
+InvoicePreferenceNotesField
+ renders and saves
+ Not enabled
+
+### SOURCING / STOCK@HARIKA GUNTAMUKKALAVERIFIED
+
+StockList polling (#3719):
+ Verify 2-second polling when items are loading
+Polling stops:
+ Confirm polling ceases when all items finish loading
+Auto-selection gating:
+ Verify query disabled and component returns null during MPN auto-selection
+Market Activity parity:
+ Confirm StockList matches Market Activity behavior
+Stock refactor smoke test (#3736):
+ Regression-test InfoBit, SummaryCard, stock lists, filters, sorts
+Stock enums:
+ Verify 
+EStockSort
+, 
+EStockUserRole
+ behave identically post-migration
+General Stock Changes (#3731):
+ Regression-test stock workflows end-to-end
+
+### OPPORTUNITIES — MATCH ACCOUNT@DEEPTI VAIDYULA
+
+Bulk Match Account (#3718):
+ Test multi-select opportunities with Match Account action 
+Verified
+Per-opportunity feedback:
+ Verify success/failure indication for each item 
+Verified
+Match Account Modal Step 2 (#3720):
+ Confirm Step 2 is hidden 
+Verified
+New checkboxes (#3720):
+ Test both checkboxes on page 1 — all combinations (both on, both off, mixed) 
+Verified
+Modal flow completion:
+ Verify successful submission with each checkbox state
+Verified
+
+### BUG FIXES@HARIKA GUNTAMUKKALAVERIFIED
+
+Quote null check (#3725):
+ Reproduce Sentry issue 111095793 — verify no runtime error
+Quote regression:
+ Test quote viewing/editing with various null/missing property states
+Diff between 
+release/2026.04.21
+ and 
+develop
+:
+Account Detail: Add bulk SR create fab item (
+#3704
+)
+Account Fab: update SR permission (
+#3716
+)
+Add development-only build and workflow enhancements (
+#3721
+)
+chore(workflows): add conditional build jobs for mc1 and crm apps based on changes 
+dev_only
+chore(workflows): assign PR author as fallback when reviewers are set 
+dev_only
+Expand root change detection and resolve code review findings (
+#3732
+)
+feat(record-offer): mail sent flag changes (
+#3729
+)
+feat: enable bulk RFQ status updates and a dedicated fab action component (
+#3722
+) 
+This PR improves the RFQ status update workflow by introducing row-level actions and refining the bulk update logic to handle both individual lines and entire requests.****Key Changes**** 
+Row-Level Status Updates:
+ Added an "Update Status" option to the 
+RfqListMenu
+, enabling users to trigger status updates directly from the row context menu.
+Enhanced Bulk Logic:
+ Refactored 
+useUpdateRfqStatus
+ to support bulk updates for entire Requests. When a Request is selected, all associated lines are now automatically included in the update count and processing.
+New Shared Component:
+ Introduced 
+RfqUpdateStatusFabAction
+ to encapsulate the status update logic for Floating Action Buttons, reducing duplication in 
+RfqFab
+.
+Improved Item Indexing:
+ Updated 
+RfqList
+ to use a flattened item map, ensuring that nested RFQ lines are correctly indexed and accessible for all list-wide actions.
+Logic Refinement:
+ Improved the helper functions in 
+useUpdateRfqStatus
+ to handle complex ID mappings (Request IDs vs Line IDs) more reliably using nested Maps.
+feat: enhance Account Ownership Requests and Implement Read-Only Filters (
+#3717
+) 
+Feature flag consolidation
+: replaced separate 
+open-accounts
+ / 
+search-accounts
+ flags with 
+open-and-search-accounts
+ and updated all gating logic.
+Account list behavior
+: introduced “search accounts mode” vs “open accounts mode” and ensured 
+unassigned
+ is set correctly for each path (including My Accounts).
+Filters UX
+: enforced read-only filter keys properly (disable selector + remove actions), improved “Clear all” disabling logic, and hid role filters when in Open Accounts mode.
+Search preset enhancements
+: added 
+website
+ as a supported search field + filter mapping.
+Request ownership
+: added shared mapping/utilities for request-ownership accounts and default assignee resolution; updated FAB to use the shared mapper.
+feat: implement auto-selection gating and custom polling for stock queries in StockList (
+#3719
+) 
+This PR standardizes the behavior of the Sourcing Stock list by implementing the same polling and auto-selection logic used in the Market Activity list. This ensures consistent data fetching behavior across different sourcing tabs.**Key Changes:** 
+Polling Logic
+: Integrated 
+refetchIntervalForHistoricalActivityQueryData
+ into the 
+StockList
+ query. The list will now poll every 2 seconds specifically when items are in a 
+loading
+ state, matching the 
+Market Activity
+ behavior.
+Auto-Selection Integration
+: Added the 
+useAutoSelectMpns
+ hook to 
+StockList
+. The query is now disabled while MPNs are being auto-selected, and the component returns 
+null
+ to avoid unnecessary renders during this process.
+Refactored Query Options
+: Updated 
+stockQueryOptions
+ to use an object-based parameter pattern (
+{ payload, usePlaceholderData }
+) instead of positional arguments, improving consistency with other query option definitions in the codebase.
+Improved Type Safety
+: Refined the 
+TStockQueryOptionsParams
+ type definition in 
+stockQueryOptions.ts
+.
+feat: implement bulk RFQ status update functionality with reason field (
+#3713
+) 
+Thiswork replaces the RFQ FAB “close lines” flow with an **Update status** action that opens a **bulk status modal**. Users pick **main status**, **detailed status**, and an optional **reason**; the mutation sends `status`, optional `detailedStatus`, and optional `reason` on each line via `updateRfqs`.**Product / UX** 
+Update status
+ appears on RFQ list, RFQ details, account RFQs, contact RFQs, and part RFQs when at least one 
+request line
+ is selected (Refresh icon; copy uses 
+fab.updateStatus
+).
+On 
+contact
+ and 
+part
+ details, the layout FAB is hidden on the RFQ tab so it doesn’t stack with the list; the RFQ tab supplies its own FAB (contact RFQ tab passes a small wrapper that loads contact data for the existing FAB).
+Adds 
+rfq.bulkUpdateStatus
+ → 
+RfqBulkUpdateStatusModal
+; reuses 
+RfqLineStatusSelector
+ and shared 
+rfqUpdateStatusSchema
+ / 
+FormikText
+ for 
+reason
+.
+Introduces 
+useUpdateRfqStatus
+, 
+useUpdateRfqLinesStatusMutation
+ (generalizes the old close-lines mutation), and 
+rfqStatusUtils
+ for consistent item payloads; single-line 
+RfqItemUpdateStatusModal
+ also sends 
+reason
+ through the same builder.
+RFQ list VM
+: risk level column labels use 
+project
+ i18n (
+riskAnalysis.levels.*
+) instead of shared enum labels; 
+useRfqListQueryOptions
+ loads 
+['rfq', 'project']
+.
+Small 
+selection store
+ cleanup when applying 
+setRowSelection
+.
+useCloseRfqLines
+ and the confirmation-only close flow from the RFQ FAB in favor of the new modal.
+fix(quote): update null checks and adapt properties to prevent runtime errors (
+#3725
+) 
+Fixes 
+
+https://altir-chip1.sentry.io/issues/111095793/?alert_rule_id=179716&alert_timestamp=1775816449962&…
+fix(rfq): align loader and component filter for main RFQ list (
+#3682
+)
+Fix: Prevent duplicate account creation and add loading state (
+#3735
+) 
+This PR enhances the `CreateAccountModal` by implementing safeguards against accidental double submissions and improving the user experience during the account creation process.****Key Changes**** 
+Double-Submit Protection
+: Introduced a 
+useRef
+ tracker (
+createAccountInFlightRef
+) to ensure only one account creation request can be active at a time, preventing duplicate entries if a user clicks the submit button multiple times.
+Loading State
+: Added a new 
+isCreatingAccount
+ state to track the asynchronous creation process.
+UI Improvements
+: The "Create" button is now automatically disabled while the account is being created, providing clear visual feedback and preventing further interactions until the process completes or fails.
+Error Resilience
+: Wrapped the creation logic in a 
+try...finally
+ block to ensure the loading state and flight tracking are correctly reset even if the request fails.
+MC1 Stock part 1 - Refactor and centralize stock types into core package (
+#3736
+) 
+This pull request refactors and centralizes stock-related types, enums, and code into the `@chip1/core` package. A new `createStockService` factory has been introduced in the core package for improved reusability and maintainability. Key changes include: 
+Migration of 
+InfoBit
+, 
+SummaryCard
+ primitives, and stock-related types to the core package.
+Creation of 
+packages/core/config/stock.ts
+ for reusable enums like 
+EStockSort
+, 
+EStockUserRole
+, etc.
+Centralization of shared stock types and API payload types in 
+packages/core/types
+.
+CRM-specific code updated to re-export types and enums from the core package.
+refactor: Account List Logic and Invoicing Address Handling (
+#3712
+) 
+**Key Changes:** 
+Account List Improvements
+: 
+Decoupled the 
+Ownership Request
+ functionality from the "Open Accounts" view mode. It is now enabled globally whenever the 
+open-accounts
+ feature flag is active, including in Search mode.
+Simplified feature flag checks in 
+AllAccountList.tsx
+ for better readability.
+Invoicing Module Refactor
+: 
+Optimized 
+AccountInvoicingDeliverySection.tsx
+ by implementing 
+useMemo
+ for address filtering.
+The 
+InvoicePostalAddressPreview
+ now dynamically filters and normalizes the account's existing addresses for the autocomplete options, improving data reliability.
+UI & Styling
+: 
+Updated 
+AccountSearchPage
+ background color to use 
+theme.palette.background.default
+, ensuring better alignment with the application's design system and theme consistency.
+refactor: consolidate invoice portal credentials into a single field and extract notes field component (
+#3715
+) 
+This PR standardizes the handling of account invoicing portal credentials by replacing separate `username` and `password` fields with a single, multiline `credentials` field. This change simplifies the data model and provides more flexibility for different portal authentication methods.****Key Changes**** 
+UI Refactoring
+: 
+Updated 
+AccountInvoicingDeliverySection
+ to use the new 
+credentials
+ field (multiline) when the invoicing mode is set to "Online".
+Extracted 
+InvoicePreferenceNotesField
+ into a reusable functional component to improve code organization and reduce duplication.
+Cleaned up JSX structure by removing unnecessary fragments and improving conditional rendering logic.
+Data Model & Types
+: 
+Modified 
+TAccountInvoicePreference
+ in 
+account.ts
+ to include the 
+credentials
+ property and remove the deprecated 
+username
+ and 
+password
+ fields.
+Validation
+: 
+Updated the account validation schema in 
+validation/account.ts
+ to reflect the transition from 
+username
+/
+password
+ to the unified 
+credentials
+ field.
+Localization
+: 
+Updated 
+account.json
+ to remove obsolete translation keys (
+invoicePortalUsername
+, 
+invoicePortalPassword
+).
+Added 
+enterCredentials
+ placeholder and ensured the 
+credentials
+ label is correctly mapped.
+Stock Changes (
+#3731
+)
+Update : Bulk Match Account functionality on Opportunities  (
+#3718
+)
+Update : Hidden step 2 and added 2 checkboxes on the first page on Match Account Modal (
+#3720
+)
+UPD:
+fix: SR Issues (
+#3737
+)
+PO: Fix buyer section fields (
+#3739
+)
+The last commit in this changelog is 
+343e15c

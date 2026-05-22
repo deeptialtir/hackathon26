@@ -1,0 +1,62 @@
+# 21-APRIL26-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+ 
+@Umamahesh
+ 
+Release date
+ : 2026.04.21
+ 
+DB changes
+ : 
+Connect
+ : No change
+Platform
+ : No change
+Notification : 
+No change
+ 
+Branch
+  : hotfix/2026.04.22
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 CRM WebUI  
+    
+                         
+ : 2026.04.22.0
+Chip1 Transaction  
+    
+                        
+  : 2026.04.22.1
+ 
+List of deployed items
+In Market Offer, Increase the size of MPN field to match other screen as SO/RFQ/PO. 
+Verified
+In Record an offer also show Manufacturer in first line and move the lead time and expires field to 3rd line. 
+Verified
+In Open market offers and sourcing request offers → add buyer fillter. User of type Buyer 
+Verified
+On offer, change the label of fields “Warranty Accepted by Sales” , “Part Condition Accepted by Sales” to “Warranty” and “Part Condition”. As this is more for supplier to say what they offer vs. what Sales needs. 
+Verified
+ On record offer, currency change is getting overridden; (user reported- if I switch from euros to dollars, it doesn't save, and I have to change it again.)
+Verified
+Need to add option to “Add Part” in MPN. The user is trying to create a part with different manufacturer..
+Verified
+We are not letting someone mark SR as “Sourcing complete” if not offers. This should not be hard requirement as we might have a case where there are no offers. 
+Verified
+Stockline cancellation and allocation gap fix - 
+Verified
+Open issues on stage
+Need to add option to “Add Part” in MPN. The user is trying to create a part with different manufacturer.
+This is missing in 'Request an Offer'. 
+LINK
+When we create PO from SO-> SR -> create PO, the MPN field is not editable. Is this expected? 
+LINK

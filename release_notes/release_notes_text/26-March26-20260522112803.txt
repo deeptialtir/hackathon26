@@ -1,0 +1,188 @@
+# 26-MARCH26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+, 
+@Umamahesh
+ 
+@Harika Guntamukkala
+ 
+Release date
+ : 2026.03.26
+ 
+DB changes
+ : 
+Connect
+ : No change
+Platform
+ : No change
+Notification : 
+No change
+ 
+Branch
+  :    release/2026.03.25
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Account         
+    
+                          
+  : 2026.03.25.0
+Chip1 Part                 
+    
+                          
+  : 2026.03.25.0
+Chip1 Transaction  
+    
+                          
+  : 2026.03.25.6
+Chip1 CRM WebUI                   
+    
+           
+ : 2026.03.25.5
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+PO line xcrmRedirection → As XCRM does not support a dedicated page for individual PO lines, the redirection should happen at the PO level. Hence, in the UI, we should map to po.crmId instead of line.crmId.
+   Request Offer   
+Request offer to have quantity captured from the SR by default and user can edit it if they want to Request an offer, user needs to preview the email content (body). Send to be replaced with Next and upon clicking next should show the email content
+Sourcing Request  
+SR list - the time component is missing from date fields (only date shown, no time). Other views have it. Needs to be added consistently.
+SR - Request for purchasing -  Buyer list to be cleared on Request for purchasing. Only the newest buying team selection should be visible.
+SR - Remove all other options except for create quote from line actions on RFQ > Offers tab, OrderLine > Offers table, Sr > Offer tab 
+      - Few things in SR list view
+          1. “Assigned to me” filter as well as Assigned to and Assigned Team filter not working.
+          2. Change “Team | Assigned To” in list to “Buying Team | Buyer” 
+          3. Change names of filters “Assigned to” and “Assigned team” to Buying Team and Buyer.
+           4. Add time to created date in all SR list views, in RFQ, SO and main list views.
+ 
+Basic Info Pane Andrey Kuznetcov - 
+Verified
+Improvements to basic info pane for offers/excess/po and all purchasing entities and access - 
+@Deepti Vaidyula
+ 
+ 2. Quote PDF gaps Srinidhi Gundimi - 
+@Harika Guntamukkala
+ 
+Address gaps on quote pdf
+ 
+3. RFQ Gaps - 03/23 Srinidhi Gundimi Vinay Bajjuri - 
+@Harika Guntamukkala
+ 
+RoHS value is not getting populated (US26RQ-52421.01) - 
+Still Persisiting
+Category, Supplier Package is not populated for some parts (US26RQ-52421.01) - 
+Still Persisiting(US26RQ-1105750.01)
+Add field sourcing type of RFQ details and copy that over to SR.  
+Except sourcing type rest looks fine
+In create, add it to the same row where we have req type, req source - 
+Verified
+In details also add it to the same row as req type, source etc. (see below for additional changes)- 
+Verified
+In RFQ details create a separate accordian caled Opportunity and move the following  
+Row 1 -  req type, req level, req source, Sourcing Type - 
+Verified
+Row 2 - Notes - 
+Verified 
+Move Create by to Account Info under, contact and also add created on, both should be read only.- 
+Verified
+Rename “Opportunity and Requirements” to Part Requirements. Add MPN, Mfg CPN and Qty as summarization values on accordion - 
+Verified
+Add Alternative Type in RFQ alernate section similar to create - 
+Verified
+In Create RFQ for Quote add qty column and copy it over to quote. - 
+Verified
+ 
+4. RFQ Sync Gaps - 03/23 Srinidhi Gundimi - 
+@Harika Guntamukkala
+ 
+Check why the contact and salesperson information is missing for this RFQ link in APEX. I can see them in xCRM 
+  Dual Use and Supplier Package Quantity are not getting synced to xCRM 
+Still Persisiting
+5. Quote gaps - 03/23 Vinay Bajjuri  
+@Harika Guntamukkala
+ 
+In Offers -> Quote, the following information is not carried from RFQ/Offer into the Quote  
+Only Missing MFG label is displayed. The other 2 labels are missing - 
+Still persisting
+The notes that were entered in the RFQ are missing (check RFQ details notes and also enter the notes from xCRM) 
+outbound- verified
+Payment Terms are not getting carried (from the account) 
+Still Persisiting
+Expires on Date is not fully displayed. See the screenshot 
+Still Persisiting
+In RFQ -> Quote, the following information is not populated from RFQ   -
+ Except payment terms rest looks fine
+Labels, Warranty Accepted by Sales, Part Condition Accepted by Sales, Expires On and Payment terms (from Account)
+Upon saving same info is not getting stored as well.
+Add currency field to quote similar to rfq. - 
+Verified
+ 
+6. Document Type Sandeep Thatikonda please assign someone. 
+@Deepti Vaidyula
+  ---→ 
+Not Fixed
+Need to expand document types to cover other scenarios across all entities.
+Accounts
+  3PL contract
+  Long Term Storage
+7. Search MPN in type ahead Andrey Kuznetcov 
+@Deepti Vaidyula
+ - 
+Verified
+When creating a RFQ and in other MPN type ahead if we search by part without special characters it is not showing the match. But shows up if we do via global search.
+e.g., RN4677-V/RM100 if we search as RN4677VRM100 it matches actual part number in global search but not type ahead. -
+This is causing folks to create new part numbers as looks like lot of times the customers end up sharing number without special chacters.
+ 
+ 
+8. xCRM user sync  Pranab Dutta Srinidhi Gundimi 
+@Deepti Vaidyula
+ 
+  When records are syncing from Apex to xCRM, it is showing as MC1 user. Instead it should be the name of the real user, especially for RFQ, SOs etc.----→ 
+Not Fixed
+9. Offers - Minor changes Arvind Dhakar 
+@Deepti Vaidyula
+ 
+Minor improvements
+On offers request - default the qty to qty in SR - 
+Verified
+Change date code fields to date code year and date code M, year should be first.- 
+Verified
+Make offer qty as optional. Looks like there are cases where supplier would come back with no qty and they want to record it. --→ 
+Not Fixed
+ 
+10. SR - Micro Dasboard Andrey Kuznetcov 
+@Deepti Vaidyula
+  - 
+Verified
+Few tweaks to micro dashboard. And also change in sequence. the message after - please add it as a hover text for MD.
+Open SRs - Sourcing Requests Not Assigned
+     The current Open definition
+Assigned SRs - Sourcing Requests Assigned and not started
+     The current definition of assigned
+In Progress SRs - Sourcing Requests with offers
+     The current definition of “In Sourcing”, basically any SR in Offers Received or Offers Requested Status
+Completed SRs - Sourcing Requests that are quoted
+     SR in Sourcing Completed status (offers gathered)
+Open PRs- New Purchase requests
+     SR in Purchase Requested status and no assigned to Buyer
+Assigend PRs - Assigned Purchase requests
+     The current definition of assigned. SR in Purchase Requested status and buyer assigned
+Completed PRs - Requests that have PO created
+     SRs in PO Created status

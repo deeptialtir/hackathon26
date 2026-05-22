@@ -1,0 +1,189 @@
+# 5 NOV25
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2025.11.05
+DB changes
+ : 
+Connect
+ : No changes
+Platform
+ : No changes
+Notification : 
+No changes
+Branch
+  : release/2025.11.05
+Components Involved
+ 
+& Artefacts
+: 
+Chip1 CRM WebUI   
+                           : 2025.11.05.1
+Chip1 Part        
+                                     : 2025.11.05.0
+Chip1 Transaction  
+    
+                      
+    :
+ 
+2025.11.05.1
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+ CHP-3430 
+CHP-3429 
+Few Dashboard fixes : Trending parts considering data groups
+CHP-3439 - Download Project pricing
+Part Health - Account information populating
+UI enhancements
+UI changes:
+Chore: Dedupe deps and add nullchecks (
+#1537
+) - dev only
+chore: update turbo 2.5.8 -> 2.6.0 (
+#1535
+) - dev only
+CHP-3342
+: Pass and show URL filters (
+#1503
+)  - Harika - 
+Basic checks done as it is not fully integrated
+CHP-3419
+ - Add Create Visit Form (
+#1524
+) - Harika
+CHP-3431
+: DateCodeYear desc sort order (
+#1523
+) - Deepti - 
+Verified 
+CHP-3437
+: Enhance Sourcing Tabs (
+#1526
+) - Harika
+CHP-3437
+: Update sourcing list to include manufacturer details (
+#1531
+) - Harika - 
+Verified
+CHP-3438
+: Add 'all' engagement period option for last activity(
+#1527
+) - Deepti - 
+Verified
+CHP-3439
+: Integrate export button in Project Pricing Tab (
+#1529
+) - Deepti- 
+Verified
+CHP-3443
+: Refactor Order Status Summary (
+#1533
+) - Deepti - 
+Seeing error. Posted in channel.
+CHP-3449
+: Update Project List columns (
+#1536
+) - Uma-
+Verified
+feat(Sourcing): add secondary copy text for manufacturer in historical activity columns (
+#1532
+) - Harika - 
+Verified
+feat(SourcingForm): add category selection persistence and default category handling (
+#1530
+) - Harika - 
+Verified
+feat: enhance QuoteList and RfqList (
+#1431
+) - Uma- 
+dev changes, did sanity on rfq, quote list view
+fix(SourcingForm): uncheck showAlternatives option by default (
+#1528
+) - Harika - 
+Verified
+UPD (merged):
+System Components - Enable feature flag on production
+Refactor: Simplify aggregated cell rendering in Sourcing (
+#1544
+)
+ - In historical activity and market activity table, i have removed few padding from the headers groups - Deepti - 
+Verified
+ (check sales orders(2) from below screenshot)
+Refactor: Update account role filter to support multiple IDs instead of a single ID (
+#1543
+)
+ - Account details -> fixed account owner filter, it was not working earlier 
+- Deepti -Verified
+Backend changes:
+Above are UI changes, and below are backend changes, 
+CHP-3430 - DV - 
+verified
+CHP-3429 - DV - 
+Seeing issue. Posted in channel
+Few Dashboard fixes : Trending parts considering data groups - Uma-
+Dashboard testing has to hold
+CHP-3439 - Download Project pricing - DV - 
+Verified
+. 
+Part Health - Account information populating - 
+Verified 
+-DV
+ 
+Bugs in  stage: 
+@Sandeep T
+ 
+Created Normal priority bug for the index error - 
+CHP-3455
+.  The automation runs are good.
+Found non-blocker issues in Sourcing.
+Alternatives are not showing up in the summary tab list view as a tag(stil they are showing up in the Alternative dropdown list)
+Whatever search happens in main souring tab, it is showing same under any RFQ details -> Tracking Private (
+https://app.clickup.com/t/8651091/CHP-3457
+)
+When an alternative is added to a part, it does not appear in the UI immediately; it is only visible after a refresh.
+Dashboards: In dashboard under Proactive Opportunities data is not coming up which results blank data showing up in UI in the List view 
+Accessing Orders -> Order line -> All activity is giving following error: Not a blocker. ( same as PROD)
+
+https://crm.stage.chip1.info/sales/orders/690b42dbfbecc05f9bdae653/line/690b42dbfbecc05f9bdae652/ac…
+ 
+{"status":500,"message":"Type 'orderLine' does not exist"}
+correlation_id: c11f432b-7963-48ef-8906-f301396bd000
+Order line -> All activity was not ready. Earlier was seeing Oops page. But now, it keeps loading. 
+Uploading Nexperia BOM failing to download: 
+Nexperia Spec buy 10-15 & 10-16 2.xlsx
+Adding manually same part failing to download. Upload a bom and add one of the parts from the project manually, and then export project. This is failing. 
+
+https://crm.stage.chip1.info/projects/690b5cc037c2aa17e0c4316b/pricing
+ 
+ - Added ERJ12ZYJ560U to the same project manually and then downloaded the file. : 
+Deepti Vaidyula: Hi team, seeing the following issues in export project pricing: ... | Accounts, Requests, Quotes and Orders | Microsoft Teams
+This is another issue. We are able to download but the price is showing for different parts which are not in the bom: 
+Deepti Vaidyula: 3. This is another issue. We are able to download but the price i... | Accounts, Requests, Quotes and Orders | Microsoft Teams
+
+https://crm.stage.chip1.info/projects/690b8d5707bdef6d0404f4e7/pricing
+ 
+ - pagination issue for more parts in pricing- newly uploaded project. Seems to be broken for this project alone. Works for 
+
+https://crm.stage.chip1.info/projects/690b66ea37c2aa17e0c431d8/pricing
+ 
+. Pagination is good on prod as well.  
+Missed in production:

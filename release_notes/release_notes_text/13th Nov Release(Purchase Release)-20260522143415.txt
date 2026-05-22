@@ -1,0 +1,111 @@
+# 13TH NOV RELEASE(PURCHASE RELEASE)
+
+Environment: Stage
+Status: Good
+Prod release owner:  
+@Umamahesh
+ 
+@Harika Guntamukkala
+ 
+@Deepti Vaidyula
+ 
+Release date
+ : 2025.11.13
+ 
+DB changes
+ : 
+Connect
+ : release/2025.11.13
+Platform
+ : release/2025.11.13
+Notification : 
+No changes
+ 
+Branch
+  : release/2025.11.13
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Account        
+    
+                      
+    :
+ 
+2025.11.13.1
+Chip1 Transaction  
+    
+                      
+   :
+ 
+2025.11.13.1
+Chip1 Part                 
+    
+                      
+   :
+ 
+2025.11.13.0
+Chip1 CRM WebUI                 
+    
+         
+ :
+ 
+2025.11.13.0
+fn connect                 
+    
+                      
+   :
+ 
+2025.11.13.0
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+Automation Runs:
+jenkins.chip1.info
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/crm-ui-tests/22/
+jenkins.chip1.info
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/chip1-ui-tests/48/
+Changes Involved:
+Nov 12 PO/P1 issues report in UAT review coda sheet. 
+
+https://coda.io/d/Chip-1_dWNX8zdEnCk/UAT-Reviews_sugk_DCc#_luOHF3CM
+ 
+Items involved in MVP Private (
+https://app.clickup.com/8651091/docs/880ak-41314/880ak-48034
+)
+Bugs in Build:
+Private (
+https://app.clickup.com/t/8651091/CHP-3505
+)
+Private (
+https://app.clickup.com/8651091/v/l/880ak-43314
+)
+Contacts: Seeing many contacts without account name on stage. Contacts before LA transfer also don't have account name. -NOT on PROD
+Orders: Account name is present for all orders. Contact name is missing for some. Ex: DE25SO00880
+Follow up task: The flag is set fine. But the follow up task is not created in tasks: correlation_id: 48b8852c-8754-42de-9b9e-ec771e8eda6f
+Opportunity potential card shows $0 still
+Dashboard: Add 'LastActivity30' as the fourth option under Account Tags section in dashboard - Still seeing in second position.
+Bugs in production:
+Private (
+https://app.clickup.com/t/8651091/CHP-3506
+)-HIGH
+Private (
+https://app.clickup.com/t/8651091/CHP-3507
+)-HIGH
+Not seeing part health for some parts in lifecycle on prod: 
+link
+ Visible for some.
+Status for RFQs is missing on prod for many RFQs
+order status are not updated for existing so's in claesr account 
+Private (
+https://app.clickup.com/t/8651091/CHP-3508
+)-URGENT

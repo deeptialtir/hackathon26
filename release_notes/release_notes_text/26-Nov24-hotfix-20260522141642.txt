@@ -1,0 +1,38 @@
+# 26-NOV24-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+@Deepti Vaidyula
+ 
+Release date
+ : 2024.11.26
+DB changes
+ : 
+Connect
+ : No change
+Platform
+ : release/2024.11.26
+Key Clock
+: No change
+Branch
+  : No Change
+Components Involved
+ 
+& Artefacts
+: 
+No Artefacts deployed
+ 
+
+## WHAT'S FIXED FOR THE HOTFIX?
+
+Private (
+https://app.clickup.com/t/8651091/CHP-1063
+)
+
+## TESTING NOTES
+
+Add a contact to an account in CRM
+Send an MC1 invitation to the user
+Check the email content for OTP and invitation
+Smoke tests

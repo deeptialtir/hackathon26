@@ -1,0 +1,250 @@
+# 10-APRIL26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ 
+Release date
+ : 2026.04.10
+ 
+DB changes
+ :
+Connect
+ : release/2026.04.09
+Platform
+ : No change
+Notification : 
+No change
+ 
+Branch
+  : release/2026.04.10
+ 
+Components Involved
+ 
+& Artefacts
+:
+ 
+Chip1 Account  
+    
+                               
+  : 2026.04.10.0
+Chip1 Part.         
+    
+                               
+  : 2026.04.10.1
+Chip1 Transaction  
+    
+                        
+  : 2026.04.10.2
+Chip1 CRM WebUI                 
+    
+          
+ : 2026.04.10.4
+fn-connect                              
+   
+            
+ : 2026.04.10.2
+Items Deployed:
+Add Receiving: Make date code year/week non mandatory (
+#3566
+)-
+Verified
+Backport to develop: feat(Sr): Sourcing Request Allocation changes (
+#3539
+)-
+Verified
+Split SR Tab into two tabs based on offer requested and purchase requested category
+Add allocation column on SR List when category is purchase requested.
+Backport to develop: hotfix(create-po):supplier package info issue (
+#3555
+)-
+Verified
+Backport to develop: hotfix: PoLine:- Updated PartDetails permission id (
+#3547
+)-
+Verified
+feat(crm): implement sourcing search shortcut in global search (
+#3562
+) -
+Verified
+Sourcing Shortcut
+: Added 
+SourcingSearchShortcut
+ component that navigates to the sourcing page with the current search query as an MPN parameter.
+Reusable Clear Button
+: Extracted clearing logic into 
+SearchClearButton
+, ensuring consistent behavior across 
+SearchInput
+ and the 
+Dashboard
+ search.
+Shared Design Tokens
+: 
+Centralized the CSS for hiding native browser search icons into 
+HIDE_SEARCH_CANCEL_BUTTON
+ within 
+config/search.ts
+.
+Performance Optimization
+: Opted all involved components (
+SearchInput
+, 
+DashboardSearch
+, 
+SearchClearButton
+, 
+SourcingSearchShortcut
+) into the 
+React Compiler
+ using the 
+'use memo'
+ directive.
+Feature Flagging
+: The shortcut is safely gated behind the new 
+search-sourcing-shortcut
+ flag.
+feat(lookups): replace hardcoded fundCode logic with 
+makeFundCodeLookup
+ function across CRM (
+#3564
+)
+feat(sourcing): add C1X Office, Warehouse, and AWB column to all sourcing activity tabs (
+#3560
+)-
+Verified
+ The column is added to the available columns but hidden by default. - 
+Verified
+Column Definitions
+: Added the 
+c1xOfficeWarehouseAwb
+ entry to 
+marketActivityColumnDefs.tsx
+ (it already existed for historical activity).
+List Integration
+: Added the column to the base configurations for: 
+Sales Activity
+Purchasing Activity
+Market Activity
+Stock List
+Visibility Control
+: Configured 
+defaultVisibility: false
+ for this column in all the above lists, ensuring it can be toggled on via the Column Menu without cluttering the initial view.
+feat(task): refactor deep-link redirection and optimize info pane layout (
+#3559
+) -
+Verified
+Task Navigation & Deep Links
+: 
+Updated 
+taskDeepLinkLoader
+ to redirect users to the global tasks list (
+/tasks
+) with the appropriate category filter (All/Completed) based on the task status.
+This ensures that tasks opened via links like 
+/task/:taskId
+ are correctly highlighted and focused within the main list view rather than being buried in entity-specific tabs.
+UI/UX Optimizations
+: 
+Task Info Pane
+: Applied a 
+max-height
+ (310px) and vertical scrolling to the 
+TaskSummaryCard
+ to prevent the summary from occupying the entire screen when tasks have long descriptions.
+Summary Cards
+: Extended 
+TSummaryCardProps
+ to support 
+style
+ and 
+className
+ for better layout control in info panes.
+Code Quality & Cleanup
+: 
+Refactored 
+TaskInfoPane
+ to follow current project standards (using the 
+function
+ keyword and explicit 
+ReactElement
+ return types).
+ReconfirmExcessTaskModal
+: 
+Improved the task description builder by removing test placeholders.
+Simplified date formatting using 
+date-fns
+ 
+formatDate
+.
+Removed the redundant 
+enableReinitialize
+ prop to prevent background refetches from resetting user inputs.
+feat: integrate code-review-graph MCP for enhanced AI-assisted coding (
+#1547
+) -
+devOnly
+MCP Configuration
+: Added 
+code-review-graph
+ to 
+.cursor/mcp.json
+ using the 
+uvx
+ runner.
+AI Instructions (
+.cursorrules
+)
+: Created high-priority guidelines for AI agents to prioritize graph-based tools (
+semantic_search_nodes
+, 
+query_graph
+, 
+get_impact_radius
+) over file-scanning for faster and more accurate context retrieval.
+Documentation (
+CLAUDE.md
+)
+: Updated the canonical repository documentation with a dedicated "MCP Tools" section, ensuring parity between Cursor and Claude Code workflows.
+Workflow Optimization
+: Established a standard workflow for using the graph to understand architectural impact, find execution flows, and verify test coverage.
+fix(MC1 & CRM): prevent crash when clearing project type in create project form (
+#3558
+)-
+Verified
+ Clearing the Project Type field in the Create Project form caused useBaseUploadBom to crash with "cannot read 'all' of undefined" because HEADERS[projectType] returns undefined for an empty value. -
+Verified
+Added disableClearable to ProjectTypeField inside EditableProjectTypeField — the field is required and should never be
+Guarded the onProjectTypeChange effect so it only fires with a valid EProjectType, protecting all downstream consumers (upload hook, footer, upload section, toast error handler)
+Fixes 
+
+https://altir-chip1.sentry.io/issues/110828258/?alert_rule_id=98964&alert_timestamp=1775731137962&a…
+Fixes:PO feedback changes (
+#3484
+) -
+Verified
+On PO line details we need the tab for part details to show global part details, similar to what we do for SO and other entities. 
+Need to expand Send email to a wider modal similar to that of share and include following 
+Subject line
+CC line - they can add a set of emails.
+Option to attach PDF
+refactor AccountIdsIsland component to improve ID type selection (
+#3551
+)-
+Verified
+Update : Changes on Account , SO , RFQ (
+#3561
+) 
+populating account primary contact on OrderShipping Contact if data is null
+Changed the Label of Rohs , backend Mapping to apexRohs on RFQ, SO
+Replaced CustomerId on CreateRFQ with Customer Address
+Added freeShipping field
+Removed VAT verified , verified on and verifiedBy fields
+Using OrderLevel data for OrderList Approvals data
+Update prop handling in summary cards and enhance dark mode scrollbar (
+#3540
+)-
+Verified

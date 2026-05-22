@@ -1,0 +1,39 @@
+Site_Category,Site_Subcategory,Feature_Count,Traced_Features,Fully_Traced,QE_Verified_Features,Items_Tested,Verified_Deployed_Items,Bugs_Issues_Count,Coverage_Evidence_Items,Coverage_Status,Coverage_%,Verified_Coverage_%,Label
+General,,14,14,14,14,167,602,175,602,COVERED,100.0,100.0,General
+Sales,RFQs,2,2,2,2,20,94,15,94,COVERED,100.0,100.0,Sales › RFQs
+Purchasing,,2,2,1,1,2,74,1,74,COVERED,100.0,100.0,Purchasing
+Accounts,,16,15,15,15,113,67,34,113,COVERED,100.0,100.0,Accounts
+Parts,,23,20,20,20,104,50,12,104,COVERED,100.0,100.0,Parts
+Purchasing,Purchase Orders,8,8,8,8,7,28,21,28,COVERED,100.0,100.0,Purchasing › Purchase Orders
+Projects,Excess,1,1,1,1,4,23,0,23,COVERED,100.0,100.0,Projects › Excess
+Sales,Quotes,2,2,2,2,15,22,10,22,COVERED,100.0,100.0,Sales › Quotes
+Purchasing,Offers,0,0,0,0,0,14,6,14,DEPLOY_EVIDENCE,100.0,100.0,Purchasing › Offers
+Purchasing,Sourcing Requests,5,4,4,4,4,13,4,13,COVERED,100.0,100.0,Purchasing › Sourcing Requests
+Sourcing,,0,0,0,0,10,11,4,11,DEPLOY_EVIDENCE,100.0,100.0,Sourcing
+API,,42,37,36,35,167,9,4,167,COVERED,100.0,100.0,API
+Warehouse,Shipments,0,0,0,0,0,9,4,9,DEPLOY_EVIDENCE,100.0,100.0,Warehouse › Shipments
+UI,,43,41,39,39,179,7,3,179,COVERED,100.0,100.0,UI
+Sales,Opportunities,0,0,0,0,0,5,1,5,DEPLOY_EVIDENCE,100.0,100.0,Sales › Opportunities
+Sales,Sales Orders,2,1,1,1,1,5,0,5,COVERED,100.0,100.0,Sales › Sales Orders
+Dashboards,,1,1,1,1,23,4,3,23,COVERED,100.0,100.0,Dashboards
+Accounts,Open Accounts,0,0,0,0,0,3,0,3,DEPLOY_EVIDENCE,100.0,100.0,Accounts › Open Accounts
+Notification,,2,2,2,2,9,2,1,9,COVERED,100.0,100.0,Notification
+Warehouse,,0,0,0,0,0,2,0,2,DEPLOY_EVIDENCE,100.0,100.0,Warehouse
+Campaign,,0,0,0,0,0,1,1,1,DEPLOY_EVIDENCE,100.0,100.0,Campaign
+Accounts,My Accounts,0,0,0,0,0,1,0,1,DEPLOY_EVIDENCE,100.0,100.0,Accounts › My Accounts
+Contacts,,0,0,0,0,2,1,0,2,DEPLOY_EVIDENCE,100.0,100.0,Contacts
+Parts,By MPN,0,0,0,0,0,1,0,1,DEPLOY_EVIDENCE,100.0,100.0,Parts › By MPN
+Parts,Part Health,0,0,0,0,1,1,0,1,DEPLOY_EVIDENCE,100.0,100.0,Parts › Part Health
+Projects,Projects,0,0,0,0,2,1,0,2,DEPLOY_EVIDENCE,100.0,100.0,Projects › Projects
+Sales,Invoices,0,0,0,0,0,1,0,1,DEPLOY_EVIDENCE,100.0,100.0,Sales › Invoices
+Sales,,0,0,0,0,0,1,0,1,DEPLOY_EVIDENCE,100.0,100.0,Sales
+Warehouse,Receiving,0,0,0,0,0,1,0,1,DEPLOY_EVIDENCE,100.0,100.0,Warehouse › Receiving
+Warehouse,Stock,0,0,0,0,0,1,0,1,DEPLOY_EVIDENCE,100.0,100.0,Warehouse › Stock
+Tasks,,1,1,1,1,1,0,1,1,COVERED,100.0,100.0,Tasks
+Parts,By Category,0,0,0,0,0,0,1,0,NO_FEATURES_MAPPED,0.0,0.0,Parts › By Category
+Accounts,Search Accounts,0,0,0,0,0,0,0,0,NO_FEATURES_MAPPED,0.0,0.0,Accounts › Search Accounts
+Accounts,Visits,0,0,0,0,0,0,0,0,NO_FEATURES_MAPPED,0.0,0.0,Accounts › Visits
+Parts,Account Parts,0,0,0,0,0,0,0,0,NO_FEATURES_MAPPED,0.0,0.0,Parts › Account Parts
+Purchasing,Invoices,0,0,0,0,0,0,0,0,NO_FEATURES_MAPPED,0.0,0.0,Purchasing › Invoices
+View Settings,,0,0,0,0,0,0,0,0,NO_FEATURES_MAPPED,0.0,0.0,View Settings
+Warehouse,Sales Orders,0,0,0,0,0,0,0,0,NO_FEATURES_MAPPED,0.0,0.0,Warehouse › Sales Orders

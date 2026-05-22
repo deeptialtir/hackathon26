@@ -1,0 +1,48 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,,,
+Metadata,Release Info,Prod release owner,@Umamahesh @Harika Guntamukkala,,
+Metadata,Release Info,DB changes,Connect : No change,,
+Metadata,Release Info,Platform,No change,,
+Metadata,Release Info,Key Clock,No change,,
+Metadata,Release Info,Branch,"webUI,Part & Transaction : release/2025.04.11",,
+Artefacts,Artefacts,Chip1 Part, 2025.04.11.1,,
+Artefacts,Artefacts,Chip1 Transaction., 2025.04.11.0,,
+Artefacts,Artefacts,Sentry integration,,,
+Artefacts,Artefacts,Artefact,,,
+Deployed Items,General,"### BUGS IDENTIFIED IN BUILD
+//app.clickup.com/t/8651091/CHP-1841
+)
+//app.clickup.com/t/8651091/CHP-1842
+)
+## SMOKE TESTS",,,
+Deployed Items,Private ( https,Feature/Flow,,,
+Deployed Items,Private ( https,Stage,,,
+Deployed Items,Private ( https,Prod,,,
+Deployed Items,Private ( https,"New User Signup from mc1
+yes",,,
+Deployed Items,Private ( https,"Upload Bom & Excess and verify in CRM
+yes",,,
+Deployed Items,Private ( https,"Manual RFQ
+yes",,,
+Deployed Items,Private ( https,"Active Quote (create, edit)
+yes",,,
+Deployed Items,Private ( https,"Sales Order
+(create, edit)
+yes",,,
+Deployed Items,Private ( https,Lead Account & Transfer,,,
+Deployed Items,Private ( https,NA,,,
+Deployed Items,Private ( https,NA,,,
+Deployed Items,Private ( https,Bids,,,
+Deployed Items,Private ( https,NA,,,
+Deployed Items,Private ( https,NA,,,
+Deployed Items,Private ( https,"Parts Tracker
+yes",,,
+Deployed Items,Private ( https,"Search
+yes",,,
+Deployed Items,Private ( https,"Page Navigations
+yes",,,
+Deployed Items,Private ( https,"Edit Project
+yes",,,
+Deployed Items,Private ( https,"Notification emails
+yes",,,

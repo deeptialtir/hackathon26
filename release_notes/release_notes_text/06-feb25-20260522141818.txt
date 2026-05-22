@@ -1,0 +1,98 @@
+# 06-FEB25
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+ 
+DB changes
+ : 
+Connect
+ : No Changes
+Platform
+ : No Change
+Notification : 
+release/2025.02.06
+Branch
+  : 
+Platform & WebUI : release/2025.02.06
+Notification Services : release/2025.02.06
+Components Involved
+ 
+& Artefacts
+: 
+Chip1 Transaction                              
+ :
+ 
+2025.02.06.0
+Chip1 Web UI
+ 
+ 
+ : 2025.02.06.0
+fn-notification-common-service  
+: 2025.02.06.0
+fn-notification-dispatcher
+              : 2025.02.06.0
+fn-notification-publishe
+r                 : 2025.02.06.0
+fn-connect                           
+                 : 2025.02.06.0
+fn-identity         
+                                   : 2025.02.06.0
+
+## LIST OF DEPLOYED ITEMS
+
+Private (
+https://app.clickup.com/t/8651091/CHP-1410
+)
+Bugs in build
+Issues on production:
+Private (
+https://app.clickup.com/t/8651091/CHP-1508
+)
+
+## SMOKE TESTS
+
+Feature/Flow
+Stage
+Prod
+Remarks
+New User Signup from mc1
+yes
+yes
+Raised CHP-1508
+Mc1 user invite - signup
+yes
+-
+On stage should suffice
+Upload Bom & Excess and verify in CRM
+yes
+yes
+Manual RFQ
+yes
+yes
+Active Quote (create, edit)
+yes
+yes
+Sales Order
+(create, edit)
+yes
+yes
+Lead Account & Transfer
+yes
+LA requirements are missing requirements.
+Bids
+yes
+yes
+Parts Tracker
+yes
+yes
+Search
+yes
+yes
+Page Navigations
+yes
+yes

@@ -1,0 +1,431 @@
+# 22-AUG25
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2025.08.22
+ 
+DB changes
+ : 
+Connect
+ : release/2025.08.22
+Platform
+ : release/2025.08.22
+Notification : 
+release/2025.08.22
+ 
+Branch
+  : release/2025.08.22
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+fn-connect 
+                                        : 2025.08.22.0
+Chip1 Account      
+                              : 2025.08.22.0
+Chip1 MC1 Core 
+                                : 2025.08.22.0
+Chip1 Part        
+                                    : 2025.08.22.0
+Chip1 Transaction  
+    
+                      
+   :
+ 
+2025.08.22.4
+Chip1 WebUI      
+                                 : 2025.08.22.1
+Chip1 CRM WebUI      
+                        : 2025.08.22.1
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+ 
+CRM Contact Details
+CRM RFQ Details - rfq→ xcrm issue
+Account Hierarchy - issues
+Fab Button
+MC1 Private Options - Done
+BOM Health email limiting to 30 lines
+Clickup-links:
+Private (
+https://app.clickup.com/t/8651091/CHP-2831
+)- Edit contact not enabled yet on production
+Private (
+https://app.clickup.com/t/8651091/CHP-2825
+) - Edit contact not enabled yet on production
+Private (
+https://app.clickup.com/t/8651091/CHP-2811
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2789
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2787
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2786
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2785
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2776
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2775
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2774
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2770
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2769
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2703
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2685
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2677
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2666
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2664
+)- Edit RFQ not enabled yet on production
+Private (
+https://app.clickup.com/t/8651091/CHP-2659
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2658
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2657
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2655
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2654
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2649
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2648
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2643
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2637
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2636
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2607
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2605
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2603
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2570
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2569
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2567
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2565
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2561
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2546
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2535
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2521
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2517
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2500
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2492
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2482
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2253
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-1334
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2271
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2436
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2534
+) - next release
+Private (
+https://app.clickup.com/t/8651091/CHP-2278
+)- next release
+Private (
+https://app.clickup.com/t/8651091/CHP-1700
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2303
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-2472
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2434
+) - 6 subtasks - next release
+Private (
+https://app.clickup.com/t/8651091/CHP-2662
+) - Can be tested once RFQ edit is enabled.
+Private (
+https://app.clickup.com/t/8651091/CHP-2621
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2743
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2435
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2433
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-2463
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-2471
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2501
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-2472
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-2499
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-2483
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2502
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-2219
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2518
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2521
+) 
+ Private (
+https://app.clickup.com/t/8651091/CHP-2822
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2703
+)
+Open bugs from Bugs:
+Private (
+https://app.clickup.com/t/8651091/CHP-2492
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-2458
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2258
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2252
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2250
+) 
+QE tickets:
+Private (
+https://app.clickup.com/t/8651091/CHP-2796
+)
+ 
+Found on production:
+CHP-2838
+: account created on Xcrm not showing up in CRM(new) -- fixed but keeping it open for investigation
+CHP-2840
+: Sync missing even after contact joined to mc1
+CHP-2841
+: RFQs created are not getting the requirement ID on prod
+CHP-2839
+: Account Hierarchy: Seeing errors while adding child and parent on crm-prod
+CHP-2837
+: Activity raised entity is throwing "Oops! Data didn’t load as expected." error in UI when trying to open FAB for that entity -- Fixed
+CHP-2253
+ : Contacts: Status Filter Not Working in Quote Requests
+ 
+
+## MC1 SANITY TESTS
+
+ 
+Feature/Flow
+Stage
+Prod
+Remarks
+New User Signup from mc1
+ yes
+yes
+ 
+Mc1 user invite - signup
+ yes
+ yes
+On stage should suffice
+Upload Bom & Excess and verify in CRM
+ yes
+ yes
+ 
+Manual RFQ
+ yes
+yes 
+ 
+Active Quote (create, edit)
+ yes
+ yes
+ 
+Sales Order
+(create, edit)
+ yes
+ yes
+ 
+Lead Account & Transfer
+ yes
+ issue
+ 
+Bids
+ yes
+ --
+ 
+Parts Tracker
+ yes
+ --
+ 
+Search
+ yes
+ yes
+ 
+Page Navigations
+ yes
+ yes
+ 
+Edit Project
+ yes
+ yes
+ 
+Notification Emails
+ yes
+ yes (quote, so)
+ 
+Download excess and Bom Template, fill and upload.
+ yes
+ yes
+ 
+ 
+
+## CRM SANITY TESTS:
+
+ 
+Feature/Flow
+Stage
+Production
+Remarks
+Create BOM in MC1, check in xcrm and new crm
+ yes
+ yes
+ 
+Create RFQ in MC1, check in xcrm and crm
+ yes
+yes
+ 
+Upload BOM from CRM
+ yes
+yes
+ 
+Page Navigations
+ yes
+yes
+ 
+Deep links for Accounts, RFQs, Quotes and Orders
+ yes
+ yes
+ 
+Edit Project
+ yes
+ yes
+ 
+Global Search
+ yes
+ yes
+ 
+Filters 
+ yes
+ yes
+ 
+Sorting of tables
+yes 
+ yes
+ 
+Page Search
+ yes
+ yes
+ 
+Download excess and Bom Template, fill and upload.
+ yes
+yes

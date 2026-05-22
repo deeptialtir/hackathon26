@@ -1,0 +1,94 @@
+# 11-APR25
+
+Environment: Stage
+Status: 
+Prod release owner:
+ 
+@Umamahesh
+ 
+@Harika Guntamukkala
+ 
+DB changes
+ :
+Connect
+ : No change
+Platform
+ : No change
+Key Clock
+: No change
+Branch
+  : 
+webUI,Part & Transaction : release/2025.04.11
+Components Involved
+ 
+& Artifacts
+:
+Chip1 WebUI                    : 
+2025.04.11.2
+Chip1 Part                        : 
+2025.04.11.1
+Chip1 Transaction.       : 
+2025.04.11.0
+Sentry integration:
+Artefact : 
+
+## LIST OF DEPLOYED ITEMS
+
+ 
+-
+Verified
+-
+Verified
+-
+Verified
+-
+Verified
+-
+Verified
+ -
+Verified
+
+### BUGS IDENTIFIED IN BUILD
+
+  
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-1841
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1842
+)
+
+## SMOKE TESTS
+
+ 
+Feature/Flow
+Stage
+Prod
+New User Signup from mc1
+yes
+Upload Bom & Excess and verify in CRM
+yes
+Manual RFQ
+yes
+Active Quote (create, edit)
+yes
+Sales Order
+(create, edit)
+yes
+Lead Account & Transfer
+NA
+NA
+Bids
+NA
+NA
+Parts Tracker
+yes
+Search
+yes
+Page Navigations
+yes
+Edit Project
+yes
+Notification emails
+yes

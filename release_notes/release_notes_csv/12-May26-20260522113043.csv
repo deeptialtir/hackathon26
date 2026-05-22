@@ -1,0 +1,142 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,@Deepti Vaidyula @Harika Guntamukkala,,
+Metadata,Release Info,Release date,2026.05.12,,
+Metadata,Release Info,DB changes,Connect : release/2026.05.12,,
+Metadata,Release Info,Platform,release/2026.05.12,,
+Metadata,Release Info,Notification, No Change,,
+Metadata,Release Info,Branch,release/2026.05.12,,
+Artefacts,Artefacts,Chip1 Transaction,2026.05.12.5,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2026.05.12.4,,
+Artefacts,Artefacts,Chip1 WebUI,2026.05.12.0,,
+Artefacts,Artefacts,fn connect,2026.05.12.0,,
+Deployed Items,feat,"add campaign goal templates and signature management features (
+)",,,
+Deployed Items,feat,"Tested
+add create-campaign-goal flow with modal submit, dropdown refresh, and auto-select
+switch campaign goal selection to search autocomplete with built-in addNew support
+add reusable campaign signature builder with structured fields and live preview
+send signatureHtml and contact-level sender/signature data in create campaign payload
+limit add-to-campaign modal dropdown to active campaigns only
+align campaign create/edit/details goal mapping with goal-template-backed search items",,,
+Deployed Items,QE Remarks,"After the campaing goal is created from 'Create Campaign' modal, the window is not      auto-closing",,,
+Deployed Items,QE Remarks,"Campaign goal is displayed as mongo-id in
+'General Details' expanded view
+'Campaign Details' hero
+list view",,,
+Deployed Items,QE Remarks,Campaign goal needs support in dark mode in the list view,,,
+Deployed Items,fix(CampaignListTable),"avoid 2 API calls on Campaigns page
+add CRR and packing slip generation to invoices and shipments (
+)",Verified,,
+Deployed Items,feat,Add Generate CRR and Generate Packing Slip to the invoice list FAB and row-level context menu,Verified,,
+Deployed Items,feat,Add Generate CRR to the shipment list row menu and shipment details FAB,Verified,,
+Deployed Items,feat,Switch InvoiceFab CRR generation from stock-line-level to invoice-level (no longer requires selecting stock lines in the Stock Lines tab),Verified,,
+Deployed Items,feat,"Remove stock-line-level RR generation from InvoiceFab (now handled at the stock line details level)
+generate RR/CRR reports and packing slips from invoices and shipments (",Verified,,
+Deployed Items,feat,),Verified,,
+Deployed Items,feat,Add stock line selection store + sync for invoice StockLines tab,,,
+Deployed Items,feat,Generate RR (QUALITY_CHECK_RECEIVING_REPORT) from selected invoice stock lines,,,
+Deployed Items,feat,Generate CRR (QUALITY_CHECK_CUSTOMER_RECEIVING_REPORT) from selected invoice stock lines,,,
+Deployed Items,feat,Generate packing slip for a shipment (SHIPMENT_PACKING_SLIP) from the ShipmentDetails FAB,,,
+Deployed Items,feat,Generate packing slip for an invoice (INVOICE_PACKING_SLIP) from the InvoiceDetails FAB,,,
+Deployed Items,feat,Add SHIPMENT/INVOICE id types and packing slip export types to ECrmExportFileType/ECrmExportFileIdType enums,,,
+Deployed Items,feat,Add idType support to the export API payload type,,,
+Deployed Items,feat,Feature/excess offers integration (,,,
+Deployed Items,feat,),Verified,,
+Deployed Items,feat,"Integration of Excess Offers (Offer list details, Offers) based on API Contract
+align internal cost field name with API contract (bankingCost → bankCost) (",,,
+Deployed Items,fix(invoice),),Verified,,
+Deployed Items,fix(invoice),"Renamed bankingCost → bankCost across all types, forms, utils, and locale to match the InvoiceInternalCosts API contract field name",,,
+Deployed Items,fix(invoice),Removed the bankCost ↔ bankingCost normalization/mapping layer entirely since frontend and backend now agree on the field name,,,
+Deployed Items,fix(invoice),Updated TShipmentCostsSummary for consistency since shipments populate the same form,,,
+Deployed Items,fix(invoice),"Updated translation key createInvoiceModal.charges.bankingCost → bankCost (label text unchanged: ""Banking Cost"")
+populate additional costs modal from both costSummary & internalCosts, and split PATCH payload (
+)",,,
+Deployed Items,fix(invoice),Tested,,,
+Deployed Items,fix(invoice),"Fixed additional costs modal not showing values from internalCosts (shippingCost, bankingCost, miscHandlingCost, etc.) by merging both costSummary and internalCosts from the API response",,,
+Deployed Items,fix(invoice),Fixed PATCH payload sending all charges under a single costSummary field — now correctly splits into separate costSummary and internalCosts objects per the OpenAPI contract,,,
+Deployed Items,fix(invoice),Fixed bankCost ↔ bankingCost field name mismatch between API response and frontend form,,,
+Deployed Items,fix(invoice),Fixed subtotal (part costs) no longer changing when charges are edited — only total updates,,,
+Deployed Items,fix(invoice),"Refactored duplicated charges-total logic into computeAdditionalChargesTotal helper, removed dead initialEditableTotal parameter, extracted isValidBaseSubtotal type guard",,,
+Deployed Items,Invoice,I can see additional cost in the edit modal but not in the details section.,,,https://crm.stage.chip1.info/sales/invoices/6a032b8148ce58195a2d8332/line/6a032b8148ce58195a2d8331
+Deployed Items,Invoice,ShipQty,,,
+Deployed Items,Invoice,Tested,,,
+Deployed Items,Invoice,SO outbound and Outbound sync: shipQty,,,
+Deployed Items,Invoice,Stockline Outbound and Outbound sync: shipQty,,,
+Deployed Items,QE Remarks,"Looks good from stock line. I think for SO it's not updating shipped qty (Check the 'S')
+(check US26PO-294672.01)",,,"http://mc1staging.xchangecrm.com/web/sales/so/update?ID=1684&SO_CODE_=0&COMPANY_CODE_=4, http://mc1staging.xchangecrm.com/web/stock/stock"
+Deployed Items,QE Remarks,"Deploying fix to show Outbound Shipment in Outbound tab, requires code change and data fix. Code change under deployment and data fix done. 
+add reusable select-all + typeahead improvements for multi-select filters (",Verified,@Harika Guntamukkala,
+Deployed Items,CRM filters,")
+add CRM-only reusable auto-enable for select-all on eligible multi-select filters
+add select-all support to infinite autocomplete for currently loaded/search-visible options
+keep enum filter select-all visible while typing in the dropdown
+add dropdown text highlighting for enum and single-enum filter options
+fix single-enum selected label display after choosing an option
+prevent infinite autocomplete select-all from showing when only pinned selections exist
+remove redundant per-filter select-all flags from CRM filter definitions
+add focused tests covering enum, single-enum, and infinite-autocomplete selector behavior",verified,,
+Deployed Items,Feat,Added added tabs on the Shipments UI (,,,
+Deployed Items,Feat,")
+add ""Create Part Manually"" to all MPN dropdowns, make manufacturer read-only, add typeahead in Create Part modal (",verified,,
+Deployed Items,feat,),verified,,
+Deployed Items,feat,Replace part-related fields in orderLine forms with shared fields created in the common usePartFields() hook,,,
+Deployed Items,feat,"Add addNew (""Create Part Manually"") button to MPN autocomplete in Stocks fields and Edit Part modal — all 16 MPN dropdowns now have it",,,
+Deployed Items,feat,"Make manufacturer field
+read-only
+everywhere using DetailsIslandReadonlyField (PO, Offer, RFQ, Stock forms + Edit Part modal)",,,
+Deployed Items,feat,"Convert Create Part modal's manufacturer from plain text to autocomplete typeahead with free-solo (no ""No options"" shown for unrecognized manufacturers)",,,
+Deployed Items,feat,"Fix ReconfirmExcessTaskModal ""Create Part Manually"" label to use proper translation key",,,
+Deployed Items,feat,"Add createPartManually translation entry to common.json
+populate countryCode when creating accounts without selecting country from dropdown (",,,
+Deployed Items,fix,),verified,,
+Deployed Items,fix,Fix FormikPhoneCrm.toFormValue extracting empty countryCode when no country was selected in dropdown (pasted number or hideDefaultCountry),,,
+Deployed Items,fix,Extract duplicated country detection chain (getCountryCode → guessCountryByPartialPhoneNumber) into shared detectCountryCode helper,,,
+Deployed Items,fix,Move dial-code array sorting from per-keystroke to module-level constant,,,
+Deployed Items,Table,"Add actions related to selected rows to table footer - Common component (
+) - not part of current release",,,
+Deployed Items,Update,"Added Invoice Line details page (
+)",,,
+Deployed Items,Update,"Added InvoiceLine Details Page
+only 1 sub tab called Details (With Invoice Islands and 1 new island (OrderLine Details))",,,
+Deployed Items,Invoice Inbound sync,Allocation quantity,verified,,
+Deployed Items,Invoice Inbound sync,"Quote attributes sync (Dual Use (both), Payment Terms)",verified,,
+Deployed Items,Invoice Inbound sync,Excess in part sourcing fix (affected in stage only),,,
+Deployed Items,Fix,Fixed the mapping of orderlineId and orderId on InvoiceLine's list (,,,
+Deployed Items,Fix,),Verified(IB issue fix is in progress,,
+Deployed Items,Fix,Invoice OB sync,,,
+Deployed Items,Fix,"Dev-Only
+mock localStorage/sessionStorage in vitest setup for Zustand persist (dev-only) (
+)",,,
+Deployed Items,fix,Add localStorage and sessionStorage mocks to vitest setup to support Zustand persist middleware,,,
+Deployed Items,Fixes TypeError,Cannot read properties of undefined in tests using column reordering or any persist-enabled Zustand store,,,
+Deployed Items,Fixes TypeError,"Unblocks 7 pre-existing test failures in AccountListTable column reordering tests
+changed the usage of stockLineRef (
+)
+refactored code to use correct id while navigating on Invoice line and using correct orderNumber to display on UI (
+)
+## ISSUES REPORTED ON STAGE:",,,
+Deployed Items,Campaigns,"After the campaing goal is created from 'Create Campaign' modal, the window is not auto-closing",,,
+Deployed Items,Campaigns,"Campaign goal is displayed as mongo-id in
+'General Details' expanded view
+'Campaign Details' hero
+list view",,,
+Deployed Items,Campaigns,Campaign goal needs support in dark mode in the list view,,,
+Deployed Items,Invoice,"I can see additional cost in the edit modal but not in the details section.
+shipQty for stockline and SO:",,,https://crm.stage.chip1.info/sales/invoices/6a032b8148ce58195a2d8332/line/6a032b8148ce58195a2d8331
+Deployed Items,Invoice,Looks good from stock line. I think for SO it's not updating shipped qty (Check the 'S'),,,
+Deployed Items,Invoice,XchangecrmWelcome to xChangeCRM﻿,,,
+Deployed Items,Invoice,"XchangecrmWelcome to xChangeCRM﻿
+(check US26PO-294672.01)",,,
+Deployed Items,Feat,Added added tabs on the Shipments UI (,,,
+Deployed Items,Feat,),Verified (Outbound list view data is empty),,
+Deployed Items,Feat,Invoice OB Sync,,,
+Deployed Items,Feat,"Invoice OB sync got failed, seeing error in logs
+d12af26a-9e3d-48ce-8804-671e90db6901",,,"https://grafana.altir.net/explore?schemaVersion=1&panes=%7B%22fep%22:%7B%22datasource%22:%22P8E80F9…, https://crm.stage.chip1.info/sales/invoices/6a033791bac7c10549694ce5/invoiceLines"
+Deployed Items,Fix,Fixed the mapping of orderlineId and orderId on InvoiceLine's list (,,,
+Deployed Items,Fix,")
+## ISSUES ON PROD",Verified(IB issue fix is in progress),,
+Deployed Items,Fix,"Couldn't check campaign create changes as campaign goals are not loading (
+). Campaign backend related changes are not yet deployed to production.
+'Requirement Source' field is empty for IB on prod. Where as on stage issue was found on both IB and OB flows.",,,

@@ -1,0 +1,122 @@
+# 29-MARCH26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+, 
+@Umamahesh
+ 
+@Harika Guntamukkala
+ 
+Release date
+ : 2026.03.29
+ 
+DB changes
+ : 
+Connect
+ : release/2026.03.28
+Platform
+ : release/2026.03.28
+Notification : 
+release/2026.03.28
+ 
+Branch
+  : release/2026.03.28
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Account  
+    
+                               
+  : 2026.03.28.1
+Chip1 Part  
+    
+                               
+          : 2026.03.28.0
+Chip1 Transaction  
+    
+                        
+  : 2026.03.28.1
+Chip1 CRM WebUI                 
+    
+           
+ : 2026.03.28.3
+fn-connect                              
+   
+             
+ : 2026.03.28.0
+fn-notification-common-service    
+: 2026.03.28.0
+fn-notification-dispatcher                
+: 2026.03.28.0
+fn-notification-publisher                    
+: 2026.03.28.0
+chip1-transction      
+                            : 2026.03.28.7
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+Tested items from the following list
+https://coda.io/d/Chip-1_dWNX8zdEnCk/Sales-Flow_sur4_esA#View-2-of-Running-Notes-Action-Items_tug8KRL5/r270&columnId=c-YjVTwxvxiK
+https://coda.io/d/Chip-1_dWNX8zdEnCk/Purchasing-Flow_suX5-cQT#_luXodFtB
+Issues on stage:
+Teams link:
+Teams #: March29_01:
+ When we create Bulk SR, the region is taken from the user region.
+Teams #: March29_02:
+ 'Market Condition' attribute in RFQ is not synced to Apex.
+Teams #: March29_03:
+ Make Approved as Customer and Approved as Supplier read only in Credit and supplier section. - These fields are not present.
+Teams #: March29_04:
+ SR global search can be refined.
+Teams #: March29_05:
+Need an option in Apex to mark the default Billing address, Ship To address etc. 
+Impact: A default bill to address is needed on xcrm to create SO. 
+Workaround: Mark the respective addresses added in Apex as Default in xcrm.
+Teams link:
+ For inbound SO US26SO00476 billing details are not being shown in Apex. Please check once
+Issues on prod:
+Teams #: March29_06:
+ 
+The total costs are not displayed fully in the 'Create Purchase Order screen'.
+RFQ->SR->Offer->SO in Apex ( without SO Approvals) and SO->PO->Receiving in XCRM
+We used Altir Test Account US as both Supplier and Customer in this process ( Used Altir 2225 LN as supplier user while creating PO) 
+
+https://chip1.xchangecrm.com/web/purchase/po/update?ID=250892&PO_CODE_=0&COMPANY_CODE_=12
+We observed though the SO is in US region PO is created in CN region
+We are not changing SO statuses at Apex side based on PO and Stock lines
+Cant see the 
+Validation Process
+ section being updated at Apex side after we did from XCRM  (
+
+https://crm.chip1.com/purchasing/receiving-lines/69c8eb076a11ca28e364666f/quality-control
+)
+Teams #: March29_07:
+ 
+The 'Quality Control' -> 
+Validation Process -> 
+Validation Categories we passed are disappearing on refresh.
+Teams #: March30_06
+ : 
+Hi, I see the approval in Customer info -> Approvals is getting reset to 'No'. As a result, I am not able to create SO on xcrm.
+Teams link
+Document approval is not syncing on prod. 
+
+https://chip1.xchangecrm.com/web/sales/so/update?ID=206267&COMPANY_CODE_=4
+'Accounts Approval' from Apex is resetting the customer info -> Approval and address details on xcrm
+Link
+: Some xcrm accounts keep resetting info even after update.

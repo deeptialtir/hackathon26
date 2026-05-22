@@ -1,0 +1,103 @@
+# 15-MAY26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+ 
+@Harika Guntamukkala
+ 
+ 
+Release date
+ : 2026.05.15
+ 
+DB changes
+ : 
+Connect
+ : release/2026.05.15
+Platform
+ : No Change
+Notification : 
+release/2026.05.15
+ 
+Branch
+  : release/2026.05.15
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Account         
+    
+                        
+ : 2026.05.15.1
+Chip1 Transaction  
+    
+                        
+ : 2026.05.15.2
+Chip1 CRM WebUI                 
+    
+          
+: 2026.05.15.4
+
+## LIST OF DEPLOYED ITEMS
+
+@Deepti Vaidyula
+ 
+QC History
+QE remarks: Verified
+PO Approval notification
+QE remarks: Verified
+Bank charges sync for invoice
+QE remarks: Validated
+Add shipment creation for selected order lines
+QE Remarks: 
+I have created a multi-line shipment and the CRR generated for this is failing  
+@Harika Guntamukkala
+ 
+Sales_admin & credit_admin can only update Var Verified 
+Verified
+Comments was not showing in the email 
+Verified
+Notes-In-App will have context data so that UI can redirect to specific Routes Based On the Data - 
+Verified
+Sourcing offer section in Part Sourcing 
+Verified
+Tasks list - Move multi-select actions from fab to footer 
+Verified
+update: offers and sr changes (
+#4001
+) 
+Sourcing Request 
+show tags column on list view 
+Verified
+Offers 
+Set the default expiry to two weeks. On creation always calculate 2 weeks from the day and show it as the expiry date.
+Verified
+Currently inside the offer details for market offers we are showing label as "market offer type" > should be renamed to "Offer type" 
+Verified
+
+### ISSUES ON STAGE:
+
+I have created a multi-line shipment and the CRR generated for this is failing with the following error: (Currently working as expected. Need to discuss with Product and implement)
+ -> Generate CRR
+corr_id: 29e612ec-2944-4b02-bb79-0d2ec25577b7
+{
+     "status": 400,
+     "message": "None of the requested entities were found",
+     "errorCode": "EXP_004"
+ }invoice due, paid, and confirmation flow (#4003
+Is it valid scenario to update stock to Validated status without QC( marking directly marked QC completed, Inspected and all beyond status). In this case CRR / RR / Packing slips won't be created because QC not available. Should we tighten rules around it?
+Users who do not have permission to edit Vat details are seeing
+ 
+"Verified By" field is as blank
+Updated date
+ 
+field is not auto populating with updated on date when VAT details are updated
+.
+Under sourcing -> sourcing offers  have  the below issues 
+Link
+Entity Type| Entity column both values are having the hyperlink option.
+Redirecting to one of the souring offer is showing 404 error

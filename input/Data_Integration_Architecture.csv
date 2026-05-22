@@ -1,0 +1,9 @@
+Node_ID,Node_Label,Architecture_Layer,Node_Type,Upstream_Nodes
+SRC-DB,DB Tables,Source,Data Source,
+SRC-API,External API,Source,Data Source,
+SRC-FILE,Flat Files,Source,Data Source,
+PROC-VAL,Validation Engine,Processing,Processor,"SRC-DB|SRC-API|SRC-FILE"
+PROC-XFR,Transformation Logic,Processing,Processor,PROC-VAL
+PROC-ERR,Error Handling,Processing,Processor,PROC-VAL
+PROC-LAYER,Data Processing Layer,Processing,Orchestrator,"PROC-VAL|PROC-XFR|PROC-ERR"
+TGT-STORE,Target Data Store / Reporting,Target,Data Target,PROC-LAYER

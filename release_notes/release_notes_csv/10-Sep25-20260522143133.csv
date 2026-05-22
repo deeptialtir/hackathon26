@@ -1,0 +1,309 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Deepti Vaidyula ,  @Harika Guntamukkala",,
+Metadata,Release Info,Release date,2025.09.10,,
+Metadata,Release Info,DB changes,Connect : release/2025.09.08,,
+Metadata,Release Info,Platform,release/2025.09.08,,
+Metadata,Release Info,Notification, No changes,,
+Metadata,Release Info,Branch,release/2025.09.08,,
+Artefacts,Artefacts,Chip1 Account,2025.09.08.2,,
+Artefacts,Artefacts,Chip1 MC1 Core,2025.09.08.2,,
+Artefacts,Artefacts,Chip1 Part,2025.09.08.4,,
+Artefacts,Artefacts,Chip1 Transaction,2025.09.08.5,,
+Artefacts,Artefacts,Chip1 WebUI,2025.09.08.2,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2025.09.08.2,,
+Artefacts,Artefacts,Deployed fixes,,,
+Artefacts,Artefacts,Chip1 Part,2025.09.08.5,,
+Artefacts,Artefacts,Chip1 Transaction,2025.09.08.7,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,QE documentation link,https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh,,
+Deployed Items,General,CHP-2895,,,
+Deployed Items,General,IC sourcing updates to pricing,,,
+Deployed Items,General,CHP-2710,,,
+Deployed Items,General,Company details,,,
+Deployed Items,General,CHP-2792,,,
+Deployed Items,General,Performance improvement of asyncJobProcessor,,,
+Deployed Items,CHP-2834,Don't show 'Hide in MyChip1' for projects uploaded from MC1,,,
+Deployed Items,CHP-2834,Databit enhancement,,,
+Deployed Items,CHP-2834,"Datagroup bug fixes
+//app.clickup.com/t/8651091/CHP-2990
+)
+//app.clickup.com/t/8651091/CHP-3009",,,
+Deployed Items,Private ( https,")
+//app.clickup.com/t/8651091/CHP-2831
+)
+//app.clickup.com/t/8651091/CHP-2832",,@Umamahesh,
+Deployed Items,Private ( https,")
+//app.clickup.com/t/8651091/CHP-2834
+)
+//app.clickup.com/t/8651091/CHP-2868
+)
+//app.clickup.com/t/8651091/CHP-2710
+)
+//app.clickup.com/t/8651091/CHP-2895
+)
+//app.clickup.com/t/8651091/CHP-2792",,@Deepti Vaidyula,
+Deployed Items,2Private ( https,")
+//app.clickup.com/t/8651091/CHP-2842
+)
+//app.clickup.com/t/8651091/CHP-2844
+)
+//app.clickup.com/t/8651091/CHP-2833
+)
+//app.clickup.com/t/8651091/CHP-2802
+)
+//app.clickup.com/t/8651091/CHP-2650
+)
+//app.clickup.com/t/8651091/CHP-2883
+)",,@Harika Guntamukkala,
+Deployed Items,Sanity/dev tickets,"Regression will be sufficient
+//app.clickup.com/t/8651091/CHP-2827
+) -system components
+//app.clickup.com/t/8651091/CHP-288
+)
+//app.clickup.com/t/8651091/CHP-2695
+)",,,
+Deployed Items,Private ( https,"Enhance Part List Query Options and Refactor System Components Filter (
+)
+allow not having sort provider for dashboard parts card (
+)
+update inactiveReason validation to remove max length constraint (
+)",,,
+Deployed Items,fix(validation),"GH Actions - Try to fix out of memory on typecheck (
+)",,,
+Deployed Items,fix(validation),"MicroDashboard - Add shadows to right and left edges (
+)",,,
+Deployed Items,Refactor,"Rename methods of modal hook in MC1 to match CRM (
+)",,,
+Deployed Items,Refactor,"Added Cursor Rules (
+)
+update turbo package to version 2.5.6 (
+)",,,
+Deployed Items,chore,"Bugs in build
+(related to release)
+//app.clickup.com/t/8651091/CHP-2991
+) - next release
+//app.clickup.com/t/8651091/CHP-2980
+) - Edit disabled on prod
+//app.clickup.com/t/8651091/CHP-2978
+)- Edit disabled on prod
+//app.clickup.com/t/8651091/CHP-2953
+)-Existing issue
+//app.clickup.com/t/8651091/CHP-2948
+)- Normal priority
+//app.clickup.com/t/8651091/CHP-2947
+)
+//app.clickup.com/t/8651091/CHP-2936
+)- Normal priority
+//app.clickup.com/t/8651091/CHP-2910
+)-  disabled on prod
+//app.clickup.com/t/8651091/CHP-2904
+)- Normal priority
+//app.clickup.com/t/8651091/CHP-2935
+)- Normal priority
+//app.clickup.com/t/8651091/CHP-2927
+) - Normal priority
+//app.clickup.com/t/8651091/CHP-2911
+)
+//app.clickup.com/t/8651091/CHP-2878
+)
+//app.clickup.com/t/8651091/CHP-2981
+)
+//app.clickup.com/t/8651091/CHP-2941
+)
+//app.clickup.com/t/8651091/CHP-2940
+)
+//app.clickup.com/t/8651091/CHP-2977
+)
+//app.clickup.com/t/8651091/CHP-2942
+)
+//app.clickup.com/t/8651091/CHP-2939
+)
+//app.clickup.com/t/8651091/CHP-2938
+) - not enabled on prod
+//app.clickup.com/t/8651091/CHP-2930
+)
+//app.clickup.com/t/8651091/CHP-2945
+)
+//app.clickup.com/t/8651091/CHP-3002
+)
+//app.clickup.com/t/8651091/CHP-2928
+)
+## MC1 SANITY TESTS",,,
+Deployed Items,Note,The sanity tests to check will be selected based on the release,,,
+Deployed Items,Note,Feature/Flow,,,
+Deployed Items,Note,Stage,,,
+Deployed Items,Note,Prod,,,
+Deployed Items,Note,Remarks,,,
+Deployed Items,Note,New User Signup from mc1,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,Mc1 user invite - signup,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,On stage should suffice,,,
+Deployed Items,Note,Upload Bom and verify in CRM,,,
+Deployed Items,Note,"Yes
+//my.chip1.com/projects/68c1298218ef2e14e8737b9e",,,
+Deployed Items,Yes https,Upload Excess and verify in CRM,,,
+Deployed Items,Yes https,"Yes
+//my.chip1.com/projects/68c1501242cbe6680f34e7aa",,,
+Deployed Items,Yes https,Manual RFQ,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,US25RQ12840,,,
+Deployed Items,Yes https,RFQ update,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,US25RQ12840,,,
+Deployed Items,Yes https,RFQ - multiline,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,US25RQ12842,,,
+Deployed Items,Yes https,Active Quote (create),,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,US25QU04006,,,
+Deployed Items,Yes https,Active Quote (edit),,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,US25QU04006,,,
+Deployed Items,Yes https,Active quote - multiline,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,US25QU04006,,,
+Deployed Items,Yes https,Sales Order (create),,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,US25SO01052,,,
+Deployed Items,Yes https,Sales Order (edit),,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,US25SO01052,,,
+Deployed Items,Yes https,Sales Order - multiline,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,US25SO01052,,,
+Deployed Items,Yes https,Quality Control (PO number),,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,CN25PO00119,,,
+Deployed Items,Yes https,CN25PO00121,,,
+Deployed Items,Yes https,Invoice generation,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,US25INV01012,,,
+Deployed Items,Yes https,Invoice generation - shipping in 2 lots,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,CN25PO00120,,,
+Deployed Items,Yes https,US25INV01013,,,
+Deployed Items,Yes https,Lead Account & Transfer,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,altir.test.0101.com,,@yopmail,
+Deployed Items,Yes https,Bids,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,On stage should suffice,,,
+Deployed Items,Yes https,Parts Tracker,,,
+Deployed Items,Yes https,"Yes
+yes",,,
+Deployed Items,Yes https,MPF100T-1FCG484E,,,
+Deployed Items,Yes https,Search,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Page Navigations,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Edit Project,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Notification Emails,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,"Download excess and Bom Template, fill and upload.",,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Conceirge Service,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Sorting,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Filters,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Note,The sanity tests to check will be selected based on the release,,,
+Deployed Items,Note,Feature/Flow,,,
+Deployed Items,Note,Stage,,,
+Deployed Items,Note,Production,,,
+Deployed Items,Note,Remarks,,,
+Deployed Items,Note,"Create BOM in MC1, check in xcrm and new crm
+yes",,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,"Create RFQ in MC1, check in xcrm and crm
+yes",,,
+Deployed Items,Note,US25RQ12852,,,
+Deployed Items,Note,US25QU04007,,,
+Deployed Items,Note,"Upload BOM from CRM
+yes",,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,"Page Navigations
+yes",,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,"Deep links for Accounts, RFQs, Quotes and Orders
+yes",,,
+Deployed Items,Note,US25QU04007,,,
+Deployed Items,Note,"Edit Project
+yes
+yes",,,
+Deployed Items,Note,"Global Search
+yes
+yes",,,
+Deployed Items,Note,"Filters
+yes
+yes",,,
+Deployed Items,Note,"Sorting of tables
+yes
+yes",,,
+Deployed Items,Note,"Page Search
+yes
+yes",,,
+Deployed Items,Note,"Download excess and Bom Template, fill and upload.
+yes
+yes",,,
+Deployed Items,Note,"Conceirge Service
+yes
+yes",,,
+Deployed Items,Note,"Microdashboard counts
+yes
+yes",,,
+Deployed Items,Note,"Share project and show in mc1
+yes
+yes",,,
+Deployed Items,Note,"Create Contact from crm
+yes",,,
+Deployed Items,Note,"Invite Contact from crm
+yes
+yes",,,
+Deployed Items,Note,"Create Task
+yes
+yes
+test release 10 sep25",,,
+Deployed Items,Note,"FAB icons - for all
+yes
+yes",,,
+Deployed Items,Note,"FAB - icon actions - Take a note/Activity/Task
+yes
+yes",,,
+Deployed Items,Note,"Light mode - dark mode
+yes
+yes",,,
+Deployed Items,Note,"Saved Views
+yes
+yes",,,
+Deployed Items,Note,"Projects - price refresh
+yes
+yes",,,

@@ -1,0 +1,264 @@
+# 30-SEP25-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Harika Guntamukkala
+ 
+Release date: 
+2025.09.30
+DB changes
+ : No
+ 
+Branch
+  : 
+Chip1-part: release/2025.09.30
+Chip1-transaction: hotfix/2025.09.30
+ 
+Components Involved
+ 
+& Artefacts
+:
+ 
+Chip1 Part        
+                                    : 2025.09.30.1
+Chip1 Transaction  
+    
+                      
+   :  2025.09.30.0
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+Private (
+https://app.clickup.com/t/8651091/CHP-3198
+)
+Bugs in build : -
+Missed in production: -
+
+## MC1 SANITY TESTS
+
+Note: The sanity tests to check will be selected based on the release
+Feature/Flow
+Stage
+Prod
+Remarks
+New User Signup from mc1
+ --
+ --
+On prod, we test this on need basis
+Mc1 user invite - signup
+ --
+ --
+On stage should suffice
+Upload Bom and verify in CRM
+ yes
+ yes
+ 
+Upload Excess and verify in CRM
+ yes
+ yes
+ 
+Manual RFQ
+ --
+ --
+ 
+RFQ update
+ --
+ --
+ 
+RFQ - multiline
+ --
+ --
+ 
+Active Quote (create)
+ --
+ --
+ 
+Active Quote (edit)
+ --
+ --
+ 
+Active quote - multiline
+ --
+ --
+ 
+Sales Order (create)
+ --
+ --
+ 
+Sales Order (edit)
+ --
+ --
+ 
+Sales Order - multiline
+ --
+ --
+ 
+Quality Control (PO number)
+ --
+ --
+ 
+Invoice generation
+ NA
+ NA
+ 
+Invoice generation - shipping in 2 lots
+ NA
+ NA
+ 
+Lead Account & Transfer
+ NA
+ NA
+ 
+ 
+ 
+Bids
+ --
+ --
+ On stage should suffice
+Parts Tracker
+ yes
+ Yes
+ 
+ 
+Search
+ yes
+ Yes
+ 
+Page Navigations
+ yes
+ yes
+ 
+Edit Project
+ yes
+ yes
+ 
+Notification Emails
+ NA
+ 
+NA
+Download excess and Bom Template, fill and upload.
+ yes
+ yes
+ NA
+Conceirge Service
+ yes
+ yes
+ 
+Sorting
+ yes
+ yes
+ NA
+Filters
+yes 
+yes 
+ NA
+ 
+
+## CRM SANITY TESTS:
+
+Note: The sanity tests to check will be selected based on the release
+Feature/Flow
+Stage
+Production
+Remarks
+Create BOM in MC1, check in xcrm and new crm
+ yes
+ yes
+ 
+Create RFQ in MC1, check in xcrm and crm
+ --
+ --
+ 
+Upload BOM from CRM
+ Yes
+ yes
+ 
+Page Navigations
+ yes
+ yes
+ 
+Deep links for Accounts, RFQs, Quotes and Orders
+ yes
+ yes
+ 
+Edit Project
+yes
+ yes
+ 
+Global Search
+ yes
+ yes
+ 
+Filters 
+ yes
+ yes
+ 
+Sorting of tables
+ yes
+ yes
+ 
+Page Search
+ yes
+ yes
+ 
+Download excess and Bom Template, fill and upload.
+ yes
+ yes
+ 
+Conceirge Service
+ yes
+ yes
+ 
+Microdashboard counts
+ --
+ --
+ 
+Share project and show in mc1
+ yes
+ yes
+ 
+Create Contact from crm
+ NA
+ --
+ 
+Invite Contact from crm
+ NA
+--
+ 
+Create Task
+ --
+ --
+ 
+FAB icons - for all
+ --
+ --
+ 
+FAB - icon actions - Take a note/Activity/Task
+ --
+ --
+ 
+Light mode - dark mode
+ --
+ --
+ 
+Saved Views
+ No
+ NA
+ 
+ Projects - price refresh
+ yes
+ yes

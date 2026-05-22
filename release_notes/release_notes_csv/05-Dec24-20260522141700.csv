@@ -1,0 +1,27 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,@Umamahesh @Deepti Vaidyula,,
+Metadata,Release Info,Release date,2024.12.05,,
+Metadata,Release Info,DB changes,Connect : release/2024.12.05,,
+Metadata,Release Info,Platform,No change,,
+Metadata,Release Info,Key Clock,No change,,
+Metadata,Release Info,Branch,release/2024.12.05,,
+Artefacts,Artefacts,Chip1 Account, 2024.12.05.0,,
+Artefacts,Artefacts,Chip1 MC1 Core, 2024.12.05.0,,
+Artefacts,Artefacts,Chip1 Transaction., 2024.12.05.1,,
+Deployed Items,General,Renaming mc1id to mc1Id in the RFQ/Opportunity payloads,,,
+Deployed Items,General,Pushing Hotparts and reason codes to CRM,,,
+Deployed Items,General,"Pulling contact information from accounts if available
+## TESTING NOTES",,,
+Deployed Items,General,Renaming mc1id to mc1Id in the RFQ/Opportunity payloads ,"Verified that when we raise an RFQ, the payload has mc1Id. Verified that end-to-end flows work.",,
+Deployed Items,General,"Pushing Hotparts and reason codes to CRM
+isHotPart = true if there is
+autoRfq",,,
+Deployed Items,General,Reason.,,,
+Deployed Items,General,"Auto RFQ reason in mc1 payload:
+""HIGH_VALUE_PART"",
+""OBSOLETE"",
+""
+isHotPart",,,
+Deployed Items,"""",Pulling contact information from accounts if available :,Verified,,

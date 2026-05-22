@@ -1,0 +1,56 @@
+# 23-DEC25-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+ 
+Release date
+ : 2025.12.23
+ 
+DB changes
+ : 
+Connect
+ : No changes
+Platform
+ : No changes
+Notification : 
+No changes
+ 
+Branch
+  : hotfix/2025.12.23
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Transaction
+    
+                      
+    :
+ 
+2025.12.23.0
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+ Private (
+https://app.clickup.com/t/8651091/CHP-3767
+)
+ 
+
+## TESTING DONE
+
+Verified that all user sessions are recorded in Sentry. Navigate to Explore -> Replays -> Select the user. 
+Basic smoke checks are done.

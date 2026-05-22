@@ -1,0 +1,303 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Deepti Vaidyula ,  @Harika Guntamukkala",,
+Metadata,Release Info,Release date,2026.02.20,,
+Metadata,Release Info,DB changes,Connect : release/2026.02.19,,
+Metadata,Release Info,Platform,release/2026.02.19,,
+Metadata,Release Info,Notification, No change,,
+Metadata,Release Info,Branch,release/2026.02.19,,
+Artefacts,Artefacts,Chip1 Account,2026.02.19.3,,
+Artefacts,Artefacts,Chip1 Transaction,2026.02.19.0,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2026.02.19.2,,
+Artefacts,Artefacts,fn-connect,2026.02.19.4,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,QE documentation link,https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh,,
+Artefacts,Artefacts,Sync Tracker," Entity From XCRM From Apex From MC1 RFQ Yes Yes yes Quote Yes Yes yes SO Yes Yes yes Account yes yes NA Contact yes yes yes PO Yes Yes NA Invoice Yes Yes NA Task Yes Yes NA Offer Yes Yes NA @Deepti Vaidyula (pick from release branch) Refactor approvals process and UI for orders and sourcing requests ( ) - verified Refactors approval functionality on order and order line levels — new FABs for locking/unlocking lines and submitting approvals, enhanced order creation form, request-for-purchase modal on sourcing requests from SO lines, sorting fixes for contacts/quotes/RFQs, and improved mentions handling. - verified Add column visibility provider to PO Sales Order island ( ) - Verified Introduces column visibility control to the PO Sales Order island. - Verified",,
+Artefacts,Artefacts,fix(sourcing-request),"Bugs and Enhancements ( ) Remove ""Account Owner"" from SR list view — keep account category only. - Verified Add ""Create Sourcing Request"" action on RFQ page-level FAB - Not yet implemented Default sort on SR list = Date placed descending (most recent first)  - Verified SR status chevron cleanup — remove open state chevron, show ""Created"" at top, replace zero counts with ""–""  - Verified Add ""Assign To"" FAB action on SR detail for individual assignment - Verified Rename bulk action ""Update Buyers/Buying Team"" → ""Update Assigned to""  - Verified Add ""Assigned to Me"" filter button on SR list  - Verified Align Create PO screen for SR path vs Offer path — pre-populate fields, consistent layout  - Verified Clear Buying Team on Request for Purchase modal (don't pre-populate from SR)  - Verified Stitch ""Request for Purchasing"" modal to the Offer path  - Verified Fix task creation ""Assigned To"" mapping - Verified PO - pass offer ref ( ) g - Verified PO and Stock Changes - 17.02.2026 ( )g - Verified PO Flow Changes ( )g - Verified PO Line approvals ( ) - will recheck on release branch. Apex doesn't have visual cues for approvals. Prepopulate sales person in sourcing requests and improve field labels ( )  - Verified Pre-populates the sales person field in sourcing request creation. Updates the assigned-to column to use buyers as values and improves labels for salesName and buyerName. - Verified Sourcing request - Assigned to column value, prepopulate sales person ( )  - Verified Use non-blocking loader in tasks ( )  - Verified Introduces a non-blocking loader for tasks, improving responsiveness and UX.  - Verified",,
+Artefacts,Artefacts,CHP-3954,Refactorings on SR and offers ( )   - Some fixes missing. Updated ticket See PR for images. PO Changes - v3 - 17.02.2026 ( )  - verified 19-feb-2026,,
+Artefacts,Artefacts,CHP-3958,SO Refactorings ( ) - Verified PO Line - Change default role to buyers ( ) - Krupa -Retest  Buyer should be carry forwarded Rename Quality Controller to Quality Inspector (,,
+Artefacts,Artefacts,) - Krupa - Verified https,//crm.stage.chip1.info/purchasing/receiving-lines/6995da0b99f8572f5bdd72e2/quality-control,,
+Artefacts,Artefacts,PO/Stock,Remove outdated lookup value ( ) - Krupa - verified - related to QC to QI,,
+Artefacts,Artefacts,SR,add list for allowed status update ( ) - Krupa - verified,,
+Artefacts,Artefacts,Fix,"Edit Task payload is not sending context on Edit , where context is not a search item ( ) - Vinay - Verified PO List - Update styles and remove unused subStatus field ( ) - Alexey - verified This update modifies the column styles in the purchase orders section and comments out the unused subStatus field to enhance clarity and maintainability of the code. POLine - Manually hide partial status from UI ( ) - Krupa - verified",,
+Artefacts,Artefacts,Stock,add quanlity controller column ( ) - Krupa - verified,,
+Artefacts,Artefacts,fix,"handle destructuring of null object ( ) fixes ""user is not able to click on Create Order from SR Fab"" sentry session - Krupa - cover in regression @Harika Guntamukkala Account - Offers and Purchase orders filters ( ) - Verified Add copy buttons to columns in list views ( ) Adds copy buttons to identifiers and names across all list views (account names, contact names, MPNs, manufacturer names, orders, invoices, POs, project names). Dates, statuses, and enum values excluded. - Verified Changes on Create SO and CreateSOfromQuote from release branch ( )",,
+Artefacts,Artefacts,CHP-3951,Notification Preferences ( ) → Adds notification preferences UI. Figma - Available in dynamic (dev) env - for emails need to check by EOD or tomorrow as daily quota is reached,,
+Artefacts,Artefacts,fix,avoid changing row height when PhoneLink is present in secondary prop ( ) - Verified,,
+Artefacts,Artefacts,Refactor,"Order Line , Order , approvedBy details and ,check by default ( ) Approval checkbox is now checked by default when an approval modal is opened - Verified ApprovedBy maps to a user, not an account - Verified Refactor Projects tab - Add columnVisibilityProvider, avoid changing columnKeys passed to useMemo dependencies ( )v- dev item",,
+Artefacts,Artefacts,refactor(auth),"update phone handling in SignUpProfile in MC1 ( ) - Verified SO Line - Add Allocation details island, enabled on production ( ) - Verified Sourcing - Add Refresh Prices, enabled only on dev env ( ) Update allocation summary labels ( ) Completes integration of the allocation island feature and enables it on production. Also adds useMemo to optimize table cell rendering.",,
+Artefacts,Artefacts,feat(PhoneField),prioritize US country option in phone field dropdown and add tests ( )- Verified,,
+Artefacts,Artefacts,fix(market-activity),update landed cost and available format in aggregated cell ( ),,
+Artefacts,Artefacts,Before,https://github.com/user-attachments/assets/b9be5355-0428-4c27-95e3-050a7bba8ffe,,
+Artefacts,Artefacts,After,https://github.com/user-attachments/assets/9e91c63d-0c65-4e7c-a462-1977df9c41d6 See PR for images.,,
+Artefacts,Artefacts,Credit utilization calculation,"Available in Stage, Ex: You can add credit to Order and while SO is created available credit is be calculated.",,
+Artefacts,Artefacts,CHP-3953,Refactorings on Sourcing Request Tab and RFQ's ( ) - Verified 19-feb-2026,,
+Artefacts,Artefacts,feat(quotes),enhance column cells with copy and tooltip functionality ( ) This feature update introduces copy functionality and tooltips for some column cells in the Quotes module. - Verified Project - Add filtering by risk level and lifecycle in Project -> Part Details Tab ( )- verified This pull request introduces functionality to filter projects by risk level and lifecycle directly from the hero section in the ProjectDetails view.,,
+Artefacts,Artefacts,fix(country-code),"dropdown menu items and default value selection ( )- Verified -add default country code from /users/me endpoint -rearrange the country code dropdown menu items(DE, US, HK, CN, NL and then rest of the options) -add tests See PR for images.",,
+Artefacts,Artefacts,fix(country-code),update user country code retrieval in CreateContactSection and CreateAccountModal ( )- Verified See PR for images. Approval and Other refactorings from release branch ( ) chore/update-deps-and-scripts ( ) - dev only,,
+Artefacts,Artefacts,feat,try eslint cache on gh actions - dev only,,
+Artefacts,Artefacts,fix,remove alternative fallback ( ) Memoization fixes (performance) ( ) Adds useMemo to key table cells to significantly reduce unnecessary re-renders in sales order lines.,,
+Artefacts,Artefacts,refactor(crm),Formik contact field ( ) - dev only,,
+Artefacts,Artefacts,RFQ,Simplify line schema and remove unnecessary parameters ( ) - dev only,,
+Artefacts,Artefacts,chore(claude-skills),"add new commands for code review, simplification, and refactoring ( )",,
+Artefacts,Artefacts,chore,add Claude Code skills for changelog workflow ( ),,
+Artefacts,Artefacts,fix(errors.json),form required message ( ) See PR for images.,,
+Artefacts,Artefacts,Form,normalize gaps between fields ( ) We feel the spacing across most of the create/details view is off and since it is quite prominent we feel it is important to address it asap.,,
+Artefacts,Artefacts,Spacing guidelines.  https,//www.figma.com/design/v5c0jzDP5riw5RFBNzIyqe/Chip-1---Designs?node-id=41388-61904&t=SU38MXXG…,,
+Artefacts,Artefacts,Changed version, See PR for images.,,
+Artefacts,Artefacts,feature(formik),Implement inline required message ( ),,
+Artefacts,Artefacts,To show required field inline and remove the errorText below the fields figma,https://www.figma.com/design/v5c0jzDP5riw5RFBNzIyqe/Chip-1---Designs?node-id=20692-47614&p=f&m=dev See PR for images. Wrap logo in a link for authentication page access ( ) This change wraps the logo in a link directing users to the authentication page. It improves navigation usability and addresses a missing link issue.,,
+Artefacts,Artefacts,refactor(formik),"Improve FormikPassword and FormikAutocomplete components ( ) - Refactoring, no visual changes may appear (related to putting error messages into form label)",,
+Artefacts,Artefacts,refactor(PhoneField),"optimize country options sorting logic ( ) - Optimization only, 2 operations of sorting of country codes is replaced with one - better performance",,
+Artefacts,Artefacts,Issues on stage, Teams link/number Issue Environment,,
+Artefacts,Artefacts,Teams #,20Feb_02,,
+Artefacts,Artefacts,Issue,RFQ number is displayed in the Quotes list view instead of Quote number for inbound quote created.,,
+Artefacts,Artefacts,URL,https://crm.stage.chip1.info/sales/rfqs/6997e873f381832b216f8930/quotes,,
+Artefacts,Artefacts,Component,UI Screenshot 2026-02-20 at 10.41.30 AM.png,,
+Artefacts,Artefacts,Env,Stage,,
+Artefacts,Artefacts,Teams #,20Feb_03,,
+Artefacts,Artefacts,Issue,CPN is not displayed in the following places:,,
+Artefacts,Artefacts,Internal RFQ list view,https://crm.stage.chip1.info/sales/rfqs/6997f15cf381832b216f893b/lines,,
+Artefacts,Artefacts,RFQ Details collapsed view,https://crm.stage.chip1.info/sales/rfqs/6997f15cf381832b216f893b/line/8db63281-b55c-483f-936a-cdd88…,,
+Artefacts,Artefacts,Component,UI,,
+Artefacts,Artefacts,Env,Stage and Prod,,
+Artefacts,Artefacts,Teams #,20Feb_04,,
+Artefacts,Artefacts,Issue,XCRM ID is not updated in PO list view,,
+Artefacts,Artefacts,Go to  https,//crm.stage.chip1.info/purchasing/purchase-orders/lines Check the 'xcrm ID' column,,
+Artefacts,Artefacts,PO created has synced. Create purchase order corr_id,b907f8db-2b38-4aa1-94a0-05eea91a1d4a - US26PO-05142.01 - US26PO-05142 - US26PO00180,,
+Artefacts,Artefacts,Component,UI,,
+Artefacts,Artefacts,Env,Stage Issues on prod Teams # or link Details,,
+Artefacts,Artefacts,Teams #,20Feb_06,,
+Artefacts,Artefacts,Env,Production and stage,,
+Artefacts,Artefacts,Issue,Quote+RFQ status not updated to SO created in the chevron for inbound SO created from the quote. RFQ is not tagged to the SO as well. IB RFQ created - US26RQ03623 - US26RQ-20505.01 IB quote created for the same RFQ - US26QU01056 - 0cdf38ec-0e64-11f1-9f10-ffce0c934f35 - US26QU01056.01A - Quote tagged to the same RFQ on Apex,,
+Artefacts,Artefacts,IB SO created from the same quote,US26SO01973 - bf288c5e-0e64-11f1-9f10-fd84cf869575 - US26SO-06148.01 - Quote+RFQ status not updated to SO created,,
+Artefacts,Artefacts,URL,US26SO01973 US26SO-06148.01 - https://crm.chip1.com/sales/orders/69986961943d3574778696fe/line/69986961943d3574778696fc,,
+Artefacts,Artefacts,Quote,https://crm.chip1.com/sales/quotes/line/69986836943d3574778696f9,,
+Artefacts,Artefacts,Component,correlation_id : bf288c5e-0e64-11f1-9f10-fd84cf869575,,
+Artefacts,Artefacts,Additional Info,,,
+Artefacts,Artefacts,Seeing the same on stage as well - https,//crm.stage.chip1.info/sales/rfqs/6997e873f381832b216f8930,,
+Artefacts,Artefacts,Quote created from xcrm,US26QU00184,,
+Artefacts,Artefacts,Req no,US26RQ11329,,
+Artefacts,Artefacts,SO created from above quote,US26SO00262,,
+Artefacts,Artefacts,Corr_id for SO,877391e8-0e1b-11f1-b0cb-c534d4c2323c,,
+Artefacts,Artefacts,Teams #,20Feb_07,,
+Artefacts,Artefacts,Env,Production,,
+Artefacts,Artefacts,Issue,PO created is failing to sync to xcrm.,,
+Artefacts,Artefacts,PO created - US26PO-02787.01 - URL,https://crm.chip1.com/purchasing/purchase-orders/699871e9943d357477869727/line/699871e9943d357477869726,,
+Artefacts,Artefacts,Component,PO - backend,,
+Artefacts,Artefacts,correlation_id,71784ffd-b7fb-4688-9679-b790decb65a7,,
+Artefacts,Artefacts,Logs,"co.altir.exception.BadRequestException:   Connect service processing for correlation-id:   71784ffd-b7fb-4688-9679-b790decb65a7, status: failed. Reason:   org.springframework.dao.IncorrectResultSizeDataAccessException: query did not   return a unique result: 2 ## MC1 SANITY TESTS",,
+Artefacts,Artefacts,Note,"The sanity tests to check will be selected based on the release Feature / Flow Validation Details Stage Prod Remarks New User Signup (MC1) Validated the new user signup flow from MC1 and confirmed account creation, including the LA transfer. Validated the new user signup flow from MC1. Confirmed account creation in MC1, including the LA transfer. Yes MC1 User Invite & Signup Validated the user invitation flow from xCRM and CRM2. Validated signup completion. Validated user access provisioning. Yes Upload BOM Validated the BOM upload from MC1 and CRM Confirmed the uploaded part details in CRM, MC1, and xCRM - Verified pricing information in CRM and MC1 Checked sourcing plan details in CRM and MC1 Ensured no automatic RFQs were generated when uploaded from CRM. Yes Upload Excess - Verified the excess upload from MC1 and CRM. Confirmed the visibility of part details in CRM and MC1. Yes Manual RFQ Validated the creation of RFQs with approved alternatives from MC1. Validated the creation of RFQs without approved alternatives from MC1. Validated standalone RFQ creation from xCRM. Validated RFQ details in the list view. Validated data synchronization between MC1, CRM, and xCRM. Validated RFQ status updates across systems. Yes RFQ Update Validated RFQ updates in MC1, CRM, and xCRM. Confirmed that an MPN change creates a new request line. - Verified updated details in the list view. Confirmed status updates in CRM and xCRM. Yes RFQ – Multiline Validated the creation of multiline RFQs Ensured data synchronization across systems Confirmed the accuracy of list view details - Verified status updates across CRM and xCRM systems - Active Quote – Create Validated the RFQ and Quote creation flow in CRM. Validated standalone quote creation in CRM and xCRM. Validated data synchronization across MC1, CRM, and xCRM. Validated quote details in the list view. Validated status updates across systems. Yes Active Quote – Edit Validated quote updates across systems. Confirmed that an MPN change creates a new quote line. - Verified updated quote details in the list view. Ensured status updates across CRM and xCRM. Yes Active Quote – Multiline Validated the creation of multiline quotes Validated quote details in the list view Validated data synchronization across systems Validated status updates across CRM and xCRM - Sales Order – Create Validated the RFQ → Quote → Sales Order flow. Validated standalone Sales Order creation in both CRM and xCRM. Validated RFQ from MC1 and Quote/SO from xCRM. Validated data synchronization across MC1, CRM, and xCRM. Validated Sales Order details in the list view. Validated status updates across systems. Yes Sales Order – Edit Validated the Sales Order edit functionality. Confirmed data synchronization across systems. - Verified updated details in the list view. Ensured status consistency between CRM and xCRM. Yes Sales Order – Multiline Validated the creation of multiline sales orders. Ensured data synchronization across systems. Confirmed status updates across CRM and xCRM. Yes Quality Control (PO Number) Validated the PO number association in MC12. Validated the Quality Control workflow in MC1. Yes Invoice Generation Validated the invoice generation flow in MC12. Confirmed the accuracy of invoice data in MC1. Yes Lead Account & Transfer Validated the creation and transfer of leads, ensuring synchronization across MC1, CRM, and xCRM. Yes Bids Validated bid creation flow Validated bid updates Validated data synchronization between MC1 and xCRM - Parts Tracker Validated parts tracking functionality Ensured data accuracy Yes Global Search Validated the global search functionality. Validated module-level search results for each entity. Yes Page Navigations Validated navigation across key modules. - Verified page load and access behavior. Yes Edit Project Validated the project edit functionality. Confirmed data persistence after updates or partial edits. Yes Notification Emails Validated notification email triggers Validated email content - - - Download & Upload Templates (BOM/Excess) Validated template download Validated template upload after data entry Yes Concierge Service Validated the concierge service workflow Yes Sorting Validated the sorting functionality across list views. Yes Filters Validated the filter functionality across all modules. Yes Pricing – OEM Secrets Confirmed the visibility of OEM pricing retrieval in the UI. Yes Pricing – IC - Verified the visibility of IC pricing fetch in the UI. Yes Pricing – xCRM Validated the visibility of xCRM pricing fetch in the UI. Yes",,
+Artefacts,Artefacts,## CRM SANITY TESTS,,,
+Artefacts,Artefacts,Note,"The sanity tests to check will be selected based on the release Feature / Flow Validation Details Stage Prod Remarks Create Account Validated that account can be created from CRM The tabs are accessible for this account Yes Create BOM (CRM -> XCRM) Validated BOM creation in CRM Confirmed BOM visibility and details in xCRM - Verified BOM synchronisation and details in the new CRM. Yes Create RFQ ( CRM -> XCRM) Validated RFQ creation in CRM Confirmed RFQ visibility and details in xCRM - Verified RFQ synchronisation and details in CRM. Yes Upload BOM (CRM) Validated BOM upload from CRM Validated BOM details visibility in MC1 and xCRM Validated data consistency across CRM, MC1, and xCRM Yes Page Navigations Validated navigation across key modules Validated page load and access behaviour Yes Deep Links (Accounts, RFQs, Quotes, Orders) Validated deep link navigation for Accounts Validated deep link navigation for RFQs Validated deep link navigation for Quotes Validated deep link navigation for Orders Yes Edit Project Validated project edit functionality Validated data persistence after updates or partial edits Yes Projects – Price Refresh Validated visibility of price details fetched from OEM Secrets, IC source, and xCRM Yes Global Search Validated global search functionality Validated module-level search results for each entity Yes Filters Validated filter functionality across all modules Yes Sorting of Tables Validated sorting functionality across list views Yes Download & Upload Templates (BOM/Excess) Validated template download2. Validated template upload after data entry Yes Concierge Service Validated concierge service workflow Yes Microdashboard Counts Validated micro-dashboard counts for each card under available entities Yes Share Project ( from CRM) Validated project sharing to MC1 and related scenarios Yes Create Contact (CRM) Validated contact creation at different levels from CRM Validated sync between CRM ↔ xCRM Yes Invite Contact (CRM) Validated contact invitation from CRM Validated sync between CRM ↔ xCRM Yes Create Task Validated task creation, edit, and related scenarios Yes FAB Icons (All Entities) Validated FAB icon visibility across all entities Yes FAB Actions (Note / Activity / Task) Validated Note, Activity, and Task actions from FAB icon across applicable entities Yes Light Mode / Dark Mode Validated user experience in both light and dark modes Yes Saved Views Validated saved views functionality Yes Trips and Visits Create and edit a trip and a visit Yes Account permissions Old account owner shouldn't be able to access the account after assigning a new account owner. Yes",,
+Artefacts,Artefacts,## PURCHASING SANITY TESTS," Feature/Flow Stage Production Remarks Create RFQ in MC1, check in xcrm and new   CRM Yes Verify RFQ creation, data sync between systems Create Sourcing Request from RFQ Yes Check SR links to RFQ correctly, all fields populated Add Offers to Sourcing Request Yes Verify multiple offers can be added, supplier info captured",,
+Artefacts,Artefacts,Update SR Status,"Offers Requested Yes Check status transitions, visibility to purchasing team",,
+Artefacts,Artefacts,Update SR Status,Receiving Offers Yes Verify status updates as offers come in,,
+Artefacts,Artefacts,Update SR Status,"Offers Gathered Yes Check final status, target price achievement indicator Create Quote from specific Offer Yes Verify Quote-Offer connection, price carries over Create Quote with multiple lines   (different prices/quantities) Yes Test multiple quote line creation, customer can select one Create Sales Order from Quote Yes Verify SO carries SR and Offer references Create Sales Order without SR (direct   quote) Yes Test SO creation for direct quotes, add SR later Create Sales Order from Market Offers (no   SR) Yes Verify market offer quote functionality Admin approval of Sales Order Yes Check approval checkboxes, workflow triggers Update SR Status to Request for Purchase   from SO Yes Verify status change triggers purchasing workflow Create Purchase Order from Offer (not   from SR) Yes",,
+Artefacts,Artefacts,Critical,"PO must be created from OFFER with supplier info Auto-create Stock entry when PO created Yes Stock status should be ordered, linked to PO Auto-create PO line allocation to Stock Yes Verify allocation established automatically Auto-create SO line allocation to Stock Yes",,
+Artefacts,Artefacts,Verify all three connections,"PO-Stock-SO Create Receiving Lines with multiple date   codes Yes Test receiving batch 1 (500 units), batch 2 (500 units) separately Create Receiving Lines with lot codes Yes Verify lot code capture for QC tracking",,
+Artefacts,Artefacts,QC Status Flow,"Arrived > QC Started   > Tested > Received Yes Check all status transitions, QC report creation QC Pass/Fail status in Receiving Line Yes Verify test results affect allocation and shipping Split Allocations when received qty   differs from ordered Yes Test 1000 ordered, 700+300 received, allocation splits Split Stock Line when receiving in   batches Yes Verify stock line splits with different date codes Update SO Allocations after split Yes Check allocation info includes receiving line ID, date code Allocate existing warehouse Stock   directly to SO Yes Test direct allocation for in-stock items (skip PO)",,
+Artefacts,Artefacts,SO status,Ready to Ship (when stock   allocated) Yes Verify SO jumps to Ready to Ship status Combine multiple RFQs into single   Sourcing Request Yes Test combining 3 RFQs (500+500+500) for economies of scale Purchasing decides allocation when   supplier has shortage Yes,,
+Artefacts,Artefacts,Test,"1500 ordered, supplier has 500, purchasing allocates Create partial Shipping Line Yes Test shipping 700 units, hold 300 pending Create full Shipping Line when all   quantity received Yes Test complete shipment after all batches received",,
+Artefacts,Artefacts,SO Status,"Partial Shipped Yes Verify status shows partial fulfillment Auto-create Invoice when Shipping Line   created Yes Check invoice amount, prepayment deduction Multiple Invoices for same SO (one per   shipment) Yes Test invoice creation for partial and final shipments Re-QC for Stock older than 1 year Yes Flag old stock, create new QC report, array of reports Gross Profit calculation with landing   cost Yes",,
+Artefacts,Artefacts,Verify margin calc,sales price - landed cost Switch offer if original not available at   PO creation Yes,,
+Artefacts,Artefacts,Test,"preferred offer unavailable, select alternative",,
+Artefacts,Artefacts,Page Navigation,"RFQ > SR > Quote   > SO > PO Yes Test navigation between entities Deep links for RFQ, Sourcing Request,   Quote, Sales Order, Purchase Order Yes Verify deep links work correctly Global Search for Purchasing entities Yes Test search RFQ, SR, Quote, SO, PO Filters on Purchasing lists (RFQ, SR,   Quote, SO, PO) Yes Test filtering by status, customer, date range Sorting of Purchasing tables Yes Test sort by date, amount, status, supplier Page Search within Purchasing pages Yes Test find within page (Ctrl+F equivalent) Download PO and Sourcing Request details Yes Test export to PDF/Excel Upload documents to Receiving Line (QC   reports, images) Yes Test document upload and attachment Image sequencing for QC Report PDF   generation Yes Test reordering images, PDF generation",,
+Artefacts,Artefacts,Data Migration,Legacy PR to SR (Request   for Purchase status) Yes Verify PR mapped correctly to SR Sourcing Request reference carried to   Sales Order Yes,,
+Artefacts,Artefacts,Critical,SO must always link back to SR Offer reference in Quote carried to Sales   Order Yes Test quote-offer-SO connection,,
+Deployed Items,Sync Tracker,Entity,,,
+Deployed Items,Sync Tracker,From XCRM,,,
+Deployed Items,Sync Tracker,From Apex,,,
+Deployed Items,Sync Tracker,From MC1,,,
+Deployed Items,Sync Tracker,RFQ,,,
+Deployed Items,Sync Tracker,Yes,,,
+Deployed Items,Sync Tracker,"Yes
+yes",,,
+Deployed Items,Sync Tracker,Quote,,,
+Deployed Items,Sync Tracker,Yes,,,
+Deployed Items,Sync Tracker,"Yes
+yes",,,
+Deployed Items,Sync Tracker,SO,,,
+Deployed Items,Sync Tracker,Yes,,,
+Deployed Items,Sync Tracker,"Yes
+yes",,,
+Deployed Items,Sync Tracker,"Account
+yes
+yes",,,
+Deployed Items,Sync Tracker,NA,,,
+Deployed Items,Sync Tracker,"Contact
+yes
+yes
+yes",,,
+Deployed Items,Sync Tracker,PO,,,
+Deployed Items,Sync Tracker,Yes,,,
+Deployed Items,Sync Tracker,Yes,,,
+Deployed Items,Sync Tracker,NA,,,
+Deployed Items,Sync Tracker,Invoice,,,
+Deployed Items,Sync Tracker,Yes,,,
+Deployed Items,Sync Tracker,Yes,,,
+Deployed Items,Sync Tracker,NA,,,
+Deployed Items,Sync Tracker,Task,,,
+Deployed Items,Sync Tracker,Yes,,,
+Deployed Items,Sync Tracker,Yes,,,
+Deployed Items,Sync Tracker,NA,,,
+Deployed Items,Sync Tracker,Offer,,,
+Deployed Items,Sync Tracker,Yes,,,
+Deployed Items,Sync Tracker,Yes,,,
+Deployed Items,Sync Tracker,"NA
+(pick from release branch) Refactor approvals process and UI for orders and sourcing requests (
+)",,,
+Deployed Items,Sync Tracker,"Refactors approval functionality on order and order line levels — new FABs for locking/unlocking lines and submitting approvals, enhanced order creation form, request-for-purchase modal on sourcing requests from SO lines, sorting fixes for contacts/quotes/RFQs, and improved mentions handling.",,,
+Deployed Items,Sync Tracker,"Add column visibility provider to PO Sales Order island (
+)",,,
+Deployed Items,Sync Tracker,Introduces column visibility control to the PO Sales Order island,,,
+Deployed Items,fix(sourcing-request),"Bugs and Enhancements (
+)",,,
+Deployed Items,fix(sourcing-request),"Remove ""Account Owner"" from SR list view — keep account category only.",,,
+Deployed Items,fix(sourcing-request),"Add ""Create Sourcing Request"" action on RFQ page-level FAB - Not yet implemented",,,
+Deployed Items,fix(sourcing-request),Default sort on SR list = Date placed descending (most recent first),,,
+Deployed Items,fix(sourcing-request),"SR status chevron cleanup — remove open state chevron, show ""Created"" at top, replace zero counts with ""–""",,,
+Deployed Items,fix(sourcing-request),"Add ""Assign To"" FAB action on SR detail for individual assignment",,,
+Deployed Items,fix(sourcing-request),"Rename bulk action ""Update Buyers/Buying Team"" → ""Update Assigned to"" Add ""Assigned to Me"" filter button on SR list",,,
+Deployed Items,fix(sourcing-request),"Align Create PO screen for SR path vs Offer path — pre-populate fields, consistent layout",,,
+Deployed Items,fix(sourcing-request),Clear Buying Team on Request for Purchase modal (don't pre-populate from SR),,,
+Deployed Items,fix(sourcing-request),"Stitch ""Request for Purchasing"" modal to the Offer path",,,
+Deployed Items,fix(sourcing-request),"Fix task creation ""Assigned To"" mapping",,,
+Deployed Items,fix(sourcing-request),"PO - pass offer ref (
+)",,,
+Deployed Items,fix(sourcing-request),"PO and Stock Changes - 17.02.2026 (
+)g",,,
+Deployed Items,fix(sourcing-request),"PO Flow Changes (
+)g",,,
+Deployed Items,fix(sourcing-request),"PO Line approvals (
+) - will recheck on release branch. Apex doesn't have visual cues for approvals.",,,
+Deployed Items,fix(sourcing-request),"Prepopulate sales person in sourcing requests and improve field labels (
+)",,,
+Deployed Items,fix(sourcing-request),Pre-populates the sales person field in sourcing request creation. Updates the assigned-to column to use buyers as values and improves labels for salesName and buyerName.,,,
+Deployed Items,fix(sourcing-request),"Sourcing request - Assigned to column value, prepopulate sales person (
+)",,,
+Deployed Items,fix(sourcing-request),"Use non-blocking loader in tasks (
+)",,,
+Deployed Items,fix(sourcing-request),"Introduces a non-blocking loader for tasks, improving responsiveness and UX.",,,
+Deployed Items,CHP-3954,"Refactorings on SR and offers (
+)   - Some fixes missing. Updated ticket",,,
+Deployed Items,CHP-3954,See PR for images.,,,
+Deployed Items,CHP-3954,"PO Changes - v3 - 17.02.2026 (
+)",,,
+Deployed Items,CHP-3958,"SO Refactorings (
+)",,,
+Deployed Items,CHP-3958,"PO Line - Change default role to buyers (
+) - Krupa -Retest  Buyer should be carry forwarded",,,
+Deployed Items,CHP-3958,"Rename Quality Controller to Quality Inspector (
+//crm.stage.chip1.info/purchasing/receiving-lines/6995da0b99f8572f5bdd72e2/quality-control",,,
+Deployed Items,PO/Stock,"Remove outdated lookup value (
+) - Krupa  - related to QC to QI
+add list for allowed status update (
+) - Krupa - Fix : Edit Task payload is not sending context on Edit , where context is not a search item (
+) - Vinay",,,
+Deployed Items,SR,"PO List - Update styles and remove unused subStatus field (
+) - Alexey",,,
+Deployed Items,SR,"This update modifies the column styles in the purchase orders section and comments out the unused
+subStatus
+field to enhance clarity and maintainability of the code.",,,
+Deployed Items,SR,"POLine - Manually hide partial status from UI (
+) - Krupa - Stock: add quanlity controller column (
+) - Krupa
+handle destructuring of null object (
+) fixes ""user is not able to click on Create Order from SR Fab""
+sentry session",,,
+Deployed Items,fix,Krupa - cover in regression,,,
+Deployed Items,fix,"Account - Offers and Purchase orders filters (
+)",,,
+Deployed Items,fix,"Add copy buttons to columns in list views (
+)",,,
+Deployed Items,fix,"Adds copy buttons to identifiers and names across all list views (account names, contact names, MPNs, manufacturer names, orders, invoices, POs, project names). Dates, statuses, and enum values excluded.",,,
+Deployed Items,fix,"Changes on Create SO and CreateSOfromQuote from release branch (
+)",,,
+Deployed Items,CHP-3951,"Notification Preferences (
+) → Adds notification preferences UI.",,,
+Deployed Items,CHP-3951,Figma,,,
+Deployed Items,CHP-3951,"Available in dynamic (dev) env
+avoid changing row height when PhoneLink is present in secondary prop (",,,
+Deployed Items,) - Refactor,"Order Line , Order , approvedBy details and ,check by default (
+)",,,
+Deployed Items,) - Refactor,"Approval checkbox is now checked by default when an approval modal is opened - ApprovedBy maps to a user, not an account - Refactor Projects tab - Add columnVisibilityProvider, avoid changing columnKeys passed to useMemo dependencies (
+)v- dev item
+update phone handling in SignUpProfile in MC1 (
+) - SO Line - Add Allocation details island, enabled on production (
+)",,,
+Deployed Items,refactor(auth),"Sourcing - Add Refresh Prices, enabled only on dev env (
+)",,,
+Deployed Items,refactor(auth),"Update allocation summary labels (
+)",,,
+Deployed Items,refactor(auth),"Completes integration of the allocation island feature and enables it on production. Also adds useMemo to optimize table cell rendering.
+prioritize US country option in phone field dropdown and add tests (",,,
+Deployed Items,feat(PhoneField),")
+update landed cost and available format in aggregated cell (
+)",Verified,,
+Deployed Items,After,See PR for images.,,,
+Deployed Items,Credit utilization calculation,"Available in Stage, Ex: You can add credit to Order and while SO is created available credit is be calculated.",,,
+Deployed Items,CHP-3953,"Refactorings on Sourcing Request Tab and RFQ's (
+)
+enhance column cells with copy and tooltip functionality (
+)",,,
+Deployed Items,feat(quotes),This feature update introduces copy functionality and tooltips for some column cells in the Quotes module.,,,
+Deployed Items,feat(quotes),"Project - Add filtering by risk level and lifecycle in Project -> Part Details Tab (
+)- This pull request introduces functionality to filter projects by risk level and lifecycle directly from the hero section in the ProjectDetails view.
+dropdown menu items and default value selection (
+)- -add default country code from
+/users/me
+endpoint -rearrange the country code dropdown menu items(DE, US, HK, CN, NL and then rest of the options) -add tests",,,
+Deployed Items,fix(country-code),"See PR for images.
+update user country code retrieval in CreateContactSection and CreateAccountModal (
+)- See PR for images.",,,
+Deployed Items,fix(country-code),"Approval and Other refactorings from release branch (
+)
+chore/update-deps-and-scripts (
+) - dev only
+try eslint cache on gh actions - dev only
+remove alternative fallback (
+)",,,
+Deployed Items,fix,"Memoization fixes (performance) (
+)",,,
+Deployed Items,fix,Adds useMemo to key table cells to significantly reduce unnecessary re-renders in sales order lines.,,,
+Deployed Items,refactor(crm),"Formik contact field (
+) - dev only",,,
+Deployed Items,RFQ,"Simplify line schema and remove unnecessary parameters (
+) - dev only
+add new commands for code review, simplification, and refactoring (
+)
+add Claude Code skills for changelog workflow (
+)
+form required message (
+)",,,
+Deployed Items,fix(errors.json),"See PR for images.
+normalize gaps between fields (
+)",,,
+Deployed Items,Form,"We feel the spacing across most of the create/details view is off and since it is quite prominent we feel it is important to address it asap.
+//www.figma.com/design/v5c0jzDP5riw5RFBNzIyqe/Chip-1---Designs?node-id=41388-61904&t=SU38MXXG…",,,
+Deployed Items,Changed version,See PR for images.,,,
+Deployed Items,feature(formik),"Implement inline required message (
+)",,,
+Deployed Items,feature(formik),To show required field inline and remove the errorText below the fields figma:,,,https://www.figma.com/design/v5c0jzDP5riw5RFBNzIyqe/Chip-1---Designs?node-id=20692-47614&p=f&m=dev
+Deployed Items,feature(formik),See PR for images.,,,
+Deployed Items,feature(formik),"Wrap logo in a link for authentication page access (
+)",,,
+Deployed Items,feature(formik),This change wraps the logo in a link directing users to the authentication page. It improves navigation usability and addresses a missing link issue.,,,
+Deployed Items,refactor(formik),"Improve FormikPassword and FormikAutocomplete components (
+) - Refactoring, no visual changes may appear (related to putting error messages into form label)
+optimize country options sorting logic (
+) - Optimization only, 2 operations of sorting of country codes is replaced with one - better performance",,,
+Deployed Items,Issues on stage,Teams link/number,,,
+Deployed Items,Issues on stage,Issue,,,
+Deployed Items,Issues on stage,Environment,,,
+Deployed Items,Issue,RFQ number is displayed in the Quotes list view instead of Quote number for inbound quote created.,,,
+Deployed Items,Component,Screenshot 2026-02-20 at 10.41.30 AM.png,,,
+Deployed Items,Issue,CPN is not displayed in the following places:,,,
+Deployed Items,Env,Stage and Prod,,,
+Deployed Items,Issue,"XCRM ID is not updated in PO list view
+//crm.stage.chip1.info/purchasing/purchase-orders/lines",,,
+Deployed Items,Go to  https,Check the 'xcrm ID' column,,,
+Deployed Items,Go to  https,PO created has synced. Create purchase order corr_id: b907f8db-2b38-4aa1-94a0-05eea91a1d4a - US26PO-05142.01 - US26PO-05142 - US26PO00180,,,

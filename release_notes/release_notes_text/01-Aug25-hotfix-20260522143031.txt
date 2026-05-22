@@ -1,0 +1,204 @@
+# 01-AUG25-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2025.08.01
+ 
+DB changes
+ : 
+Connect
+ : No changes
+Platform
+ : No changes
+Notification : 
+No changes
+ 
+Branch
+  : hotfix/2025.08.01
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 MC1 Core 
+                                : 2025.08.01.0
+Chip1 Transaction  
+    
+                      
+   :
+ 
+2025.08.01.0
+Chip1 CRM WebUI      
+                       : 2025.08.01.0
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+Private (
+https://app.clickup.com/t/8651091/CHP-2583
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2623
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2656
+)
+ 
+Bugs in build
+ 
+ 
+Found on production:
+Private (
+https://app.clickup.com/t/8651091/CHP-2667
+) --→ This is likely a data issue
+ 
+Automation run:
+crm:
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/crm-ui-tests/12/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+mc1:
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/chip1-ui-tests/37/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+ 
+
+## MC1 SANITY TESTS
+
+ 
+Feature/Flow
+Stage
+Prod
+Remarks
+New User Signup from mc1
+ yes
+ --
+ 
+Mc1 user invite - signup
+ yes
+ --
+On stage should suffice
+Upload Bom & Excess and verify in CRM
+ yes
+ yes
+ 
+Manual RFQ
+ yes
+ yes
+ 
+Active Quote (create, 
+edit
+)
+ yes
+ yes
+ 
+Sales Order
+(create, 
+edit
+)
+ yes
+ yes
+ 
+Shipping & invoice
+yes
+--
+Lead Account & Transfer
+yes (basic. creation and transfer)
+ ---
+ 
+Bids
+ --
+ ---
+ 
+Parts Tracker
+ yes
+ yes
+ 
+Search
+ yes
+ yes
+ 
+Page Navigations
+ yes
+ yes
+ 
+Edit Project
+ yes
+ yes
+ 
+Notification Emails
+ yes (quote, so)
+ yes(quote&so)
+ 
+Download excess and Bom Template, fill and upload.
+ yes
+ yes
+ 
+ 
+
+## CRM SANITY TESTS:
+
+ 
+Feature/Flow
+Stage
+Production
+Remarks
+Create BOM in MC1, check in xcrm and new crm
+ yes
+ yes
+ 
+Create RFQ in MC1, check in xcrm and crm
+ yes
+ yes
+ 
+Upload BOM from CRM
+ yes
+ yes
+ 
+Page Navigations
+ Yes
+ yes
+ 
+Deep links for Accounts, RFQs, Quotes and Orders
+ yes
+ yes
+ 
+Edit Project
+ yes
+ yes
+ 
+Global Search
+yes 
+ yes
+ 
+Filters 
+ yes
+ yes(few)
+ 
+Sorting of tables
+ yes
+ yes (few)
+ 
+Page Search
+yes 
+ yes
+ 
+Download excess and Bom Template, fill and upload.
+ yes
+ yes

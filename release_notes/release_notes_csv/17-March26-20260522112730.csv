@@ -1,0 +1,13 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Deepti Vaidyula ,  @Umamahesh",,
+Metadata,Release Info,chip1-transaction,2026.03.16.6,,
+Metadata,Release Info,chip1-part,2026.03.16.1,,
+Metadata,Release Info,chip1-crm-webui,2026.03.16.16,,
+Metadata,Release Info,Release Steps, Deploy chip1-part Deploy chip1-transaction Deploy chip1-crm-webui Validations,,
+Metadata,Release Info,Production Test Data,,,
+Metadata,Release Info,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Metadata,Release Info,QE documentation link,"https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh ### FOLLOWING ITEMS ARE PART OF THE RELEASE Deployed  tickets as part of the release 2026.03.11 Validation of all the above release items will be performed from QE team once it is deployed ## WHAT'S TESTED FOR THE RELEASE? Sourcing Show created date vs. updated date in UI. Send created date from backend.  (UI and BE) - P1 Show created date vs. updated date in UI. Send created date from backend.  (UI and Invoice date is not shown. We should created on. (UI & BE) moved franchise stock to martket activity get full user name from xCRM or map it on our side Data is not sorted by created/last updated date - sort by last updated date Fix for status timelShow created date vs. updated date in UI. Send created date from backend.  (UI and BE) - P1 Market /Offer List Inbound creation fix Showing SalesPerson role, In account show it as ""Sales Owner"" and all other places ""SalesPerson"" Dashboard links related to accounts are going to all accounts vs. my accounts Fixed part mpn/manufacture showing in RFQ lines Connect/timeline event output for bulk offer save and added timelines for shipments. Open issues on Stage",,
+Metadata,Release Info,Private ( https,//app.clickup.com/8651091/docs/880ak-50654/880ak-52214 ),,
+Metadata,Release Info,Issues on prod, Area Teams # Issue Description Key Details / Error Remarks Shipments prod_17march_01 No events recorded in shipment timeline Timeline is empty for shipment Timeline issue persists in prod,,

@@ -1,0 +1,93 @@
+# 19-JUN25-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Harika Guntamukkala
+ 
+Release date
+ : 2025.04.01
+DB changes
+ : 
+Connect
+ : No Change
+Platform
+ : No Change
+Notification : 
+No Change
+Branch
+  : 
+Connect : release/2025.06.19
+Components Involved
+ 
+& Artifacts
+: 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+Private (
+https://app.clickup.com/t/8651091/CHP-2280
+): Invoice Date Not Updated in UI
+Bugs in build
+Missed in production:
+
+## SANITY TESTS
+
+Stage CRM is down. So, all validations are done from mc1.
+Feature/Flow
+Stage
+Prod
+Remarks
+New User Signup from mc1
+NA
+NA
+Mc1 user invite - signup
+NA
+NA
+On stage should suffice
+Upload Bom & Excess and verify in CRM
+yes
+yes
+Stage crm is down
+Manual RFQ
+yes
+yes
+Active Quote (create, edit)
+NA
+NA
+Sales Order
+(create, edit)
+NA
+NA
+Lead Account & Transfer
+NA
+NA
+Bids
+Na
+NA
+Parts Tracker
+Yes
+yes
+Search
+Yes
+yes
+Page Navigations
+Yes
+yes
+Edit Project
+Yes
+yes
+Notification Emails
+NA
+NA

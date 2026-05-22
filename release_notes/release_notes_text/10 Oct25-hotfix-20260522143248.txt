@@ -1,0 +1,61 @@
+# 10 OCT25-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ 
+Release date: 10.10.2025
+ 
+Branch
+  : hotfix/2025.10
+ 
+Connect
+ : No changes
+Platform
+ : No changes
+Notification : 
+No changes
+ 
+Components Involved
+ 
+& Artefacts
+:
+ 
+Chip1 Transaction  
+    
+                      
+   :
+ 
+2025.10.10.0.1
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+Private (
+https://app.clickup.com/t/8651091/CHP-3290
+)
+Automation Run:
+jenkins.chip1.info
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/chip1-ui-tests/42/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+ 
+
+## MC1 SANITY TESTS
+
+Basic Sanity looks good
+ 
+
+## CRM SANITY TESTS:
+
+Basic Sanity looks good

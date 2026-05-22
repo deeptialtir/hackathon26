@@ -1,0 +1,18 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,@Harika Guntamukkala,,
+Metadata,Release Info,Release date,2026.01.09,,
+Metadata,Release Info,DB changes,Connect : No changes,,
+Metadata,Release Info,Platform,No changes,,
+Metadata,Release Info,Notification, No changes,,
+Metadata,Release Info,Branch,hotfix/2026.01.09,,
+Artefacts,Artefacts,Chip1 Transaction,2026.01.09.0,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,QE documentation link,https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh,,
+Deployed Items,Private ( https,"//app.clickup.com/t/8651091/CHP-3827
+)
+## TESTING DONE",,,
+Deployed Items,Private ( https,"Validations are done on one of the prod user(abhinay), create and patch working fine",,,
+Deployed Items,Private ( https,Basic smoke checks are done.,,,

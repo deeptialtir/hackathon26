@@ -1,0 +1,2111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feature Traceability · ORBYT</title>
+  <style>
+    :root {
+      --bg: #050914;
+      --panel: rgba(9, 18, 34, 0.9);
+      --line: rgba(123, 252, 255, 0.18);
+      --accent: #43f6c8;
+      --accent2: #7aa7ff;
+      --accent3: #ff4fd8;
+      --text: #eef7ff;
+      --muted: #9db1c8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(115deg, rgba(5,9,20,0.96), rgba(6,16,31,0.9) 46%, rgba(13,11,29,0.94)),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900' viewBox='0 0 1600 900'%3E%3Crect width='1600' height='900' fill='%23030a14'/%3E%3Cg fill='none' stroke='%2335f2d0' stroke-opacity='.26' stroke-width='1.2'%3E%3Cpath d='M0 180h220l70 70h260l80-80h330l70 70h570'/%3E%3Cpath d='M0 540h360l70-70h210l90 90h310l60-60h500'/%3E%3C/g%3E%3Cg fill='%237aa7ff' fill-opacity='.72'%3E%3Ccircle cx='220' cy='180' r='5'/%3E%3Ccircle cx='550' cy='250' r='4'/%3E%3Ccircle cx='960' cy='170' r='5'/%3E%3Ccircle cx='430' cy='470' r='5'/%3E%3Ccircle cx='730' cy='560' r='4'/%3E%3Ccircle cx='1100' cy='500' r='5'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      padding: 1.5rem 2.5rem 1rem;
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(18px);
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.65rem;
+      background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle { color: var(--muted); margin: 0.35rem 0 0; }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: flex-end; }
+    a.button {
+      color: #03111b;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      text-decoration: none;
+      padding: 0.55rem 0.85rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    main { padding: 1.5rem 2.5rem 2.5rem; }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 18px 46px rgba(0,0,0,0.24);
+      backdrop-filter: blur(16px);
+      overflow-x: auto;
+    }
+    .data-table {
+      width: 100%;
+      min-width: 900px;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+    .data-table th, .data-table td {
+      padding: 0.58rem 0.65rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .data-table th {
+      color: var(--accent);
+      font-weight: 700;
+      background: rgba(67,246,200,0.06);
+      position: sticky;
+      top: 0;
+    }
+    .data-table td { color: var(--text); }
+    .empty { color: var(--muted); }
+    .matrix-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+    .matrix-card {
+      background: rgba(255,255,255,0.035);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+    .matrix-card h2 { margin: 0 0 0.35rem; font-size: 1rem; color: var(--accent); }
+    .matrix-card p { color: var(--muted); margin: 0 0 0.75rem; font-size: 0.85rem; }
+    @media (max-width: 760px) {
+      header { align-items: flex-start; flex-direction: column; padding-left: 1rem; padding-right: 1rem; }
+      main { padding-left: 1rem; padding-right: 1rem; }
+      .actions { justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Feature Traceability</h1>
+      <p class="subtitle">ORBYT matrix view · Generated 2026-05-22 15:50</p>
+    </div>
+    <div class="actions">
+      <a class="button" href="ORBYT_Test_Matrix_Dashboard.html">Dashboard</a>
+      <a class="button" href="ORBYT_Downloads.html">Download Hub</a>
+      
+      <a class="button" download href="01b_Feature_Level_Traceability_Matrix.xlsx">Download Excel</a>
+      <a class="button" download href="01b_Feature_Level_Traceability_Matrix.csv">Download CSV</a>
+    </div>
+  </header>
+  <main>
+    <div class="panel">
+      <table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Feature_ID</th>
+      <th>Feature_Name</th>
+      <th>Site_Category</th>
+      <th>Site_Subcategory</th>
+      <th>Traceability_Status</th>
+      <th>QE_Verified</th>
+      <th>Story_Coverage_%</th>
+      <th>Last_Release_Date</th>
+      <th>Release_Count</th>
+      <th>Coverage_Gap</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CHP-1855</td>
+      <td>Account List View Enhancements</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>80.5</td>
+      <td>2026-05-21</td>
+      <td>37</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-694</td>
+      <td>Lookups data migration</td>
+      <td>General</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>78.9</td>
+      <td>2026-05-20</td>
+      <td>27</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2828</td>
+      <td>Create a Request</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>47.2</td>
+      <td>2026-05-20</td>
+      <td>24</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-1276</td>
+      <td>Project - Part Details and Sourcing Plan Export - UI</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>70.0</td>
+      <td>2026-05-20</td>
+      <td>24</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2064</td>
+      <td>Account: Parts tab - Sorting</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>64.0</td>
+      <td>2026-05-20</td>
+      <td>22</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2212</td>
+      <td>QE:: [CRM] Automate Accounts - Details &amp; Summary</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>45.8</td>
+      <td>2026-05-20</td>
+      <td>21</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2116</td>
+      <td>Tasks - Dropdown filter bar for the tasks list view</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>83.3</td>
+      <td>2026-05-20</td>
+      <td>21</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2753</td>
+      <td>Order line Details</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>45.8</td>
+      <td>2026-05-20</td>
+      <td>20</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2215</td>
+      <td>RFQ details page and Hero</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>52.2</td>
+      <td>2026-05-20</td>
+      <td>19</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2704</td>
+      <td>Requests List View</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>82.4</td>
+      <td>2026-05-20</td>
+      <td>18</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3320</td>
+      <td>Notification enhancement</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>81.2</td>
+      <td>2026-05-20</td>
+      <td>15</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3460</td>
+      <td>Data Model And Jolt Changes For Account &amp; Quote &amp; RF</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>33.3</td>
+      <td>2026-05-20</td>
+      <td>15</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2094</td>
+      <td>Impersonation capability in CRM</td>
+      <td>General</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>42.9</td>
+      <td>2026-05-20</td>
+      <td>14</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2273</td>
+      <td>Sourcing Plan Enhancement</td>
+      <td>Purchasing</td>
+      <td>Sourcing Requests</td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>100.0</td>
+      <td>2026-05-20</td>
+      <td>14</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-5191</td>
+      <td>Misc Account Field Additions and Renames</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>73.3</td>
+      <td>2026-05-20</td>
+      <td>13</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-1257</td>
+      <td>Connect service - Performance improvement</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>32.1</td>
+      <td>2026-05-20</td>
+      <td>12</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2952</td>
+      <td>Offers management</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>44.4</td>
+      <td>2026-05-20</td>
+      <td>12</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-1623</td>
+      <td>Account Service</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>52.9</td>
+      <td>2026-05-20</td>
+      <td>11</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3037</td>
+      <td>QE:[MC1] Mc1 Core API- User Tests</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>80.0</td>
+      <td>2026-05-20</td>
+      <td>11</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2752</td>
+      <td>Order details Page</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>53.8</td>
+      <td>2026-05-20</td>
+      <td>11</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3396</td>
+      <td>Purchase order - Create additional Stock Lines During Receiving</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>100.0</td>
+      <td>2026-05-20</td>
+      <td>11</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2950</td>
+      <td>Sourcing Request management</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>53.8</td>
+      <td>2026-05-20</td>
+      <td>10</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-472</td>
+      <td>QE:: Execute the testcases for MC1 Account Sign Up</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>50.0</td>
+      <td>2026-05-20</td>
+      <td>10</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-1778</td>
+      <td>QE:: [CRM]: Dashboard</td>
+      <td>Dashboards</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>60.0</td>
+      <td>2026-05-20</td>
+      <td>9</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2067</td>
+      <td>Accounts - Company profile</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>73.7</td>
+      <td>2026-05-20</td>
+      <td>9</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-577</td>
+      <td>Project Details P2</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>52.9</td>
+      <td>2026-05-20</td>
+      <td>9</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2108</td>
+      <td>Dashboard - General trends</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>62.5</td>
+      <td>2026-05-20</td>
+      <td>8</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2129</td>
+      <td>Tasks - Bulk Actions</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>57.1</td>
+      <td>2026-05-20</td>
+      <td>8</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3060</td>
+      <td>Sourcing Request - Create Sourcing Request from List View</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>37.5</td>
+      <td>2026-05-20</td>
+      <td>8</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-1654</td>
+      <td>Company API management</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>50.0</td>
+      <td>2026-05-20</td>
+      <td>7</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2960</td>
+      <td>QE:[MC1] Transaction API- Order Tests</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>100.0</td>
+      <td>2026-05-20</td>
+      <td>7</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-1555</td>
+      <td>Phone number in contacts don't have country code in some cases</td>
+      <td>General</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>70.0</td>
+      <td>2026-05-20</td>
+      <td>7</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2218</td>
+      <td>Contact details - Split form in 3 parts as per new design</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>66.7</td>
+      <td>2026-05-20</td>
+      <td>7</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3340</td>
+      <td>Independent offers - edit offers list</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>33.3</td>
+      <td>2026-05-20</td>
+      <td>7</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2883</td>
+      <td>Request (Single Line) - FAB</td>
+      <td>Sales</td>
+      <td>RFQs</td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>80.0</td>
+      <td>2026-05-20</td>
+      <td>7</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2625</td>
+      <td>Implement Edit Contact Screen with Extended Fields</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>66.7</td>
+      <td>2026-05-20</td>
+      <td>7</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2864</td>
+      <td>Request (Single line) - Enhancement</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>66.7</td>
+      <td>2026-05-20</td>
+      <td>7</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3391</td>
+      <td>Purcahse order - PO line status</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>44.4</td>
+      <td>2026-05-20</td>
+      <td>7</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3572</td>
+      <td>Purchase order - PO details</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>57.1</td>
+      <td>2026-05-20</td>
+      <td>6</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3398</td>
+      <td>Purchase order - Handling shortages and overages</td>
+      <td>Purchasing</td>
+      <td>Purchase Orders</td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>42.9</td>
+      <td>2026-05-20</td>
+      <td>6</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2165</td>
+      <td>Tasks - Reminders</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>75.0</td>
+      <td>2026-05-20</td>
+      <td>5</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2216</td>
+      <td>Collapsible island with summary</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>100.0</td>
+      <td>2026-05-20</td>
+      <td>5</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-1887</td>
+      <td>Dashboard API</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>72.7</td>
+      <td>2026-05-20</td>
+      <td>4</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3387</td>
+      <td>Offers - Create Purchase order from an approved offer</td>
+      <td>Purchasing</td>
+      <td>Purchase Orders</td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>28.6</td>
+      <td>2026-05-20</td>
+      <td>4</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3573</td>
+      <td>Purchase Order - PO line details</td>
+      <td>Purchasing</td>
+      <td>Purchase Orders</td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>50.0</td>
+      <td>2026-05-20</td>
+      <td>4</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3390</td>
+      <td>Purchase order - View Purchase Order Details</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>50.0</td>
+      <td>2026-05-20</td>
+      <td>3</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-1460</td>
+      <td>Authorization - Handling Roles, Permissions, and Datagroups</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>33.3</td>
+      <td>2026-05-20</td>
+      <td>2</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2963</td>
+      <td>QE:[MC1] Transaction API- Quote Tests</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>40.0</td>
+      <td>2026-05-20</td>
+      <td>2</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3389</td>
+      <td>Purchase order - Add to Existing Purchase Order (Same Supplier)</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>0.0</td>
+      <td>2026-05-20</td>
+      <td>2</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2207</td>
+      <td>QE:: [CRM] Automate All Account Tabs Navigation &amp; Number of Accounts</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>33.3</td>
+      <td>2026-05-20</td>
+      <td>1</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3399</td>
+      <td>Purchase order - QC - Stock line details &amp; Assign QC Controller to Stock Line</td>
+      <td>Purchasing</td>
+      <td>Purchase Orders</td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>33.3</td>
+      <td>2026-05-20</td>
+      <td>1</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3395</td>
+      <td>Purchase order&nbsp;&nbsp;- Start Receiving Process on PO Line</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>0.0</td>
+      <td>2026-05-20</td>
+      <td>1</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-473</td>
+      <td>QE:: Execute the testcases for Support</td>
+      <td>General</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>45.2</td>
+      <td>2026-05-15</td>
+      <td>25</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2210</td>
+      <td>QE:: [CRM] Automate Accounts Listview- Closed</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>47.1</td>
+      <td>2026-05-15</td>
+      <td>22</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3416</td>
+      <td>Sourcing request - Edit details</td>
+      <td>Purchasing</td>
+      <td>Sourcing Requests</td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>78.6</td>
+      <td>2026-05-15</td>
+      <td>18</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2724</td>
+      <td>QE:: [CRM]: Automate Contact Flows</td>
+      <td>General</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>43.6</td>
+      <td>2026-05-15</td>
+      <td>13</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2405</td>
+      <td>QE:: [MC1]: Automate Quotes Flows</td>
+      <td>Sales</td>
+      <td>Quotes</td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>37.5</td>
+      <td>2026-05-15</td>
+      <td>13</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3066</td>
+      <td>Sourcing Request - Navigation and Sourcing Request Dashboard</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>50.0</td>
+      <td>2026-05-15</td>
+      <td>12</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2959</td>
+      <td>QE:[MC1] Transaction API- Invoice Tests</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>100.0</td>
+      <td>2026-05-15</td>
+      <td>11</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2698</td>
+      <td>[Spike] Superset Integration - Authentication approach</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>50.0</td>
+      <td>2026-05-15</td>
+      <td>10</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2919</td>
+      <td>Sourcing Request - Market research and Pricing tab for logging pricing details</td>
+      <td>Purchasing</td>
+      <td>Sourcing Requests</td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>66.7</td>
+      <td>2026-05-15</td>
+      <td>5</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3052</td>
+      <td>Offers - Display open offers table on Purchase requests</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>50.0</td>
+      <td>2026-05-15</td>
+      <td>5</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3555</td>
+      <td>Invoices</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>100.0</td>
+      <td>2026-05-13</td>
+      <td>12</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2261</td>
+      <td>Develop Multiple Sourcing Plan capability</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>33.3</td>
+      <td>2026-05-12</td>
+      <td>13</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-1777</td>
+      <td>QE:: [CRM]: Excess Projects</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>66.7</td>
+      <td>2026-05-12</td>
+      <td>13</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3397</td>
+      <td>Purchase order - Complete Receiving and Create additional Stock Lines</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>75.0</td>
+      <td>2026-05-12</td>
+      <td>10</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-670</td>
+      <td>Handling CRM Part Alternative data</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>25.0</td>
+      <td>2026-05-07</td>
+      <td>12</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2202</td>
+      <td>Request/Request Line details Edit Flow</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>42.9</td>
+      <td>2026-05-07</td>
+      <td>11</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3846</td>
+      <td>Offer matching - Auto update related to RFQ and SO changes</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>25.0</td>
+      <td>2026-05-07</td>
+      <td>5</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2379</td>
+      <td>QE:: [MC1]: Automate Profile Flows</td>
+      <td>General</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>28.6</td>
+      <td>2026-05-07</td>
+      <td>4</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2968</td>
+      <td>QE:[MC1] Transaction API- SourcingPlan Tests</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>100.0</td>
+      <td>2026-05-07</td>
+      <td>2</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-1349</td>
+      <td>Add and Update Filters in Part Details - UI</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>64.3</td>
+      <td>2026-05-05</td>
+      <td>23</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2209</td>
+      <td>QE:: [CRM] Automate Accounts Listview - InActive</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>50.0</td>
+      <td>2026-05-05</td>
+      <td>22</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3401</td>
+      <td>Purchase order - Allocation</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>80.0</td>
+      <td>2026-05-05</td>
+      <td>15</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-5598</td>
+      <td>All Accounts – Search and Ownership Request</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>42.9</td>
+      <td>2026-05-05</td>
+      <td>14</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2452</td>
+      <td>Inventory Service</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>33.3</td>
+      <td>2026-05-05</td>
+      <td>12</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2128</td>
+      <td>Tasks - Details Panel (In progress)</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>50.0</td>
+      <td>2026-05-05</td>
+      <td>12</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-1271</td>
+      <td>Events service configuration</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>36.0</td>
+      <td>2026-05-05</td>
+      <td>7</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2969</td>
+      <td>QE:[MC1] Transaction API- Tag Tests</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>75.0</td>
+      <td>2026-05-05</td>
+      <td>6</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-695</td>
+      <td>Data Migration (Connect)</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>55.6</td>
+      <td>2026-05-05</td>
+      <td>6</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3392</td>
+      <td>Purchase order - Auto Create stock line on PO creation</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>38.5</td>
+      <td>2026-05-05</td>
+      <td>6</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-1655</td>
+      <td>Hierarchy API management</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>18.8</td>
+      <td>2026-05-05</td>
+      <td>5</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2117</td>
+      <td>Project Enhancement - Process same IPN in the bom file</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>37.5</td>
+      <td>2026-05-05</td>
+      <td>5</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2505</td>
+      <td>Implement Multi-RFQ project</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>50.0</td>
+      <td>2026-05-05</td>
+      <td>4</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-1562</td>
+      <td>User Management in Admin Console</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>33.3</td>
+      <td>2026-05-05</td>
+      <td>4</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2293</td>
+      <td>Implement Max View</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>40.0</td>
+      <td>2026-05-05</td>
+      <td>4</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2383</td>
+      <td>QE:: [MC1]: Automate Hot Key Search Flows</td>
+      <td>General</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>20.0</td>
+      <td>2026-05-05</td>
+      <td>3</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3058</td>
+      <td>Offers - Approval/Rejection workflow</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>50.0</td>
+      <td>2026-05-05</td>
+      <td>1</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-587</td>
+      <td>Temporary UI stories container ticket</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>20.0</td>
+      <td>2026-05-05</td>
+      <td>1</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2211</td>
+      <td>QE:: [CRM] Automate Accounts&nbsp;&nbsp;Listview- Blacklisted</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>66.7</td>
+      <td>2026-04-30</td>
+      <td>11</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2266</td>
+      <td>QE Feature: Fund Code Changes</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>66.7</td>
+      <td>2026-04-30</td>
+      <td>9</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2099</td>
+      <td>Company Profile API</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>71.4</td>
+      <td>2026-04-29</td>
+      <td>17</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3655</td>
+      <td>Sales/Purchasing workflow changes - Offers on Sourcing request</td>
+      <td>Purchasing</td>
+      <td>Sourcing Requests</td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>100.0</td>
+      <td>2026-04-29</td>
+      <td>10</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-1712</td>
+      <td>Edit Profile</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>40.0</td>
+      <td>2026-04-29</td>
+      <td>4</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-1470</td>
+      <td>Transaction service - Tech debt/minor fixes</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>66.7</td>
+      <td>2026-04-29</td>
+      <td>2</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2421</td>
+      <td>QE:: [MC1]: Automate Part Tracker Flows</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>50.0</td>
+      <td>2026-04-28</td>
+      <td>11</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3337</td>
+      <td>Independent offers - List view</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>16.7</td>
+      <td>2026-04-28</td>
+      <td>11</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3509</td>
+      <td>Purchase Order management</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>75.0</td>
+      <td>2026-04-28</td>
+      <td>9</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2917</td>
+      <td>Sourcing Request - Lifecycle</td>
+      <td>Purchasing</td>
+      <td>Purchase Orders</td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>66.7</td>
+      <td>2026-04-28</td>
+      <td>6</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2893</td>
+      <td>RFQ (multi/single) - Update status modal</td>
+      <td>Sales</td>
+      <td>RFQs</td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>42.9</td>
+      <td>2026-04-28</td>
+      <td>3</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3051</td>
+      <td>Offers - Record Offers from Suppliers (Manual entry)</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>0.0</td>
+      <td>2026-04-28</td>
+      <td>1</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3057</td>
+      <td>Offers - Approval through Request for Purchasing</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>20.0</td>
+      <td>2026-04-28</td>
+      <td>1</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-1779</td>
+      <td>QE:: [CRM]: General items</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>100.0</td>
+      <td>2026-04-22</td>
+      <td>10</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2464</td>
+      <td>New CRM ID generation and xCRM ID sync for Account, and Contact</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>82.4</td>
+      <td>2026-04-21</td>
+      <td>23</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2976</td>
+      <td>QE:[MC1] Account API- Users Tests</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>66.7</td>
+      <td>2026-04-21</td>
+      <td>11</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-1285</td>
+      <td>Business Type Selection for New Account Creation - UI</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>44.4</td>
+      <td>2026-04-21</td>
+      <td>9</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-474</td>
+      <td>QE:: Execute the testcases for Personal Information (Profile)</td>
+      <td>General</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>26.7</td>
+      <td>2026-04-21</td>
+      <td>7</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2975</td>
+      <td>QE:[MC1] Account API- Region Tests</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>50.0</td>
+      <td>2026-04-21</td>
+      <td>6</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3415</td>
+      <td>Purchase order - Update Arrival quantity on PO line</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>66.7</td>
+      <td>2026-04-21</td>
+      <td>4</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2384</td>
+      <td>QE:: [MC1]: Automate Parts Flows</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>8.0</td>
+      <td>2026-04-21</td>
+      <td>3</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2957</td>
+      <td>QE:[MC1] Transaction API- Dashboard Tests</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>66.7</td>
+      <td>2026-04-14</td>
+      <td>5</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2961</td>
+      <td>QE:[MC1] Transaction API- Partprice Tests</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>50.0</td>
+      <td>2026-04-14</td>
+      <td>1</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2114</td>
+      <td>Tasks - Customisable micro cards</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>20.0</td>
+      <td>2026-04-14</td>
+      <td>1</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3539</td>
+      <td>Purchasing flow - Notifications</td>
+      <td>Notification</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>66.7</td>
+      <td>2026-04-07</td>
+      <td>13</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3394</td>
+      <td>Purchase order - Mandatory Warehouse Selection</td>
+      <td>Purchasing</td>
+      <td>Purchase Orders</td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>33.3</td>
+      <td>2026-04-07</td>
+      <td>12</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2322</td>
+      <td>QE:: [CRM] Automate Project Flows</td>
+      <td>General</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>52.9</td>
+      <td>2026-04-02</td>
+      <td>9</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3819</td>
+      <td>Shipments Workflow for Sales Orders</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>42.9</td>
+      <td>2026-03-31</td>
+      <td>7</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2208</td>
+      <td>QE:: [CRM] Automate Accounts Listview- Prospect</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>40.0</td>
+      <td>2026-02-02</td>
+      <td>16</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2408</td>
+      <td>QE:: [MC1]: Automate Excess Project Flows</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>36.4</td>
+      <td>2026-02-02</td>
+      <td>12</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-1298</td>
+      <td>Add "Target Price per 100" Field in BOM Upload Template - UI</td>
+      <td>General</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>60.0</td>
+      <td>2026-02-02</td>
+      <td>11</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2972</td>
+      <td>QE:[MC1] Part API- Price Tests</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>33.3</td>
+      <td>2026-02-02</td>
+      <td>9</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3388</td>
+      <td>Purchase order - Create Purchase Order from Multiple Approved Offers (Same Supplier)</td>
+      <td>Purchasing</td>
+      <td>Purchase Orders</td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>0.0</td>
+      <td>2026-02-02</td>
+      <td>9</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3844</td>
+      <td>Offer matching - Adding match indicator to Independent offers</td>
+      <td>Sales</td>
+      <td>Sales Orders</td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>25.0</td>
+      <td>2026-02-02</td>
+      <td>9</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-475</td>
+      <td>QE:: Execute the testcases for Business Information (Profile)</td>
+      <td>General</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>25.0</td>
+      <td>2026-01-30</td>
+      <td>3</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3667</td>
+      <td>Offer Improvements</td>
+      <td>Notification</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>60.0</td>
+      <td>2026-01-27</td>
+      <td>2</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3018</td>
+      <td>System components - Improvements</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>42.9</td>
+      <td>2026-01-27</td>
+      <td>2</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2924</td>
+      <td>Sourcing Request - Create a task to indicate a Sourcing request is assigned to a Buyer</td>
+      <td>Tasks</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>0.0</td>
+      <td>2026-01-27</td>
+      <td>2</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3660</td>
+      <td>Sales/Purchasing workflow changes -</td>
+      <td>Purchasing</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>0.0</td>
+      <td>2026-01-27</td>
+      <td>1</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3336</td>
+      <td>Independent Offers - Create an Independent offer list/ offer</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>50.0</td>
+      <td>2026-01-27</td>
+      <td>1</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3056</td>
+      <td>Offers - Recommend and unrecommend offers</td>
+      <td>Sales</td>
+      <td>Quotes</td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>42.9</td>
+      <td>2026-01-24</td>
+      <td>4</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3338</td>
+      <td>Independent offers - View Offer List Details</td>
+      <td>UI</td>
+      <td></td>
+      <td>PARTIALLY_TRACED</td>
+      <td>NO</td>
+      <td>50.0</td>
+      <td>2026-01-24</td>
+      <td>2</td>
+      <td>1 linked stories without release evidence</td>
+    </tr>
+    <tr>
+      <td>CHP-3657</td>
+      <td>Sales/Purchasing workflow changes - Request for purchase from Sales Order</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>50.0</td>
+      <td>2026-01-05</td>
+      <td>3</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3211</td>
+      <td>Authorization: UI Section permission</td>
+      <td>API</td>
+      <td></td>
+      <td>PARTIALLY_TRACED</td>
+      <td>NO</td>
+      <td>50.0</td>
+      <td>2025-12-12</td>
+      <td>1</td>
+      <td>1 linked stories without release evidence</td>
+    </tr>
+    <tr>
+      <td>CHP-2971</td>
+      <td>QE:[MC1] Part API- Part Tests</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>71.4</td>
+      <td>2025-12-08</td>
+      <td>4</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3235</td>
+      <td>Authorization: Global View control</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>NO</td>
+      <td>0.0</td>
+      <td>2025-12-08</td>
+      <td>1</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3523</td>
+      <td>Independent offers - Edit individual offers</td>
+      <td>Purchasing</td>
+      <td></td>
+      <td>PARTIALLY_TRACED</td>
+      <td>NO</td>
+      <td>100.0</td>
+      <td>2025-11-28</td>
+      <td>1</td>
+      <td>Indirect/name-match only</td>
+    </tr>
+    <tr>
+      <td>CHP-2127</td>
+      <td>Tasks - Table/List view</td>
+      <td>UI</td>
+      <td></td>
+      <td>PARTIALLY_TRACED</td>
+      <td>NO</td>
+      <td>33.3</td>
+      <td>2025-11-28</td>
+      <td>1</td>
+      <td>2 linked stories without release evidence</td>
+    </tr>
+    <tr>
+      <td>CHP-2126</td>
+      <td>Tasks - Grouping</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>100.0</td>
+      <td>2025-11-25</td>
+      <td>3</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3339</td>
+      <td>Independent offers - View individual offer details</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>100.0</td>
+      <td>2025-11-25</td>
+      <td>2</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3054</td>
+      <td>Offers - Update offers - Duplicate &amp; Edit</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>100.0</td>
+      <td>2025-11-25</td>
+      <td>2</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-62</td>
+      <td>Secure current Infrastructure</td>
+      <td>General</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>14.3</td>
+      <td>2025-11-05</td>
+      <td>1</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3176</td>
+      <td>Unify and Enhance Timeline Tabs Across Entities</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>30.0</td>
+      <td>2025-10-31</td>
+      <td>3</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3845</td>
+      <td>Offer matching - Auto match</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>50.0</td>
+      <td>2025-10-31</td>
+      <td>2</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2973</td>
+      <td>QE:[MC1] Part API- Product Category Tests</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>25.0</td>
+      <td>2025-10-29</td>
+      <td>1</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2962</td>
+      <td>QE:[MC1] Transaction API- Project Tests</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>40.0</td>
+      <td>2025-10-10</td>
+      <td>3</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-1250</td>
+      <td>Invite collaborators for editing Projects [Bom/Excess]</td>
+      <td>Projects</td>
+      <td>Excess</td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>40.0</td>
+      <td>2025-09-10</td>
+      <td>2</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2392</td>
+      <td>QE:: [MC1]: Automate Projects Flows</td>
+      <td>General</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>11.1</td>
+      <td>2025-08-22</td>
+      <td>9</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2418</td>
+      <td>QE:: [MC1]: Automate Orders Flows</td>
+      <td>General</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>15.4</td>
+      <td>2025-08-22</td>
+      <td>7</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-1806</td>
+      <td>Improvement - Setup Redis with TLS in Altir infra</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>50.0</td>
+      <td>2025-08-22</td>
+      <td>6</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-3400</td>
+      <td>Purchase order - Handle QC Fail - Initiate Return (RMA)</td>
+      <td>Purchasing</td>
+      <td>Purchase Orders</td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>20.0</td>
+      <td>2025-07-14</td>
+      <td>2</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-2967</td>
+      <td>QE:[MC1] Transaction API- Search Tests</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>25.0</td>
+      <td>2025-04-07</td>
+      <td>2</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>CHP-1720</td>
+      <td>Handling Authorization through Card Fields in fn-db-management lib</td>
+      <td>API</td>
+      <td></td>
+      <td>UNTESTED</td>
+      <td>NO</td>
+      <td>0.0</td>
+      <td></td>
+      <td>0</td>
+      <td>No release linkage at feature or story level</td>
+    </tr>
+    <tr>
+      <td>CHP-2958</td>
+      <td>QE:[MC1] Transaction API- Export Tests</td>
+      <td>API</td>
+      <td></td>
+      <td>UNTESTED</td>
+      <td>NO</td>
+      <td>0.0</td>
+      <td></td>
+      <td>0</td>
+      <td>No release linkage at feature or story level</td>
+    </tr>
+    <tr>
+      <td>CHP-2964</td>
+      <td>QE:[MC1] Transaction API- QuoteItem Tests</td>
+      <td>API</td>
+      <td></td>
+      <td>UNTESTED</td>
+      <td>NO</td>
+      <td>0.0</td>
+      <td></td>
+      <td>0</td>
+      <td>No release linkage at feature or story level</td>
+    </tr>
+    <tr>
+      <td>CHP-2966</td>
+      <td>QE:[MC1] Transaction API- RFQ Tests</td>
+      <td>API</td>
+      <td></td>
+      <td>UNTESTED</td>
+      <td>NO</td>
+      <td>0.0</td>
+      <td></td>
+      <td>0</td>
+      <td>No release linkage at feature or story level</td>
+    </tr>
+    <tr>
+      <td>CHP-2970</td>
+      <td>QE:[MC1] Transaction API- Timeline Tests</td>
+      <td>API</td>
+      <td></td>
+      <td>UNTESTED</td>
+      <td>NO</td>
+      <td>0.0</td>
+      <td></td>
+      <td>0</td>
+      <td>No release linkage at feature or story level</td>
+    </tr>
+    <tr>
+      <td>CHP-1791</td>
+      <td>Common Validation Rules and Error Messages (CRM Forms)</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>UNTESTED</td>
+      <td>NO</td>
+      <td>0.0</td>
+      <td></td>
+      <td>0</td>
+      <td>No release linkage at feature or story level</td>
+    </tr>
+    <tr>
+      <td>CHP-1878</td>
+      <td>Tariff Impact</td>
+      <td>Parts</td>
+      <td></td>
+      <td>UNTESTED</td>
+      <td>NO</td>
+      <td>0.0</td>
+      <td></td>
+      <td>0</td>
+      <td>No release linkage at feature or story level</td>
+    </tr>
+    <tr>
+      <td>CHP-2647</td>
+      <td>RFQ,Order,Projects,Parts - Added notes are not displaying in UI</td>
+      <td>Parts</td>
+      <td></td>
+      <td>UNTESTED</td>
+      <td>NO</td>
+      <td>0.0</td>
+      <td></td>
+      <td>0</td>
+      <td>No release linkage at feature or story level</td>
+    </tr>
+    <tr>
+      <td>CHP-3393</td>
+      <td>Purchase order - View aggregated status at parent PO</td>
+      <td>Parts</td>
+      <td></td>
+      <td>UNTESTED</td>
+      <td>NO</td>
+      <td>0.0</td>
+      <td></td>
+      <td>0</td>
+      <td>No release linkage at feature or story level</td>
+    </tr>
+    <tr>
+      <td>CHP-3086</td>
+      <td>Sourcing Request - Merging Multiple Sourcing Requests and handling exceeding requirement scenarios.</td>
+      <td>Purchasing</td>
+      <td>Sourcing Requests</td>
+      <td>UNTESTED</td>
+      <td>NO</td>
+      <td>0.0</td>
+      <td></td>
+      <td>0</td>
+      <td>No release linkage at feature or story level</td>
+    </tr>
+    <tr>
+      <td>CHP-3656</td>
+      <td>Sales/Purchasing workflow changes - Quote creation from offers and quote creation without offers - Advancement into SO</td>
+      <td>Sales</td>
+      <td>Sales Orders</td>
+      <td>UNTESTED</td>
+      <td>NO</td>
+      <td>0.0</td>
+      <td></td>
+      <td>0</td>
+      <td>No release linkage at feature or story level</td>
+    </tr>
+    <tr>
+      <td>CHP-2110</td>
+      <td>Dashboard - News feed &amp; Leaderboard insights</td>
+      <td>UI</td>
+      <td></td>
+      <td>UNTESTED</td>
+      <td>NO</td>
+      <td>0.0</td>
+      <td></td>
+      <td>0</td>
+      <td>No release linkage at feature or story level</td>
+    </tr>
+    <tr>
+      <td>CHP-2166</td>
+      <td>Tasks - FAB (floating action button options) (In progress)</td>
+      <td>UI</td>
+      <td></td>
+      <td>UNTESTED</td>
+      <td>NO</td>
+      <td>0.0</td>
+      <td></td>
+      <td>0</td>
+      <td>No release linkage at feature or story level</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+  </main>
+</body>
+</html>

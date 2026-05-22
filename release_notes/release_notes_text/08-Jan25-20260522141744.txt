@@ -1,0 +1,142 @@
+# 08-JAN25
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+ 
+Release date
+ : 2025.01.08
+DB changes
+ : 
+Connect
+ : No Change
+Platform
+ : No Change
+Branch
+  : release/2025.01.08
+Components Involved
+ 
+& Artefacts
+: 
+Chip1 Transaction.       : 
+2025.01.08.0
+Chip1 Part                        : 
+2025.01.08.0
+Chip1 Web UI
+ 
+ :
+ 2025.01.08.0
+
+## LIST OF DEPLOYED ITEMS
+
+Task
+Remarks
+QE status
+Private (
+https://app.clickup.com/t/8651091/CHP-1237
+) 
+(point 6)- Ability to archive a project (BOM or Excess)
+Verified on stage
+.
+Private (
+https://app.clickup.com/t/8651091/CHP-1237
+)
+(point 4) Rename PCN document to the actual name in the project details
+Verified on stage
+Private (
+https://app.clickup.com/t/8651091/CHP-1297
+) 
+BOM upload - new field to consider target price per 100
+Verified on stage
+In default template as well.
+Working with exact field match in excel. Waiting for fields in other languages. (later release)
+Private (
+https://app.clickup.com/t/8651091/CHP-1296
+) 
+( point 1) Add filters in part details
+Verified on stage
+Private (
+https://app.clickup.com/t/8651091/CHP-1296
+) 
+( point 1) - Add filter Lead Time exceeds Need By date
+Private (
+https://app.clickup.com/t/8651091/CHP-1338
+) 
+Limit the alternative list to the Silicone Expert level 
+Verified on stage
+Verified on dev. Raised one issue. 
+CHP-1352
+Private (
+https://app.clickup.com/t/8651091/CHP-1309
+) 
+Give option to edit tracked parts. In the same UI you can also implement un-track. 
+Verified on stage
+Private (
+https://app.clickup.com/t/8651091/CHP-1342
+)
+Verified on stage
+Implement Mixpanel Analytics in MC1 to allow understanding of user activity.
+Verified on stage
+(update): move ipn to item level in rfq 
+Verified on stage
+Verified on stage
+Private (
+https://app.clickup.com/t/8651091/CHP-1343
+)
+Verified on stage
+Verified on stage
+Verified on stage
+country of origin filter dev work is in progress. Updated in ticket.
+Backend Changes
+ 
+Notifications for new quotes - email notifications - work_in_progress
+Notification to ICP once the project created
+Notifications for the new Orders
+Add additional fields for quote (active) - lead time, date code, RoHS, CPN, and C1 rep
+Show only approved orders to the MyChip1 users
+Add additional information on RFQ to CRM - work_in_progress
+Update Latest ICP Photos - work_in_progress
+Migrate historical Quotes data - only for selected accounts & selected date range - no_test_scope
+Migrate historical Orders data - is_visible = false. Not visible on UI -no_test_scope
+Migrate historical RFQ data - is_visible = false. Not visible on UI - no_test_scope
+
+## SMOKE TESTS
+
+Feature/Flow
+Stage
+Prod
+New User Signup from mc1
+Yes
+Yes
+Upload Bom & Excess and verify in CRM
+Yes
+Yes
+Manual RFQ
+Yes
+Yes
+Active Quote (create, edit)
+Yes
+Yes
+Sales Order
+(create, edit)
+Yes
+Yes
+Lead Account & Transfer
+Yes
+No
+Bids
+Yes (With existing account)
+Yes (With existing account)
+Parts Tracker
+Yes
+Yes
+Search
+Yes
+Yes
+Page Navigations
+Yes
+Yes

@@ -1,0 +1,117 @@
+# 10-JAN25
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+ 
+DB changes
+ :
+Connect
+ : release/2025.01.10
+Platform
+ : No Change
+ 
+Branch
+  : release/2025.01.10
+ 
+Components Involved
+ 
+& Artefacts
+:
+ 
+Chip1 Transaction        : 
+2025.01.10.0
+Chip1 MC1 Core            : 
+2025.01.10.0
+Chip1 Web UI
+               
+ :
+ 2025.01.10.0
+
+## LIST OF DEPLOYED ITEMS
+
+Private (
+https://app.clickup.com/t/8651091/CHP-1344
+)-Uma
+Private (
+https://app.clickup.com/t/8651091/CHP-1312
+)-Deepti
+Private (
+https://app.clickup.com/t/8651091/CHP-1349
+)-Uma
+Private (
+https://app.clickup.com/t/8651091/CHP-1350
+)-Uma
+Private (
+https://app.clickup.com/t/8651091/CHP-1337
+)-Uma
+Private (
+https://app.clickup.com/t/8651091/CHP-1328
+)-Uma
+Private (
+https://app.clickup.com/t/8651091/CHP-1352
+)-Uma
+Private (
+https://app.clickup.com/t/8651091/CHP-1331
+)-Deepti
+Private (
+https://app.clickup.com/t/8651091/CHP-1359
+)-Uma
+Private (
+https://app.clickup.com/t/8651091/CHP-1262
+)
+Bugs in build
+Private (
+https://app.clickup.com/t/8651091/CHP-1370
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1372
+)
+Missed in production:
+Private (
+https://app.clickup.com/t/8651091/CHP-1368
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1345
+)-Deepti - Assigned to dev as the cost is not calculated correctly.
+
+## SMOKE TESTS
+
+Feature/Flow
+Stage
+Prod
+New User Signup from mc1
+yes
+yes
+Upload Bom & Excess and verify in CRM
+yes
+yes
+Manual RFQ
+yes
+yes
+Active Quote (create, edit)
+yes
+yes
+Sales Order
+(create, edit)
+yes
+yes
+Lead Account & Transfer
+yes
+yes (transfer - na)
+Bids
+yes (with existing account)
+yes(with existing account)
+Parts Tracker
+yes
+yes
+Search
+yes
+yes
+Page Navigations
+yes
+yes

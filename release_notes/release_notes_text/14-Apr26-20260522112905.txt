@@ -1,0 +1,332 @@
+# 14-APR26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+, 
+@Harika Guntamukkala
+, 
+@Deepti Vaidyula
+ 
+Release date
+ : 2026.04.14
+ 
+DB changes
+ : 
+Connect
+ : No change
+Platform
+ : No change
+Notification : 
+No change
+ 
+Branch
+  : release/2026.04.10
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Account  
+    
+                               
+  : 2026.04.14.1
+Chip1 Transaction  
+    
+                        
+  : 2026.04.14.1
+Chip1 CRM WebUI                 
+    
+          
+ : 2026.04.14.7
+fn-connect                              
+   
+            
+ : 2026.04.14.0
+
+## LIST OF DEPLOYED ITEMS
+
+Team - following are the backend items in release so far
+1.
+ 
+Deepti Vaidyula: Teams #: April13_01
+ fix - 
+@Deepti Vaidyula
+  - 
+Verified
+ posted in  at Apr 13, 2:10 PM
+ 2. Closed flag changes - 
+@Deepti Vaidyula
+  - 
+Verified
+ 3. Account address adding active flag ( BE only) : sanity should be enough - 
+@Harika Guntamukkala
+ 
+ 4. Quote Document gaps fix - 
+@Harika Guntamukkala
+ 
+ 
+@Umamahesh
+ 
+PO should inherit the region based on the region of SR.
+(UI) Show the region field in PO creation and allow user to change if needed. If PO is created from SR, pre-populate region of the SR if not pre-populate region of user.
+Use the region selection as per the prirority below
+Region sent by UI
+Region of SR
+Region of created by user
+Region of account
+Use the region above for creation of PO and also ensure the default data groups for that region are added.
+
+## UI ITEMS:
+
+Account PATCH — send only changed fields (
+#3589
+)   - 
+@Harika Guntamukkala
+ 
+What changed 
+All account save operations now send only the fields that actually changed, instead of the entire account payload. If nothing changed, the save is a no-op (no request is made at all).This affects every place in the CRM where account data is saved: 
+All detail islands (General, Invoicing, Credit, Addresses, Supplier, Commissions, Users, IDs, Tags) - 
+Verified
+Account address modal - 
+Verified
+Account approve-for-sales modal - 
+Verified
+Reassign account modal - 
+Verified
+Add contact modal - 
+Verified
+Stage change and supplier approval (FAB actions)- 
+Verified
+Follow-up flag toggle 
+Verified(reported minor toast UI issues,shivanand looking into them)
+Edit a single field in any island → save → change is persisted in the UI  - 
+Verified
+Edit multiple fields → save → all changes are persisted - 
+Verified
+Remove the parent account from the General island → save → parent account is cleared -
+Verified
+Remove an industry from the General island → save → industry is cleared - 
+Verified
+Open any island without making changes → save → no visible effect, no spinner/error - 
+Verified
+Approve an account for sales → modal saves and account status updates 
+Verified
+Edit an address → modal saves and address reflects the change 
+Verified(save button is enabled by default without change reported to shivanand)
+Reassign account (users/tags) → saves and assignments update - 
+Verified
+Add a contact → contact appears in the contacts list - 
+Verified
+Toggle follow-up flag on/off → state persists after page refresh  
+Verified
+Move account to a new stage → stage updates - 
+Verified
+Approve as supplier → supplier status updates 
+Verified
+bugfix: Offer Issues (
+#3575
+) - 
+@Harika Guntamukkala
+ 
+Offers 
+Add notes column in offer list - 
+Verified
+Offer hero change offer price to unit price. - 
+Verified
+Bulk SR Creation: add sales person field (
+#3591
+) - 
+@Deepti Vaidyula
+ 
+feat(account): enable account external IDs display (
+#3568
+) - 
+@Harika Guntamukkala
+ 
+Verified
+feat(SR): add dynamic list tab and route support for sourcing requests (
+#3587
+) - 
+@Deepti Vaidyula
+  - 
+verified
+This is refactoring suggestion related to 
+
+https://github.com/altirllc/chip1-webui/pull/3526#discussion_r3056316762
+feat: add direct account navigation to hierarchy tree view (
+#3592
+)  - 
+@Deepti Vaidyula
+  - 
+Verified
+This PR enhances the Account Hierarchy tree view by allowing users to navigate directly between accounts from within the tree structure. 
+Navigation Support
+: Added a "Go to Account" option in the 3-dot context menu for each node in the hierarchy tree.
+Context-Aware UI
+: The navigation option is intelligently hidden for the account currently being viewed to avoid redundant navigation.
+Improved UX
+: Added a visual separator between the new navigation action and existing management actions (Add/Remove parent/child) in the account menu.
+Localization
+: Added the 
+goToAccount
+ translation string to the core account locales.
+feat: consolidate order and line-level checklists in Order Line view (
+#3594
+) - 
+@Deepti Vaidyula
+ 
+This PR updates the Order Line details page to display a consolidated checklist that includes both line-specific approvals and the overarching order-level approval flags. This provides users with a comprehensive view of all requirements needed to process an order line in a single location. 
+Unified Checklist View
+: Updated the 
+OrderLineHero
+ to display a combined 
+OrderChecklistCard
+. It now shows Document and Account approvals (Order level) alongside Parameter, Accounts, and Export approvals (Line level).
+Intelligent Interaction
+: 
+Integrated permission-based logic to disable checklist items if the user lacks 
+updateApprovals
+ rights or if the order line is currently unlocked.
+Added 
+onItemClick
+ support, allowing users to launch the corresponding approval modals directly from the checklist items.
+Mapping & Differentiation
+: 
+Introduced logic in 
+orderApprovalMapper.ts
+ to combine these data sources and prefix order-level items with 
+order-
+ to ensure unique identification in the list.
+Updated checklist primitives to visually distinguish disabled or non-interactive items.
+DX & Reliability
+: 
+Refactored checklist statistic calculations into a shared helper function.
+Synchronized 
+DatePickerField
+ to ensure external value updates are reflected in the UI immediately.
+feat: implement boolean active status for account addresses (
+#3588
+) - 
+@Harika Guntamukkala
+  - 
+Verified(only BE)
+This PR standardizes the management of address status across the CRM and myChip1 applications by introducing a boolean isActive / active pattern. This change simplifies the UI implementation (moving from complex lookups to a simple toggle) while maintaining compatibility with the backend's status lookup system.*See PR for images.*
+feat: implement polling and loading states for historical and market activity tables (
+#3533
+) - 
+@Harika Guntamukkala
+ 
+Verified
+there are two required integration items: 
+If pricing are loading, we have two re-trigger part sourcing API every 2 seconds. You can detect it by field loading:true - if at least one  item in the response conains such field, the api should be retriggered every 2 seconds until all loading are not true
+I noticed we're displaying 
+qty
+ as 0 (see screenshot above), it should be empty
+feedback/26-04-02-review-findings-remediation (
+#3477
+) - 
+@Deepti Vaidyula
+  - 
+verified
+This PR moves Emails Input created in Order Billing island (and then removed) into a separate control - `FormikMultiEmailTagInput`. Used it in Account -> Customer island instead of 1 row per email fields set*See PR for images.*
+fix(core): optimize FormikCheckbox layout and width constraints (
+#3586
+) - 
+@Deepti Vaidyula
+  - 
+Verified
+This PR refactors the styling of `FormikCheckbox` and `FormikCheckboxFormControl` to improve layout consistency and prevent overflow issues. It replaces standard MUI components with styled wrappers that better handle intrinsic sizing. 
+Layout Optimization
+: Added 
+width: 'fit-content'
+ and 
+maxWidth: '100%'
+ to checkbox labels and form controls to ensure they only occupy the necessary horizontal space.
+Component Refactoring
+: Introduced 
+StyledFormControl
+, 
+StyledFormControlCheckboxLabel
+, and 
+StyledInlineCheckboxLabel
+ to standardize styling across the checkbox variations.
+Code Organization
+: Moved style definitions to the top of the file for better readability and maintainability.
+Consistency
+: Maintained the standard 
+48px
+ height for form control labels while improving their responsiveness.
+fix(rfq): prevent accidental form submission on Enter key press (
+#3593
+) - 
+@Harika Guntamukkala
+ - 
+Verified
+This PR addresses an issue in the RFQ creation flow where pressing the **Enter** key while focused on a search or input field would prematurely submit the form and create the RFQ. 
+Changed 
+FormikSubmit
+ button type to 
+"button"
+ in 
+CreateRequestModal
+ and 
+CreateRfqLineModal
+.
+Disables the default browser form submission behavior on 
+Enter
+, ensuring the RFQ is only created when the user explicitly clicks the submit button or triggers it while the button is focused.
+Improves user experience by preventing accidental creations during "extended search" and manual data entry.
+fix: improve order line manual allocation visibility and permission handling (
+#3595
+)  - 
+@Deepti Vaidyula
+ - 
+verified
+This PR resolves an issue where the "Add Allocation" button was missing or improperly handling the read-only state in the Order Line Allocation Details island. It introduces better feedback for users when a line is locked and ensures the island respects section-level permissions.**Key Improvements:** 
+Permission Synchronization
+: Updated the 
+OrderLineDetailsTab
+ to correctly pass section-level permissions to the Allocation island.
+Locked State Indicator
+: Added a standard lock icon with a tooltip to the island header. This provides immediate visual feedback if the manual allocation button is hidden because the section is read-only or the line is locked.
+Data Mapping Fixes
+: Resolved a bug in the 
+createOrderLineAllocationVms
+ mapper where MPN and Manufacturer details were not being correctly populated from the order line context.
+UI Consistency
+: Aligned the island's header and summary behavior with the standard patterns used in other Order Line sections (like Line Details and Alternatives).
+Update SourcingSearchShortcut tooltip text (
+#3574
+) - 
+@Harika Guntamukkala
+  - 
+DONE
+Before:After:*See PR for images.*
+Include VAT validations for account. If account is in Europe region(exact countries list can be shared) then account has to be VAT verified to create SO - 
+@Deepti Vaidyula
+  - 
+Verified
+
+### DEV ONLY :
+
+Chore: upgrade Typescript 5.9 -> 6.0 (
+#3579
+)  
+
+https://gist.github.com/privatenumber/3d2e80da28f84ee30b77d53e1693378f#4-new-features
+Handle backport PRs and simplify currency determination logic (dev only) (
+#3578
+) 
+This pull request introduces improvements to handle backport PRs more effectively and refines the changelog description cleaning logic. Additionally, it simplifies the logic for determining currency in sourcing request fields, reducing complexity.
+Update Eslint and dependencies, suppress lint warnings (
+#3590
+) 
+This pull request updates Eslint to version 10.1.0 across all packages, suppresses `exhaustive-deps` lint warnings, and modifies configurations. Additionally, the updates address compatibility and security concerns by upgrading related dependencies including Vite.
+Update some steps and fix tanstak devtools (dev only) (
+#3596
+) 
+This pull request simplifies the build configuration by removing an unnecessary editor override in the devtools plugin, directly using `launch-editor` instead of proxying through Vite's `/__open-in-editor` endpoint.

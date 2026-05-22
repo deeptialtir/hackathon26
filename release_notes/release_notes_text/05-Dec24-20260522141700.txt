@@ -1,0 +1,59 @@
+# 05-DEC24
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+@Umamahesh
+ 
+@Deepti Vaidyula
+ 
+Release date
+ : 2024.12.05
+DB changes
+ : 
+Connect
+ : release/2024.12.05
+Platform
+ : No change
+Key Clock
+: No change
+Branch
+  : release/2024.12.05
+Components Involved
+ 
+& Artefacts
+: 
+fn-connect.                     : 
+2024.12.05.0
+Chip1 Account                : 
+2024.12.05.0
+Chip1 MC1 Core             : 
+2024.12.05.0
+Chip1 Transaction.       : 
+2024.12.05.1
+
+## LIST OF DEPLOYED ITEMS
+
+Renaming mc1id to mc1Id in the RFQ/Opportunity payloads 
+Pushing Hotparts and reason codes to CRM
+Pulling contact information from accounts if available
+
+## TESTING NOTES
+
+Renaming mc1id to mc1Id in the RFQ/Opportunity payloads 
+Verified that when we raise an RFQ, the payload has mc1Id. Verified that end-to-end flows work.
+Pushing Hotparts and reason codes to CRM
+ isHotPart = true if there is 
+autoRfq
+Reason. 
+ 
+Auto RFQ reason in mc1 payload:
+                   "autoRfqReason": "HIGH_VALUE_PART",
+                    "autoRfqReason": "LTB",
+                    "autoRfqReason": "NRND",
+                    "autoRfqReason": "OBSOLETE",
+ 
+                     "
+isHotPart
+": true,
+Pulling contact information from accounts if available : Verified

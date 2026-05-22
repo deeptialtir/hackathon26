@@ -1,0 +1,226 @@
+# 28-APRIL26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+Release date
+ : 2026.04.28
+DB changes
+ :
+Connect
+ : No change
+Platform
+ : release/2026.04.28
+Notification : 
+No change
+ 
+Branch
+  : release/2026.04.28
+ 
+Components Involved
+ 
+& Artefacts
+:
+Chip1 Transaction  
+    
+                        
+  : 2026.04.28.1
+Chip1 CRM WebUI                 
+    
+          
+ : 2026.04.28.1
+Chip1 Webui                                       
+    : 2026.04.28.0
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+@Deepti Vaidyula
+ 
+fix for 
+duplicate id generation.
+ (only BE change) 
+Verified
+feat(sr-fab-action): Attach Purchase Order changes (
+#3751
+) 
+Verified
+fix: offer issues (
+#3752
+)  
+On the market offers list view , can you please have this pattern of showing
+ "-"
+ for those offers that doesn't have price
+Verified
+PO Creation from Offer: For some offers, the 
+date code
+ and other data that should come from the 
+Sourcing Request
+ are missing. if some data is missing on
+ offers
+ but available on
+SR
+we should allow user to copy it on PO creation form
+Verified
+PO & Stock Changes - 23.04.2026 (
+#3748
+) 
+Verified
+refactor(invoice): Consolidate date formatting (
+#3761
+) 
+Verified
+refactor: remove unused request ownership logic and clean up UI components (
+#3774
+) 
+Verified
+Removed the unused 
+resolveDefaultRequestOwnershipAssignee
+ utility and cleaned up the 
+useDefaultRequestOwnershipAssignee
+ hook.
+Simplified the conditional logic for the 
+unassigned
+ prop within the 
+AllAccountList
+ component.
+Refactored 
+ContactMethodsCells
+ styling to keep email and phone type tags adjacent to their values by removing redundant flex properties.
+refactor: replace unified email/phone columns with distinct ContactMethodsCells components across tables (
+#3743
+)  
+Verified
+This PR centralizes the display logic for contact methods (emails and phone numbers) across various CRM tables. By moving cell rendering logic from individual column definitions into a dedicated shared component, we ensure visual consistency, reduce code duplication, and improve maintainability.
+@Harika Guntamukkala
+ 
+Mapping Opportunity origin source for Chip1Website (only db change) 
+Verified
+feat(stock -> PartList): add default filter overrides for excluded stock statuses (
+#3744
+) - 
+Verified
+feat: add aggregated allocation summary display to Stock tab market activity (
+#3771
+) 
+add aggregated Cell to show the total for the quantity allocation column
+feat: add salesPerson field to RFQ payload (
+#3768
+) 
+Verified
+*See PR for images.*
+feat: standardize and enhance MPN Search in CRM Filters (
+#3769
+) 
+Verified
+*See PR for images.*
+fix: add null check for email property when matching contacts in account modals (
+#3780
+) 
+Added 
+e.email
+ presence checks before executing string operations to prevent runtime crashes during contact matching in 
+AttachAccountTable
+ and 
+AttachRFQsAccountModal
+.
+fix: update leadTime lookup source from RFQ to Quote category in QuoteItemForm (
+#3783
+) 
+Updated the 
+leadTime
+ field to fetch options from 
+Quote
+ lookups instead of 
+RFQ
+ lookups 
+Verified
+fix: update marketplace terminology to third party (
+#3753
+) - 
+DONE
+MC1 Warehouse - Add MPN and Manufacturer filters, add tests (
+#3767
+) 
+Verified
+This pull request refactors the 
+WarehouseStockFiltersPanel
+ to replace the 
+TextInputFilte
+ with an 
+AutocompleteFilter
+ for MPN and manufacturer filters. The change enables better search functionality by providing selectable filter options. Additionally, this PR addresses code review findings, finalizes testing and documentation, and ensures improved i18n support. It also implements whitespace normalization for consistent filtering.
+refactor(account-list-filters): enhance filter options for user and role and misc changes (
+#3754
+) 
+bring back user and role filters in my account list 
+Verified
+hide user and role filter from open accounts 
+Verified
+fixed default assignment for Germany and United States
+opportunities tab typo fix for MyChip1 
+Verified
+refactor: add tooltip truncation for order overview mpn (
+#3770
+)  
+Verified
+add tooltip truncation for order overview mpn
+limit visible mpns to 3
+Update : added initial contact and boumd to account (
+#3772
+)
+Warehouse stock page improvements for MC1 and CRM (
+#3781
+) 
+Improves the warehouse stock page in MC1 to better suit the customer-facing context: 
+Removed Status and Last Updated filters, which are not relevant for customers 
+Verified
+Added a search box to the filter bar 
+Verified
+Renamed the SPN column to PO Number and removed the original PO Number column 
+Verified
+Updated the info pane to match — shows SPN value under PO Number, removes the redundant SPN field 
+Verified
+Location column now shows the correct storage location value 
+Verified
+Country of Origin, Status/Sub Status, and Last Updated columns are hidden by default 
+Verified
+Selected row highlight was not cleared after closing the info pane 
+Verified
+The info pane in MC1 was missing the backdrop shadow present in CRM 
+Verified
+Dev Only items
+chore: update dev dependencies 
+dev only
+refactor: replace manual name joins with standardized getFullName helper across CRM and myChip1 
+dev only
+(
+#3782
+)
+Request Offer:- add user cc list field 
+@Deepti Vaidyula
+ 
+Verified
+Record Offer:- Remove send Email field 
+@Deepti Vaidyula
+ 
+Verified
+Attach PO Sr Fab action: Enabled till stage (Wont be on Prod) 
+@Deepti Vaidyula
+ 
+Verified
+This will include chip1-transaction service from develop, release branch will be created. 
+ 
+Chip1-transaction Service has two changes in develop will be included in release
+Offer CC email 
+@Deepti Vaidyula
+ 
+Verified
+Bug fix : Even if SO creation is failing, RFQ is turning to SO created. Now with fix, only successful SO creation will change RFQ status to SO Created. - 
+@Deepti Vaidyula
+ 
+Verified

@@ -1,0 +1,10 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,@Deepti Vaidyula,,
+Metadata,Release Info,Release date,2025.02.24,,
+Metadata,Release Info,DB changes,Connect : No Change,,
+Metadata,Release Info,Platform,No Change,,
+Metadata,Release Info,Notification, No Change,,
+Metadata,Release Info,Branch,Platform : release/2025.02.24,,
+Artefacts,Artefacts,Private ( https,"//app.clickup.com/t/8651091/CHP-1561 ) ## SMOKE TESTS Feature/Flow Stage Prod New User Signup from mc1 yes yes Upload Bom & Excess and verify in CRM yes yes Manual RFQ yes yes Active Quote (create, edit) yes yes Sales Order (create, edit) yes yes Lead Account & Transfer NA NA Bids NA NA Parts Tracker yes yes Search yes yes Page Navigations yes yes Edit Project yes yes Notification emails yes yes",,

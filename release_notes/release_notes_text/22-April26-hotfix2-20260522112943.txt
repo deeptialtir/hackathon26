@@ -1,0 +1,112 @@
+# 22-APRIL26-HOTFIX2
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+ 
+
+## RELEASE DATE: 2026.04.22
+
+DB changes
+ :
+Connect
+ : hotfix/2026.04.22
+Platform
+ : hotfix/2026.04.22
+Notification : 
+No change
+ 
+Branch
+  : hotfix/2026.04.22
+ 
+Components Involved
+ 
+& Artefacts
+:
+Chip1 Transaction  
+    
+                        
+  : 2026.04.22.6
+Chip1 CRM WebUI                 
+    
+          
+ : 2026.04.22.3
+
+## FN-CONNECT: 2026.04.22.1
+
+## LIST OF DEPLOYED ITEMS
+
+Assigning a RFQ
+When a RFQ from the Opportunities module is assigned to a Salesperson, there have been multiple instances where the RFQ is NOT showing in the Salesperson's RFQ grid - One likely reason is the Account ownership is NOT transferring to the Salesperson - 
+Verified
+d. If there is NOT Match and a new Account and Contact has to be created, there was an instance where the contact did not show up (Ex: 
+t.flor@flortronic.de
+) - Please check logs if this is created. We are not able to see this created. 
+Verified
+SO outbound sync was failing due to salesperson missing Srinidhi Gundimi - 
+Verified
+SO part attributes (Product) sync Srinidhi Gundimi
+Every opportunity should have 
+items.0.originSource
+ - 
+Verified
+Opprtunities created through project should have 
+originSource
+ too - 
+Verified
+If we select 
+xCrmProd
+ field in the UI then same should be synced to 
+xCRM
+ if the field doesn't exist in now then 
+xCrmProd
+ 's value would be 
+- -
+ (hyphen - hyphen) as 
+default
+Sales Person in xCRM would be coming from 
+users
+ section of 
+SalesOrder
+ rather than createdBy and 
+lastEmp
+ in 
+xCRM
+ comes from 
+updatedBy - 
+Couldnt validate due to XCRM issue 
+PO sync issue Nikhil Kumar Singh - 
+Verified
+Opportunities:
+Release to sales enabled by default - 
+Verified
+Fix on the RFQList to always pass isOpportunity as false - 
+Verified
+on OpportunityList menu action to disable items based on account instead of crmAccountInfo - 
+Verified
+
+### ISSUES REPORTED ON STAGE:
+
+I have converted opp->RFQ to a newly created account and selected the 'Connect the MyChip1 account to this Apex Account'. Not seeing this RFQ in MC1. Is this expected? - 
+Link
+US26RQ-1174164.01
+
+https://crm.stage.chip1.info/sales/rfqs/69e8c769325fc814822c0f4b/line/5102a4fb-5f79-4129-961c-afff6…
+The account name is blank after opp->RFQ transfer. - 
+Link
+ - 
+Fixed
+Created an OB SO but it's failing to sync. Seeing remote host (chippydata) terminated the handshake error. - 
+Link
+Create SO: 592f1e17-4584-4053-9e8b-54558761e7bf
+
+https://crm.stage.chip1.info/sales/orders/69e8f90e325fc814822c0f64/orderLines
+US26SO-1178923
+I have created one rfq on xcrm and it's not syncing. No logs either in connect. - 
+Link
+US26RQ12448
+
+http://mc1staging.xchangecrm.com/web/requirements/cusreq/update?ID=39614&COMPANY_CODE_=4
+NOTE: There's XCRM issue caused us to not validate all the sync flows and issues #3 and #4. We are pushing the release after Sai's approval

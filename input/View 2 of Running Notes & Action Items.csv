@@ -1,0 +1,217 @@
+Area,Title,Description,Priority,Status,Assigned To,Target Date,Change,QE comments,Owner,Created by,Created on,Type
+Part Sourcing,Sourced Offers,"Improvements to Sourced offers and other offers in Sourcing
+
+1. Include user offer id (USOFxx) 
+2. Include Buyer Info for sourcing offers
+3. Change name of “Sourcing Offers” to “Sourced Offers”",P0,Tested,Andrey Kuznetcov,"May 20, 2026",BE,QE comments [19/05]: Verified in stage env,Om Sreenivasan,Dipak Majhi,"May 12, 2026",Sales
+Part Sourcing,,,,,,,,,,Om Sreenivasan,"May 19, 2026",Sales
+Accounts,,,,,,,,,,Om Sreenivasan,"May 19, 2026",Sales
+Accounts,Related Accounts,"Users are not able to fill in the related accounts. Currently they are able to enter only the accounts that they have access to which should not be the case
+
+(Canny Link)",P1,In Testing,Om Sreenivasan,"May 20, 2026","UI,BE",,Om Sreenivasan,Dipak Majhi,"May 11, 2026",Sales
+Accounts,Validate Vendor Codes and other ID sync,"Apex deletes our Suppliere Number in XCrm. 
+
+CRM Link 
+
+https://chip1.xchangecrm.com/web/accounts/cm/update?ID=48860&CM_CODE_=23140&COMPANY_CODE_=3
+
+Apex:
+
+https://crm.chip1.com/accounts/69b429904744fe166f88edcb",P1,Dev Ready,Pranab Dutta,"May 22, 2026",BE,,Om Sreenivasan,Om Sreenivasan,"May 19, 2026",Sales
+Accounts,Incorrect Contact Status,"Contacts inside an Account are having incorrect status
+
+(Canny Link)",P1,Dev Ready,"Dipak Majhi,Andrey Kuznetcov","May 22, 2026","UI,BE",,Dipak Majhi,Dipak Majhi,"May 11, 2026",Sales
+Accounts,,,,,,,,,,Om Sreenivasan,"May 19, 2026",Sales
+Accounts,,[Bug] Activity Dashboard count includes repeat users(Canny Link),P1,Dev Ready,Andrey Kuznetcov,,BE,,Dipak Majhi,Dipak Majhi,"May 11, 2026",Sales
+Accounts,Hold Account,"Ability to put an account on hold by accounting team.
+
+1. Create a new FAB action called “Hold Account”. Managed by separate permission.
+2. Show a modal that has notes as to why they are putting the account on hold
+3. Upon update,  add a system tag called “On Hold”.
+4. Capture an additional flag in data model for “On Hold”. This can be used for other workflow.
+
+
+
+Om Sreenivasan - can you see if there any other criteria we need to add and then exapnd this. 
+
+
+
+My sense we will make this as a FAB action on account. When put on hold we either need to make all open SOs also be updated or do a validation in BE to keep checking if Account assocaited with this SO is blocked.",P1,To be Integrated,Tejaswini Allagadda,,UI,,,Sai Nagboth,"Mar 8, 2026",Sales
+Accounts,Germany Feedback,Review it in CHP-5559,P2,,Sai Nagboth,,,,,Dipak Majhi,"Mar 11, 2026",Sales
+Accounts,"RFQ ",RFQ: RFQ expiry job needs to be enabled - Tejaswini,P0,Dev Ready,Tejaswini Allagadda,"May 29, 2026",,[QE Comments 19/05] : Dev yet to pick,,Sandeep Thatikonda,"Mar 26, 2026",Sales
+Accounts,Accounts,"Accounts: Need a job to convert active account to inactive where the last SO is more than 6 month old (either external job or in application). Might need a data bit for last order date, if we dont have one.",P1,Dev Ready,Srinidhi Gundimi,"May 29, 2026",BE,"[QE Comments 19/05] : #2 → Dev yet to pick
+#1 → Looks fine",,Dipak Majhi,"Mar 27, 2026",Sales
+Accounts,Accounts,Accounts non-migration connect log errors,P1,Dev Ready,Srinidhi Gundimi,"May 29, 2026",Sync,[QE Comments 19/05] : Dev yet to pick,,Satish Bathini,"Apr 22, 2026",Sales
+RFQ List View,,"View All RFQ Page Enhancements (Canny Link) ",,To be Defined,Om Sreenivasan,,"BE,UI",,,Dipak Majhi,"Apr 28, 2026",Sales
+RFQ Entity,Send quote email backend,Ability to send a quote email to the customer using the email of the user. bcc the user so the user can see it in their email box,P1,Tested,Nikhil Kumar Singh,,BE,,,Sai Nagboth,"Mar 1, 2026",Sales
+RFQ Entity,Change behavior of quote email.,"1. Enhance to make it similar to the PO email with cc option and include pdf option
+2. Provide an option to share in myChip1 through the quote modal. If selected, Include myChip1 link similar to that of share RFQ. Link to quote page. Also enable contact for logging in mc1.
+3. Make the email go from the user creating similar to other emails
+4. We did auto include of the user in bcc, provide a check box to say include me in bcc so the user can see it in their mail box. Select by default. ",P0,Dev Ready,Srinidhi Gundimi,"May 29, 2026","BE,UI",,,Sai Nagboth,"Apr 19, 2026",Sales
+RFQ Entity,"Sales Account ",RFQs entered in Apex by admin's ignores changing sales person to default sales ICP on account (Canny Link),P0,Reopened,Tejaswini Allagadda,"May 20, 2026",BE,"[QE Comments 19/05] : 
+
+Seeing the same behaviour in Apexhttps://crm.chip1.com/sales/rfqs/6a0c48f92c453519f02467da/line/585a1a5b-5286-4288-9812-65f27ca9640f",,Om Sreenivasan,"Apr 27, 2026",Sales
+RFQ Entity,Lookup names cleanup,"1. Requirement Level
+  1. From Serious Requirement remove “buying customer”
+
+Clean other names - Sandeep and Sai to review",P0,To be Defined,"Sai Nagboth,Sandeep Thatikonda",,,,,Sai Nagboth,"Mar 2, 2026",Sales
+RFQ Entity,Create Quote changes,Pre-populate CPN from RFQ when creating from offer❌,P0,To be Defined,Phani Yedidi,,UI,18/03: #2 → Able to see the cpn populate change under RFQ details →Quote creation form. Can’t see under Purchasing entity.,,Sai Nagboth,"Mar 2, 2026",Sales
+RFQ Entity,RFQ Internal Cost,"1. BE - Add an attribute in RFQ cost block in data model to capture intenral cost. Call it “internalCost”. This would be needed for determining proce.
+2. UI - Add an attribute internal cost in pricing section. ",P1,Dev Ready,"Srinidhi Gundimi,Om Sreenivasan","May 29, 2026","UI,BE",[QE Comments 19/05] : Dev yet to pick,,Srinidhi Gundimi,"Mar 14, 2026",Sales
+RFQ Entity,RFQ and Quote Inco term Deafults,"1. When RFQ is created, shipping address can be defauled from account if only 1. If not user can seelct in details.
+2. For quote, pre-populate inco terms based on values from RFQ. If none, then pre-populate from account if available.",P0,Tested,Shivananda Sai,"Mar 28, 2026","UI,BE",QE Comments [19/05]: Verified in Stage env,,Dipak Majhi,"Mar 25, 2026",Sales
+RFQ Entity,Alternatives Handling,Allow capturing of a meta data that the quote and offfer are for an alternative vs. main part. Capture this data on SO as well.,P2,To be Defined,Sai Nagboth,,,,,Sai Nagboth,"Mar 8, 2026",Sales
+RFQ Entity,"Upload a file ","Have an ability to upload both RFQ and Quote Information via excel ",P2,To be Defined,,,,,,Om Sreenivasan,"Mar 11, 2026",Sales
+RFQ Entity,SO Payment terms validation,Need to define,P0,To be Defined,Sai Nagboth,,BE,,,Sai Nagboth,"Mar 26, 2026",Sales
+RFQ Entity,,RFQ Line View and Data Entry in Apex (Canny Link),P2,To be Defined,Om Sreenivasan,,,,,Dipak Majhi,"May 12, 2026",Sales
+General,Dashboard Enhancements,"We need ""internal news"" - Card on the dashboard for important messages that need to go to the team as well as announcement of new hires and company related news. 
+
+Canny Item",P3,To be Defined,,,,,,Satish Bathini,"Mar 3, 2026",Sales
+General,Search include date relavance,"Can we somehow infuse created date along with relavence? Basaically for the mathces, especially part etc. you want to show RFQs etc that are current vs. old. may not be possible.",P2,Dev Ready,Andrey Kuznetcov,,BE,[QE Comments 19/05] : Dev yet to pick,,Sai Nagboth,"Mar 13, 2026",Sales
+General,,RFQ Section Improvement – Usage Rate Tracking Feature  (Canny Link),P2,To be Defined,Om Sreenivasan,,,,,Dipak Majhi,"May 11, 2026",Sales
+General,,"Add a button or tool that allows us to download the requirements assigned to each buyer into an Excel file 
+
+(Canny Link)",P0,To be Defined,Om Sreenivasan,,,,,Dipak Majhi,"May 11, 2026",Sales
+General,,Quote and Request not transfered in CRM (Canny Link),P0,Dev Ready,"Srinivas Sanka,Nagababu Guddati,Pranab Dutta",,"Data,Sync","[QE Comments 19/05] : Sync failed for RFQ,Quote",,Dipak Majhi,"May 11, 2026",Sales
+General,,Issues & Improvement Requests: Opportunity Section in Apex (Canny Link),P1,To be Defined,Sai Nagboth,,,,,Dipak Majhi,"May 11, 2026",Sales
+General,,Not able to edit MFG (NOTDEFINED) - Canny Link,P0,To be Defined,Sai Nagboth,,,,,Dipak Majhi,"May 11, 2026",Sales
+General,,Ability to find RFQ with ALTERNATIVE (Canny Link),P1,To be Defined,Sai Nagboth,,,,,Dipak Majhi,"May 11, 2026",Sales
+General,,Create a quote for the alternative part. (Canny Link),P1,To be Defined,Sai Nagboth,,,,,Dipak Majhi,"May 11, 2026",Sales
+General,,The document approval and account approval are being displayed only after locking a line and giving on approving one of the options. (Canny Link),P1,To be Defined,Om Sreenivasan,,,,,Dipak Majhi,"May 12, 2026",Sales
+General,,SO Section Improvement (canny link),P1,To be Defined,Deepti Vaidyula,,,,,Dipak Majhi,"May 12, 2026",Sales
+General,,"Search Improvement - SO, PO (canny link)",P2,To be Defined,Sai Nagboth,,,,,Dipak Majhi,"May 12, 2026",Sales
+General,,Not able to access the quotes. (Canny Link),P0,To be Defined,Om Sreenivasan,,,,,Dipak Majhi,"May 12, 2026",Sales
+General,,Sales Order not accessible (Canny Link),P0,Dev Ready,Satish Bathini,,Data,"[QE Comments 19/05] : Able to access when impersonated with nick user
+Need to investigate on salesperson",,Dipak Majhi,"May 12, 2026",Sales
+General,,Cannot open past orders imported from xCRM in Apex (Canny Link) CHP-5638,P0,Dev Ready,Srinivas Sanka,,,"[QE comments 19/05] : Intel Corp (Chandler Phoenix)- Account in Inactive in Apex and seeing 500 error while trying to open the document({""status"":500,""message"":""File was not found"",""errorCode"":""FU_001""})
+
+correlationid : 003b5293-a31d-44a6-88af-a4fcc074d941",Dipak Majhi,Dipak Majhi,"May 12, 2026",Sales
+Contacts,Campaign Issues,"Campaign issues
+
+https://chip1.canny.io/apex-1-feedback/p/campaign-issues
+
+
+Om (20/05)
+
+Designation is pending on BE. Other points are done. ",P1,Dev Completed,"Shivananda Sai,Akhilesh Gupta","May 21, 2026","BE,UI",,,Om Sreenivasan,"May 18, 2026",Sales
+Contacts,Duplicate Contact,"Currently users are not able to attach contact in different regions if the contact is not unique. For example - If same contacts is there in Siemens Germany, we won’t be able to add them in Siemens USA.  We are working on a fix to remove this restriction and allow the contacts to be attached to any account. 
+Note  - This is only applicable when you are an adding a contact from any of the related entities like RFQ/SO/PO. 
+
+If you are creating a standalone contact without any account linking, we will still throw duplicate contact error message. ",P0,Dev Completed,Shivananda Sai,"May 19, 2026",UI,,,Om Sreenivasan,"May 18, 2026",Sales
+Shipments - Lists,Microdashboard - Shipments,"Add following micro dashboard cards for Shipments
+
+1. All - All open Shipments 
+2. Created.  - Shipments in “Created” status
+3. Assigned - Shipments in “Created” and user is not null.
+4. Ready to Ship - Shipments in “Ready to Ship” Status
+5. On Hold - Shipments marked as On Hold.
+6. Shipped - Shipments in “Shipped” Status",P1,Blocked,Andrey Kuznetcov,,BE,"18/03: On Hold - This status is not currently not there for shipment.
+
+Link",,Sai Nagboth,"Mar 3, 2026",Sales
+Shipments - Lists,Hide MC1 Shipments,Disable previous creation of shipments as per MC1 flow or hide them. Check with Sandeep Thatikonda  or Pranab Dutta  for confirmation. This is currently causing confusion in the flow.,P1,Dev Ready,Tejaswini Allagadda,,BE,[QE Comments 19/05] : Status is dev in progress,,Sai Nagboth,"Mar 3, 2026",Sales
+WH - SO View,Enable Shipment Micro-Dashboard,"Enable Micro-dashboard for shipments. 
+
+Also add a column to the list view to show “Ship Options”. ",P1,Dev Ready,Andrey Kuznetcov,,UI,18/03: Also add a column to the list view to show “Ship Options”.  - not added,,Sai Nagboth,"Mar 3, 2026",Sales
+Invoices,Invoice Page Changes,"1. On invoice page, can we add part number and customer part number in options to choose as well. [Canny Link]
+
+",,Dev Ready,"Tejaswini Allagadda,Shivananda Sai",,"UI,BE",[QE Comments 19/05] : Dev yet to pick,,Dipak Majhi,"Apr 27, 2026",Sales
+Invoices,"GP, Landed Cost, Commission Calculations","Please calculate the GP and commission both on invoice and SO as per the write up in the following link. Keep these variables in a separate attribute than the ones coming from xcrm so we can compare for some time.
+
+Calculations",P0,In progress,Andrey Kuznetcov,"May 22, 2026","BE,UI",,,Sai Nagboth,"May 13, 2026",Sales
+Invoices,Invoice Sync,"Validate that Bonus and Commissions are synced to CRM and users are able to continue the invoice update if needed. ",P0,In progress,Tejaswini Allagadda,"May 22, 2026","UI,BE",,,Om Sreenivasan,"May 19, 2026",Sales
+Invoices,Invoice PDF,Validate the Invoice PDF and Packing Slips,P1,In Testing,Deepti Vaidyula,"May 19, 2026",QE,,,Om Sreenivasan,"May 19, 2026",Sales
+Invoices,,,,,,,,,,Om Sreenivasan,"May 19, 2026",Sales
+Parts,Part Data bits,Extend current part data bits to CHP-5557,P1,Dev Ready,Andrey Kuznetcov,,"BE,UI",,Dipak Majhi,Sai Nagboth,"Mar 12, 2026",Sales
+Dashboard,Invoice Card,,P1,To be Defined,Sai Nagboth,,BE,,,Sai Nagboth,"Mar 8, 2026",Sales
+SO sync issues,SO Inbound Sync Issues,"1. VAT details are not being populated from the account. [PR Raised]❌
+
+image.jpeg2. The tax amount under the Charges section is not reflecting in Apex. [To be picked]
+image.jpeg
+
+3. Miscellaneous Costs and Freight Charges are not displayed at the SO line level. At the parent level, these values are only visible when the ""Costs & Payments"" section is collapsed. [PR Raised]❌
+image.jpeg
+image.jpeg
+
+4. Partial Ship Options are syncing only on update (with some delay), not during creation. Additionally, the synced value reflects the previously selected value instead of the latest updated value. [BE] ❌
+image.jpeg
+image.jpeg
+
+5. Document approval is not being synced to Apex. [BE]❌
+
+image.jpeg
+
+6. Advance payment details are not being synced. [BE]❌
+
+image.jpeg",P0,In progress,"Srinidhi Gundimi,Shivananda Sai","May 22, 2026",Sync,Recent Testing Example - https://crm.chip1.com/sales/orders/6a0c14c70f29245e97031df4,,Deepti Vaidyula,"Apr 16, 2026",Sales
+SO sync issues,"Duplicate contact, pick only the first contact. ","18/05 - Chip1 Core
+1) Today we got few SOs which did not sync to CRM coz of duplicate contact issue in connect. Can we request Satish to do another pass at this and identify any other account/contact which might have this issue ? 
+
+Gracefully handle this issue by only picking the first contact when duplicates come up.
+
+If possible, implement this across any entity with duplicate entries from ID mapping.",P0,Dev Ready,"Pranab Dutta,Nikhil Kumar Singh","May 22, 2026",Sync,"[Pranab, 19/05] - Contact and Account combination should be unique. If it is not then code change is needed.",Pranab Dutta,Om Sreenivasan,"May 19, 2026",Sales
+SO sync issues,,,,,,,,,,Om Sreenivasan,"May 19, 2026",Sales
+Quote,Quote PDF Issues,"HK quote - https://crm.chip1.com/sales/rfqs/6a0af7c32c453519f024562c/line/e21c42bb-5e9e-46b5-91f8-bb355214ce65…
+
+1. For all quotes (US, HK, NL, DE and CN) - we are displaying the CRM quote ID and not the Apex Quote ID in the QUOTATION - US26QU02722 header
+2. Total is missing. 
+3. The below header is incorrect. We are showing China address and also most if the info is missing
+Chip 1 Exchange Asia Limited Room A2, A3, 5/F, Wing Tai Centre, 12 Hing Yip Street Kowloon, 200070 China Tel: — Email: — Web: —
+4. From is missing
+5. The whole of the below footer is missing
+  1. *** All offers are subject to prior sales!! All orders are non-cancelable & non-returnable*** WARRANTY: Parts are warrantied to meet fit, form and function for a minimum of 30 days unless otherwise specified in writing. ++QUOTES ARE VALID FOR 24 HOURS Unless otherwise written. Memory and Processors Quotes are VALID for 1 hour unless otherwise written. Please visit: http://chip1.com/terms-hk-sales for our sales terms and conditions.
+6. Beneficiary is not aligned. Remove the gaps (follow CRM layout)
+7. For all the quotes - follow the CRM column spacing in the PDF. In Apex, MPN and MFG info ic cut off and goes to the second line. The spacing for column line is very wide in Apex. Looks odd. 
+8. What is this VAT: DE 814 390 475 data coming from ? This doesn't look correct. 
+
+US Quote - https://crm.chip1.com/sales/rfqs/6a0b403b0f29245e97031487/quotes - 
+
+1. Contact is incomplete in Apex (Tel: 206.575.0933 Email: Selina.Sebert@Astronics.com) is missing
+2. From is incomplete (Tel: +1 469 998 2227 Fax: 949-589-5401 Ext: 50108) is missing
+3. Account # and Inco terms is missing
+4. if the Dual checkbox is not selected - can we please display it as No; instead of -
+5. Inco terms in the footer is missing - INCOTERMS: EXW Arlington, TX
+6. WARRANTY: Parts are warrantied to meet fit, form and function for a minimum of 30 days unless otherwise specied in writing.
+There is a typo - it should be ""specified""
+7. unless otherwise specified in writing -  this should not be in new line (we have space). Follow CRM layout
+8. Acct: under Wires and ACH is not aligned. Either we need to follow CRM and display value in the same line. Otherwise move the label also to new line and display.  ",P0,In progress,Srinidhi Gundimi,"May 21, 2026",BE,[QE Comments 19/05] : Dev yet to pick,,Dipak Majhi,"Apr 16, 2026",Sales
+Quote,,When seeing quotes in Apex the currency is wrong – CRM $ and Apex € with no conversion (canny link),P0,Dev Ready,Phani Yedidi,"May 29, 2026",,,,Dipak Majhi,"May 12, 2026",Sales
+Quote,,Double lines in Quote (canny link),P0,Dev Ready,Andrey Kuznetcov,"May 29, 2026",,,,Sai Nagboth,"May 10, 2026",Sales
+Quote,,Issues & Improvement Requests: Opportunity Section in Apex (Canny Link),P2,To be Defined,Om Sreenivasan,,,,,Dipak Majhi,"May 14, 2026",Sales
+Quote,,Copy/paste full email message from customer to Apex com log (Canny Link),P0,Dev Ready,Nikhil Kumar Singh,"May 29, 2026",,,,Dipak Majhi,"May 14, 2026",Sales
+Quote,Change behavior of quote email.,"1. Enhance to make it similar to the PO email with cc option and include pdf option
+2. Provide an option to share in myChip1 through the quote modal. If selected, Include myChip1 link similar to that of share RFQ. Link to quote page. Also enable contact for logging in mc1.
+3. Make the email go from the user creating similar to other emails
+4. We did auto include of the user in bcc, provide a check box to say include me in bcc so the user can see it in their mail box. Select by default. ",P0,Dev Ready,Srinidhi Gundimi,"May 29, 2026","BE,UI",,,Om Sreenivasan,"May 19, 2026",Sales
+Quote,Additional Attributes,"The below fields needs to be added in Quote. 
+
+image.png
+
+",P1,Ready for Test,"Shivananda Sai,Srinidhi Gundimi","May 20, 2026","UI,BE",,Om Sreenivasan,Om Sreenivasan,"May 19, 2026",Sales
+Quote,Ability to pick and choose Quotes items,Users want an ability to pick and choose only few quote items and also have an ability to generate Quote PDF only for those options. Currently Quote PDF is created for all quote lines in the RFQ,P1,Ready for Test,"Shivananda Sai,Srinidhi Gundimi","May 20, 2026","UI,BE",,Om Sreenivasan,Om Sreenivasan,"May 19, 2026",Sales
+Quote,Bulk Quote Creation Issues,"https://apex.chip1.com/sales/rfqs/6a0c472b0f29245e970322a9/offers
+
+Even though it is a Single RFQ. When bulk quoted from Apex, system is creating multiple different quote IDs/PDFs. 
+
+
+
+Note - This is not happening for all quotes. But, few quotes are RFQ’s have this issue in Prod
+
+
+
+https://chip1.canny.io/admin/feedback/apex-1-feedback/p/urgent-improvement-request-multi-line-pdf-export-in-quote-section?boards=apex-1-feedback",P1,Dev Ready,Shivananda Sai,"May 22, 2026",UI,,,Om Sreenivasan,"May 19, 2026",Sales
+Quote,Bulk RFQ + Quote Creation,Enhanced the copy paste of RFQ + Quotes flow to include additional quote attributes,P1,In progress,Alex Yermakov,"May 22, 2026",UI,,Om Sreenivasan,Om Sreenivasan,"May 19, 2026",Sales
+Quote,Change behavior of quote email.,"1. Enhance to make it similar to the PO email with cc option and include pdf option
+2. Provide an option to share in myChip1 through the quote modal. If selected, Include myChip1 link similar to that of share RFQ. Link to quote page. Also enable contact for logging in mc1.
+3. Make the email go from the user creating similar to other emails
+4. We did auto include of the user in bcc, provide a check box to say include me in bcc so the user can see it in their mail box. Select by default. ",P0,Dev Ready,"Nikhil Kumar Singh,Shivananda Sai","May 22, 2026","BE,UI",,"Sai Nagboth,Om Sreenivasan",Om Sreenivasan,"May 19, 2026",Sales
+Sales Order,SO Fixes,Sales Order arrived but not reflected in Apex (Canny Link),P0,Dev Ready,"Srinivas Sanka,Sandeep Thatikonda",,"Data,BE","QE Comments 27/04 : The BE for the user does not have  Permissions for 'createOrder' which is causing the issue. ",,Dipak Majhi,"Apr 27, 2026",Sales
+Sales Order,,Limit Past SO visibility (Canny Link),P1,Dev Ready,"Tejaswini Allagadda,Shivananda Sai",,"BE,UI","QE Comments 27/04 : We can see open SOs in 'Created' status from the past.
+
+Should we introduce a cut-off and auto-close them after a certain time? Even if they’re still in 'Created' state?
+
+Feels like it could help avoid stale SOs, but want to confirm expected behavior here.
+
+1. DE26SO01712 - This is moved to closed status and is not in list view any more. This is fixed.",,Dipak Majhi,"Apr 27, 2026",Sales
+Sales Order,,"Add ‘Resale price per piece in Sales Order Line grid view.’
+
+(Canny Link)",P1,Dev Ready,"Tejaswini Allagadda,Shivananda Sai",,"BE,UI",[QE Comments 19/05] : Dev yet to pick,,Dipak Majhi,"Apr 27, 2026",Sales

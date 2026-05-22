@@ -1,0 +1,95 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Deepti Vaidyula ,  @Harika Guntamukkala",,
+Metadata,Release Info,Release date,2026.03.31,,
+Metadata,Release Info,DB changes,Connect : No Change,,
+Metadata,Release Info,Platform,No Change,,
+Metadata,Release Info,Notification, hotfix/2026.03.31,,
+Metadata,Release Info,Branch,hotfix/2026.03.31,,
+Artefacts,Artefacts,Chip1 Transaction,2026.03.31.5,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2026.03.31.4,,
+Artefacts,Artefacts,fn-notification-publisher,2026.03.31.0,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,## QE DOCUMENTATION LINK,HTTPS://ALTIRLLC.SHAREPOINT.COM/:W:/R/SITES/ALTIR-CHIP1/SHARED%20DOCUMENTS/GENERAL/QUALITY%20ENGINEERING/PROJECT%20DOCUMENTS/CHIP1%20QE%20DOCUMENTATION.DOCX?D=W75141A22221E423A9DD922E367268BB5&CSF=1&WEB=1&E=GWICGH,,
+Deployed Items,General,"Already Validated on 30th Mar
+status bar for HK and DE are not of the same size in RFQ/QU :",,,
+Deployed Items,General,"Coda
+adjusted the default display to show both closed and not closed RFQ items.",,,
+Deployed Items,Improved RFQ lines tab,Adjusted Create sales order modal and quote forms for smaller screens.,,,
+Deployed Items,Improved RFQ lines tab,"Renamed
+partialReels
+to
+partialReel
+in quote model to match API contract",,,
+Deployed Items,Improved RFQ lines tab,Recording pre-payments on SO,,,
+Deployed Items,Improved RFQ lines tab,FundCode support  for SR,,,
+Deployed Items,Improved RFQ lines tab,Create RFQ,,,
+Deployed Items,Improved RFQ lines tab,Sourcing type is not persisted from create to details (P0),,,
+Deployed Items,Improved RFQ lines tab,Offer -> Quote,,,
+Deployed Items,Improved RFQ lines tab,"Updated UI to pass labels from offer to quote and display it correctly in offer info pane. But need API changes, because quote API
+/quotes/{rfqId}/{rfqItemId}
+doesn't accept
+blackLabels
+partialReel
+and
+noLabelsOk
+in payload, so it's not saved",,,
+Deployed Items,Coda,"On Sourcing screen, on market activity we need to add  entity id and entity type, since they would be needed in some cases as they are tied to excess/internal offers that have ID.  Add it beside  ECCN column and see it all 7 columns can be shown without scroll.",,,
+Deployed Items,Coda,Also need to confirm that apart from black labels we are showing the other labels too in the Labels Column,,,
+Deployed Items,Coda,"Currency support in Offer flow
+coda",,,
+Deployed Items,Role based type selection,Title,,,
+Deployed Items,Role based type selection,Description,,,
+Deployed Items,Role based type selection,Account Creation,,,
+Deployed Items,Role based type selection,Few changes to account creation,,,
+Deployed Items,Role based type selection,Role based type selection.,,,
+Deployed Items,Role based type selection,Purchasing can create supplier accounts,,,
+Deployed Items,Role based type selection,Sales can create Sales accounts,,,
+Deployed Items,Role based type selection,Admin can create any account,,,
+Deployed Items,Role based type selection,Allow edit of general section except name for Regular sales users. Drive name edit based on seprate permission not the seciton permission,,,
+Deployed Items,31st Mar Items,Bulk update for QC inspector(BE also pushed),,@Umamahesh,
+Deployed Items,31st Mar Items,"Offer email, controlling on UI for send email and send bcc",Verified,,
+Deployed Items,31st Mar Items,"Renamed
+invoicePreference
+to
+customerInfo",,,
+Deployed Items,31st Mar Items,in AccountInvoicingIntegration for consistent field naming.,,@Harika Guntamukkala,
+Deployed Items,31st Mar Items,"Added
+minQty
+and
+maxQty",,,
+Deployed Items,31st Mar Items,fields in SourcingRequestCreateFields for quantity input.,,@Deepti Vaidyula,
+Deployed Items,31st Mar Items,"Once lines in a Sales Order (SO) are unlocked, all approvals should be removed.",,@Deepti Vaidyula,
+Deployed Items,31st Mar Items,Create - SO,,@Deepti Vaidyula,
+Deployed Items,31st Mar Items,"For address, show full address in dropdwon not location name as location name does not have much relavance and cannot be used for selection.",,,
+Deployed Items,31st Mar Items,(P0) - Fixed,Verified,,
+Deployed Items,31st Mar Items,Currency should default to currency from account,,,
+Deployed Items,31st Mar Items,Fixed,Verified,,
+Deployed Items,31st Mar Items,"Create RFQ - quote details - Fixed, need to check if  - rfqAndQuoteItems[0].quoteItem.expiration",,,
+Deployed Items,31st Mar Items,is the correct field for expiration field (according to API contract),Verified,@Harika Guntamukkala,
+Deployed Items,31st Mar Items,Not seeing qty field under quote details of RFQ,,,
+Deployed Items,31st Mar Items,Expires should be date similar to create quote in RFQ,,,
+Deployed Items,31st Mar Items,RFQ → RFQ Lines,,,
+Deployed Items,31st Mar Items,Fixed,Verified,@Harika Guntamukkala,
+Deployed Items,31st Mar Items,Column selector option should be there,,,
+Deployed Items,31st Mar Items,Change the default RFQ Line column sequence to that of what we see in the main RFQ list view,,,
+Deployed Items,31st Mar Items,Record an Offer,,@Deepti Vaidyula,
+Deployed Items,31st Mar Items,Issue,,,
+Deployed Items,31st Mar Items,Description,,,
+Deployed Items,31st Mar Items,ExpiresOn,,,
+Deployed Items,31st Mar Items,Not carried forward from RFQ,Verified,,
+Deployed Items,31st Mar Items,Min Order Qty,,,
+Deployed Items,31st Mar Items,Not carried forward from RFQ,Verified,,
+Deployed Items,31st Mar Items,Country of Origin,,,
+Deployed Items,31st Mar Items,Not carried forward from Request offer - This field is neither in RFQ nor in SR,,,
+Deployed Items,31st Mar Items,Lead Time,,,
+Deployed Items,31st Mar Items,Not carried forward from Request offer,Verified,,
+Deployed Items,31st Mar Items,Request an Offer,,@Deepti Vaidyula,
+Deployed Items,31st Mar Items,Issue,,,
+Deployed Items,31st Mar Items,Description,,,
+Deployed Items,31st Mar Items,Lead Time,,,
+Deployed Items,31st Mar Items,Not carried forward from RFQ,Verified,,
+Deployed Items,31st Mar Items,Label Preferences,,,
+Deployed Items,31st Mar Items,Only single value displayed instead of multiple selections,Verified,,

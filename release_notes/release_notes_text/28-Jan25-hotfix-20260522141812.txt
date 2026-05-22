@@ -1,0 +1,65 @@
+# 28-JAN25-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+ 
+Release date
+ : 2025.01.24
+DB changes
+ : 
+Connect
+ : No Changes
+Platform
+ : No Change
+Notification : 
+No Change
+Branch
+  : 
+Platform : hotfix/2025.01.28
+Components Involved
+ 
+& Artefacts
+: 
+Chip1 Transaction                              
+ :
+ 
+hotfix-2025.01.28.0
+
+## WHAT'S FIXED IN THE HOT-FIX?
+
+Following items are part of the release
+Stop sending notifications on Quote & Order Update
+
+## TESTING NOTES
+
+Receiving emails only for create quote, SO and shipment. Update emails are not sent.
+
+## SMOKE TESTS
+
+Feature/Flow
+Stage
+Prod
+New User Signup from mc1
+yes
+Upload Bom & Excess and verify in CRM
+yes
+Manual RFQ
+yes
+Active Quote (create, edit)
+yes
+Sales Order
+(create, edit)
+yes
+Lead Account & Transfer
+NA
+Bids
+NA
+Parts Tracker
+yes
+Search
+yes
+Page Navigations
+yes

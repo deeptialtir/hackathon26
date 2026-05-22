@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strategy Traceability · ORBYT</title>
+  <style>
+    :root {
+      --bg: #050914;
+      --panel: rgba(9, 18, 34, 0.9);
+      --line: rgba(123, 252, 255, 0.18);
+      --accent: #43f6c8;
+      --accent2: #7aa7ff;
+      --accent3: #ff4fd8;
+      --text: #eef7ff;
+      --muted: #9db1c8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(115deg, rgba(5,9,20,0.96), rgba(6,16,31,0.9) 46%, rgba(13,11,29,0.94)),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900' viewBox='0 0 1600 900'%3E%3Crect width='1600' height='900' fill='%23030a14'/%3E%3Cg fill='none' stroke='%2335f2d0' stroke-opacity='.26' stroke-width='1.2'%3E%3Cpath d='M0 180h220l70 70h260l80-80h330l70 70h570'/%3E%3Cpath d='M0 540h360l70-70h210l90 90h310l60-60h500'/%3E%3C/g%3E%3Cg fill='%237aa7ff' fill-opacity='.72'%3E%3Ccircle cx='220' cy='180' r='5'/%3E%3Ccircle cx='550' cy='250' r='4'/%3E%3Ccircle cx='960' cy='170' r='5'/%3E%3Ccircle cx='430' cy='470' r='5'/%3E%3Ccircle cx='730' cy='560' r='4'/%3E%3Ccircle cx='1100' cy='500' r='5'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      padding: 1.5rem 2.5rem 1rem;
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(18px);
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.65rem;
+      background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle { color: var(--muted); margin: 0.35rem 0 0; }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: flex-end; }
+    a.button {
+      color: #03111b;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      text-decoration: none;
+      padding: 0.55rem 0.85rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    main { padding: 1.5rem 2.5rem 2.5rem; }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 18px 46px rgba(0,0,0,0.24);
+      backdrop-filter: blur(16px);
+      overflow-x: auto;
+    }
+    .data-table {
+      width: 100%;
+      min-width: 900px;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+    .data-table th, .data-table td {
+      padding: 0.58rem 0.65rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .data-table th {
+      color: var(--accent);
+      font-weight: 700;
+      background: rgba(67,246,200,0.06);
+      position: sticky;
+      top: 0;
+    }
+    .data-table td { color: var(--text); }
+    .empty { color: var(--muted); }
+    .matrix-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+    .matrix-card {
+      background: rgba(255,255,255,0.035);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+    .matrix-card h2 { margin: 0 0 0.35rem; font-size: 1rem; color: var(--accent); }
+    .matrix-card p { color: var(--muted); margin: 0 0 0.75rem; font-size: 0.85rem; }
+    @media (max-width: 760px) {
+      header { align-items: flex-start; flex-direction: column; padding-left: 1rem; padding-right: 1rem; }
+      main { padding-left: 1rem; padding-right: 1rem; }
+      .actions { justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Strategy Traceability</h1>
+      <p class="subtitle">ORBYT matrix view · Generated 2026-05-22 15:50</p>
+    </div>
+    <div class="actions">
+      <a class="button" href="ORBYT_Test_Matrix_Dashboard.html">Dashboard</a>
+      <a class="button" href="ORBYT_Downloads.html">Download Hub</a>
+      
+      <a class="button" download href="08_Strategy_Traceability_Matrix.xlsx">Download Excel</a>
+      <a class="button" download href="08_Strategy_Traceability_Matrix.csv">Download CSV</a>
+    </div>
+  </header>
+  <main>
+    <div class="panel">
+      <table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Scenario_ID</th>
+      <th>Scenario_Title</th>
+      <th>Traceability_Status</th>
+      <th>Release_Match_Count</th>
+      <th>Req_Match_Count</th>
+      <th>Linked_Releases</th>
+      <th>Release_Evidence</th>
+      <th>Automatable_%</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DIS-01</td>
+      <td>End-to-End Data Flow</td>
+      <td>COVERED</td>
+      <td>66</td>
+      <td>90</td>
+      <td>01-Apr25-hotfix-20260522142918.csv|01-April26-20260522112825.csv|01-Aug25-hotfix-20260522143031.csv|02-April26-20260522112829.csv|03-April26-02-20260522112839.csv|03-April26-02-20260522112843.csv</td>
+      <td>Feature/Flow // ) sync // Feature/Flow</td>
+      <td>66.7</td>
+    </tr>
+    <tr>
+      <td>DIS-05</td>
+      <td>Volume and Performance Testing</td>
+      <td>COVERED</td>
+      <td>61</td>
+      <td>55</td>
+      <td>01-Apr25-hotfix-20260522142918.csv|01-Aug25-hotfix-20260522143031.csv|02-April26-20260522112829.csv|05-Dec24-20260522141700.csv|05-Jan26-20260522112519.csv|05-Jan26-20260522112557.csv</td>
+      <td>Upload Bom &amp; Excess and verify in CRM\nyes\nyes // Upload Bom &amp; Excess and verify in CRM\nyes\nyes // Download excess and Bom Template, fill and upload.\nyes\nyes</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>DIS-02</td>
+      <td>Data Quality and Schema Validation</td>
+      <td>COVERED</td>
+      <td>60</td>
+      <td>114</td>
+      <td>01-Apr25-hotfix-20260522142918.csv|01-April26-20260522112825.csv|02-April26-20260522112829.csv|03-April26-02-20260522112839.csv|03-April26-02-20260522112843.csv|04-May26-20260522113023.csv</td>
+      <td>Stage CRM is down. So, all validations are done from mc1. // SO validation for credit balance (Tejaswini Allagadda) // Enable validation on create of a line, new SO or new line</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>DIS-07</td>
+      <td>Regression Testing</td>
+      <td>COVERED</td>
+      <td>60</td>
+      <td>7</td>
+      <td>01-Apr25-hotfix-20260522142918.csv|01-Aug25-hotfix-20260522143031.csv|02-Dec24-20260522141654.csv|02-Dec25-hotfix-20260522143451.csv|05-Jan26-20260522112519.csv|05-Jan26-20260522112557.csv</td>
+      <td>Bugs in build\n//app.clickup.com/t/8651091/CHP-1746\n)\n## SANITY TESTS // Bugs in build\n//app.clickup.com/t/8651091/CHP-2667\n) --→ This is likely a data issue\n## MC1 SANITY TESTS // Feature/Flow</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>DIS-03</td>
+      <td>Business Logic and Transformation</td>
+      <td>COVERED</td>
+      <td>35</td>
+      <td>47</td>
+      <td>02-April26-20260522112829.csv|05-Jan26-20260522112519.csv|05-Jan26-20260522112557.csv|05-May-26-20260522113027.csv|07-April26-20260522112847.csv|07-May-26-20260522113031.csv</td>
+      <td>supplier account number (supplier_info.account_number → purchase_account) // Add PO // CPN → SPN(spPart) (do NOT use the incorrectly created SPL field — remove that)</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>DIS-04</td>
+      <td>Error Handling and Logging</td>
+      <td>COVERED</td>
+      <td>35</td>
+      <td>20</td>
+      <td>02-April26-20260522112829.csv|05-Jan26-20260522112519.csv|05-Jan26-20260522112557.csv|07-April26-20260522112847.csv|07-May-26-20260522113031.csv|12-Dec25-20260522143516.csv</td>
+      <td>Fix Sentry CancelledError downgrade and add Purchase Order part source (\n) // Fix CancelledError not being downgraded to warning in Sentry on minified production builds — add fallback check on excep // Cannot destructure property 'isOpen' of undefined\nin ModalsProvider\n//altir-chip1.sentry.io/issues/109332437/?alert_rule</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>DIS-06</td>
+      <td>Security and Access Control</td>
+      <td>COVERED</td>
+      <td>25</td>
+      <td>32</td>
+      <td>05-Jan26-20260522112519.csv|05-Jan26-20260522112557.csv|07-Apr25-20260522142924.csv|12-Dec25-20260522143516.csv|12-Jan26-20260522112602.csv|13-May26-20260522113048.csv</td>
+      <td>Validated user access provisioning.\nyes // The tabs are accessible for this account\nyes // Validated page load and access behavior\nyes</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+  </main>
+</body>
+</html>

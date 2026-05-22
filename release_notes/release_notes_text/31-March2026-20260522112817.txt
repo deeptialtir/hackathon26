@@ -1,0 +1,186 @@
+# 31-MARCH2026
+
+Environment: Stage
+Status: 
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2026.03.31
+ 
+DB changes
+ : 
+Connect
+ : No Change
+Platform
+ : No Change
+Notification : 
+hotfix/2026.03.31
+ 
+Branch
+  : hotfix/2026.03.31
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Account  
+    
+                               
+  : 2026.03.31.0
+Chip1 Transaction  
+    
+                        
+  : 2026.03.31.5
+Chip1 CRM WebUI                 
+    
+           
+ : 2026.03.31.4
+fn-notification-publisher                   
+: 2026.03.31.0
+ 
+ 
+ 
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+
+## QE DOCUMENTATION LINK:HTTPS://ALTIRLLC.SHAREPOINT.COM/:W:/R/SITES/ALTIR-CHIP1/SHARED%20DOCUMENTS/GENERAL/QUALITY%20ENGINEERING/PROJECT%20DOCUMENTS/CHIP1%20QE%20DOCUMENTATION.DOCX?D=W75141A22221E423A9DD922E367268BB5&CSF=1&WEB=1&E=GWICGH
+
+## LIST OF DEPLOYED ITEMS
+
+Already Validated on 30th Mar
+status bar for HK and DE are not of the same size in RFQ/QU : 
+Coda
+Improved RFQ lines tab: adjusted the default display to show both closed and not closed RFQ items.
+Adjusted Create sales order modal and quote forms for smaller screens.
+Renamed 
+partialReels
+ to 
+partialReel
+ in quote model to match API contract
+Recording pre-payments on SO
+FundCode support  for SR 
+Create RFQ 
+Sourcing type is not persisted from create to details (P0)
+Offer -> Quote 
+Updated UI to pass labels from offer to quote and display it correctly in offer info pane. But need API changes, because quote API 
+/quotes/{rfqId}/{rfqItemId}
+ doesn't accept 
+blackLabels
+ 
+partialReel
+ and 
+noLabelsOk
+ in payload, so it's not saved
+Sourcing : 
+Coda
+:
+On Sourcing screen, on market activity we need to add  entity id and entity type, since they would be needed in some cases as they are tied to excess/internal offers that have ID.  Add it beside  ECCN column and see it all 7 columns can be shown without scroll.
+Also need to confirm that apart from black labels we are showing the other labels too in the Labels Column
+Currency support in Offer flow 
+Role based type selection : 
+coda
+ #5
+Title
+Description
+Account Creation
+Few changes to account creation
+ 
+Role based type selection.
+Purchasing can create supplier accounts
+Sales can create Sales accounts
+Admin can create any account
+ 
+Allow edit of general section except name for Regular sales users. Drive name edit based on seprate permission not the seciton permission
+ 
+31st Mar Items:
+Bulk update for QC inspector(BE also pushed) 
+@Umamahesh
+ 
+Offer email, controlling on UI for send email and send bcc - 
+Verified
+Renamed 
+invoicePreference
+ to 
+customerInfo
+ in AccountInvoicingIntegration for consistent field naming. - 
+@Harika Guntamukkala
+ 
+Added 
+minQty
+ and 
+maxQty
+ fields in SourcingRequestCreateFields for quantity input. - 
+@Deepti Vaidyula
+  - 
+Verified
+Once lines in a Sales Order (SO) are unlocked, all approvals should be removed. - 
+@Deepti Vaidyula
+ - 
+Verified
+Create - SO - 
+@Deepti Vaidyula
+ 
+For address, show full address in dropdwon not location name as location name does not have much relavance and cannot be used for selection. 
+(P0) - Fixed - 
+Verified
+Currency should default to currency from account 
+- Fixed - 
+Verified
+Create RFQ - quote details - 
+Fixed, need to check if  - 
+rfqAndQuoteItems[0].quoteItem.expiration
+ is the correct field for expiration field (according to API contract) - 
+@Harika Guntamukkala
+ 
+ 
+Verified
+Not seeing qty field under quote details of RFQ
+Expires should be date similar to create quote in RFQ
+RFQ → RFQ Lines 
+- Fixed - 
+@Harika Guntamukkala
+ 
+ 
+Verified
+Column selector option should be there
+Change the default RFQ Line column sequence to that of what we see in the main RFQ list view
+Record an Offer - 
+@Deepti Vaidyula
+ 
+Issue
+Description
+ExpiresOn
+Not carried forward from RFQ - 
+Verified
+Min Order Qty
+Not carried forward from RFQ - 
+Verified
+Country of Origin
+Not carried forward from Request offer - 
+This field is neither in RFQ nor in SR
+Lead Time
+Not carried forward from Request offer - 
+Verified
+Request an Offer 
+@Deepti Vaidyula
+ 
+Issue
+Description
+Lead Time
+Not carried forward from RFQ- 
+Verified
+Label Preferences
+Only single value displayed instead of multiple selections - 
+Verified

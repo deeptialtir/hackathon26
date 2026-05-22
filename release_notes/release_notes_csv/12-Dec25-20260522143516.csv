@@ -1,0 +1,248 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Deepti Vaidyula ,  @Harika Guntamukkala",,
+Metadata,Release Info,Release date,2025.12.12,,
+Metadata,Release Info,DB changes,Connect : release/2025.12.11,,
+Metadata,Release Info,Platform,release/2025.12.11,,
+Metadata,Release Info,Notification, No changes,,
+Metadata,Release Info,Branch,release/2025.12.11,,
+Artefacts,Artefacts,Chip1 Account,2025.12.11.1,,
+Artefacts,Artefacts,Chip1 Part,2025.12.11.0,,
+Artefacts,Artefacts,Chip1 Transaction,2025.12.11.3,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2025.12.11.3,,
+Artefacts,Artefacts,fn connect,2025.12.11.0,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,QE documentation link,https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh,,
+Deployed Items,General,"Will be available in Prod
+//app.clickup.com/t/8651091/CHP-3609",,,
+Deployed Items,),"Task FAB API Integration
+//app.clickup.com/t/8651091/CHP-3609",,@Harika Guntamukkala,
+Deployed Items,),"Tasks New FAB items
+//app.clickup.com/t/8651091/CHP-3627",,@Harika Guntamukkala,
+Deployed Items,),"Account - show office address in general section
+//app.clickup.com/t/8651091/CHP-3574",,@Harika Guntamukkala,
+Deployed Items,),"3CX Integration
+//app.clickup.com/t/8651091/CHP-3432",,@Deepti Vaidyula,
+Deployed Items,),"Enhance responsive layout for phone crm, ext and email fields
+//app.clickup.com/t/8651091/CHP-3505",,@Harika Guntamukkala,
+Deployed Items,),"simplify disabled logic for Account Supplier Island
+//app.clickup.com/t/8651091/CHP-3601",,@Harika Guntamukkala,
+Deployed Items,),"Adding Resizer on all the tables
+//app.clickup.com/t/8651091/CHP-3608",,@Deepti Vaidyula,
+Deployed Items,),"Add conditional tag creation based on user role
+//app.clickup.com/t/8651091/CHP-3616",,@Deepti Vaidyula,
+Deployed Items,),"rename 'accountType' to 'category' in list and filters
+//app.clickup.com/t/8651091/CHP-3616",,@Harika Guntamukkala,
+Deployed Items,),"Add notes functionality to contact details
+//app.clickup.com/t/8651091/CHP-3649",,@Harika Guntamukkala,
+Deployed Items,),"Add partlink and xrm deep link to Quote List
+//app.clickup.com/t/8651091/CHP-3622",,@Deepti Vaidyula,
+Deployed Items,),"Offer list number in Offer IDs section
+//app.clickup.com/t/8651091/CHP-3633",,@Umamahesh,
+Deployed Items,),"Offer to Purchase Order Flow
+//app.clickup.com/t/8651091/CHP-3636",,@Umamahesh,
+Deployed Items,),"Company and Company website are editable in contact details
+//app.clickup.com/t/8651091/CHP-3662",,@Harika Guntamukkala,
+Deployed Items,),Enhance CreateRequest functionality,,@Harika Guntamukkala,
+Deployed Items,),"Wont be enabled on Prod:
+//app.clickup.com/t/8651091/CHP-3580",,@Deepti Vaidyula,
+Deployed Items,),"Documents Tab
+//app.clickup.com/t/8651091/CHP-3585",,,
+Deployed Items,),"PO - Add Sales Lines island
+//app.clickup.com/t/8651091/CHP-3634",,,
+Deployed Items,),"Enhance order line form
+//app.clickup.com/t/8651091/CHP-3635",,,
+Deployed Items,),"Notifications: PR1 (Api Integration)
+//app.clickup.com/t/8651091/CHP-3635",,,
+Deployed Items,),"Notifications: PR2 (NavSearch Global toggle state)
+//app.clickup.com/t/8651091/CHP-3635",,,
+Deployed Items,),"Notifications: PR3 (Notification Navbar)
+//app.clickup.com/t/8651091/CHP-3635",,,
+Deployed Items,),"Notifications: PR4 (Notification WebSocket Integration)
+//app.clickup.com/t/8651091/CHP-3647",,,
+Deployed Items,),"Attach offer to existing PO flow
+//app.clickup.com/t/8651091/CHP-3654",,,
+Deployed Items,),"Order Permissions Changes
+//app.clickup.com/t/8651091/CHP-3654",,,
+Deployed Items,),"Permissions common changes
+//app.clickup.com/t/8651091/CHP-3654",,,
+Deployed Items,),"Permissions on Rfqs and Rfqs Line Page
+//app.clickup.com/t/8651091/CHP-3658",,,
+Deployed Items,),Email link redirect to default email provider,,,
+Deployed Items,),"Bugs in build
+//app.clickup.com/t/8651091/CHP-3688
+)
+//app.clickup.com/t/8651091/CHP-3687
+)
+//app.clickup.com/t/8651091/CHP-3686
+)
+//app.clickup.com/t/8651091/CHP-3690
+)
+//app.clickup.com/t/8651091/CHP-3693
+)
+//app.clickup.com/t/8651091/CHP-3692
+)
+//app.clickup.com/t/8651091/CHP-3690
+)
+unable to view sourcing request when I create using purchasing user",,,
+Deployed Items,Purchasing issues,leonardov.com,,@chip1,
+Deployed Items,Purchasing issues,"/Leonardo
+{
+""Purchase Request for id 693bd0c67acce979dfbca71d not found"",
+}
+1097b393-44ba-42ba-b71c-aaacdd0e53b",,@123,
+Deployed Items,correlationId,"US25OF-18723
+not visible on sourcing request offers & outbound failed with correlationId :
+6ae40e65-9ae5-4a7d-8ebe-7b5ac046ea1d",,,
+Deployed Items,correlationId,"US25OF-18711
+not visible on sourcing request offers",,,
+Deployed Items,crmNumber,"US25OF683237
+inbound offer is not visible under sourcing request offers",,,
+Deployed Items,crmNumber,"US25OF683245
+inbound offer is not visible under market offers
+## MC1 SANITY TESTS",,,
+Deployed Items,Note,The sanity tests to check will be selected based on the release,,,
+Deployed Items,Note,Feature/Flow,,,
+Deployed Items,Note,Stage,,,
+Deployed Items,Note,Prod,,,
+Deployed Items,Note,Remarks,,,
+Deployed Items,Note,New User Signup from mc1,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,Mc1 user invite - signup,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,On stage should suffice,,,
+Deployed Items,Note,Upload Bom and verify in CRM,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,US25BOM97693,,,
+Deployed Items,Note,Upload Excess and verify in CRM,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Manual RFQ,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,US25RQ23272,,,
+Deployed Items,Note,RFQ update,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,RFQ - multiline,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Active Quote (create),,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,US25QU07094,,,
+Deployed Items,Note,Active Quote (edit),,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Active quote - multiline,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Sales Order (create),,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,US25SO01613,,,
+Deployed Items,Note,Sales Order (edit),,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Sales Order - multiline,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Quality Control (PO number),,,
+Deployed Items,Note,"Yes
+yes",,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,Invoice generation,,,
+Deployed Items,Note,"Yes
+yes",,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,Invoice generation - shipping in 2 lots,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,Lead Account & Transfer,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Bids,,,
+Deployed Items,Note,Parts Tracker,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Search,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Page Navigations,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Edit Project,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Notification Emails,,,
+Deployed Items,Note,"Download excess and Bom Template, fill and upload.",,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Conceirge Service,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Sorting,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Filters,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Pricing - OEM secrets,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Pricing - IC,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Pricing - xcrm,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,The sanity tests to check will be selected based on the release,,,
+Deployed Items,Note,Feature/Flow,,,
+Deployed Items,Note,Stage,,,
+Deployed Items,Note,Production,,,
+Deployed Items,Note,Remarks,,,
+Deployed Items,Note,"Create BOM in MC1, check in xcrm and new crm",,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,"Create RFQ in MC1, check in xcrm and crm",,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Upload BOM from CRM,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Page Navigations,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,"Deep links for Accounts, RFQs, Quotes and Orders",,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Edit Project,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Projects - price refresh,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Global Search,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Filters,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Sorting of tables,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Page Search,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,"Download excess and Bom Template, fill and upload.",,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Conceirge Service,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Microdashboard counts,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Share project and show in mc1,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Create Contact from crm,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Invite Contact from crm,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Create Task,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,FAB icons - for all,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,FAB - icon actions - Take a note/Activity/Task,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Light mode - dark mode,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Saved Views,,,
+Deployed Items,Note,Yes,,,

@@ -1,0 +1,141 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Deepti Vaidyula ,  @Harika Guntamukkala",,
+Metadata,Release Info,Release date,2025.07.08,,
+Metadata,Release Info,DB changes,Connect : No changes,,
+Metadata,Release Info,Platform,No changes,,
+Metadata,Release Info,Notification, No changes,,
+Metadata,Release Info,Branch,hotfix/2025.07.07,,
+Artefacts,Artefacts,Chip1 Part,2025.07.07.0,,
+Artefacts,Artefacts,Chip1 Transaction,2025.07.07.4,,
+Artefacts,Artefacts,Chip1 WebUI,2025.07.07.1,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2025.07.07.1,,
+Deployed Items,Private ( https,"//app.clickup.com/t/8651091/CHP-2438
+)
+//app.clickup.com/t/8651091/CHP-2453
+)
+//app.clickup.com/t/8651091/CHP-2455
+)  # Breaking UI on Prod
+//app.clickup.com/t/8651091/CHP-2459
+)",,,
+Deployed Items,CHP-2438,"Accounts - Add ""All"" category",,,
+Deployed Items,CHP-2438,CRM - Disable new Dashboard on prod and stage,,,
+Deployed Items,CHP-2438,RFQ/Quote/Order - Show account stage pill in info pane,,,
+Deployed Items,CHP-2438,"Search - Add second line for project item, powered by backend",,,
+Deployed Items,CHP-2438,Search - Add skeletons for initial loading states,,,
+Deployed Items,CHP-2438,Search - Fix Account item second line,,,
+Deployed Items,CHP-2438,"Search - Remove individual category empty messages, use only one
+using useDirerectFab (
+)",,,
+Deployed Items,CHP-2453,Account summary - Layout for smaller size,,,
+Deployed Items,CHP-2453,Account summary - Redo layout,,,
+Deployed Items,CHP-2453,Part activity - Add a fallback for contexts column,,,
+Deployed Items,CHP-2453,Part activity - Fix country of origin not mapped correctly,,,
+Deployed Items,CHP-2453,"UAT review part 2 (
+)",,,
+Deployed Items,CHP-2455,"Part tracker - Don't crash app on empty response (track part modal) (
+)",,,
+Deployed Items,CHP-2455,"Fab - Create single-option FAB (useDirectFab)
+fix links for bom and excess template links",,,
+Deployed Items,CHP-2455,"PartTracker - Adjust UI to deduplicated contexts values (
+)
+fix context pill delete button
+//app.clickup.com/t/8651091/CHP-2465
+)
+## MC1 SANITY TESTS",,,
+Deployed Items,Private ( https,Feature/Flow,,,
+Deployed Items,Private ( https,Stage,,,
+Deployed Items,Private ( https,Prod,,,
+Deployed Items,Private ( https,Remarks,,,
+Deployed Items,Private ( https,New User Signup from mc1,,,
+Deployed Items,Private ( https,NA,,,
+Deployed Items,Private ( https,NA,,,
+Deployed Items,Private ( https,Mc1 user invite - signup,,,
+Deployed Items,Private ( https,NA,,,
+Deployed Items,Private ( https,NA,,,
+Deployed Items,Private ( https,On stage should suffice,,,
+Deployed Items,Private ( https,Upload Bom & Excess and verify in CRM,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Manual RFQ,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,"Active Quote (create, edit)",,,
+Deployed Items,Private ( https,"Yes
+yes",,,
+Deployed Items,Private ( https,"Sales Order
+(create, edit)",,,
+Deployed Items,Private ( https,"Yes
+yes",,,
+Deployed Items,Private ( https,Lead Account & Transfer,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,NA,,,
+Deployed Items,Private ( https,Bids,,,
+Deployed Items,Private ( https,NA,,,
+Deployed Items,Private ( https,NA,,,
+Deployed Items,Private ( https,Parts Tracker,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Search,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Page Navigations,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Edit Project,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Notification Emails,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Not on test account. Mc1userID issue.,,,
+Deployed Items,Private ( https,"Download excess and Bom Template, fill and upload.",,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,## CRM SANITY TESTS,Feature/Flow,,,
+Deployed Items,## CRM SANITY TESTS,Stage,,,
+Deployed Items,## CRM SANITY TESTS,Production,,,
+Deployed Items,## CRM SANITY TESTS,Remarks,,,
+Deployed Items,## CRM SANITY TESTS,"Create BOM in MC1, check in xcrm and new crm",,,
+Deployed Items,## CRM SANITY TESTS,Yes,,,
+Deployed Items,## CRM SANITY TESTS,Yes,,,
+Deployed Items,## CRM SANITY TESTS,"Create RFQ in MC1, check in xcrm and crm",,,
+Deployed Items,## CRM SANITY TESTS,Yes,,,
+Deployed Items,## CRM SANITY TESTS,Yes,,,
+Deployed Items,## CRM SANITY TESTS,Upload BOM from CRM,,,
+Deployed Items,## CRM SANITY TESTS,Yes,,,
+Deployed Items,## CRM SANITY TESTS,Yes,,,
+Deployed Items,## CRM SANITY TESTS,Page Navigations,,,
+Deployed Items,## CRM SANITY TESTS,Yes,,,
+Deployed Items,## CRM SANITY TESTS,Yes,,,
+Deployed Items,## CRM SANITY TESTS,"Deep links for Accounts, RFQs, Quotes and Orders",,,
+Deployed Items,## CRM SANITY TESTS,Yes,,,
+Deployed Items,## CRM SANITY TESTS,Yes,,,
+Deployed Items,## CRM SANITY TESTS,Edit Project,,,
+Deployed Items,## CRM SANITY TESTS,Yes,,,
+Deployed Items,## CRM SANITY TESTS,Yes,,,
+Deployed Items,## CRM SANITY TESTS,Global Search,,,
+Deployed Items,## CRM SANITY TESTS,Yes,,,
+Deployed Items,## CRM SANITY TESTS,Yes,,,
+Deployed Items,## CRM SANITY TESTS,Filters,,,
+Deployed Items,## CRM SANITY TESTS,Yes,,,
+Deployed Items,## CRM SANITY TESTS,Yes,,,
+Deployed Items,## CRM SANITY TESTS,Sorting of tables,,,
+Deployed Items,## CRM SANITY TESTS,Few,,,
+Deployed Items,## CRM SANITY TESTS,Yes,,,
+Deployed Items,## CRM SANITY TESTS,Page Search,,,
+Deployed Items,## CRM SANITY TESTS,Yes,,,
+Deployed Items,## CRM SANITY TESTS,Yes,,,
+Deployed Items,## CRM SANITY TESTS,"Download excess and Bom Template, fill and upload.",,,
+Deployed Items,## CRM SANITY TESTS,Not yes deployed to crm,,,
+Deployed Items,## CRM SANITY TESTS,"NA
+## ISSUES FOUND ON PRODUCTION:
+//app.clickup.com/t/8651091/CHP-2469
+) - Fixed",,,
+Deployed Items,Root cause,Fix: RFQ - Origin field is optional,,,
+Deployed Items,Root cause,"Not seen on stage. Seeing only on prod.`
+## ISSUES FOUND ON STAGE:
+//app.clickup.com/t/8651091/CHP-2470
+)
+//app.clickup.com/t/8651091/CHP-2462
+)",,,

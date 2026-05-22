@@ -1,0 +1,9 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,@Deepti Vaidyula,,
+Metadata,Release Info,DB changes,Connect : release/2024.12.18,,
+Metadata,Release Info,Platform,No change,,
+Metadata,Release Info,Branch,Chip1 Transaction : hotfix/2024.12.18,,
+Metadata,Release Info,Connect,release/2024.12.18,,
+Artefacts,Artefacts,fn Connect, 2024.12.18.0 ## WHAT'S FIXED IN THE HOT-FIX? Following items are part of the release Bid Document Download fix Fix for failing SO creation ## TESTING NOTES Bid Document Download fix The bid document download should use https protocol and the ssl certificates are to be added. Fix for failing SO Sales order created on CRM is now reflected in MC1 Smoke tests,,

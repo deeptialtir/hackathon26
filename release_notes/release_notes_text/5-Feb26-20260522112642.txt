@@ -1,0 +1,449 @@
+# 5-FEB26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2026.02.05
+ 
+DB changes
+ : 
+Connect
+ : No changes
+Platform
+ : No changes
+Notification : 
+No changes
+ 
+Branch
+  : release/2026.02.04
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Account  
+    
+                             
+  : 2026.02.04.4
+Chip1 Transaction  
+    
+                      
+  : 2026.02.04.9
+Chip1 CRM WebUI                 
+    
+        
+ : 2026.02.04.5
+ 
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+### FOLLOWING ITEMS ARE PART OF THE RELEASE
+
+Task Sync
+Trending cards - Show RFQ and manufacture counts from whole organization
+Remove additional task creation on SR creation
+(Bugs Phani reported: Data issue already fixed in Prod)SO created out of RFQ, doesn't have pending approval sub status and approved sub status appearing above the status chevron
+(Bugs Phani reported)On the connected SR for that SO, when the status is purchase requested - Approved/pending approval sub statuses are not appearing instead target price matched sub status is appearing 
+Dark mode allocation boxes not showing fine 
+Souring request update(apart form first section) is removing buyer_user info
+Allowing contact creation with either phone or email
+RFQ -> Order tab
+Private (
+https://app.clickup.com/t/8651091/CHP-3938
+)
+ 
+Issues on build:
+Tasks inbound creation is failing
+Order sub status(This is not fully working)
+Automation report:
+ 
+ 
+Missed in production:
+ 
+
+## MC1 SANITY TESTS
+
+Note: The sanity tests to check will be selected based on the release
+ 
+Feature / Flow
+Validation Details
+Stage
+Prod
+Remarks
+New User Signup (MC1)
+Validated the new user signup flow from MC1 and confirmed account creation, including the LA transfer.
+Validated the new user signup flow from MC1.
+Confirmed account creation in MC1, including the LA transfer.
+MC1 User Invite & Signup
+Validated the user invitation flow from xCRM and CRM2.
+Validated signup completion.
+Validated user access provisioning.
+Upload BOM
+Validated the BOM upload from MC1 and CRM
+Confirmed the uploaded part details in CRM, MC1, and xCRM
+Verified pricing information in CRM and MC1
+Checked sourcing plan details in CRM and MC1
+Ensured no automatic RFQs were generated when uploaded from CRM.
+Upload Excess
+Verified the excess upload from MC1 and CRM.
+Confirmed the visibility of part details in CRM and MC1.
+Manual RFQ
+Validated the creation of RFQs with approved alternatives from MC1.
+Validated the creation of RFQs without approved alternatives from MC1.
+Validated standalone RFQ creation from xCRM.
+Validated RFQ details in the list view.
+Validated data synchronization between MC1, CRM, and xCRM.
+Validated RFQ status updates across systems.
+RFQ Update
+Validated RFQ updates in MC1, CRM, and xCRM.
+Confirmed that an MPN change creates a new request line.
+Verified updated details in the list view.
+Confirmed status updates in CRM and xCRM.
+RFQ – Multiline
+Validated the creation of multiline RFQs
+Ensured data synchronization across systems
+Confirmed the accuracy of list view details
+Verified status updates across CRM and xCRM systems
+Active Quote – Create
+Validated the RFQ and Quote creation flow in CRM.
+Validated standalone quote creation in CRM and xCRM.
+Validated data synchronization across MC1, CRM, and xCRM.
+Validated quote details in the list view.
+Validated status updates across systems.
+Active Quote – Edit
+Validated quote updates across systems.
+Confirmed that an MPN change creates a new quote line.
+Verified updated quote details in the list view.
+Ensured status updates across CRM and xCRM.
+Active Quote – Multiline
+Validated the creation of multiline quotes
+Validated quote details in the list view
+Validated data synchronization across systems
+Validated status updates across CRM and xCRM
+Sales Order – Create
+Validated the RFQ → Quote → Sales Order flow.
+Validated standalone Sales Order creation in both CRM and xCRM.
+Validated RFQ from MC1 and Quote/SO from xCRM.
+Validated data synchronization across MC1, CRM, and xCRM.
+Validated Sales Order details in the list view.
+Validated status updates across systems.
+Sales Order – Edit
+Validated the Sales Order edit functionality.
+Confirmed data synchronization across systems.
+Verified updated details in the list view.
+Ensured status consistency between CRM and xCRM.
+Sales Order – Multiline
+Validated the creation of multiline sales orders.
+Ensured data synchronization across systems.
+Confirmed status updates across CRM and xCRM.
+Quality Control (PO Number)
+Validated the PO number association in MC12. Validated the Quality Control workflow in MC1.
+Invoice Generation
+Validated the invoice generation flow in MC12. Confirmed the accuracy of invoice data in MC1.
+Lead Account & Transfer
+Validated the creation and transfer of leads, ensuring synchronization across MC1, CRM, and xCRM.
+Bids
+Validated bid creation flow
+Validated bid updates
+Validated data synchronization between MC1 and xCRM
+Parts Tracker
+Validated parts tracking functionality
+Ensured data accuracy
+Global Search
+Validated the global search functionality.
+Validated module-level search results for each entity.
+Page Navigations
+Validated navigation across key modules.
+Verified page load and access behavior.
+Edit Project
+Validated the project edit functionality.
+Confirmed data persistence after updates or partial edits.
+Notification Emails
+Validated notification email triggers
+Validated email content
+-
+-
+-
+Download & Upload Templates (BOM/Excess)
+Validated template download
+Validated template upload after data entry
+Concierge Service
+Validated the concierge service workflow
+Sorting
+Validated the sorting functionality across list views.
+Filters
+Validated the filter functionality across all modules.
+Pricing – OEM Secrets
+Confirmed the visibility of OEM pricing retrieval in the UI.
+Pricing – IC
+Verified the visibility of IC pricing fetch in the UI.
+Pricing – xCRM
+Validated the visibility of xCRM pricing fetch in the UI.
+ 
+
+## CRM SANITY TESTS:
+
+Note: The sanity tests to check will be selected based on the release
+ 
+Feature / Flow
+Validation Details
+Stage&Prod
+Remarks
+Create Account
+Validated that account can be created from CRM
+The tabs are accessible for this account 
+yes
+Create BOM (CRM -> XCRM)
+Validated BOM creation in CRM
+Confirmed BOM visibility and details in xCRM
+Verified BOM synchronisation and details in the new CRM.
+yes
+Create RFQ ( CRM -> XCRM)
+Validated RFQ creation in CRM
+Confirmed RFQ visibility and details in xCRM
+Verified RFQ synchronisation and details in CRM.
+yes
+Upload BOM (CRM)
+Validated BOM upload from CRM
+Validated BOM details visibility in MC1 and xCRM
+Validated data consistency across CRM, MC1, and xCRM
+yes
+Page Navigations
+Validated navigation across key modules
+Validated page load and access behaviour
+yes
+Deep Links (Accounts, RFQs, Quotes, Orders)
+Validated deep link navigation for Accounts
+Validated deep link navigation for RFQs
+Validated deep link navigation for Quotes
+Validated deep link navigation for Orders
+yes
+Edit Project
+Validated project edit functionality
+Validated data persistence after updates or partial edits
+yes
+Projects – Price Refresh
+Validated visibility of price details fetched from OEM Secrets, IC source, and xCRM
+yes
+Global Search
+Validated global search functionality
+Validated module-level search results for each entity
+yes
+Filters
+Validated filter functionality across all modules
+yes
+Sorting of Tables
+Validated sorting functionality across list views
+yes
+Download & Upload Templates (BOM/Excess)
+Validated template download2. Validated template upload after data entry
+yes
+Concierge Service
+Validated concierge service workflow
+yes
+Microdashboard Counts
+Validated micro-dashboard counts for each card under available entities
+yes
+Share Project ( from CRM)
+Validated project sharing to MC1 and related scenarios
+yes
+Create Contact (CRM)
+Validated contact creation at different levels from CRM
+Validated sync between CRM ↔ xCRM
+yes
+Invite Contact (CRM)
+Validated contact invitation from CRM
+Validated sync between CRM ↔ xCRM
+yes
+Create Task
+Validated task creation, edit, and related scenarios
+yes
+FAB Icons (All Entities)
+Validated FAB icon visibility across all entities
+yes
+FAB Actions (Note / Activity / Task)
+Validated Note, Activity, and Task actions from FAB icon across applicable entities
+yes
+Light Mode / Dark Mode
+Validated user experience in both light and dark modes
+yes
+Saved Views
+Validated saved views functionality
+yes
+Trips and Visits
+Create and edit a trip and a visit
+yes
+Account permissions
+Old account owner shouldn't be able to access the account after assigning a new account owner.
+yes
+ 
+
+## PURCHASING SANITY TESTS:
+
+ 
+Feature/Flow
+Stage
+Production
+Remarks
+Create RFQ in MC1, check in xcrm and new   CRM
+Yes
+Verify RFQ creation, data sync between systems
+Create Sourcing Request from RFQ
+Yes
+Check SR links to RFQ correctly, all fields populated
+Add Offers to Sourcing Request
+Yes
+Verify multiple offers can be added, supplier info captured
+Update SR Status: Offers Requested
+Yes
+Check status transitions, visibility to purchasing team
+Update SR Status: Receiving Offers
+Yes
+Verify status updates as offers come in
+Update SR Status: Offers Gathered
+Yes
+Check final status, target price achievement indicator
+Create Quote from specific Offer
+Yes
+Verify Quote-Offer connection, price carries over
+Create Quote with multiple lines   (different prices/quantities)
+Yes
+Test multiple quote line creation, customer can select one
+Create Sales Order from Quote
+Yes
+Verify SO carries SR and Offer references
+Create Sales Order without SR (direct   quote)
+Yes
+Test SO creation for direct quotes, add SR later
+Create Sales Order from Market Offers (no   SR)
+Yes
+Verify market offer quote functionality
+Admin approval of Sales Order
+Yes
+Check approval checkboxes, workflow triggers
+Update SR Status to Request for Purchase   from SO
+Yes
+Verify status change triggers purchasing workflow
+Create Purchase Order from Offer (not   from SR)
+Yes
+Critical: PO must be created from OFFER with supplier info
+Auto-create Stock entry when PO created
+Yes
+Stock status should be ordered, linked to PO
+Auto-create PO line allocation to Stock
+Yes
+Verify allocation established automatically
+Auto-create SO line allocation to Stock
+Yes
+Verify all three connections: PO-Stock-SO
+Create Receiving Lines with multiple date   codes
+Yes
+Test receiving batch 1 (500 units), batch 2 (500 units) separately
+Create Receiving Lines with lot codes
+Yes
+Verify lot code capture for QC tracking
+QC Status Flow: Arrived > QC Started   > Tested > Received
+Yes
+Check all status transitions, QC report creation
+QC Pass/Fail status in Receiving Line
+Yes
+Verify test results affect allocation and shipping
+Split Allocations when received qty   differs from ordered
+Yes
+Test 1000 ordered, 700+300 received, allocation splits
+Split Stock Line when receiving in   batches
+Yes
+Verify stock line splits with different date codes
+Update SO Allocations after split
+Yes
+Check allocation info includes receiving line ID, date code
+Allocate existing warehouse Stock   directly to SO
+Yes
+Test direct allocation for in-stock items (skip PO)
+SO status: Ready to Ship (when stock   allocated)
+Yes
+Verify SO jumps to Ready to Ship status
+Combine multiple RFQs into single   Sourcing Request
+Yes
+Test combining 3 RFQs (500+500+500) for economies of scale
+Purchasing decides allocation when   supplier has shortage
+Yes
+Test: 1500 ordered, supplier has 500, purchasing allocates
+Create partial Shipping Line
+Yes
+Test shipping 700 units, hold 300 pending
+Create full Shipping Line when all   quantity received
+Yes
+Test complete shipment after all batches received
+SO Status: Partial Shipped
+Yes
+Verify status shows partial fulfillment
+Auto-create Invoice when Shipping Line   created
+Yes
+Check invoice amount, prepayment deduction
+Multiple Invoices for same SO (one per   shipment)
+Yes
+Test invoice creation for partial and final shipments
+Re-QC for Stock older than 1 year
+Yes
+Flag old stock, create new QC report, array of reports
+Gross Profit calculation with landing   cost
+Yes
+Verify margin calc: sales price - landed cost
+Switch offer if original not available at   PO creation
+Yes
+Test: preferred offer unavailable, select alternative
+Page Navigation: RFQ > SR > Quote   > SO > PO
+Yes
+Test navigation between entities
+Deep links for RFQ, Sourcing Request,   Quote, Sales Order, Purchase Order
+Yes
+Verify deep links work correctly
+Global Search for Purchasing entities
+Yes
+Test search RFQ, SR, Quote, SO, PO
+Filters on Purchasing lists (RFQ, SR,   Quote, SO, PO)
+Yes
+Test filtering by status, customer, date range
+Sorting of Purchasing tables
+Yes
+Test sort by date, amount, status, supplier
+Page Search within Purchasing pages
+Yes
+Test find within page (Ctrl+F equivalent)
+Download PO and Sourcing Request details
+Yes
+Test export to PDF/Excel
+Upload documents to Receiving Line (QC   reports, images)
+Yes
+Test document upload and attachment
+Image sequencing for QC Report PDF   generation
+Yes
+Test reordering images, PDF generation
+Data Migration: Legacy PR to SR (Request   for Purchase status)
+Yes
+Verify PR mapped correctly to SR
+Sourcing Request reference carried to   Sales Order
+Yes
+Critical: SO must always link back to SR
+Offer reference in Quote carried to Sales   Order
+Yes
+Test quote-offer-SO connection

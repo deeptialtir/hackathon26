@@ -1,0 +1,54 @@
+# 20-NOV24-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+@Deepti Vaidyula
+ 
+DB changes
+ : No changes
+Branch
+  :
+fn-connect
+ : hotfx/2024.11.20
+Components Involved
+ 
+& Artefacts
+:
+fn-connect                
+: hotfix-2024.11.20.0
+ 
+
+## WHAT'S FIXED FOR THE HOTFIX?
+
+Private (
+https://app.clickup.com/t/8651091/CHP-1158
+)
+
+## TESTING NOTES
+
+Create RFQs from linked accounts and should be successful
+Login to MC1 with a user who is already linked to an account (e.g., 
+altir.stage.us01@yopmail.com
+).
+Navigate to the 
+Dashboard
+ and click on 
+"Request a Quote"
+.
+Go to 
+Quotes -> Request Quotes
+.
+Check if the 
+requirement ID
+ is obtained from CRM and updated in the 
+Quote ID
+ field.
+Login as another user from same account and verify if this request can be seen
+Switch the account to another region and verify this request can't be seen
+Smoke tests
+page navigation
+upload bom and check projects, pricing, source pricing etc
+check all the left side menu tabs
+search
+parts-tracker

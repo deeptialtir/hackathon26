@@ -1,0 +1,406 @@
+Area,Title,Description,Priority,Status,Assigned To,Change,QE comments,Type,Target Date,Created by,Created on,Canny 2
+Part Sourcing,Sourcing Requests,Bug in SR (Canny Link),P1,In Review,Phani Yedidi,,,Purchasing,"May 22, 2026",Dipak Majhi,"May 12, 2026",false
+General,xCRM user sync,"When records are syncing from Apex to xCRM, it is showing as MC1 user. Instead it should be the name of the real user, especially for RFQ, SOs etc.
+
+Srinidhi Gundimi - RFQ, Quote, SO (All Done)
+
+Nikhil Kumar Singh - PO (Done), Stock(Done)
+
+Aditya Jain - Offers(Done) 
+
+Tejaswini Allagadda - Invoice (Done)
+
+
+
+Also take out HOTPART tag from RFQ on xCRM.",P0,On Production,"Pranab Dutta,Srinidhi Gundimi,Aditya Jain,Tejaswini Allagadda,Nikhil Kumar Singh",Sync,"[Pranab 17/04] Zohaib confirmed that the HOTPART tag is removed from xcrm 
+
+[Pranab, 20/4] Zohaib to confirm the xcrm attribute mappings for createdBy, updatedBy attribute in Apex for different entities.
+
+
+
+[QE comments, 11/05]:  Seeing ""isHotPart"": false in Apex response for RFQ
+
+Under RFQ, in xcrm for createdBy seeing Mc1 user, and for updatedBy seeing aroosn1 mapping.
+
+https://chip1.xchangecrm.com/web/requirements/cusreq/update?ID=3577131&REQ_CODE_=0&COMPANY_CODE_=4
+
+
+
+SO : Sales Person seeing Aroos instead of Abhinay user
+
+Updated By  - seeing as A A - Blocked
+
+
+
+","Sales,Purchasing","Mar 25, 2026",Sai Nagboth,"Mar 23, 2026",false
+General,User ID reconciliation,Ideally we should try to map the user to region+userid so it gets mapped to the right user on crm side.,P2,Dev Ready,Pranab Dutta,Sync,,"Sales,Purchasing",,Pranab Dutta,"Apr 20, 2026",false
+General,Tasks Improvements,"Make following improvements to tasks
+
+1. In all transactions where create task is there do not make assignee read only. Currently in account it is that way. <DONE> 
+2. When showing the list of users if the user is of type group, please show members of that group on hover type of message. This can be extended to all places where we show user list if we are doing common component.",P0,In progress,"Krupa Panchal,Tejaswini Allagadda","UI,BE","tried in offer detail task creation, couldnt see any such hover text","Sales,Purchasing","May 21, 2026",Sai Nagboth,"Mar 25, 2026",false
+General,Sourcing Analysis,"Allow to email by hovering over an account in the sourcing screen, specially important for API pulled ones.
+
+Canny Item
+
+
+
+This would be essentially requesting an offer for a Vendor. I am thinking this can be done from offer info pane? or should it be done from account?
+
+",,To be Defined,Dipak Majhi,,,Purchasing,,Phani Yedidi,"Mar 26, 2026",
+General,Offers,"There are a few data carry forward issues (high priority) reported by QE team:
+
+ 
+
+Record an Offer
+
+ExpiresOn - Not carried forward from RFQ❌
+
+Country of Origin - Not carried forward from Request offer❌",P0,Ready for Test,"Tejaswini Allagadda,Alexey Duduk,Vinay Bajjuri,Shivananda Sai",BE,,Purchasing,"May 21, 2026",Sai Nagboth,"Mar 26, 2026",false
+General,"Part attributes sync (RFQ, SO and PO, Stock)","Can we ask xCRM to consider matching these values based on what is sent from Apex? If a match not found they create a new one based on the text?
+
+1. MFG
+2. Package
+3. ROHS
+4. Product
+
+
+
+SR, PO and Stock needs to be done.",P0,In progress,Nikhil Kumar Singh,Sync,"[Pranab 04/05] - Done for RFQ, SO.",Purchasing,"May 22, 2026",Sai Nagboth,"Apr 1, 2026",false
+Shipments - Lists,Inbound Shipments,"Need an ability to extend current shipments to capture inbound as well. Have written this up in Clickup ticket -CHP-5580
+
+",P0,On Production,Sheikh Habib,BE,,Purchasing,,Sai Nagboth,"Mar 28, 2026",false
+Shipments - Lists,,,,,,,,Purchasing,,Phani Yedidi,"Apr 22, 2026",false
+Offers,Offer Matching,Implement offer matching as defined in CHP-5487,P1,On Production,Andrey Kuznetcov,BE,BE is ready. UI integration is needed.,Purchasing,,Sai Nagboth,"Mar 3, 2026",false
+Offers,"Offer - alternate MP
+N’s","When an offer is captured for an alternate MPN (not the one on the SR), the system should indicate this clearly. Proposed: checkbox to mark offer as ""alternative,"" then pre-populate the primary MPN (read-only) and treat the entered MPN as alternate",P1,To be Defined,Phani Yedidi,"BE,UI",,Purchasing,"May 28, 2026",Phani Yedidi,"May 19, 2026",false
+Offers,Supplier visibility,"Buyers can't see supplier names including Brokers, FDs, OCM - they only see supplier name from the offer they entered",P0,On Production,Phani Yedidi,,,Purchasing,,Phani Yedidi,"May 5, 2026",false
+Offers,,,,,,,,Purchasing,,Phani Yedidi,"May 5, 2026",false
+Offers,Offer gaps on attributes,Reconcile offer attribute mapping between xCRM and Apex across various scenarios,P1,Ready for Test,Aditya Jain,BE,"QE comments : ROHS,COO is not displayed as expected in xcrm.",Purchasing,,Sai Nagboth,"Mar 10, 2026",false
+Offers,Request & Record offers,Visual treatment : We need to highlight any MPN other than the one mentioned on the SR if there is a difference.,P0,Ready for Test,Arvind Dhakar,UI,,Purchasing,,Phani Yedidi,"May 18, 2026",false
+Offers,Offer improvements,"* Set the default expiry to two weeks. On creation always calculate 2 weeks from the day and show it as the expiry date. 
+* Should rename the ""sourcing offer"" to ""Sourced Offer""
+* Currently inside the offer details for market offers we are showing label as ""market offer type"" > should be renamed to ""Offer type""
+* We need to bring a micro dashboard cards on offers page to show case various type of offers and the data associated to the type. Andrey need your help here on monday. ",P1,Ready for Test,Arvind Dhakar,"BE,UI",,Purchasing,"May 19, 2026",Phani Yedidi,"May 18, 2026",false
+Offers,,Currency mismatch on offers entity,P0,Reopened,Deepti Vaidyula,UI,28/03: Still persists: https://crm.stage.chip1.info/purchasing/sourcing-requests/69c7c8bfa50286093d641f68/offers,Purchasing,,Phani Yedidi,"Mar 26, 2026",false
+Offers,Record offer,"Record a Response
+The Part information details in Record a Response should follow the Part details structure that we have in Sourcing Request.
+When I am editing an offer, Country of Origin, Supplier Package Quantity, Freight Costs, and Misc Costs are not getting saved. See here",P0,On Production,Arvind Dhakar,UI,"28/03: The Part information details in Record a Response should follow the Part details structure that we have in Sourcing Request. — not yet deployed
+
+28/03: Edit offer is working",Purchasing,"Mar 27, 2026",Phani Yedidi,"Mar 26, 2026",false
+Offers,Offers Microdashboard,"Add following cards for micro dashboards. 
+
+1. Open Market - Type “Open Market” and not isClosed
+2. Sourced Offers - Type “Sourcing Offer” and not isClosed
+3. Excess - Type “Excess” and not isClosed
+4. Franchie Stock -  Type “Franchie Stock” and not isClosed
+5. Broker Stock - Type “Broker Stock” and not isClosed
+6. Recently Expired - Anything that is isClosed and expiry date > t - 30 days. Basically those expired in last 30 days.",P1,In progress,Andrey Kuznetcov,BE,,Purchasing,"May 20, 2026",Sai Nagboth,"Mar 10, 2026",false
+Offers,Offer Request - Email,"Extend the ability to send offer emails from the system with following
+
+1. Allow option to send email from the user sending vs. standard email.
+2. Allow option to include cc emails and bcc emails.
+3. Allow ability for user to see the template of email as a next step in UI and send it based on the final template selected. 
+
+Bugs reported : 
+
+Target price not coming in the email - reported by Om / Demos in Germany 
+
+Notes added not coming in the email - reported by Om",P1,Reopened,Aditya Jain,BE,"Not able to send email in production, There is no such screen of email in production",Purchasing,"Mar 27, 2026",Sai Nagboth,"Mar 23, 2026",false
+Offers,,,,Reopened,,,,Purchasing,,Phani Yedidi,"May 18, 2026",false
+Offers,,need to take out the offers received status on update status line action when the status is offers requested/awaiting response. We already have it via record response. That’s failing and serving no purpose,P0,Ready for Test,Arvind Dhakar,,,Purchasing,,Phani Yedidi,"May 18, 2026",false
+Offers,,Contacts confirmed in an account are not appearing in the offer request contact search. Duplicate error blocks any workaround entirely.,P1,Dev Ready,"Aditya Jain,Arvind Dhakar,Phani Yedidi","BE,UI",,Purchasing,"May 22, 2026",Aditya Jain,"Apr 20, 2026",false
+Offers,"Market offers ","On the market offers list view , can you please have this pattern of showing ""-"" for those offers that doesn't have price ",P0,On Production,Arvind Dhakar,UI,Can’t see “-” icon under market offer list view when price is not available in stage env,Purchasing,,Phani Yedidi,"Apr 22, 2026",false
+Offers,,Allow multiple people to be selected on Request for offer CC,P0,On Production,"Arvind Dhakar,Aditya Jain",,,Purchasing,,Phani Yedidi,"Apr 22, 2026",false
+Offers,"Labels ","Add ""Blank Labels"" to the label preferences options on Offer edit & Record offer — currently only showing  Black, Partial and Missing, not Blank",P0,On Production,"Arvind Dhakar,Aditya Jain","UI,BE",,Purchasing,,Phani Yedidi,"Apr 9, 2026",false
+Offers,ROHS Field changes,"RoHS field on Offer should be updated to match the new Apex RoHS field ",P0,Waiting on BE changes,"Arvind Dhakar,Aditya Jain","BE,UI",,Purchasing,"May 22, 2026",Phani Yedidi,"Apr 9, 2026",false
+Offers,"Offer currency sync issue ","Offers created on XCRM dont have a fund code causing Apex to consider the region while setting the currency. 
+User reported that the offer created on XCRM has the currency of USD and when synced in Apex is defaulted to Euro basis the region ",P0,In progress,Aditya Jain,BE,,Purchasing,"May 22, 2026",Phani Yedidi,"May 21, 2026",false
+Offers,Offer type,Open market offers with RFQ connection appearing in SR-specific offers tab - add default filter to show sourcing offers only,P0,On Production,Arvind Dhakar,UI,"28/03: ‘Sourcing Offer’ is missing from https://crm.stage.chip1.info/purchasing/offers/market → Filters → Offer Type
+
+
+
+Arvind: It is expected cc Phani Yedidi ",Purchasing,,Phani Yedidi,"Mar 28, 2026",false
+Offers,PO creation from Offers & SR,"For some offers, the date code and other data that should come from the Sourcing Request are missing. 
+if some data is missing on offers but available on SR we should allow user to copy it on PO creation form ",P0,Reopened,Arvind Dhakar,UI,"04/05: not working as expected(rohs,ExpiresOn,COO), for eg: https://crm.chip1.com/purchasing/sourcing-requests/69cb484c087c3a419e91f9b8/offers",Purchasing,"May 20, 2026",Phani Yedidi,"Mar 20, 2026",false
+Offers,,,,,Arvind Dhakar,,,Purchasing,,Phani Yedidi,"May 20, 2026",false
+Offers,,"Add a 'Primary MPN' reference field on offers ",P2,To be Defined,Sai Nagboth,,,Purchasing,,Phani Yedidi,"Mar 25, 2026",false
+Offers,,"Show matching sourcing requests directly on the Offer page (display all matching open SRs) - SR creation patter & optional information  ",P2,To be Defined,Phani Yedidi,,,Purchasing,,Phani Yedidi,"Mar 25, 2026",false
+Offers,,"When a buyer records an offer, allow 'Notify History' to auto-send email - notification to past sales customers who requested that part ",P2,To be Defined,Phani Yedidi,,,Purchasing,,Phani Yedidi,"Mar 26, 2026",false
+Offers,,Default Contact Per Account for Offer Request (Missing Feature) — No way to set a default purchasing contact on an account. Users must scroll through all contacts every time,P2,Dev Ready,Phani Yedidi,,,Purchasing,"May 25, 2026",Phani Yedidi,"Apr 22, 2026",false
+Offers,Request Offer,"1. Supplier Account Not Found in Offer Request Search (Bug) — Accounts like Top IC and C.H. Global exist in Apex but don't appear in the supplier search on the offer request screen.
+2. Contact Not Found in Offer Request (Bug) — Contacts confirmed in an account are not appearing in the offer request contact search. Duplicate error blocks any workaround entirely.",P1,Dev Ready,"Srinivas Sanka,Nagababu Guddati",Data,,Purchasing,"May 22, 2026",Phani Yedidi,"Apr 22, 2026",false
+Offers,Offer type rename,Change the name of “Sourcing Offer” to “Sourced for RFQ”,P1,May not be Needed,Phani Yedidi,BE,,Purchasing,,Phani Yedidi,"Apr 20, 2026",false
+Offers,,"Redesign offer request form layout — two-line row per supplier, show location.",P1,In Review,Phani Yedidi,UI,,Purchasing,"May 22, 2026",Phani Yedidi,"Apr 6, 2026",false
+Offers,Offer sync with xcrm,"Sourcing offers are not getting synced to xCRM as the user is mapped to multiple users in entity id mapping table. In this case, consider the first user and proceed forward with the sync.",P0,On Production,Aditya Jain,Sync,,Purchasing,"Apr 17, 2026",Sai Nagboth,"Apr 16, 2026",false
+Offers,,,,,Aditya Jain,,,Purchasing,,Aditya Jain,"May 21, 2026",false
+Offers,,"VRFQ sent emails should appear in buyer's Outlook (shared mailbox/folder approach) ",P2,To be Defined,Sai Nagboth,,,Purchasing,,Phani Yedidi,"Mar 26, 2026",false
+"Purchase Order ",SR details,"Have SR’s tab in the PO lines ",P1,On Production,Phani Yedidi,,,Purchasing,,Phani Yedidi,"Mar 12, 2026",false
+"Purchase Order ","PO status ",trigger the PO doc and also Email - to have email integration (Connected to the Send email - user action),P1,On Production,Sheikh Habib,"BE,UI",,Purchasing,,Phani Yedidi,"Mar 12, 2026",false
+"Purchase Order ",PO lines > List,"script to mark old ""Inspected Passed"" PO lines as isClosed",P1,In progress,Pranab Dutta,,,Purchasing,"May 21, 2026",Abhinay Sharma,"Mar 27, 2026",false
+"Purchase Order ",PO sync,Validate payment terms mapping for supplier fields — confirm correctly mapped and syncing,P0,On Production,Nikhil Kumar Singh,,,Purchasing,,Deepti Vaidyula,"Mar 28, 2026",false
+"Purchase Order ",PO sync,Validate account number mapping for supplier fields — confirm correctly mapped and syncing,P0,On Production,Nikhil Kumar Singh,,not working,Purchasing,,Phani Yedidi,"Apr 6, 2026",false
+"Purchase Order ",Buyer permissions,Regular buyer should not see approval options on PO - Lock line allowing them to see,P1,Dev Ready,Andrey Kuznetcov,,,Purchasing,"May 21, 2026",Phani Yedidi,"Apr 6, 2026",false
+"Purchase Order ",Buyer permissions,Regular buyer is not seeing Sales Order on PO,P0,Reopened,Andrey Kuznetcov,,"I tried with Vera Hu for PO, can see so on accordian but not inside",Purchasing,"May 21, 2026",Phani Yedidi,"Apr 6, 2026",false
+"Purchase Order ",Fields,"We need to handle ROHS the way it is handled on SO line today across all the entities on Purchasing ",P0,Waiting on BE changes,Krupa Panchal,"BE,UI",,Purchasing,"May 22, 2026",Phani Yedidi,"Apr 6, 2026",false
+"Purchase Order ",Fields / sync,"Introduce Tax on PO — two attributes needed on BE: taxValue and actualTaxRate. actualTaxRate same as current tax. Add ""Custom"" option in tax dropdown — when selected, populate actualTaxRate. Tax always calculated based on actualTaxRate.",P0,On Production,Nikhil Kumar Singh,,,Purchasing,,Phani Yedidi,"Apr 6, 2026",false
+"Purchase Order ","Stock specific changes ","For Stock when ""Spec Buy"" is selected, introduce ""Requested By"" and ""Comments"" fields — map to Salesperson and Comments on XCRM. Show only when specific values are selected.",P2,To be Defined,"Krupa Panchal,Phani Yedidi",,,Purchasing,,Phani Yedidi,"Apr 6, 2026",false
+"Purchase Order ",field changes,"Record payment modal — rename to ""Payment"" vs ""Pre-payment"". Align with payment info on PO.",P1,On Production,Krupa Panchal,,,Purchasing,,Phani Yedidi,"Apr 6, 2026",false
+"Purchase Order ","Inbound shipments ","Inbound shipments UI ",P0,On Production,Krupa Panchal,,,Purchasing,,Phani Yedidi,"Apr 9, 2026",false
+"Purchase Order ","Field changes ",Make date code optional in the receiving flow. Ensure user can continue without entering it. Keep available for later completion.,P0,On Production,Krupa Panchal,,,Purchasing,,Phani Yedidi,"Apr 9, 2026",false
+"Purchase Order ",Product category,Show category of product on PO,P1,In progress,Krupa Panchal,"BE,UI",,Purchasing,"May 22, 2026",Phani Yedidi,"Apr 6, 2026",false
+"Purchase Order ",,"Expand Send Email to a wider modal similar to Share — include: (1) Subject line, (2) CC line with ability to add multiple emails and region-specific default CC emails (e.g. US purchasing team always in CC), (3) Option to attach PDF",P1,On Production,"Aditya Jain,Arvind Dhakar",,,Purchasing,,Phani Yedidi,"Apr 6, 2026",false
+"Purchase Order ","PO - Payments ",Should be able to record multiple payments on PO (BE already supports it),P0,On Production,Arvind Dhakar,,,Purchasing,,Phani Yedidi,"Apr 15, 2026",false
+"Purchase Order ",PO costs,"Switch Freight+misc+bank charges to PO level in PO create modal, introduce bank charges as new field
+remove freight+misc charges from PO line details
+remove freight+misc charges in attach PO modal
+introduce tax amount field in PO detail cost summary section",P0,On Production,"Phani Yedidi,Arvind Dhakar",,,Purchasing,,Phani Yedidi,"Apr 15, 2026",false
+"Purchase Order ","PO ",Copy supplier vendor code and internal supplier code into PO.,P1,Dev Ready,Nikhil Kumar Singh,BE,,Purchasing,"May 20, 2026",Phani Yedidi,"Apr 7, 2026",false
+"Purchase Order ",PO Details,Add supplier country into the supplier information section if it is not currently shown,P0,On Production,Arvind Dhakar,,,Purchasing,,Phani Yedidi,"Apr 7, 2026",false
+"Purchase Order ",PO PDF,Ensure sender country and related values appear correctly in the PO PDF as well.,P0,On Production,251747,,Some values are not appearing for eg: image.png,Purchasing,,Phani Yedidi,"Apr 7, 2026",false
+"Purchase Order ",ROHS field,Use the corrected ROHS model on PO lines as well.,P0,Waiting on BE changes,"Arvind Dhakar,Aditya Jain",UI,,Purchasing,"May 22, 2026",Phani Yedidi,"Apr 7, 2026",false
+"Purchase Order ",PO ID linking,The PO detail area appears to show IDs awkwardly and includes a dead link pattern.,P0,On Production,Arvind Dhakar,,,Purchasing,,Phani Yedidi,"Apr 7, 2026",false
+"Purchase Order ",,Bug : Fix partial flag not propagating to PO line level,P0,On Production,"Sheikh Habib,Sandeep Thatikonda,Umamahesh Mutyala",,,Purchasing,,Phani Yedidi,"Apr 6, 2026",false
+"Purchase Order ",,"Buyers KPI logic and stock deal ",P1,To be Defined,Phani Yedidi,"BE,UI",,Purchasing,"May 22, 2026",Phani Yedidi,"Apr 6, 2026",false
+"Purchase Order ",,"Purchase Order
+
+* Similar to above, RoHS, HTSUSA, Black Labels, Partial reels and Tubes and Dual Use are missing even though information exists in RFQ/Order. 
+* Similar to what we have in orders, can we also display the ID Type and ID value here. We can standardise. ",P0,On Production,Arvind Dhakar,UI,,Purchasing,"Mar 27, 2026",Phani Yedidi,"Mar 26, 2026",false
+"Purchase Order ",PO ID clickability,Link the main PO ID — currently the PO ID on the PO detail page is a dead link; make it a clickable link,P0,On Production,Arvind Dhakar,,,Purchasing,,Phani Yedidi,"Apr 9, 2026",false
+"Purchase Order ",Account hero card,Bring account specifc hero cards as that of SO on PO too,P0,In progress,Arvind Dhakar,UI,,Purchasing,"May 20, 2026",Phani Yedidi,"Apr 9, 2026",false
+"Purchase Order ",Tracking number,Tracking number is being entered but is not surfacing anywhere in the UI; needs to be displayed on the PO line.,P0,On Production,Krupa Panchal,,,Purchasing,,Phani Yedidi,"Mar 26, 2026",false
+"Purchase Order ",,Closed flag similar to other entities on all list views for PO and PO line,P0,Ready for Test,Phani Yedidi,,,Purchasing,,Phani Yedidi,"Mar 26, 2026",false
+"Purchase Order ",manual allocation,Ability to manually allocate a PO to an SO from within the PO,P1,In progress,"Krupa Panchal,Sheikh Habib","BE,UI",,Purchasing,"May 22, 2026",Phani Yedidi,"Mar 26, 2026",false
+"Purchase Order ",Allocation Gaps,"When we edit quantity of PO line:
+
+1. Related Stock Line still shows old On Order and Allocated quantities.
+2. PO line allocation is not updating to the new quantity.
+3. Procured quantity on the related Sourcing Request is not updating correctly.
+4. Sales Order shows allocation as Complete instead of Partial, and allocated vs available counts are not shown.",P0,Dev Ready,Sheikh Habib,BE,,Purchasing,"May 20, 2026",Umamahesh Mutyala,"Apr 22, 2026",false
+"Purchase Order ",Cancel PO line Gaps,"When we cancel PO line:
+
+1. Cost of the cancelled line is still included in total PO costs; it should be excluded.
+2. Downloaded PO document does not reflect the latest updated costs.
+3. Cancelled PO line Stock Lines are still visible on the Sales Order and available for allocation; cancelled Stock Lines should not be shown (e.g., 69e8b0cf49a531315ed024de).",P0,Dev Ready,Sheikh Habib,BE,,Purchasing,"May 20, 2026",Umamahesh Mutyala,"Apr 22, 2026",false
+"Purchase Order ",PO sync for warehouse field,"Warehouse was changed to Langen on Xcrm despite choosing Arlington in Apex.
+
+some PO has mismatch of warehouse between apex and xcrm, for eg Xcrm, Apex",P0,In progress,Nikhil Kumar Singh,BE,,Purchasing,"May 20, 2026",Umamahesh Mutyala,"Apr 22, 2026",false
+"Purchase Order ",sub status of PO line,We need another status on POs / Confirmed and waiting fro confirmation,P1,May not be Needed,Phani Yedidi,,,Purchasing,,Umamahesh Mutyala,"Apr 22, 2026",false
+"Purchase Order ",PO approval notification,need to send approval notification on PO to the buyer once it is approved by the purchasing manager,P0,On Production,"Nikhil Kumar Singh,Pranab Dutta",,,Purchasing,,Phani Yedidi,"Apr 23, 2026",false
+"Purchase Order ",,PO line - Ship via - Account number update not possible. Please check,P1,On Production,Krupa Panchal,UI,,Purchasing,,Phani Yedidi,"Apr 23, 2026",false
+"Purchase Order ",,"1. PO email
+  1. cc default email. For all emails have a config to define default cc’s",P2,To be Defined,Phani Yedidi,"BE,Other",,Purchasing,,Phani Yedidi,"Apr 23, 2026",false
+"Purchase Order ",Supplier accounts,"Supplier data groups
+
+1. create separate data group for OEM/CM accounts. These can be seen only by managers and buyers on the account
+2. create separate data groups for regular supplier accounts. these can be seen by everyone.",P0,In Review,Sandeep Thatikonda,,,Purchasing,"May 19, 2026",Phani Yedidi,"Apr 20, 2026",false
+"Purchase Order ",PO email,cc default email. For all emails have a config to define default cc’s,P2,To be Defined,,,,Purchasing,,Phani Yedidi,"Apr 20, 2026",false
+"Purchase Order ",PO Sync validations,Validate PO sync items and fix. Issues identified are in CHP-5578,P0,On Production,Pranab Dutta,Sync,,Purchasing,,Sai Nagboth,"Mar 11, 2026",false
+"Purchase Order ",Attach PO - Add Allocation,We should restrict the stock allocation when the pending quantity is 0 on the SR,P0,On Production,Arvind Dhakar,,,Purchasing,,Phani Yedidi,"Apr 30, 2026",false
+"Purchase Order ",Allocation sync,"Fix stock update not reflecting allocation on both SR and SO — allocated SRs still showing in Open PRs, procured quantity not moving to Procured column, and SO not reflecting the allocation status either.",P0,In progress,"Pranab Dutta,Nikhil Kumar Singh",BE,,Purchasing,"May 20, 2026",Phani Yedidi,"Apr 30, 2026",false
+"Purchase Order ",PO connection missing. Allocation sync,Fix PO created in XCRM not linking to the corresponding SR in Apex (PO→SR connection ) -,P0,In progress,Pranab Dutta,BE,,Purchasing,"May 21, 2026",Phani Yedidi,"Apr 30, 2026",false
+"Purchase Order ",Attach PO,"Change the backend logic to update qty as per the formular of  (in stock + on order) - (allocated + reserved). ",P0,On Production,Sheikh Habib,,,Purchasing,,Phani Yedidi,"Apr 30, 2026",false
+"Purchase Order ",Attach PO,"When UI is calling stock API with qty >0, just apply that filter, do not include on order
+
+
+
+Need to clean up historical data.
+",P0,On Production,Sheikh Habib,BE,,Purchasing,,Phani Yedidi,"Apr 30, 2026",false
+"Purchase Order ",PO and PO line,"Shipping Account number couldn't be updated on PO and PO line ",P0,On Production,Sheikh Habib,BE,,Purchasing,,Phani Yedidi,"Apr 30, 2026",false
+"Purchase Order ",Attach PO,Make sure we do not let user do an empty search with MPN field. Indicate in the field name that it is MPN Search.,P0,On Production,Arvind Dhakar,,,Purchasing,,Phani Yedidi,"Apr 30, 2026",false
+"Purchase Order ",Attach PO,"Include a field for PO search or if the search supports both, then we can call it Stock Search.",P0,On Production,Arvind Dhakar,UI,"Search supports both PO and MPN. Since “Stock Search” is ambiguous, It’s renamed to “Search by MPN or PO Number”",Purchasing,,Phani Yedidi,"Apr 30, 2026",false
+"Purchase Order ",PO cancellation sync,"The xcrm should validate the PO sync API for support of the cancel operations - Zohaib
+
+BE & Connect changes for PO cancellation sync",P0,On Production,"Sheikh Habib,Nikhil Kumar Singh",Sync,"Zohaib - xcrm changes are ready
+
+[Pranab, 20/4] BE changes are done by Habib
+
+[Pranab, 04/05] Connect change is also done. E2E testing is pending.
+
+[Pranab, 19/05] E2E testing is completed.
+
+",Purchasing,"Apr 22, 2026",Pranab Dutta,"Apr 17, 2026",false
+Sourcing Request,SR - Micro Dasboard,"Few tweaks to micro dashboard. And also change in sequence. the message after - please add it as a hover text for MD.
+
+1. Open SRs - Sourcing Requests Not Assigned
+  1. The current Open definition
+2. Assigned SRs - Sourcing Requests Assigned and in “Offers Requested”, “Offers Received” and “Sourcing Completed”
+3. In Progress SRs - Sourcing Requests with offers
+  1. The current definition of “In Sourcing”, basically any SR in Offers Received or Offers Requested Status 
+4. Completed SRs - Sourcing Requests that are quoted
+  1. SR in Sourcing Completed status (offers gathered)
+5. Open PRs- New Purchase requests 
+  1. SR in Purchase Requested status and no assigned to Buyer
+6. Assigend PRs - Assigned Purchase requests 
+  1. The current definition of assigned. SR in Purchase Requested status and PO Created status and buyer assigned
+7. Completed PRs - Requests that have PO created
+  1. SRs in PO Created status",P1,Dev Completed,Andrey Kuznetcov,"BE,UI",Not seeing this order in stage,Purchasing,"Mar 26, 2026",Sai Nagboth,"Mar 23, 2026",false
+Sourcing Request,"SR micro dashboard changes ","New - PR created, not yet assigned, less than 48 hours old
+
+Assigned - assigned to a buyer
+
+Backordered - created more than 48 hours ago and not yet in a completed/PO-created status
+
+On Hold -  tagged as on hold
+
+Completed -  completed",P0,In Testing,"Andrey Kuznetcov,Arvind Dhakar","BE,UI",,Purchasing,"May 20, 2026",Phani Yedidi,"May 19, 2026",false
+Sourcing Request,Label mismatch / notification,"In some cases, label/black label information on the SO is not matching the SR. Suspected cause: SO updated after SR was created, update not propagated to SR. Proposed fix: auto-update SR when SO label info changes, and trigger a notification.",P1,Dev Ready,"Arvind Dhakar,Nikhil Kumar Singh","UI,BE",,Purchasing,"May 25, 2026",Phani Yedidi,"May 19, 2026",false
+Sourcing Request,,,,,,,,Purchasing,,Phani Yedidi,"May 19, 2026",false
+Sourcing Request,Add allocation,"UI not filtering to only ""available"" stock lines — it is passing all lines",P0,Ready for Test,Arvind Dhakar,UI,,Purchasing,"May 21, 2026",Phani Yedidi,"May 19, 2026",false
+Sourcing Request,SR - Quoted,"Purchasing team would like to know that the RFQ connected to an SR is quoted. As they don’t have visibility to the RFQ, they would want this to come up via SR.
+Upon RFQ being quoted, for the connected SR update the sub status to “Quoted”. Ideally the main status should be Offers Received or Sourcing Completed. We dont need to touch the main status.
+We can also carry an extra attribute to indicate this in SR, can be later used for analytics.",P2,To be Defined,Phani Yedidi,BE,,Purchasing,"May 26, 2026",Sai Nagboth,"Mar 23, 2026",false
+Sourcing Request,,Offer counts are off on Status progression bar of SR,P1,On Production,,,,Purchasing,,Phani Yedidi,"Mar 26, 2026",false
+Sourcing Request,SR list view,Only managers should be able to remove assigned buyers from tasks – permissions,P1,Dev Ready,"Sandeep Thatikonda,Andrey Kuznetcov",BE,,Purchasing,"May 21, 2026",Phani Yedidi,"Mar 26, 2026",false
+Sourcing Request,SR  & RFQ - Data groups and IDs,"RFQ - YET TO BE DEPLOYED
+
+1. Add data groups of the account
+2. Add default/primary data group of the sales person
+
+Sourcing Request - Deployed to Stage (points #1 to #5)
+
+Please ensure the data group assignment, region and ID logic is aligned to this 
+
+1. SR should have the region selected based on the sales person associated with the RFQ or SO being created.
+2. Based on the region assign the default data groups of the region.
+3. Assign the data groups of the RFQ and/or SO
+4. When SR is associate with an SO later, assign the data groups from SO. Only append.
+5. ID should be generated based on the region as per above.
+6. SalesPerson data group should not be added.(After above RFQ changes are done) YET TO BE DEPLOYED
+
+Offer - Deployed to Stage
+
+1. If offer is associated with SR upon creation then pick the region based on SR region. ID generation should be accordingly aligned.
+2. When creating a generic offer, associate the region based on the supplier region.
+
+",P0,On Production,"Tejaswini Allagadda,Sandeep Thatikonda,Aditya Jain",BE,please change status once its deployed,"Purchasing,Sales","Apr 14, 2026",Phani Yedidi,"Mar 20, 2026",false
+Sourcing Request,,"Add 'Target Price per Unit' in SR
+
+(Canny List)
+
+",P0,Ready for Test,Arvind Dhakar,UI,,Purchasing,"May 19, 2026",Dipak Majhi,"Apr 27, 2026",false
+Sourcing Request,,"Add 'Filter by My Buying Team' option for team leads like David.
+Implement it as a system view.",P2,To be Defined,Phani Yedidi,,,Purchasing,,Phani Yedidi,"Mar 26, 2026",false
+Sourcing Request,SR list view,Managers need UI access to create new buying teams,P2,To be Defined,,,,Purchasing,,Phani Yedidi,"Mar 26, 2026",false
+Sourcing Request,,"An SR can also be created without connecting to RFQ, and PO can be initiated without SO being in approval state (pre-emptive buy, but must be approved first)-",P2,To be Defined,,,,Purchasing,,Phani Yedidi,"Mar 26, 2026",false
+Sourcing Request,,"Change supplier selection to TABLE view showing: supplier name, type (OEM), search info ",P2,Design,Phani Yedidi,,,Purchasing,,Phani Yedidi,"Mar 26, 2026",false
+Sourcing Request,"SR list view ","All tab to bring all the SR’s apart form closed ",P0,On Production,,,,Purchasing,,Phani Yedidi,"Apr 14, 2026",false
+Sourcing Request,SR list view,Need a way to export option to export SR data into Excel (XLS) format,P2,To be Defined,Phani Yedidi,"BE,UI",,Purchasing,,Phani Yedidi,"Mar 28, 2026",false
+Sourcing Request,,Completed PR tab should be removed / the PR would only be active if there is pending BO QTY,P2,May not be Needed,Phani Yedidi,,,Purchasing,,Phani Yedidi,"Apr 23, 2026",false
+Sourcing Request,SR permissions,Purchasing managers should have the permissions to see sales orders on SR,P0,On Production,Andrey Kuznetcov,,,Purchasing,,Phani Yedidi,"Apr 23, 2026",false
+Sourcing Request,,Purchasing managers should be able to see the price on SR - lets please double check. This was reported by Tran,P0,On Production,Andrey Kuznetcov,BE,,Purchasing,,Phani Yedidi,"Apr 23, 2026",false
+Sourcing Request,SO list viww - Bulk update SR status,"Bulk assignment of Request for Purchase on SO — if SR exists update status, if not create a new one",P2,To be Defined,Phani Yedidi,,,Purchasing,,Phani Yedidi,"Mar 28, 2026",false
+Sourcing Request,,Add tab on SR to see linked Purchase Orders,P1,On Production,Arvind Dhakar,,,Purchasing,,Phani Yedidi,"Apr 6, 2026",false
+Sourcing Request,,Remove permissions to RFQ and Orders tab for Junior and Ex-Buyer roles,P1,On Production,Andrey Kuznetcov,,,Purchasing,,Phani Yedidi,"Apr 6, 2026",false
+Sourcing Request,,Implement contact/email search in offer supplier lookup and globally across the application,P1,To be Defined,"Arvind Dhakar,Andrey Kuznetcov","BE,UI",,Purchasing,"May 26, 2026",Phani Yedidi,"Apr 6, 2026",false
+Sourcing Request,SR / Allocation Sync Bug,Sourcing Requests are not getting updated even when a PO is created and SO connection is established — suspected cause is that auto-allocation in the connected flow is not picking up the SR,P1,Dev Ready,Pranab Dutta,BE,,Purchasing,"May 21, 2026",Phani Yedidi,"May 19, 2026",false
+Sourcing Request,,SO line is not appearing on the allocation view for some records.,P0,Dev Ready,Pranab Dutta,BE,,Purchasing,"May 21, 2026",Phani Yedidi,"May 19, 2026",false
+Sourcing Request,,Implement auto-close logic for tasks when parent entity is closed,P0,Ready for Test,Aditya Jain,,there is no way to close SR,Purchasing,,Phani Yedidi,"Apr 6, 2026",false
+Sourcing Request,Associated offer to SR,"There is a challenge where purchasing team wants to associate an offer already in the system with a SR. Could be because they could not create offer in Apex so they created in xCRM or could be an existing offer from other source. To accommodate this, do the following. 
+
+
+
+1. Add an option in SR fab called “Attach an offer”.
+2. This should allow a user to see all offers matching the MPN or allow user to search for an offer with id
+3. They can attach it. 
+4. On BE this should associate the offer with the SR. We need to make sure an offer can be associated with multiple SRs. 
+5. In offer tab of SR, show the offer type. ",P0,On Production,"Aditya Jain,Arvind Dhakar","BE,UI","#6: not clear
+what happens when user attach open market offer to SR",Purchasing,"Apr 15, 2026",Phani Yedidi,"Apr 6, 2026",false
+Sourcing Request,"Supplier accounts ",Approved for purchase flag should be honoured when showing the list of suppliers on request for offer modal,P0,In progress,Arvind Dhakar,"BE,UI",,Purchasing,"May 21, 2026",Phani Yedidi,"Apr 23, 2026",false
+Sourcing Request,SR list view,"Now that SR is split into tabs, consider adding an 'All' tab so users can see everything together if needed.",P0,On Production,Arvind Dhakar,,,Purchasing,,Phani Yedidi,"Apr 13, 2026",false
+Sourcing Request,,On hover team member details (inside the drop down),P1,In progress,Tejaswini Allagadda,"BE,UI",,Purchasing,"May 21, 2026",Phani Yedidi,"Mar 26, 2026",false
+Sourcing Request,"SR list view ","add tags to the list view of SRs? As they need the ability to hold, we are going to suggest them to add hold tag",P0,Ready for Test,Arvind Dhakar,UI,,Purchasing,,Phani Yedidi,"May 18, 2026",false
+Sourcing Request,SR list view,"Bulk Send Offer Request from SR List View (Missing Feature) — No option to select multiple SRs and send a single offer request to a supplier. Must go inside each SR individually.
+
+
+
+Bulk offer request action to be supported from SR list view when the supplier is the same. If the supplier is not existing/or different we wont let them bulk create. We will create multiple individual offer requests for all the MPN’s selected. 1 per each MPN",P0,Ready for Test,"Arvind Dhakar,Aditya Jain",UI,,Purchasing,"May 20, 2026",Phani Yedidi,"Apr 22, 2026",false
+Sourcing Request,,,,,Aditya Jain,,,Purchasing,,Phani Yedidi,"May 21, 2026",false
+Sourcing Request,,"On the SR on SO when it is added directly can we have a check from UI and throw a warning to indicate that without the approvals the SR can't be submitted (purchase requested) ?
+
+Block the user to create SR from SO if approvals are not there 
+MEssage :  “Please have all the approvals secured to raise a Sourcing Request”",P0,On Production,Arvind Dhakar,,,Purchasing,,Phani Yedidi,"Apr 22, 2026",false
+Sourcing Request,SR list view,Group Mailing / Marketing Tag Outreach (Missing Feature) — XCRM allowed blasting an offer request to a predefined supplier tag list from the SR list view. Not available in Apex.,P2,To be Defined,Phani Yedidi,,,Purchasing,,Phani Yedidi,"Apr 22, 2026",false
+Sourcing Request,"SR details ","Ensure sourcing request “created by” and team data are populated
+
+
+
+* Populate created by correctly.
+* Ensure buyer/team assignment is visible and clearly rendered.
+* Tighten the spacing and display style for team/user chips or stacked values so it does not look like fields are blank.",P0,On Production,Arvind Dhakar,UI,,Purchasing,,Phani Yedidi,"Apr 9, 2026",false
+Sourcing Request,New Notifications,"1. Create an Email Notification template for 'Offers made on our Sourcing Requests'
+2. Create an Email Notification template to notify the ICP/Sales person when a BoM is uploaded.",P1,On Production,Nikhil Kumar Singh,BE,,Purchasing,,Dipak Majhi,"Apr 15, 2026",false
+Sourcing Request,Team data groups for SR,"There is an interesting situation for purchasing where some teams are global and work on SRs from various regions. As of now the US folks are not able to see SRs from Germany etc. 
+
+To solve this we can do the following
+
+1. Assign each team a data group
+2. When team is assigned to SR the team data group gets added to the SR similar to what we do for user.
+3. Do a one time migration of existing SRs. (data team)",P0,On Production,"Srinivas Sanka,Nagababu Guddati,Sandeep Thatikonda","BE,Data",,"Purchasing,Data",,Sai Nagboth,"Apr 23, 2026",false
+Sourcing Request,Attach exiting PO to SR,"Implement a feature to attach an existing PO to an SR. This should primarily be treated associated the SR to PO and to SO like what we do for create flow but just that it is an existing PO. All the allocation flow needs to be run with this assocaition. 
+
+It will address multiple use cases e.g., 
+
+1. Allowing users to buy for multiple SRs 
+2. Allow a PO created in xcrm to attach to SR
+3. Allow old stock and PO to be associated with SR.
+
+
+
+This should be in the FAB action of “Attach PO”. 
+
+
+
+The current “Attach PO” should be changed to
+
+1. “Add line to Purchase Order” (or Add line to PO)
+2. In the Create new PO action, we can also add an option to Add line to PO similar to that of SR creation",P0,On Production,"Arvind Dhakar,Sheikh Habib","BE,UI",,Purchasing,"Apr 20, 2026",Sai Nagboth,"Apr 16, 2026",false
+Canny Followups,Canny,"https://chip1.canny.io/admin/feedback/apex-1-feedback/p/qc-inspected-not-showing-up-in-xcrm?status=open
+
+",P0,Dev Ready,"Pranab Dutta,Nikhil Kumar Singh","Sync,Data",,"Sales,Purchasing",,Om Sreenivasan,"Mar 12, 2026",false
+SO sync issues,SO manual allocation sync,SO manual allocation sync in both directions,P0,On Production,Aditya Jain,Sync,"[QE Comments 11/05] : OB allocation sync happened with delay but allocation counts are not correct in the boxes
+
+https://crm.stage.chip1.info/sales/orders/6a01e1badddc0b7fe17690aa/line/6a01e1badddc0b7fe17690a9
+
+
+
+IB sync is not working
+
+https://crm.stage.chip1.info/sales/orders/6a01e6492c49d94dbd73c731/line/6a01e6482c49d94dbd73c730
+
+correlationId : eb77d52c-4d44-11f1-b585-2d1c5cbdc529","Sales,Purchasing",,Pranab Dutta,"May 4, 2026",false
+SO sync issues,Historic allocation data sync,The existing allocation data in the xcrm should be moved to Apex,P0,In progress,"Nagababu Guddati,Srinivas Sanka",Sync,"[Pranab, 19/05] - First pass is done, need to review again.","Sales,Purchasing,Data","May 22, 2026",Pranab Dutta,"May 4, 2026",false
+Invoice,Invoice improvements and sync,"* When an outbound shipment is created, an invoice should be generated in Apex. (BE Tejaswini Allagadda )
+
+Request Input: misc cost, freight cost, qty, shipment_id, total_cost shall be calculated (unit_cost * qty)
+
+* The outbound invoice sync should be developed (ConnectTejaswini Allagadda )
+
+
+
+Outline the summary of all invoice changes in this ticket. 
+
+https://app.clickup.com/t/8651091/CHP-5607",P0,On Production,"Tejaswini Allagadda,Srinidhi Gundimi","Sync,UI,BE",,Purchasing,"Apr 24, 2026",Pranab Dutta,"Apr 19, 2026",false
+Invoice,,,,,,,,Purchasing,,Phani Yedidi,"Apr 20, 2026",false
+SR Sync,Duplicate SRs being created,"1. For some reason there are cases where duplicates SRs are getting created. Guessing it is due to sync. Here are examples
+  1. RFQ Link. Look at SRs ending with 654 and 653✅
+2. Also on Inbound salesperson seems to be not getting mapped. Look at the above 2.",P0,On Production,"Aditya Jain,Abhinay Sharma",Sync,,Purchasing,"Apr 22, 2026",Sai Nagboth,"Apr 21, 2026",false
+PO PDF issues,Attributes not in PDF generated:,"PO PDF issues:
+
+Attributes not in PDF generated:
+
+1. Package
+2. ROHS
+3. Product
+4. Description
+5. ECCN US
+6. ECCN Local
+7. US DUAL: No , (Should be yes)
+8. LOCAL DUAL: No (should be yes)
+9. EXPECTED DELIVERY
+10. TTL and sub total is not including the bank charge, freight charges and misc charges.
+
+PO link : https://crm.stage.chip1.info/purchasing/purchase-orders/69f8730cd15f0f05b6e40a54/line/69f8730cd15f0…
+
+CC:
+
+Sandeep Thatikonda, Abhinay Sharma",P1,On Production,Phani Yedidi,Other,,Purchasing,"May 21, 2026",Deepti Vaidyula,"May 4, 2026",false

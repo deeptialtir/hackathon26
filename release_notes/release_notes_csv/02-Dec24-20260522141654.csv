@@ -1,0 +1,37 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,@Umamahesh @Deepti Vaidyula,,
+Metadata,Release Info,DB changes,Connect : No change,,
+Metadata,Release Info,Platform,No change,,
+Metadata,Release Info,Key Clock,No change,,
+Metadata,Release Info,Branch,release/2024.12.02,,
+Artefacts,Artefacts,Chip1 Account, 2024.12.02.0,,
+Artefacts,Artefacts,Chip1 MC1 Core, 2024.12.02.0,,
+Artefacts,Artefacts,Chip1 Part, 2024.12.02.0,,
+Artefacts,Artefacts,Chip1 Transaction., 2024.12.02.1,,
+Deployed Items,General,"Implement Pricing/Sourcing Tab for Parts to show franchise pricing
+//app.clickup.com/t/8651091/CHP-1200
+)
+//app.clickup.com/t/8651091/CHP-1165",Verified,,
+Deployed Items,Private ( https,")
+//app.clickup.com/t/8651091/CHP-1189
+) - Filters is not yet implemented.
+//app.clickup.com/t/8651091/CHP-1164",Verified,,
+Deployed Items,Private ( https,")
+//app.clickup.com/t/8651091/CHP-614",Verified,,
+Deployed Items,Private ( https,")
+//app.clickup.com/t/8651091/CHP-1157",Verified,,
+Deployed Items,Private ( https,),Verified,,
+Deployed Items,Private ( https,## TESTING NOTES,Verified the features and fixes done in the release. Added notes to each ticket. - Verified that end-to-end scenarios are working.,,
+Deployed Items,Private ( https,"Regression tests
+## ISSUES ON PRODUCTION",,,
+Deployed Items,Private ( https,Click-up Ticket,,,
+Deployed Items,Private ( https,Type,,,
+Deployed Items,Private ( https,"Reason
+//app.clickup.com/t/8651091/CHP-1206
+)",,,
+Deployed Items,Private ( https,"Data
+it is data issue, I see that duplicated quote item",,,
+Deployed Items,Private ( https,"US24QU08517
+was created for the same project item. could you pls confirm if it is created by CRM. I removed one of them - now it should work. we will add corresponding check to don't crash project list in such cases.",,,

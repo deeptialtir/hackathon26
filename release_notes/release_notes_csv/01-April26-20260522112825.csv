@@ -1,0 +1,53 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Deepti Vaidyula ,  @Harika Guntamukkala",,
+Metadata,Release Info,DB changes,Connect : No Change,,
+Metadata,Release Info,Platform,hotfix/2026.03.31,,
+Metadata,Release Info,Notification, No Change,,
+Metadata,Release Info,Branch,hotfix/2026.03.31,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2026.03.31.13,,
+Artefacts,Artefacts,Chip1 Connect,2026.03.31.2,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,## QE DOCUMENTATION LINK,HTTPS://ALTIRLLC.SHAREPOINT.COM/:W:/R/SITES/ALTIR-CHIP1/SHARED%20DOCUMENTS/GENERAL/QUALITY%20ENGINEERING/PROJECT%20DOCUMENTS/CHIP1%20QE%20DOCUMENTATION.DOCX?D=W75141A22221E423A9DD922E367268BB5&CSF=1&WEB=1&E=GWICGH,,
+Deployed Items,General,SO validation for credit balance (Tejaswini Allagadda),,@Deepti Vaidyula,
+Deployed Items,General,"SO attribute (
+partialShipOption
+and
+taxPercentage",,,
+Deployed Items,General,) sync,,@Harika Guntamukkala,
+Deployed Items,General,"Enable validation on create of a line, new SO or new line",,@Deepti Vaidyula,
+Deployed Items,General,Message displayed is generic,,,
+Deployed Items,General,"Enable skip validation on create SO or add line, from quote or direct from RFQ or from account",Verified,@Deepti Vaidyula,
+Deployed Items,General,"On other approvals or update, we will disable the credit validation. We will do standard line validations.",,@Deepti Vaidyula,
+Deployed Items,CHP-5587,enhance,Verified By and Verified On fields (,,
+Deployed Items,CHP-5587,")
+feat(account): add 'Is Default' checkbox and allow multiple bill to type address (",,@Harika Guntamukkala,
+Deployed Items,CHP-5589,),,@Deepti Vaidyula,
+Deployed Items,CHP-5589,"Able to set more than one default address
+add Reconfirm Excess modal and feature flag integration (",,,
+Deployed Items,feat(excess-confirmation),),,@Harika Guntamukkala,
+Deployed Items,feat(excess-confirmation),"Temp solution for excess confirmation until excess are migrated to Apex.
+add 'skipValidation' checkbox to sales order and order line forms (",,,
+Deployed Items,feat(order),")
+remove leadtime from partDetails (",,@Deepti Vaidyula,
+Deployed Items,fix(request-offer),")
+leadtime should be taken from 'quote' instead of 'rfq' (",Verified,@Harika Guntamukkala,
+Deployed Items,fix(rfq-details),),,@Harika Guntamukkala,
+Deployed Items,fix(rfq-details),Create RFQ & RFQ Details,,,
+Deployed Items,fix(rfq-details),"Updated
+leadTime
+lookup source to use the
+""quote""
+category instead of
+""rfq""",,,
+Deployed Items,fix(rfq-details),.,Verified,,
+Deployed Items,fix(rfq-details),"This change aligns with the backend response, where
+leadTime
+is currently being returned from the
+""quote""
+category lookup.
+wrap RfqLinesTab with ColumnVisibilityProvider (",,,
+Deployed Items,fix(rfq-details),")
+can ignore it, the impact is minimal, it triggered sentry alert because of elements structure on page",,@Harika Guntamukkala,

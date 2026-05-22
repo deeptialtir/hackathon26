@@ -1,0 +1,60 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Deepti Vaidyula",,
+Metadata,Release Info,DB changes,Connect : No Changes,,
+Metadata,Release Info,Platform,No Change,,
+Metadata,Release Info,Notification, release/2025.02.06,,
+Metadata,Release Info,Branch,Platform & WebUI : release/2025.02.06,,
+Metadata,Release Info,Notification Services,release/2025.02.06,,
+Artefacts,Artefacts,Chip1 Web UI,2025.02.06.0,,
+Artefacts,Artefacts,fn-notification-common-service,2025.02.06.0,,
+Artefacts,Artefacts,fn-notification-dispatcher,2025.02.06.0 fn-notification-publishe,,
+Artefacts,Artefacts,r,2025.02.06.0,,
+Artefacts,Artefacts,fn-connect,2025.02.06.0,,
+Artefacts,Artefacts,fn-identity,2025.02.06.0,,
+Deployed Items,Private ( https,"//app.clickup.com/t/8651091/CHP-1410
+)",,,
+Deployed Items,Private ( https,"Bugs in build
+//app.clickup.com/t/8651091/CHP-1508
+)
+## SMOKE TESTS",,,
+Deployed Items,Private ( https,Feature/Flow,,,
+Deployed Items,Private ( https,Stage,,,
+Deployed Items,Private ( https,Prod,,,
+Deployed Items,Private ( https,Remarks,,,
+Deployed Items,Private ( https,"New User Signup from mc1
+yes
+yes",,,
+Deployed Items,Private ( https,Raised CHP-1508,,,
+Deployed Items,Private ( https,"Mc1 user invite - signup
+yes",,,
+Deployed Items,Private ( https,On stage should suffice,,,
+Deployed Items,Private ( https,"Upload Bom & Excess and verify in CRM
+yes
+yes",,,
+Deployed Items,Private ( https,"Manual RFQ
+yes
+yes",,,
+Deployed Items,Private ( https,"Active Quote (create, edit)
+yes
+yes",,,
+Deployed Items,Private ( https,"Sales Order
+(create, edit)
+yes
+yes",,,
+Deployed Items,Private ( https,"Lead Account & Transfer
+yes",,,
+Deployed Items,Private ( https,LA requirements are missing requirements.,,,
+Deployed Items,Private ( https,"Bids
+yes
+yes",,,
+Deployed Items,Private ( https,"Parts Tracker
+yes
+yes",,,
+Deployed Items,Private ( https,"Search
+yes
+yes",,,
+Deployed Items,Private ( https,"Page Navigations
+yes
+yes",,,

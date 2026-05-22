@@ -1,0 +1,13 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Harika Guntamukkala @Deepti Vaidyula",,
+Metadata,Release Info,Release date,2026.04.20,,
+Metadata,Release Info,Release date,2026.04.20,,
+Metadata,Release Info,DB changes,Connect : No change,,
+Metadata,Release Info,Platform,No change,,
+Metadata,Release Info,Notification, No change,,
+Metadata,Release Info,Branch,hotfix/2026.04.20,,
+Artefacts,Artefacts,Chip1 Transaction,2026.04.20.1,,
+Artefacts,Artefacts,Items deployed," Populating region and origin source from RFQ/Opportinities created from MC1 -  @Harika Guntamukkala Upon cancelling receiving on order quantity is not updating (release issue) -  @Umamahesh Account databit migration NPE Migration job - Sanity covers this. After the second receiving, the On Order quantity on the PO line is showing an incorrect value. For example, the PO line has an order quantity of 700 , but in the PO list view it is displayed as 500-  @Umamahesh",,
+Artefacts,Artefacts,Sanity, Purchasing -  @Umamahesh Inbound -  @Harika Guntamukkala Outbound -  @Deepti Vaidyula,,

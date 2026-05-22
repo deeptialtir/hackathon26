@@ -1,0 +1,117 @@
+# 20-MARCH26-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+, 
+@Umamahesh
+ 
+@Harika Guntamukkala
+ 
+ 
+Release date:
+ 20 March26
+DB changes
+ :
+Connect
+ : No change
+Platform
+ : No change
+Notification : 
+No change
+ 
+Branch
+  : hotfix/2026.03.19
+ 
+Components Involved
+ 
+& Artefacts
+:
+ 
+Chip1 Transaction  
+    
+                        
+  : 2026.03.19.1
+Chip1 CRM WebUI                 
+    
+           
+ : 2026.03.19.3
+Release 2:
+chip1-crm-webui : 2026.03.19.5
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## WHAT'S TESTED FOR THE RELEASE?
+
+ layout fix in account users island - UI  
+@Harika Guntamukkala
+ - UX change
+save invoicing method correctly (invoice -> payments) - UI 
+@Harika Guntamukkala
+ 
+Verified
+use region currency on dashboard - UI  - 
+@Deepti Vaidyula
+ 
+Verified
+Enabling Campaign to Production as Campaign is now driven on permissions - UI 
+Teams #: March18_06 : UI 
+@Deepti Vaidyula
+ - 
+Verified
+Stock Lines - Enable permissions : UI 
+@Umamahesh
+ -Verified
+Sales activity - Sales is not seeing the pricing column - BE 
+@Harika Guntamukkala
+ 
+  For offers we need to hide supplier name for regular sales folks - BE 
+@Umamahesh
+ -
+Verified
+Password autocomplete improvement (sign in) 
+
+https://github.com/altirllc/chip1-webui/pull/3106
+ 
+@Harika Guntamukkala
+ 
+Verified
+Use user region currency (or fundCode) instead of hardcoded USD in different places 
+
+https://github.com/altirllc/chip1-webui/pull/3108
+ 
+@Harika Guntamukkala
+ 
+Verified
+Release 2:
+Campaign pages are all loading
+RFQ mandatory fields removed. Could create RFQ without these fields. Same for copy&paste.
+Sales order - info pane - redundant card removed
+Permissions - latest changes are visible
+page navigations
+rfq-quote-sales create and sync
+Purchasing flows were covered just sometime back. So, didn't check this.
+Open issues on Stage
+Private (
+https://app.clickup.com/8651091/docs/880ak-50654/880ak-52214
+)
+Issues on stage:
+Link
+Issue Description
+Remarks
+---
+Issues on prod:
+Link
+Issue Description
+Remarks
+---

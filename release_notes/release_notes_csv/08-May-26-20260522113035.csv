@@ -1,0 +1,51 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Harika Guntamukkala",,
+Metadata,Release Info,Release date,2026.05.08,,
+Metadata,Release Info,DB changes,Connect : release/2026.05.08,,
+Metadata,Release Info,Platform,release/2026.05.08,,
+Metadata,Release Info,Notification, No Change,,
+Metadata,Release Info,Branch,release/2026.05.08,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2026.05.08.4,,
+Artefacts,Artefacts,fn connect,2026.05.08.0,,
+Deployed Items,fix(crm),send sales order salesperson via users payload (,,,
+Deployed Items,fix(crm),),Verified,,
+Deployed Items,fix(crm),"Replaced salesPerson payload with users array for sales order creation
+keep sourcing type consistent across RFQ edit flows (",,,
+Deployed Items,fix(rfq),),Verified,,
+Deployed Items,fix(rfq),Fix RFQ sourcing type handling across RFQ edit flows to keep create/update/display consistent.,,,
+Deployed Items,Stock,"Use separate endpoints for MPN and Manufacturer filters (CRM(under warehouse stock only)  & MC1
+) (",,,
+Deployed Items,Stock,")
+changed the customer declaration Number backend key ref (",Verified,,
+Deployed Items,Update,")
+shipment line-level shipping options and consolidated invoice costs (",Verified,,
+Deployed Items,update,),Verified,,
+Deployed Items,update,Derive and display shipping options dynamically from order lines in CreateShipmentForm,,,
+Deployed Items,update,"Simplify InvoiceCostSummaryFooter by consolidating cost editing into a unified ""Additional Costs"" action
+needs testing (as it was merged to release today)
+add invoice additional-cost workflow with cost summary and migrate shipment packaging to array model(
+)",,,
+Deployed Items,feat(crm),Added additional-cost editing workflow for invoices with new modal and reusable form section.,Verified,,
+Deployed Items,feat(crm),Implemented invoice cost summary calculations and integrated them into invoice create/details flows.,Verified - issue posted,,
+Deployed Items,feat(crm),Added invoice paid checkbox flow with confirmation modal in the invoice cost summary footer.,Verified,,
+Deployed Items,feat(crm),"Migrated shipment packaging from single-object to array-based entries across UI, VM mapping, types, and validation. - Seems Dev Task",,,
+Deployed Items,feat(crm),Removed legacy shipment list packaging condition logic tied to the old packaging shape.- Seems Dev Task,,,
+Deployed Items,feat(crm),Updated invoice/shipment i18n keys and API/mutation wiring for the new additional-cost and packaging structures.- Seems Dev Task,,,
+Deployed Items,feat(crm),"Added unit tests for invoice additional-cost form logic and invoice cost summary calculations.- Seems Dev Task
+prefer chip1-api-hub for canonical contracts (
+)",,,
+Deployed Items,chore(api-contract),"Added
+fetch-hub-spec.sh
+to read canonical OpenAPI specs from chip1-api-hub via gh api",,,
+Deployed Items,chore(api-contract),Updated api-contract skill to use chip1-api-hub first for all canonical contract workflows,,,
+Deployed Items,chore(api-contract),Kept Prism Swagger fetch as an explicit fallback-only path,,,
+Deployed Items,chore(api-contract),"Added quick-start usage examples to the skill
+migrate Quote / Offer / RFQ column definitions (
+)
+add eslint rule, fix couple of warnings (
+)",Verified the new script works for all 5 definitions and fails clearly when Prism is unavailable,,
+Deployed Items,Refactor,"Part-related fields (
+)",,,
+Deployed Items,Refactor,"As per Om's request, we need to have very similar part-related fields in several forms. Behavior should be the same: manufacturer field, for example, should behave in the same way in different forms, but now there are differences. This PR creates common hook and i18n resource. Migration will be done in the upcoming PRs",,,

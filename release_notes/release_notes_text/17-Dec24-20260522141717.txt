@@ -1,0 +1,115 @@
+# 17-DEC24
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+@Umamahesh
+ 
+@Deepti Vaidyula
+ 
+DB changes
+ :
+Connect
+ : release/2024.12.17
+Platform
+ : release/2024.12.17
+Branch
+  : release/2024.12.17
+Components Involved
+ 
+& Artefacts
+:
+fn-connect.                     : 
+2024.12.17.0
+fn-keyclockserver
+       : 2024.12.17.0
+Chip1 Account                : 
+2024.12.17.0
+Chip1 MC1 Core             : 
+2024.12.17.0
+Chip1 Transaction.       : 
+2024.12.17.1
+chip1-webui
+                    : 2024.12.17.1
+
+## LIST OF DEPLOYED ITEMS
+
+Private (
+https://app.clickup.com/t/8651091/CHP-1198
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-1203
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1194
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-1236
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-1212
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1238
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-665
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-851
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1267
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1253
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1255
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1256
+)
+Dashboard - Ignore country code if missing - that was in  hotfix/2024.12.05
+Private (
+https://app.clickup.com/t/8651091/CHP-1189
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-1270
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-795
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1099
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1252
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1207
+)
+
+### DEV ONLY TICKETS
+
+Private (
+https://app.clickup.com/t/8651091/CHP-1192
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1212
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1222
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1217
+) : Project - Put created project into cache, bypass 404 errors happening on GET after POST + More 
+Part tabs - Standardise empty message
+Granular Sentry issue grouping
+Safe phone mapping + Sentry logs for such cases
+There are few CRM Invitation enhancements handling phone code not found or different response codes - Regression of CRM Invite should cover this
+
+## TESTING NOTES
+
+Validated all the features and the testing notes is updated for each ticket
+Regression tests

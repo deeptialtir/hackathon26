@@ -1,0 +1,91 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Deepti Vaidyula",,
+Metadata,Release Info,Release date,2025.01.08,,
+Metadata,Release Info,DB changes,Connect : No Change,,
+Metadata,Release Info,Platform,No Change,,
+Metadata,Release Info,Branch,release/2025.01.08,,
+Artefacts,Artefacts,Chip1 Part, 2025.01.08.0,,
+Artefacts,Artefacts,Chip1 Web UI,2025.01.08.0,,
+Deployed Items,General,Task,,,
+Deployed Items,General,Remarks,,,
+Deployed Items,General,"QE status
+//app.clickup.com/t/8651091/CHP-1237
+)",,,
+Deployed Items,Private ( https,"(point 6)- Ability to archive a project (BOM or Excess)
+.
+//app.clickup.com/t/8651091/CHP-1237
+)",Verified on stage,,
+Deployed Items,Private ( https,"(point 4) Rename PCN document to the actual name in the project details
+//app.clickup.com/t/8651091/CHP-1297
+)",Verified on stage,,
+Deployed Items,Private ( https,BOM upload - new field to consider target price per 100,Verified on stage,,
+Deployed Items,Private ( https,In default template as well.,,,
+Deployed Items,Private ( https,"Working with exact field match in excel. Waiting for fields in other languages. (later release)
+//app.clickup.com/t/8651091/CHP-1296
+)",,,
+Deployed Items,Private ( https,"( point 1) Add filters in part details
+//app.clickup.com/t/8651091/CHP-1296
+)
+( point 1) - Add filter Lead Time exceeds Need By date
+//app.clickup.com/t/8651091/CHP-1338
+)",Verified on stage,,
+Deployed Items,Private ( https,Limit the alternative list to the Silicone Expert level,Verified on stage - Verified on dev. Raised one issue.,,
+Deployed Items,Private ( https,"CHP-1352
+//app.clickup.com/t/8651091/CHP-1309
+)",,,
+Deployed Items,Private ( https,"Give option to edit tracked parts. In the same UI you can also implement un-track.
+//app.clickup.com/t/8651091/CHP-1342",Verified on stage,,
+Deployed Items,Private ( https,),Verified on stage,,
+Deployed Items,Private ( https,Implement Mixpanel Analytics in MC1 to allow understanding of user activity.,Verified on stage,,
+Deployed Items,(update),"move ipn to item level in rfq 
+//app.clickup.com/t/8651091/CHP-1343",Verified on stage - Verified on stage,,
+Deployed Items,Private ( https,")
+country of origin filter dev work is in progress. Updated in ticket.",Verified on stage - Verified on stage - Verified on stage,,
+Deployed Items,Private ( https,Backend Changes,,,
+Deployed Items,Private ( https,Notifications for new quotes - email notifications - work_in_progress,,,
+Deployed Items,Private ( https,Notification to ICP once the project created,,,
+Deployed Items,Private ( https,Notifications for the new Orders,,,
+Deployed Items,Private ( https,"Add additional fields for quote (active) - lead time, date code, RoHS, CPN, and C1 rep",,,
+Deployed Items,Private ( https,Show only approved orders to the MyChip1 users,,,
+Deployed Items,Private ( https,Add additional information on RFQ to CRM - work_in_progress,,,
+Deployed Items,Private ( https,Update Latest ICP Photos - work_in_progress,,,
+Deployed Items,Private ( https,Migrate historical Quotes data - only for selected accounts & selected date range - no_test_scope,,,
+Deployed Items,Private ( https,Migrate historical Orders data - is_visible = false. Not visible on UI -no_test_scope,,,
+Deployed Items,Private ( https,"Migrate historical RFQ data - is_visible = false. Not visible on UI - no_test_scope
+## SMOKE TESTS",,,
+Deployed Items,Private ( https,Feature/Flow,,,
+Deployed Items,Private ( https,Stage,,,
+Deployed Items,Private ( https,Prod,,,
+Deployed Items,Private ( https,New User Signup from mc1,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Upload Bom & Excess and verify in CRM,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Manual RFQ,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,"Active Quote (create, edit)",,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,"Sales Order
+(create, edit)",,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Lead Account & Transfer,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,No,,,
+Deployed Items,Private ( https,Bids,,,
+Deployed Items,Private ( https,Yes (With existing account),,,
+Deployed Items,Private ( https,Yes (With existing account),,,
+Deployed Items,Private ( https,Parts Tracker,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Search,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Page Navigations,,,
+Deployed Items,Private ( https,Yes,,,
+Deployed Items,Private ( https,Yes,,,

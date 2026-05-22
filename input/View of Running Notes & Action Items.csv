@@ -1,0 +1,151 @@
+Area,Title,Description,Priority,Status,Assigned To,Target Date,Change,QE comments,Created by,Created on,Type,Canny
+"Receiving line - Add Receiving ",Additional info,"Need to capture shipping info - Shipping info (invoice number, number of boxes, receiving notes, condition) etc
+Width and Height fields need to be added to the receiving line",P0,On Production,Sai Nagboth,,,,Phani Yedidi,"Mar 10, 2026",Warehouse,
+"Receiving line - Add Receiving ",Overages,"When received quantity is greater than On Order, the system is rounding RIS values and displaying quantities higher than the actual available amount.",P1,In Review,Phani Yedidi,"May 22, 2026",BE,,Umamahesh Mutyala,"Apr 22, 2026",Warehouse,
+Receving/Stock Line - Details,,"PO - SO comparison. Missing fields/attributes 
+Supplier : doesn’t have value returned
+Buyer : doesn’t have value returned",P0,On Production,Krupa Panchal,,,,Phani Yedidi,"Apr 17, 2026",Warehouse,True
+Receving/Stock Line - Details,,"Due date is missing on stockline ",P1,To be Defined,Phani Yedidi,"May 22, 2026",,,Phani Yedidi,"Apr 17, 2026",Warehouse,
+Receving/Stock Line - Details,,"COO missing in the PO SO comparison ",P0,On Production,Krupa Panchal,,,,Phani Yedidi,"Apr 22, 2026",Warehouse,
+Receving/Stock Line - Details,,Add location to list view on Stock WH > Stock > Stock line,P0,On Production,Krupa Panchal,,,,Phani Yedidi,"Apr 22, 2026",Warehouse,
+Receving/Stock Line - Details,,"Stock line info pane > ID should be redirected to the details page instead of XCRM ",P0,On Production,Krupa Panchal,,,,Phani Yedidi,"Apr 22, 2026",Warehouse,
+Receving/Stock Line - Details,,Description should be made uneditable,P0,On Production,Krupa Panchal,,,,Phani Yedidi,"Apr 22, 2026",Warehouse,
+Receving/Stock Line - Details,,"Buyer info is not copied over from PO into receiving lines. role is missing but buyer name is apeparing ",P0,Dev Ready,"Sheikh Habib,Pranab Dutta","May 20, 2026",BE,,Phani Yedidi,"Apr 23, 2026",Warehouse,
+Receving/Stock Line - Details,,Copy supplier vendor code and internal supplier code into stock line.,P0,Dev Ready,Nikhil Kumar Singh,"May 20, 2026",BE,,Phani Yedidi,"Apr 23, 2026",Warehouse,
+Part Sourcing,Stock Recheck,"1. For stock in Sourcing, create an option in 3 dots called Recheck. Upon this action we need to create a Task assigning to the ICP on the ",P1,May not be Needed,Shivananda Sai,,,,Sai Nagboth,"Mar 2, 2026",Warehouse,false
+Receving Line List,"Add xCRM id and link ","Add xCRM id and link to the list view. Make it available in both stock and WH view - ",P0,In progress,"Arvind Dhakar,Sandeep Thatikonda,Sheikh Habib","May 22, 2026","UI,BE",Not shown for Outbound stock lines,Sai Nagboth,"Feb 23, 2026",Warehouse,false
+Receving Line List,xCRM Stock ID,"Add XCRM id in the following approach (List view, details view)
+RL/SL >= Stocked Stock ID and deeplink with Stock ID 
+RL/SL < Stocked the REceiving PO ID 
+
+[Sai] Looks like we will have stock id, may not be upon creation but happens via PO line sync.  Please ensure that it is available",P1,Reopened,"Phani Yedidi,Sheikh Habib","May 22, 2026",BE,Not shown for Outbound stock lines,Phani Yedidi,"Feb 25, 2026",Warehouse,false
+Receving/Stock Line,,Cancelling a receiving line closes it; Received Quantity shuould go back to the primary RL,P1,On Production,Sai Nagboth,"Mar 12, 2026",BE,,Umamahesh Mutyala,"Mar 2, 2026",Warehouse,false
+Receving/Stock Line,"Supplier, Contacts section ","Supplier, Contacts - Change to General Info : 
+
+1. Add a user of type Warehouse ICP and show two user fields always visible. One of the of role “Buyer” and other “Warehouse Owner” ",P0,Reopened,Krupa Panchal,"May 21, 2026",,"Not seeing any changes on UI
+
+Phani Yedidi this is still not working",Phani Yedidi,"Mar 9, 2026",Warehouse,false
+Receving/Stock Line,,"Warehouses duplicated in warehouse dropdown in PO creation form.
+
+Can we change the mapping to always have single warehouse on our side across all regions and then map the region+warehosue combination back in xCRM to their id at region level. I think this is possible as it was done in some other area. Please consult Srinidhi/Sandeep/Pranab.
+",P0,In progress,"Sandeep Thatikonda,Srinivas Sanka,Nikhil Kumar Singh","May 22, 2026",Data,,Umamahesh Mutyala,"Mar 2, 2026",Warehouse,false
+Receving/Stock Line,QC History,"Implement an ability to show more than one QC report and switch between them.
+Check the design on the UX. BE Seems to be ready.",P1,In Testing,Krupa Panchal,"May 18, 2026",UI,,Sai Nagboth,"Mar 3, 2026",Warehouse,false
+Receving/Stock Line,QC PDF documents,We need to generate various documents related to qualit and shipment. Please look at this for details. CHP-3812. Nikita has done quite a bit of work with some open questions and few more things to get it done.,P0,On Production,Umamahesh Mutyala,,BE,These are the CRR and RR reports. Already on prod.,Sai Nagboth,"Mar 4, 2026",Warehouse,false
+Receving/Stock Line,Receiving Abstraction,There is an abstraction in xCRM that combines all receivings thta are together into one. This allows them to manage workflow for all of it together. Need to find a way to address it.,P1,To be Defined,"Sheikh Habib,Sai Nagboth",,BE,,Sai Nagboth,"Mar 10, 2026",Warehouse,
+Receving/Stock Line,Inventory Validation,FAB Action - Ability to assign a task to validate inventory in a given Bin to someone,P2,To be Defined,,,,,Sai Nagboth,"Mar 8, 2026",Warehouse,false
+Receving/Stock Line,,"When a note is added during acceptance/approval, it must flow into the entity timeline",P1,To be Defined,Phani Yedidi,"May 22, 2026","BE,UI",,Phani Yedidi,"Mar 10, 2026",Warehouse,
+Receving/Stock Line,Cancellation of Receiving line,Adding a clickup ticket to cover the cancellation of receiving line/stock line. https://app.clickup.com/t/8651091/CHP-5597,P0,On Production,"Sheikh Habib,Pranab Dutta,Sandeep Thatikonda",,"BE,UI",,Phani Yedidi,"Apr 8, 2026",Warehouse,
+Quality Control,"QC History and historical reports. Ability to have more reports ","QC history changes 
+
+* Add ability to open/initiate QC on an existing stock line (In the case of an old stock or stock older than 1 year)
+* Ability to show all related reports (current vs historical) on the stock line and also if need be they can add more - Support more than QC reports ",P0,Ready for Test,Phani Yedidi,,UI,,Sai Nagboth,"Feb 22, 2026",Warehouse,false
+Quality Control,QC Data Sync,"Complete implementation of QC data sync - It is done
+
+A few gaps ware observed, need to review it.",P0,On Production,Nikhil Kumar Singh,"Apr 23, 2026",Sync,"Few issues reported in sheet
+
+[Pranab, 18/05] - This sheet doesn’t have any items related to QC. 
+
+Abhinay Sharma - Pls review it and update accordingly.",Sai Nagboth,"Mar 1, 2026",Warehouse,false
+Quality Control,QC final result Sync,"Need to implement the QC final result sync for inbound & outbound flows.
+
+1. Inbound sync - The GI sync shall carry the info and QC should be updated accordingly in Apex
+2. Outbound sync - The QC event sync should have this info and xcrm must handle it as GI update.",P0,In progress,Nikhil Kumar Singh,"May 22, 2026",Sync,,Pranab Dutta,"May 17, 2026",Warehouse,
+Quality Control,QC validation comments,"Add a section in QC to capture validation of some part info against a PO. We can probably use the PO field name as a key and comment as value to capture the notes. It could be stored as a key value pair that is presented in the UI against PO field key.
+
+
+
+Please see this figma for reference.",P2,May not be Needed,"Sheikh Habib,Phani Yedidi",,BE,,Sai Nagboth,"Mar 5, 2026",Warehouse,false
+Quality Control,QC validation comments,"Implement the UI piece of QC SO/PO validation comments as per this figma ",P2,May not be Needed,Krupa Panchal,,UI,,Sai Nagboth,"Mar 5, 2026",Warehouse,false
+Quality Control,,"QC level/validation should be pulling from the PO line.
+
+Duplicated with another item",P0,May not be Needed,,,,,Phani Yedidi,"Mar 10, 2026",Warehouse,
+"WH - Stocks ",Micro Dashboard,Enable Microdashboard,P1,To be Defined,Phani Yedidi,"May 26, 2026",UI,no micro dashboard on wh-stock view,Sai Nagboth,"Feb 22, 2026",Warehouse,false
+"WH - Stocks ",Create Stock Line,Allow creation of stock line - manual,P1,Ready for Test,Krupa Panchal,"Mar 4, 2026",UI,,Sai Nagboth,"Feb 23, 2026",Warehouse,false
+"WH - Stocks ",Lots for Stock,Need to implement stock lot,P2,To be Defined,Sai Nagboth,,,,Sai Nagboth,"Mar 12, 2026",Warehouse,
+"WH - Stocks ",Create Icon,Add a + icon to create similar to other entities such as RFQ - Should do it for manual stock line (Manual stock line is currently being defined),P1,In Testing,Krupa Panchal,"May 19, 2026",UI,,Sai Nagboth,"Feb 23, 2026",Warehouse,false
+"WH - Stocks ",,Closed flag similar to other entities on list views across Receiving lines various list views,P1,Ready for Test,Alexey Duduk,"Mar 13, 2026",UI,"Even without selecting closed flag, closed items showing up in stock",Phani Yedidi,"Feb 25, 2026",Warehouse,false
+"WH - Stocks ",Stock line/ Receiving line on PO & WH,"Any column on the list view that has filter support should have sort support ",P1,Ready for Test,Arvind Dhakar,"May 20, 2026",,"Warehouse→Stock MPN view has no sort on any of the fields
+no columns on list (Date updated, users, roles, region, warehouse, lot) which are filters",Phani Yedidi,"Feb 26, 2026",Warehouse,false
+"WH - Stocks ",Stock Datagroup,"1. Need to associate a standard data group for Stock based on region as per CHP-5564
+2. This should be in addition to whatever is added 
+3. This group can then be assigned to folks in that region who have the ability to see the Stock.
+4. Permissions will drive level of access.",P0,In Review,Sandeep Thatikonda,"May 20, 2026",BE,,Sai Nagboth,"Mar 10, 2026",Warehouse,
+"WH - Stocks ",Duplicate Stock Line,"Looks like Stock lines are getting duplicated as per users reported issue. Examples.
+
+* US26SL-72896 
+* US26SL-73200  
+* US26SL-73208
+
+Canny Item",P0,Ready for Test,Pranab Dutta,"Mar 24, 2026",BE,"still an existing issue, listed in sheet",Sai Nagboth,"Mar 23, 2026",Warehouse,
+"WH - Stocks ",Allocation missing PO,"Looks like in some cases allocation is missing on PO as per user reported issue.
+
+
+
+Canny Item",P0,On Production,"Pranab Dutta,Nikhil Kumar Singh","Mar 24, 2026",BE,,Sai Nagboth,"Mar 23, 2026",Warehouse,
+"WH - Stocks ",WH > STock > Stock line,"For the WH > stock > stock lines page, the logic should be changed to show all stock lines when quantity available is greater than 0 irrespective of the state",P0,Ready for Test,Arvind Dhakar,,,,Phani Yedidi,"Apr 24, 2026",Warehouse,
+"WH - Stocks ",,,,,,,,,Phani Yedidi,"Apr 24, 2026",Warehouse,
+WH - Receiving Lines,WH > RL,"Manual stock line creation from page fab actions ",P0,Ready for Test,Krupa Panchal,,,,Phani Yedidi,"Mar 2, 2026",Warehouse,false
+WH - Receiving Lines,Quality Tab,"Add a new tab on WH → Recieving and Stock called Quality. This is to show a list of quality checks done historically. This can help people look at QC outside of stock line. This can then be also extended to show in Warehouse tab of part.
+
+
+
+Show the following attributes
+
+1. MPN | MFG
+2. Stock Line | Date Created
+3. Date Code
+4. QC Final result
+5. QC Insecptor
+6. Region
+7. Last Updated | Updated by
+8. Supplier | Category
+9. PO | Created date
+
+
+
+Allow filters on
+
+1. Date created 
+2. MPN
+3. MFG
+4. QC Inspector
+5. QC Final result
+6. Supplier
+
+",P1,On Production,"Krupa Panchal,Sheikh Habib",,"UI,BE","#9. created date of PO is not showing up
+Search is not working on this tab- should support search by SL, MPN.
+All previous data showing blank on UI",Sai Nagboth,"Mar 14, 2026",Warehouse,
+WH - Receiving Lines,Inbound shipments changes,"* Rename ""Arrival Check"" → ""Add Arrival"" everywhere it appears. - DONE
+* ""Add Arrival"" entry points — trigger from PO, PO Line. No line pre-selection needed. Always operates at PO scope. - DONE
+* Add arrival condition — show when PO status = Created.Confirmed. Leave visible even in post-receipt for now. - DONE
+* Receiving form — constrain to two rows only. bring Country of Origin to row 1 from existing layout. and  Location to row 2.  temp location can be taken out. stay as is within the current layout. Don't drop any existing fields  except for temp location. Just restructure. (Follow the current form for Add receiving. Always keep the add receiving on add arrival open but not hide under expand) - DONE
+* Tracking number status — use the arrived boolean check to show Arrived / Pending against each tracking number. Needed when a PO has multiple shipments in transit.
+* when multiple receiving lines arrive in the same shipment, allow QC person to be assigned at the shipment level (during Add Arrival and from the shipments view - DONE
+* Shipments tab on PO — add a Shipments tab to the PO detail view alongside existing tabs. Shows all inbound shipments against the PO: tracking numbers, box count, condition, arrival date, QC person. Mirror the SO Warehouse Shipments view.
+* Shipment Details accordion on Stock Line — add a accordion inside the Stock Line detail. Shows the shipment associated with that stock line.
+* Shipments tab on Purchase order view : Add shipments tab on the purchase order view after the PO line and before the receiving lines
+* Warehouse shipments view — Rename the receiving lines on left nav to receiving. Maintain same tab structure as PO (PO Lines, Shipments, Receiving Lines). Apply a default hidden filter to exclude unapproved POs. Warehouse only sees approved purchase orders - DONE",P0,On Production,"Krupa Panchal,Arvind Dhakar",,UI,,Phani Yedidi,"Apr 30, 2026",Warehouse,
+WH - Receiving Lines,Inbound shipments - Improvements from Sai (5th May),"1. n shipment details, indicate inbound vs. outbound somewhere in the header
+2. Also if inbound shipment show only PO lines and outbound show only SO lines
+3. Also add a section to show the packaging details that includes box info. 
+4. Enable Add arrival action once PO is approved. 
+  * Add this action to the list view as well
+  * Add this action to PO, PO line and RL
+  * Add ""Add Arrival"" on receiving lines view in PO lines  and other list views as well.
+5. In add arrival - remove QC inspector as mandatory field
+6. In Arrival step 2, change the view from grid view to add receiving type view. PO line on the top and then add receiving in an indented way. the attributes can be same as that of add receiving. If multiples po lines include all
+7. Shipment list view 
+  * Account should be supplier that is copied from PO
+  * Shipping address and ship via can come from PO
+  * We can also remove shipping address column from inbound shipments
+  * Add PO and PO created date
+  * Shipment qty should be removed or populated ?",P0,On Production,Krupa Panchal,,UI,,Phani Yedidi,"May 5, 2026",Warehouse,
+WH - Receiving Lines,Stock Requests,"* A new tab on stock page to indicate the stock request list view
+* For any stock line using the line actions or page actions they can trigger a stock request. 
+* when they interact with the action, a modal opens up that has the info from stock preselected MPN, Quantity, Assignee, part details, labels info , SO and PO references, Notes, Requested By & Requested On (auto-filled). There should also be a request type to indicate that it is a stock request or stock order (not entirely sure on stock order workflow) 
+* Life cycle should be a simple one to indicate what is new, what is inprogress (if gets assigned) / or they can manually change to in-progress and completed.   
+* Once a request is raised it should be notified to the US WH group 
+* Also they should be able to print the PDF of the stock req paramters as shown here",P0,To be Defined,"Krupa Panchal,Sheikh Habib","May 21, 2026","BE,UI",,Phani Yedidi,"May 18, 2026",Warehouse,
+WH - Receiving Lines,"inbound shipments - Length and Height fields ",Introduce Length and Height fields as well during the arrival check and in the line details as well along with weight information,P0,Ready for Test,Krupa Panchal,,,,Phani Yedidi,"May 18, 2026",Warehouse,
+WH - Receiving Lines,,,,,,,,,Phani Yedidi,"May 19, 2026",Warehouse,

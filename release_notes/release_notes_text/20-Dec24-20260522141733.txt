@@ -1,0 +1,72 @@
+# 20-DEC24
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+@Umamahesh
+ 
+@Deepti Vaidyula
+ 
+Release date
+ : 2024.12.20
+DB changes
+ : 
+Connect
+ : release/2024.12.20
+Branch
+  : No change
+Components Involved
+ 
+& Artefacts
+: No change
+
+## LIST OF DEPLOYED ITEMS
+
+Private (
+https://app.clickup.com/t/8651091/CHP-1283
+)
+
+## TESTING NOTES
+
+Raise a quote in mc1
+Update the corresponding requirement in crm
+An active quote is visible in the mc1
+Update the quote in crm and the changes should be reflected in mc1
+Create a SO from the quote in crm
+Update the SO and the changes should be reflected in mc1
+
+#### SMOKE TESTS
+
+Feature/Flow
+Stage
+Prod
+New User Signup
+Yes
+Yes
+Upload Bom & Excess
+Yes
+Yes
+Manual RFQ
+Yes
+Yes
+Active Quote
+Yes
+Yes
+Sales Order
+Yes
+Yes
+Lead Account & Transfer
+Yes
+Yes
+Bids
+Yes
+NA
+Parts Tracker
+Yes
+Yes
+Search
+Yes
+Yes
+Page Navigations
+Yes
+Yes

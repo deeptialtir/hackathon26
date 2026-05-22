@@ -1,0 +1,53 @@
+# 28-NOV24-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+@Deepti Vaidyula
+ 
+@Umamahesh
+ 
+Release date
+ : 2024.11.27
+DB changes
+ : 
+Connect
+ : release/2024.11.27
+Platform
+ : No change
+Key Clock
+: No change
+Branch
+  : hotfix/2024.11.27
+Components Involved
+ 
+& Artefacts
+: 
+Connect                             : 
+2024.11.27.0
+Chip1 Transaction.        : 
+hotfix-2024.11.27.0
+
+## WHAT'S FIXED FOR THE HOTFIX?
+
+Private (
+https://app.clickup.com/t/8651091/CHP-1117
+)
+
+## TESTING NOTES
+
+End-to-end testing:
+Create Lead Account
+Create opportunity
+Convert opportunity to requirement in CRM
+Invite new user in mc1 and raise rfq from invited user
+Raise Quote
+Raise SO
+mc1 invitation from CRM
+existing linked account rfq-check connect logs (only CRMAccId should be passed)
+Create an account w/o sales person-Try if possible
+BOM upload-check auto rfq
+Add part manually to BOM
+Add BOM to existing Project
+General check on all screens
+Sanity tests

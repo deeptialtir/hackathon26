@@ -1,0 +1,52 @@
+Area,Title,Description,Priority,Status,Assigned To,Change,Type,Target Date,QE comments,Owner,Release Date,Created by,Created on
+Quality Control,QC final result Sync,"Need to implement the QC final result sync for inbound & outbound flows.
+
+1. Inbound sync - The GI sync shall carry the info and QC should be updated accordingly in Apex
+2. Outbound sync - The QC event sync should have this info and xcrm must handle it as GI update.",P0,In progress,Nikhil Kumar Singh,Sync,Warehouse,"May 22, 2026",,,,Pranab Dutta,"May 17, 2026"
+Quality Control,,,,,,Sync,,,,,,Nikhil Kumar Singh,"May 17, 2026"
+Accounts,Accounts,Accounts non-migration connect log errors,P1,Dev Ready,Srinidhi Gundimi,Sync,Sales,"May 29, 2026",[QE Comments 19/05] : Dev yet to pick,,,Satish Bathini,"Apr 22, 2026"
+Accounts,,,,,,Sync,,,,,,Sai Nagboth,"Apr 23, 2026"
+General,User ID reconciliation,Ideally we should try to map the user to region+userid so it gets mapped to the right user on crm side.,P2,Dev Ready,Pranab Dutta,Sync,"Sales,Purchasing",,,,,Pranab Dutta,"Apr 20, 2026"
+General,,Quote and Request not transfered in CRM (Canny Link),P0,Dev Ready,"Srinivas Sanka,Nagababu Guddati,Pranab Dutta","Data,Sync",Sales,,"[QE Comments 19/05] : Sync failed for RFQ,Quote",,,Dipak Majhi,"May 11, 2026"
+General,"Part attributes sync (RFQ, SO and PO, Stock)","Can we ask xCRM to consider matching these values based on what is sent from Apex? If a match not found they create a new one based on the text?
+
+1. MFG
+2. Package
+3. ROHS
+4. Product
+
+
+
+SR, PO and Stock needs to be done.",P0,In progress,Nikhil Kumar Singh,Sync,Purchasing,"May 22, 2026","[Pranab 04/05] - Done for RFQ, SO.",,,Sai Nagboth,"Apr 1, 2026"
+Canny Followups,Canny,"https://chip1.canny.io/admin/feedback/apex-1-feedback/p/qc-inspected-not-showing-up-in-xcrm?status=open
+
+",P0,Dev Ready,"Pranab Dutta,Nikhil Kumar Singh","Sync,Data","Sales,Purchasing",,,,,Om Sreenivasan,"Mar 12, 2026"
+Canny Followups,Canny,https://chip1.canny.io/apex-1-feedback/p/not-requested-quote-assigned-to-the-rfq,,Dev Ready,Nikhil Kumar Singh,Sync,,,,,,Pranab Dutta,"May 21, 2026"
+SO sync issues,"Duplicate contact, pick only the first contact. ","18/05 - Chip1 Core
+1) Today we got few SOs which did not sync to CRM coz of duplicate contact issue in connect. Can we request Satish to do another pass at this and identify any other account/contact which might have this issue ? 
+
+Gracefully handle this issue by only picking the first contact when duplicates come up.
+
+If possible, implement this across any entity with duplicate entries from ID mapping.",P0,Dev Ready,"Pranab Dutta,Nikhil Kumar Singh",Sync,Sales,"May 22, 2026","[Pranab, 19/05] - Contact and Account combination should be unique. If it is not then code change is needed.",Pranab Dutta,5/19/2026,Om Sreenivasan,"May 19, 2026"
+SO sync issues,SO Inbound Sync Issues,"1. VAT details are not being populated from the account. [PR Raised]❌
+
+image.jpeg2. The tax amount under the Charges section is not reflecting in Apex. [To be picked]
+image.jpeg
+
+3. Miscellaneous Costs and Freight Charges are not displayed at the SO line level. At the parent level, these values are only visible when the ""Costs & Payments"" section is collapsed. [PR Raised]❌
+image.jpeg
+image.jpeg
+
+4. Partial Ship Options are syncing only on update (with some delay), not during creation. Additionally, the synced value reflects the previously selected value instead of the latest updated value. [BE] ❌
+image.jpeg
+image.jpeg
+
+5. Document approval is not being synced to Apex. [BE]❌
+
+image.jpeg
+
+6. Advance payment details are not being synced. [BE]❌
+
+image.jpeg",P0,In progress,"Srinidhi Gundimi,Shivananda Sai",Sync,Sales,"May 22, 2026",Recent Testing Example - https://crm.chip1.com/sales/orders/6a0c14c70f29245e97031df4,,,Deepti Vaidyula,"Apr 16, 2026"
+SO sync issues,Historic allocation data sync,The existing allocation data in the xcrm should be moved to Apex,P0,In progress,"Nagababu Guddati,Srinivas Sanka",Sync,"Sales,Purchasing,Data","May 22, 2026","[Pranab, 19/05] - First pass is done, need to review again.",Pranab Dutta,,Pranab Dutta,"May 4, 2026"
+PO PDF issues,,American companies wrong phone number (Canny Link),P0,Dev Ready,"Srinivas Sanka,Nagababu Guddati","Sync,Data",Data,,,,,Dipak Majhi,"May 12, 2026"

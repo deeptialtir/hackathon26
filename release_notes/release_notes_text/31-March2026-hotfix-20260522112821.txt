@@ -1,0 +1,65 @@
+# 31-MARCH2026-HOTFIX
+
+Environment: Stage
+Status: 
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2026.03.31
+ 
+DB changes
+ : 
+Connect
+ : hotfix/2026.03.31
+Platform
+ : No Change
+Notification : 
+No Change
+ 
+Branch
+  : hotfix/2026.03.31
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Transaction  
+    
+                        
+  : 2026.03.31.10
+Chip1 CRM WebUI                 
+    
+           
+ : 2026.03.31.8
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+
+## QE DOCUMENTATION LINK:HTTPS://ALTIRLLC.SHAREPOINT.COM/:W:/R/SITES/ALTIR-CHIP1/SHARED%20DOCUMENTS/GENERAL/QUALITY%20ENGINEERING/PROJECT%20DOCUMENTS/CHIP1%20QE%20DOCUMENTATION.DOCX?D=W75141A22221E423A9DD922E367268BB5&CSF=1&WEB=1&E=GWICGH
+
+## LIST OF DEPLOYED ITEMS
+
+Show Approved for sales pointing to new attribute, Customer.approved
+On Lock Order trigger SO validation and have feasibility to skip validation. Remember valdation is triggered only on first Lock, if user unlocks and locks again it won't
+SO UI enhancements   
+ShippingAccountNumber and Carrier should come fromAccount.customerInfo , instead of supplier Info (P0)
+Remove Vendor Status field needs to be removed from OrderPeopleIsland (General Section) (P0)
+Remove NeedBy,LeadTime from Create SO , QuotesCreateSO on line level , and introduce promisedDeliveryDate , ASAP checkbox (backend fields : promisedDeliveryDate , isAsap) - P0
+On OrderLineDetailsIsland , change the mapping of PromisedDeliveryDate to promisedDeliveryDate on backend - P0
+Increase width of PromisedDeliveryDate - P0
+Order BillingIsland : billingContact should not be required field and also show the contacts related to that particular account also check if save is getting enabled correctly - P0
+SO Inbound and Outbound mapping for attributes, tax, ShipAccount number and shippartial options 
+Issues on stage:
+SO validations:
+ We are skipping validations during lock line. But the validations are hit during approvals.

@@ -1,0 +1,67 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Deepti Vaidyula",,
+Metadata,Release Info,Release date,2025.04.01,,
+Metadata,Release Info,DB changes,Connect : No Change,,
+Metadata,Release Info,Platform,No Change,,
+Metadata,Release Info,Notification, No Change,,
+Metadata,Release Info,Branch,WebUI : hotfix/2025.03.28,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,QE documentation link,https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh,,
+Deployed Items,Private ( https,"//app.clickup.com/t/8651091/CHP-1743
+)
+//app.clickup.com/t/8651091/CHP-1653
+) point #2",,,
+Deployed Items,Private ( https,"Bugs in build
+//app.clickup.com/t/8651091/CHP-1746
+)
+## SANITY TESTS",,,
+Deployed Items,Missed in production,"Stage CRM is down. So, all validations are done from mc1.",,,
+Deployed Items,Missed in production,Feature/Flow,,,
+Deployed Items,Missed in production,Stage,,,
+Deployed Items,Missed in production,Prod,,,
+Deployed Items,Missed in production,Remarks,,,
+Deployed Items,Missed in production,New User Signup from mc1,,,
+Deployed Items,Missed in production,NA,,,
+Deployed Items,Missed in production,NA,,,
+Deployed Items,Missed in production,Mc1 user invite - signup,,,
+Deployed Items,Missed in production,NA,,,
+Deployed Items,Missed in production,NA,,,
+Deployed Items,Missed in production,On stage should suffice,,,
+Deployed Items,Missed in production,"Upload Bom & Excess and verify in CRM
+yes
+yes",,,
+Deployed Items,Missed in production,Stage crm is down,,,
+Deployed Items,Missed in production,"Manual RFQ
+yes
+yes",,,
+Deployed Items,Missed in production,"Active Quote (create, edit)",,,
+Deployed Items,Missed in production,NA,,,
+Deployed Items,Missed in production,NA,,,
+Deployed Items,Missed in production,"Sales Order
+(create, edit)",,,
+Deployed Items,Missed in production,NA,,,
+Deployed Items,Missed in production,NA,,,
+Deployed Items,Missed in production,Lead Account & Transfer,,,
+Deployed Items,Missed in production,NA,,,
+Deployed Items,Missed in production,NA,,,
+Deployed Items,Missed in production,Bids,,,
+Deployed Items,Missed in production,Na,,,
+Deployed Items,Missed in production,NA,,,
+Deployed Items,Missed in production,Parts Tracker,,,
+Deployed Items,Missed in production,"Yes
+yes",,,
+Deployed Items,Missed in production,Search,,,
+Deployed Items,Missed in production,"Yes
+yes",,,
+Deployed Items,Missed in production,Page Navigations,,,
+Deployed Items,Missed in production,"Yes
+yes",,,
+Deployed Items,Missed in production,Edit Project,,,
+Deployed Items,Missed in production,"Yes
+yes",,,
+Deployed Items,Missed in production,Notification Emails,,,
+Deployed Items,Missed in production,NA,,,
+Deployed Items,Missed in production,NA,,,

@@ -1,0 +1,338 @@
+# 20-MAY26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+ 
+@Harika Guntamukkala
+ 
+Release date
+ : 2026.05.20
+ 
+DB changes
+ : 
+Connect
+ : release/2026.05.20
+Platform
+ : release/2026.05.20
+Notification : 
+No Change
+ 
+Branch
+  : release/2026.05.20
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 MC1 Core      
+    
+                        
+ : 2026.05.20.0
+Chip1 Account         
+    
+                        
+ : 2026.05.20.0
+Chip1 Transaction  
+    
+                        
+ : 2026.05.20.1
+Chip1 CRM WebUI                 
+    
+          
+: 2026.05.20.3
+Chip1 WebUI                 
+    
+                     
+: 2026.05.20.0
+fn-identity                     
+    
+                     
+: 2026.05.20.0
+fn-connect                    
+    
+                     
+: 2026.05.20.2
+
+## LIST OF DEPLOYED ITEMS:
+
+@Harika Guntamukkala
+ 
+fix(textarea): preserve full email text when pasting into multiline fields (
+#4035
+) 
+verified
+What's the problem
+  When users copy an email body and paste it into a multiline Notes field (e.g. 
+Create Activity → Notes
+), only the table-like row from the email lands in the field. The greeting, message body, and signature are silently dropped.
+  Reported via user feedback:
+	"When copy/pasting an email message, I can only paste in the info in a table, not from text. Please change so that 100% of the email messages can be copy/pasted despite format inside email."
+feat: Create bulk offers modal (
+#4033
+) - 
+verified
+Bulk offer creation from SR list view
+Bulk Send Offer Request from SR List View (Missing Feature) — No option to select multiple SRs and send a single offer request to a supplier. Must go inside each SR individually.
+Bulk offer request action to be supported from SR list view when the supplier is the same. If the supplier is not existing/or different we wont let them bulk create. We will create multiple individual offer requests for all the MPN's selected. 1 per each MPN
+Invoice sync  
+OB : Account, Contact, allocation(stockId, quantity and landed cost)  sync fix - 
+IB : Commission, allocation(stockId, quantity and landed cost) 
+SR microdashboard enhancements 
+Verified
+New
+ — SR created, not yet assigned, less than 48 hours old
+Assigned
+ — assigned to a buyer
+Backordered
+ — created more than 48 hours ago and not yet in a completed/PO-created status
+On Hold
+ — everything that is tagged as on hold
+Completed
+ — PO created/ Procurement completed
+Quote PDF : Hongkong address fix, tel, email info was missing
+CHP-5631
+: ContactCard: add website display and link functionality to contact summary card (
+#4028
+) 
+Verified
+Quotes :   
+Verified
+Added multiple quotes send on RFQLine Quotes Tabs (
+#4025
+)
+Add fundcode, Shipping address, incoterms to Quote level
+In RFQ Quote list : Add xCRM Quote link for xCRM Ids 
+Verified
+Sourcing:  
+Verified
+Source Offers section fix in part sourcing
+eliminate duplicate /filter requests and remove GroupByEntity toggle (
+#4021
+) 
+Eliminate duplicate 
+/filter
+ requests by deriving filter options from data query responses instead of a separate API call
+Remove 
+GroupByEntity
+ toggle from sourcing list controls (no longer displayed; always 
+true
+ for non-Summary tabs)
+Strip dead 
+useEffect
+ in 
+SourcingList
+ that set 
+groupByEntity: false
+ for Market Activity (never fired, behaviourally wrong)
+Expose 
+filters
+ from 
+marketActivityQueryOptions
+ and 
+stockQueryOptions
+ so components can reuse them
+Add reusable 
+useSourcingDynamicFilters
+ hook to sync filter options from data queries into the shared filter store
+Fix VAT autofill handling on blur and checkbox change (
+#4017
+) - 
+Verified
+ Addresses an issue where VAT autofill was not functioning correctly when the user interacted with the blur event or toggled the checkbox.
+Offer microdashboard changes (
+#4018
+) 
+Verified
+@Deepti Vaidyula
+ 
+Accounts List: add purchase order units column to table (
+#4016
+) 
+QE Remarks: Verified
+Support attaching duplicate contacts to accounts (
+#4027
+)
+QE Remarks: 
+Teams #: May20_02 : 
+Creating/attaching duplicate contact to an account is failing. Go to Accounts -> Create Contact -> Fill duplicate contact details (email, phone) -> 
+Gives error
+Sourcing request: Added target unit price option in sr list view (
+#4019
+)
+QE Remarks: Verified
+Opportunity: implement smooth scrolling to account fields upon selection (
+#4029
+)
+QE Remarks: Verified
+Campaign: improve campaign goal action dropdown with descriptions, clean up signature form (
+#4026
+) 
+Verified
+feat:
+ show action descriptions in success action dropdown using two-row 
+SearchItemText
+ pattern matching campaign goal selector
+fix:
+ strip HTML and collapse long bodies in email conversation MessagesTab for cleaner reply display
+QE Remarks: Verified
+fix(AppBreadcrumbs): hoist on scroll only, not on overflow (
+#4030
+) 
+Verified
+Fix:
+ breadcrumbs no longer hoist (translate/scale up into the header) just because their content was too long on small screens. The old 
+hoist
+ mode gated on 
+overflowed && scrollProgressed
+, so a long crumb trail would shrink itself the moment it overflowed even without any scroll. Hoisting is now driven purely by scroll progress.
+UX: replace selection-dependent FABs with footer action bars (
+#4032
+) 
+Verified
+ When a user selects rows in a list, bulk actions used to hide inside the FAB menu. You'd select rows and not know an action became available. This PR moves those actions into a bar that fades in over the table footer next to the rows you just selected.
+What you'll see
+Sourcing Requests, Opportunities, Sourcing summary
+: bulk actions move into the footer bar; the FAB is gone (it had no other items). 
+Verified
+Purchase Orders, RFQ list, RFQ Line, Contacts
+: FAB keeps only the Create action; bulk actions move into the footer bar. 
+Verified
+Contact Details RFQ tab
+: Update RFQ Status now appears on the nested RFQ table where you actually select rows, not on the entity FAB. 
+Verified
+Sourcing Requests list — All / Offer Request / Purchase Request / Offers tabs
+Opportunities list 
+Verified
+Purchase Orders — POs tab 
+Verified
+Purchase Orders — PO Lines tab 
+Verified
+Purchase Orders — Receiving Lines tab 
+Verified
+Purchase Order Details — Lines tab (existing bar gains Update QC Inspector) 
+Verified
+Requests (RFQ) list — both PO-style and Line view 
+Verified
+Contact Details — RFQ tab 
+Verified
+RFQ Line Details — Quotes tab 
+Verified
+Sourcing — Summary tab 
+Verified
+Contacts list 
+Verified
+Sourcing — Sales Activity / Purchasing Activity / Market Activity / Stock tabs (empty FAB removed) 
+Verified
+Contact Details — entity FAB (Update RFQ Status item removed; moved to the RFQ-tab bar above) 
+Verified
+RFQ Line Details — entity FAB (selection-only quote actions removed; Generate PDF for the whole quote stays) 
+Verified
+
+https://chip1.canny.io/apex-1-feedback/p/unable-to-copy-paste-full-email-message-from-customer-to-a…
+Verified
+What changed
+  Multiline 
+FormikText
+ paste handling no longer treats every email as "tabular content". When the clipboard contains an email body (prose around a small inline table, or a body wrapped in a layout table — both common in Outlook/Gmail HTML), the paste now falls through to the browser's normal paste, preserving the full text exactly as it appeared in the email.
+What still works
+  Pasting genuine tables — from Excel, Google Sheets, web tables, etc. — continues to be auto-formatted into aligned columns inside the textarea, same as before.
+How to verify
+Open any email in Outlook / Gmail that contains a greeting, a short body, and at least one row/table-like item, plus a signature.
+Select the entire message and copy.
+In CRM, open 
+Create Activity
+ (or any modal with a multiline Notes field) and paste into Notes.
+Expected:
+ the full message text lands in the field — greeting, body, item line, and signature.
+Bonus: copy a few cells from Excel/Sheets and paste into the same field — should still format as an aligned table.
+update: use quote crm id fallback for rfq quote links (
+#4034
+)
+GI line Sync(only till stage, waiting for xCRM release to Prod)
+QE Remarks: 
+ 
+I have created two GI lines on xcrm and the sync is failing. correlation_id: d55bfa18-5444-11f1-8eb1-494774d88896
+Create Stock (
+#4023
+) 
+Verified
+fix(stockMenu): suspend Add Arrival until PO loads to prevent late pop-in (UX) (
+#4024
+) 
+Verified
+SR/SO/allocation): exclude cancelled stocks (
+#4012
+) 
+Verified
+SO or SR manual allocation: Cancelled stock should not be shown while allocating stock lines to SO or SR.
+ "Add Arrival" in the Warehouse Stock row menu no longer pops in late — it shows a brief skeleton while loading, then resolves smoothly. 
+Verified
+ Test plan 
+Open row menu on a stock with a linked PO — confirm skeleton, then "Add Arrival" appears (or stays hidden) without flicker
+Open row menu on a stock without a PO — confirm no skeleton flicker
+WarehouseStock: add CRR PDF generation via context menu (CRM and MC1) (
+#4022
+) 
+Verified
+xcrm to apex - GI 
+However, seeing only 2 lines in Apex: - fixed : 
+QE Remarks: 
+ 
+I have created two GI lines on xcrm and the sync is failing. correlation_id: d55bfa18-5444-11f1-8eb1-494774d88896
+Sales Person - fixed - Role Not showing on UI 
+Verified
+Box Count - synced in DB - Syncing 
+Verified
+Weight Unit - already there -  synced in DB 
+Verified
+Length - already there - synced in DB 
+Verified
+Width - already there - synced in DB 
+Verified
+Height - already there - synced in DB 
+Verified
+
+## ISSUES ON STAGE:
+
+Teams #: May20_01 : 
+Updating 'General' section in accounts in giving the following error. Seeing it for all accounts: 
+Fixed
+
+https://crm.stage.chip1.info/accounts/6964c3520e2c5d471eae127c
+{"status":500,"message":"Index 0 out of bounds for length 0"}
+Seeing Sales Person details as empty under SO details page-> General section
+
+https://crm.stage.chip1.info/sales/orders/6a0d7d9ecb805637c535cc6e/line/6a0d7d9ecb805637c535cc6c
+T
+eams #: May20_02 : 
+Creating/attaching duplicate contact to an account is failing. Go to Accounts -> Create Contact -> Fill duplicate contact details (email, phone) -> 
+Gives error. 
+NOT an ISSUE
+{
+    "status": 400,
+    "message": "A contact already exists with at-least one same email address and at-least one same phone number",
+    "errorCode": "CONTACT_CODE_014"
+}
+Seeing blank space in the micro dashboard area under Offer Requests, Purchase Requests list views in sourcing requests.
+ Fixed
+Teams #: May20_03: 
+I have created two GI lines on xcrm and the sync is failing. correlation_id: d55bfa18-5444-11f1-8eb1-494774d88896
+Logs
+US26SO00880 
+US26PO00623 
+400 Bad Request: "{"status":400,"message":"Stock line with crmId '21170' already exists. Duplicate stock lines are not allowed for xCRM shipment creation.","errorCode":"SHP_004"}"
+P
+romisedDeliveryDate is not saved in UI post SO creation. 
+
+https://crm.stage.chip1.info/sales/orders/6a0d7d9ecb805637c535cc6e/line/6a0d7d9ecb805637c535cc6c
+correlationid : 0eb33d3b-1f6a-4bd4-84e8-7c5d8f69d8b2
+Screenshot 2026-05-20 at 2.55.34 PM.png
+seeing different micro dashboard cards in offer requests and purchase requests
+Seeing different micro dashboard cards in offer requests and purchase requests
+⁠
+IB : Commission, allocation(stockId, quantity and landed cost)  -----> 
+Seeing mongoid(6a0dcecccb805637c535cced) instead of order id

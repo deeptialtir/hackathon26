@@ -1,0 +1,138 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Harika Guntamukkala",,
+Metadata,Release Info,Release date, 2025.09.30,,
+Metadata,Release Info,DB changes,No,,
+Metadata,Release Info,Branch,Chip1-part: release/2025.09.30,,
+Metadata,Release Info,Chip1-transaction,hotfix/2025.09.30,,
+Artefacts,Artefacts,Chip1 Transaction,2025.09.30.0,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,QE documentation link,https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh,,
+Deployed Items,Private ( https,"//app.clickup.com/t/8651091/CHP-3198
+)",,,
+Deployed Items,Bugs in build,Missed in production: - ## MC1 SANITY TESTS,,,
+Deployed Items,Note,The sanity tests to check will be selected based on the release,,,
+Deployed Items,Note,Feature/Flow,,,
+Deployed Items,Note,Stage,,,
+Deployed Items,Note,Prod,,,
+Deployed Items,Note,Remarks,,,
+Deployed Items,Note,New User Signup from mc1,,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,Mc1 user invite - signup,,,
+Deployed Items,Note,On stage should suffice,,,
+Deployed Items,Note,"Upload Bom and verify in CRM
+yes
+yes",,,
+Deployed Items,Note,"Upload Excess and verify in CRM
+yes
+yes",,,
+Deployed Items,Note,Manual RFQ,,,
+Deployed Items,Note,RFQ update,,,
+Deployed Items,Note,RFQ - multiline,,,
+Deployed Items,Note,Active Quote (create),,,
+Deployed Items,Note,Active Quote (edit),,,
+Deployed Items,Note,Active quote - multiline,,,
+Deployed Items,Note,Sales Order (create),,,
+Deployed Items,Note,Sales Order (edit),,,
+Deployed Items,Note,Sales Order - multiline,,,
+Deployed Items,Note,Quality Control (PO number),,,
+Deployed Items,Note,Invoice generation,,,
+Deployed Items,Note,NA,,,
+Deployed Items,Note,NA,,,
+Deployed Items,Note,Invoice generation - shipping in 2 lots,,,
+Deployed Items,Note,NA,,,
+Deployed Items,Note,NA,,,
+Deployed Items,Note,Lead Account & Transfer,,,
+Deployed Items,Note,NA,,,
+Deployed Items,Note,NA,,,
+Deployed Items,Note,Bids,,,
+Deployed Items,Note,On stage should suffice,,,
+Deployed Items,Note,"Parts Tracker
+yes",,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,"Search
+yes",,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,"Page Navigations
+yes
+yes",,,
+Deployed Items,Note,"Edit Project
+yes
+yes",,,
+Deployed Items,Note,Notification Emails,,,
+Deployed Items,Note,NA,,,
+Deployed Items,Note,NA,,,
+Deployed Items,Note,"Download excess and Bom Template, fill and upload.
+yes
+yes",,,
+Deployed Items,Note,NA,,,
+Deployed Items,Note,"Conceirge Service
+yes
+yes",,,
+Deployed Items,Note,"Sorting
+yes
+yes",,,
+Deployed Items,Note,NA,,,
+Deployed Items,Note,"Filters
+yes
+yes",,,
+Deployed Items,Note,NA,,,
+Deployed Items,Note,The sanity tests to check will be selected based on the release,,,
+Deployed Items,Note,Feature/Flow,,,
+Deployed Items,Note,Stage,,,
+Deployed Items,Note,Production,,,
+Deployed Items,Note,Remarks,,,
+Deployed Items,Note,"Create BOM in MC1, check in xcrm and new crm
+yes
+yes",,,
+Deployed Items,Note,"Create RFQ in MC1, check in xcrm and crm",,,
+Deployed Items,Note,Upload BOM from CRM,,,
+Deployed Items,Note,"Yes
+yes",,,
+Deployed Items,Note,"Page Navigations
+yes
+yes",,,
+Deployed Items,Note,"Deep links for Accounts, RFQs, Quotes and Orders
+yes
+yes",,,
+Deployed Items,Note,"Edit Project
+yes
+yes",,,
+Deployed Items,Note,"Global Search
+yes
+yes",,,
+Deployed Items,Note,"Filters
+yes
+yes",,,
+Deployed Items,Note,"Sorting of tables
+yes
+yes",,,
+Deployed Items,Note,"Page Search
+yes
+yes",,,
+Deployed Items,Note,"Download excess and Bom Template, fill and upload.
+yes
+yes",,,
+Deployed Items,Note,"Conceirge Service
+yes
+yes",,,
+Deployed Items,Note,Microdashboard counts,,,
+Deployed Items,Note,"Share project and show in mc1
+yes
+yes",,,
+Deployed Items,Note,Create Contact from crm,,,
+Deployed Items,Note,NA,,,
+Deployed Items,Note,Invite Contact from crm,,,
+Deployed Items,Note,NA,,,
+Deployed Items,Note,Create Task,,,
+Deployed Items,Note,FAB icons - for all,,,
+Deployed Items,Note,FAB - icon actions - Take a note/Activity/Task,,,
+Deployed Items,Note,Light mode - dark mode,,,
+Deployed Items,Note,Saved Views,,,
+Deployed Items,Note,No,,,
+Deployed Items,Note,NA,,,
+Deployed Items,Note,"Projects - price refresh
+yes
+yes",,,

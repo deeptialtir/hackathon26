@@ -1,0 +1,108 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good - Conditional sign-off,,
+Metadata,Release Info,Prod release owner,@Deepti Vaidyula,,
+Metadata,Release Info,DB changes,Connect : No changes,,
+Metadata,Release Info,Platform,No changes,,
+Metadata,Release Info,Notification, No changes,,
+Metadata,Release Info,Branch,hotfix/2025.10.28,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2025.10.28.1,,
+Artefacts,Artefacts,Chip1 Account,2025.10.28.1,,
+Artefacts,Artefacts,Chip1 Part,2025.10.28.1,,
+Artefacts,Artefacts,Chip1 Transaction,2025.10.28.5,,
+Artefacts,Artefacts,fn-connect,2025.10.28.0,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,QE documentation link,https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh,,
+Deployed Items,General,Backend changes,,,
+Deployed Items,General,RFQ Line item list populating Account for migrated records,,,
+Deployed Items,General,Only UI changes,,,
+Deployed Items,General,"Dashboard minor adjustments
+add source and date columns in part health and update add alternative modal
+enable sorting on RFQ List
+enhance contact display in RFQ list
+pass sort from list loader
+update orders list to include incoCity in shippingInfo
+update rfq filters for account, contact, part and project list",,,
+Deployed Items,Fix,Accounts Parts Tab: Fixed part comparison action issue,,,
+Deployed Items,Fix,UAT Refactorings on Contact List and Contact Details and News,,,
+Deployed Items,Fix,Account details fab menu,,,
+Deployed Items,Fix,More info on Part Activity and Part health changes,,,
+Deployed Items,Fix,Part Alternatives,,,
+Deployed Items,Fix,Replaced,,,
+Deployed Items,Fix,"Description
+text field with",,,
+Deployed Items,Fix,"Notes
+text area in the “Add Alternative” modal, along with an info tooltip (text:",,,
+Deployed Items,Fix,"Key Differences
+).",,,
+Deployed Items,Fix,Renamed column,,,
+Deployed Items,Fix,"Description
+to",,,
+Deployed Items,Fix,"Key Differences
+(values for SE alternatives come from UI mapping, and for user-added alternatives from notes).",,,
+Deployed Items,Fix,Added a new column,,,
+Deployed Items,Fix,"Source
+with values",,,
+Deployed Items,Fix,"Silicon Expert Alternatives
+and",,,
+Deployed Items,Fix,"Other Alternatives
+.",,,
+Deployed Items,Fix,Part Health,,,
+Deployed Items,Fix,Updated navbar and breadcrumb text from,,,
+Deployed Items,Fix,"Health Report
+to",,,
+Deployed Items,Fix,"Part Health
+.",,,
+Deployed Items,Fix,Added,,,
+Deployed Items,Fix,"Updated On
+|",,,
+Deployed Items,Fix,"Previous
+column.
+update rfq filters for account, contact, part and project list: Krupa",,,
+Deployed Items,Fix,"Added filters (Status, Account Owner, Contact, Requirement Level, Last Updated) to Account->RFQ Page",,,
+Deployed Items,Fix,"Added filters (Account, Status, Account Owner, Requirement Level, Last Updated) to Contact->RFQ Page",,,
+Deployed Items,Fix,"Added filters (Account, Status, Account Owner, Contact, Requirement Level, Last Updated) to Parts->RFQ Page",,,
+Deployed Items,Fix,"Added filters (Account, Status, Account Owner, Contact, Requirement Level, Last Updated) to Project->RFQ Page",,,
+Deployed Items,Fix,Accounts Parts Tab: Fixed part comparison action issue:,,,
+Deployed Items,Fix,Added compare parts modal to Account->Parts tab,,,
+Deployed Items,Fix,"UAT Refactorings on Contact List and Contact Details and News:
+added fixed height for news contaciner
+cloning filters from AccountList to ContactList
+decrease the width of salutation field
+decreasing the width of suffix too
+remove validation on Account in CreateContact Modal
+made dimensionUnits as non mandatory
+moved setCreditInfo to a new line
+refactored AccountCountryFilter to follow TagsFilter
+made language not required",,,
+Deployed Items,Issues found on stage,Section Path,,,
+Deployed Items,Issues found on stage,Filters Not Working,,,
+Deployed Items,Issues found on stage,Missing Columns,,,
+Deployed Items,Issues found on stage,Account → RFQ Lines,,,
+Deployed Items,Issues found on stage,"Account Owner, Requirement Level",,,
+Deployed Items,Issues found on stage,Requirement Level,,,
+Deployed Items,Issues found on stage,Contact → RFQ Lines,,,
+Deployed Items,Issues found on stage,"Account Owner, Last Update",,,
+Deployed Items,Issues found on stage,Requirement Level,,,
+Deployed Items,Issues found on stage,Contact → RFQ,,,
+Deployed Items,Issues found on stage,"Account Owner, Status",,,
+Deployed Items,Issues found on stage,Requirement Level,,,
+Deployed Items,Issues found on stage,Specific Part → RFQs → RFQ Lines,,,
+Deployed Items,Issues found on stage,"Last Updated,  Contact",,,
+Deployed Items,Issues found on stage,"Contact, Account, Requirement Level",,,
+Deployed Items,Issues found on stage,Specific Part → RFQs,,,
+Deployed Items,Issues found on stage,"Status, Account Owner",,,
+Deployed Items,Issues found on stage,Requirement Level,,,
+Deployed Items,Issues found on stage,Projects → RFQs → RFQ Lines,,,
+Deployed Items,Issues found on stage,"Last Updated, Account Owner",,,
+Deployed Items,Issues found on stage,Requirement Level,,,
+Deployed Items,Issues found on stage,Projects → RFQs,,,
+Deployed Items,Issues found on stage,"Status, Account Owner",,,
+Deployed Items,Issues found on stage,Requirement Level,,,
+Deployed Items,Issues found on stage,Contacts,,,
+Deployed Items,Issues found on stage,"Last Activity, Tags and Account Owner
+## MC1 SANITY TESTS",,,
+Deployed Items,Issues found on stage,"Basic Sanity looks good
+## CRM SANITY TESTS",,,
+Deployed Items,Issues found on stage,Basic Sanity looks good,,,

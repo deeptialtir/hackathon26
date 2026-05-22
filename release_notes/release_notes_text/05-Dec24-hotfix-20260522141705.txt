@@ -1,0 +1,32 @@
+# 05-DEC24-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+@Deepti Vaidyula
+ 
+@Umamahesh
+ 
+Release date
+ : 2024.12.05
+DB changes
+ : None
+Branch
+  : hotfix/2024.12.05
+Components Involved
+ 
+& Artefacts
+: 
+Artefact : hotfix-2024.12.05.0
+
+## WHAT'S FIXED FOR THE HOTFIX?
+
+Fix country code undefined on dashboard. If phone number is sent without country it is display as Undefined in the UI. 
+Correct spelling of Low Risk part to `Low Risk Parts`
+
+## TESTING NOTES
+
+Check only phone number to be displayed when no country code present
+Check default contacts when contact info not present for the account
+Logout and login to see token refreshment
+Smoke tests

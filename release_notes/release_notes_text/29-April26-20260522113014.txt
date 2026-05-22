@@ -1,0 +1,243 @@
+# 29-APRIL26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2026.04.29
+ 
+DB changes
+ : 
+Connect
+ : No change
+Platform
+ : No change
+Notification : 
+No change
+ 
+Branch
+  : release/2026.04.29
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Account        
+    
+                        
+  : 2026.04.29.0
+Chip1 Transaction  
+    
+                        
+ : 2026.04.29.4
+Chip1 CRM WebUI                 
+    
+          
+ : 2026.04.29.3
+Chip1 Webui                                       
+    : 2026.04.29.0
+
+## LIST OF DEPLOYED ITEMS
+
+@Harika Guntamukkala
+ 
+Invoice changes 
+Verified
+feat: enhance SendQuoteModal with invitation logic and email autofill functionality (
+#3798
+)  
+Verified
+Auto-invite: Silently invite selected contact to MyChip1 (if not already joined) before sending quote
+Email UX: Auto-fill email from primary contact only when user hasn't manually edited it; clear it safely on contact clear
+Quote link: Include a clickable MyChip1 quote link in the default message body
+fix(sales orders): OrderOverview MPN overflow tooltip layout (
+#3797
+) 
+Verified
+Show overflow MPNs as a clean vertical list in tooltip (links when available)
+See PR for images.
+Fix: default date-picker format across crm app (
+#3792
+)
+fix: sourcing list misc changes (
+#3796
+)  
+Verified
+In Sourcing Sales Activity list columns remove UI based role-based cost hiding
+Export 
+@chip1/filtering
+ package entry via main/exports for cleaner imports
+Add 
+xcrmRoha
+ and 
+rohsVersion
+ fields to market activity tab
+Invoice - Create Invoice from shipment, use 
+crmNumber
+ for invoice # (
+#3764
+) 
+Verified
+Addition of the optional 
+crmNumber
+ field to the invoice model
+Prioritization of 
+crmNumber
+ in invoice models, UI components, and summary sections
+New "Create Invoice" action in the shipment details page for shipments with status "Ready to Ship"
+MC1 Warehouse - Add Copy icons to some cells (
+#3802
+) - 
+Verified
+MC1 WarehouseStock - Rename SPN filter to PO Number, refresh columns visibility config (hide 3 cols) (
+#3793
+) 
+Verified
+@Deepti Vaidyula
+ 
+Inbound shipment 
+Verified
+enhancements(sr-allocation): Sr Allocation similar to So Allocation (
+#3803
+) 
+Verified
+Renamed action from Add purchase order to Add Allocation and also updated the modal title
+Added Unit to allocate column which is editable
+fix: sr issues (
+#3794
+) 
+Verified
+Fix alternate part info not passing to SR — test scenarios (SR from RFQ vs SR from SO) and fix where it breaks
+Add SR from SO action: restrict the user with message "Please have all the approvals secured to raise a Sourcing Request" if order approvals are not there
+ Removes the standalone 
+PoFilter
+ in the WarehouseStock panel and forces the warehouse 
+Verified
+stock table to reset the previously stored column visibility state.
+PO & PO Line detail - Update shipping info accordion (
+#3800
+) 
+Verified
+Refactor ECCN fields: consolidate helper text and remove redundancy (
+#3786
+) 
+Verified
+ Consolidates dual-use ECCN fields into helper text and removes redundant components. 
+Verified
+Refactor/filtering improvements (
+#3791
+) 
+Verified
+Shipment - Pass shipment type field (
+#3801
+) 
+Verified
+Stock: update mark as QCReceived flow (
+#3784
+) 
+Verified
+Update : filters on Opportunities , Label changes (
+#3785
+) 
+Verified
+Status filter: hide for Opportunities, keep for RFQ 
+Verified
+Rename "Sales Owner" label on filters to "Sales Person" for both RFQ and Opportunities 
+Verified
+Add Region filter on Opportunities (already present in RFQ) 
+Verified
+Add Source filter on Opportunities with multi-select 
+Verified
+Sr Allocation details Island changes 
+@Deepti Vaidyula
+ 
+Verified
+ - Added sr allocation list  
+ - Enable Add allocation button when sr status >= purchase requested
+ - Enable  sr allocation feature-flag till production
+Aditya Jain - 3 Points regarding the SR duplicate issue - 
+STOP 
+creation of SR in Apex during SO approvals happens on xcrm 
+@Deepti Vaidyula
+ 
+Verified
+Let's create SR with RFQ ref(along with SO ref) is created in Apex during tasking in xcrm 
+@Deepti Vaidyula
+ 
+Verified
+Add origin in SR. 
+Verified
+
+https://github.com/altirllc/chip1-webui/pull/3811
+Sandeep Thatikonda Om Sreenivasan - this is related to Invoice -> Record payment -> Paid By to show only account's contacts + Create manual; and one UX change for Shipping Details. Working on the other points (separate PR)
+ 
+Fix for invoice update  
+Invoice -> Record payment -> Paid By to show only account's contacts + Create manual; and one UX change for Shipping Details.
+Stopping duplicate SR creation for SO 
+Verified
+Vinay's changes as mentioned 
+here
+  
+Verified
+Dev items
+Refactor: Modularize filtering infrastructure for reuse (own package, dev only) (
+#3789
+) 
+Refactoring and modularization
+: Extracted generic filter components, utilities, and infrastructure into a standalone package, 
+@chip1/filtering
+, for shared use across the CRM and MC1 applications.
+Filter imports
+: Updated CRM imports to use the shared 
+@chip1/filtering
+ package, removing duplicate logic in the CRM codebase.
+Replace inline filters with CRM-style modal filter system (
+#3795
+) 
+Creation of a 
+WarehouseStockFilterBarWrapper
+ using 
+createFilterBarWrapper
+Addition of a 
+StockPageTopBar
+ featuring a search input and filter button, replacing the inline filters panel
+Implementation of 
+FiltersModal
+ registered in MC1's modal registry
+Replacement of inline warehouse filters with a modal system using the new 
+useWarehouseStockModalFilters
+ and 
+useWarehouseStockFilterDefinitions
+ hooks
+Open Issues on stage:
+1. Invoice / Line Details Page
+Under Invoicing & Payment Details: 
+Billing Contact & Email are not being populated
+Invoice Delivery Mode is not being populated
+Under Payment Details ->
+ 
+Tax rate is not being populated
+2. Invoice PDF – Missing Data
+Freight Costs and Miscellaneous Costs
+Date Shipped
+US Dual / Local Dual (available in SO)
+COO (available in Offer)
+Product (available in SO)
+Description (available in Offer)
+Invoice : 
+
+https://crm.stage.chip1.info/sales/invoices/69f210f62c127e19d18c41e6
+Offer : 
+
+https://crm.stage.chip1.info/purchasing/offers/69f20f65b63293745b5d00db
+SO : 
+
+https://crm.stage.chip1.info/sales/orders/69f2051d1750ea101ca13afe/line/69f2051d1750ea101ca13afc

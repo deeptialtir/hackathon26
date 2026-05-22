@@ -1,0 +1,191 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,@Deepti Vaidyula @Harika Guntamukkala,,
+Metadata,Release Info,Release date,2026.05.20,,
+Metadata,Release Info,DB changes,Connect : release/2026.05.20,,
+Metadata,Release Info,Platform,release/2026.05.20,,
+Metadata,Release Info,Notification, No Change,,
+Metadata,Release Info,Branch,release/2026.05.20,,
+Artefacts,Artefacts,Chip1 Account,2026.05.20.0,,
+Artefacts,Artefacts,Chip1 Transaction,2026.05.20.1,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2026.05.20.3,,
+Artefacts,Artefacts,Chip1 WebUI,2026.05.20.0,,
+Artefacts,Artefacts,fn-identity,2026.05.20.0,,
+Artefacts,Artefacts,fn-connect,2026.05.20.2,,
+Deployed Items,fix(textarea),preserve full email text when pasting into multiline fields (,,,
+Deployed Items,fix(textarea),),verified,,
+Deployed Items,fix(textarea),What's the problem,,,
+Deployed Items,fix(textarea),When users copy an email body and paste it into a multiline Notes field (e.g.,,,
+Deployed Items,fix(textarea),"Create Activity → Notes
+), only the table-like row from the email lands in the field. The greeting, message body, and signature are silently dropped.
+""When copy/pasting an email message, I can only paste in the info in a table, not from text. Please change so that 100% of the email messages can be copy/pasted despite format inside email.""",,,
+Deployed Items,feat,Create bulk offers modal (,,,
+Deployed Items,feat,),verified,,
+Deployed Items,feat,Bulk offer creation from SR list view,,,
+Deployed Items,feat,Bulk Send Offer Request from SR List View (Missing Feature) — No option to select multiple SRs and send a single offer request to a supplier. Must go inside each SR individually.,,,
+Deployed Items,feat,Bulk offer request action to be supported from SR list view when the supplier is the same. If the supplier is not existing/or different we wont let them bulk create. We will create multiple individual offer requests for all the MPN's selected. 1 per each MPN,,,
+Deployed Items,feat,Invoice sync,,,
+Deployed Items,OB,"Account, Contact, allocation(stockId, quantity and landed cost)  sync fix - IB : Commission, allocation(stockId, quantity and landed cost)",,,
+Deployed Items,OB,SR microdashboard enhancements,Verified,,
+Deployed Items,OB,"New
+— SR created, not yet assigned, less than 48 hours old",,,
+Deployed Items,OB,"Assigned
+— assigned to a buyer",,,
+Deployed Items,OB,"Backordered
+— created more than 48 hours ago and not yet in a completed/PO-created status",,,
+Deployed Items,OB,"On Hold
+— everything that is tagged as on hold",,,
+Deployed Items,OB,"Completed
+— PO created/ Procurement completed",,,
+Deployed Items,Quote PDF,"Hongkong address fix, tel, email info was missing",,,
+Deployed Items,CHP-5631,ContactCard: add website display and link functionality to contact summary card (,,,
+Deployed Items,CHP-5631,),Verified,,
+Deployed Items,Quotes,"Added multiple quotes send on RFQLine Quotes Tabs (
+)",,,
+Deployed Items,Quotes,"Add fundcode, Shipping address, incoterms to Quote level",,,
+Deployed Items,In RFQ Quote list,Add xCRM Quote link for xCRM Ids ,Verified,,
+Deployed Items,Sourcing,"Source Offers section fix in part sourcing
+eliminate duplicate /filter requests and remove GroupByEntity toggle (
+)",,,
+Deployed Items,Sourcing,"Eliminate duplicate
+/filter
+requests by deriving filter options from data query responses instead of a separate API call",,,
+Deployed Items,Sourcing,Remove,,,
+Deployed Items,Sourcing,"GroupByEntity
+toggle from sourcing list controls (no longer displayed; always
+true
+for non-Summary tabs)",,,
+Deployed Items,Sourcing,"Strip dead
+useEffect
+in",,,
+Deployed Items,Sourcing,"SourcingList
+that set
+for Market Activity (never fired, behaviourally wrong)",,,
+Deployed Items,groupByEntity,"Expose
+filters
+from
+marketActivityQueryOptions
+and
+stockQueryOptions
+so components can reuse them",,,
+Deployed Items,groupByEntity,"Add reusable
+useSourcingDynamicFilters
+hook to sync filter options from data queries into the shared filter store",,,
+Deployed Items,groupByEntity,Fix VAT autofill handling on blur and checkbox change (,,,
+Deployed Items,groupByEntity,),Verified,,
+Deployed Items,groupByEntity,Addresses an issue where VAT autofill was not functioning correctly when the user interacted with the blur event or toggled the checkbox.,,,
+Deployed Items,groupByEntity,Offer microdashboard changes (,,,
+Deployed Items,groupByEntity,")
+add purchase order units column to table (
+)",Verified,@Deepti Vaidyula,
+Deployed Items,QE Remarks,"Support attaching duplicate contacts to accounts (
+)",,,
+Deployed Items,Teams #,"Creating/attaching duplicate contact to an account is failing. Go to Accounts -> Create Contact -> Fill duplicate contact details (email, phone) ->",,,
+Deployed Items,Teams #,Gives error,,,
+Deployed Items,Sourcing request,"Added target unit price option in sr list view (
+)
+implement smooth scrolling to account fields upon selection (
+)
+improve campaign goal action dropdown with descriptions, clean up signature form (",,,
+Deployed Items,Campaign,")
+show action descriptions in success action dropdown using two-row",Verified,,
+Deployed Items,feat,"SearchItemText
+pattern matching campaign goal selector
+strip HTML and collapse long bodies in email conversation MessagesTab for cleaner reply display
+hoist on scroll only, not on overflow (",,,
+Deployed Items,fix(AppBreadcrumbs),")
+breadcrumbs no longer hoist (translate/scale up into the header) just because their content was too long on small screens. The old
+hoist
+mode gated on
+overflowed && scrollProgressed
+, so a long crumb trail would shrink itself the moment it overflowed even without any scroll. Hoisting is now driven purely by scroll progress.
+replace selection-dependent FABs with footer action bars (",Verified,,
+Deployed Items,UX,),Verified,,
+Deployed Items,UX,"When a user selects rows in a list, bulk actions used to hide inside the FAB menu. You'd select rows and not know an action became available. This PR moves those actions into a bar that fades in over the table footer next to the rows you just selected.",,,
+Deployed Items,UX,What you'll see,,,
+Deployed Items,UX,"Sourcing Requests, Opportunities, Sourcing summary : bulk actions move into the footer bar; the FAB is gone (it had no other items).",Verified,,
+Deployed Items,UX,"Purchase Orders, RFQ list, RFQ Line, Contacts : FAB keeps only the Create action; bulk actions move into the footer bar.",Verified,,
+Deployed Items,Contact Details RFQ tab,"Update RFQ Status now appears on the nested RFQ table where you actually select rows, not on the entity FAB.",Verified,,
+Deployed Items,Contact Details RFQ tab,Sourcing Requests list — All / Offer Request / Purchase Request / Offers tabs,,,
+Deployed Items,Contact Details RFQ tab,Opportunities list,Verified,,
+Deployed Items,Contact Details RFQ tab,Purchase Orders — POs tab,Verified,,
+Deployed Items,Contact Details RFQ tab,Purchase Orders — PO Lines tab,Verified,,
+Deployed Items,Contact Details RFQ tab,Purchase Orders — Receiving Lines tab,Verified,,
+Deployed Items,Contact Details RFQ tab,Purchase Order Details — Lines tab (existing bar gains Update QC Inspector),Verified,,
+Deployed Items,Contact Details RFQ tab,Requests (RFQ) list — both PO-style and Line view,Verified,,
+Deployed Items,Contact Details RFQ tab,Contact Details — RFQ tab,Verified,,
+Deployed Items,Contact Details RFQ tab,RFQ Line Details — Quotes tab,Verified,,
+Deployed Items,Contact Details RFQ tab,Sourcing — Summary tab,Verified,,
+Deployed Items,Contact Details RFQ tab,Contacts list,Verified,,
+Deployed Items,Contact Details RFQ tab,Sourcing — Sales Activity / Purchasing Activity / Market Activity / Stock tabs (empty FAB removed),Verified,,
+Deployed Items,Contact Details RFQ tab,Contact Details — entity FAB (Update RFQ Status item removed; moved to the RFQ-tab bar above),Verified,,
+Deployed Items,Contact Details RFQ tab,RFQ Line Details — entity FAB (selection-only quote actions removed; Generate PDF for the whole quote stays),Verified  - Verified,,https://chip1.canny.io/apex-1-feedback/p/unable-to-copy-paste-full-email-message-from-customer-to-a…
+Deployed Items,Contact Details RFQ tab,What changed,,,
+Deployed Items,Contact Details RFQ tab,Multiline,,,
+Deployed Items,Contact Details RFQ tab,"FormikText
+paste handling no longer treats every email as ""tabular content"". When the clipboard contains an email body (prose around a small inline table, or a body wrapped in a layout table — both common in Outlook/Gmail HTML), the paste now falls through to the browser's normal paste, preserving the full text exactly as it appeared in the email.",,,
+Deployed Items,Contact Details RFQ tab,What still works,,,
+Deployed Items,Contact Details RFQ tab,"Pasting genuine tables — from Excel, Google Sheets, web tables, etc. — continues to be auto-formatted into aligned columns inside the textarea, same as before.",,,
+Deployed Items,Contact Details RFQ tab,How to verify,,,
+Deployed Items,Contact Details RFQ tab,"Open any email in Outlook / Gmail that contains a greeting, a short body, and at least one row/table-like item, plus a signature.",,,
+Deployed Items,Contact Details RFQ tab,Select the entire message and copy.,,,
+Deployed Items,Contact Details RFQ tab,"In CRM, open",,,
+Deployed Items,Contact Details RFQ tab,"Create Activity
+(or any modal with a multiline Notes field) and paste into Notes.
+the full message text lands in the field — greeting, body, item line, and signature.
+copy a few cells from Excel/Sheets and paste into the same field — should still format as an aligned table.
+use quote crm id fallback for rfq quote links (
+)",,,
+Deployed Items,update,"GI line Sync(only till stage, waiting for xCRM release to Prod)",,,
+Deployed Items,QE Remarks,I have created two GI lines on xcrm and the sync is failing. correlation_id: d55bfa18-5444-11f1-8eb1-494774d88896,,,
+Deployed Items,QE Remarks,Create Stock (,,,
+Deployed Items,QE Remarks,")
+suspend Add Arrival until PO loads to prevent late pop-in (UX) (",Verified,,
+Deployed Items,fix(stockMenu),")
+exclude cancelled stocks (",Verified,,
+Deployed Items,SR/SO/allocation),),Verified,,
+Deployed Items,SR/SO/allocation),SO or SR manual allocation: Cancelled stock should not be shown while allocating stock lines to SO or SR.,,,
+Deployed Items,SR/SO/allocation),"""Add Arrival"" in the Warehouse Stock row menu no longer pops in late — it shows a brief skeleton while loading, then resolves smoothly.",Verified,,
+Deployed Items,SR/SO/allocation),Test plan,,,
+Deployed Items,SR/SO/allocation),"Open row menu on a stock with a linked PO — confirm skeleton, then ""Add Arrival"" appears (or stays hidden) without flicker",,,
+Deployed Items,SR/SO/allocation),"Open row menu on a stock without a PO — confirm no skeleton flicker
+add CRR PDF generation via context menu (CRM and MC1) (",,,
+Deployed Items,WarehouseStock,")
+xcrm to apex - GI",Verified,,
+Deployed Items,WarehouseStock,"However, seeing only 2 lines in Apex: - fixed :",,,
+Deployed Items,QE Remarks,I have created two GI lines on xcrm and the sync is failing. correlation_id: d55bfa18-5444-11f1-8eb1-494774d88896,,,
+Deployed Items,QE Remarks,Sales Person - fixed - Role Not showing on UI,Verified,,
+Deployed Items,QE Remarks,Box Count - synced in DB - Syncing,Verified,,
+Deployed Items,QE Remarks,Weight Unit - already there -  synced in DB ,Verified,,
+Deployed Items,QE Remarks,Length - already there - synced in DB ,Verified,,
+Deployed Items,QE Remarks,Width - already there - synced in DB ,Verified,,
+Deployed Items,QE Remarks,Height - already there - synced in DB ,Verified,,
+Deployed Items,Teams #,"Updating 'General' section in accounts in giving the following error. Seeing it for all accounts:
+//crm.stage.chip1.info/accounts/6964c3520e2c5d471eae127c
+500,""message"":""Index 0 out of bounds for length 0""}",,,
+Deployed Items,"{""status""",Seeing Sales Person details as empty under SO details page-> General section,,,https://crm.stage.chip1.info/sales/orders/6a0d7d9ecb805637c535cc6e/line/6a0d7d9ecb805637c535cc6c
+Deployed Items,"{""status""",T,,,
+Deployed Items,eams #,"Creating/attaching duplicate contact to an account is failing. Go to Accounts -> Create Contact -> Fill duplicate contact details (email, phone) ->",,,
+Deployed Items,eams #,Gives error.,,,
+Deployed Items,eams #,"NOT an ISSUE
+{
+""A contact already exists with at-least one same email address and at-least one same phone number"",
+""CONTACT_CODE_014""
+}",,,
+Deployed Items,"""errorCode""","Seeing blank space in the micro dashboard area under Offer Requests, Purchase Requests list views in sourcing requests.",,,
+Deployed Items,"""errorCode""",Fixed,,,
+Deployed Items,Teams #,I have created two GI lines on xcrm and the sync is failing. correlation_id: d55bfa18-5444-11f1-8eb1-494774d88896,,,
+Deployed Items,Teams #,Logs,,,
+Deployed Items,Teams #,US26SO00880,,,
+Deployed Items,Teams #,"US26PO00623
+""{""status"":400,""message"":""Stock line with crmId '21170' already exists. Duplicate stock lines are not allowed for xCRM shipment creation."",""errorCode"":""SHP_004""}""",,,
+Deployed Items,400 Bad Request,P,,,
+Deployed Items,400 Bad Request,"romisedDeliveryDate is not saved in UI post SO creation.
+0eb33d3b-1f6a-4bd4-84e8-7c5d8f69d8b2",,,https://crm.stage.chip1.info/sales/orders/6a0d7d9ecb805637c535cc6e/line/6a0d7d9ecb805637c535cc6c
+Deployed Items,correlationid,"Screenshot 2026-05-20 at 2.55.34 PM.png
+seeing different micro dashboard cards in offer requests and purchase requests",,,
+Deployed Items,correlationid,"Seeing different micro dashboard cards in offer requests and purchase requests
+⁠",,,
+Deployed Items,IB,"Commission, allocation(stockId, quantity and landed cost)  ----->",,,
+Deployed Items,IB,Seeing mongoid(6a0dcecccb805637c535cced) instead of order id,,,

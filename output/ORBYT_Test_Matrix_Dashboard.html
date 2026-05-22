@@ -1,0 +1,2272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ORBYT Test Matrix Dashboard</title>
+  <style>
+    :root {
+      --bg: #050914;
+      --panel: rgba(9, 18, 34, 0.88);
+      --panel-strong: rgba(12, 27, 48, 0.96);
+      --line: rgba(123, 252, 255, 0.18);
+      --accent: #43f6c8;
+      --accent2: #7aa7ff;
+      --accent3: #ff4fd8;
+      --text: #eef7ff;
+      --muted: #9db1c8;
+      --warn: #ffc857;
+      --danger: #ff5c7a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(115deg, rgba(5,9,20,0.96), rgba(6,16,31,0.9) 46%, rgba(13,11,29,0.94)),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900' viewBox='0 0 1600 900'%3E%3Crect width='1600' height='900' fill='%23030a14'/%3E%3Cg fill='none' stroke='%2335f2d0' stroke-opacity='.26' stroke-width='1.2'%3E%3Cpath d='M0 180h220l70 70h260l80-80h330l70 70h570'/%3E%3Cpath d='M0 540h360l70-70h210l90 90h310l60-60h500'/%3E%3Cpath d='M230 0v220m420-220v170m530-170v250M980 900V630M410 900V650m850 250V610'/%3E%3C/g%3E%3Cg fill='%237aa7ff' fill-opacity='.72'%3E%3Ccircle cx='220' cy='180' r='5'/%3E%3Ccircle cx='550' cy='250' r='4'/%3E%3Ccircle cx='960' cy='170' r='5'/%3E%3Ccircle cx='430' cy='470' r='5'/%3E%3Ccircle cx='730' cy='560' r='4'/%3E%3Ccircle cx='1100' cy='500' r='5'/%3E%3C/g%3E%3Cg fill='%23ff4fd8' fill-opacity='.45'%3E%3Ccircle cx='1280' cy='240' r='3'/%3E%3Ccircle cx='650' cy='170' r='3'/%3E%3Ccircle cx='1260' cy='610' r='3'/%3E%3C/g%3E%3C/svg%3E");
+      background-attachment: fixed;
+      background-size: cover;
+      color: var(--text);
+      min-height: 100vh;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      padding: 1.5rem 2.5rem 1rem;
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(18px);
+    }
+    .brand { display: flex; align-items: center; gap: 0.9rem; }
+    .orbyt-logo {
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(67,246,200,0.65);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--accent);
+      font-weight: 800;
+      letter-spacing: 0;
+      box-shadow: 0 0 22px rgba(67,246,200,0.26), inset 0 0 20px rgba(122,167,255,0.16);
+      position: relative;
+      background: rgba(5, 13, 27, 0.7);
+    }
+    .orbyt-logo::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 18px;
+      border: 1px solid rgba(255,79,216,0.62);
+      border-radius: 50%;
+      transform: rotate(-24deg);
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.75rem;
+      background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle { color: var(--muted); margin-top: 0.35rem; }
+    .download-hub {
+      color: #03111b;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      text-decoration: none;
+      padding: 0.55rem 0.85rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
+      padding: 1.5rem 2.5rem;
+    }
+    .kpi-card {
+      background: var(--panel);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      border: 1px solid var(--line);
+      box-shadow: 0 14px 32px rgba(0,0,0,0.28);
+    }
+    .kpi-label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+    .kpi-value { font-size: 1.6rem; font-weight: 700; margin-top: 0.35rem; color: var(--accent); }
+    .panels { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; padding: 0 2.5rem 2.5rem; }
+    @media (max-width: 1100px) { .panels { grid-template-columns: 1fr; } }
+    @media (max-width: 760px) {
+      header { align-items: flex-start; flex-direction: column; padding-left: 1rem; padding-right: 1rem; }
+      .kpi-grid, .charts-grid, .panels, section[style] { padding-left: 1rem !important; padding-right: 1rem !important; }
+    }
+    .panel {
+      background: var(--panel);
+      border-radius: 8px;
+      padding: 1.25rem;
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 46px rgba(0,0,0,0.24);
+      backdrop-filter: blur(16px);
+      overflow-x: auto;
+    }
+    .panel h2 { margin: 0 0 1rem; font-size: 1rem; color: var(--accent); }
+    .coverage-bar {
+      height: 10px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 6px;
+      overflow: hidden;
+      margin: 0.5rem 0 1rem;
+    }
+    .coverage-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+    }
+    .item-fill { width: 49.2%; }
+    .feature-fill { width: 92.1%; }
+    .cat-row {
+      display: grid;
+      grid-template-columns: 200px 1fr 48px;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      font-size: 0.8rem;
+    }
+    .cat-label { color: var(--text); }
+    .cat-bar {
+      height: 8px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .cat-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent2), var(--accent));
+    }
+    .cat-pct { color: var(--muted); text-align: right; }
+    .status-pill {
+      display: inline-block;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+    .data-table {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+    }
+    .data-table th, .data-table td {
+      padding: 0.5rem 0.6rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .data-table th { color: var(--muted); font-weight: 600; }
+    .release-table td:nth-child(7) { min-width: 360px; }
+    .feature-bullets {
+      margin: 0;
+      padding-left: 1rem;
+      color: var(--text);
+    }
+    .feature-bullets li { margin: 0.18rem 0; }
+    .muted { color: var(--muted); }
+    .charts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      padding: 0 2.5rem 1.5rem;
+    }
+    .chart-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 18px 46px rgba(0,0,0,0.24);
+      backdrop-filter: blur(16px);
+      min-height: 180px;
+    }
+    .chart-card h2 { margin: 0 0 0.9rem; color: var(--accent); font-size: 0.95rem; }
+    .chart-row {
+      display: grid;
+      grid-template-columns: minmax(96px, 150px) 1fr 48px;
+      gap: 0.65rem;
+      align-items: center;
+      margin: 0.5rem 0;
+      font-size: 0.78rem;
+    }
+    .chart-label {
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .chart-track {
+      height: 8px;
+      border-radius: 5px;
+      background: rgba(255,255,255,0.08);
+      overflow: hidden;
+    }
+    .chart-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent3)); }
+    .chart-value { text-align: right; color: var(--text); }
+    .donut-wrap { display: grid; place-items: center; position: relative; min-height: 96px; }
+    .donut { width: 104px; height: 104px; transform: rotate(-90deg); }
+    .donut-base { fill: transparent; stroke: rgba(255,255,255,0.08); stroke-width: 6; }
+    .donut-segment { fill: transparent; stroke-width: 6; }
+    .donut-total {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    .donut-total small { display: block; color: var(--muted); font-size: 0.62rem; font-weight: 600; }
+    .chart-legend { display: flex; flex-wrap: wrap; gap: 0.45rem 0.75rem; margin-top: 0.75rem; font-size: 0.75rem; color: var(--muted); }
+    .chart-legend span { display: inline-flex; align-items: center; gap: 0.28rem; }
+    .chart-legend i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    .matrix-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .matrix-links a {
+      color: #03111b;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .flow-caption { color: var(--muted); font-size: 0.85rem; margin-bottom: 1rem; }
+    .flow-diagram {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .flow-node {
+      padding: 0.4rem 0.7rem; border-radius: 8px; font-size: 0.75rem; font-weight: 600;
+    }
+    .flow-node.source { background: rgba(108,92,231,0.25); border: 1px solid var(--accent2); }
+    .flow-node.process { background: rgba(0,212,170,0.15); border: 1px solid var(--accent); }
+    .flow-node.target { background: rgba(243,156,18,0.2); border: 1px solid var(--warn); }
+    .flow-arrow { color: var(--muted); font-size: 1.1rem; width: 100%; text-align: center; }
+    footer { text-align: center; color: var(--muted); font-size: 0.75rem; padding: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="orbyt-logo" aria-label="ORBYT logo">O</div>
+      <div>
+        <h1>ORBYT Test Matrix Dashboard</h1>
+        <p class="subtitle">Complex Test Generator Matrix · Generated 2026-05-22 15:50</p>
+      </div>
+    </div>
+    <a class="download-hub" href="ORBYT_Downloads.html">Download Hub</a>
+  </header>
+  <section class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Total Requirements</div>
+          <div class="kpi-value">1689.0</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Tested / Deployed</div>
+          <div class="kpi-value">831.0</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Verified (with TestCase)</div>
+          <div class="kpi-value">706.0</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Untested Gaps</div>
+          <div class="kpi-value">858.0</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">High/Critical Impact</div>
+          <div class="kpi-value">2.0</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">AI Auto-Approve</div>
+          <div class="kpi-value">3.0</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Automation At Risk</div>
+          <div class="kpi-value">131.0</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Releases GO</div>
+          <div class="kpi-value">57.0</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Cross-Platform SYNCED</div>
+          <div class="kpi-value">18.0</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Avg Readiness Score</div>
+          <div class="kpi-value">84.1</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Total Features</div>
+          <div class="kpi-value">164.0</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Features Traced</div>
+          <div class="kpi-value">151.0</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Feature Coverage %</div>
+          <div class="kpi-value">92.1</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Strategy Scenarios</div>
+          <div class="kpi-value">7.0</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Strategy COVERED</div>
+          <div class="kpi-value">7.0</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Strategy GAPs</div>
+          <div class="kpi-value">0.0</div>
+        </div></section>
+  
+  <section class="charts-grid">
+    
+    <div class="chart-card">
+      <h2>Traceability Status</h2>
+      <div class="donut-wrap">
+        <svg viewBox="0 0 40 40" class="donut">
+          <circle class="donut-base" r="16" cx="20" cy="20" />
+          <circle class="donut-segment" r="16" cx="20" cy="20" stroke="#43f6c8" stroke-dasharray="50.80 49.20" stroke-dashoffset="-25.00" /><circle class="donut-segment" r="16" cx="20" cy="20" stroke="#7aa7ff" stroke-dasharray="41.80 58.20" stroke-dashoffset="-75.80" /><circle class="donut-segment" r="16" cx="20" cy="20" stroke="#ff4fd8" stroke-dasharray="7.10 92.90" stroke-dashoffset="-117.60" /><circle class="donut-segment" r="16" cx="20" cy="20" stroke="#ffc857" stroke-dasharray="0.30 99.70" stroke-dashoffset="-124.70" />
+        </svg>
+        <div class="donut-total">1689<small>total</small></div>
+      </div>
+      <div class="chart-legend">
+        <span><i style="background:#43f6c8"></i>UNTESTED: 858</span>
+        <span><i style="background:#7aa7ff"></i>VERIFIED: 706</span>
+        <span><i style="background:#ff4fd8"></i>DEPLOYED_TESTED: 120</span>
+        <span><i style="background:#ffc857"></i>REGRESSION_COVERED: 5</span></div>
+    </div>
+    
+    <div class="chart-card">
+      <h2>Release Readiness</h2>
+      <div class="donut-wrap">
+        <svg viewBox="0 0 40 40" class="donut">
+          <circle class="donut-base" r="16" cx="20" cy="20" />
+          <circle class="donut-segment" r="16" cx="20" cy="20" stroke="#43f6c8" stroke-dasharray="58.09 41.91" stroke-dashoffset="-25.00" /><circle class="donut-segment" r="16" cx="20" cy="20" stroke="#7aa7ff" stroke-dasharray="41.91 58.09" stroke-dashoffset="-83.09" />
+        </svg>
+        <div class="donut-total">136<small>total</small></div>
+      </div>
+      <div class="chart-legend">
+        <span><i style="background:#43f6c8"></i>CONDITIONAL: 79</span>
+        <span><i style="background:#7aa7ff"></i>GO: 57</span></div>
+    </div>
+    
+    <div class="chart-card">
+      <h2>Impact Risk</h2>
+      <div class="donut-wrap">
+        <svg viewBox="0 0 40 40" class="donut">
+          <circle class="donut-base" r="16" cx="20" cy="20" />
+          <circle class="donut-segment" r="16" cx="20" cy="20" stroke="#43f6c8" stroke-dasharray="86.68 13.32" stroke-dashoffset="-25.00" /><circle class="donut-segment" r="16" cx="20" cy="20" stroke="#7aa7ff" stroke-dasharray="13.20 86.80" stroke-dashoffset="-111.68" /><circle class="donut-segment" r="16" cx="20" cy="20" stroke="#ff4fd8" stroke-dasharray="0.12 99.88" stroke-dashoffset="-124.88" />
+        </svg>
+        <div class="donut-total">1689<small>total</small></div>
+      </div>
+      <div class="chart-legend">
+        <span><i style="background:#43f6c8"></i>LOW: 1464</span>
+        <span><i style="background:#7aa7ff"></i>MEDIUM: 223</span>
+        <span><i style="background:#ff4fd8"></i>HIGH: 2</span></div>
+    </div>
+    
+    <div class="chart-card">
+      <h2>Top Sitemap Coverage</h2>
+      
+        <div class="chart-row">
+          <span class="chart-label">General</span>
+          <div class="chart-track"><div class="chart-fill" style="width:100.0%"></div></div>
+          <span class="chart-value">100%</span>
+        </div>
+        <div class="chart-row">
+          <span class="chart-label">Dashboards</span>
+          <div class="chart-track"><div class="chart-fill" style="width:100.0%"></div></div>
+          <span class="chart-value">100%</span>
+        </div>
+        <div class="chart-row">
+          <span class="chart-label">Tasks</span>
+          <div class="chart-track"><div class="chart-fill" style="width:100.0%"></div></div>
+          <span class="chart-value">100%</span>
+        </div>
+        <div class="chart-row">
+          <span class="chart-label">Warehouse › Stock</span>
+          <div class="chart-track"><div class="chart-fill" style="width:100.0%"></div></div>
+          <span class="chart-value">100%</span>
+        </div>
+        <div class="chart-row">
+          <span class="chart-label">Warehouse › Receiving</span>
+          <div class="chart-track"><div class="chart-fill" style="width:100.0%"></div></div>
+          <span class="chart-value">100%</span>
+        </div>
+        <div class="chart-row">
+          <span class="chart-label">Sales</span>
+          <div class="chart-track"><div class="chart-fill" style="width:100.0%"></div></div>
+          <span class="chart-value">100%</span>
+        </div>
+        <div class="chart-row">
+          <span class="chart-label">Sales › Invoices</span>
+          <div class="chart-track"><div class="chart-fill" style="width:100.0%"></div></div>
+          <span class="chart-value">100%</span>
+        </div>
+        <div class="chart-row">
+          <span class="chart-label">Projects › Projects</span>
+          <div class="chart-track"><div class="chart-fill" style="width:100.0%"></div></div>
+          <span class="chart-value">100%</span>
+        </div>
+        <div class="chart-row">
+          <span class="chart-label">Parts › Part Health</span>
+          <div class="chart-track"><div class="chart-fill" style="width:100.0%"></div></div>
+          <span class="chart-value">100%</span>
+        </div>
+        <div class="chart-row">
+          <span class="chart-label">Parts › By MPN</span>
+          <div class="chart-track"><div class="chart-fill" style="width:100.0%"></div></div>
+          <span class="chart-value">100%</span>
+        </div>
+    </div>
+  </section>
+  <section style="padding: 0 2.5rem 1rem;">
+    <div class="panel">
+      <h2>Overall Test Coverage</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+        <div>
+          <p><strong>All requirements</strong> — 49.2% (831 / 1689)</p>
+          <div class="coverage-bar"><div class="coverage-fill item-fill"></div></div>
+        </div>
+        <div>
+          <p><strong>Features (sitemap)</strong> — 92.1% (151 / 164)</p>
+          <div class="coverage-bar"><div class="coverage-fill feature-fill"></div></div>
+        </div>
+      </div>
+      <p style="color: var(--warn); margin-top:0.75rem;">858 item-level untested gaps</p>
+    </div>
+  </section>
+  
+  <section class="panels">
+    <div class="panel" style="grid-column: 1 / -1;">
+      <h2>Overall Test Coverage by Sitemap Category</h2>
+      <p>Full Chip1 sitemap (38 areas) · verified/passed deployed items count as tested · bug/issue counts per area</p>
+      
+            <div class="cat-row">
+              <span class="cat-label">General<br><small style="color:var(--muted)">verified:602 · bugs:175</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Sales › RFQs<br><small style="color:var(--muted)">verified:94 · bugs:15</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Purchasing<br><small style="color:var(--muted)">verified:74 · bugs:1</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Accounts<br><small style="color:var(--muted)">verified:67 · bugs:34</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Parts<br><small style="color:var(--muted)">verified:50 · bugs:12</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Purchasing › Purchase Orders<br><small style="color:var(--muted)">verified:28 · bugs:21</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Projects › Excess<br><small style="color:var(--muted)">verified:23 · bugs:0</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Sales › Quotes<br><small style="color:var(--muted)">verified:22 · bugs:10</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Purchasing › Offers<br><small style="color:var(--muted)">verified:14 · bugs:6</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Purchasing › Sourcing Requests<br><small style="color:var(--muted)">verified:13 · bugs:4</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Sourcing<br><small style="color:var(--muted)">verified:11 · bugs:4</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">API<br><small style="color:var(--muted)">verified:9 · bugs:4</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Warehouse › Shipments<br><small style="color:var(--muted)">verified:9 · bugs:4</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">UI<br><small style="color:var(--muted)">verified:7 · bugs:3</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Sales › Opportunities<br><small style="color:var(--muted)">verified:5 · bugs:1</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Sales › Sales Orders<br><small style="color:var(--muted)">verified:5 · bugs:0</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Dashboards<br><small style="color:var(--muted)">verified:4 · bugs:3</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Accounts › Open Accounts<br><small style="color:var(--muted)">verified:3 · bugs:0</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Notification<br><small style="color:var(--muted)">verified:2 · bugs:1</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Warehouse<br><small style="color:var(--muted)">verified:2 · bugs:0</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Campaign<br><small style="color:var(--muted)">verified:1 · bugs:1</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Accounts › My Accounts<br><small style="color:var(--muted)">verified:1 · bugs:0</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Contacts<br><small style="color:var(--muted)">verified:1 · bugs:0</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Parts › By MPN<br><small style="color:var(--muted)">verified:1 · bugs:0</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Parts › Part Health<br><small style="color:var(--muted)">verified:1 · bugs:0</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Projects › Projects<br><small style="color:var(--muted)">verified:1 · bugs:0</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Sales › Invoices<br><small style="color:var(--muted)">verified:1 · bugs:0</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Sales<br><small style="color:var(--muted)">verified:1 · bugs:0</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Warehouse › Receiving<br><small style="color:var(--muted)">verified:1 · bugs:0</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Warehouse › Stock<br><small style="color:var(--muted)">verified:1 · bugs:0</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Tasks<br><small style="color:var(--muted)">verified:0 · bugs:1</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:100.0%"></div></div>
+              <span class="cat-pct">100.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Parts › By Category<br><small style="color:var(--muted)">verified:0 · bugs:1</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:0.0%"></div></div>
+              <span class="cat-pct">0.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Accounts › Search Accounts<br><small style="color:var(--muted)">verified:0 · bugs:0</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:0.0%"></div></div>
+              <span class="cat-pct">0.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Accounts › Visits<br><small style="color:var(--muted)">verified:0 · bugs:0</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:0.0%"></div></div>
+              <span class="cat-pct">0.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Parts › Account Parts<br><small style="color:var(--muted)">verified:0 · bugs:0</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:0.0%"></div></div>
+              <span class="cat-pct">0.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Purchasing › Invoices<br><small style="color:var(--muted)">verified:0 · bugs:0</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:0.0%"></div></div>
+              <span class="cat-pct">0.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">View Settings<br><small style="color:var(--muted)">verified:0 · bugs:0</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:0.0%"></div></div>
+              <span class="cat-pct">0.0%</span>
+            </div>
+            <div class="cat-row">
+              <span class="cat-label">Warehouse › Sales Orders<br><small style="color:var(--muted)">verified:0 · bugs:0</small></span>
+              <div class="cat-bar"><div class="cat-fill" style="width:0.0%"></div></div>
+              <span class="cat-pct">0.0%</span>
+            </div>
+      <table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Site_Category</th>
+      <th>Site_Subcategory</th>
+      <th>Feature_Count</th>
+      <th>Traced_Features</th>
+      <th>Items_Tested</th>
+      <th>Verified_Deployed_Items</th>
+      <th>Coverage_Evidence_Items</th>
+      <th>Bugs_Issues_Count</th>
+      <th>QE_Verified_Features</th>
+      <th>Coverage_Status</th>
+      <th>Coverage_%</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>General</td>
+      <td></td>
+      <td>14</td>
+      <td>14</td>
+      <td>167</td>
+      <td>602</td>
+      <td>602</td>
+      <td>175</td>
+      <td>14</td>
+      <td>COVERED</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Sales</td>
+      <td>RFQs</td>
+      <td>2</td>
+      <td>2</td>
+      <td>20</td>
+      <td>94</td>
+      <td>94</td>
+      <td>15</td>
+      <td>2</td>
+      <td>COVERED</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Purchasing</td>
+      <td></td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>74</td>
+      <td>74</td>
+      <td>1</td>
+      <td>1</td>
+      <td>COVERED</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Accounts</td>
+      <td></td>
+      <td>16</td>
+      <td>15</td>
+      <td>113</td>
+      <td>67</td>
+      <td>113</td>
+      <td>34</td>
+      <td>15</td>
+      <td>COVERED</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Parts</td>
+      <td></td>
+      <td>23</td>
+      <td>20</td>
+      <td>104</td>
+      <td>50</td>
+      <td>104</td>
+      <td>12</td>
+      <td>20</td>
+      <td>COVERED</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Purchasing</td>
+      <td>Purchase Orders</td>
+      <td>8</td>
+      <td>8</td>
+      <td>7</td>
+      <td>28</td>
+      <td>28</td>
+      <td>21</td>
+      <td>8</td>
+      <td>COVERED</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Projects</td>
+      <td>Excess</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4</td>
+      <td>23</td>
+      <td>23</td>
+      <td>0</td>
+      <td>1</td>
+      <td>COVERED</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Sales</td>
+      <td>Quotes</td>
+      <td>2</td>
+      <td>2</td>
+      <td>15</td>
+      <td>22</td>
+      <td>22</td>
+      <td>10</td>
+      <td>2</td>
+      <td>COVERED</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Purchasing</td>
+      <td>Offers</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>14</td>
+      <td>14</td>
+      <td>6</td>
+      <td>0</td>
+      <td>DEPLOY_EVIDENCE</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Purchasing</td>
+      <td>Sourcing Requests</td>
+      <td>5</td>
+      <td>4</td>
+      <td>4</td>
+      <td>13</td>
+      <td>13</td>
+      <td>4</td>
+      <td>4</td>
+      <td>COVERED</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Sourcing</td>
+      <td></td>
+      <td>0</td>
+      <td>0</td>
+      <td>10</td>
+      <td>11</td>
+      <td>11</td>
+      <td>4</td>
+      <td>0</td>
+      <td>DEPLOY_EVIDENCE</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>API</td>
+      <td></td>
+      <td>42</td>
+      <td>37</td>
+      <td>167</td>
+      <td>9</td>
+      <td>167</td>
+      <td>4</td>
+      <td>35</td>
+      <td>COVERED</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Warehouse</td>
+      <td>Shipments</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>9</td>
+      <td>9</td>
+      <td>4</td>
+      <td>0</td>
+      <td>DEPLOY_EVIDENCE</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>UI</td>
+      <td></td>
+      <td>43</td>
+      <td>41</td>
+      <td>179</td>
+      <td>7</td>
+      <td>179</td>
+      <td>3</td>
+      <td>39</td>
+      <td>COVERED</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Sales</td>
+      <td>Opportunities</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5</td>
+      <td>5</td>
+      <td>1</td>
+      <td>0</td>
+      <td>DEPLOY_EVIDENCE</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Sales</td>
+      <td>Sales Orders</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1</td>
+      <td>COVERED</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Dashboards</td>
+      <td></td>
+      <td>1</td>
+      <td>1</td>
+      <td>23</td>
+      <td>4</td>
+      <td>23</td>
+      <td>3</td>
+      <td>1</td>
+      <td>COVERED</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Accounts</td>
+      <td>Open Accounts</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>DEPLOY_EVIDENCE</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Notification</td>
+      <td></td>
+      <td>2</td>
+      <td>2</td>
+      <td>9</td>
+      <td>2</td>
+      <td>9</td>
+      <td>1</td>
+      <td>2</td>
+      <td>COVERED</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Warehouse</td>
+      <td></td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>DEPLOY_EVIDENCE</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Campaign</td>
+      <td></td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>DEPLOY_EVIDENCE</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Accounts</td>
+      <td>My Accounts</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>DEPLOY_EVIDENCE</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Contacts</td>
+      <td></td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>DEPLOY_EVIDENCE</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Parts</td>
+      <td>By MPN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>DEPLOY_EVIDENCE</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Parts</td>
+      <td>Part Health</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>DEPLOY_EVIDENCE</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Projects</td>
+      <td>Projects</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>DEPLOY_EVIDENCE</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Sales</td>
+      <td>Invoices</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>DEPLOY_EVIDENCE</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Sales</td>
+      <td></td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>DEPLOY_EVIDENCE</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Warehouse</td>
+      <td>Receiving</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>DEPLOY_EVIDENCE</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Warehouse</td>
+      <td>Stock</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>DEPLOY_EVIDENCE</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Tasks</td>
+      <td></td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>COVERED</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Parts</td>
+      <td>By Category</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>NO_FEATURES_MAPPED</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>Accounts</td>
+      <td>Search Accounts</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NO_FEATURES_MAPPED</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>Accounts</td>
+      <td>Visits</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NO_FEATURES_MAPPED</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>Parts</td>
+      <td>Account Parts</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NO_FEATURES_MAPPED</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>Purchasing</td>
+      <td>Invoices</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NO_FEATURES_MAPPED</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>View Settings</td>
+      <td></td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NO_FEATURES_MAPPED</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>Warehouse</td>
+      <td>Sales Orders</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NO_FEATURES_MAPPED</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+  </section>
+  
+  <section class="panels">
+    <div class="panel" style="grid-column: 1 / -1;">
+      <h2>Feature Traceability (Sitemap Categories)</h2>
+      <p>92.1% feature coverage (151 of 164) · sorted by most recent release activity</p>
+      <div class="coverage-bar"><div class="coverage-fill feature-fill"></div></div>
+      <table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Feature_ID</th>
+      <th>Feature_Name</th>
+      <th>Site_Category</th>
+      <th>Site_Subcategory</th>
+      <th>Traceability_Status</th>
+      <th>QE_Verified</th>
+      <th>Last_Release_Date</th>
+      <th>Release_Count</th>
+      <th>Verified_Pass_Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CHP-1855</td>
+      <td>Account List View Enhancements</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-21</td>
+      <td>37</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>CHP-694</td>
+      <td>Lookups data migration</td>
+      <td>General</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>27</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-1276</td>
+      <td>Project - Part Details and Sourcing Plan Export - UI</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>24</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>CHP-2828</td>
+      <td>Create a Request</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>24</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>CHP-2064</td>
+      <td>Account: Parts tab - Sorting</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>22</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>CHP-2212</td>
+      <td>QE:: [CRM] Automate Accounts - Details &amp; Summary</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>21</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>CHP-2116</td>
+      <td>Tasks - Dropdown filter bar for the tasks list view</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>21</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>CHP-2753</td>
+      <td>Order line Details</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>20</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>CHP-2215</td>
+      <td>RFQ details page and Hero</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>19</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>CHP-2704</td>
+      <td>Requests List View</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>18</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-3460</td>
+      <td>Data Model And Jolt Changes For Account &amp; Quote &amp; RF</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>15</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>CHP-3320</td>
+      <td>Notification enhancement</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>15</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>CHP-2273</td>
+      <td>Sourcing Plan Enhancement</td>
+      <td>Purchasing</td>
+      <td>Sourcing Requests</td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>14</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>CHP-2094</td>
+      <td>Impersonation capability in CRM</td>
+      <td>General</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>14</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-5191</td>
+      <td>Misc Account Field Additions and Renames</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>13</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>CHP-1257</td>
+      <td>Connect service - Performance improvement</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>12</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-2952</td>
+      <td>Offers management</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>12</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-3396</td>
+      <td>Purchase order - Create additional Stock Lines During Receiving</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>11</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>CHP-1623</td>
+      <td>Account Service</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>11</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>CHP-3037</td>
+      <td>QE:[MC1] Mc1 Core API- User Tests</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>11</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>CHP-2752</td>
+      <td>Order details Page</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>11</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>CHP-2950</td>
+      <td>Sourcing Request management</td>
+      <td>API</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>10</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>CHP-472</td>
+      <td>QE:: Execute the testcases for MC1 Account Sign Up</td>
+      <td>Accounts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>10</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>CHP-577</td>
+      <td>Project Details P2</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>9</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>CHP-1778</td>
+      <td>QE:: [CRM]: Dashboard</td>
+      <td>Dashboards</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>9</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>CHP-2067</td>
+      <td>Accounts - Company profile</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>9</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>CHP-2108</td>
+      <td>Dashboard - General trends</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>8</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>CHP-3060</td>
+      <td>Sourcing Request - Create Sourcing Request from List View</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>8</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-2129</td>
+      <td>Tasks - Bulk Actions</td>
+      <td>UI</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>8</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>CHP-2218</td>
+      <td>Contact details - Split form in 3 parts as per new design</td>
+      <td>Parts</td>
+      <td></td>
+      <td>FULLY_TRACED</td>
+      <td>YES</td>
+      <td>2026-05-20</td>
+      <td>7</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+  </section>
+  
+  <section class="panels">
+    <div class="panel" style="grid-column: 1 / -1;">
+      <h2>Last 10 Releases Traceability</h2>
+      
+        <table class="data-table release-table">
+          <thead>
+            <tr>
+              <th>Release</th>
+              <th>Date</th>
+              <th>Environment</th>
+              <th>Status</th>
+              <th>CHP Items</th>
+              <th>Features Count</th>
+              <th>Features Touched</th>
+              <th>Categories Affected</th>
+              <th>Go/No-Go</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>21-May26</td>
+              <td>2026-05-21</td>
+              <td>Stage</td>
+              <td>Good</td>
+              <td>1</td>
+              <td>16</td>
+              <td><ul class="feature-bullets"><li>Fix segment filter logic and remove contact-lead feature flag</li><li>Filter Fixes: Adjusted contactListSegments.getSegment to correctly use pathnames instead of full URLs, resolvi...</li><li>Feature Flag Removal: Removed contact-lead feature flag as it is fully deployed in production. Cleaned up gate...</li><li>Unified Filtering Logic: Streamlined segment-driven filtering for Active, Inactive, and Lead tabs to consisten...</li><li>feat WarehouseStock: Adds an Export All button to the WarehouseStock top filter bar that POSTs the current fil...</li><li>fix crm: Add CopyButton to extension field in FormikContactRowField to copy full phone+extension Add CopyButto...</li><li>Shipment: Add missing fields</li><li>New Field: Added a &quot;Box Condition&quot; dropdown to each box in the packaging details form</li><li class="muted">+8 more</li></ul></td>
+              <td>API|Accounts|Parts|Purchasing|Sales|UI|Warehouse</td>
+              <td>GO</td>
+            </tr>
+            <tr>
+              <td>20-May26</td>
+              <td>2026-05-20</td>
+              <td>Stage</td>
+              <td>Good</td>
+              <td>1</td>
+              <td>25</td>
+              <td><ul class="feature-bullets"><li>ContactCard: add website display and link functionality to contact summary card</li><li>fix textarea: preserve full email text when pasting into multiline fields What&#x27;s the problem When users copy a...</li><li>feat: Create bulk offers modal Bulk offer creation from SR list view Bulk Send Offer Request from SR List View...</li><li>OB: Account, Contact, allocation(stockId, quantity and landed cost) sync fix - IB : Commission, allocation(sto...</li><li>Quote PDF: Hongkong address fix, tel, email info was missing</li><li>Quotes: Added multiple quotes send on RFQLine Quotes Tabs Add fundcode, Shipping address, incoterms to Quote l...</li><li>In RFQ Quote list: Add xCRM Quote link for xCRM Ids</li><li>Sourcing: Source Offers section fix in part sourcing eliminate duplicate /filter requests and remove GroupByEn...</li><li class="muted">+17 more</li></ul></td>
+              <td>API|Accounts|General|Purchasing|Sales|UI|Warehouse</td>
+              <td>GO</td>
+            </tr>
+            <tr>
+              <td>15-May26</td>
+              <td>2026-05-15</td>
+              <td>Stage</td>
+              <td>Good</td>
+              <td>0</td>
+              <td>4</td>
+              <td><ul class="feature-bullets"><li>General: QC History</li><li>update: Sourcing Request show tags column on list view Offers Set the default expiry to two weeks. On creation...</li><li>### ISSUES ON STAGE: I have created a multi-line shipment and the CRR generated for this is failing with the f...</li><li>&quot;errorCode&quot;: Is it valid scenario to update stock to Validated status without QC( marking directly marked QC c...</li></ul></td>
+              <td>API|Accounts|Purchasing|Sales|UI|Warehouse</td>
+              <td>CONDITIONAL</td>
+            </tr>
+            <tr>
+              <td>14-May26</td>
+              <td>2026-05-14</td>
+              <td>Stage</td>
+              <td>Good</td>
+              <td>0</td>
+              <td>4</td>
+              <td><ul class="feature-bullets"><li>General: Charges entered in invoice created from shipment is not saving all the charges</li><li>General: Skip credit card validations if payment term is credit card for SO creation</li><li>General: Display the xCRM Invoice ID in Invoice list view</li><li>## TESTING DONE: Ran basic sanity checks ## OPEN ISSUES ON STAGE For newly created in Apex(OB) invoice xcrm id...</li></ul></td>
+              <td>API|Accounts|Purchasing|Sales|UI|Warehouse</td>
+              <td>CONDITIONAL</td>
+            </tr>
+            <tr>
+              <td>13-May26</td>
+              <td>2026-05-13</td>
+              <td>Stage</td>
+              <td>Good</td>
+              <td>0</td>
+              <td>15</td>
+              <td><ul class="feature-bullets"><li>New Added fields: Delivering To</li><li>New Added fields: Ship Via</li><li>New Added fields: Shipping Account Number</li><li>New Added fields: Inco terms</li><li>New Added fields: Inco City generate PDF per quote item instead of whole quote when specific items are selecte...</li><li>feat crm: Reorder Account Contacts 3-dot context menu items ) Changed insuranceStatus type from string to TSer...</li><li>Feat: Added new fields on Create a Quote and Edit Quote - Enabled on dev</li><li>feat: Added QUOTE_ITEM export type to ECrmExportFileType enum Updated export mutation to accept dynamic type o...</li><li class="muted">+7 more</li></ul></td>
+              <td>API|Accounts|Purchasing|Sales|UI|Warehouse</td>
+              <td>CONDITIONAL</td>
+            </tr>
+            <tr>
+              <td>12-May26</td>
+              <td>2026-05-12</td>
+              <td>Stage</td>
+              <td>Good</td>
+              <td>0</td>
+              <td>13</td>
+              <td><ul class="feature-bullets"><li>feat: add campaign goal templates and signature management features Tested add create-campaign-goal flow with...</li><li>fix CampaignListTable: avoid 2 API calls on Campaigns page add CRR and packing slip generation to invoices and...</li><li>fix invoice: Renamed bankingCost → bankCost across all types, forms, utils, and locale to match the InvoiceInt...</li><li>Invoice: I can see additional cost in the edit modal but not in the details section. ShipQty Tested SO outboun...</li><li>CRM filters: add CRM-only reusable auto-enable for select-all on eligible multi-select filters add select-all...</li><li>Feat: Added added tabs on the Shipments UI add &quot;Create Part Manually&quot; to all MPN dropdowns, make manufacturer...</li><li>fix: Fix FormikPhoneCrm.toFormValue extracting empty countryCode when no country was selected in dropdown (pas...</li><li>Table: Add actions related to selected rows to table footer - Common component - not part of current release</li><li class="muted">+5 more</li></ul></td>
+              <td>API|Accounts|Purchasing|Sales|UI|Warehouse</td>
+              <td>CONDITIONAL</td>
+            </tr>
+            <tr>
+              <td>08-May-26</td>
+              <td>2026-05-08</td>
+              <td>Stage</td>
+              <td>Good</td>
+              <td>0</td>
+              <td>8</td>
+              <td><ul class="feature-bullets"><li>fix crm: send sales order salesperson via users payload Replaced salesPerson payload with users array for sale...</li><li>fix rfq: Fix RFQ sourcing type handling across RFQ edit flows to keep create/update/display consistent.</li><li>Stock: Use separate endpoints for MPN and Manufacturer filters (CRM(under warehouse stock only) &amp; MC1 ) change...</li><li>Update: shipment line-level shipping options and consolidated invoice costs</li><li>update: Derive and display shipping options dynamically from order lines in CreateShipmentForm Simplify Invoic...</li><li>feat crm: Added additional-cost editing workflow for invoices with new modal and reusable form section. Implem...</li><li>chore api-contract: Added fetch-hub-spec.sh to read canonical OpenAPI specs from chip1-api-hub via gh api Upda...</li><li>Refactor: Part-related fields As per Om&#x27;s request, we need to have very similar part-related fields in several...</li></ul></td>
+              <td>API|Accounts|UI</td>
+              <td>CONDITIONAL</td>
+            </tr>
+            <tr>
+              <td>07-May-26</td>
+              <td>2026-05-07</td>
+              <td>Stage</td>
+              <td>Good</td>
+              <td>0</td>
+              <td>9</td>
+              <td><ul class="feature-bullets"><li>feat: enable loaders for shipment -&gt; SO/PO lines tabs use ELookupCategory.Rfq for qcLevel in usePurchaseOrderF...</li><li>Fix: Warehouse status filter</li><li>Stock: Add ready to ship quantity add new columns to sr allocation modal</li><li>Feat: Add following columns to allocation list on sr allocation modal location, region, date code and rohs Add...</li><li>update: Ensure notes, website, and insuranceStatus fallback to empty strings instead of undefined or null duri...</li><li>Update: in Order Line Details -&gt; Allocation Island summary for P it should be - if the value doesn&#x27;t exist ins...</li><li>Fixes: Part column width too narrow, part name getting cut off - RFQ view Alternative Chip font size too large...</li><li>Refactor: In the RFQ details page (Inbound flow), the Account Info section shows an &quot;Oops&quot; error when created...</li><li class="muted">+1 more</li></ul></td>
+              <td>API|Accounts|General|Parts|Purchasing|Sales|UI|Warehouse</td>
+              <td>CONDITIONAL</td>
+            </tr>
+            <tr>
+              <td>05-May-26</td>
+              <td>2026-05-05</td>
+              <td>Stage</td>
+              <td>Good</td>
+              <td>0</td>
+              <td>22</td>
+              <td><ul class="feature-bullets"><li>General: Split Stock Functionality</li><li>General: In shipment details, indicate inbound vs. outbound somewhere in the header</li><li>General: Also add a section to show the packaging details that includes box info.</li><li>General: Enable Add arrival action once PO is approved. - For po, po line and receiving line</li><li>General: In add arrival - remove QC inspector as mandatory field</li><li>General: In Arrival step 2, change the view from grid view to add receiving type view. PO line on the top and...</li><li>General: Shipment list view - Account should be supplier that is copied from PO</li><li>General: Shipment list view - Shipping address and ship via can come from PO</li><li class="muted">+14 more</li></ul></td>
+              <td>API|Accounts|UI</td>
+              <td>CONDITIONAL</td>
+            </tr>
+            <tr>
+              <td>04-May26</td>
+              <td>2026-05-04</td>
+              <td>Stage</td>
+              <td>Good</td>
+              <td>0</td>
+              <td>9</td>
+              <td><ul class="feature-bullets"><li>General: ## PO SHIPMENTS / SHIPPING FEATURES</li><li>Backport to develop: Feat: po shipments tab changes Shipments tab on PO — add a Shipments tab to the PO detail...</li><li>refactor campaign: Fix dark mode in campaign message bubbles add tooltips for conversation text and standardiz...</li><li>feat: ## INVOICE / TABLE UI use available vertical space for table - Fix not pushed to current release can be...</li><li>fix invoiceLines: ## ACCOUNT CREATION require phone number for account creation phone number mandatory in crea...</li><li>update: ## SALES ORDER disable Create Sales Order button when no quotes are selected</li><li>fix: Disable the &quot;Create Sales Order&quot; FAB action when no quotes are selected ## ALLOCATION / OPPORTUNITY UPDAT...</li><li>Allocation sync update: Merged to release and part of release validations</li><li class="muted">+1 more</li></ul></td>
+              <td>API|Accounts|UI</td>
+              <td>CONDITIONAL</td>
+            </tr></tbody>
+        </table>
+    </div>
+  </section>
+  
+  <section style="padding: 0 2.5rem 1.5rem;">
+    <div class="panel">
+      <h2>Data Integration Testing Strategy</h2>
+      <p class="flow-caption">DB Tables · External API · Flat Files → Validation → Transformation → Error Handling → Target Store</p>
+      <div class="flow-diagram">
+        <div class="flow-node source">DB Tables</div>
+        <div class="flow-node source">External API</div>
+        <div class="flow-node source">Flat Files</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node process">Validation Engine</div>
+        <div class="flow-node process">Transformation Logic</div>
+        <div class="flow-node process">Error Handling</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node target">Target Data Store</div>
+      </div>
+      <p>7 of 7 strategy scenarios linked to release evidence</p>
+      <div class="matrix-links">
+        <a href="08_Strategy_Traceability_Matrix.html">Strategy Traceability</a>
+        <a href="09_Architecture_Coverage_Matrix.html">Architecture Coverage</a>
+      </div>
+    </div>
+  </section>
+  <section class="panels">
+    <div class="panel" style="grid-column: 1 / -1;">
+      <h2>Strategy Scenario Traceability</h2>
+      <table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Scenario_ID</th>
+      <th>Scenario_Title</th>
+      <th>Traceability_Status</th>
+      <th>Release_Match_Count</th>
+      <th>Req_Match_Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DIS-01</td>
+      <td>End-to-End Data Flow</td>
+      <td>COVERED</td>
+      <td>66</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>DIS-05</td>
+      <td>Volume and Performance Testing</td>
+      <td>COVERED</td>
+      <td>61</td>
+      <td>55</td>
+    </tr>
+    <tr>
+      <td>DIS-02</td>
+      <td>Data Quality and Schema Validation</td>
+      <td>COVERED</td>
+      <td>60</td>
+      <td>114</td>
+    </tr>
+    <tr>
+      <td>DIS-07</td>
+      <td>Regression Testing</td>
+      <td>COVERED</td>
+      <td>60</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>DIS-03</td>
+      <td>Business Logic and Transformation</td>
+      <td>COVERED</td>
+      <td>35</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <td>DIS-04</td>
+      <td>Error Handling and Logging</td>
+      <td>COVERED</td>
+      <td>35</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>DIS-06</td>
+      <td>Security and Access Control</td>
+      <td>COVERED</td>
+      <td>25</td>
+      <td>32</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+  </section>
+  <section style="padding: 0 2.5rem;">
+    <div class="panel">
+      <h2>Item-Level Coverage</h2>
+      <p>49.2% traced to releases (831 of 1689 requirements)</p>
+      <div class="coverage-bar"><div class="coverage-fill item-fill"></div></div>
+      <div class="matrix-links">
+        <a href="01_Requirement_Testing_Traceability_Matrix.html">Item Traceability</a>
+        <a href="01b_Feature_Level_Traceability_Matrix.html">Feature Traceability</a>
+        <a href="02_Impact_Analysis_Matrix.html">Impact</a>
+        <a href="03_AI_Powered_Validation_Matrix.html">AI Validation</a>
+        <a href="04_Automation_Stability_Matrix.html">Automation</a>
+        <a href="05_Release_Readiness_Matrix.html">Readiness</a>
+        <a href="06_Cross_Platform_Sync_Validation_Matrix.html">Cross-Platform</a>
+        <a href="ORBYT_Complete_Matrices.html">Full Excel</a>
+      </div>
+    </div>
+  </section>
+  <section class="panels">
+    <div class="panel">
+      <h2>Top Impact Risks</h2>
+      <p class="flow-caption">Sorted by impact score and recent release activity</p>
+      <table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Req_ID</th>
+      <th>Req_Name</th>
+      <th>Impact_Score</th>
+      <th>Risk_Level</th>
+      <th>Last_Release_Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CHP-2438</td>
+      <td>Prepare to release July 2 (UI)</td>
+      <td>60</td>
+      <td>HIGH</td>
+      <td>2025.07.08</td>
+    </tr>
+    <tr>
+      <td>CHP-2453</td>
+      <td>Prepare to release July 2, Part 2</td>
+      <td>60</td>
+      <td>HIGH</td>
+      <td>2025.07.08</td>
+    </tr>
+    <tr>
+      <td>CHP-2112</td>
+      <td>Remove timestamp from info cards in CRM</td>
+      <td>40</td>
+      <td>MEDIUM</td>
+      <td>2026-04-03</td>
+    </tr>
+    <tr>
+      <td>CHP-2808</td>
+      <td>MC1 Sign Up Changes</td>
+      <td>40</td>
+      <td>MEDIUM</td>
+      <td>2025.10.31</td>
+    </tr>
+    <tr>
+      <td>CHP-3380</td>
+      <td>Sourcing: UI Integration</td>
+      <td>40</td>
+      <td>MEDIUM</td>
+      <td>2025.10.31</td>
+    </tr>
+    <tr>
+      <td>CHP-3403</td>
+      <td>Create Activity: Enhancement</td>
+      <td>40</td>
+      <td>MEDIUM</td>
+      <td>2025.10.31</td>
+    </tr>
+    <tr>
+      <td>CHP-3407</td>
+      <td>Order/OrderLines: Show xCRM ID in columns</td>
+      <td>40</td>
+      <td>MEDIUM</td>
+      <td>2025.10.31</td>
+    </tr>
+    <tr>
+      <td>CHP-3417</td>
+      <td>Account RFQ: Account Owner Filter</td>
+      <td>40</td>
+      <td>MEDIUM</td>
+      <td>2025.10.31</td>
+    </tr>
+    <tr>
+      <td>CHP-3420</td>
+      <td>Update RFQ list view columns</td>
+      <td>40</td>
+      <td>MEDIUM</td>
+      <td>2025.10.31</td>
+    </tr>
+    <tr>
+      <td>CHP-2803</td>
+      <td>Account Summary: Company Revenue is showing as $0</td>
+      <td>40</td>
+      <td>MEDIUM</td>
+      <td>2025.09.16</td>
+    </tr>
+    <tr>
+      <td>CHP-3061</td>
+      <td>QE ticket for Account Details Validations-Read only Mode</td>
+      <td>40</td>
+      <td>MEDIUM</td>
+      <td>2025.09.16</td>
+    </tr>
+    <tr>
+      <td>CHP-2768</td>
+      <td>QE Release Validations for 13Aug</td>
+      <td>40</td>
+      <td>MEDIUM</td>
+      <td>2025.08.13</td>
+    </tr>
+    <tr>
+      <td>CHP-2700</td>
+      <td>QE release validations for august hotfix release 1</td>
+      <td>40</td>
+      <td>MEDIUM</td>
+      <td>2025.08.06</td>
+    </tr>
+    <tr>
+      <td>CHP-2702</td>
+      <td>Bring the project hero to notification mails for Bom_Health and Project_Share_Copy</td>
+      <td>40</td>
+      <td>MEDIUM</td>
+      <td>2025.08.06</td>
+    </tr>
+    <tr>
+      <td>CHP-2459</td>
+      <td>Prepare to release July 2, Part 3, Global search (UI)</td>
+      <td>40</td>
+      <td>MEDIUM</td>
+      <td>2025.07.08</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    <div class="panel">
+      <h2>Release Readiness</h2>
+      <p class="flow-caption">Most recent releases first</p>
+      <table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Release_Label</th>
+      <th>Release_Date</th>
+      <th>Readiness_Score</th>
+      <th>Go_No_Go</th>
+      <th>Open_Gaps</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>21-May26</td>
+      <td>2026-05-21</td>
+      <td>100</td>
+      <td>GO</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>20-May26</td>
+      <td>2026-05-20</td>
+      <td>100</td>
+      <td>GO</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>15-May26</td>
+      <td>2026-05-15</td>
+      <td>85</td>
+      <td>CONDITIONAL</td>
+      <td>No CHP traceability in release notes</td>
+    </tr>
+    <tr>
+      <td>14-May26</td>
+      <td>2026-05-14</td>
+      <td>85</td>
+      <td>CONDITIONAL</td>
+      <td>No CHP traceability in release notes</td>
+    </tr>
+    <tr>
+      <td>13-May26</td>
+      <td>2026-05-13</td>
+      <td>85</td>
+      <td>CONDITIONAL</td>
+      <td>No CHP traceability in release notes</td>
+    </tr>
+    <tr>
+      <td>12-May26</td>
+      <td>2026-05-12</td>
+      <td>85</td>
+      <td>CONDITIONAL</td>
+      <td>No CHP traceability in release notes</td>
+    </tr>
+    <tr>
+      <td>08-May-26</td>
+      <td>2026-05-08</td>
+      <td>85</td>
+      <td>CONDITIONAL</td>
+      <td>No CHP traceability in release notes</td>
+    </tr>
+    <tr>
+      <td>07-May-26</td>
+      <td>2026-05-07</td>
+      <td>85</td>
+      <td>CONDITIONAL</td>
+      <td>No CHP traceability in release notes</td>
+    </tr>
+    <tr>
+      <td>05-May-26</td>
+      <td>2026-05-05</td>
+      <td>85</td>
+      <td>CONDITIONAL</td>
+      <td>No CHP traceability in release notes</td>
+    </tr>
+    <tr>
+      <td>04-May26</td>
+      <td>2026-05-04</td>
+      <td>85</td>
+      <td>CONDITIONAL</td>
+      <td>No CHP traceability in release notes</td>
+    </tr>
+    <tr>
+      <td>30-April26</td>
+      <td>2026-04-30</td>
+      <td>85</td>
+      <td>CONDITIONAL</td>
+      <td>No CHP traceability in release notes</td>
+    </tr>
+    <tr>
+      <td>29-April26</td>
+      <td>2026-04-29</td>
+      <td>85</td>
+      <td>CONDITIONAL</td>
+      <td>No CHP traceability in release notes</td>
+    </tr>
+    <tr>
+      <td>28-April26</td>
+      <td>2026-04-28</td>
+      <td>85</td>
+      <td>CONDITIONAL</td>
+      <td>No CHP traceability in release notes</td>
+    </tr>
+    <tr>
+      <td>27-April26-hotfix</td>
+      <td>2026-04-27</td>
+      <td>65</td>
+      <td>CONDITIONAL</td>
+      <td>No CHP traceability in release notes</td>
+    </tr>
+    <tr>
+      <td>27-April26-hotfix_2</td>
+      <td>2026-04-27</td>
+      <td>65</td>
+      <td>CONDITIONAL</td>
+      <td>No CHP traceability in release notes</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    
+    <div class="panel">
+      <h2>Architecture Node Coverage</h2>
+      <table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Node_Label</th>
+      <th>Scenario_Coverage</th>
+      <th>Scenarios_Testing_Node</th>
+      <th>Impact_if_Fails</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DB Tables</td>
+      <td>YES</td>
+      <td>DIS-01</td>
+      <td>MEDIUM</td>
+    </tr>
+    <tr>
+      <td>External API</td>
+      <td>YES</td>
+      <td>DIS-01</td>
+      <td>MEDIUM</td>
+    </tr>
+    <tr>
+      <td>Flat Files</td>
+      <td>YES</td>
+      <td>DIS-01</td>
+      <td>MEDIUM</td>
+    </tr>
+    <tr>
+      <td>Validation Engine</td>
+      <td>YES</td>
+      <td>DIS-02</td>
+      <td>HIGH</td>
+    </tr>
+    <tr>
+      <td>Transformation Logic</td>
+      <td>YES</td>
+      <td>DIS-03</td>
+      <td>HIGH</td>
+    </tr>
+    <tr>
+      <td>Error Handling</td>
+      <td>YES</td>
+      <td>DIS-04</td>
+      <td>HIGH</td>
+    </tr>
+    <tr>
+      <td>Data Processing Layer</td>
+      <td>YES</td>
+      <td>DIS-05|DIS-07</td>
+      <td>HIGH</td>
+    </tr>
+    <tr>
+      <td>Target Data Store / Reporting</td>
+      <td>YES</td>
+      <td>DIS-06</td>
+      <td>MEDIUM</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    <div class="panel" style="grid-column: 1 / -1;">
+      <h2>Traceability Snapshot</h2>
+      <p class="flow-caption">Latest verified/deployed requirements first</p>
+      <table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Req_ID</th>
+      <th>Req_Name</th>
+      <th>Site_Category</th>
+      <th>Traceability_Status</th>
+      <th>QE_Verified</th>
+      <th>Last_Release_Date</th>
+      <th>Release_Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CHP-5635</td>
+      <td>Contact List View :: use stage for all contact Tabs</td>
+      <td>UI</td>
+      <td>DEPLOYED_TESTED</td>
+      <td>NO</td>
+      <td>2026.05.21</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-3673</td>
+      <td>New FAB enhancements</td>
+      <td>Accounts</td>
+      <td>DEPLOYED_TESTED</td>
+      <td>NO</td>
+      <td>2026.01.25</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-3753</td>
+      <td>Permissions - UI changes for Market Offers</td>
+      <td>Parts</td>
+      <td>DEPLOYED_TESTED</td>
+      <td>NO</td>
+      <td>2026.01.25</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-3760</td>
+      <td>Permissions - UI changes for Purchasing &lt; Sourcing Requests</td>
+      <td>Parts</td>
+      <td>DEPLOYED_TESTED</td>
+      <td>NO</td>
+      <td>2026.01.25</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-3786</td>
+      <td>New Filter Design: UI</td>
+      <td>General</td>
+      <td>DEPLOYED_TESTED</td>
+      <td>NO</td>
+      <td>2026.01.25</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-3832</td>
+      <td>Activity Section: Comments Tab</td>
+      <td>General</td>
+      <td>DEPLOYED_TESTED</td>
+      <td>NO</td>
+      <td>2026.01.25</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-3857</td>
+      <td>Implement notes indicator in entities</td>
+      <td>API</td>
+      <td>DEPLOYED_TESTED</td>
+      <td>NO</td>
+      <td>2026.01.25</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-3862</td>
+      <td>isClosed should be enabled by default</td>
+      <td>Accounts</td>
+      <td>DEPLOYED_TESTED</td>
+      <td>NO</td>
+      <td>2026.01.25</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-3865</td>
+      <td>Create RFQ from RFQ Line Details Page</td>
+      <td>Sales</td>
+      <td>DEPLOYED_TESTED</td>
+      <td>NO</td>
+      <td>2026.01.25</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-3878</td>
+      <td>Improvements to the Create RFQ modal</td>
+      <td>Sales</td>
+      <td>DEPLOYED_TESTED</td>
+      <td>NO</td>
+      <td>2026.01.25</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-3881</td>
+      <td>Support Multiple Dropdown Buttons</td>
+      <td>UI</td>
+      <td>DEPLOYED_TESTED</td>
+      <td>NO</td>
+      <td>2026.01.25</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-3882</td>
+      <td>Allow fundCode to be set while creating Rfq</td>
+      <td>API</td>
+      <td>DEPLOYED_TESTED</td>
+      <td>NO</td>
+      <td>2026.01.25</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-3887</td>
+      <td>Quotes Enhancements</td>
+      <td>UI</td>
+      <td>DEPLOYED_TESTED</td>
+      <td>NO</td>
+      <td>2026.01.25</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-3903</td>
+      <td>Introduce regionName in account</td>
+      <td>Accounts</td>
+      <td>DEPLOYED_TESTED</td>
+      <td>NO</td>
+      <td>2026.01.25</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-3904</td>
+      <td>Part Sourcing User Feedback</td>
+      <td>Parts</td>
+      <td>DEPLOYED_TESTED</td>
+      <td>NO</td>
+      <td>2026.01.25</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-3905</td>
+      <td>Create SR from SO</td>
+      <td>Sales</td>
+      <td>DEPLOYED_TESTED</td>
+      <td>NO</td>
+      <td>2026.01.25</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-3907</td>
+      <td>Send quote option in 3 dots for any quote</td>
+      <td>Sales</td>
+      <td>DEPLOYED_TESTED</td>
+      <td>NO</td>
+      <td>2026.01.25</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CHP-3674</td>
+      <td>Offers enhancement</td>
+      <td>API</td>
+      <td>REGRESSION_COVERED</td>
+      <td>NO</td>
+      <td>2026.01.05</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>CHP-3676</td>
+      <td>Sourcing Request enhancement</td>
+      <td>API</td>
+      <td>REGRESSION_COVERED</td>
+      <td>NO</td>
+      <td>2026.01.05</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>CHP-3682</td>
+      <td>RFQ &amp; Quote enhancement</td>
+      <td>API</td>
+      <td>REGRESSION_COVERED</td>
+      <td>NO</td>
+      <td>2026.01.05</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+  </section>
+  <footer>ORBYT · Altir Hackathon Test Matrix Generator</footer>
+</body>
+</html>

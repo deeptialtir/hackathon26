@@ -1,0 +1,317 @@
+# 16-SEP25-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ 
+@Harika Guntamukkala
+ 
+@Abhinay Sharma
+ 
+Release date
+ : 2025.09.16
+ 
+DB changes
+ : No
+ 
+Branch
+  : hotfix/2025.09.16
+ 
+Components Involved
+ 
+& Artefacts
+:
+Chip1 Account      
+                              : 2025.09.16.1
+Chip1 Part        
+                                    : 2025.09.16.1
+Chip1 Transaction  
+    
+                      
+   :
+ 
+2025.09.16.0
+Chip1 CRM WebUI  
+    
+                      
+   : 2025.09.16.0
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+Private (
+https://app.clickup.com/t/8651091/CHP-2761
+)- 
+@Harika Guntamukkala
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-2780
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3005
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3024
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3036
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2780
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3062
+)- 
+@Umamahesh
+ 
+QE only tickets:
+Private (
+https://app.clickup.com/t/8651091/CHP-2872
+)
+@Umamahesh
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-3061
+)- 
+@Harika Guntamukkala
+ 
+Issues Observed on Build:
+Private (
+https://app.clickup.com/t/8651091/CHP-2939
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2953
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2803
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3064
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3065
+)
+Issues identified on build in Prod:
+
+## MC1 SANITY TESTS
+
+Note: The sanity tests to check will be selected based on the release
+Feature/Flow
+Stage
+Prod
+Remarks
+New User Signup from mc1
+ Yes
+ Yes
+On prod, we test this on need basis
+Mc1 user invite - signup
+ Yes
+ Yes
+On stage should suffice
+Upload Bom and verify in CRM
+ Yes
+ Yes
+Abhinay- Done
+Upload Excess and verify in CRM
+ Yes
+ Yes
+Abhinay- Done
+Manual RFQ
+ Yes
+ Yes
+Abhinay-Done 
+RFQ update
+ Yes
+ Yes
+Abhinay-Done 
+RFQ - multiline
+ No
+ No
+ NA
+Active Quote (create)
+ Yes
+ Yes
+ Abhinay-Done
+Active Quote (edit)
+ Yes
+ Yes
+  Abhinay-Done
+Active quote - multiline
+ No
+ No
+ NA
+Sales Order (create)
+ Yes
+ Yes
+ Uma-Done
+Sales Order (edit)
+ Yes
+ Yes
+  Uma-Done
+Sales Order - multiline
+ No
+ No
+ NA
+Quality Control (PO number)
+ Yes
+ 
+ Uma-Done
+Invoice generation
+ No
+ No
+ Uma-Done
+Invoice generation - shipping in 2 lots
+ No
+ No
+NA
+Lead Account & Transfer
+ No
+ No
+NA
+Bids
+ Yes
+ -
+ On stage should suffice
+Parts Tracker
+ Yes
+ yes
+ Abhinay-yes
+Search
+ Yes
+ Yes
+ ABhinay-yes
+Page Navigations
+ Yes
+ Yes
+Abhinay-yes 
+Edit Project
+ Yes
+ Yes
+Abhinay-yes
+Notification Emails
+ No
+ No
+NA
+Download excess and Bom Template, fill and upload.
+ yes
+ Yes
+ NA
+Conceirge Service
+ Yes
+ yes
+ Abhinay-Done
+Sorting
+ Yes
+ Yes
+ NA
+Filters
+ Yes
+ Yes
+ NA
+ 
+
+## CRM SANITY TESTS:
+
+Note: The sanity tests to check will be selected based on the release
+Feature/Flow
+Stage
+Production
+Remarks
+Create BOM in MC1, check in xcrm and new crm
+ yes
+  yes
+ 
+Create RFQ in MC1, check in xcrm and crm
+ yes
+yes
+ 
+Upload BOM from CRM
+ yes
+ Yes
+ 
+Page Navigations
+ yes
+ yes
+ 
+Deep links for Accounts, RFQs, Quotes and Orders
+ yes
+ yes
+ 
+Edit Project
+yes
+ yes
+ 
+Global Search
+ yes
+ yes
+ 
+Filters 
+ yes
+ yes
+ 
+Sorting of tables
+ yes
+ yes
+ 
+Page Search
+ yes
+ yes
+ 
+Download excess and Bom Template, fill and upload.
+ yes
+ yes
+ 
+Conceirge Service
+yes 
+ yes
+ 
+Microdashboard counts
+ yes
+ yes
+ 
+Share project and show in mc1
+yes 
+ yes
+ 
+Create Contact from crm
+ No
+ --
+ 
+Invite Contact from crm
+ No
+ No
+ 
+Create Task
+ Yes
+ No
+ 
+FAB icons - for all
+ yes
+ yes
+ 
+FAB - icon actions - Take a note/Activity/Task
+ Yes
+ yes
+ 
+Light mode - dark mode
+ Yes
+ yes
+ 
+Saved Views
+ No
+ yes
+ 
+ Projects - price refresh
+ yes
+ yes

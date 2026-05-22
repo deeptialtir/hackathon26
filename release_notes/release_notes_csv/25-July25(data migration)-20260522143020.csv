@@ -1,0 +1,317 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Deepti Vaidyula",,
+Metadata,Release Info,Release date,2025.07.22,,
+Metadata,Release Info,DB changes,Connect : release/2025.07.22,,
+Metadata,Release Info,Platform,release/2025.07.22,,
+Metadata,Release Info,Notification, No changes,,
+Metadata,Release Info,Branch,release/2025.07.22,,
+Artefacts,Artefacts,fn-notification-common-service,2025.07.22.1,,
+Artefacts,Artefacts,fn-notification-dispatcher,2025.07.22.1 fn-notification-publishe,,
+Artefacts,Artefacts,r,2025.07.22.1,,
+Artefacts,Artefacts,Chip1 Lookup,2025.07.22.0,,
+Artefacts,Artefacts,Chip1 Account,2025.07.22.8,,
+Artefacts,Artefacts,Chip1 MC1 Core,2025.07.22.0,,
+Artefacts,Artefacts,Chip1 Part,2025.07.22.0,,
+Artefacts,Artefacts,Chip1 Transaction,2025.07.22.5,,
+Artefacts,Artefacts,Chip1 WebUI,2025.07.22.6,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2025.07.22.6,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,QE documentation link,https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh,,
+Deployed Items,General,Account Contact association missing - Done,,,
+Deployed Items,General,Contact failing for duplicate dummy email issue - Done,,,
+Deployed Items,General,Adding Index - Done and waiting for validations,,,
+Deployed Items,General,Account process in multi threading - Done,,,
+Deployed Items,General,Concurrent event processing - Done,,,
+Deployed Items,General,"User id reconciliation for all the entities - Done
+//app.clickup.com/t/8651091/CHP-2536
+)
+//app.clickup.com/t/8651091/CHP-2481
+)
+//app.clickup.com/t/8651091/CHP-2479
+)
+//app.clickup.com/t/8651091/CHP-2496
+) - Pass
+//app.clickup.com/t/8651091/CHP-2460
+)
+//app.clickup.com/t/8651091/CHP-2456
+)
+//app.clickup.com/t/8651091/CHP-2522
+)
+//app.clickup.com/t/8651091/CHP-2523
+)
+//app.clickup.com/t/8651091/CHP-2524
+)
+//app.clickup.com/t/8651091/CHP-2537
+)
+//app.clickup.com/t/8651091/CHP-2527
+)
+//app.clickup.com/t/8651091/CHP-2548
+)
+//app.clickup.com/t/8651091/CHP-2552
+)
+//app.clickup.com/t/8651091/CHP-2560
+)
+//app.clickup.com/t/8651091/CHP-2564
+)",,,
+Deployed Items,XCRM,"Private (
+)
+//app.clickup.com/t/8651091/CHP-2599
+)",,,https://app.clickup.com/t/8651091/CHP-2579
+Deployed Items,XCRM,"Private (
+)",,,https://app.clickup.com/t/8651091/CHP-2602
+Deployed Items,XCRM,"Also check this release notes: Private (
+)",,,https://app.clickup.com/8651091/docs/880ak-39614/880ak-45754
+Deployed Items,XCRM,We have functional features from here as well.  The following is the list of functional features that also made to the release. There will be one more follow up release which fixes all open issues:,,,
+Deployed Items,XCRM,ClickUp,,,
+Deployed Items,XCRM,Feature,,,
+Deployed Items,XCRM,Status,,,
+Deployed Items,XCRM,Remarks,,,
+Deployed Items,XCRM,QE,,,
+Deployed Items,XCRM,"Open Issues
+//app.clickup.com/t/8651091/CHP-2272
+)",,,
+Deployed Items,Private ( https,"Account activity
+(no data. Check on Account update)",,,
+Deployed Items,Private ( https,Pass with known issues,,,
+Deployed Items,Private ( https,Passed with few minor issues,,,
+Deployed Items,Private ( https,"Uma
+//app.clickup.com/t/8651091/CHP-2528
+) (Normal)
+//app.clickup.com/t/8651091/CHP-2529
+) (Normal)
+//app.clickup.com/t/8651091/CHP-2530
+) (Normal)",,,
+Deployed Items,Private ( https,"Tasks
+(created/assigned by, title and status)",,,
+Deployed Items,Private ( https,Pass,,,
+Deployed Items,Private ( https,Reported issues are fixed,,,
+Deployed Items,Private ( https,"Harika
+//app.clickup.com/t/8651091/CHP-2574
+) (Normal)",,,
+Deployed Items,Private ( https,"Company details
+(Check with Sai)",,,
+Deployed Items,Private ( https,Pass with known issues,,,
+Deployed Items,Private ( https,"Accounts → Profile tab is hidden if company_id is not there.
+//crm.stage.chip1.info/accounts/68128c6c86d6390158d8764f/profile
+{$exists:true}})",,,
+Deployed Items,"db.getCollection(""accounts"").find({""company""","Deepti
+//app.clickup.com/t/8651091/CHP-2535
+) (Normal)
+//app.clickup.com/t/8651091/CHP-2478
+) (Normal)
+//app.clickup.com/t/8651091/CHP-2456
+)",,,
+Deployed Items,Private ( https,IC source,,,
+Deployed Items,Private ( https,Pass,,,
+Deployed Items,Private ( https,"Passed, tested by bypassing IC calls",,,
+Deployed Items,Private ( https,Uma,,,
+Deployed Items,Private ( https,Account - Micro Dashboard,,,
+Deployed Items,Private ( https,Pass with known issues,,,
+Deployed Items,Private ( https,"The cards count is matching with the list items displayed in the UI. Clicking on the card, filters the list correctly.",,,
+Deployed Items,Private ( https,"Some counts are not coming up, there is a bug for that.",,,
+Deployed Items,Private ( https,"Deepti
+//app.clickup.com/t/8651091/CHP-2547
+) (Normal)
+//app.clickup.com/t/8651091/CHP-2551
+)",,,
+Deployed Items,Private ( https,Dashboard,,,
+Deployed Items,Private ( https,"Pass with known issue
+//app.clickup.com/t/8651091/CHP-2561
+)",,,
+Deployed Items,Private ( https,"Harika
+//app.clickup.com/t/8651091/CHP-2580
+) (Low)
+//app.clickup.com/t/8651091/CHP-2290
+)",,,
+Deployed Items,Private ( https,MC1 User Invitation from CRM,,,
+Deployed Items,Private ( https,Pass,,,
+Deployed Items,Private ( https,Passed,,,
+Deployed Items,Private ( https,"Uma
+//app.clickup.com/t/8651091/CHP-2540
+) (Normal)
+//app.clickup.com/t/8651091/CHP-1685
+)",,,
+Deployed Items,Private ( https,"Contact details
+(Check with Sai)",,,
+Deployed Items,Private ( https,Pass,,,
+Deployed Items,Private ( https,Read only mode,,,
+Deployed Items,Private ( https,"Uma
+//app.clickup.com/t/8651091/CHP-2539
+) (normal)
+//app.clickup.com/t/8651091/CHP-2541
+) (Normal)
+//app.clickup.com/t/8651091/CHP-2250
+) (Low)
+//app.clickup.com/t/8651091/CHP-2254
+) (Low)
+//app.clickup.com/t/8651091/CHP-2252
+) (Normal)
+//app.clickup.com/t/8651091/CHP-2557
+) (Normal)",,,
+Deployed Items,Private ( https,Date joined column should be removed from UI as there is no joining date in xCRM. - The filter also should be removed. (Normal),,,
+Deployed Items,Private ( https,Tags,,,
+Deployed Items,Private ( https,Working on contact tags.,,,
+Deployed Items,Private ( https,RFQ - tags,,,
+Deployed Items,Private ( https,Pass,,,
+Deployed Items,Private ( https,Read only mode,,,
+Deployed Items,Private ( https,Deepti,,,
+Deployed Items,Private ( https,RFQ Part Details & Price,,,
+Deployed Items,Private ( https,Pass.,,,
+Deployed Items,Private ( https,Few tabs disabled. We will see Coming Soon.,,,
+Deployed Items,Private ( https,"Deepti
+//app.clickup.com/t/8651091/CHP-2565
+) (Normal)
+//app.clickup.com/t/8651091/CHP-2567
+) (Normal)
+//app.clickup.com/t/8651091/CHP-2597
+)(high)",,,
+Deployed Items,Private ( https,"Contacts - Micro-dashboard
+(Check for MC1, date joined cards)",,,
+Deployed Items,Private ( https,Pass,,,
+Deployed Items,Private ( https,"The cards count is matching with the list items displayed in the UI. Clicking on the card, filters the list correctly.",,,
+Deployed Items,Private ( https,There doesn't seem to be any data for NeedOutreach MDC.,,,
+Deployed Items,Private ( https,Deepti,,,
+Deployed Items,Private ( https,The 'My Chip1' micro-dashboard is displaying records that have 'on Mychip1' as No. Check the interpretation of 'My Chip1'.,,,
+Deployed Items,Private ( https,Column Selector for lists,,,
+Deployed Items,Private ( https,Pass,,,
+Deployed Items,Private ( https,Deepti,,,
+Deployed Items,Private ( https,Not all contacts are migrated for the following accounts,,,
+Deployed Items,Private ( https,In progress,,,
+Deployed Items,Private ( https,"Will test once changes are deployed.
+conTel is inprogress
+//app.clickup.com/t/8651091/CHP-2536
+) (high)
+//app.clickup.com/t/8651091/CHP-2481
+) (High)
+phone_number+email_adress - backend curl validation
+in progress
+minor fix along with nameInNaturalLanguage change and the isDefault flag for emails which we discussed in standup.",,,
+Deployed Items,Private ( https,"It's a lookup field, which will be used to identify firstNameOther and lastNameOther fields information (username → firstName+lastName)",,,
+Deployed Items,Private ( https,"Other bugs
+//app.clickup.com/t/8651091/CHP-2517
+) (Low)
+//app.clickup.com/t/8651091/CHP-2566
+) (Normal)
+//app.clickup.com/t/8651091/CHP-2577
+) (High)
+//app.clickup.com/t/8651091/CHP-2585
+)",,,
+Deployed Items,Private ( https,"Bugs in build
+//app.clickup.com/t/8651091/CHP-2606
+)
+//app.clickup.com/t/8651091/CHP-2602
+)
+//app.clickup.com/t/8651091/CHP-2611
+)",,,
+Deployed Items,Private ( https,Not seen on stage.,,,
+Deployed Items,Private ( https,"Team did a work around for projects, it was giving error because of a field
+items.lastSavedPrice.origin.value
+, renamed it. This did not occur in stage as this value is not exists for any project
+//app.clickup.com/t/8651091/CHP-2612
+)",,,
+Deployed Items,Private ( https,"Env vars are updated on prod. Need somehow track infra changes for the
+release.Like
+in this case, when env vars were updated for lower env during the testing, but forgotten to be changed in prod..
+//app.clickup.com/t/8651091/CHP-2614
+)",,,
+Deployed Items,Private ( https,"Data variation on production.
+//app.clickup.com/t/8651091/CHP-2616
+)",,,
+Deployed Items,Private ( https,"Created this for tracking. We are currently not supporting RFQ creation from CRM.
+//app.clickup.com/t/8651091/CHP-2617
+)",,,
+Deployed Items,Private ( https,"Some quotes failed to sync during migration due to mapping issues. Data variation on production.
+## MC1 SANITY TESTS",,,
+Deployed Items,Private ( https,Feature/Flow,,,
+Deployed Items,Private ( https,Stage,,,
+Deployed Items,Private ( https,Prod,,,
+Deployed Items,Private ( https,Remarks,,,
+Deployed Items,Private ( https,"New User Signup from mc1
+yes
+yes",,,
+Deployed Items,Private ( https,"Mc1 user invite - signup
+yes
+yes",,,
+Deployed Items,Private ( https,On stage should suffice,,,
+Deployed Items,Private ( https,"Upload Bom & Excess and verify in CRM
+yes
+yes",,,
+Deployed Items,Private ( https,"Manual RFQ
+yes
+yes",,,
+Deployed Items,Private ( https,"Active Quote (create, edit)
+yes
+yes",,,
+Deployed Items,Private ( https,"Sales Order
+(create, edit)
+yes
+yes",,,
+Deployed Items,Private ( https,"Lead Account & Transfer
+yes
+yes",,,
+Deployed Items,Private ( https,"Bids
+na
+na",,,
+Deployed Items,Private ( https,"Parts Tracker
+yes
+na",,,
+Deployed Items,Private ( https,"Search
+yes
+yes",,,
+Deployed Items,Private ( https,"Page Navigations
+yes
+yes",,,
+Deployed Items,Private ( https,"Edit Project
+yes
+yes",,,
+Deployed Items,Private ( https,"Notification Emails
+yes
+yes",,,
+Deployed Items,Private ( https,"Download excess and Bom Template, fill and upload.
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,Feature/Flow,,,
+Deployed Items,## CRM SANITY TESTS,Stage,,,
+Deployed Items,## CRM SANITY TESTS,Production,,,
+Deployed Items,## CRM SANITY TESTS,Remarks,,,
+Deployed Items,## CRM SANITY TESTS,"Create BOM in MC1, check in xcrm and new crm
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Create RFQ in MC1, check in xcrm and crm
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Upload BOM from CRM
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Page Navigations
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Deep links for Accounts, RFQs, Quotes and Orders
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,Edit Project,,,
+Deployed Items,## CRM SANITY TESTS,NA,,,
+Deployed Items,## CRM SANITY TESTS,NA,,,
+Deployed Items,## CRM SANITY TESTS,"Global Search
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Filters
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Sorting of tables
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Page Search
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Download excess and Bom Template, fill and upload.
+yes
+yes
+## AUTOMATION TEST RUN
+mc1 report
+//jenkins.chip1.info/job/chip1-e2e-tests/job/chip1-ui-tests/35/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+crm report
+//jenkins.chip1.info/job/chip1-e2e-tests/job/crm-ui-tests/10/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html",,,

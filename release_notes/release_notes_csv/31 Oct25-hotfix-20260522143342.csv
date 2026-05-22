@@ -1,0 +1,81 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Deepti Vaidyula",,
+Metadata,Release Info,Release date,2025.10.31,,
+Metadata,Release Info,DB changes,Connect : No changes,,
+Metadata,Release Info,Platform,No changes,,
+Metadata,Release Info,Notification, No changes,,
+Metadata,Release Info,Branch,Chip1 Webui : release/2025.10.31,,
+Metadata,Release Info,"Chip1 Account, Chip1 Part, Chip1 Transaction",hotfix/2025.10.31,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2025.10.31.2,,
+Artefacts,Artefacts,Chip1 Account,2025.10.31.1,,
+Artefacts,Artefacts,Chip1 Part,2025.10.31.0,,
+Artefacts,Artefacts,Chip1 Transaction,2025.10.31.0,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,QE documentation link,https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh,,
+Deployed Items,General,Dashboard,,,
+Deployed Items,General,Security builder for data ficker - Transaction service,Verified,,
+Deployed Items,General,Clean filter for News - Accounts Service - Seeing different news now - Recheck after sometime.,,,
+Deployed Items,General,"Status migration api, small patch handling RFQ and SO without lines - Transaction service - migration",,,
+Deployed Items,General,"Fixed OOM issue for part category migration job, needed for system components script - Part      Service - migration",,,
+Deployed Items,General,UI only,,,
+Deployed Items,General,Add missing RFQ List columns across CRM ,Verified. Requirement level is added in all list screens.,,
+Deployed Items,General,Fix QuoteNumber Mapping for RfqQuotes List,Verified. The duplicate xcrm Quotes issue still persists however.,,
+Deployed Items,General,Phone field - add some tests and remove useEffect - dev only,,,
+Deployed Items,General,UAT feedback,,,
+Deployed Items,CRM,Account Shipping and Billing - Country is required now,Verified.,,
+Deployed Items,CRM,Account Credit island -  better layout for smaller screen,Verified.,,
+Deployed Items,MC1,"Make Country required on sign up, don't reset fields during submissions.",Verified.,,
+Deployed Items,MC1,Common,,,
+Deployed Items,MC1,"Phone field - Remove (x) button from country selector
+//app.clickup.com/t/8651091/CHP-2808",Verified.,,
+Deployed Items,Private ( https,")
+.
+//app.clickup.com/t/8651091/CHP-3226",Verified,,
+Deployed Items,Private ( https,")
+//app.clickup.com/t/8651091/CHP-3247",Verified.,,
+Deployed Items,Private ( https,")
+//app.clickup.com/t/8651091/CHP-3380",Verified.,,
+Deployed Items,Private ( https,")
+//app.clickup.com/t/8651091/CHP-3382
+) - Back to dev
+//app.clickup.com/t/8651091/CHP-3385",Verified. Basic checks done.,,
+Deployed Items,Private ( https,")
+//app.clickup.com/t/8651091/CHP-3403",Verified. Seeing for some RFQs.,,
+Deployed Items,Private ( https,")
+//app.clickup.com/t/8651091/CHP-3407",Verified.,,
+Deployed Items,Private ( https,")
+//app.clickup.com/t/8651091/CHP-3417",Verified.,,
+Deployed Items,Private ( https,")
+//app.clickup.com/t/8651091/CHP-3420",Verified.,,
+Deployed Items,Private ( https,),Verified.,,
+Deployed Items,feat(nav),add sub navitems for account,Verified.,,
+Deployed Items,fix,Fixed Rfq quote button missing issue in mc1 for Chip1Inventory ,Verified.,,
+Deployed Items,fix,"Account- Send unset array correctly ('parentAccount') 
+[]",Verified.unset:,,
+Deployed Items,fix,"Refactorings on News
+.",Verified,,
+Deployed Items,fix,"Enhance Historical Activity Mapping and Column Definitions 
+//app.clickup.com/t/8651091/CHP-3426
+)",Verified.,,
+Deployed Items,Root cause,"Data issue. No deployment was needed.
+//app.clickup.com/t/8651091/CHP-3427
+)- minor UI
+## MC1 SANITY TESTS",,@thread,https://teams.microsoft.com/l/message/19:488b6c738ca0435cb695a6cfb72cf477@thread.v2/1762188132803?context=%7B%22contextType%22%3A%22chat%22%7D
+Deployed Items,Private ( https,Basic Sanity looks good,,,
+Deployed Items,On prod,Manual RFQ,,,
+Deployed Items,On prod,"Uploaded bom
+page navigations",,,
+Deployed Items,On prod,Signup with new user,,,
+Deployed Items,On prod,Created quote on xcrm from RFQ raised,,,
+Deployed Items,On prod,"Created SO on xcrm from quote created
+## CRM SANITY TESTS",,,
+Deployed Items,On prod,Basic Sanity looks good,,,
+Deployed Items,On prod,Upload bom,,,
+Deployed Items,On prod,Create task,,,
+Deployed Items,On prod,Page navigations,,,
+Deployed Items,On prod,Global search,,,
+Deployed Items,On prod,Single line RFQ-quote-SO flow,,,
+Deployed Items,On prod,Edit Quote and SO,,,

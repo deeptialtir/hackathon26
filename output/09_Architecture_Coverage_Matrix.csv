@@ -1,0 +1,9 @@
+Node_ID,Node_Label,Architecture_Layer,Node_Type,Upstream_Nodes,Scenario_Coverage,Scenarios_Testing_Node,Impact_if_Fails
+SRC-DB,DB Tables,Source,Data Source,,YES,DIS-01,MEDIUM
+SRC-API,External API,Source,Data Source,,YES,DIS-01,MEDIUM
+SRC-FILE,Flat Files,Source,Data Source,,YES,DIS-01,MEDIUM
+PROC-VAL,Validation Engine,Processing,Processor,SRC-DB|SRC-API|SRC-FILE,YES,DIS-02,HIGH
+PROC-XFR,Transformation Logic,Processing,Processor,PROC-VAL,YES,DIS-03,HIGH
+PROC-ERR,Error Handling,Processing,Processor,PROC-VAL,YES,DIS-04,HIGH
+PROC-LAYER,Data Processing Layer,Processing,Orchestrator,PROC-VAL|PROC-XFR|PROC-ERR,YES,DIS-05|DIS-07,HIGH
+TGT-STORE,Target Data Store / Reporting,Target,Data Target,PROC-LAYER,YES,DIS-06,MEDIUM

@@ -1,0 +1,389 @@
+# 8-DEC25 RELEASE
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2025.12.08
+ 
+DB changes
+ : 
+Connect
+ : release/2025.12.05
+Platform
+ : release/2025.12.05
+Notification : 
+No changes
+ 
+Branch
+  : release/2025.12.05
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 MC1 Core     
+    
+                      
+    :
+ 
+2025.12.05.1
+Chip1 Account        
+    
+                      
+    :
+ 
+2025.12.05.3
+Chip1 Transaction  
+    
+                      
+   : 2025.12.05.1
+Chip1 CRM WebUI                 
+    
+         
+ :
+ 
+2025.12.05.7
+Chip1 WebUI                 
+    
+                   
+ :
+ 
+2025.12.05.1
+fn connect                 
+    
+                      
+  :
+ 
+2025.12.05.0
+fn keyclock
+                                        : 2025.12.05.0
+ 
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+Private (
+https://app.clickup.com/t/8651091/CHP-3386
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2897
+) - Existing issues
+Private (
+https://app.clickup.com/t/8651091/CHP-3235
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3597
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3586
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3606
+)
+MarketActivity: optimize minimum price calculation in aggregated cell logic
+Private (
+https://app.clickup.com/t/8651091/CHP-3576
+) - Link not enabled on prod crm
+Private (
+https://app.clickup.com/t/8651091/CHP-3578
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3600
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3605
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3616
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3626
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3570
+)
+Quote fixes  - Verified
+ 
+Bugs in build
+ 1. Quote issue - Ready - deployed Warranty & other info.
+Habib has a fix for minq and maxq.
+Habib is checking the warranty related params (2)
+Quote inbound is failing if we enter warranty details: Private (
+https://app.clickup.com/t/8651091/CHP-3641
+)
+2. Invoice page on MC1 is giving Oops error. 
+
+https://stage.chip1.info/orders/6932fa9bed27af10960c8ac7/invoices
+ 
+User: 
+altir.test.eu.1111@yopmail.com
+Private (
+https://app.clickup.com/t/8651091/CHP-3640
+) 
+3. Private (
+https://app.clickup.com/t/8651091/CHP-3639
+) : Timeline tab shows 403 Forbidden and “Oops” error in UI
+4. Private (
+https://app.clickup.com/t/8651091/CHP-3634
+): CRM : 'CPN' and 'Cost per Unit' are missing in Order Line details
+5. Contact Update is failing
+6. Account creation is failing with new contact
+7. mc1 invitation is failing from crm
+8. Unable to create visit due to past date selection on calender
+Private (
+https://app.clickup.com/t/8651091/CHP-3623
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3650
+)
+ 
+Missed in production:
+Private (
+https://app.clickup.com/t/8651091/CHP-3646
+)
+Automation Runs:
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/crm-ui-tests/27/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/chip1-ui-tests/54/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+ 
+
+## MC1 SANITY TESTS
+
+Note: The sanity tests to check will be selected based on the release
+Feature/Flow
+Stage
+Prod
+Remarks
+New User Signup from mc1
+ Yes
+ Yes
+On prod, we test this on need basis
+Mc1 user invite - signup
+Yes 
+ Yes
+On stage should suffice
+Upload Bom and verify in CRM
+ Yes
+ Yes
+ 
+Upload Excess and verify in CRM
+ Yes
+ Yes
+ 
+Manual RFQ
+ Yes
+ Yes
+ 
+RFQ update
+ Yes
+ Yes
+ 
+RFQ - multiline
+ Yes
+ -
+ 
+Active Quote (create)
+ Yes
+ Yes
+ 
+Active Quote (edit)
+ Yes
+ Yes
+ 
+Active quote - multiline
+ Yes
+ -
+ 
+Sales Order (create)
+ Yes
+ Yes
+ 
+Sales Order (edit)
+ Yes
+ Yes
+ 
+Sales Order - multiline
+ Yes
+ -
+ 
+Quality Control (PO number)
+ Yes
+ -
+On prod, we test this on need basis
+Invoice generation
+ Yes
+ -
+On prod, we test this on need basis
+Invoice generation - shipping in 2 lots
+ Yes
+ -
+On prod, we test this on need basis
+Lead Account & Transfer
+ Yes
+ Yes
+ 
+Bids
+ --
+ --
+ 
+Parts Tracker
+ Yes
+ Yes
+ 
+Search
+ Yes
+ Yes
+ 
+Page Navigations
+ Yes
+ Yes
+ 
+Edit Project
+Yes 
+ Yes
+ 
+Notification Emails
+ --
+ --
+ 
+Download excess and Bom Template, fill and upload.
+ Yes
+ Yes
+ 
+Conceirge Service
+ Yes
+ Yes
+ 
+Sorting
+ Yes
+ Yes
+ 
+Filters
+ Yes
+ Yes
+ 
+Pricing - OEM secrets
+ Yes
+ Yes
+ 
+Pricing - IC
+Yes 
+ Yes
+ 
+Pricing - xcrm
+ Yes
+ Yes
+ 
+ 
+
+## CRM SANITY TESTS:
+
+Note: The sanity tests to check will be selected based on the release
+Feature/Flow
+Stage
+Production
+Remarks
+Create BOM in MC1, check in xcrm and new crm
+ Yes
+ 
+ 
+Create RFQ in MC1, check in xcrm and crm
+ Yes
+ 
+ 
+Upload BOM from CRM
+ Yes
+ 
+ 
+Page Navigations
+ Yes
+ 
+ 
+Deep links for Accounts, RFQs, Quotes and Orders
+ Yes
+ 
+ 
+Edit Project
+Yes 
+ 
+ 
+Projects - price refresh
+ Yes
+ 
+ 
+Global Search
+ Yes
+ 
+ 
+Filters 
+ Yes
+ 
+ 
+Sorting of tables
+ Yes
+ 
+ 
+Page Search
+ Yes
+ 
+ 
+Download excess and Bom Template, fill and upload.
+ Yes
+ 
+ 
+Conceirge Service
+ Yes
+ 
+ 
+Microdashboard counts
+ Yes
+ 
+ 
+Share project and show in mc1
+ Yes
+ 
+ 
+Create Contact from crm
+ Yes
+ 
+ 
+Invite Contact from crm
+ Yes
+ 
+ 
+Create Task
+ Yes
+ 
+ 
+FAB icons - for all
+ Yes
+ 
+ 
+FAB - icon actions - Take a note/Activity/Task
+ Yes
+ 
+ 
+Light mode - dark mode
+ Yes
+ 
+ 
+Saved Views
+ Yes

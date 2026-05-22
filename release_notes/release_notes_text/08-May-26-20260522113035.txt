@@ -1,0 +1,107 @@
+# 08-MAY-26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2026.05.08
+DB changes
+ : 
+Connect
+ : release/2026.05.08
+Platform
+ : release/2026.05.08
+Notification : 
+No Change
+ 
+Branch
+  : release/2026.05.08
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Transaction  
+    
+                        
+ : 2026.05.08.1
+Chip1 CRM WebUI                 
+    
+          
+: 2026.05.08.4
+fn connect                                          
+    : 2026.05.08.0
+
+## LIST OF DEPLOYED ITEMS
+
+fix(crm): send sales order salesperson via users payload (
+#3906
+)  - 
+Verified
+Replaced salesPerson payload with users array for sales order creation
+fix(rfq): keep sourcing type consistent across RFQ edit flows (
+#3905
+) 
+Verified
+Fix RFQ sourcing type handling across RFQ edit flows to keep create/update/display consistent.
+Stock: Use separate endpoints for MPN and Manufacturer filters (CRM(under warehouse stock only) 
+& MC1
+) (
+#3889
+)
+Verified
+Update : changed the customer declaration Number backend key ref (
+#3907
+)
+Verified
+update: shipment line-level shipping options and consolidated invoice costs (
+#3909
+) 
+Verified
+Derive and display shipping options dynamically from order lines in CreateShipmentForm
+Simplify InvoiceCostSummaryFooter by consolidating cost editing into a unified "Additional Costs" action
+needs testing (as it was merged to release today)
+feat(crm): add invoice additional-cost workflow with cost summary and migrate shipment packaging to array model(
+#3903
+) 
+Added additional-cost editing workflow for invoices with new modal and reusable form section.
+Verified
+Implemented invoice cost summary calculations and integrated them into invoice create/details flows. 
+Verified - issue posted
+Added invoice paid checkbox flow with confirmation modal in the invoice cost summary footer. 
+Verified
+Migrated shipment packaging from single-object to array-based entries across UI, VM mapping, types, and validation. -
+ Seems Dev Task
+Removed legacy shipment list packaging condition logic tied to the old packaging shape.-
+ Seems Dev Task
+Updated invoice/shipment i18n keys and API/mutation wiring for the new additional-cost and packaging structures.-
+ Seems Dev Task
+Added unit tests for invoice additional-cost form logic and invoice cost summary calculations.-
+ Seems Dev Task
+dev only:
+chore(api-contract): prefer chip1-api-hub for canonical contracts (
+#3893
+) 
+Added 
+fetch-hub-spec.sh
+ to read canonical OpenAPI specs from chip1-api-hub via gh api
+Updated api-contract skill to use chip1-api-hub first for all canonical contract workflows
+Kept Prism Swagger fetch as an explicit fallback-only path
+Added quick-start usage examples to the skill
+Verified the new script works for all 5 definitions and fails clearly when Prism is unavailable
+feat(simple-cells): migrate Quote / Offer / RFQ column definitions (
+#3890
+)
+Formatting: add eslint rule, fix couple of warnings (
+#3904
+)
+Refactor: Part-related fields (
+#3888
+) 
+As per Om's request, we need to have very similar part-related fields in several forms. Behavior should be the same: manufacturer field, for example, should behave in the same way in different forms, but now there are differences. This PR creates common hook and i18n resource. Migration will be done in the upcoming PRs

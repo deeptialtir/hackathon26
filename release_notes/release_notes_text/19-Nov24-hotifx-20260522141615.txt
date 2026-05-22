@@ -1,0 +1,44 @@
+# 19-NOV24-HOTIFX
+
+Environment: Stage
+Status: Good
+Prod release owner:
+ 
+@Deepti Vaidyula
+ 
+@Umamahesh
+ 
+Release date
+ : 2024.11.19
+DB changes
+ : No changes
+Branch
+  :
+webui
+ : hotfx/2024.11.19
+mc1-core
+ : release/2024.11.19
+Components Involved
+ 
+& Artefacts
+: 
+Chip1 WebUI                 
+: hotfix-2024.11.19.0
+Chip1 MC1 Core
+          : 2024.11.19.0
+
+## FEATURES RELEASED
+
+CHP-1122
+ : Restrict sign up email domains
+CHP-1123
+ : Endpoint for manual lead account migration
+
+## TESTING NOTES
+
+CHP-1122: Verified on stage that all the listed public email domains give the "Please use your business email address. Public domains are not allowed" message in the UI. For valid domains, we are taken to the OTP page and Signup is successful. (Automated flow)
+CHP-1123: Picked a user who is neither a lead contact or an actual contact. And sent the following curl request for that user. I see the response is coming as success. CRM should show respective leads in their region
+curl --location 'http://chip1-stage-main-apigw-nlb-546ce6b82ffc3089.elb.us-west-2.amazonaws.com/mc1-core/internal/people/send-lead-info' --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-Api-Key: 616b2068732069642d6e6f6e2d70726f642e616c7469722e6e65742072206d7963686970315f7374616765206320666e2d636f6e6e6563742d7374616765206b20383231313032623033623535653331626564353465316435f5c1fecfa6ab928a457996f9' --data '{ "mc1AccountIds": ["<account_id>"] }'
+Sample Response:
+{"data":{"6e0d7948-73de-4c3f-b146-f26e93aa8564":["MC1 account doesn't exist","Successfully processed lead info for MC1 account '6e0d7948-73de-4c3f-b146-f26e93aa8564'"]}}%  
+Basic Sanity tests

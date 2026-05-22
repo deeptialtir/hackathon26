@@ -1,0 +1,35 @@
+# 11-DEC24-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+@Deepti Vaidyula
+ 
+Release date
+ : 2024.12.11
+DB changes
+ : 
+Connect
+ : No change
+Platform
+ : No change
+Key Clock
+: No change
+Branch
+  : hotfix/2024.12.11
+Components Involved
+ 
+& Artefacts
+: 
+Chip1 Transaction.       : 
+hotfix-2024.12.11.1
+
+## WHAT'S FIXED FOR THE HOTFIX?
+
+Restrict logic to show region specific vendors on Pricing`
+
+## TESTING NOTES
+
+Verified that region based vendors filter is removed from Projects ➝ Pricing ➝ Select Vendors
+Users are able to see vendors from other regions as well
+Smoke testing

@@ -1,0 +1,181 @@
+# 31 OCT25-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+, 
+@Deepti Vaidyula
+ 
+Release date
+ : 2025.10.31
+ 
+DB changes
+ : 
+Connect
+ : No changes
+Platform
+ : No changes
+Notification : 
+No changes
+ 
+Branch
+  : 
+Chip1 Webui : release/2025.10.31
+Chip1 Account, Chip1 Part, Chip1 Transaction  : hotfix/2025.10.31
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 MC1 WebUI 
+                              : 2025.10.31.0
+Chip1 CRM WebUI   
+                           : 2025.10.31.2
+Chip1 Account      
+                               : 2025.10.31.1
+Chip1 Part        
+                                     : 2025.10.31.0
+Chip1 Transaction  
+    
+                      
+    :
+ 
+2025.10.31.0
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+Dashboard  
+Security builder for data ficker - Transaction service - 
+Verified
+Clean filter for News - Accounts Service - 
+Seeing different news now - Recheck after sometime.
+Status migration api, small patch handling RFQ and SO without lines - Transaction service - 
+migration
+Fixed OOM issue for part category migration job, needed for system components script - Part      Service - 
+migration
+UI only
+Add missing RFQ List columns across CRM  -
+ 
+Verified. Requirement level is added in all list screens. 
+Fix QuoteNumber Mapping for RfqQuotes List -
+ 
+Verified. The duplicate xcrm Quotes issue still persists however.
+Phone field - add some tests and remove useEffect - dev only
+UAT feedback  
+CRM: 
+Account Shipping and Billing - Country is required now - 
+Verified. 
+Account Credit island -  better layout for smaller screen - 
+Verified.
+MC1: 
+Make Country required on sign up, don't reset fields during submissions. - 
+Verified.
+Common 
+Phone field - Remove (x) button from country selector- 
+Verified.
+Private (
+https://app.clickup.com/t/8651091/CHP-2808
+)- 
+Verified
+.
+Private (
+https://app.clickup.com/t/8651091/CHP-3226
+)- 
+Verified.
+Private (
+https://app.clickup.com/t/8651091/CHP-3247
+)- 
+Verified.
+Private (
+https://app.clickup.com/t/8651091/CHP-3380
+)- 
+Verified. Basic checks done.
+Private (
+https://app.clickup.com/t/8651091/CHP-3382
+) - 
+Back to dev
+Private (
+https://app.clickup.com/t/8651091/CHP-3385
+) - 
+Verified. Seeing for some RFQs. 
+Private (
+https://app.clickup.com/t/8651091/CHP-3403
+) - 
+Verified.
+- 
+Verified.
+Private (
+https://app.clickup.com/t/8651091/CHP-3407
+)- 
+Verified.
+Private (
+https://app.clickup.com/t/8651091/CHP-3417
+)- 
+Verified.
+Private (
+https://app.clickup.com/t/8651091/CHP-3420
+)- 
+Verified.
+feat(nav): add sub navitems for account- 
+Verified.
+fix: Fixed Rfq quote button missing issue in mc1 for Chip1Inventory -
+ 
+Verified.
+Account- Send unset array correctly ('parentAccount') - 
+Verified.unset: 
+[]
+Refactorings on News- 
+Verified
+.
+Enhance Historical Activity Mapping and Column Definitions - 
+Verified.
+ 
+Issues found on stage:
+Issues found on prod:
+Private (
+https://app.clickup.com/t/8651091/CHP-3426
+)
+Root cause: Data issue. No deployment was needed.  
+
+https://teams.microsoft.com/l/message/19:488b6c738ca0435cb695a6cfb72cf477@thread.v2/1762188132803?context=%7B%22contextType%22%3A%22chat%22%7D
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-3427
+)- 
+minor UI
+
+## MC1 SANITY TESTS
+
+Basic Sanity looks good
+On prod:
+Manual RFQ
+Uploaded bom
+page navigations
+Signup with new user
+Created quote on xcrm from RFQ raised
+Created SO on xcrm from quote created
+
+## CRM SANITY TESTS
+
+Basic Sanity looks good
+On prod:
+Upload bom
+Create task
+Page navigations
+Global search
+Single line RFQ-quote-SO flow
+Edit Quote and SO

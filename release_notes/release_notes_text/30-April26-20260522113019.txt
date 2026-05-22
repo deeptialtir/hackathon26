@@ -1,0 +1,204 @@
+# 30-APRIL26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2026.04.30
+ 
+DB changes
+ : 
+Connect
+ : release/2026.04.30
+Platform
+ : No change
+Notification : 
+No change
+ 
+Branch
+  : release/2026.04.30
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Transaction  
+    
+                        
+ : 2026.04.30.2
+Chip1 CRM WebUI                 
+    
+          
+ : 2026.04.30.5
+fn connect                                          
+    : 2026.04.30.0
+
+## LIST OF DEPLOYED ITEMS
+
+@Harika Guntamukkala
+ 
+feat(sr): Allocation Details island changes (
+#3819
+) 
+Verified
+Sr Allocation details Island changes  
+Added allocation sr allocation list on line details page
+Enable Add allocation button when sr status >= purchase requested
+Enable allocation feature till production
+Replace Order ID with linked Sales Order number in invoice lines (
+#3821
+) - 
+Verified
+Replaces the "Order ID" column in invoice lines with a "Sales Order #" column. Displays the linked 
+salesOrder.orderNumber
+ instead of a raw UUID. A hyperlink navigates to the corresponding sales order (
+/sales/orders/:orderId
+). The 
+salesOrderId
+ field now supports 
+string | null
+ (null when no sales order is linked), and dependencies on 
+tOrder
+ have been removed from column definitions. 
+See PR for images.
+feat(permissions): gate Req Source field with sourceFieldOnUpdate permission (
+#3822
+) 
+Adds permission control for the 
+Requirement Source
+ (
+originSource
+) field on RFQ line and Order line detail views — only users with the 
+sourceFieldOnUpdate
+ action can edit it after creation 
+Verified
+sourceFieldOnUpdate
+ 
+present with 
+scope: VIEW
+ → user is allowed to edit (matches existing 
+getIsActionAllowed
+ convention where VIEW = enabled for actions) 
+Verified
+sourceFieldOnUpdate
+ 
+absent
+ → field is read-only 
+Verified
+No restrictions on creation forms — all users can set the value when creating an RFQ or Order 
+Verified
+fix: revert to old design in account list for email and phone (
+#3825
+) 
+Verified
+Reverted to old design for email and phone in account list, duplicate contacts list and campaign contact list. 
+See PR for images. 
+Om Sreenivasan: hey guys - Just now Pouya called. Looks like this is happening for... | Sales Flow | Microsoft Teams
+ 
+Verified
+ 
+Soucring changes
+Combine 
+RoHS Version
+ + 
+CRM RoHS
+ into a single double-decker column (
+rohsVersionCrmRohs
+) with client sorting.
+Verified
+Make 
+Entity Type / Entity
+ cells link to the right detail page (offer → offer details; pricing entities stay non-link).
+Verified
+Improve Supplier column layout by moving rating to secondary and adding country + “Approved: X” as tertiary.
+Verified
+Update Market Activity defaults to hide 
+exportControls
+ and 
+rohsVersionCrmRohs
+ (plus existing 
+c1xOfficeWarehouseAwb
+).
+Verified
+Refresh sourcing translations for new/renamed labels (e.g., “Supplier Details”, “CRM RoHS”, approved label).
+Verified
+ 
+[UI] Include a field for PO search or if the search supports both, then we can call it Stock Search.
+Ship via account number is still not updatable 
+@Deepti Vaidyula
+ 
+We should let the user edit and change the tracking number if they should. Currently updating is not possible  
+Verified
+We should restrict the stock allocation when the pending quantity is 0 on the SR 
+Verified
+QE Remarks: If Pending stock is 0, then 'Add allocation' is diabled.
+[BE] Change the backend logic to update qty as per the formular of  (in stock + on order) - (allocated + reserved). 
+Verified
+[BE] Need to clean up historical data.
+Verified
+[BE] When UI is calling stock API with qty >0, just apply that filter, do not include on order
+Verified
+PO: Update validations (
+#3824
+)
+Fix: po line issues (
+#3829
+) 
+Add Po Doc action on po line level 
+Verified
+Replace the 
+Supplier Poline island
+ with 
+Supplier Po island
+ as supplier and buyer information should be updated on 
+po level
+ only.
+QE Remarks: Download PO doc is at PO line level.
+Fixes: SR stock allocation issues (
+#3826
+) 
+Do not allow empty search with MPN field (restricting the API call when search is empty)
+Verified
+Update the search placeholder with text 'Search with mpn or po number'
+Verified
+Restrict stock allocation when the pending quantity is 0 on the SR
+Verified
+Update : not redirecting user to RFQ details after doing the match account (
+#3828
+) 
+Verified
+raised pr for SR allocation api changes --release: 
+
+https://github.com/altirllc/chip1-webui/pull/3832
+Verified
+
+### DEV ITEMS
+
+chore(claude): restructure 
+CLAUDE.md
+ for clarity and enforce documentation rules (dev only) (
+#3809
+)
+chore: Attach Account - extract common functions to utils (dev only) (
+#3665
+)
+fix(crm): resolve React Compiler try/catch value-block warning in AccountEditAddressModal (dev only) (
+#3827
+)
+Extracts the address payload computation from inside the handleSubmit try/catch into a standalone 
+buildAddressFormPayload
+ function. The React Compiler can't optimize value expressions (
+?:
+, 
+??
+, 
+||
+, 
+?.
+) inside try/catch bodies — moving them outside resolves the warning while preserving identical runtime behavior.

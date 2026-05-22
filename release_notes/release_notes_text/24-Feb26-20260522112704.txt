@@ -1,0 +1,61 @@
+# 24-FEB26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+, 
+@Umamahesh
+ 
+Release date
+ : 2026.02.24
+ 
+DB changes
+ : 
+Connect
+ : hotfix/2026.02.23
+Platform
+ : hotfix/2026.02.23
+Notification : 
+No Change
+ 
+Branch
+  : hotfix/2026.02.23
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Transaction  
+    
+                      
+  : 2026.02.23.4
+fn-connect                               
+    
+        
+ : 2026.02.23.5
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+ 
+Following items are part of the release
+xCRM sync changes for SO, PO, Offer and Stock
+Attributes tagged under 24/02 in QE: 
+
+https://altirllc.sharepoint.com/:x:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Testing%20shared%20documents/Sales_order_attributes.xlsx?d=wc037a8bf8d8c4a5b8aa64ea2b01e8f59&csf=1&web=1&e=FLyqbk
+QE testing:
+Attributes fixes - SO create inbound, PO, Offer and Stock
+Sanity and sync checks for mc1, crm-sales and crm-po
+Issues on prod

@@ -1,0 +1,63 @@
+# 14-MAY26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+ 
+@Harika Guntamukkala
+ 
+ 
+Release date
+ : 2026.05.14
+ 
+DB changes
+ : 
+Connect
+ : release/2026.05.13
+Platform
+ : release/2026.05.13
+Notification : 
+No Change
+ 
+Branch
+  : release/2026.05.13
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Account         
+    
+                        
+ : 2026.05.13.0
+Chip1 Transaction  
+    
+                        
+ : 
+2026.05.13.4
+2026.05.13.7
+Chip1 CRM WebUI                 
+    
+          
+: 
+2026.05.13.6
+2026.05.13.9
+
+## LIST OF DEPLOYED ITEMS
+
+Charges entered in invoice created from shipment is not saving all the charges
+Skip credit card validations if payment term is credit card for SO creation
+Display the xCRM Invoice ID in Invoice list view
+
+## TESTING DONE:
+
+Ran basic sanity checks
+
+## OPEN ISSUES ON STAGE
+
+For newly created in Apex(OB) invoice xcrm id is not showing up 
+US26INV00156
+ in the list view/details page -> xcrm team needs to update on their end.

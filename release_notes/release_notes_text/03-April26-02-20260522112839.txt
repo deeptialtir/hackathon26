@@ -1,0 +1,181 @@
+# 03-APRIL26-02
+
+Environment: Stage
+Status: 
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2026.04.03
+ 
+DB changes
+ : 
+Connect
+        : No Change
+Platform       
+ : No Change
+Notification  : 
+No Change
+ 
+Branch
+  : release/2026.04.03
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Account  
+    
+                               
+ : 2026.04.03.0
+Chip1 CRM WebUI                
+    
+          
+ : 2026.04.03.1
+fn connect        
+    
+                              
+   : 2026.04.03.0
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+
+## QE DOCUMENTATION LINK:HTTPS://ALTIRLLC.SHAREPOINT.COM/:W:/R/SITES/ALTIR-CHIP1/SHARED%20DOCUMENTS/GENERAL/QUALITY%20ENGINEERING/PROJECT%20DOCUMENTS/CHIP1%20QE%20DOCUMENTATION.DOCX?D=W75141A22221E423A9DD922E367268BB5&CSF=1&WEB=1&E=GWICGH
+
+## LIST OF DEPLOYED ITEMS:
+
+PO : 
+@Umamahesh
+ 
+Implement the same for manufacture like SO. - Nikhil(requires xCRM change as well)-
+OK
+PO User name reconciliation - Nikhil- 
+Couldn't validate as XCRM not sending event in stage
+PO IB -> add a default role -> Buyer- 
+Couldn't validate as XCRM not sending event in stage
+ 
+fixes: ui changes (
+#3462
+)  - 
+@Umamahesh
+ 
+Market Offers details navigating to sourcing offers list instead of market offers.- 
+Verified
+Default filter sourcing type filter issue on offer list page.-
+Verified
+marker offerline - add missing fields and align with other screens.-
+Verified
+PO Changes - 2026.04.03 (
+#3463
+) - 
+@Umamahesh
+ -
+Verified
+ , 
+ 
+ 
+Alexey's changelog:
+Add lock icon to Order Line Details accordion (
+#3444
+) 
+@Harika Guntamukkala
+ 
+Add a dedicated indicator column to 
+CollapsibleIsland
+ grid layout for header actions
+verified
+Show a lock icon with "Section is locked for editing" tooltip on the Order Line Details accordion when the line is locked - 
+verified
+Support 
+headerAction
+ prop in 
+CollapsibleIslandSummary
+ and 
+OrderLineIslandTemplate
+ for rendering icons in the indicator column
+verified
+Create RFQ - Currency field for Copy & paste (
+#3452
+) - 
+@Harika Guntamukkala
+ 
+verified
+feat: allow to set theme with URL query param (
+#3460
+) - 
+@Harika Guntamukkala
+ 
+ Add 
+?theme=light
+ or 
+?theme=dark
+ query parameter to any URL for MC1 or CRM to set theme. 
+verified - for both MC1 &  Apex
+
+https://crm.dev.chip1.info/accounts/details?theme=light
+
+https://crm.dev.chip1.info/accounts/details?theme=dark
+Update : P1 issues on SO (
+#3464
+)  - 
+@Harika Guntamukkala
+ 
+Customer vendor Code and customer number on Create SO form with sync from account
+verified
+Removed notes from OrderBillingIsland 
+verified
+ 
+ 
+ 
+Fix notifications layout (
+#3459
+)  - 
+@Deepti Vaidyula
+  - 
+Verified
+Changed notifications list layout (F - Figma, B - Before, A - After)
+Changed notification toast layout
+ 
+SO feedback - batch 1 (
+#3465
+) - 
+@Deepti Vaidyula
+ 
+ Fixed list: 
+When creating an quote, or sales order, the date code must always be mandatory field - 
+Date code is not made mandatory when quote is created from RFQ - 
+Link
+When creating a quote, the net terms should come from the account's billing and shipping details, not from the supplier's net terms - 
+Verified
+When the phone number is fixed at the account level, the prefix is not displayed in the SO - 
+Verified
+In the shipping contact field, all contacts from the entire database are shown instead of only relevant ones - 
+Seeing contact from entire database instead of from account as per the PR 
+(
+#3465
+) 
+- 
+Link
+When an SO is created, the shipping options field is wrongly displayed with the default value: "Ship Majority Required." - 
+Verified
+. Shipping options now don't fill any default value.
+When an SO has multiple lines and only a few lines are unlocked, users should be able to see exactly which lines were unlocked - 
+Verified
+QE remarks: Can see in order list view and details view as well
+When creating a Quote, users should be able to modify MPN or add MPN manually - 
+Verified
+ 
+SO - 
+@Deepti Vaidyula
+ 
+ Manufacturer name (requires xCRM change as well)
+Tax Percent

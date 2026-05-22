@@ -1,0 +1,100 @@
+# 02-JULY25-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+@Harika Guntamukkala
+ 
+Release date
+ : 2025.07.02
+DB changes
+ : 
+Connect
+ : No change
+Platform
+ : No change
+Key Clock
+: No change
+Branch
+  : hotfix/2025.07.02
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 WebUI      
+                                 : hotfix-2025.07.02.0
+ 
+ 
+
+## WHAT'S FIXED FOR THE HOTFIX?
+
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-2429
+)
+ 
+
+## TESTING NOTES
+
+Downloaded BOM template in different accounts and opened the file
+
+## MC1 SMOKE TESTS
+
+ 
+Feature/Flow
+Stage
+Prod
+Remarks
+New User Signup from mc1
+ NA
+ NA
+ 
+Mc1 user invite - signup
+ Yes
+ NA
+On stage should suffice
+Upload Bom & Excess and verify in xCRM
+ Yes
+ Yes
+ 
+Manual RFQ
+ Yes
+ Yes
+ 
+Active Quote (create, edit)
+ Yes
+ Yes
+ 
+Sales Order
+(create, edit)
+ NA
+ NA
+ 
+Lead Account & Transfer
+ NA
+ NA
+ 
+Bids
+ NA
+ NA
+ 
+Parts Tracker
+ NA
+ NA
+ 
+Search
+ Yes
+ Yes
+ 
+Page Navigations
+ Yes
+ Yes
+ 
+Edit Project
+ Yes
+ Yes
+ 
+Notification Emails
+ NA
+ received for Active Quote

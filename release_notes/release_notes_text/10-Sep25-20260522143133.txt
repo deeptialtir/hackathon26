@@ -1,0 +1,484 @@
+# 10-SEP25
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2025.09.10
+ 
+DB changes
+ : 
+Connect
+ : release/2025.09.08
+Platform
+ : release/2025.09.08
+Notification : 
+No changes
+ 
+Branch
+  : release/2025.09.08
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+fn-connect 
+                                        : 2025.09.08.0
+Chip1 Account      
+                              : 2025.09.08.2
+Chip1 MC1 Core 
+                                : 2025.09.08.2
+Chip1 Part        
+                                    : 2025.09.08.4
+Chip1 Transaction  
+    
+                      
+   :
+ 
+2025.09.08.5
+Chip1 WebUI      
+                                 : 2025.09.08.2
+Chip1 CRM WebUI      
+                        : 2025.09.08.2
+Deployed fixes:
+Chip1 Part        
+                                    : 2025.09.08.5
+Chip1 Transaction  
+    
+                      
+   :
+ 
+2025.09.08.7
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+ 
+CHP-2895
+ - IC sourcing updates to pricing
+CHP-2710
+ - Company details
+CHP-2792
+ - Performance improvement of asyncJobProcessor 
+CHP-2834
+: Don't show 'Hide in MyChip1' for projects uploaded from MC1 
+Databit enhancement
+Datagroup bug fixes
+ Fixes deployed:
+Private (
+https://app.clickup.com/t/8651091/CHP-2990
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-3009
+)
+ 
+@Umamahesh
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-2831
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2832
+) 
+ 
+@Deepti Vaidyula
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-2834
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-2868
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-2710
+)
+ Private (
+https://app.clickup.com/t/8651091/CHP-2895
+)
+2Private (
+https://app.clickup.com/t/8651091/CHP-2792
+)
+@Harika Guntamukkala
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-2842
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2844
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-2833
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-2802
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-2650
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-2883
+)
+ 
+Sanity/dev tickets: Regression will be sufficient
+Private (
+https://app.clickup.com/t/8651091/CHP-2827
+) -system components
+Private (
+https://app.clickup.com/t/8651091/CHP-288
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2695
+) 
+Enhance Part List Query Options and Refactor System Components Filter (
+#1098
+)
+fix(dashboard): allow not having sort provider for dashboard parts card (
+#1132
+)
+fix(validation): update inactiveReason validation to remove max length constraint (
+#1121
+)
+GH Actions - Try to fix out of memory on typecheck (
+#1092
+)
+MicroDashboard - Add shadows to right and left edges (
+#1107
+)
+Refactor: Rename methods of modal hook in MC1 to match CRM (
+#1097
+)
+Added Cursor Rules (
+#1096
+)
+chore: update turbo package to version 2.5.6 (
+#1099
+)
+ 
+Bugs in build
+Open on stage: (related to release)
+Private (
+https://app.clickup.com/t/8651091/CHP-2991
+) - next release
+Private (
+https://app.clickup.com/t/8651091/CHP-2980
+) - Edit disabled on prod
+Private (
+https://app.clickup.com/t/8651091/CHP-2978
+)- Edit disabled on prod
+Private (
+https://app.clickup.com/t/8651091/CHP-2953
+)-Existing issue
+Private (
+https://app.clickup.com/t/8651091/CHP-2948
+)- Normal priority
+Private (
+https://app.clickup.com/t/8651091/CHP-2947
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2936
+)- Normal priority
+Private (
+https://app.clickup.com/t/8651091/CHP-2910
+)-  disabled on prod
+Private (
+https://app.clickup.com/t/8651091/CHP-2904
+)- Normal priority
+Private (
+https://app.clickup.com/t/8651091/CHP-2935
+)- Normal priority
+Private (
+https://app.clickup.com/t/8651091/CHP-2927
+) - Normal priority
+Private (
+https://app.clickup.com/t/8651091/CHP-2911
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2878
+)
+Fixed:
+Private (
+https://app.clickup.com/t/8651091/CHP-2981
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2941
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2940
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2977
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2942
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2939
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2938
+) - not enabled on prod
+Private (
+https://app.clickup.com/t/8651091/CHP-2930
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2945
+)
+ 
+Found on production:
+Private (
+https://app.clickup.com/t/8651091/CHP-3002
+)
+QE release ticket:
+ Private (
+https://app.clickup.com/t/8651091/CHP-2928
+)
+Automation Reports:
+mc1
+: 
+
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/chip1-ui-tests/40/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+ 
+crm
+: 
+
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/crm-ui-tests/16/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+ 
+ 
+
+## MC1 SANITY TESTS
+
+Note: The sanity tests to check will be selected based on the release
+Feature/Flow
+Stage
+Prod
+Remarks
+New User Signup from mc1
+ Yes
+ Yes
+On prod, we test this on need basis
+Mc1 user invite - signup
+ Yes
+ Yes
+On stage should suffice
+Upload Bom and verify in CRM
+ Yes
+ Yes
+ 
+https://my.chip1.com/projects/68c1298218ef2e14e8737b9e
+Upload Excess and verify in CRM
+ Yes
+ Yes
+ 
+https://my.chip1.com/projects/68c1501242cbe6680f34e7aa
+Manual RFQ
+ Yes
+ Yes
+ US25RQ12840
+RFQ update
+ Yes
+ Yes
+ US25RQ12840
+RFQ - multiline
+ Yes
+ Yes
+ US25RQ12842
+Active Quote (create)
+ Yes
+ Yes
+ US25QU04006
+Active Quote (edit)
+ Yes
+ Yes
+ US25QU04006
+Active quote - multiline
+ Yes
+ Yes
+ US25QU04006
+Sales Order (create)
+ Yes
+ Yes
+ US25SO01052
+Sales Order (edit)
+ Yes
+ Yes
+ US25SO01052
+Sales Order - multiline
+ Yes
+ Yes
+ US25SO01052
+Quality Control (PO number)
+ Yes
+ Yes
+CN25PO00119
+CN25PO00121
+Invoice generation
+ Yes
+ Yes
+US25INV01012
+Invoice generation - shipping in 2 lots
+ Yes
+ Yes
+CN25PO00120
+US25INV01013
+Lead Account & Transfer
+ Yes
+ Yes
+ 
+altir.test.0101@yopmail.com
+Bids
+ Yes
+ -
+ On stage should suffice
+Parts Tracker
+ Yes
+ yes
+ 
+MPF100T-1FCG484E
+Search
+ Yes
+ Yes
+ 
+Page Navigations
+ Yes
+ Yes
+ 
+Edit Project
+ Yes
+ Yes
+ 
+Notification Emails
+ Yes
+ Yes
+ 
+Download excess and Bom Template, fill and upload.
+ Yes
+ Yes
+ 
+Conceirge Service
+ Yes
+ 
+ 
+Sorting
+ Yes
+ Yes
+ 
+Filters
+ Yes
+ Yes
+ 
+ 
+
+## CRM SANITY TESTS:
+
+Note: The sanity tests to check will be selected based on the release
+Feature/Flow
+Stage
+Production
+Remarks
+Create BOM in MC1, check in xcrm and new crm
+ yes
+ Yes - 
+Link
+ 
+Create RFQ in MC1, check in xcrm and crm
+ yes
+US25RQ12852
+US25QU04007
+ 
+Upload BOM from CRM
+ yes
+Yes - 
+Link
+ 
+Page Navigations
+yes 
+ Yes
+ 
+Deep links for Accounts, RFQs, Quotes and Orders
+ yes
+ US25QU04007
+ 
+Edit Project
+yes
+ yes
+ 
+Global Search
+yes 
+ yes
+ 
+Filters 
+ yes
+ yes
+ 
+Sorting of tables
+ yes
+ yes
+ 
+Page Search
+ yes
+ yes
+ 
+Download excess and Bom Template, fill and upload.
+ yes
+ yes
+ 
+Conceirge Service
+yes 
+yes 
+ 
+Microdashboard counts
+ yes
+ yes
+ 
+Share project and show in mc1
+yes 
+ yes
+ 
+Create Contact from crm
+ yes
+ --
+ 
+Invite Contact from crm
+ yes
+ yes
+ 
+Create Task
+ yes
+ yes 
+ test release 10 sep25
+FAB icons - for all
+ yes
+ yes
+ 
+FAB - icon actions - Take a note/Activity/Task
+ yes
+ yes
+ 
+Light mode - dark mode
+ yes
+ yes
+ 
+Saved Views
+ yes
+ yes
+ 
+ Projects - price refresh
+ yes
+yes

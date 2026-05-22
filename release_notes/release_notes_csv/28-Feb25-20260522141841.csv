@@ -1,0 +1,71 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Deepti Vaidyula",,
+Metadata,Release Info,Release date,2025.02.28,,
+Metadata,Release Info,DB changes,Connect : No change,,
+Metadata,Release Info,Platform,release/2025.02.28,,
+Metadata,Release Info,Notification, release/2025.02.28,,
+Metadata,Release Info,Branch,Platform : release/2025.02.28,,
+Metadata,Release Info,WebUI,release/2025.02.28,,
+Metadata,Release Info,Notification Services,No Change,,
+Artefacts,Artefacts,Chip1 MC1 Core,2025.02.28.0,,
+Artefacts,Artefacts,Chip1 Part,2025.02.28.0,,
+Artefacts,Artefacts,Chip1 Transaction,2025.02.28.0,,
+Deployed Items,Private ( https,"//app.clickup.com/t/8651091/CHP-1552
+)
+//app.clickup.com/t/8651091/CHP-1504
+//app.clickup.com/t/8651091/CHP-1504
+)
+//app.clickup.com/t/8651091/CHP-1580
+)
+//app.clickup.com/t/8651091/CHP-1599
+)
+//app.clickup.com/t/8651091/CHP-1547
+)
+//app.clickup.com/t/8651091/CHP-1558
+)
+## SMOKE TESTS",,,
+Deployed Items,Missed in production,Feature/Flow,,,
+Deployed Items,Missed in production,Stage,,,
+Deployed Items,Missed in production,Prod,,,
+Deployed Items,Missed in production,Remarks,,,
+Deployed Items,Missed in production,"New User Signup from mc1
+yes
+yes",,,
+Deployed Items,Missed in production,"Mc1 user invite - signup
+yes
+yes",,,
+Deployed Items,Missed in production,On stage should suffice,,,
+Deployed Items,Missed in production,"Upload Bom & Excess and verify in CRM
+yes
+yes",,,
+Deployed Items,Missed in production,"Manual RFQ
+yes
+yes",,,
+Deployed Items,Missed in production,"Active Quote (create, edit)
+yes
+yes",,,
+Deployed Items,Missed in production,"Sales Order
+(create, edit)
+yes
+yes",,,
+Deployed Items,Missed in production,"Lead Account & Transfer
+yes",,,
+Deployed Items,Missed in production,"Bids
+yes (existing account)",,,
+Deployed Items,Missed in production,"Parts Tracker
+yes
+yes",,,
+Deployed Items,Missed in production,"Search
+yes
+yes",,,
+Deployed Items,Missed in production,"Page Navigations
+yes
+yes",,,
+Deployed Items,Missed in production,"Edit Project
+yes
+yes",,,
+Deployed Items,Missed in production,"Notification Emails
+yes
+yes",,,

@@ -1,0 +1,891 @@
+# 24-JAN26🔋
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2026.01.25
+Components Involved
+ 
+& Artefacts
+: 
+DB changes
+ : 
+Connect
+ : release/2026.01.24
+Platform
+ : release/2026.01.24
+Notification : 
+No changes
+Branch
+  : release/2026.01.24
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+  Private (
+https://app.clickup.com/t/8651091/CHP-3668
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3673
+) 
+@Harika Guntamukkala
+  - 
+Verified
+Private (
+https://app.clickup.com/t/8651091/CHP-3753
+)
+@Umamahesh
+ -
+devOnly
+Private (
+https://app.clickup.com/t/8651091/CHP-3760
+) 
+@Umamahesh
+ -
+devOnly
+Private (
+https://app.clickup.com/t/8651091/CHP-3786
+) 
+@Deepti Vaidyula
+  - Keeping it open for fixes in other pages. Tested pages in scope for the release.
+Private (
+https://app.clickup.com/t/8651091/CHP-3832
+)
+@Harika Guntamukkala
+  - 
+Verified
+Private (
+https://app.clickup.com/t/8651091/CHP-3862
+) 
+@Harika Guntamukkala
+  - 
+Verified
+Private (
+https://app.clickup.com/t/8651091/CHP-3865
+) 
+@Deepti Vaidyula
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-3867
+) 
+@Deepti Vaidyula
+   - Closed. Bug is no longer valid as we have new filters design.
+Private (
+https://app.clickup.com/t/8651091/CHP-3872
+) 
+@Deepti Vaidyula
+ 
+Alternatives Drop down - 
+This section is not yet implemented.
+Private (
+https://app.clickup.com/t/8651091/CHP-3878
+) 
+@Harika Guntamukkala
+  -
+Verified
+Private (
+https://app.clickup.com/t/8651091/CHP-3879
+) 
+@Harika Guntamukkala
+  - 
+Verified
+Private (
+https://app.clickup.com/t/8651091/CHP-3881
+) 
+@Deepti Vaidyula
+ -
+Verified
+Private (
+https://app.clickup.com/t/8651091/CHP-3882
+) 
+@Deepti Vaidyula
+ 
+@Umamahesh
+ -
+Verified
+Private (
+https://app.clickup.com/t/8651091/CHP-3883
+) 
+@Harika Guntamukkala
+  - 
+Back to Dev
+Private (
+https://app.clickup.com/t/8651091/CHP-3886
+)
+@Umamahesh
+ -
+Verified
+Private (
+https://app.clickup.com/t/8651091/CHP-3887
+) 
+@Deepti Vaidyula
+ Send quote option in 3 dots for any quote
+Private (
+https://app.clickup.com/t/8651091/CHP-3889
+) 
+@Deepti Vaidyula
+ - 
+verified
+Private (
+https://app.clickup.com/t/8651091/CHP-3898
+) 
+@Deepti Vaidyula
+ - 
+verified
+Private (
+https://app.clickup.com/t/8651091/CHP-3886
+)- 
+@Umamahesh
+ -
+Verified
+
+## BACKEND:
+
+PO Sync
+Private (
+https://app.clickup.com/t/8651091/CHP-3857
+) : Implement notes indicator in entities 
+@Harika Guntamukkala
+ - 
+Back to Dev
+Private (
+https://app.clickup.com/t/8651091/CHP-3903
+) : Introduce regionName in account 
+@Harika Guntamukkala
+  - 
+Verified
+Private (
+https://app.clickup.com/t/8651091/CHP-3904
+) : Part Sourcing User Feedback  -
+ 
+done in PR (BE) are part of release 
+@Harika Guntamukkala
+ - 
+Back to Dev
+Private (
+https://app.clickup.com/t/8651091/CHP-3905
+) : Create SR from SO 
+@Umamahesh
+ -
+Verified
+CHP-3882
+: RFQ - Add fund code (Currency) in Create RFQ modal (Already added in UI list) 
+@Deepti Vaidyula
+ 
+CHP-3872: 
+Alternatives Drop down - 
+This section is not yet implemented.
+Private (
+https://app.clickup.com/t/8651091/CHP-3907
+)
+
+## ITEMS WITHOUT TICKETS:
+
+(crm/rfq-quote): allow multiple quote to SO creation  
+@Deepti Vaidyula
+ 
+(crm/sr): remove targetPriceMet from sr contract 
+@Umamahesh
+ -
+devOnly
+Create quote modal (from Offers) - don't navigate away if Cancel is clicked  
+@Umamahesh
+ -
+Verified
+feat(crm/rfq): Orders - Override isItemClosed filter to skip 
+@Deepti Vaidyula
+ 
+feat(links): add links to MPNs in tables and account cards in info panes 
+@Harika Guntamukkala
+ 
+feat(visits): implement new fiter design for visits and trips (
+#2203
+) 
+@Harika Guntamukkala
+ 
+feat: add default sorting option to MarketActivityTable component (
+#2175
+) 
+@Harika Guntamukkala
+ 
+feat: enable non-blocking navigation on production (
+#2198
+) 
+fix(autocomplete): remove autoSelect from all fields (
+#2155
+)
+fix(rfq): allow multiple lines while creating rfq (
+#2228
+)
+Fix: filter definitions in new filter design (
+#2226
+)
+Fixes to columns (xCRM ID width, resize in POs, show resizer on header row hover) (
+#2178
+)
+Global Search - Advanced link (
+#2148
+) 
+@Harika Guntamukkala
+ 
+Integrate Allocation summary column (
+#2216
+) 
+@Umamahesh
+ 
+List view - Quick actions menu - P1 (
+#2215
+) 
+@Deepti Vaidyula
+ 
+Minor fixed and improvements (
+#2187
+) 
+Navigation improvements - Don't block navigation by data fetch (Projects, Accounts, Contacts) (
+#2027
+) 
+@Harika Guntamukkala
+ 
+Navigation improvements - non-blocking navigations on Orders (
+#2221
+)
+@Deepti Vaidyula
+ 
+Navigation improvements - RFQs refactoring (
+#2217
+)
+@Deepti Vaidyula
+ 
+Navigation improvements: RFQs lists (high and tab levels) (
+#2209
+) 
+@Deepti Vaidyula
+ 
+Non-blocking navigation: core code and dashboard (no changes in behavior) (
+#2147
+)
+Order Line Add Sourcing Request (
+#2182
+)
+@Umamahesh
+ -
+Verified
+Orders: Enable permissions for Update Approvals and Update Status (
+#2224
+) 
+@Umamahesh
+ 
+PO Line - Fix expected delivery date validation (
+#2159
+) 
+@Umamahesh
+ 
+PO: Store address in warehouse (
+#2218
+) 
+@Umamahesh
+ -
+Verified
+RFQ & RFQ Line - Orders tab (
+#2135
+) 
+@Deepti Vaidyula
+ -Rfq level Order tab is not present
+RFQ and Sourcing Request feedback (
+#2150
+)  
+@Umamahesh
+ 
+RFQ and Sourcing Request feedback - P2 (
+#2180
+) 
+@Umamahesh
+ 
+Sourcing Request: Make notes input multiline (
+#2185
+)
+@Umamahesh
+ -
+Verified
+SR: Make typeDetail rfq as optional (
+#2193
+) 
+@Umamahesh
+ 
+TextField: Paste table in Notes field (
+#2190
+)
+ 
+Bugs in build
+ Private (
+https://app.clickup.com/t/8651091/CHP-3906
+) -Fixed
+Private (
+https://app.clickup.com/t/8651091/CHP-3908
+) -Fixed
+Private (
+https://app.clickup.com/t/8651091/CHP-3909
+)  - Fixed
+Private (
+https://app.clickup.com/t/8651091/CHP-3911
+) 
+Creating an SO from a Quote fails with a 500 API error related to permission resolution (correlationId: 9ecf2ecd-5ee2-4002-b686-2b50d6b1c386). -
+FIXED
+Updating a Sourcing Request status fails due to a duplicate key error (correlationId: 822a9319-a1ba-4dbf-a8ee-5499532aaa79). -
+FIXED
+Offers are not appearing under SO → Offers when a Sourcing Request is created out of SO -
+FIXED
+Market offer status summary card is not updating. -
+WIP
+SO creation attempt results in a 403 error  with sales user -stating approval flags cannot be changed (correlationId: 67cb1269-e6ae-492e-9659-a79f23b9d60c). -
+WIP
+Migration also shows errors 
+reported
+ by Naga Babu (Nikhil is reviewing)- 
+WIP
+and some POs appear duplicated (e.g., DE25PO04222), which will be cross-verified after migration. -
+NOT an issue
+Current migration behavior of inserting stock lines for PO records has been clarified as expected.-
+NOT an issue
+buyerId is not reconcillated properly bymigration-
+FIXED
+warehouse info is not displayed even though address is visible from BE -
+FIXED
+freight /misc charges should be displayed from costSummary only. -
+Clarified
+Updating freight/misc charges is not updating total invoice value.-
+FIXED
+Could not request/Record offer from sourcing request, this happens when Source request created from SO without rfq-
+FIXED
+Warehouse screen max of 24 stock lines -
+WIP
+PO Sync existing issues:
+Tax details are not implemented.
+Tariff information is missing.
+Packaging value is incorrect.
+QC Level lookup transformation is wrong.
+Stock Deal lookup transformation is wrong.
+Lead Time Status lookup transformation is wrong.
+Purchasing Division field is missing or not implemented.
+PO with SO reference from XCRM is duplicating (
+HIGH
+)(e.g, 6c6c7c2b-f87b-11f0-9c38-d9c7c41b6ef1) for PO 
+US26PO00024
+Line Status lookup is not transformed correctly.
+Payment Received status is not updating (e.g., b71dfcff-f8ff-11f0-9c38-ab0d1d303d19).
+Priority lookup transformation is wrong.
+Automation Reports:
+crm: 
+
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/crm-ui-tests/41/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+ 
+mc1: 
+
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/chip1-ui-tests/63/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+ 
+Missed in production:
+ #1 No entities other than PO and SR are visible for the production user 
+buyer@chip1.com
+/Buyer@123
+.
+ #2 Order lines are not loading and the API returns a 500 error (correlationId: 09ea12c4-f3de-4b08-820b-d39348023166) stating that a required document reference is null.
+ #3 Order-related tabs are not visible under the Sales Order details page.
+ #4 RFQ information is not displayed under the SR Sales Requests tab for the SR at 
+
+https://crm.chip1.com/purchasing/sourcing-requests/6975b6c1fc39a54dd54594aa/salesRequests
+ 
+.
+ #5 RFQ US26RQ-11381 is not visible under the RFQ list view.
+
+## MC1 SANITY TESTS
+
+Note: The sanity tests to check will be selected based on the release
+ 
+Feature / Flow
+Validation Details
+Stage
+Prod
+Remarks
+New User Signup (MC1)
+Validated the new user signup flow from MC1 and confirmed account creation, including the LA transfer.
+Validated the new user signup flow from MC1.
+Confirmed account creation in MC1, including the LA transfer.
+Yes
+MC1 User Invite & Signup
+Validated the user invitation flow from xCRM and CRM2.
+Validated signup completion.
+Validated user access provisioning.
+Yes
+Upload BOM
+Validated the BOM upload from MC1 and CRM
+Confirmed the uploaded part details in CRM, MC1, and xCRM
+Verified pricing information in CRM and MC1
+Checked sourcing plan details in CRM and MC1
+Ensured no automatic RFQs were generated when uploaded from CRM.
+Yes
+Upload Excess
+Verified the excess upload from MC1 and CRM.
+Confirmed the visibility of part details in CRM and MC1.
+Yes
+Manual RFQ
+Validated the creation of RFQs with approved alternatives from MC1.
+Validated the creation of RFQs without approved alternatives from MC1.
+Validated standalone RFQ creation from xCRM.
+Validated RFQ details in the list view.
+Validated data synchronization between MC1, CRM, and xCRM.
+Validated RFQ status updates across systems.
+Yes
+RFQ Update
+Validated RFQ updates in MC1, CRM, and xCRM.
+Confirmed that an MPN change creates a new request line.
+Verified updated details in the list view.
+Confirmed status updates in CRM and xCRM.
+Yes
+RFQ – Multiline
+Validated the creation of multiline RFQs
+Ensured data synchronization across systems
+Confirmed the accuracy of list view details
+Verified status updates across CRM and xCRM systems
+-
+Active Quote – Create
+Validated the RFQ and Quote creation flow in CRM.
+Validated standalone quote creation in CRM and xCRM.
+Validated data synchronization across MC1, CRM, and xCRM.
+Validated quote details in the list view.
+Validated status updates across systems.
+Yes
+Active Quote – Edit
+Validated quote updates across systems.
+Confirmed that an MPN change creates a new quote line.
+Verified updated quote details in the list view.
+Ensured status updates across CRM and xCRM.
+Yes
+Active Quote – Multiline
+Validated the creation of multiline quotes
+Validated quote details in the list view
+Validated data synchronization across systems
+Validated status updates across CRM and xCRM
+-
+Sales Order – Create
+Validated the RFQ → Quote → Sales Order flow.
+Validated standalone Sales Order creation in both CRM and xCRM.
+Validated RFQ from MC1 and Quote/SO from xCRM.
+Validated data synchronization across MC1, CRM, and xCRM.
+Validated Sales Order details in the list view.
+Validated status updates across systems.
+Yes
+Sales Order – Edit
+Validated the Sales Order edit functionality.
+Confirmed data synchronization across systems.
+Verified updated details in the list view.
+Ensured status consistency between CRM and xCRM.
+Yes
+Sales Order – Multiline
+Validated the creation of multiline sales orders.
+Ensured data synchronization across systems.
+Confirmed status updates across CRM and xCRM.
+Yes
+Quality Control (PO Number)
+Validated the PO number association in MC12. Validated the Quality Control workflow in MC1.
+Yes
+Invoice Generation
+Validated the invoice generation flow in MC12. Confirmed the accuracy of invoice data in MC1.
+yes
+Lead Account & Transfer
+Validated the creation and transfer of leads, ensuring synchronization across MC1, CRM, and xCRM.
+Yes
+Bids
+Validated bid creation flow
+Validated bid updates
+Validated data synchronization between MC1 and xCRM
+-
+Parts Tracker
+Validated parts tracking functionality
+Ensured data accuracy
+Yes
+Global Search
+Validated the global search functionality.
+Validated module-level search results for each entity.
+Yes
+Page Navigations
+Validated navigation across key modules.
+Verified page load and access behavior.
+Yes
+Edit Project
+Validated the project edit functionality.
+Confirmed data persistence after updates or partial edits.
+Yes
+Notification Emails
+Validated notification email triggers
+Validated email content
+-
+-
+-
+Download & Upload Templates (BOM/Excess)
+Validated template download
+Validated template upload after data entry
+Yes
+Concierge Service
+Validated the concierge service workflow
+Yes
+Sorting
+Validated the sorting functionality across list views.
+Yes
+Filters
+Validated the filter functionality across all modules.
+Yes
+Pricing – OEM Secrets
+Confirmed the visibility of OEM pricing retrieval in the UI.
+Yes
+Pricing – IC
+Verified the visibility of IC pricing fetch in the UI.
+Yes
+Pricing – xCRM
+Validated the visibility of xCRM pricing fetch in the UI.
+Yes
+ 
+
+## CRM SANITY TESTS:
+
+Note: The sanity tests to check will be selected based on the release
+ 
+Feature / Flow
+Validation Details
+Stage
+Prod
+Remarks
+Create Account
+Validated that account can be created from CRM
+The tabs are accessible for this account 
+Yes
+Yes
+Create BOM (CRM -> XCRM)
+Validated BOM creation in CRM
+Confirmed BOM visibility and details in xCRM
+Verified BOM synchronisation and details in the new CRM.
+Yes
+Create RFQ ( CRM -> XCRM)
+Validated RFQ creation in CRM
+Confirmed RFQ visibility and details in xCRM
+Verified RFQ synchronisation and details in CRM.
+Yes
+Upload BOM (CRM)
+Validated BOM upload from CRM
+Validated BOM details visibility in MC1 and xCRM
+Validated data consistency across CRM, MC1, and xCRM
+Yes
+Page Navigations
+Validated navigation across key modules
+Validated page load and access behaviour
+Yes
+Deep Links (Accounts, RFQs, Quotes, Orders)
+Validated deep link navigation for Accounts
+Validated deep link navigation for RFQs
+Validated deep link navigation for Quotes
+Validated deep link navigation for Orders
+Yes
+Edit Project
+Validated project edit functionality
+Validated data persistence after updates or partial edits
+Yes
+Projects – Price Refresh
+Validated visibility of price details fetched from OEM Secrets, IC source, and xCRM
+Yes
+Global Search
+Validated global search functionality
+Validated module-level search results for each entity
+Yes
+Filters
+Validated filter functionality across all modules
+Yes
+Sorting of Tables
+Validated sorting functionality across list views
+Yes
+Download & Upload Templates (BOM/Excess)
+Validated template download2. Validated template upload after data entry
+Yes
+Concierge Service
+Validated concierge service workflow
+Yes
+Microdashboard Counts
+Validated micro-dashboard counts for each card under available entities
+Yes
+Share Project ( from CRM)
+Validated project sharing to MC1 and related scenarios
+Yes
+Create Contact (CRM)
+Validated contact creation at different levels from CRM
+Validated sync between CRM ↔ xCRM
+Yes
+Invite Contact (CRM)
+Validated contact invitation from CRM
+Validated sync between CRM ↔ xCRM
+Yes
+Create Task
+Validated task creation, edit, and related scenarios
+Yes
+FAB Icons (All Entities)
+Validated FAB icon visibility across all entities
+Yes
+FAB Actions (Note / Activity / Task)
+Validated Note, Activity, and Task actions from FAB icon across applicable entities
+Yes
+Light Mode / Dark Mode
+Validated user experience in both light and dark modes
+Yes
+Saved Views
+Validated saved views functionality
+Yes
+Trips and Visits
+Create and edit a trip and a visit
+Account permissions
+Old account owner shouldn't be able to access the account after assigning a new account owner.
+Yes
+ Purchasing Sanity Tests:
+ 
+Feature/Flow
+Stage
+Production
+Remarks
+Create RFQ in MC1, check in xcrm and new   CRM
+Yes
+yes
+Verify RFQ creation, data sync between systems
+Create Sourcing Request from RFQ
+Yes
+yes
+Check SR links to RFQ correctly, all fields populated
+Add Offers to Sourcing Request
+Yes
+yes
+Verify multiple offers can be added, supplier info captured
+Update SR Status: Offers Requested
+Yes
+yes
+Check status transitions, visibility to purchasing team
+Update SR Status: Receiving Offers
+Yes
+yes
+Verify status updates as offers come in
+Update SR Status: Offers Gathered
+Yes
+yes
+Check final status, target price achievement indicator
+Create Quote from specific Offer
+Yes
+yes
+Verify Quote-Offer connection, price carries over
+Create Quote with multiple lines   (different prices/quantities)
+Yes
+yes
+Test multiple quote line creation, customer can select one
+Create Sales Order from Quote
+Yes
+yes
+Verify SO carries SR and Offer references
+Create Sales Order without SR (direct   quote)
+Yes
+yes
+Test SO creation for direct quotes, add SR later
+Create Sales Order from Market Offers (no   SR)
+Yes
+NA
+Verify market offer quote functionality
+Admin approval of Sales Order
+Yes
+yes
+Check approval checkboxes, workflow triggers
+Update SR Status to Request for Purchase   from SO
+Yes
+yes
+Verify status change triggers purchasing workflow
+Create Purchase Order from Offer (not   from SR)
+Yes
+yes
+Critical: PO must be created from OFFER with supplier info
+Auto-create Stock entry when PO created
+Yes
+yes
+Stock status should be ordered, linked to PO
+Auto-create PO line allocation to Stock
+Yes
+yes
+Verify allocation established automatically
+Auto-create SO line allocation to Stock
+Yes
+NA
+Verify all three connections: PO-Stock-SO
+Create Receiving Lines with multiple date   codes
+Yes
+NA
+Test receiving batch 1 (500 units), batch 2 (500 units) separately
+Create Receiving Lines with lot codes
+Yes
+NA
+Verify lot code capture for QC tracking
+QC Status Flow: Arrived > QC Started   > Tested > Received
+Yes
+yes
+Check all status transitions, QC report creation
+QC Pass/Fail status in Receiving Line
+Yes
+yes
+Verify test results affect allocation and shipping
+Split Allocations when received qty   differs from ordered
+Yes
+NA
+Test 1000 ordered, 700+300 received, allocation splits
+Split Stock Line when receiving in   batches
+Yes
+NA
+Verify stock line splits with different date codes
+Update SO Allocations after split
+Yes
+NA
+Check allocation info includes receiving line ID, date code
+Allocate existing warehouse Stock   directly to SO
+Yes
+NA
+Test direct allocation for in-stock items (skip PO)
+SO status: Ready to Ship (when stock   allocated)
+Yes
+NA
+Verify SO jumps to Ready to Ship status
+Combine multiple RFQs into single   Sourcing Request
+Yes
+NA
+Test combining 3 RFQs (500+500+500) for economies of scale
+Purchasing decides allocation when   supplier has shortage
+Yes
+NA
+Test: 1500 ordered, supplier has 500, purchasing allocates
+Create partial Shipping Line
+Yes
+NA
+Test shipping 700 units, hold 300 pending
+Create full Shipping Line when all   quantity received
+Yes
+NA
+Test complete shipment after all batches received
+SO Status: Partial Shipped
+Yes
+NA
+Verify status shows partial fulfillment
+Auto-create Invoice when Shipping Line   created
+Yes
+NA
+Check invoice amount, prepayment deduction
+Multiple Invoices for same SO (one per   shipment)
+Yes
+NA
+Test invoice creation for partial and final shipments
+Re-QC for Stock older than 1 year
+Yes
+NA
+Flag old stock, create new QC report, array of reports
+Gross Profit calculation with landing   cost
+Yes
+NA
+Verify margin calc: sales price - landed cost
+Switch offer if original not available at   PO creation
+Yes
+NA
+Test: preferred offer unavailable, select alternative
+Page Navigation: RFQ > SR > Quote   > SO > PO
+Yes
+yes
+Test navigation between entities
+Deep links for RFQ, Sourcing Request,   Quote, Sales Order, Purchase Order
+Yes
+NA
+Verify deep links work correctly
+Global Search for Purchasing entities
+Yes
+NA
+Test search RFQ, SR, Quote, SO, PO
+Filters on Purchasing lists (RFQ, SR,   Quote, SO, PO)
+Yes
+yes
+Test filtering by status, customer, date range
+Sorting of Purchasing tables
+Yes
+yes
+Test sort by date, amount, status, supplier
+Page Search within Purchasing pages
+Yes
+yes
+Test find within page (Ctrl+F equivalent)
+Download PO and Sourcing Request details
+Yes
+NA
+Test export to PDF/Excel
+Upload documents to Receiving Line (QC   reports, images)
+Yes
+yes
+Test document upload and attachment
+Image sequencing for QC Report PDF   generation
+Yes
+yes
+Test reordering images, PDF generation
+Data Migration: Legacy PR to SR (Request   for Purchase status)
+Yes
+NA
+Verify PR mapped correctly to SR
+Sourcing Request reference carried to   Sales Order
+Yes
+NA
+Critical: SO must always link back to SR
+Offer reference in Quote carried to Sales   Order
+Yes
+yes
+Test quote-offer-SO connection
+
+## OPEN BUGS:
+
+After attaching account to the lead contact status still showing as 
+Lead
+ and the contact is available under Lead and Active contacts list view as well
+contact correlationid : 8c9932fd-9f7e-46fc-bcec-0b0bb75ac3c7
+
+https://crm.stage.chip1.info/contacts/6974a6ccdb9a913c675a5df0
+ 
+Available credit showing as negative value under Account details page for some accounts
+DG user cant access the account details, if he is added from users and groups
+WareHouse page shows 0 lines as count, though there are more in the list view
+ No entities other than PO and SR are visible for the production user 
+buyer@chip1.com
+/Buyer@123
+. - 
+PROD
+ RFQ info is not displayed under the SR Sales Requests tab for the SR at 
+
+https://crm.chip1.com/purchasing/sourcing-requests/6975b6c1fc39a54dd54594aa/salesRequests
+ 
+-
+PROD
+Market offer status summary card is not updating. -
+WIP
+SO creation attempt results in a 403 error  with sales user -stating approval flags cannot be changed (correlationId: 67cb1269-e6ae-492e-9659-a79f23b9d60c). -
+WIP
+Migration also shows errors 
+reported
+ by Naga Babu (Nikhil is reviewing)- 
+WIP

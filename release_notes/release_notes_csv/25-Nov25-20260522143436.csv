@@ -1,0 +1,203 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Deepti Vaidyula ,  @Harika Guntamukkala",,
+Metadata,Release Info,Release date,2025.11.25,,
+Metadata,Release Info,DB changes,Connect : release/2025.11.25,,
+Metadata,Release Info,Platform,No changes,,
+Metadata,Release Info,Notification, No changes,,
+Metadata,Release Info,Branch,release/2025.11.25,,
+Artefacts,Artefacts,Chip1 Transaction,2025.11.25.0,,
+Artefacts,Artefacts,Chip1 Part,2025.11.25.1,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2025.11.25.0,,
+Artefacts,Artefacts,fn connect,2025.11.25.0,,
+Artefacts,Artefacts,Chip1 Transaction,2025.11.25.2,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2025.11.25.1,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,QE documentation link,https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh,,
+Deployed Items,CHP-3556,Add Part Share Functionality,,,
+Deployed Items,CHP-3563,"Sourcing Enhancement 21st Nov
+fix the dark mode view for historical and market activity tab
+click anywhere in the group header should open and close the collapsible
+in market activity → separate columns for 'Stock | Allocated' and 'Available'
+add 'Date Code' column in historical and market activity tab",,,
+Deployed Items,CHP-3547,Sourcing Form 'starts with' by default selected UAT Review -> Nov19 -> 2a - CHP-3546 : Update terminology from Sales Requests to RFQs across application - Follow-Up related changes from UAT Review : To show account name and contact before first field than in title bar,,,
+Deployed Items,CHP-3567,Account List Reorder Columns,,,
+Deployed Items,CHP-3339,Offer details - Page & Details tab,,,
+Deployed Items,CHP-3339,Offer Sync - Inbound,,,
+Deployed Items,CHP-3339,Pricing Enhancements refactored code,,,
+Deployed Items,CHP-3548,"RFQ Sync issues
+//jenkins.chip1.info/job/chip1-e2e-tests/job/chip1-ui-tests/52/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+//jenkins.chip1.info/job/chip1-e2e-tests/job/crm-ui-tests/25/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html",,,
+Deployed Items,jenkins.chip1.info https,Bugs in build,,,
+Deployed Items,Missed in production,Offer inbound event is not reaching our system in production; example offer created in XCRM:,,,
+Deployed Items,Missed in production,"US25OF679667
+.- XCRM team not deployed sync code",,,
+Deployed Items,Missed in production,Unable to request an offer; request fails with,,,
+Deployed Items,Missed in production,"An error occurred while processing the request.
+fdaaab08-2919-4d5a-baab-f1d8e5eee263- P
+atched by removing contact as non mandatory",,,
+Deployed Items,correlationId,"The tab name in the Purchasing module should be renamed back to """,,,
+Deployed Items,correlationId,"Request
+from",,,
+Deployed Items,correlationId,"RFQ”-P
+atched
+## MC1 SANITY TESTS",,,
+Deployed Items,Note,The sanity tests to check will be selected based on the release,,,
+Deployed Items,Note,Feature/Flow,,,
+Deployed Items,Note,Stage,,,
+Deployed Items,Note,Prod,,,
+Deployed Items,Note,Remarks,,,
+Deployed Items,Note,"New User Signup from mc1
+yes",,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,"Mc1 user invite - signup
+yes",,,
+Deployed Items,Note,On stage should suffice,,,
+Deployed Items,Note,"Upload Bom and verify in CRM
+yes
+yes",,,
+Deployed Items,Note,"Upload Excess and verify in CRM
+yes",,,
+Deployed Items,Note,"Manual RFQ
+yes
+yes",,,
+Deployed Items,Note,US25RQ22218,,,
+Deployed Items,Note,"RFQ update
+yes
+yes",,,
+Deployed Items,Note,RFQ - multiline,,,
+Deployed Items,Note,Active Quote (create),,,
+Deployed Items,Note,"Yes
+yes",,,
+Deployed Items,Note,"Active Quote (edit)
+yes
+yes",,,
+Deployed Items,Note,Active quote - multiline,,,
+Deployed Items,Note,"Sales Order (create)
+yes
+yes",,,
+Deployed Items,Note,"Sales Order (edit)
+yes
+yes",,,
+Deployed Items,Note,"Sales Order - multiline
+yes
+yes",,,
+Deployed Items,Note,"Quality Control (PO number)
+yes",,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,"Invoice generation
+yes",,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,Invoice generation - shipping in 2 lots,,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,Lead Account & Transfer,,,
+Deployed Items,Note,Bids,,,
+Deployed Items,Note,"Parts Tracker
+yes
+yes",,,
+Deployed Items,Note,"Search
+yes
+yes",,,
+Deployed Items,Note,"Page Navigations
+yes
+yes",,,
+Deployed Items,Note,"Edit Project
+yes
+yes",,,
+Deployed Items,Note,Notification Emails,,,
+Deployed Items,Note,"Download excess and Bom Template, fill and upload.
+yes
+yes",,,
+Deployed Items,Note,"Conceirge Service
+yes",,,
+Deployed Items,Note,"Sorting
+yes
+yes",,,
+Deployed Items,Note,"Filters
+yes
+yes",,,
+Deployed Items,Note,"Pricing - OEM secrets
+yes
+yes",,,
+Deployed Items,Note,"Pricing - IC
+yes
+yes",,,
+Deployed Items,Note,"Pricing - xcrm
+yes
+yes",,,
+Deployed Items,Note,The sanity tests to check will be selected based on the release,,,
+Deployed Items,Note,Feature/Flow,,,
+Deployed Items,Note,Stage,,,
+Deployed Items,Note,Production,,,
+Deployed Items,Note,Remarks,,,
+Deployed Items,Note,"Create BOM in MC1, check in xcrm and new crm
+yes
+//crm.chip1.com/projects/6925763bb6359b6ad2a8305d",,,
+Deployed Items,Yes https,"Create RFQ in MC1, check in xcrm and crm
+yes",,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,US25RQ22217,,,
+Deployed Items,Yes https,"Upload BOM from CRM
+yes
+//crm.chip1.com/projects/6925754f65d2162a1fe60df7",,,
+Deployed Items,Yes https,"Page Navigations
+yes",,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,"Deep links for Accounts, RFQs, Quotes and Orders
+yes",,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,US25RQ22217 - US25QU06689 - US25SO01513,,,
+Deployed Items,Yes https,"Edit Project
+yes",,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,"Projects - price refresh
+yes",,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,"Global Search
+yes",,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,"Filters
+yes",,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,"Sorting of tables
+yes",,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,"Page Search
+yes",,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,"Download excess and Bom Template, fill and upload.
+yes",,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,"Conceirge Service
+yes",,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,"Microdashboard counts
+yes",,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,"Share project and show in mc1
+yes",,,
+Deployed Items,Yes https,Yes,,,
+Deployed Items,Yes https,"Create Contact from crm
+yes
+yes
+69257b01d251372bf58771ba",,,
+Deployed Items,Yes https,"Invite Contact from crm
+yes
+yes",,,
+Deployed Items,Yes https,"Create Task
+yes
+yes",,,
+Deployed Items,Yes https,"FAB icons - for all
+yes
+yes",,,
+Deployed Items,Yes https,"FAB - icon actions - Take a note/Activity/Task
+yes
+yes",,,
+Deployed Items,Yes https,"Light mode - dark mode
+yes
+yes",,,
+Deployed Items,Yes https,"Saved Views
+yes
+yes",,,

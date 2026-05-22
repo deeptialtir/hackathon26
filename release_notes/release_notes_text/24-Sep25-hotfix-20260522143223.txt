@@ -1,0 +1,125 @@
+# 24-SEP25-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+ 
+Release date
+ : 2025.09.23
+DB changes
+ : 
+Connect
+ : No changes
+Platform
+ : No changes
+Notification : 
+No changes
+Branch
+  : release/2025.09.23
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Part        
+                                    : 2025.09.23.0
+Chip1 Transaction  
+    
+                      
+   :
+ 
+2025.09.23.0 
+2025.09.23.
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+Private (
+https://app.clickup.com/t/8651091/CHP-3135
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3136
+) - Reduced priority from High to low post the release. Using same ticket for tracking optimization changes.
+Issues Observed on Build on stage:
+Private (
+https://app.clickup.com/t/8651091/CHP-3145
+) - Normal priority - intermittent issue
+
+## MC1 SANITY TESTS
+
+Note: The sanity tests to check will be selected based on the release
+Feature/Flow
+Stage
+Prod
+Remarks
+Upload Bom and verify in CRM
+yes
+yes
+Manual RFQ
+yes
+yes
+US25RQ13576
+RFQ update
+yes
+yes
+Search
+yes
+yes
+Page Navigations
+yes
+yes
+Edit Project
+yes
+yes
+ 
+
+## CRM SANITY TESTS:
+
+Note: The sanity tests to check will be selected based on the release
+Feature/Flow
+Stage
+Production
+Remarks
+Create BOM in MC1, check in xcrm and new crm
+ yes
+yes
+Create RFQ in MC1, check in xcrm and crm
+ yes
+yes
+Page Navigations
+ yes
+yes
+ 
+Edit Project
+yes
+yes
+ 
+Global Search
+ yes
+yes
+ 
+Light mode - dark mode
+ Yes
+yes
+ 
+Saved Views
+ Yes
+yes
+ 
+ 
+
+## TESTING NOTES FOR BOM ANALYSIS:
+
+Re_ BOM health Analysis - test results.eml

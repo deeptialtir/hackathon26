@@ -1,0 +1,28 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,@Harika Guntamukkala @Umamahesh,,
+Metadata,Release Info,DB changes,Connect : No changes,,
+Metadata,Release Info,Platform,No changes,,
+Metadata,Release Info,Notification, No changes,,
+Metadata,Release Info,Branch,hotfix/2025.10.29,,
+Artefacts,Artefacts,Chip1 Transaction,2025.10.28.8,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,QE documentation link,https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh,,
+Deployed Items,General,Nexperia prices to show in CRM- PASS,,,
+Deployed Items,General,"Sales order line count calculation fix-Migration to be finished
+added account counts to trending manufacturers-Product signoff",,,
+Deployed Items,Dashboard,Added case-insensitive support fo tags-related cards,,,
+Deployed Items,Dashboard,RFQ lines items counts-Migration to be finished,,,
+Deployed Items,Dashboard,"Status Migration endpoint fix-Migration to be finished
+//app.clickup.com/t/8651091/CHP-3410
+)
+issues found on prod
+//app.clickup.com/t/8651091/CHP-3411
+)- FIXED
+in a PATCH to hotfix
+## MC1 SANITY TESTS",,,
+Deployed Items,Private ( https,"Basic Sanity looks good
+## CRM SANITY TESTS",,,
+Deployed Items,Private ( https,Basic Sanity looks good,,,

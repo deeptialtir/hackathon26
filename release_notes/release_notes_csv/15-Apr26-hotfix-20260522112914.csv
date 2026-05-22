@@ -1,0 +1,13 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Harika Guntamukkala ,  @Deepti Vaidyula",,
+Metadata,Release Info,Release date,2026.04.15,,
+Metadata,Release Info,DB changes,Connect : No change,,
+Metadata,Release Info,Platform,No change,,
+Metadata,Release Info,Notification, No change,,
+Metadata,Release Info,Branch,hotfix/2026.04.15,,
+Artefacts,Artefacts,Chip1 Transaction,2026.04.15.5,,
+Artefacts,Artefacts,Chip1 CRM WebUI,"2026.04.15.1 ### FOLLOWING ITEMS ARE PART OF THE RELEASE All the RFQ created from MC1,",,
+Artefacts,Artefacts,Non linked to Apex Account,Is Opportunity ->,,
+Artefacts,Artefacts,WIll be synced as Opportunity to xCRM - Linked to Apex Account,Is RFQ but we newly consider it as Opportunity -> Won't sync to xCRM until release to sales is done Opportunity - Matching Regular LA transfer flow,,

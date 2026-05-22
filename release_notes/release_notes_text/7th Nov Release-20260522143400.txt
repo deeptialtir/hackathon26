@@ -1,0 +1,45 @@
+# 7TH NOV RELEASE
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+@Abhinay Sharma
+ 
+@Umamahesh
+Release date
+ : 2025.11.07
+ 
+DB changes
+ : 
+Connect
+ : No changes
+Platform
+ : No changes
+Notification : 
+No changes
+ 
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+chip1-account
+chip-transaction
+fn-connect
+fn-connect-db-management
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+#### TICKETS FOR THE RELEASE
+
+Inbound for the Account and Contacts
+Region ID changes

@@ -1,0 +1,251 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Deepti Vaidyula ,  @Harika Guntamukkala",,
+Metadata,Release Info,Release date,27/10/2025,,
+Metadata,Release Info,Connect,release/2025.10.27,,
+Metadata,Release Info,Platform,release/2025.10.27,,
+Metadata,Release Info,Notification, No changes,,
+Metadata,Release Info,Branch,release/2025.10.27,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2025.10.27.2,,
+Artefacts,Artefacts,Chip1 Account,2025.10.27.3,,
+Artefacts,Artefacts,Chip1 Part,2025.10.27.0,,
+Artefacts,Artefacts,Chip1 Transaction,2025.10.27.2,,
+Artefacts,Artefacts,fn-connect,2025.10.27.1,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,QE documentation link,https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh,,
+Deployed Items,General,"## BUGS IN BUILD
+: Account hierarchy is breaking whenever we select parent while creation
+: Updating the address in Account→General is creating multiple addresses
+: Account Update is not working at our side ( New issue found in the current release version)
+: Part Health -> product-change-notifications, lot of columns are not having data
+: Part Health -> health changes, Account and Account owner are not getting displayed
+: Order lines view from Account seems broken . It is showing second line as 2 but this has only one order line
+: Create Standalone SO -> import requests -> search is failing with 500
+: Display xcrm ID of quote in the Quote lines tab in Request line details",,,
+Deployed Items,Accounts,Account Update from CRM→ XCRM is not working,,,
+Deployed Items,Contacts,Update Contact XCRM→CRM is not working,,,
+Deployed Items,MC1 & Quotes,RFQ + Quote single & multi line( Now syncing to XCRM but duplicated),,,
+Deployed Items,MC1 & Quotes,Standalone multi-line quote from crm ->US25QU00363->This created duplicate multi-line quotes in MC1 (P2) and two lines in CRM(pass),,,
+Deployed Items,Orders,SO multi-line create from crm - the second line is syncing.,,,
+Deployed Items,Orders,Duplicate SO lines created and chevrons not updated when Multi-line SO (with RFQ as source) is updated from xCRM (,,,
+Deployed Items,Orders,"CHP-3367
+)
+//app.clickup.com/t/8651091/CHP-3328
+)
+//app.clickup.com/t/8651091/CHP-3307
+)
+//app.clickup.com/t/8651091/CHP-3318
+)
+//app.clickup.com/t/8651091/CHP-3326
+)
+//app.clickup.com/t/8651091/CHP-3321
+)
+//app.clickup.com/t/8651091/CHP-3341
+)",,,
+Deployed Items,Private ( https,"Account Bugs raised for this build
+//app.clickup.com/t/8651091/CHP-3375
+)
+//app.clickup.com/t/8651091/CHP-3371
+)
+//app.clickup.com/t/8651091/CHP-3370
+)
+//app.clickup.com/t/8651091/CHP-3369
+)
+//app.clickup.com/t/8651091/CHP-3368
+)",,,
+Deployed Items,Private ( https,"Contact Bugs raised for this build
+//app.clickup.com/t/8651091/CHP-3376
+)
+//app.clickup.com/t/8651091/CHP-3372
+)
+//app.clickup.com/t/8651091/CHP-3366
+)
+//app.clickup.com/t/8651091/CHP-3364
+)
+//app.clickup.com/t/8651091/CHP-3363
+)
+//app.clickup.com/t/8651091/CHP-3360
+)
+//app.clickup.com/t/8651091/CHP-3353
+)",,,
+Deployed Items,RFQ update fails,"RC: The emails in
+contact
+is being nullified whenever a update call is made even though
+emails
+exist while creation.  Sandeep Thatikonda, It's backend
+chip1-transaction
+issue.",,,
+Deployed Items,RFQ update fails,"Account sync issues with new contact on account creation from crm
+# AUTOMATION RUNS
+//jenkins.chip1.info/job/chip1-e2e-tests/job/crm-ui-tests/19/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+//jenkins.chip1.info/job/chip1-e2e-tests/job/chip1-ui-tests/44/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+## MC1 SANITY TESTS",,,
+Deployed Items,Note,The sanity tests to check will be selected based on the release,,,
+Deployed Items,Note,Feature/Flow,,,
+Deployed Items,Note,Stage,,,
+Deployed Items,Note,Prod,,,
+Deployed Items,Note,Remarks,,,
+Deployed Items,Note,New User Signup from mc1,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,Mc1 user invite - signup,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,On stage should suffice,,,
+Deployed Items,Note,Upload Bom and verify in CRM,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Upload Excess and verify in CRM,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Manual RFQ,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,RFQ update,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,RFQ - multiline,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Active Quote (create),,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Active Quote (edit),,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Active quote - multiline,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Sales Order (create),,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Sales Order (edit),,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Sales Order - multiline,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Quality Control (PO number),,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,Invoice generation,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,Invoice generation - shipping in 2 lots,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,Lead Account & Transfer,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Bids,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Parts Tracker,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Search,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Page Navigations,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Edit Project,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Notification Emails,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,"Download excess and Bom Template, fill and upload.",,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Conceirge Service,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Sorting,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Filters,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pricing - OEM secrets,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pricing - IC,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pricing - xcrm,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,The sanity tests to check will be selected based on the release,,,
+Deployed Items,Note,Feature/Flow,,,
+Deployed Items,Note,Stage,,,
+Deployed Items,Note,Production,,,
+Deployed Items,Note,Remarks,,,
+Deployed Items,Note,"Create BOM in MC1, check in xcrm and new crm",,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,"Create RFQ in MC1, check in xcrm and crm",,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Upload BOM from CRM,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Page Navigations,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,"Deep links for Accounts, RFQs, Quotes and Orders",,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Edit Project,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Projects - price refresh,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Global Search,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Filters,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Sorting of tables,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Page Search,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,"Download excess and Bom Template, fill and upload.",,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Conceirge Service,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Microdashboard counts,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Share project and show in mc1,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Create Contact from crm,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Invite Contact from crm,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Create Task,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,FAB icons - for all,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,FAB - icon actions - Take a note/Activity/Task,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Light mode - dark mode,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Saved Views,,,
+Deployed Items,Note,Pass,,,
+Deployed Items,Note,Pass,,,

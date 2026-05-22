@@ -1,0 +1,137 @@
+# 01-APRIL26
+
+Environment: Stage
+Status: 
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+DB changes
+ :
+Connect
+ : No Change
+Platform
+ : hotfix/2026.03.31
+Notification : 
+No Change
+ 
+Branch
+  : hotfix/2026.03.31
+ 
+Components Involved
+ 
+& Artefacts
+:
+Chip1 Transaction  
+    
+                        
+  : 2026.03.31.12
+Chip1 CRM WebUI                 
+    
+           
+ : 2026.03.31.13
+Chip1 Connect
+                                     : 2026.03.31.2
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+
+## QE DOCUMENTATION LINK:HTTPS://ALTIRLLC.SHAREPOINT.COM/:W:/R/SITES/ALTIR-CHIP1/SHARED%20DOCUMENTS/GENERAL/QUALITY%20ENGINEERING/PROJECT%20DOCUMENTS/CHIP1%20QE%20DOCUMENTATION.DOCX?D=W75141A22221E423A9DD922E367268BB5&CSF=1&WEB=1&E=GWICGH
+
+## LIST OF DEPLOYED ITEMS:
+
+SO validation for credit balance (Tejaswini Allagadda) - 
+@Deepti Vaidyula
+  - 
+Verified
+SO attribute (
+partialShipOption
+ and 
+taxPercentage
+) sync - 
+@Harika Guntamukkala
+  - 
+Verified
+Enable validation on create of a line, new SO or new line - 
+@Deepti Vaidyula
+  - 
+Verified 
+Message displayed is generic
+ 
+Link
+Enable skip validation on create SO or add line, from quote or direct from RFQ or from account 
+@Deepti Vaidyula
+ 
+Verified
+On other approvals or update, we will disable the credit validation. We will do standard line validations. - 
+@Deepti Vaidyula
+  - 
+Verified
+CHP-5587
+: enhance Verified By and Verified On fields (
+#3405
+) - 
+@Harika Guntamukkala
+  - 
+Verified
+CHP-5589
+: feat(account): add 'Is Default' checkbox and allow multiple bill to type address (
+#3411
+) - 
+@Deepti Vaidyula
+  -
+ Able to set more than one default address 
+- 
+Link
+feat(excess-confirmation): add Reconfirm Excess modal and feature flag integration (
+#3415
+) - 
+@Harika Guntamukkala
+  - 
+Verified
+Temp solution for excess confirmation until excess are migrated to Apex.
+feat(order): add 'skipValidation' checkbox to sales order and order line forms (
+#3417
+) - 
+@Deepti Vaidyula
+  - 
+Verified
+fix(request-offer): remove leadtime from partDetails (
+#3409
+) - 
+@Harika Guntamukkala
+ 
+Verified
+fix(rfq-details): leadtime should be taken from 'quote' instead of 'rfq' (
+#3413
+)  - 
+@Harika Guntamukkala
+  - 
+Verified
+Create RFQ & RFQ Details 
+Updated 
+leadTime
+ lookup source to use the 
+"quote"
+ category instead of 
+"rfq"
+.  - 
+Verified
+This change aligns with the backend response, where 
+leadTime
+ is currently being returned from the 
+"quote"
+ category lookup.
+fix(rfq-details): wrap RfqLinesTab with ColumnVisibilityProvider (
+#3420
+) - 
+@Harika Guntamukkala
+  - 
+can ignore it, the impact is minimal, it triggered sentry alert because of elements structure on page

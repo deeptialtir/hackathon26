@@ -1,0 +1,14 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,@Deepti Vaidyula,,
+Metadata,Release Info,Release date,2026.04.28,,
+Metadata,Release Info,DB changes,Connect : No change,,
+Metadata,Release Info,Platform,No change,,
+Metadata,Release Info,Notification, No change,,
+Metadata,Release Info,Branch,hotfix/2026.04.24,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2026.04.27.3,,
+Deployed Items,General,Opportunity tab filtering fix,,,
+Deployed Items,## TESTING DONE,"Ran basic sanity checks
+## OPEN ITEMS ON STAGE:
+//loop.cloud.microsoft/p/eyJ1IjoiaHR0cHM6Ly9hbHRpcmxsYy1teS5zaGFyZXBvaW50LmNvbS9wZXJzb25hbC9kdmFpZHl1bGFfYWx0aXJfY28%2FbmF2PWN6MGxNa1p3WlhKemIyNWhiQ1V5Um1SMllXbGtlWFZzWVY5aGJIUnBjbDlqYnlaa1BXSWhjMlY0VEdjM2JVNWhWWEY1VlhObk1rVjJMVTVMUTFsTlpERk9ZbkJOZUU5cVgxQmhUbWt4TlVGSFVWTkxPVzQyTFMxTFJsTlpjbWxJZG5rM2VFNTNiU1ptUFRBeFFsSkpVek5SU0ZoTlYxWTNTMDVOU1VkR1FreFpTakkwVFZOSVFreFJOVUVtWXowbE1rWW1abXgxYVdROU1TWmhQVlJsWVcxekpuQTlKVFF3Wm14MWFXUjRKVEpHYkc5dmNDMXdZV2RsTFdOdmJuUmhhVzVsY2c9PSJ9",,,

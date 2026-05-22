@@ -1,0 +1,465 @@
+# 12-DEC25
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2025.12.12
+ 
+DB changes
+ : 
+Connect
+ : release/2025.12.11
+Platform
+ : release/2025.12.11
+Notification : 
+No changes
+ 
+Branch
+  : release/2025.12.11
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 MC1 Core     
+    
+                      
+    :
+ 
+2025.12.11.0
+Chip1 Account        
+    
+                      
+    :
+ 
+2025.12.11.1
+Chip1 Part                      
+    
+                   
+ : 2025.12.11.0
+Chip1 Transaction  
+    
+                      
+   : 2025.12.11.3
+Chip1 CRM WebUI                 
+    
+         
+ :
+ 
+2025.12.11.3
+fn connect                 
+    
+                      
+  :
+ 
+2025.12.11.0
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+Will be available in Prod
+Private (
+https://app.clickup.com/t/8651091/CHP-3609
+) : Task FAB API Integration 
+@Harika Guntamukkala
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-3609
+): Tasks New FAB items 
+@Harika Guntamukkala
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-3627
+): Account - show office address in general section 
+@Harika Guntamukkala
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-3574
+): 3CX Integration 
+@Deepti Vaidyula
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-3432
+): Enhance responsive layout for phone crm, ext and email fields  
+@Harika Guntamukkala
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-3505
+): simplify disabled logic for Account Supplier Island 
+@Harika Guntamukkala
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-3601
+) : Adding Resizer on all the tables 
+@Deepti Vaidyula
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-3608
+): Add conditional tag creation based on user role 
+@Deepti Vaidyula
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-3616
+): rename 'accountType' to 'category' in list and filters 
+@Harika Guntamukkala
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-3616
+): Add notes functionality to contact details 
+@Harika Guntamukkala
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-3649
+): Add partlink and xrm deep link to Quote List 
+@Deepti Vaidyula
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-3622
+): Offer list number in Offer IDs section 
+@Umamahesh
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-3633
+): Offer to Purchase Order Flow  
+@Umamahesh
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-3636
+): Company and Company website are editable in contact details 
+@Harika Guntamukkala
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-3662
+): Enhance CreateRequest functionality 
+@Harika Guntamukkala
+ 
+Wont be enabled on Prod: 
+@Deepti Vaidyula
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-3580
+) : Documents Tab 
+Private (
+https://app.clickup.com/t/8651091/CHP-3585
+): PO - Add Sales Lines island
+Private (
+https://app.clickup.com/t/8651091/CHP-3634
+): Enhance order line form 
+Private (
+https://app.clickup.com/t/8651091/CHP-3635
+): Notifications: PR1 (Api Integration)
+Private (
+https://app.clickup.com/t/8651091/CHP-3635
+): Notifications: PR2 (NavSearch Global toggle state) 
+Private (
+https://app.clickup.com/t/8651091/CHP-3635
+): Notifications: PR3 (Notification Navbar)
+Private (
+https://app.clickup.com/t/8651091/CHP-3635
+): Notifications: PR4 (Notification WebSocket Integration) 
+Private (
+https://app.clickup.com/t/8651091/CHP-3647
+): Attach offer to existing PO flow 
+Private (
+https://app.clickup.com/t/8651091/CHP-3654
+): Order Permissions Changes
+Private (
+https://app.clickup.com/t/8651091/CHP-3654
+): Permissions common changes
+Private (
+https://app.clickup.com/t/8651091/CHP-3654
+): Permissions on Rfqs and Rfqs Line Page 
+Private (
+https://app.clickup.com/t/8651091/CHP-3658
+): Email link redirect to default email provider 
+ 
+Bugs in build
+Private (
+https://app.clickup.com/t/8651091/CHP-3688
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3687
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3686
+)
+ Private (
+https://app.clickup.com/t/8651091/CHP-3690
+)
+Found in production:
+Private (
+https://app.clickup.com/t/8651091/CHP-3693
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3692
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3690
+)
+ 
+Purchasing issues:
+ unable to view sourcing request when I create using purchasing user 
+leonardov@chip1.com
+/Leonardo@123
+{
+"status": 404,
+"message": "Purchase Request for id 693bd0c67acce979dfbca71d not found",
+"errorCode": "PUR_008"
+}
+correlationId: 
+1097b393-44ba-42ba-b71c-aaacdd0e53b
+US25OF-18723
+ not visible on sourcing request offers & outbound failed with correlationId : 
+6ae40e65-9ae5-4a7d-8ebe-7b5ac046ea1d
+US25OF-18711 
+not visible on sourcing request offers
+crmNumber
+:US25OF683237
+ inbound offer is not visible under sourcing request offers
+crmNumber
+:US25OF683245
+ inbound offer is not visible under market offers 
+Automation Runs:
+ 
+
+## MC1 SANITY TESTS
+
+Note: The sanity tests to check will be selected based on the release
+Feature/Flow
+Stage
+Prod
+Remarks
+New User Signup from mc1
+ Yes
+ 
+On prod, we test this on need basis
+Mc1 user invite - signup
+Yes 
+ 
+On stage should suffice
+Upload Bom and verify in CRM
+ Yes
+ Yes
+ US25BOM97693
+Upload Excess and verify in CRM
+ Yes
+ Yes
+ 
+Manual RFQ
+ Yes
+ Yes
+ US25RQ23272
+RFQ update
+ Yes
+ Yes
+ 
+RFQ - multiline
+ Yes
+ -
+ 
+Active Quote (create)
+ Yes
+ Yes
+ US25QU07094
+Active Quote (edit)
+ Yes
+ Yes
+ 
+Active quote - multiline
+ Yes
+ -
+ 
+Sales Order (create)
+ Yes
+ Yes
+ US25SO01613
+Sales Order (edit)
+ Yes
+ Yes
+ 
+Sales Order - multiline
+ Yes
+ --
+ 
+Quality Control (PO number)
+ Yes
+ yes
+On prod, we test this on need basis
+Invoice generation
+ Yes
+ yes
+On prod, we test this on need basis
+Invoice generation - shipping in 2 lots
+ Yes
+ -
+On prod, we test this on need basis
+Lead Account & Transfer
+ Yes
+ Yes
+ 
+Bids
+ --
+ --
+ 
+Parts Tracker
+ Yes
+ Yes
+ 
+Search
+ Yes
+ Yes
+ 
+Page Navigations
+ Yes
+ Yes
+ 
+Edit Project
+Yes 
+ Yes
+ 
+Notification Emails
+ --
+ --
+ 
+Download excess and Bom Template, fill and upload.
+ Yes
+ Yes
+ 
+Conceirge Service
+ Yes
+ Yes
+ 
+Sorting
+ Yes
+ Yes
+ 
+Filters
+ Yes
+ Yes
+ 
+Pricing - OEM secrets
+ Yes
+ Yes
+ 
+Pricing - IC
+Yes 
+ Yes
+ 
+Pricing - xcrm
+ Yes
+ Yes
+ 
+ 
+
+## CRM SANITY TESTS:
+
+Note: The sanity tests to check will be selected based on the release
+Feature/Flow
+Stage
+Production
+Remarks
+Create BOM in MC1, check in xcrm and new crm
+ Yes
+ 
+ 
+Create RFQ in MC1, check in xcrm and crm
+ Yes
+ 
+ 
+Upload BOM from CRM
+ Yes
+ 
+ 
+Page Navigations
+ Yes
+ 
+ 
+Deep links for Accounts, RFQs, Quotes and Orders
+ Yes
+ 
+ 
+Edit Project
+Yes 
+ 
+ 
+Projects - price refresh
+ Yes
+ 
+ 
+Global Search
+ Yes
+ 
+ 
+Filters 
+ Yes
+ 
+ 
+Sorting of tables
+ Yes
+ 
+ 
+Page Search
+ Yes
+ 
+ 
+Download excess and Bom Template, fill and upload.
+ Yes
+ 
+ 
+Conceirge Service
+ Yes
+ 
+ 
+Microdashboard counts
+ Yes
+ 
+ 
+Share project and show in mc1
+ Yes
+ 
+ 
+Create Contact from crm
+ Yes
+ 
+ 
+Invite Contact from crm
+ Yes
+ 
+ 
+Create Task
+ Yes
+ 
+ 
+FAB icons - for all
+ Yes
+ 
+ 
+FAB - icon actions - Take a note/Activity/Task
+ Yes
+ 
+ 
+Light mode - dark mode
+ Yes
+ 
+ 
+Saved Views
+ Yes

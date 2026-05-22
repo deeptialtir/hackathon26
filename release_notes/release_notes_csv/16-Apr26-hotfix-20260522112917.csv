@@ -1,0 +1,10 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Harika Guntamukkala ,  @Deepti Vaidyula",,
+Metadata,Release Info,Release date,2026.04.16,,
+Metadata,Release Info,DB changes,Connect : No change,,
+Metadata,Release Info,Platform,No change,,
+Metadata,Release Info,Notification, No change,,
+Metadata,Release Info,Branch,hotfix/2026.04.16,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2026.04.16.1 ### FOLLOWING ITEMS ARE PART OF THE RELEASE Adding blankLabel for offers Adding soLineNumber while creating the SR from it. Adding Account datagroups on Matching Account in opportunities,,

@@ -1,0 +1,120 @@
+# 22-NOV24
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+@Deepti Vaidyula
+ , 
+@Umamahesh
+ 
+DB changes
+ :
+Connect
+ : release/2024.11.22
+Platform
+ : No change
+Key Clock
+: No change
+Branch
+  : release/2024.11.22
+Components Involved
+ 
+& Artefacts
+:
+Connect                             : 
+2024.11.22.0
+Key Clock Server           : 
+2024.11.22.0
+Chip1 WebUI                    : 
+2024.11.22.0
+Chip1 Account                : 
+2024.11.22.0
+Chip1 MC1 Core             : 
+2024.11.22.0
+Chip1 Part                        : 
+2024.11.22.0
+Chip1 Transaction.       : 
+2024.11.22.2
+Sentry integration:
+Artefact : 2024.11.22.1
+
+## LIST OF DEPLOYED ITEMS
+
+MC1 <> CRM end to end testing
+Private (
+https://app.clickup.com/t/8651091/CHP-1049
+)-
+Verified
+Private (
+https://app.clickup.com/t/8651091/CHP-1101
+)-
+Verified
+Private (
+https://app.clickup.com/t/8651091/CHP-717
+)-
+Verified
+Private (
+https://app.clickup.com/t/8651091/CHP-1113
+)-
+Verified
+Private (
+https://app.clickup.com/t/8651091/CHP-1098
+)-
+Verified
+Private (
+https://app.clickup.com/t/8651091/CHP-1156
+)-
+Verified
+Private (
+https://app.clickup.com/t/8651091/CHP-919
+)-
+Verified
+Private (
+https://app.clickup.com/t/8651091/CHP-1162
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1163
+)-
+Verified
+Already Hotfix done to Prod
+Private (
+https://app.clickup.com/t/8651091/CHP-1122
+)
+Dev Only
+Private (
+https://app.clickup.com/t/8651091/CHP-1130
+):  Auth - Throw user to login if router loader catches 401 or token is absent  [More like error handling, regression should be enough]
+Invite flow : Handling case phone in CRM Invite if country code is missing. [More Info ::: Profile - Allow invited user to save their profile (phoneCountryCode is missing in invitation model hence in invited user model too) Backend now accepsts phoneCountryCode in the send invitation request, so it should not be an isssue now (missing phoneCountryCode caused this issue before)]
+Private (
+https://app.clickup.com/t/8651091/CHP-1121
+)
+Order: Change mapping for sales person in invoices
+Additional locks in fn-keyclock to debug logging issue
+mc1-core handling co-relation id
+
+## TESTING NOTES
+
+End-to-end testing:
+Verified the following with new users signed up to MC1:
+Can upload BoM
+Can Request a Quote
+Transfer the opportunity (crm bug with contact not getting populated during transfer). Workaround: Transfer the lead account.
+New requests raised from mc1 get the req ID
+Create a Quote 
+We can see it in Active quotes
+Raised Order request from active quotes in mc1. Request sent as per UI but couldn't see in crm.
+Raised SO from crm. Can see this in Orders in MC1
+Click on the order and we can see "Order Accepted"
+In CRM, go to Sales -> Purchase Requisition and raise PO
+The order status in mc1 is still "Order Accepted"
+From linked account (new and old):
+Raised RFQ
+It's updated as requirement
+Proceeded with steps iv to xi from above
+Sanity tests
+page navigation
+upload bom and check projects, pricing, source pricing etc
+check all the left side menu tabs
+search
+parts-tracker
+Verified the tickets deployed. Updated the status in respective tickets.

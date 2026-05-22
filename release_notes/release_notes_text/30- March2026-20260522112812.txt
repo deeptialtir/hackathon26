@@ -1,0 +1,214 @@
+# 30- MARCH2026
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+, 
+@Umamahesh
+ 
+@Harika Guntamukkala
+ 
+Release date
+ : 2026.03.30
+ 
+DB changes
+ : 
+Connect
+ : No Change
+Platform
+ : No Change
+Notification : 
+No Change
+ 
+Branch
+  : release/2026.03.28
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Account  
+    
+                               
+  : 2026.03.28.2
+Chip1 Transaction  
+    
+                        
+  : 2026.03.28.5
+Chip1 CRM WebUI                 
+    
+           
+ : 2026.03.28.7
+fn-connect                              
+   
+             
+ : 2026.03.28.1
+fn-notification-common-service    
+: 2026.03.28.0
+fn-notification-dispatcher                
+: 2026.03.28.0
+fn-notification-publisher                    
+: 2026.03.28.0
+Release items:
+SR : 
+@Umamahesh
+ 
+Buyer team field tooltip -> add description and full name in team search dto - UI & AccountService-
+its not a tooltip, showing members on hover. hover text is not showing in SR detail screen
+Changes for SR picking region from RFQ/SO & Offer picking region from SR - TransactionSerice
+- 
+currency on SO/rfq line is not copying to SR.
+Also on update, add Data datgroups from SO when SO getting associated in update - TransactionSerice
+-Verified
+Add created date as well along with created by in request info 
+- Verified
+Buyer is not required field in request information.  (P0)
+ - Verified
+Update status not should not be the note of the SR in requirements. That we should rename to instructions. This note should be new field called timelineNotes that would go to timeline. We should call it Status Notes. 
+(
+P0) - Fixed: "Update Status" modal: "Notes" is renamed to "Status Notes", field is 
+timelineNote
+. "Request Information" island: "Notes" is renamed to "Instructions", field is 
+notes
+ -
+status note from update status modal is not showing in timeline
+SR → Add Offer  
+@Umamahesh
+ 
+Instead of Supplier ID,  show  Supplier Address (value should be city, state), Supplier Vendor Code. Same as PO 
+- 
+ 
+Vendor code is not available
+-Verified
+Move email to same line as phone number for contact. Keep all of it in line line. 
+- Verified
+In Part Info, expand MPN field to like the size of other fields, add description. 
+- Verified
+Label preferences should not say “Accepted” as it is indicating what is available. For all purchasing entities it should not say accepted. 
+- 
+Request offer form still shows accepted , PO creation form as well
+SR → Request for Purchase  
+@Umamahesh
+ 
+Sales person, Sourcing Type and Requirement type and level are not persisted 
+(P0) - 
+request for purchase form does not contain these fields
+Offers   
+@Umamahesh
+ 
+In the record/request/edit offer form.. Have the sections expand and collapse (especially the optional part information) - 
+Verified
+Enables support for precise and fixed-5 number formats in various sections of the pricing module to ensure consistent and accurate display. - 
+Only UI 
+@Deepti Vaidyula
+ 
+Left: production | Right: local 
+@Deepti Vaidyula
+ - 
+Verified
+. Already on production
+PO Order entity mapping table, set active : true for some missed cases- 
+Connect 
+@Umamahesh
+ -
+which cases
+Sales Feedback - UI   
+@Harika Guntamukkala
+ 
+Account Details  
+Move address to after Billing & Shipping Details 
+- Fixed - Verified
+Create RFQ  
+Move sourcing type to same line as Req fields 
+- Fixed- Verified
+RFQ → Offer and SO→Offer 
+- Fixed
+Offer → Quote  
+Labels should not say Accepted in the names for Quote
+ (P0) - Fixed- Verified
+Create - SO  
+Sourcing Type is showing as Calculation vs. value when creating SO from quote 
+(P0) - Fixed- Verified
+Move currency to left of cost per unit 
+- Fixed- Verified
+SO Details  
+QC level should be optional 
+(P0) - Fixed- Verified
+Bulk SR  
+Sourcing Type can be taken out as it is added to RFQ and can be copied to SR from RFQ automatically. It is not carried currently
+ (P0) - Done, for each rfqLine sourcingType is copied 
+rfqLine.sourcingRequests[0].sourcingType -> soucingRequestPayload.type
+When doing a bulk submit of SR from RFQ screen with RFQ lines open the status is not reflecting immediately. We need to auto refresh the page. 
+(P0) - Fixed
+Sales person, Req Type, Sourcing Request not getting populated for bulk SR
+ (P0) - Req Type is added 
+lineType
+;  
+Sales Person is added
+ 
+salesPerson
+;
+ SourcingRequest - not sure, is it Sourcing Type?
+Document Improvements   
+@Deepti Vaidyula
+ 
+Quote:
+All upper-case in date -
+ Verified
+Remove title of the Contact - 
+ Verified
+Add missing phone number code - 
+Phone number is missing
+Fix calculation of totals in QuoteService#calculateCostSummary  -
+ Misc and freight costs are not calculated
+Sales Order:
+Change title to "Proforma Invoice" - 
+ Verified
+Invoice: 
+ Verified
+Invoice header
+Box block after totals
+Decimals
+All: 
+ Verified
+Remove red borders
+Address format
+Decimal places in unit prices and total line amounts
+Currency in totals
+Decimal places in total
+Terms and conditions
+Same style of the Beneficiary block (only extra entity-specific info diffs between the templates)
+RFQ→SR→Offer→Quote- 
+@Deepti Vaidyula
+ 
+Quote→SO - 
+@Harika Guntamukkala
+ 
+SO→PO - 
+@Umamahesh
+ 
+PO→Receiving - 
+@Umamahesh
+ 
+Sales E2E Owner → 
+@Harika Guntamukkala
+ 
+Purchasing E2E Owner → 
+@Umamahesh
+ 
+Issues on stage:
+Teams #: March30_1
+ : 
+Unable to create quote from offer because of cost summary error
+Teams #: March30_2
+ : Document Improvements 
+Quote: 
+Add missing phone number code - Phone number is missing
+Fix calculation of totals in QuoteService#calculateCostSummary  - Misc and freight costs are not calculated
+Teams #: March30_03
+ : The receiving lines page is blank at times. Refresh is fixing it.
+Teams #: March30_4
+ : The SO chevrons are not getting updated. This was seen yesterday as well. But was seen for inbound flow. Seeing the same for outbound flow.

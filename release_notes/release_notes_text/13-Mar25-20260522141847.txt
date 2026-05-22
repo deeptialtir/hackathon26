@@ -1,0 +1,52 @@
+# 13-MAR25
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+ 
+Release date
+ : 2025.03.13
+DB changes
+ : 
+Connect
+ : No Change
+Platform
+ : No Change
+Notification : 
+No Change
+Branch
+  : 
+WebUI : hotfix/2025.03.13
+Components Involved
+ 
+& Artefacts
+: 
+chip1-webui                    : hotfix-2025.03.13.1
+Release Steps
+Deploy chip1-webui
+Validations
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+
+## WHAT'S FIXED IN THE HOT-FIX?
+
+Following items are part of the release
+Private (
+https://app.clickup.com/t/8651091/CHP-1651
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1693
+)
+
+## SMOKE TESTS
+
+Page Navigations
+Upload BoM
+RFQ
+Sales Order
+Edit Project

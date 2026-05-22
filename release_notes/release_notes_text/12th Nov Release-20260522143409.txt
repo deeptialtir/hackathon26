@@ -1,0 +1,172 @@
+# 12TH NOV RELEASE
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+@Abhinay Sharma
+ 
+@Harika Guntamukkala
+ 
+Release date
+ : 2025.11.07
+ 
+DB changes
+ : 
+Connect
+ : No changes
+Platform
+ : No changes
+Notification : 
+No changes
+ 
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Merge configs
+Run db-scripts for connect
+Refresh the cache for connect service
+Deploy fn-connect
+Deploy chip1-account
+Deploy chip1-part
+Deploy chip1-transaction
+Deploy chip1-webui
+Deploy chip1-crm-webui
+Run part health migrate endpoint
+Validations
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+Automation Runs:
+jenkins.chip1.info
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/chip1-ui-tests/47/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+jenkins.chip1.info
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/crm-ui-tests/21/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+
+#### TICKETS
+
+CHP-3455
+: “Create Contact” button remains enabled after deselecting Account - 
+Verified
+Sourcing Enhancements - SS
+CHP-3492
+: Add 'inventory' field to sourcing summary - 
+Verified
+CHP-3463
+: Update Historical Activity Header Groups - 
+Issue posted
+CHP-3453
+: Enhance Parts, RFQ and RFQ Lines Sourcing - SS -
+ Verified
+CHP-3442
+ & 
+CHP-3457
+ :- Part Life cycle and Part Alternative issues -AD & HS- 
+Verified
+CHP-3473
+: Contact Details Enhancement -SS- 
+Verified
+CHP-3467
+ : Refactoring's on Views and User role options- VB
+CHP-3474
+: Enhance Account Hero to include account attributes -SS- 
+Verified
+CHP-3458
+: - Add contact modal-AD- 
+Verified
+CHP-3472
+: Created Follow up task modal-AD- 
+Verified
+CHP-3468
+: Added Account Details fab actions to Contact Details -AD- 
+Verified
+CHP-3273
+: RFQ status - Adjust keys -VB- 
+Verified
+RFQ Quote List Status type mismatch
+CHP-3405
+: Add CRM deep link functionality-SS- 
+Verified
+Parts Navigation Menu:- Added Account Parts - 
+BE changes are not integrated(showing as Part activity details not found.)
+CHP-3470
+ : Add new filter and link with Dashboard Cards - VB ( Om to check this)
+Sync issues - Language selector: find the needed option by key to show value if missing 
+CHP-3489
+: Contact Details Enhancements - SS- 
+Verified
+Address - Guess US state (short or full form) in a state selector
+CHP-3481
+: Sourcing Request: API Integration-SS
+CHP-3490
+: Add deep link to AccountCard and Account Info pane-SS-
+Verified
+CHP-3491
+: Add 'MyChip1' chip in contact details hero -SS- 
+Verified
+Fix: deeplink in orders -
+ Verified
+CHP-3497
+: Update Sourcing Page (
+#1603
+) - Om to test
+Order Line Status
+RFQ Status
+Currently in the export we are showing prices from only OEMSecrets but with the new changes we will show from all the sources. Here is the ticket, Private (
+https://app.clickup.com/t/8651091/CHP-3471
+)
+ PCN Notification fix in Part Health is also available 
+
+#### WILL NOT BE ENABLED IN PRODUCTION
+
+CHP-3459
+: Add export button for project pricing in MC1 - SS
+CHP-3317
+: Sourcing request integration - Alex
+[
+CHP-3448
+]: Add create a trip modal form- KP - 
+Not available
+[
+CHP-3419
+] - Remove Tasks Step from Create Visit Modal-KP -
+Not available
+CHP-3456
+ : Allocation Details on Order Line Details-VB- 
+Not available in Stage
+CHP-3317
+: Sourcing request integration - Alex
+CHP-3451
+: Offers integration- Alex
+CHP-3480
+: Offer info pane - Alex
+CHP-3423
+: Account Details - Supplier Info- VB
+CHP-3451
+: Offer actions -Alex
+ 
+ 
+Bug tickets
+Private (
+https://app.clickup.com/t/8651091/CHP-3498
+)
+Order level & Order line level status not showing up → Inbound flow
+Order not showing up → Outbound flow
+
+#### OPEN BUGS:
+
+Order Outbound  Status not working
+RFQ Inbound and outbound Status is not working
+Private (
+https://app.clickup.com/t/8651091/CHP-3505
+)
+xcrm recieved Quote, So not showing up in mc1- need to debug

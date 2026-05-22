@@ -1,0 +1,118 @@
+# 31-DEC24
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+ 
+Release date
+ : 2024.12.31
+DB changes
+ : 
+Connect
+ : release/2024.12.31
+Platform
+ : release/2024.12.31
+Branch
+  : release/2024.12.31
+Components Involved
+ 
+& Artefacts
+: 
+fn-connect.                     : 
+2024.12.31.0
+Chip1 MC1 Core             : 
+2024.12.31.0
+Chip1 Transaction.       : 
+2024.12.31.0
+Chip1 Part                        : 
+2024.12.31.0
+chip1 Web Ui
+ 
+ :
+ 2024.12.31.0
+
+## LIST OF DEPLOYED ITEMS
+
+Ability to sort across the columns in BOM Analysis
+ Deepti - Verified - Done
+Ability to add parts that have lead time risk to the High risk category (lead time > need_by, nrnd, obselete, ltb) 
+Abhinay - Verified
+Show overall cost of the project in the project hero cards 
+Abhinay - Verified
+Ability to add IPN field to the create RFQ flow (single part or BOM project) 
+BOM sync with the CRM
+ Deepti - Verified - Done
+Ability to download sourcing plan as an Excel file 
+Uma - Verified
+Ability to download part details section in the BOM as an Excel file 
+Uma -Verified
+Update sales person card in dashboard to include actual ICP
+Uma-already in prod
+Add a flag in the data to determine which migrated Entities (quotes and orders) should be shown to a customer 
+Uma-dev only
+Change name of Sourcing Tab in Part Details to "Pricing" to match BOM
+ Deepti -  Verified - Done
+ 
+Single Part Pricing - Show loading, if no info from OEM Secrets show as no data found. If no info, provide easy way to submit RFQ for Chip1 to Source. 
+Uma-Verified
+ 
+Segregation of Topics in Connect to avoid contention of the regular sync with migration items (QE regression) 
+ Deepti - Verified
+Uma
+Keep the sorting of pricing same as part details - 
+Uma-Verified
+Refresh Prices for parts on a daily basis 
+ Deepti - Verified - Done
+Ask for Business Type for new business account creation. Dropdown with following options: OEM, CM, OEM/CM, OCM, IPO, Franchise, Recycling House : Sign-up, Profile - Business info, MC1 invitation, edit business, new invited users, crm-sync, existing users 
+Abhinay-Verified
+Check if SE is sending ECCN and add to Part Details -
+Uma-Issue raised
+ 
+
+### DEV ONLY TICKETS
+
+Modals - Navigation blocker error (#441) (dev only, should not affect users)
+
+## TESTING NOTES
+
+Verified all the tickets and updated the status in corresponding ticket
+
+## SMOKE TESTS
+
+Feature/Flow
+Stage
+Prod
+New User Signup
+yes
+yes
+Upload Bom & Excess
+yes
+yes
+Manual RFQ
+yes
+yes
+Active Quote
+yes
+yes
+Sales Order
+yes
+yes
+Lead Account & Transfer
+yes
+No 
+Bids
+yes (with linked account)
+yes (with linked account)
+Parts Tracker
+yes
+yes
+Search
+yes
+yes
+Page Navigations
+yes
+yes

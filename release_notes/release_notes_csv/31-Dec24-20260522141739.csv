@@ -1,0 +1,79 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Deepti Vaidyula",,
+Metadata,Release Info,Release date,2024.12.31,,
+Metadata,Release Info,DB changes,Connect : release/2024.12.31,,
+Metadata,Release Info,Platform,release/2024.12.31,,
+Metadata,Release Info,Branch,release/2024.12.31,,
+Artefacts,Artefacts,Chip1 MC1 Core, 2024.12.31.0,,
+Artefacts,Artefacts,Chip1 Transaction., 2024.12.31.0,,
+Artefacts,Artefacts,Chip1 Part, 2024.12.31.0,,
+Artefacts,Artefacts,chip1 Web Ui,2024.12.31.0,,
+Deployed Items,General,Ability to sort across the columns in BOM Analysis,,,
+Deployed Items,General,Deepti,Verified - Done,,
+Deployed Items,General,"Ability to add parts that have lead time risk to the High risk category (lead time > need_by, nrnd, obselete, ltb)",,,
+Deployed Items,General,Abhinay,Verified,,
+Deployed Items,General,Show overall cost of the project in the project hero cards,,,
+Deployed Items,General,Abhinay,Verified,,
+Deployed Items,General,Ability to add IPN field to the create RFQ flow (single part or BOM project),,,
+Deployed Items,General,BOM sync with the CRM,,,
+Deployed Items,General,Deepti,Verified - Done,,
+Deployed Items,General,Ability to download sourcing plan as an Excel file,,,
+Deployed Items,General,Uma,Verified,,
+Deployed Items,General,Ability to download part details section in the BOM as an Excel file,,,
+Deployed Items,General,Uma,Verified,,
+Deployed Items,General,Update sales person card in dashboard to include actual ICP,,,
+Deployed Items,General,Uma-already in prod,,,
+Deployed Items,General,Add a flag in the data to determine which migrated Entities (quotes and orders) should be shown to a customer,,,
+Deployed Items,General,Uma-dev only,,,
+Deployed Items,General,"Change name of Sourcing Tab in Part Details to ""Pricing"" to match BOM",,,
+Deployed Items,General,Deepti,Verified - Done,,
+Deployed Items,General,"Single Part Pricing - Show loading, if no info from OEM Secrets show as no data found. If no info, provide easy way to submit RFQ for Chip1 to Source.",,,
+Deployed Items,General,Uma,Verified,,
+Deployed Items,General,Segregation of Topics in Connect to avoid contention of the regular sync with migration items (QE regression),,,
+Deployed Items,General,Deepti,Verified,,
+Deployed Items,General,Uma,,,
+Deployed Items,General,Keep the sorting of pricing same as part details - Uma,Verified,,
+Deployed Items,General,Refresh Prices for parts on a daily basis,,,
+Deployed Items,General,Deepti,Verified - Done,,
+Deployed Items,General,"Ask for Business Type for new business account creation. Dropdown with following options: OEM, CM, OEM/CM, OCM, IPO, Franchise, Recycling House : Sign-up, Profile - Business info, MC1 invitation, edit business, new invited users, crm-sync, existing users",,,
+Deployed Items,General,Abhinay,Verified,,
+Deployed Items,General,"Check if SE is sending ECCN and add to Part Details - Uma-Issue raised
+### DEV ONLY TICKETS",,,
+Deployed Items,General,"Modals - Navigation blocker error (#441) (dev only, should not affect users)",,,
+Deployed Items,General,"## TESTING NOTES
+## SMOKE TESTS",Verified all the tickets and updated the status in corresponding ticket,,
+Deployed Items,General,Feature/Flow,,,
+Deployed Items,General,Stage,,,
+Deployed Items,General,Prod,,,
+Deployed Items,General,"New User Signup
+yes
+yes",,,
+Deployed Items,General,"Upload Bom & Excess
+yes
+yes",,,
+Deployed Items,General,"Manual RFQ
+yes
+yes",,,
+Deployed Items,General,"Active Quote
+yes
+yes",,,
+Deployed Items,General,"Sales Order
+yes
+yes",,,
+Deployed Items,General,"Lead Account & Transfer
+yes",,,
+Deployed Items,General,No,,,
+Deployed Items,General,"Bids
+yes (with linked account)
+yes (with linked account)",,,
+Deployed Items,General,"Parts Tracker
+yes
+yes",,,
+Deployed Items,General,"Search
+yes
+yes",,,
+Deployed Items,General,"Page Navigations
+yes
+yes",,,

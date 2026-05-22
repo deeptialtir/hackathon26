@@ -1,0 +1,183 @@
+# 14-JULY25-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2025.07.11
+ 
+DB changes
+ : 
+Connect
+ : No changes
+Platform
+ : No changes
+Notification : 
+release/2025.07.11
+ 
+Branch
+  : hotfix/2025.07.11
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Part        
+                                   : 2025.07.11.3
+Chip1 Transaction  
+    
+                      
+  :
+ 
+2025.07.11.2
+Chip1 WebUI      
+                                 : 2025.07.11.1
+Chip1 CRM WebUI      
+                       : 2025.07.11.1
+
+## LIST OF DEPLOYED ITEMS
+
+Private (
+https://app.clickup.com/t/8651091/CHP-2431
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2456
+)
+
+## WHY DO WE NEED THIS HOTFIX?
+
+To deploy Concierge and Chip1 inventory. These are new independent features.
+
+## MC1 SANITY TESTS
+
+ 
+Feature/Flow
+Stage
+Prod
+Remarks
+New User Signup from mc1
+ Yes
+ NA
+ 
+Mc1 user invite - signup
+ Yes
+ NA
+On stage should suffice
+Upload Bom & Excess and verify in CRM
+ Yes
+ Yes
+ 
+Manual RFQ
+ Yes
+ Yes
+ 
+Active Quote (create, edit)
+ Yes
+ yes
+ 
+Sales Order
+(create, edit)
+Yes
+ yes
+ 
+Lead Account & Transfer
+Yes
+ NA
+ 
+Bids
+ NA
+ NA
+ 
+Parts Tracker
+ Yes
+Yes 
+ 
+Search
+ Yes
+Yes 
+ 
+Page Navigations
+ Yes
+ Yes
+ 
+Edit Project
+ Yes
+ Yes
+ 
+Notification Emails
+ Yes
+ Not on test account. Mc1userID issue.
+ 
+Download excess and Bom Template, fill and upload.
+ Yes
+ Yes
+ 
+ 
+
+## CRM SANITY TESTS:
+
+ 
+Feature/Flow
+Stage
+Production
+Remarks
+Create BOM in MC1, check in xcrm and new crm
+ Yes
+ Yes
+ 
+Create RFQ in MC1, check in xcrm and crm
+ Yes
+ Yes
+ 
+Upload BOM from CRM
+ Yes
+ Yes
+ 
+Page Navigations
+ Yes
+ Yes
+ 
+Deep links for Accounts, RFQs, Quotes and Orders
+ Yes
+ Yes
+ 
+Edit Project
+ Yes
+ Yes
+ 
+Global Search
+ Yes
+ Yes
+ 
+Filters 
+ Yes
+ Yes
+ 
+Sorting of tables
+ Few
+ Yes
+ 
+Page Search
+ Yes
+ Yes
+ 
+Download excess and Bom Template, fill and upload.
+ Not yet deployed to crm
+ NA
+ 
+ 
+ 
+ 
+ 
+
+## ISSUE FOUND ON PRODUCTION:
+
+Private (
+https://app.clickup.com/t/8651091/CHP-2500
+) - Normal Priority - Root cause: Lookup value is wrong, we should change it to CRM and UI code should change to
+ origin.value == "newCRM"

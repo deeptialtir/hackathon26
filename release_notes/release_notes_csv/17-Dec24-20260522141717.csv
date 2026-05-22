@@ -1,0 +1,65 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,@Umamahesh @Deepti Vaidyula,,
+Metadata,Release Info,DB changes,Connect : release/2024.12.17,,
+Metadata,Release Info,Platform,release/2024.12.17,,
+Metadata,Release Info,Branch,release/2024.12.17,,
+Artefacts,Artefacts,fn-keyclockserver,2024.12.17.0,,
+Artefacts,Artefacts,Chip1 Account, 2024.12.17.0,,
+Artefacts,Artefacts,Chip1 MC1 Core, 2024.12.17.0,,
+Artefacts,Artefacts,Chip1 Transaction., 2024.12.17.1,,
+Artefacts,Artefacts,chip1-webui,2024.12.17.1,,
+Deployed Items,Private ( https,"//app.clickup.com/t/8651091/CHP-1198
+)
+//app.clickup.com/t/8651091/CHP-1203
+)
+//app.clickup.com/t/8651091/CHP-1194
+)
+//app.clickup.com/t/8651091/CHP-1236
+)
+//app.clickup.com/t/8651091/CHP-1212
+)
+//app.clickup.com/t/8651091/CHP-1238
+)
+//app.clickup.com/t/8651091/CHP-665
+)
+//app.clickup.com/t/8651091/CHP-851
+)
+//app.clickup.com/t/8651091/CHP-1267
+)
+//app.clickup.com/t/8651091/CHP-1253
+)
+//app.clickup.com/t/8651091/CHP-1255
+)
+//app.clickup.com/t/8651091/CHP-1256
+)",,,
+Deployed Items,Private ( https,"Dashboard - Ignore country code if missing - that was in  hotfix/2024.12.05
+//app.clickup.com/t/8651091/CHP-1189
+)
+//app.clickup.com/t/8651091/CHP-1270
+)
+//app.clickup.com/t/8651091/CHP-795
+)
+//app.clickup.com/t/8651091/CHP-1099
+)
+//app.clickup.com/t/8651091/CHP-1252
+)
+//app.clickup.com/t/8651091/CHP-1207
+)
+### DEV ONLY TICKETS
+//app.clickup.com/t/8651091/CHP-1192
+)
+//app.clickup.com/t/8651091/CHP-1212
+)
+//app.clickup.com/t/8651091/CHP-1222
+)
+//app.clickup.com/t/8651091/CHP-1217",,,
+Deployed Items,),"Project - Put created project into cache, bypass 404 errors happening on GET after POST + More",,,
+Deployed Items,),Part tabs - Standardise empty message,,,
+Deployed Items,),Granular Sentry issue grouping,,,
+Deployed Items,),Safe phone mapping + Sentry logs for such cases,,,
+Deployed Items,),"There are few CRM Invitation enhancements handling phone code not found or different response codes - Regression of CRM Invite should cover this
+## TESTING NOTES",,,
+Deployed Items,),Validated all the features and the testing notes is updated for each ticket,,,
+Deployed Items,),Regression tests,,,

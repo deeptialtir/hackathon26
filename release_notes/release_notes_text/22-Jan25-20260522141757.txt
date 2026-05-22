@@ -1,0 +1,103 @@
+# 22-JAN25
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+ 
+@Umamahesh
+ 
+DB changes
+ :
+Connect
+ : No Changes
+Platform
+ : No Change
+Notification : 
+chip1-release/2025.01.22
+Branch
+  :
+Platform & WebUI : release/2025.01.22
+Notification Services : chip1-release/2025.01.22
+ 
+Components Involved
+ 
+& Artefacts
+:
+Chip1 Transaction                              
+ :
+ 
+2025.01.22.2
+Chip1 Part                                               
+:
+ 
+2025.01.22.0
+Chip1 Web UI
+          
+                             
+ : 2025.01.22.0
+fn-notification-common-service  
+: 2025.01.22.0
+fn-notification-dispatcher
+              : 2025.01.22.0
+fn-notification-publishe
+r                 : 2025.01.22.0
+
+## LIST OF DEPLOYED ITEMS
+
+Features:
+Private (
+https://app.clickup.com/t/8651091/CHP-998
+) 
+Stories & bug fixes
+Private (
+https://app.clickup.com/t/8651091/CHP-1348
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-1370
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-1368
+) 
+Enhancement ticket raised on prod:
+ Private (
+https://app.clickup.com/t/8651091/CHP-1419
+)
+
+## SMOKE TESTS
+
+Feature/Flow
+Stage
+Prod
+New User Signup from mc1
+yes
+yes
+Upload Bom & Excess and verify in CRM
+yes
+yes
+Manual RFQ
+yes
+yes
+Active Quote (create, edit)
+yes
+yes
+Sales Order
+(create, edit)
+yes
+yes
+Lead Account & Transfer
+yes
+NA
+Bids
+yes
+yes (with existing account)
+Parts Tracker
+yes
+yes
+Search
+yes
+yes
+Page Navigations
+yes
+yes

@@ -1,0 +1,4167 @@
+# 03-SEP25-HOTIFX
+
+Environment: Stage
+Status: good
+Prod release owner:
+ 
+@Harika Guntamukkala
+ 
+@Deepti Vaidyula
+ 
+Release date
+ : 2025.09.03
+DB changes
+ :
+Connect
+ : No changes
+Platform
+ : No changes
+Notification : 
+No changes
+ 
+Branch
+  :
+chip1-transaction
+ : hotfix/2025.09.02
+chip1-part
+ : hotfix/2025.09.01
+Components Involved
+ 
+& Artefacts
+:
+Chip1 Part                
+    
+                      
+   :
+ 
+2025.09.01.2
+Chip1 Transaction                
+    
+          
+:
+ 
+2025.09.02.0
+
+## FEATURES RELEASED
+
+Private (
+https://app.clickup.com/t/8651091/CHP-2891
+)  
+Private (
+https://app.clickup.com/t/8651091/CHP-2858
+)
+
+## TESTING NOTES
+
+CHP-2891: Verified that bom health notification can be triggered for all projects for current date if authtoken and the previousDate are left blank.
+CHP-2858: Verified on stage 
+curl --location 'https://stage.chip1.info/api/part/parts/full-details?mpn=BAS21A%20RF&manufacturerCode=1357&priceFilter=%7B%22fetchPrice%22%3A%20true%2C%20%22countryCode%22%3A%20%22US%22%2C%20%22source%22%3A%20%5B%22ICSOURCE%22%2C%20%22OEMSECRETS%22%2C%22XCRM%22%5D%7D%27' \
+--header 'X-API-Key: 616b2068732069642d6e6f6e2d70726f642e616c7469722e6e65742072206d7963686970315f7374616765206320666e2d636f6e6e6563742d7374616765206b20383231313032623033623535653331626564353465316435f5c1fecfa6ab928a457996f9'
+Sample Response:
+{
+    "message": "Part details fetched.",
+    "data": {
+        "part": {
+            "updatedOn": "2025-09-01T09:03:51.933Z",
+            "active": true,
+            "id": "671a3b01a9b93815da65c339",
+            "mpn": "AC0805FR-0710KL",
+            "partName": "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD T/R Automotive AEC-Q200",
+            "manufacturer": {
+                "id": "6707ea4006b91c102f76d6d4",
+                "crmId": "1574",
+                "name": "Yageo"
+            },
+            "globalPartId": "47664583",
+            "partial": false,
+            "partPriceStatusInfo": {
+                "partPriceStatus": "FOUND",
+                "lastUpdatedDate": "2025-09-01T09:03:51.920Z"
+            }
+        },
+        "globalPart": {
+            "updatedOn": "2025-03-01T00:02:07.963Z",
+            "active": true,
+            "id": "47664583",
+            "mpn": "AC0805FR-0710KL",
+            "description": "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD T/R Automotive AEC-Q200",
+            "manufacturer": "Yageo",
+            "packaging": "Tape and Reel",
+            "family": "AC",
+            "subCategory": "PASSIVE",
+            "category": "Resistor Fixed Single-Surface Mount",
+            "pricingData": {
+                "minimumPrice": "0.0017",
+                "averagePrice": "0.0059",
+                "minLeadTime": "0 Week(s)",
+                "maxLeadTime": "0 Week(s)",
+                "lastUpdatedDate": "Oct 10,2024"
+            },
+            "grade": "Medium",
+            "images": [
+                "http://download.siliconexpert.com/pdfs/2017/5/7/7/26/26/194/yageo_/manual/acseries.jpg"
+            ],
+            "mfrCageCode": "S7293",
+            "taxonomy": "Resistors > Fixed Resistors > Resistor Fixed Single-Surface Mount",
+            "introductionDate": "Nov 10, 2010",
+            "chip1RiskPercentage": 43.7,
+            "overallRiskPercentage": "43.7%",
+            "roHS": "Yes with Exemption",
+            "eccn": "EAR99",
+            "scheduleB": "8533210045",
+            "automotive": "Yes",
+            "aecQualified": "Yes",
+            "ppap": "Yes",
+            "countryOfOrigin": [
+                {
+                    "country": "China",
+                    "source": ""
+                },
+                {
+                    "country": "Taiwan (Province of China)",
+                    "source": ""
+                }
+            ],
+            "parametricData": {
+                "feature": [
+                    {
+                        "name": "Anti-Sulfurated",
+                        "value": "No",
+                        "unit": "",
+                        "id": "67241"
+                    },
+                    {
+                        "name": "Anti-Surge",
+                        "value": "No",
+                        "unit": "",
+                        "id": "67242"
+                    },
+                    {
+                        "name": "Case Style",
+                        "value": "Epoxy",
+                        "unit": "",
+                        "id": "61086"
+                    },
+                    {
+                        "name": "Current Sensing",
+                        "value": "No",
+                        "unit": "",
+                        "id": "67243"
+                    },
+                    {
+                        "name": "Fail Safe Fusible Resistor",
+                        "value": "No",
+                        "unit": "",
+                        "id": "73270"
+                    },
+                    {
+                        "name": "Failure Rate",
+                        "value": "",
+                        "unit": "",
+                        "id": "59497"
+                    },
+                    {
+                        "name": "High Power Rating",
+                        "value": "",
+                        "unit": "W",
+                        "id": "8415203"
+                    },
+                    {
+                        "name": "Maximum Current Rating",
+                        "value": "",
+                        "unit": "A",
+                        "id": "30527701"
+                    },
+                    {
+                        "name": "Maximum Operating Temperature",
+                        "value": "155",
+                        "unit": "°C",
+                        "id": "60348"
+                    },
+                    {
+                        "name": "Maximum Storage Temperature",
+                        "value": "40",
+                        "unit": "°C",
+                        "id": "69366"
+                    },
+                    {
+                        "name": "Maximum Terminal Coplanarity",
+                        "value": "",
+                        "unit": "mm",
+                        "id": "87626"
+                    },
+                    {
+                        "name": "Maximum Terminal Width",
+                        "value": "1.35",
+                        "unit": "mm",
+                        "id": "87615"
+                    },
+                    {
+                        "name": "Maximum Voltage Rating",
+                        "value": "150",
+                        "unit": "V",
+                        "id": "67072"
+                    },
+                    {
+                        "name": "Military Standard",
+                        "value": "",
+                        "unit": "",
+                        "id": "59769"
+                    },
+                    {
+                        "name": "Minimum Operating Temperature",
+                        "value": "-55",
+                        "unit": "°C",
+                        "id": "60361"
+                    },
+                    {
+                        "name": "Minimum Storage Temperature",
+                        "value": "5",
+                        "unit": "°C",
+                        "id": "69019"
+                    },
+                    {
+                        "name": "Negative Resistance Tolerance",
+                        "value": "-1",
+                        "unit": "%",
+                        "id": "13938323"
+                    },
+                    {
+                        "name": "Operating Temperature",
+                        "value": "-55 to 155",
+                        "unit": "°C",
+                        "id": "59502"
+                    },
+                    {
+                        "name": "Package Shape",
+                        "value": "Rectangular",
+                        "unit": "",
+                        "id": "67229"
+                    },
+                    {
+                        "name": "Positive Resistance Tolerance",
+                        "value": "1",
+                        "unit": "%",
+                        "id": "13938347"
+                    },
+                    {
+                        "name": "Power Rating",
+                        "value": "0.125 (1/8)",
+                        "unit": "W",
+                        "id": "59493"
+                    },
+                    {
+                        "name": "Pulse Withstand",
+                        "value": "No",
+                        "unit": "",
+                        "id": "12168931"
+                    },
+                    {
+                        "name": "Resistance Value",
+                        "value": "10K",
+                        "unit": "Ohm",
+                        "id": "59492"
+                    },
+                    {
+                        "name": "Seal",
+                        "value": "",
+                        "unit": "",
+                        "id": "61085"
+                    },
+                    {
+                        "name": "Special Features",
+                        "value": "High Reliability|Moisture Resistant",
+                        "unit": "",
+                        "id": "87030"
+                    },
+                    {
+                        "name": "Technology",
+                        "value": "Thick Film",
+                        "unit": "",
+                        "id": "59491"
+                    },
+                    {
+                        "name": "Temperature Coefficient",
+                        "value": "±100",
+                        "unit": "ppm/°C",
+                        "id": "59496"
+                    },
+                    {
+                        "name": "Temperature Range @ Derated Power",
+                        "value": "70 to 155",
+                        "unit": "°C",
+                        "id": "67237"
+                    },
+                    {
+                        "name": "Tolerance",
+                        "value": "1%",
+                        "unit": "",
+                        "id": "59494"
+                    },
+                    {
+                        "name": "Tradename",
+                        "value": "",
+                        "unit": "",
+                        "id": "88385"
+                    }
+                ]
+            },
+            "packagingData": {
+                "feature": [
+                    {
+                        "name": "Case Size",
+                        "value": "0805",
+                        "unit": "",
+                        "id": "59495"
+                    },
+                    {
+                        "name": "Package/Case",
+                        "value": "0805",
+                        "unit": "",
+                        "id": "61268"
+                    },
+                    {
+                        "name": "Mounting",
+                        "value": "Surface Mount",
+                        "unit": "",
+                        "id": "59501"
+                    },
+                    {
+                        "name": "Package Type",
+                        "value": "SMD",
+                        "unit": "",
+                        "id": "59498"
+                    },
+                    {
+                        "name": "Termination Style",
+                        "value": "Pad",
+                        "unit": "",
+                        "id": "59500"
+                    },
+                    {
+                        "name": "Product Length",
+                        "value": "2",
+                        "unit": "mm",
+                        "id": "59504"
+                    },
+                    {
+                        "name": "Product Depth",
+                        "value": "1.25",
+                        "unit": "mm",
+                        "id": "59505"
+                    },
+                    {
+                        "name": "Product Height",
+                        "value": "0.5",
+                        "unit": "mm",
+                        "id": "59503"
+                    },
+                    {
+                        "name": "Product Diameter",
+                        "value": "N/R",
+                        "unit": "mm",
+                        "id": "60853"
+                    },
+                    {
+                        "name": "Length Tolerance",
+                        "value": "±0.1",
+                        "unit": "mm",
+                        "id": "87928"
+                    },
+                    {
+                        "name": "Depth Tolerance",
+                        "value": "±0.1",
+                        "unit": "mm",
+                        "id": "87945"
+                    },
+                    {
+                        "name": "Height Tolerance",
+                        "value": "±0.1",
+                        "unit": "mm",
+                        "id": "87962"
+                    },
+                    {
+                        "name": "Diameter Tolerance",
+                        "value": "N/R",
+                        "unit": "mm",
+                        "id": "87979"
+                    },
+                    {
+                        "name": "Maximum Product Length",
+                        "value": "2.1",
+                        "unit": "mm",
+                        "id": "13508024"
+                    },
+                    {
+                        "name": "Maximum Product Depth",
+                        "value": "1.35",
+                        "unit": "mm",
+                        "id": "13508019"
+                    },
+                    {
+                        "name": "Maximum Product Height",
+                        "value": "0.6",
+                        "unit": "mm",
+                        "id": "13508014"
+                    },
+                    {
+                        "name": "Terminal Pitch",
+                        "value": "N/R",
+                        "unit": "mm",
+                        "id": "60451"
+                    },
+                    {
+                        "name": "Number of Terminals",
+                        "value": "2",
+                        "unit": "",
+                        "id": "67233"
+                    },
+                    {
+                        "name": "Product Weight",
+                        "value": "N/A",
+                        "unit": "g",
+                        "id": "59506"
+                    }
+                ]
+            },
+            "manufacturingData": {
+                "mSL": "1",
+                "leadFinishPlating": "Matte Sn",
+                "terminalBaseMaterial": "N/A",
+                "maximumReflowTemperature": "260 °C",
+                "reflowSolderTime": "10 Sec",
+                "numberOfReflowCycle": "3",
+                "standard": "N/A",
+                "maximumWaveTemperature": "250 to 260 °C",
+                "waveSolderTime": "10 Sec",
+                "underPlatingMaterial": "Ni",
+                "reflowTempSource": "https://download.siliconexpert.com/pdfs/2018/6/10/2/5/46/759/yageo_/manual/ipc-1752-2_ac08057c1.pdf",
+                "waveTempSource": "",
+                "underPlatingPorosityFree": ""
+            },
+            "environmentData": {
+                "leadFree": "Not Compliant",
+                "elv": "Not Compliant",
+                "rohsStatus": "Compliant",
+                "reachStatus": "Unaffected",
+                "htsus": "8533210030",
+                "rohsVersion": "2011/65/EU, 2015/863",
+                "rohsExemption": "Yes",
+                "halogenFree": "Compliant",
+                "green": "Not Compliant",
+                "chinaRohsStatus": "Affected",
+                "rareEarthElementInformation": "Rare Earth Free",
+                "weee": "Out of Scope",
+                "phthalates": "Not Affected",
+                "bisphenolA": "Not Affected",
+                "inorganicPhosphorus": "Not Affected",
+                "iec62474": "Affected",
+                "californiaProposition65": "Affected",
+                "odc": "Not Affected",
+                "pfos": "Not Affected",
+                "persistentOrganicPollutants": "Compliant",
+                "pfoa": "Not Affected",
+                "adDsl": "Affected",
+                "nas411": "Affected"
+            },
+            "chemicalData": {},
+            "lifecycleRisk": {
+                "lifecycleRisk": "Medium",
+                "lifecycle": "Active",
+                "ltbDate": "",
+                "source": "http://download.siliconexpert.com/pdfs2/2024/8/11/9/58/55/93276/yageo_/manual/pgurl_ac0805fr-0710kl.pdf",
+                "partLifecycleStage": "Mature",
+                "estimatedYearsToEol": "10"
+            },
+            "counterfeitRisk": {
+                "overallCounterfeitRisk": "20 %",
+                "confirmedCounterfeitReports": "0 Report(s)",
+                "manCounterfeitReports": "0 Report(s)"
+            },
+            "multiSourcingRisk": {
+                "multisourcingRisk": "Low"
+            },
+            "complianceRisk": {
+                "rohsRisk": "Medium",
+                "conflictMinerals": "DRC Conflict Free",
+                "rareEarthElementInformation": "Rare Earth Free"
+            },
+            "inventoryRisk": {
+                "inventoryRisk": "Low"
+            },
+            "document": {
+                "latestDatasheet": "http://download.siliconexpert.com/pdfs2/2024/1/18/0/33/16/616422/yageo_/auto/pyu-ac_51_rohs_l_11.pdf",
+                "lifecycleInformation": "http://download.siliconexpert.com/pdfs2/2024/8/11/9/58/55/93276/yageo_/manual/pgurl_ac0805fr-0710kl.pdf",
+                "pkgInformation": "https://download.siliconexpert.com/pdfs/2017/11/24/20/59/36/170/yageo_/manual/5600086116766438pyu-r_packing_12.pdf",
+                "onlineSupplierDatasheetURL": "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-AC_51_RoHS_L_11.pdf"
+            },
+            "alternateParts": [
+                {
+                    "mpn": "WCR0805-10KFA",
+                    "manufacturer": "TT Electronics",
+                    "comment": "",
+                    "alternateType": "A",
+                    "comId": "79476727"
+                },
+                {
+                    "mpn": "NRC10F1002TRF",
+                    "manufacturer": "NIC Components Corp",
+                    "comment": "",
+                    "alternateType": "A",
+                    "comId": "25405876"
+                },
+                {
+                    "mpn": "NRC10F1002TR10F",
+                    "manufacturer": "NIC Components Corp",
+                    "comment": "",
+                    "alternateType": "A",
+                    "comId": "25069510"
+                },
+                {
+                    "mpn": "CR0805AFX-1002EAS",
+                    "manufacturer": "Bourns",
+                    "comment": "Difference in: Anti-Sulfurated, Lead Finish",
+                    "alternateType": "B/Upgrade",
+                    "comId": "424701711"
+                },
+                {
+                    "mpn": "AGCR0805-RK-1002FT",
+                    "manufacturer": "Venkel",
+                    "comment": "Difference in: Anti-Sulfurated",
+                    "alternateType": "B/Upgrade",
+                    "comId": "1851529367"
+                },
+                {
+                    "mpn": "TFA0805R1002F-T5",
+                    "manufacturer": "Thin Film Technology",
+                    "comment": "Difference in: Anti-Sulfurated",
+                    "alternateType": "B/Upgrade",
+                    "comId": "77107631"
+                },
+                {
+                    "mpn": "TFA0805R1002F-T10",
+                    "manufacturer": "Thin Film Technology",
+                    "comment": "Difference in: Anti-Sulfurated",
+                    "alternateType": "B/Upgrade",
+                    "comId": "77114647"
+                },
+                {
+                    "mpn": "RCA080510K0FKTC",
+                    "manufacturer": "Vishay",
+                    "comment": "Difference in: Anti-Sulfurated, Lead Finish",
+                    "alternateType": "B/Upgrade",
+                    "comId": "99936221"
+                },
+                {
+                    "mpn": "RCA080510K0FHTA",
+                    "manufacturer": "Vishay",
+                    "comment": "Difference in: Anti-Sulfurated, Lead Finish, Temp. coeff",
+                    "alternateType": "B/Upgrade",
+                    "comId": "76556306"
+                },
+                {
+                    "mpn": "CRS 0805 10K ±1%-TCR 50 Tape 180 mm",
+                    "manufacturer": "SRT Resistor Technology GmbH",
+                    "comment": "Difference in: Lead Finish, Product Height, Temp. coeff",
+                    "alternateType": "B/Upgrade",
+                    "comId": "1849536572"
+                },
+                {
+                    "mpn": "CRCW080510K0FHTAP",
+                    "manufacturer": "Vishay",
+                    "comment": "Difference in: Lead Finish, Temp. coeff",
+                    "alternateType": "B/Upgrade",
+                    "comId": "100142470"
+                },
+                {
+                    "mpn": "MR08X1002FQL",
+                    "manufacturer": "Walsin Technology",
+                    "comment": "Difference in: Anti-Sulfurated, Power Rating",
+                    "alternateType": "B/Upgrade",
+                    "comId": "894968269"
+                },
+                {
+                    "mpn": "RN73H2ATTD1002F10",
+                    "manufacturer": "KOA Speer Electronics",
+                    "comment": "Difference in: Anti-Sulfurated, Technology, Temp. @ Derated Power, Temp. coeff",
+                    "alternateType": "B/Upgrade",
+                    "comId": "402457147"
+                },
+                {
+                    "mpn": "RK73G2ARTTD1002F",
+                    "manufacturer": "KOA Speer Electronics",
+                    "comment": "Difference in: Anti-Sulfurated, Temp. coeff",
+                    "alternateType": "B/Upgrade",
+                    "comId": "1847342297"
+                },
+                {
+                    "mpn": "RCT0510KFLF",
+                    "manufacturer": "Hong Kong Resistors Manufactory",
+                    "comment": "Difference in: Lead Finish, Technology",
+                    "alternateType": "B/Upgrade",
+                    "comId": "64391239"
+                },
+                {
+                    "mpn": "ASC0805-10KFT5",
+                    "manufacturer": "TT Electronics",
+                    "comment": "Difference in: Anti-Sulfurated",
+                    "alternateType": "B/Upgrade",
+                    "comId": "52505453"
+                },
+                {
+                    "mpn": "RCA080510K0FKTA",
+                    "manufacturer": "Vishay",
+                    "comment": "Difference in: Anti-Sulfurated, Lead Finish",
+                    "alternateType": "B/Upgrade",
+                    "comId": "30667249"
+                },
+                {
+                    "mpn": "RCA080510K0FKEC",
+                    "manufacturer": "Vishay",
+                    "comment": "Difference in: Anti-Sulfurated, Case Style, Lead Finish",
+                    "alternateType": "B/Upgrade",
+                    "comId": "85648476"
+                },
+                {
+                    "mpn": "RCA080510K0FKEA",
+                    "manufacturer": "Vishay",
+                    "comment": "Difference in: Anti-Sulfurated, Case Style",
+                    "alternateType": "B/Upgrade",
+                    "comId": "32290341"
+                },
+                {
+                    "mpn": "RCA080510K0FHTC",
+                    "manufacturer": "Vishay",
+                    "comment": "Difference in: Anti-Sulfurated, Lead Finish, Temp. coeff",
+                    "alternateType": "B/Upgrade",
+                    "comId": "84252662"
+                },
+                {
+                    "mpn": "RCA080510K0FHEC",
+                    "manufacturer": "Vishay",
+                    "comment": "Difference in: Anti-Sulfurated, Case Style, Temp. coeff",
+                    "alternateType": "B/Upgrade",
+                    "comId": "85648474"
+                },
+                {
+                    "mpn": "RCA080510K0FHEA",
+                    "manufacturer": "Vishay",
+                    "comment": "Difference in: Anti-Sulfurated, Case Style, Temp. coeff",
+                    "alternateType": "B/Upgrade",
+                    "comId": "48547318"
+                },
+                {
+                    "mpn": "CRCW080510K0FKTB9",
+                    "manufacturer": "Vishay",
+                    "comment": "Difference in: Case Style, Lead Finish",
+                    "alternateType": "B/Upgrade",
+                    "comId": "30839897"
+                },
+                {
+                    "mpn": "CRCW080510K0FHECP",
+                    "manufacturer": "Vishay",
+                    "comment": "Difference in: Temp. coeff",
+                    "alternateType": "B/Upgrade",
+                    "comId": "48545497"
+                },
+                {
+                    "mpn": "CRCW080510K0FHEAP",
+                    "manufacturer": "Vishay",
+                    "comment": "Difference in: Temp. coeff",
+                    "alternateType": "B/Upgrade",
+                    "comId": "38351175"
+                },
+                {
+                    "mpn": "WR08X1002FTLJ",
+                    "manufacturer": "Walsin Technology",
+                    "comment": "Difference in: Anti-Sulfurated",
+                    "alternateType": "B/Upgrade",
+                    "comId": "60509876"
+                },
+                {
+                    "mpn": "MR08X1002FTL",
+                    "manufacturer": "Walsin Technology",
+                    "comment": "Difference in: Anti-Sulfurated, Power Rating",
+                    "alternateType": "B/Upgrade",
+                    "comId": "49846145"
+                },
+                {
+                    "mpn": "MR08X1002FGL",
+                    "manufacturer": "Walsin Technology",
+                    "comment": "Difference in: Anti-Sulfurated, Power Rating",
+                    "alternateType": "B/Upgrade",
+                    "comId": "49846144"
+                },
+                {
+                    "mpn": "RN73H2ATTE1002F50",
+                    "manufacturer": "KOA Speer Electronics",
+                    "comment": "Difference in: Anti-Sulfurated, Technology, Temp. @ Derated Power, Temp. coeff",
+                    "alternateType": "B/Upgrade",
+                    "comId": "424713788"
+                },
+                {
+                    "mpn": "RN73H2ATTE1002F25",
+                    "manufacturer": "KOA Speer Electronics",
+                    "comment": "Difference in: Anti-Sulfurated, Technology, Temp. @ Derated Power, Temp. coeff",
+                    "alternateType": "B/Upgrade",
+                    "comId": "424713787"
+                },
+                {
+                    "mpn": "RN73H2ATTE1002F100",
+                    "manufacturer": "KOA Speer Electronics",
+                    "comment": "Difference in: Anti-Sulfurated, Technology, Temp. @ Derated Power",
+                    "alternateType": "B/Upgrade",
+                    "comId": "424713786"
+                },
+                {
+                    "mpn": "RN73H2ATTE1002F10",
+                    "manufacturer": "KOA Speer Electronics",
+                    "comment": "Difference in: Anti-Sulfurated, Technology, Temp. @ Derated Power, Temp. coeff",
+                    "alternateType": "B/Upgrade",
+                    "comId": "424713785"
+                },
+                {
+                    "mpn": "RN73H2ATTD1002F50",
+                    "manufacturer": "KOA Speer Electronics",
+                    "comment": "Difference in: Anti-Sulfurated, Technology, Temp. @ Derated Power, Temp. coeff",
+                    "alternateType": "B/Upgrade",
+                    "comId": "48170118"
+                },
+                {
+                    "mpn": "RN73H2ATTD1002F25",
+                    "manufacturer": "KOA Speer Electronics",
+                    "comment": "Difference in: Anti-Sulfurated, Technology, Temp. @ Derated Power, Temp. coeff",
+                    "alternateType": "B/Upgrade",
+                    "comId": "69589463"
+                },
+                {
+                    "mpn": "RN73H2ATTD1002F100",
+                    "manufacturer": "KOA Speer Electronics",
+                    "comment": "Difference in: Anti-Sulfurated, Technology, Temp. @ Derated Power",
+                    "alternateType": "B/Upgrade",
+                    "comId": "69589713"
+                },
+                {
+                    "mpn": "RK73G2ATTE1002F",
+                    "manufacturer": "KOA Speer Electronics",
+                    "comment": "Difference in: Temp. coeff",
+                    "alternateType": "B/Upgrade",
+                    "comId": "405709468"
+                },
+                {
+                    "mpn": "RK73G2ATTD1002F",
+                    "manufacturer": "KOA Speer Electronics",
+                    "comment": "Difference in: Temp. coeff",
+                    "alternateType": "B/Upgrade",
+                    "comId": "25662547"
+                },
+                {
+                    "mpn": "RK73G2ALTD1002F",
+                    "manufacturer": "KOA Speer Electronics",
+                    "comment": "Difference in: Lead Finish, Temp. coeff",
+                    "alternateType": "B/Upgrade",
+                    "comId": "25683645"
+                },
+                {
+                    "mpn": "ERJU06F1002V",
+                    "manufacturer": "Panasonic",
+                    "comment": "Difference in: Anti-Sulfurated, Lead Finish, Product Height",
+                    "alternateType": "B/Upgrade",
+                    "comId": "54964537"
+                },
+                {
+                    "mpn": "ERJS06F1002V",
+                    "manufacturer": "Panasonic",
+                    "comment": "Difference in: Anti-Sulfurated, Lead Finish, Product Height",
+                    "alternateType": "B/Upgrade",
+                    "comId": "28872676"
+                },
+                {
+                    "mpn": "AS05FTE1002",
+                    "manufacturer": "Viking Tech Corporation",
+                    "comment": "Difference in: Anti-Sulfurated",
+                    "alternateType": "B/Upgrade",
+                    "comId": "1845415273"
+                },
+                {
+                    "mpn": "MCMR08X1002FTL",
+                    "manufacturer": "Multicomp Pro",
+                    "comment": "Difference in: Anti-Sulfurated",
+                    "alternateType": "B/Upgrade",
+                    "comId": "405307179"
+                },
+                {
+                    "mpn": "NRCA10F1002TRQYF",
+                    "manufacturer": "NIC Components Corp",
+                    "comment": "Difference in: Anti-Sulfurated",
+                    "alternateType": "B/Upgrade",
+                    "comId": "85716492"
+                },
+                {
+                    "mpn": "NRC-AS10F1002TRQYF",
+                    "manufacturer": "NIC Components Corp",
+                    "comment": "Difference in: Anti-Sulfurated",
+                    "alternateType": "B/Upgrade",
+                    "comId": "84664576"
+                },
+                {
+                    "mpn": "CAS10F1002CT",
+                    "manufacturer": "Cal-Chip Electronics",
+                    "comment": "Difference in: Anti-Sulfurated, Lead Finish",
+                    "alternateType": "B/Upgrade",
+                    "comId": "70597647"
+                },
+                {
+                    "mpn": "TRR10EZPF1002",
+                    "manufacturer": "ROHM Semiconductor",
+                    "comment": "Difference in: Anti-Sulfurated",
+                    "alternateType": "B/Upgrade",
+                    "comId": "61646559"
+                },
+                {
+                    "mpn": "RCA080510K0FKEB",
+                    "manufacturer": "Vishay",
+                    "comment": "Difference in: Anti-Sulfurated, Lead Finish",
+                    "alternateType": "B/Upgrade",
+                    "comId": "85648475"
+                },
+                {
+                    "mpn": "RCA080510K0FHEB",
+                    "manufacturer": "Vishay",
+                    "comment": "Difference in: Anti-Sulfurated, Temp. coeff",
+                    "alternateType": "B/Upgrade",
+                    "comId": "85648473"
+                },
+                {
+                    "mpn": "CRCW080510K0FKTB",
+                    "manufacturer": "Vishay",
+                    "comment": "Difference in: Case Style, Lead Finish",
+                    "alternateType": "B/Upgrade",
+                    "comId": "25081338"
+                },
+                {
+                    "mpn": "CRCW080510K0FHEBP",
+                    "manufacturer": "Vishay",
+                    "comment": "Difference in: Temp. coeff",
+                    "alternateType": "B/Upgrade",
+                    "comId": "73117599"
+                }
+            ],
+            "pcnData": {
+                "pcnDto": {
+                    "lastPcnNumber": "",
+                    "lastPcnDate": "May 22, 2018",
+                    "lastPcnTypeOfChange": "Vendor Acquisition",
+                    "lastPcnSource": "http://download.siliconexpert.com/pdfs/2018/6/14/2/47/8/958/yageo_/manual/yageo_pulseelectronics_06142018_.pdf",
+                    "lastTimeBuyDate": "",
+                    "lastShipDate": "",
+                    "lastEolNumber": "",
+                    "lastEolDate": "",
+                    "lastEolSource": ""
+                }
+            },
+            "pcnDetails": {
+                "pcnDto": [
+                    {
+                        "lastTimeBuyDate": "",
+                        "lastShipDate": "",
+                        "pcnNumber": "",
+                        "typeOfChange": "Vendor Acquisition",
+                        "descriptionOfChange": "Yageo Corporation (TAIEX: 2327 TW) today announced to acquire 100% shares of Pulse Electronics",
+                        "pcnSource": "http://download.siliconexpert.com/pdfs/2018/6/14/2/47/8/958/yageo_/manual/yageo_pulseelectronics_06142018_.pdf",
+                        "notificationDate": "May 22, 2018",
+                        "effectiveDate": "May 22, 2018",
+                        "pcnId": "9041641828"
+                    },
+                    {
+                        "lastTimeBuyDate": "",
+                        "lastShipDate": "",
+                        "pcnNumber": "EBR-0176-171229/PRC",
+                        "typeOfChange": "Assembly Process,Assembly Site",
+                        "descriptionOfChange": "Yageo intends to expand the capacity for RC/ AC/ AT/ RT/ PA/ PE/ PU series in the current manufacturing site. Our factories are certified by ISO 9001 and ISO/TS 16949.",
+                        "pcnSource": "http://download.siliconexpert.com/pdfs/2018/9/6/15/10/19/623268/yageo_/manual/57463_spcn.pdf",
+                        "notificationDate": "Dec 29, 2017",
+                        "effectiveDate": "Dec 29, 2017",
+                        "pcnId": "9047885546"
+                    },
+                    {
+                        "lastTimeBuyDate": "",
+                        "lastShipDate": "",
+                        "pcnNumber": "EBR-0176-13091801",
+                        "typeOfChange": "Function",
+                        "descriptionOfChange": "This notification is to inform you that Yageo will waive the function of sulfur resistance of AC series. Effective on AC series from 0402 to 2512 sizes.",
+                        "pcnSource": "http://download.siliconexpert.com/pdfs/2014/1/13/0/37/55/416/yageo_/manual/yageo-discontinuance-ac-series-from-0402-to-2512-sizes-pcn-ebr-0176-13091801.pdf",
+                        "notificationDate": "Sep 18, 2013",
+                        "effectiveDate": "Apr 01, 2014",
+                        "pcnId": "354175298"
+                    },
+                    {
+                        "lastTimeBuyDate": "",
+                        "lastShipDate": "",
+                        "pcnNumber": "EBR-0176-13071001",
+                        "typeOfChange": "Assembly Site",
+                        "descriptionOfChange": "Yaqeo to build AC seriesfautomotive grade Rchip production line in SuZhou, China from Oct, 2013 In 1987, Yageo Rchip factory was built up in Kaohsiung, Taiwan",
+                        "pcnSource": "http://download.siliconexpert.com/pdfs/2013/7/29/1/15/3/693/yageo_/manual/yageo-ac-rchip-resistor-manufacturing-location-chg-pcn-ebr-0176-13071001.pdf",
+                        "notificationDate": "Jul 10, 2013",
+                        "effectiveDate": "Apr 01, 2014",
+                        "pcnId": "112930186"
+                    },
+                    {
+                        "lastTimeBuyDate": "",
+                        "lastShipDate": "",
+                        "pcnNumber": "EBR-0176-130122/EU",
+                        "typeOfChange": "PCN Cancelled",
+                        "descriptionOfChange": "To remove the Resistance Value Marking on R-Chip sizes 0603/0805/1206 for the purposes of reducing unnecessary chemical usages for environmental protections. To identify the product resistance value each single reel is labeled with all relevant data and will continue serving the purposes.",
+                        "pcnSource": "http://download.siliconexpert.com/pdfs/2014/2/3/6/13/29/562/yageo_/manual/yageo_ebr0176130122eu_01282014_update.pdf",
+                        "notificationDate": "Jan 22, 2013",
+                        "effectiveDate": "",
+                        "pcnId": "1096561107"
+                    },
+                    {
+                        "lastTimeBuyDate": "",
+                        "lastShipDate": "",
+                        "pcnNumber": "EBR-0176-130122/EU",
+                        "typeOfChange": "Labeling,Marking Molding",
+                        "descriptionOfChange": "To remove the Resistance Value Marking on R-Chip sizes 0603/0805/1206 for the purposes of reducing unnecessary chemical usages for environmental protections. To identify the product resistance value each single reel is labeled with all relevant data and will continue serving the purposes.",
+                        "pcnSource": "http://download.siliconexpert.com/pdfs/2013/1/28/1/31/30/613/yageo_/manual/yageo_ebr0176130122eu_01272013_.pdf",
+                        "notificationDate": "Jan 22, 2013",
+                        "effectiveDate": "Jul 01, 2013",
+                        "pcnId": "72191808"
+                    },
+                    {
+                        "lastTimeBuyDate": "",
+                        "lastShipDate": "",
+                        "pcnNumber": "",
+                        "typeOfChange": "Vendor Acquisition",
+                        "descriptionOfChange": "Yageo Acquires Compostar Technology",
+                        "pcnSource": "http://download.siliconexpert.com/pdfs/2009/5/6/3/48/6/yageo_/manual/pcn_full acquistion_yageo_compostar technology.pdf",
+                        "notificationDate": "Aug 27, 2008",
+                        "effectiveDate": "",
+                        "pcnId": "3724744"
+                    },
+                    {
+                        "lastTimeBuyDate": "",
+                        "lastShipDate": "",
+                        "pcnNumber": "",
+                        "typeOfChange": "Vendor Acquisition",
+                        "descriptionOfChange": "Phycomp has been acquired by Yageo",
+                        "pcnSource": "http://download.siliconexpert.com/pdfs/2009/5/11/2/29/36/yageo_/manual/pcn_full acquistion_yageo_phycomp.pdf",
+                        "notificationDate": "Jun 01, 2000",
+                        "effectiveDate": "",
+                        "pcnId": "3731683"
+                    },
+                    {
+                        "lastTimeBuyDate": "",
+                        "lastShipDate": "",
+                        "pcnNumber": "",
+                        "typeOfChange": "Vendor Acquisition",
+                        "descriptionOfChange": "Ferroxcube International Holding B.V. has been acquired by Yageo",
+                        "pcnSource": "http://download.siliconexpert.com/pdfs/2010/10/20/4/28/39/365/yageo_/manual/pcn_fullacquistion_yageo_ferroxcubeinternationalholdingbv.pdf",
+                        "notificationDate": "Jan 01, 2000",
+                        "effectiveDate": "",
+                        "pcnId": "19946023"
+                    },
+                    {
+                        "lastTimeBuyDate": "",
+                        "lastShipDate": "",
+                        "pcnNumber": "",
+                        "typeOfChange": "Vendor Acquisition",
+                        "descriptionOfChange": "Vitrohm has been acquired by Yageo",
+                        "pcnSource": "http://download.siliconexpert.com/pdfs/2010/10/20/4/28/39/256/yageo_/manual/pcn_fullacquistion_yageo_vitrohm.pdf",
+                        "notificationDate": "Jan 01, 1996",
+                        "effectiveDate": "",
+                        "pcnId": "19946022"
+                    },
+                    {
+                        "lastTimeBuyDate": "",
+                        "lastShipDate": "",
+                        "pcnNumber": "",
+                        "typeOfChange": "Vendor Acquisition",
+                        "descriptionOfChange": "Paccom Electronics has been acquired by Steller, Inc.",
+                        "pcnSource": "http://download.siliconexpert.com/pdfs/2013/8/13/6/9/30/248/yageo_/manual/pcn_fullacquisition_stellerinc_paccomelectronics.pdf",
+                        "notificationDate": "Jan 01, 1994",
+                        "effectiveDate": "",
+                        "pcnId": "116372144"
+                    },
+                    {
+                        "lastTimeBuyDate": "",
+                        "lastShipDate": "",
+                        "pcnNumber": "",
+                        "typeOfChange": "Vendor Acquisition",
+                        "descriptionOfChange": "Priebe Electronics has been acquired by Steller, Inc.",
+                        "pcnSource": "http://download.siliconexpert.com/pdfs/2013/8/13/6/9/38/905/yageo_/manual/pcn_fullacquisition_stellerinc_priebeelectronics.pdf",
+                        "notificationDate": "Jan 01, 1994",
+                        "effectiveDate": "",
+                        "pcnId": "116372155"
+                    },
+                    {
+                        "lastTimeBuyDate": "",
+                        "lastShipDate": "",
+                        "pcnNumber": "",
+                        "typeOfChange": "Vendor Acquisition",
+                        "descriptionOfChange": "Steller, Inc has been acquired by Yageo.",
+                        "pcnSource": "http://download.siliconexpert.com/pdfs/2013/8/13/6/9/45/373/yageo_/manual/pcn_fullacquisition_yageo_stellerinc.pdf",
+                        "notificationDate": "Jan 01, 1994",
+                        "effectiveDate": "",
+                        "pcnId": "116372168"
+                    }
+                ]
+            },
+            "isAddedToAcl": true
+        },
+        "trackPart": false,
+        "prices": [
+            {
+                "createdOn": "2024-10-24T17:35:26.798Z",
+                "updatedOn": "2024-10-24T17:35:26.798Z",
+                "active": true,
+                "origin": {
+                    "namespace": "common",
+                    "scope": "en",
+                    "category": "global",
+                    "key": "origin.OEMSECRETS",
+                    "value": "OEMSECRETS"
+                },
+                "id": "671a855e3289600fa07b9cc9",
+                "part": {
+                    "createdOn": "2024-10-24T17:35:26.798Z",
+                    "updatedOn": "2024-10-24T17:35:26.798Z",
+                    "active": true,
+                    "id": "671a3b01a9b93815da65c339",
+                    "mpn": "AC0805FR-0710KL",
+                    "partName": "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD T/R Automotive AEC-Q200",
+                    "manufacturer": {
+                        "id": "6707ea4006b91c102f76d6d4",
+                        "crmId": "1574",
+                        "name": "Yageo"
+                    },
+                    "globalPartId": "47664583",
+                    "partial": false
+                },
+                "manufacturer": "Yageo Corporation",
+                "packaging": "Custom Reel",
+                "sku": "311-10KLGDKR-ND",
+                "category": "",
+                "moq": "",
+                "mov": "",
+                "partcondition": "Active",
+                "factorystock": "0",
+                "onOrderQuantity": "0",
+                "sourceManufacturer": "YAGEO",
+                "sourcePackaging": "Digi-Reel®",
+                "leadTimeFormat": "Unknown",
+                "sourceCurrency": "USD",
+                "quantityInStock": 407852,
+                "sourcePartNumber": "AC0805FR-0710KL",
+                "distributorAuthorisationStatus": "authorised",
+                "imageUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/4205/AC-Series--SMD-Chip-Resistor.jpg",
+                "buyNowUrl": "https://analytics.oemsecrets.com/main.php?p=AC0805FR-0710KL&m=Yageo%20Corporation&q=407852&n=Digi-Key&table=api&media=buynow&source=avinashchip1&event_link=https%3A%2F%2Fwww.digikey.com%2Fen%2Fproducts%2Fdetail%2Fyageo%2FAC0805FR-0710KL%2F2827834",
+                "leadTimeWeeks": "18",
+                "sourceLeadTime": "18 week(s)",
+                "dateCode": "",
+                "distributor": {
+                    "createdOn": "2024-10-24T17:35:26.798Z",
+                    "updatedOn": "2024-10-24T17:35:26.798Z",
+                    "active": true,
+                    "id": "671a8555a9b93815da65c3fe",
+                    "name": "Digi-Key",
+                    "commonName": "Digi-Key Electronics",
+                    "region": "North America",
+                    "country": "Global",
+                    "logo": "https://media.oemsecrets.com/images/logos/distributors/digikey.png",
+                    "distributorId": "18780",
+                    "commonId": "60797"
+                },
+                "compliance": {
+                    "rohs": "ROHS3 Compliant"
+                },
+                "pricingDetails": [
+                    {
+                        "currency": "USD",
+                        "details": [
+                            {
+                                "unitBreak": "1",
+                                "unitPrice": "0.1000"
+                            },
+                            {
+                                "unitBreak": "10",
+                                "unitPrice": "0.0200"
+                            },
+                            {
+                                "unitBreak": "50",
+                                "unitPrice": "0.0168"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.0133"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0092"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "CNY",
+                        "details": [
+                            {
+                                "unitBreak": "1",
+                                "unitPrice": "0.7126"
+                            },
+                            {
+                                "unitBreak": "10",
+                                "unitPrice": "0.1425"
+                            },
+                            {
+                                "unitBreak": "50",
+                                "unitPrice": "0.1197"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.0948"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0654"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "EUR",
+                        "details": [
+                            {
+                                "unitBreak": "1",
+                                "unitPrice": "0.0927"
+                            },
+                            {
+                                "unitBreak": "10",
+                                "unitPrice": "0.0185"
+                            },
+                            {
+                                "unitBreak": "50",
+                                "unitPrice": "0.0156"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.0123"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0085"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "HKD",
+                        "details": [
+                            {
+                                "unitBreak": "1",
+                                "unitPrice": "0.7769"
+                            },
+                            {
+                                "unitBreak": "10",
+                                "unitPrice": "0.1554"
+                            },
+                            {
+                                "unitBreak": "50",
+                                "unitPrice": "0.1305"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.1033"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0713"
+                            }
+                        ]
+                    }
+                ],
+                "countryCode": "DE"
+            },
+            {
+                "createdOn": "2024-10-24T17:35:26.803Z",
+                "updatedOn": "2024-10-24T17:35:26.803Z",
+                "active": true,
+                "origin": {
+                    "namespace": "common",
+                    "scope": "en",
+                    "category": "global",
+                    "key": "origin.OEMSECRETS",
+                    "value": "OEMSECRETS"
+                },
+                "id": "671a855e3289600fa07b9cca",
+                "part": {
+                    "createdOn": "2024-10-24T17:35:26.803Z",
+                    "updatedOn": "2024-10-24T17:35:26.803Z",
+                    "active": true,
+                    "id": "671a3b01a9b93815da65c339",
+                    "mpn": "AC0805FR-0710KL",
+                    "partName": "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD T/R Automotive AEC-Q200",
+                    "manufacturer": {
+                        "id": "6707ea4006b91c102f76d6d4",
+                        "crmId": "1574",
+                        "name": "Yageo"
+                    },
+                    "globalPartId": "47664583",
+                    "partial": false
+                },
+                "manufacturer": "Yageo Corporation",
+                "packaging": "Cut Tape",
+                "sku": "311-10KLGCT-ND",
+                "category": "",
+                "moq": "",
+                "mov": "",
+                "partcondition": "Active",
+                "factorystock": "0",
+                "onOrderQuantity": "0",
+                "sourceManufacturer": "YAGEO",
+                "sourcePackaging": "Cut Tape (CT)",
+                "leadTimeFormat": "Unknown",
+                "sourceCurrency": "USD",
+                "quantityInStock": 407852,
+                "sourcePartNumber": "AC0805FR-0710KL",
+                "distributorAuthorisationStatus": "authorised",
+                "imageUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/4205/AC-Series--SMD-Chip-Resistor.jpg",
+                "buyNowUrl": "https://analytics.oemsecrets.com/main.php?p=AC0805FR-0710KL&m=Yageo%20Corporation&q=407852&n=Digi-Key&table=api&media=buynow&source=avinashchip1&event_link=https%3A%2F%2Fwww.digikey.com%2Fen%2Fproducts%2Fdetail%2Fyageo%2FAC0805FR-0710KL%2F2827834",
+                "leadTimeWeeks": "18",
+                "sourceLeadTime": "18 week(s)",
+                "dateCode": "",
+                "distributor": {
+                    "createdOn": "2024-10-24T17:35:26.803Z",
+                    "updatedOn": "2024-10-24T17:35:26.803Z",
+                    "active": true,
+                    "id": "671a8555a9b93815da65c3fe",
+                    "name": "Digi-Key",
+                    "commonName": "Digi-Key Electronics",
+                    "region": "North America",
+                    "country": "Global",
+                    "logo": "https://media.oemsecrets.com/images/logos/distributors/digikey.png",
+                    "distributorId": "18780",
+                    "commonId": "60797"
+                },
+                "compliance": {
+                    "rohs": "ROHS3 Compliant"
+                },
+                "pricingDetails": [
+                    {
+                        "currency": "USD",
+                        "details": [
+                            {
+                                "unitBreak": "1",
+                                "unitPrice": "0.1000"
+                            },
+                            {
+                                "unitBreak": "10",
+                                "unitPrice": "0.0200"
+                            },
+                            {
+                                "unitBreak": "50",
+                                "unitPrice": "0.0168"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.0133"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0092"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "CNY",
+                        "details": [
+                            {
+                                "unitBreak": "1",
+                                "unitPrice": "0.7126"
+                            },
+                            {
+                                "unitBreak": "10",
+                                "unitPrice": "0.1425"
+                            },
+                            {
+                                "unitBreak": "50",
+                                "unitPrice": "0.1197"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.0948"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0654"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "EUR",
+                        "details": [
+                            {
+                                "unitBreak": "1",
+                                "unitPrice": "0.0927"
+                            },
+                            {
+                                "unitBreak": "10",
+                                "unitPrice": "0.0185"
+                            },
+                            {
+                                "unitBreak": "50",
+                                "unitPrice": "0.0156"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.0123"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0085"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "HKD",
+                        "details": [
+                            {
+                                "unitBreak": "1",
+                                "unitPrice": "0.7769"
+                            },
+                            {
+                                "unitBreak": "10",
+                                "unitPrice": "0.1554"
+                            },
+                            {
+                                "unitBreak": "50",
+                                "unitPrice": "0.1305"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.1033"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0713"
+                            }
+                        ]
+                    }
+                ],
+                "countryCode": "DE"
+            },
+            {
+                "createdOn": "2024-10-24T17:35:26.805Z",
+                "updatedOn": "2024-10-24T17:35:26.805Z",
+                "active": true,
+                "origin": {
+                    "namespace": "common",
+                    "scope": "en",
+                    "category": "global",
+                    "key": "origin.OEMSECRETS",
+                    "value": "OEMSECRETS"
+                },
+                "id": "671a855e3289600fa07b9ccb",
+                "part": {
+                    "createdOn": "2024-10-24T17:35:26.805Z",
+                    "updatedOn": "2024-10-24T17:35:26.805Z",
+                    "active": true,
+                    "id": "671a3b01a9b93815da65c339",
+                    "mpn": "AC0805FR-0710KL",
+                    "partName": "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD T/R Automotive AEC-Q200",
+                    "manufacturer": {
+                        "id": "6707ea4006b91c102f76d6d4",
+                        "crmId": "1574",
+                        "name": "Yageo"
+                    },
+                    "globalPartId": "47664583",
+                    "partial": false
+                },
+                "manufacturer": "Yageo Corporation",
+                "packaging": "Tape & Reel",
+                "sku": "68AK3558",
+                "category": "Passive Components > Resistors - Fixed Value > Chip SMD Resistors",
+                "moq": "5000",
+                "sourceManufacturer": "Yageo",
+                "sourcePackaging": "TAPE & REEL FULL",
+                "leadTimeFormat": "Days",
+                "sourceCurrency": "USD",
+                "quantityInStock": 0,
+                "sourcePartNumber": "AC0805FR-0710KL",
+                "distributorAuthorisationStatus": "authorised",
+                "imageUrl": "https://www.newark.com/productimages/large/en_GB/1140836-40.jpg",
+                "buyNowUrl": "https://analytics.oemsecrets.com/main.php?p=AC0805FR-0710KL&m=Yageo%20Corporation&q=0&n=Newark%20Electronics&table=api&media=buynow&source=avinashchip1&event_link=https%3A%2F%2Fwww.kqzyfj.com%2Fclick-100569928-13710449%3Furl%3Dhttps%253A%252F%252Fwww.newark.com%252F68AK3558%253FCMP%253DAFF-CJ%2526sid%253Dapi-avinashchip1",
+                "leadTimeWeeks": "Unknown",
+                "dateCode": "",
+                "distributor": {
+                    "createdOn": "2024-10-24T17:35:26.805Z",
+                    "updatedOn": "2024-10-24T17:35:26.805Z",
+                    "active": true,
+                    "id": "671a8555a9b93815da65c3ff",
+                    "name": "Newark Electronics",
+                    "commonName": "Newark Electronics",
+                    "region": "North America",
+                    "country": "United States",
+                    "logo": "https://media.oemsecrets.com/images/logos/distributors/newark.png",
+                    "distributorId": "18621",
+                    "commonId": "53752"
+                },
+                "compliance": {
+                    "rohs": "false",
+                    "pbStatus": ""
+                },
+                "pricingDetails": [
+                    {
+                        "currency": "USD",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0080"
+                            },
+                            {
+                                "unitBreak": "10000",
+                                "unitPrice": "0.0070"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "CNY",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0570"
+                            },
+                            {
+                                "unitBreak": "10000",
+                                "unitPrice": "0.0499"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "EUR",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0074"
+                            },
+                            {
+                                "unitBreak": "10000",
+                                "unitPrice": "0.0065"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "HKD",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0622"
+                            },
+                            {
+                                "unitBreak": "10000",
+                                "unitPrice": "0.0544"
+                            }
+                        ]
+                    }
+                ],
+                "countryCode": "DE"
+            },
+            {
+                "createdOn": "2024-10-24T17:35:26.807Z",
+                "updatedOn": "2024-10-24T17:35:26.807Z",
+                "active": true,
+                "origin": {
+                    "namespace": "common",
+                    "scope": "en",
+                    "category": "global",
+                    "key": "origin.OEMSECRETS",
+                    "value": "OEMSECRETS"
+                },
+                "id": "671a855e3289600fa07b9ccc",
+                "part": {
+                    "createdOn": "2024-10-24T17:35:26.807Z",
+                    "updatedOn": "2024-10-24T17:35:26.807Z",
+                    "active": true,
+                    "id": "671a3b01a9b93815da65c339",
+                    "mpn": "AC0805FR-0710KL",
+                    "partName": "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD T/R Automotive AEC-Q200",
+                    "manufacturer": {
+                        "id": "6707ea4006b91c102f76d6d4",
+                        "crmId": "1574",
+                        "name": "Yageo"
+                    },
+                    "globalPartId": "47664583",
+                    "partial": false
+                },
+                "manufacturer": "Yageo Corporation",
+                "packaging": "Cut Tape & Reel",
+                "sku": "3495316",
+                "category": "Passive Components > Resistors - Fixed Value > Chip SMD Resistors",
+                "moq": "10",
+                "sourceManufacturer": "YAGEO",
+                "sourcePackaging": "TAPE & REEL CUT",
+                "leadTimeFormat": "Unknown",
+                "sourceCurrency": "GBP",
+                "quantityInStock": 234250,
+                "sourcePartNumber": "AC0805FR-0710KL",
+                "distributorAuthorisationStatus": "authorised",
+                "imageUrl": "https://uk.farnell.com/productimages/large/en_GB/1140836-40.jpg",
+                "buyNowUrl": "https://analytics.oemsecrets.com/main.php?p=AC0805FR-0710KL&m=Yageo%20Corporation&q=234250&n=Farnell%20element14%20UK&table=api&media=buynow&source=avinashchip1&event_link=https%3A%2F%2Fwww.tkqlhce.com%2Fclick-100569928-13658747%3Furl%3Dhttps%253A%252F%252Fuk.farnell.com%252F3495316%253Fgross_price%253Dtrue%2526CMP%253DAFC-CJ-UK3495316%2526sid%253Dapi-avinashchip1",
+                "leadTimeWeeks": "Unknown",
+                "dateCode": "N",
+                "distributor": {
+                    "createdOn": "2024-10-24T17:35:26.807Z",
+                    "updatedOn": "2024-10-24T17:35:26.807Z",
+                    "active": true,
+                    "id": "671a8555a9b93815da65c401",
+                    "name": "Farnell element14 UK",
+                    "commonName": "Farnell",
+                    "region": "Europe",
+                    "country": "United Kingdom",
+                    "logo": "https://media.oemsecrets.com/images/logos/distributors/farnell.png",
+                    "distributorId": "16545",
+                    "commonId": "47736"
+                },
+                "compliance": {
+                    "rohs": "false",
+                    "pbStatus": ""
+                },
+                "pricingDetails": [
+                    {
+                        "currency": "USD",
+                        "details": [
+                            {
+                                "unitBreak": "10",
+                                "unitPrice": "0.0246"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.0155"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0103"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0090"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0065"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0039"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0026"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0025"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "CNY",
+                        "details": [
+                            {
+                                "unitBreak": "10",
+                                "unitPrice": "0.1750"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.1105"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0737"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0645"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0461"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0276"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0184"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0175"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "EUR",
+                        "details": [
+                            {
+                                "unitBreak": "10",
+                                "unitPrice": "0.0228"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.0144"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0096"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0084"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0060"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0036"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0024"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0023"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "HKD",
+                        "details": [
+                            {
+                                "unitBreak": "10",
+                                "unitPrice": "0.1908"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.1205"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0803"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0703"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0502"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0301"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0201"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0191"
+                            }
+                        ]
+                    }
+                ],
+                "countryCode": "DE"
+            },
+            {
+                "createdOn": "2024-10-24T17:35:26.812Z",
+                "updatedOn": "2024-10-24T17:35:26.812Z",
+                "active": true,
+                "origin": {
+                    "namespace": "common",
+                    "scope": "en",
+                    "category": "global",
+                    "key": "origin.OEMSECRETS",
+                    "value": "OEMSECRETS"
+                },
+                "id": "671a855e3289600fa07b9ccd",
+                "part": {
+                    "createdOn": "2024-10-24T17:35:26.812Z",
+                    "updatedOn": "2024-10-24T17:35:26.812Z",
+                    "active": true,
+                    "id": "671a3b01a9b93815da65c339",
+                    "mpn": "AC0805FR-0710KL",
+                    "partName": "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD T/R Automotive AEC-Q200",
+                    "manufacturer": {
+                        "id": "6707ea4006b91c102f76d6d4",
+                        "crmId": "1574",
+                        "name": "Yageo"
+                    },
+                    "globalPartId": "47664583",
+                    "partial": false
+                },
+                "manufacturer": "Yageo Corporation",
+                "packaging": "Tape & Reel",
+                "sku": "4150186",
+                "category": "",
+                "moq": "5000",
+                "sourceManufacturer": "Yageo",
+                "sourcePackaging": "TAPE & REEL FULL",
+                "leadTimeFormat": "Unknown",
+                "sourceCurrency": "SGD",
+                "quantityInStock": 0,
+                "sourcePartNumber": "AC0805FR-0710KL",
+                "distributorAuthorisationStatus": "authorised",
+                "imageUrl": "https://sg.element14.com/productimages/standard/en_GB/1140836-40.jpg",
+                "buyNowUrl": "https://analytics.oemsecrets.com/main.php?p=AC0805FR-0710KL&m=Yageo%20Corporation&q=0&n=element14%20Singapore&table=api&media=buynow&source=avinashchip1&event_link=https%3A%2F%2Fsg.element14.com%2Fyageo%2Fac0805fr-0710kl%2Fres-10k-1-0-125w-thick-film-0805%2Fdp%2F4150186%3FCMP%3DGRHB-OEMSECRETS",
+                "leadTimeWeeks": "Unknown",
+                "dateCode": "",
+                "distributor": {
+                    "createdOn": "2024-10-24T17:35:26.812Z",
+                    "updatedOn": "2024-10-24T17:35:26.812Z",
+                    "active": true,
+                    "id": "671a8555a9b93815da65c3fb",
+                    "name": "element14 Singapore",
+                    "commonName": "element14",
+                    "region": "Asia",
+                    "country": "Singapore",
+                    "logo": "https://media.oemsecrets.com/images/logos/distributors/element14.png",
+                    "distributorId": "18953",
+                    "commonId": "53887"
+                },
+                "compliance": {
+                    "rohs": "false",
+                    "pbStatus": ""
+                },
+                "pricingDetails": [
+                    {
+                        "currency": "USD",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0061"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0038"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0030"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "CNY",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0431"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0270"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0216"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "EUR",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0056"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0035"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0028"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "HKD",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0470"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0294"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0235"
+                            }
+                        ]
+                    }
+                ],
+                "countryCode": "DE"
+            },
+            {
+                "createdOn": "2024-10-24T17:35:26.819Z",
+                "updatedOn": "2024-10-24T17:35:26.819Z",
+                "active": true,
+                "origin": {
+                    "namespace": "common",
+                    "scope": "en",
+                    "category": "global",
+                    "key": "origin.OEMSECRETS",
+                    "value": "OEMSECRETS"
+                },
+                "id": "671a855e3289600fa07b9cce",
+                "part": {
+                    "createdOn": "2024-10-24T17:35:26.819Z",
+                    "updatedOn": "2024-10-24T17:35:26.819Z",
+                    "active": true,
+                    "id": "671a3b01a9b93815da65c339",
+                    "mpn": "AC0805FR-0710KL",
+                    "partName": "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD T/R Automotive AEC-Q200",
+                    "manufacturer": {
+                        "id": "6707ea4006b91c102f76d6d4",
+                        "crmId": "1574",
+                        "name": "Yageo"
+                    },
+                    "globalPartId": "47664583",
+                    "partial": false
+                },
+                "manufacturer": "Yageo Corporation",
+                "packaging": "Cut Tape & Reel",
+                "sku": "3495316",
+                "category": "",
+                "moq": "10",
+                "sourceManufacturer": "Yageo",
+                "sourcePackaging": "TAPE & REEL CUT",
+                "leadTimeFormat": "Unknown",
+                "sourceCurrency": "SGD",
+                "quantityInStock": 232220,
+                "sourcePartNumber": "AC0805FR-0710KL",
+                "distributorAuthorisationStatus": "authorised",
+                "imageUrl": "https://sg.element14.com/productimages/standard/en_GB/1140836-40.jpg",
+                "buyNowUrl": "https://analytics.oemsecrets.com/main.php?p=AC0805FR-0710KL&m=Yageo%20Corporation&q=232220&n=element14%20Singapore&table=api&media=buynow&source=avinashchip1&event_link=https%3A%2F%2Fsg.element14.com%2Fyageo%2Fac0805fr-0710kl%2Fres-10k-1-0-125w-0805-thick-film%2Fdp%2F3495316%3FCMP%3DGRHB-OEMSECRETS",
+                "leadTimeWeeks": "Unknown",
+                "dateCode": "",
+                "distributor": {
+                    "createdOn": "2024-10-24T17:35:26.819Z",
+                    "updatedOn": "2024-10-24T17:35:26.819Z",
+                    "active": true,
+                    "id": "671a8555a9b93815da65c3fb",
+                    "name": "element14 Singapore",
+                    "commonName": "element14",
+                    "region": "Asia",
+                    "country": "Singapore",
+                    "logo": "https://media.oemsecrets.com/images/logos/distributors/element14.png",
+                    "distributorId": "18953",
+                    "commonId": "53887"
+                },
+                "compliance": {
+                    "rohs": "false",
+                    "pbStatus": ""
+                },
+                "pricingDetails": [
+                    {
+                        "currency": "USD",
+                        "details": [
+                            {
+                                "unitBreak": "10",
+                                "unitPrice": "0.0227"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.0151"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0106"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0098"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0083"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0068"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0061"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0045"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "CNY",
+                        "details": [
+                            {
+                                "unitBreak": "10",
+                                "unitPrice": "0.1618"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.1079"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0755"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0701"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0593"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0485"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0431"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0324"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "EUR",
+                        "details": [
+                            {
+                                "unitBreak": "10",
+                                "unitPrice": "0.0210"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.0140"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0098"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0091"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0077"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0063"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0056"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0042"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "HKD",
+                        "details": [
+                            {
+                                "unitBreak": "10",
+                                "unitPrice": "0.1764"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.1176"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0823"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0764"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0647"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0529"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0470"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0353"
+                            }
+                        ]
+                    }
+                ],
+                "countryCode": "DE"
+            },
+            {
+                "createdOn": "2024-10-24T17:35:26.821Z",
+                "updatedOn": "2024-10-24T17:35:26.821Z",
+                "active": true,
+                "origin": {
+                    "namespace": "common",
+                    "scope": "en",
+                    "category": "global",
+                    "key": "origin.OEMSECRETS",
+                    "value": "OEMSECRETS"
+                },
+                "id": "671a855e3289600fa07b9ccf",
+                "part": {
+                    "createdOn": "2024-10-24T17:35:26.821Z",
+                    "updatedOn": "2024-10-24T17:35:26.821Z",
+                    "active": true,
+                    "id": "671a3b01a9b93815da65c339",
+                    "mpn": "AC0805FR-0710KL",
+                    "partName": "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD T/R Automotive AEC-Q200",
+                    "manufacturer": {
+                        "id": "6707ea4006b91c102f76d6d4",
+                        "crmId": "1574",
+                        "name": "Yageo"
+                    },
+                    "globalPartId": "47664583",
+                    "partial": false
+                },
+                "manufacturer": "Yageo Corporation",
+                "packaging": "Tape & Reel",
+                "sku": "",
+                "category": "Resistors>>Surface Mount Resistors>>",
+                "moq": "0",
+                "sourceManufacturer": "YAGEO",
+                "sourcePackaging": "Tape and Reel",
+                "leadTimeFormat": "Days",
+                "sourceCurrency": "USD",
+                "quantityInStock": 2195000,
+                "sourcePartNumber": "AC0805FR-0710KL",
+                "distributorAuthorisationStatus": "authorised",
+                "imageUrl": "https://www.avnet.com/opasdata/d120001/derivates/2/072/205/651/PF-4661546-Image_web.jpg",
+                "buyNowUrl": "https://analytics.oemsecrets.com/main.php?p=AC0805FR-0710KL&m=Yageo%20Corporation&q=2195000&n=Avnet%20America&table=api&media=buynow&source=avinashchip1&event_link=https%3A%2F%2Fwww.avnet.com%2Fshop%2Fus%2Fproducts%2Fyageo%2Fac0805fr-0710kl-3074457345639790938%3FCMP%3DEMA_OEMSecrets_inventoryfeed_VSE",
+                "leadTimeWeeks": "20",
+                "sourceLeadTime": "140.000000000000000",
+                "dateCode": "",
+                "distributor": {
+                    "createdOn": "2024-10-24T17:35:26.821Z",
+                    "updatedOn": "2024-10-24T17:35:26.821Z",
+                    "active": true,
+                    "id": "671a8555a9b93815da65c3f7",
+                    "name": "Avnet America",
+                    "commonName": "Avnet America",
+                    "region": "North America",
+                    "country": "United States",
+                    "logo": "https://media.oemsecrets.com/images/logos/distributors/avnet.png",
+                    "distributorId": "18537",
+                    "commonId": "12033"
+                },
+                "compliance": {
+                    "rohs": "false",
+                    "pbStatus": "Yes"
+                },
+                "pricingDetails": [
+                    {
+                        "currency": "USD",
+                        "details": [
+                            {
+                                "unitBreak": "1",
+                                "unitPrice": "0.0017"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "CNY",
+                        "details": [
+                            {
+                                "unitBreak": "1",
+                                "unitPrice": "0.0121"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "EUR",
+                        "details": [
+                            {
+                                "unitBreak": "1",
+                                "unitPrice": "0.0016"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "HKD",
+                        "details": [
+                            {
+                                "unitBreak": "1",
+                                "unitPrice": "0.0132"
+                            }
+                        ]
+                    }
+                ],
+                "countryCode": "DE"
+            },
+            {
+                "createdOn": "2024-10-24T17:35:26.824Z",
+                "updatedOn": "2024-10-24T17:35:26.824Z",
+                "active": true,
+                "origin": {
+                    "namespace": "common",
+                    "scope": "en",
+                    "category": "global",
+                    "key": "origin.OEMSECRETS",
+                    "value": "OEMSECRETS"
+                },
+                "id": "671a855e3289600fa07b9cd0",
+                "part": {
+                    "createdOn": "2024-10-24T17:35:26.824Z",
+                    "updatedOn": "2024-10-24T17:35:26.824Z",
+                    "active": true,
+                    "id": "671a3b01a9b93815da65c339",
+                    "mpn": "AC0805FR-0710KL",
+                    "partName": "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD T/R Automotive AEC-Q200",
+                    "manufacturer": {
+                        "id": "6707ea4006b91c102f76d6d4",
+                        "crmId": "1574",
+                        "name": "Yageo"
+                    },
+                    "globalPartId": "47664583",
+                    "partial": false
+                },
+                "manufacturer": "Yageo Corporation",
+                "packaging": "Reel",
+                "sku": "1978157",
+                "category": "Electronic Components & Power & Connectors > Passive Components > Fixed Resistors > Surface Mount Resistors",
+                "moq": "5000",
+                "sourceManufacturer": "Yageo",
+                "sourcePackaging": "RL",
+                "leadTimeFormat": "Unknown",
+                "sourceCurrency": "GBP",
+                "quantityInStock": 56500,
+                "sourcePartNumber": "AC0805FR-0710KL",
+                "distributorAuthorisationStatus": "authorised",
+                "imageUrl": "",
+                "buyNowUrl": "https://analytics.oemsecrets.com/main.php?p=AC0805FR-0710KL&m=Yageo%20Corporation&q=56500&n=RS%20UK&table=api&media=buynow&source=avinashchip1&event_link=https%3A%2F%2Fuk.rs-online.com%2Fweb%2Fp%2Fsurface-mount-resistors%2F1978157%2F%2F%3Fcm_mmc%3Daff-_-uk-_-oemsecrets-_-1978157",
+                "leadTimeWeeks": "Unknown",
+                "dateCode": "",
+                "distributor": {
+                    "createdOn": "2024-10-24T17:35:26.824Z",
+                    "updatedOn": "2024-10-24T17:35:26.824Z",
+                    "active": true,
+                    "id": "671a8555a9b93815da65c3f9",
+                    "name": "RS UK",
+                    "commonName": "RS",
+                    "region": "Europe",
+                    "country": "United Kingdom",
+                    "logo": "https://media.oemsecrets.com/images/logos/distributors/rs.png",
+                    "distributorId": "11306",
+                    "commonId": "29553"
+                },
+                "compliance": {
+                    "rohs": "false",
+                    "pbStatus": ""
+                },
+                "pricingDetails": [
+                    {
+                        "currency": "USD",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0052"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0103"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0103"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0090"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "CNY",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0368"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0737"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0737"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0645"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "EUR",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0048"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0096"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0096"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0084"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "HKD",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0402"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0803"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0803"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0703"
+                            }
+                        ]
+                    }
+                ],
+                "countryCode": "DE"
+            },
+            {
+                "createdOn": "2024-10-24T17:35:26.833Z",
+                "updatedOn": "2024-10-24T17:35:26.833Z",
+                "active": true,
+                "origin": {
+                    "namespace": "common",
+                    "scope": "en",
+                    "category": "global",
+                    "key": "origin.OEMSECRETS",
+                    "value": "OEMSECRETS"
+                },
+                "id": "671a855e3289600fa07b9cd1",
+                "part": {
+                    "createdOn": "2024-10-24T17:35:26.833Z",
+                    "updatedOn": "2024-10-24T17:35:26.833Z",
+                    "active": true,
+                    "id": "671a3b01a9b93815da65c339",
+                    "mpn": "AC0805FR-0710KL",
+                    "partName": "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD T/R Automotive AEC-Q200",
+                    "manufacturer": {
+                        "id": "6707ea4006b91c102f76d6d4",
+                        "crmId": "1574",
+                        "name": "Yageo"
+                    },
+                    "globalPartId": "47664583",
+                    "partial": false
+                },
+                "manufacturer": "Yageo Corporation",
+                "packaging": "Reel",
+                "sku": "",
+                "category": "",
+                "moq": "",
+                "mov": "",
+                "partcondition": "",
+                "factorystock": "",
+                "sourceManufacturer": "YAGEO",
+                "sourcePackaging": "reel",
+                "leadTimeFormat": "Weeks",
+                "sourceCurrency": "USD",
+                "quantityInStock": 4515000,
+                "sourcePartNumber": "AC0805FR-0710KL",
+                "distributorAuthorisationStatus": "authorised",
+                "imageUrl": "",
+                "buyNowUrl": "https://analytics.oemsecrets.com/main.php?p=AC0805FR-0710KL&m=Yageo%20Corporation&q=4515000&n=TTI%20Americas&table=api&media=buynow&source=avinashchip1&event_link=https%3A%2F%2Fwww.tti.com%2Fcontent%2Fttiinc%2Fen%2Fapps%2Fpart-detail.html%3FpartsNumber%3DAC0805FR-0710KL%26mfgShortname%3DYAG",
+                "leadTimeWeeks": "Unknown",
+                "dateCode": "",
+                "distributor": {
+                    "createdOn": "2024-10-24T17:35:26.833Z",
+                    "updatedOn": "2024-10-24T17:35:26.833Z",
+                    "active": true,
+                    "id": "671a8555a9b93815da65c3fa",
+                    "name": "TTI Americas",
+                    "commonName": "TTI Americas",
+                    "region": "North America",
+                    "country": "United States",
+                    "logo": "https://media.oemsecrets.com/images/logos/distributors/tti.png",
+                    "distributorId": "20054",
+                    "commonId": "40785"
+                },
+                "compliance": {
+                    "rohs": "e"
+                },
+                "pricingDetails": [
+                    {
+                        "currency": "USD",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0034"
+                            },
+                            {
+                                "unitBreak": "10000",
+                                "unitPrice": "0.0033"
+                            },
+                            {
+                                "unitBreak": "15000",
+                                "unitPrice": "0.0032"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0032"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0030"
+                            },
+                            {
+                                "unitBreak": "100000",
+                                "unitPrice": "0.0029"
+                            },
+                            {
+                                "unitBreak": "200000",
+                                "unitPrice": "0.0028"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "CNY",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0240"
+                            },
+                            {
+                                "unitBreak": "10000",
+                                "unitPrice": "0.0236"
+                            },
+                            {
+                                "unitBreak": "15000",
+                                "unitPrice": "0.0231"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0227"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0212"
+                            },
+                            {
+                                "unitBreak": "100000",
+                                "unitPrice": "0.0207"
+                            },
+                            {
+                                "unitBreak": "200000",
+                                "unitPrice": "0.0202"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "EUR",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0031"
+                            },
+                            {
+                                "unitBreak": "10000",
+                                "unitPrice": "0.0031"
+                            },
+                            {
+                                "unitBreak": "15000",
+                                "unitPrice": "0.0030"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0029"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0028"
+                            },
+                            {
+                                "unitBreak": "100000",
+                                "unitPrice": "0.0027"
+                            },
+                            {
+                                "unitBreak": "200000",
+                                "unitPrice": "0.0026"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "HKD",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0262"
+                            },
+                            {
+                                "unitBreak": "10000",
+                                "unitPrice": "0.0257"
+                            },
+                            {
+                                "unitBreak": "15000",
+                                "unitPrice": "0.0252"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0247"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0231"
+                            },
+                            {
+                                "unitBreak": "100000",
+                                "unitPrice": "0.0226"
+                            },
+                            {
+                                "unitBreak": "200000",
+                                "unitPrice": "0.0221"
+                            }
+                        ]
+                    }
+                ],
+                "countryCode": "DE"
+            },
+            {
+                "createdOn": "2024-10-24T17:35:26.835Z",
+                "updatedOn": "2024-10-24T17:35:26.835Z",
+                "active": true,
+                "origin": {
+                    "namespace": "common",
+                    "scope": "en",
+                    "category": "global",
+                    "key": "origin.OEMSECRETS",
+                    "value": "OEMSECRETS"
+                },
+                "id": "671a855e3289600fa07b9cd2",
+                "part": {
+                    "createdOn": "2024-10-24T17:35:26.835Z",
+                    "updatedOn": "2024-10-24T17:35:26.835Z",
+                    "active": true,
+                    "id": "671a3b01a9b93815da65c339",
+                    "mpn": "AC0805FR-0710KL",
+                    "partName": "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD T/R Automotive AEC-Q200",
+                    "manufacturer": {
+                        "id": "6707ea4006b91c102f76d6d4",
+                        "crmId": "1574",
+                        "name": "Yageo"
+                    },
+                    "globalPartId": "47664583",
+                    "partial": false
+                },
+                "manufacturer": "Yageo Corporation",
+                "packaging": "Reel",
+                "sku": "",
+                "category": "",
+                "moq": "",
+                "mov": "",
+                "partcondition": "",
+                "factorystock": "",
+                "sourceManufacturer": "YAGEO",
+                "sourcePackaging": "reel",
+                "leadTimeFormat": "Weeks",
+                "sourceCurrency": "USD",
+                "quantityInStock": 2080000,
+                "sourcePartNumber": "AC0805FR-0710KL",
+                "distributorAuthorisationStatus": "authorised",
+                "imageUrl": "",
+                "buyNowUrl": "https://analytics.oemsecrets.com/main.php?p=AC0805FR-0710KL&m=Yageo%20Corporation&q=2080000&n=TTI%20Europe&table=api&media=buynow&source=avinashchip1&event_link=https%3A%2F%2Fwww.ttieurope.com%2Fcontent%2Fttieurope%2Fen%2Fapps%2Fpart-detail.html%3FpartsNumber%3DAC0805FR-0710KL%26mfgShortname%3DYAG",
+                "leadTimeWeeks": "Unknown",
+                "dateCode": "",
+                "distributor": {
+                    "createdOn": "2024-10-24T17:35:26.835Z",
+                    "updatedOn": "2024-10-24T17:35:26.835Z",
+                    "active": true,
+                    "id": "671a8555a9b93815da65c3fc",
+                    "name": "TTI Europe",
+                    "commonName": "TTI Europe",
+                    "region": "Europe",
+                    "country": "Germany",
+                    "logo": "https://media.oemsecrets.com/images/logos/distributors/tti.png",
+                    "distributorId": "20075",
+                    "commonId": "47426"
+                },
+                "compliance": {
+                    "rohs": "e"
+                },
+                "pricingDetails": [
+                    {
+                        "currency": "USD",
+                        "details": []
+                    }
+                ],
+                "countryCode": "DE"
+            },
+            {
+                "createdOn": "2024-10-24T17:35:26.836Z",
+                "updatedOn": "2024-10-24T17:35:26.836Z",
+                "active": true,
+                "origin": {
+                    "namespace": "common",
+                    "scope": "en",
+                    "category": "global",
+                    "key": "origin.OEMSECRETS",
+                    "value": "OEMSECRETS"
+                },
+                "id": "671a855e3289600fa07b9cd3",
+                "part": {
+                    "createdOn": "2024-10-24T17:35:26.836Z",
+                    "updatedOn": "2024-10-24T17:35:26.836Z",
+                    "active": true,
+                    "id": "671a3b01a9b93815da65c339",
+                    "mpn": "AC0805FR-0710KL",
+                    "partName": "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD T/R Automotive AEC-Q200",
+                    "manufacturer": {
+                        "id": "6707ea4006b91c102f76d6d4",
+                        "crmId": "1574",
+                        "name": "Yageo"
+                    },
+                    "globalPartId": "47664583",
+                    "partial": false
+                },
+                "manufacturer": "Yageo Corporation",
+                "packaging": "Reel",
+                "sku": "3495316RL",
+                "category": "",
+                "moq": "500",
+                "sourceManufacturer": "Yageo",
+                "sourcePackaging": "RE-REELING",
+                "leadTimeFormat": "Unknown",
+                "sourceCurrency": "SGD",
+                "quantityInStock": 232220,
+                "sourcePartNumber": "AC0805FR-0710KL",
+                "distributorAuthorisationStatus": "authorised",
+                "imageUrl": "https://sg.element14.com/productimages/standard/en_GB/1140836-40.jpg",
+                "buyNowUrl": "https://analytics.oemsecrets.com/main.php?p=AC0805FR-0710KL&m=Yageo%20Corporation&q=232220&n=element14%20Singapore&table=api&media=buynow&source=avinashchip1&event_link=https%3A%2F%2Fsg.element14.com%2Fyageo%2Fac0805fr-0710kl%2Fres-10k-1-0-125w-0805-thick-film%2Fdp%2F3495316RL%3FCMP%3DGRHB-OEMSECRETS",
+                "leadTimeWeeks": "Unknown",
+                "dateCode": "",
+                "distributor": {
+                    "createdOn": "2024-10-24T17:35:26.836Z",
+                    "updatedOn": "2024-10-24T17:35:26.836Z",
+                    "active": true,
+                    "id": "671a8555a9b93815da65c3fb",
+                    "name": "element14 Singapore",
+                    "commonName": "element14",
+                    "region": "Asia",
+                    "country": "Singapore",
+                    "logo": "https://media.oemsecrets.com/images/logos/distributors/element14.png",
+                    "distributorId": "18953",
+                    "commonId": "53887"
+                },
+                "compliance": {
+                    "rohs": "false",
+                    "pbStatus": ""
+                },
+                "pricingDetails": [
+                    {
+                        "currency": "USD",
+                        "details": [
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0106"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0098"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0083"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0068"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0061"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0045"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "CNY",
+                        "details": [
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0755"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0701"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0593"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0485"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0431"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0324"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "EUR",
+                        "details": [
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0098"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0091"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0077"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0063"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0056"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0042"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "HKD",
+                        "details": [
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0823"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0764"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0647"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0529"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0470"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0353"
+                            }
+                        ]
+                    }
+                ],
+                "countryCode": "DE"
+            },
+            {
+                "createdOn": "2024-10-24T17:35:26.837Z",
+                "updatedOn": "2024-10-24T17:35:26.837Z",
+                "active": true,
+                "origin": {
+                    "namespace": "common",
+                    "scope": "en",
+                    "category": "global",
+                    "key": "origin.OEMSECRETS",
+                    "value": "OEMSECRETS"
+                },
+                "id": "671a855e3289600fa07b9cd4",
+                "part": {
+                    "createdOn": "2024-10-24T17:35:26.837Z",
+                    "updatedOn": "2024-10-24T17:35:26.837Z",
+                    "active": true,
+                    "id": "671a3b01a9b93815da65c339",
+                    "mpn": "AC0805FR-0710KL",
+                    "partName": "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD T/R Automotive AEC-Q200",
+                    "manufacturer": {
+                        "id": "6707ea4006b91c102f76d6d4",
+                        "crmId": "1574",
+                        "name": "Yageo"
+                    },
+                    "globalPartId": "47664583",
+                    "partial": false
+                },
+                "manufacturer": "Yageo Corporation",
+                "packaging": "Reel",
+                "sku": "",
+                "category": "",
+                "moq": "5000",
+                "sourceManufacturer": "Yageo",
+                "sourcePackaging": "REEL",
+                "leadTimeFormat": "Weeks",
+                "sourceCurrency": "USD",
+                "quantityInStock": 905000,
+                "sourcePartNumber": "AC0805FR-0710KL",
+                "distributorAuthorisationStatus": "authorised",
+                "imageUrl": "",
+                "buyNowUrl": "https://analytics.oemsecrets.com/main.php?p=AC0805FR-0710KL&m=Yageo%20Corporation&q=905000&n=TTI%20Asia&table=api&media=buynow&source=avinashchip1&event_link=https%3A%2F%2Fwww.ttiasia.com%2Fcontent%2Fttiasia%2Fen%2Fapps%2Fpart-detail.html%3FmfrShortname%3DYAG%26partsNumber%3DAC0805FR-0710KL%26utm%3Dte-oemsecrets%26campaign%3Dmfg-te-connectivity%26channel%3Dlink%26source%3Doemsecrets",
+                "leadTimeWeeks": "14",
+                "sourceLeadTime": "14",
+                "dateCode": "",
+                "distributor": {
+                    "createdOn": "2024-10-24T17:35:26.837Z",
+                    "updatedOn": "2024-10-24T17:35:26.837Z",
+                    "active": true,
+                    "id": "671a8555a9b93815da65c3f8",
+                    "name": "TTI Asia",
+                    "commonName": "TTI Asia",
+                    "region": "Asia",
+                    "country": "Hong Kong",
+                    "logo": "https://media.oemsecrets.com/images/logos/distributors/tti.png",
+                    "distributorId": "20254",
+                    "commonId": "10154"
+                },
+                "compliance": {
+                    "rohs": "false",
+                    "pbStatus": ""
+                },
+                "pricingDetails": [
+                    {
+                        "currency": "USD",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0040"
+                            },
+                            {
+                                "unitBreak": "10000",
+                                "unitPrice": "0.0036"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0030"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "CNY",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0285"
+                            },
+                            {
+                                "unitBreak": "10000",
+                                "unitPrice": "0.0257"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0214"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "EUR",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0037"
+                            },
+                            {
+                                "unitBreak": "10000",
+                                "unitPrice": "0.0033"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0028"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "HKD",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0311"
+                            },
+                            {
+                                "unitBreak": "10000",
+                                "unitPrice": "0.0280"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0233"
+                            }
+                        ]
+                    }
+                ],
+                "countryCode": "DE"
+            },
+            {
+                "createdOn": "2024-10-24T17:35:26.838Z",
+                "updatedOn": "2024-10-24T17:35:26.838Z",
+                "active": true,
+                "origin": {
+                    "namespace": "common",
+                    "scope": "en",
+                    "category": "global",
+                    "key": "origin.OEMSECRETS",
+                    "value": "OEMSECRETS"
+                },
+                "id": "671a855e3289600fa07b9cd5",
+                "part": {
+                    "createdOn": "2024-10-24T17:35:26.838Z",
+                    "updatedOn": "2024-10-24T17:35:26.838Z",
+                    "active": true,
+                    "id": "671a3b01a9b93815da65c339",
+                    "mpn": "AC0805FR-0710KL",
+                    "partName": "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD T/R Automotive AEC-Q200",
+                    "manufacturer": {
+                        "id": "6707ea4006b91c102f76d6d4",
+                        "crmId": "1574",
+                        "name": "Yageo"
+                    },
+                    "globalPartId": "47664583",
+                    "partial": false
+                },
+                "manufacturer": "Yageo Corporation",
+                "packaging": "Tape",
+                "sku": "1978158",
+                "category": "Electronic Components & Power & Connectors > Passive Components > Fixed Resistors > Surface Mount Resistors",
+                "moq": "500",
+                "sourceManufacturer": "Yageo",
+                "sourcePackaging": "TA",
+                "leadTimeFormat": "Unknown",
+                "sourceCurrency": "GBP",
+                "quantityInStock": 2000,
+                "sourcePartNumber": "AC0805FR-0710KL",
+                "distributorAuthorisationStatus": "authorised",
+                "imageUrl": "",
+                "buyNowUrl": "https://analytics.oemsecrets.com/main.php?p=AC0805FR-0710KL&m=Yageo%20Corporation&q=2000&n=RS%20UK&table=api&media=buynow&source=avinashchip1&event_link=https%3A%2F%2Fuk.rs-online.com%2Fweb%2Fp%2Fsurface-mount-resistors%2F1978158%2F%2F%3Fcm_mmc%3Daff-_-uk-_-oemsecrets-_-1978158",
+                "leadTimeWeeks": "Unknown",
+                "dateCode": "",
+                "distributor": {
+                    "createdOn": "2024-10-24T17:35:26.838Z",
+                    "updatedOn": "2024-10-24T17:35:26.838Z",
+                    "active": true,
+                    "id": "671a8555a9b93815da65c3f9",
+                    "name": "RS UK",
+                    "commonName": "RS",
+                    "region": "Europe",
+                    "country": "United Kingdom",
+                    "logo": "https://media.oemsecrets.com/images/logos/distributors/rs.png",
+                    "distributorId": "11306",
+                    "commonId": "29553"
+                },
+                "compliance": {
+                    "rohs": "false",
+                    "pbStatus": ""
+                },
+                "pricingDetails": [
+                    {
+                        "currency": "USD",
+                        "details": [
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0116"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0103"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0103"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0090"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "CNY",
+                        "details": [
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0829"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0737"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0737"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0645"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "EUR",
+                        "details": [
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0108"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0096"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0096"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0084"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "HKD",
+                        "details": [
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0904"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0803"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0803"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0703"
+                            }
+                        ]
+                    }
+                ],
+                "countryCode": "DE"
+            },
+            {
+                "createdOn": "2024-10-24T17:35:26.840Z",
+                "updatedOn": "2024-10-24T17:35:26.840Z",
+                "active": true,
+                "origin": {
+                    "namespace": "common",
+                    "scope": "en",
+                    "category": "global",
+                    "key": "origin.OEMSECRETS",
+                    "value": "OEMSECRETS"
+                },
+                "id": "671a855e3289600fa07b9cd6",
+                "part": {
+                    "createdOn": "2024-10-24T17:35:26.840Z",
+                    "updatedOn": "2024-10-24T17:35:26.840Z",
+                    "active": true,
+                    "id": "671a3b01a9b93815da65c339",
+                    "mpn": "AC0805FR-0710KL",
+                    "partName": "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD T/R Automotive AEC-Q200",
+                    "manufacturer": {
+                        "id": "6707ea4006b91c102f76d6d4",
+                        "crmId": "1574",
+                        "name": "Yageo"
+                    },
+                    "globalPartId": "47664583",
+                    "partial": false
+                },
+                "manufacturer": "Yageo Corporation",
+                "packaging": "Reel",
+                "sku": "",
+                "category": "",
+                "moq": "5000",
+                "sourceManufacturer": "Yageo",
+                "sourcePackaging": "REEL",
+                "leadTimeFormat": "Weeks",
+                "sourceCurrency": "EUR",
+                "quantityInStock": 2080000,
+                "sourcePartNumber": "AC0805FR-0710KL",
+                "distributorAuthorisationStatus": "authorised",
+                "imageUrl": "",
+                "buyNowUrl": "https://analytics.oemsecrets.com/main.php?p=AC0805FR-0710KL&m=Yageo%20Corporation&q=2080000&n=TTI%20Europe&table=api&media=buynow&source=avinashchip1&event_link=https%3A%2F%2Fwww.ttieurope.com%2Fcontent%2Fttieurope%2Fen%2Fapps%2Fpart-detail.html%3FmfrShortname%3DYAG%26partsNumber%3DAC0805FR-0710KL%26utm%3Dte-oemsecrets%26campaign%3Dmfg-te-connectivity%26channel%3Dlink%26source%3Doemsecrets",
+                "leadTimeWeeks": "26",
+                "sourceLeadTime": "026",
+                "dateCode": "",
+                "distributor": {
+                    "createdOn": "2024-10-24T17:35:26.840Z",
+                    "updatedOn": "2024-10-24T17:35:26.840Z",
+                    "active": true,
+                    "id": "671a8555a9b93815da65c400",
+                    "name": "TTI Europe",
+                    "commonName": "TTI Europe",
+                    "region": "Europe",
+                    "country": "Germany",
+                    "logo": "https://media.oemsecrets.com/images/logos/distributors/tti.png",
+                    "distributorId": "20156",
+                    "commonId": "47426"
+                },
+                "compliance": {
+                    "rohs": "false",
+                    "pbStatus": ""
+                },
+                "pricingDetails": [
+                    {
+                        "currency": "EUR",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0027"
+                            },
+                            {
+                                "unitBreak": "10000",
+                                "unitPrice": "0.0026"
+                            },
+                            {
+                                "unitBreak": "15000",
+                                "unitPrice": "0.0026"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "USD",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0029"
+                            },
+                            {
+                                "unitBreak": "10000",
+                                "unitPrice": "0.0028"
+                            },
+                            {
+                                "unitBreak": "15000",
+                                "unitPrice": "0.0028"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "CNY",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0208"
+                            },
+                            {
+                                "unitBreak": "10000",
+                                "unitPrice": "0.0200"
+                            },
+                            {
+                                "unitBreak": "15000",
+                                "unitPrice": "0.0200"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "HKD",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0226"
+                            },
+                            {
+                                "unitBreak": "10000",
+                                "unitPrice": "0.0218"
+                            },
+                            {
+                                "unitBreak": "15000",
+                                "unitPrice": "0.0218"
+                            }
+                        ]
+                    }
+                ],
+                "countryCode": "DE"
+            },
+            {
+                "createdOn": "2024-10-24T17:35:26.844Z",
+                "updatedOn": "2024-10-24T17:35:26.844Z",
+                "active": true,
+                "origin": {
+                    "namespace": "common",
+                    "scope": "en",
+                    "category": "global",
+                    "key": "origin.OEMSECRETS",
+                    "value": "OEMSECRETS"
+                },
+                "id": "671a855e3289600fa07b9cd7",
+                "part": {
+                    "createdOn": "2024-10-24T17:35:26.844Z",
+                    "updatedOn": "2024-10-24T17:35:26.844Z",
+                    "active": true,
+                    "id": "671a3b01a9b93815da65c339",
+                    "mpn": "AC0805FR-0710KL",
+                    "partName": "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD T/R Automotive AEC-Q200",
+                    "manufacturer": {
+                        "id": "6707ea4006b91c102f76d6d4",
+                        "crmId": "1574",
+                        "name": "Yageo"
+                    },
+                    "globalPartId": "47664583",
+                    "partial": false
+                },
+                "manufacturer": "Yageo Corporation",
+                "packaging": "Tape & Reel",
+                "sku": "311-10KLGTR-ND",
+                "category": "",
+                "moq": "",
+                "mov": "",
+                "partcondition": "Active",
+                "factorystock": "0",
+                "onOrderQuantity": "0",
+                "sourceManufacturer": "YAGEO",
+                "sourcePackaging": "Tape & Reel (TR)",
+                "leadTimeFormat": "Unknown",
+                "sourceCurrency": "USD",
+                "quantityInStock": 405000,
+                "sourcePartNumber": "AC0805FR-0710KL",
+                "distributorAuthorisationStatus": "authorised",
+                "imageUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/4205/AC-Series--SMD-Chip-Resistor.jpg",
+                "buyNowUrl": "https://analytics.oemsecrets.com/main.php?p=AC0805FR-0710KL&m=Yageo%20Corporation&q=405000&n=Digi-Key&table=api&media=buynow&source=avinashchip1&event_link=https%3A%2F%2Fwww.digikey.com%2Fen%2Fproducts%2Fdetail%2Fyageo%2FAC0805FR-0710KL%2F2827834",
+                "leadTimeWeeks": "18",
+                "sourceLeadTime": "18 week(s)",
+                "dateCode": "",
+                "distributor": {
+                    "createdOn": "2024-10-24T17:35:26.844Z",
+                    "updatedOn": "2024-10-24T17:35:26.844Z",
+                    "active": true,
+                    "id": "671a8555a9b93815da65c3fe",
+                    "name": "Digi-Key",
+                    "commonName": "Digi-Key Electronics",
+                    "region": "North America",
+                    "country": "Global",
+                    "logo": "https://media.oemsecrets.com/images/logos/distributors/digikey.png",
+                    "distributorId": "18780",
+                    "commonId": "60797"
+                },
+                "compliance": {
+                    "rohs": "ROHS3 Compliant"
+                },
+                "pricingDetails": [
+                    {
+                        "currency": "USD",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0072"
+                            },
+                            {
+                                "unitBreak": "10000",
+                                "unitPrice": "0.0064"
+                            },
+                            {
+                                "unitBreak": "15000",
+                                "unitPrice": "0.0060"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0056"
+                            },
+                            {
+                                "unitBreak": "35000",
+                                "unitPrice": "0.0054"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0051"
+                            },
+                            {
+                                "unitBreak": "125000",
+                                "unitPrice": "0.0047"
+                            },
+                            {
+                                "unitBreak": "250000",
+                                "unitPrice": "0.0044"
+                            },
+                            {
+                                "unitBreak": "500000",
+                                "unitPrice": "0.0041"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "CNY",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0511"
+                            },
+                            {
+                                "unitBreak": "10000",
+                                "unitPrice": "0.0456"
+                            },
+                            {
+                                "unitBreak": "15000",
+                                "unitPrice": "0.0430"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0400"
+                            },
+                            {
+                                "unitBreak": "35000",
+                                "unitPrice": "0.0383"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0366"
+                            },
+                            {
+                                "unitBreak": "125000",
+                                "unitPrice": "0.0331"
+                            },
+                            {
+                                "unitBreak": "250000",
+                                "unitPrice": "0.0311"
+                            },
+                            {
+                                "unitBreak": "500000",
+                                "unitPrice": "0.0294"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "EUR",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0066"
+                            },
+                            {
+                                "unitBreak": "10000",
+                                "unitPrice": "0.0059"
+                            },
+                            {
+                                "unitBreak": "15000",
+                                "unitPrice": "0.0056"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0052"
+                            },
+                            {
+                                "unitBreak": "35000",
+                                "unitPrice": "0.0050"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0048"
+                            },
+                            {
+                                "unitBreak": "125000",
+                                "unitPrice": "0.0043"
+                            },
+                            {
+                                "unitBreak": "250000",
+                                "unitPrice": "0.0040"
+                            },
+                            {
+                                "unitBreak": "500000",
+                                "unitPrice": "0.0038"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "HKD",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0557"
+                            },
+                            {
+                                "unitBreak": "10000",
+                                "unitPrice": "0.0497"
+                            },
+                            {
+                                "unitBreak": "15000",
+                                "unitPrice": "0.0468"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0436"
+                            },
+                            {
+                                "unitBreak": "35000",
+                                "unitPrice": "0.0417"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0399"
+                            },
+                            {
+                                "unitBreak": "125000",
+                                "unitPrice": "0.0361"
+                            },
+                            {
+                                "unitBreak": "250000",
+                                "unitPrice": "0.0339"
+                            },
+                            {
+                                "unitBreak": "500000",
+                                "unitPrice": "0.0320"
+                            }
+                        ]
+                    }
+                ],
+                "countryCode": "DE"
+            },
+            {
+                "createdOn": "2024-10-24T17:35:26.847Z",
+                "updatedOn": "2024-10-24T17:35:26.847Z",
+                "active": true,
+                "origin": {
+                    "namespace": "common",
+                    "scope": "en",
+                    "category": "global",
+                    "key": "origin.OEMSECRETS",
+                    "value": "OEMSECRETS"
+                },
+                "id": "671a855e3289600fa07b9cd8",
+                "part": {
+                    "createdOn": "2024-10-24T17:35:26.847Z",
+                    "updatedOn": "2024-10-24T17:35:26.847Z",
+                    "active": true,
+                    "id": "671a3b01a9b93815da65c339",
+                    "mpn": "AC0805FR-0710KL",
+                    "partName": "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD T/R Automotive AEC-Q200",
+                    "manufacturer": {
+                        "id": "6707ea4006b91c102f76d6d4",
+                        "crmId": "1574",
+                        "name": "Yageo"
+                    },
+                    "globalPartId": "47664583",
+                    "partial": false
+                },
+                "manufacturer": "Yageo Corporation",
+                "packaging": "Cut Strips",
+                "sku": "16977777",
+                "category": "",
+                "moq": "1",
+                "mov": "",
+                "partcondition": "",
+                "factorystock": "",
+                "sourceManufacturer": "Yageo",
+                "sourcePackaging": "Cut Strips",
+                "leadTimeFormat": "Weeks",
+                "sourceCurrency": "USD",
+                "quantityInStock": 874,
+                "sourcePartNumber": "AC0805FR-0710KL",
+                "distributorAuthorisationStatus": "authorised",
+                "imageUrl": "",
+                "buyNowUrl": "https://analytics.oemsecrets.com/main.php?p=AC0805FR-0710KL&m=Yageo%20Corporation&q=874&n=Arrow%20Electronics&table=api&media=buynow&source=avinashchip1&event_link=https%3A%2F%2Fwww.arrow.com%2Fen%2Fproducts%2Fac0805fr-0710kl%2Fyageo%3Fregion%3Dnac",
+                "leadTimeWeeks": "12",
+                "sourceLeadTime": "12",
+                "dateCode": "2149",
+                "distributor": {
+                    "createdOn": "2024-10-24T17:35:26.847Z",
+                    "updatedOn": "2024-10-24T17:35:26.847Z",
+                    "active": true,
+                    "id": "671a8555a9b93815da65c3fd",
+                    "name": "Arrow Electronics",
+                    "commonName": "Arrow Electronics",
+                    "region": "North America",
+                    "country": "United States",
+                    "logo": "https://media.oemsecrets.com/images/logos/distributors/arrow.png",
+                    "distributorId": "18681",
+                    "commonId": "44918"
+                },
+                "compliance": {
+                    "rohs": "Compliant with Exemption"
+                },
+                "pricingDetails": [
+                    {
+                        "currency": "USD",
+                        "details": [
+                            {
+                                "unitBreak": "1",
+                                "unitPrice": "0.0340"
+                            },
+                            {
+                                "unitBreak": "10",
+                                "unitPrice": "0.0200"
+                            },
+                            {
+                                "unitBreak": "25",
+                                "unitPrice": "0.0137"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.0105"
+                            },
+                            {
+                                "unitBreak": "250",
+                                "unitPrice": "0.0097"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0058"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "CNY",
+                        "details": [
+                            {
+                                "unitBreak": "1",
+                                "unitPrice": "0.2423"
+                            },
+                            {
+                                "unitBreak": "10",
+                                "unitPrice": "0.1425"
+                            },
+                            {
+                                "unitBreak": "25",
+                                "unitPrice": "0.0976"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.0748"
+                            },
+                            {
+                                "unitBreak": "250",
+                                "unitPrice": "0.0691"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0413"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "EUR",
+                        "details": [
+                            {
+                                "unitBreak": "1",
+                                "unitPrice": "0.0315"
+                            },
+                            {
+                                "unitBreak": "10",
+                                "unitPrice": "0.0185"
+                            },
+                            {
+                                "unitBreak": "25",
+                                "unitPrice": "0.0127"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.0097"
+                            },
+                            {
+                                "unitBreak": "250",
+                                "unitPrice": "0.0090"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0054"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "HKD",
+                        "details": [
+                            {
+                                "unitBreak": "1",
+                                "unitPrice": "0.2642"
+                            },
+                            {
+                                "unitBreak": "10",
+                                "unitPrice": "0.1554"
+                            },
+                            {
+                                "unitBreak": "25",
+                                "unitPrice": "0.1064"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.0816"
+                            },
+                            {
+                                "unitBreak": "250",
+                                "unitPrice": "0.0754"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0451"
+                            }
+                        ]
+                    }
+                ],
+                "countryCode": "DE"
+            },
+            {
+                "createdOn": "2024-10-24T17:35:26.849Z",
+                "updatedOn": "2024-10-24T17:35:26.849Z",
+                "active": true,
+                "origin": {
+                    "namespace": "common",
+                    "scope": "en",
+                    "category": "global",
+                    "key": "origin.OEMSECRETS",
+                    "value": "OEMSECRETS"
+                },
+                "id": "671a855e3289600fa07b9cd9",
+                "part": {
+                    "createdOn": "2024-10-24T17:35:26.849Z",
+                    "updatedOn": "2024-10-24T17:35:26.849Z",
+                    "active": true,
+                    "id": "671a3b01a9b93815da65c339",
+                    "mpn": "AC0805FR-0710KL",
+                    "partName": "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD T/R Automotive AEC-Q200",
+                    "manufacturer": {
+                        "id": "6707ea4006b91c102f76d6d4",
+                        "crmId": "1574",
+                        "name": "Yageo"
+                    },
+                    "globalPartId": "47664583",
+                    "partial": false
+                },
+                "manufacturer": "Yageo Corporation",
+                "packaging": "Cut Tape & Reel",
+                "sku": "49AK0724",
+                "category": "Passive Components > Resistors - Fixed Value > Chip SMD Resistors",
+                "moq": "1",
+                "sourceManufacturer": "Yageo",
+                "sourcePackaging": "TAPE & REEL CUT",
+                "leadTimeFormat": "Days",
+                "sourceCurrency": "USD",
+                "quantityInStock": 3169,
+                "sourcePartNumber": "AC0805FR-0710KL",
+                "distributorAuthorisationStatus": "authorised",
+                "imageUrl": "https://www.newark.com/productimages/large/en_US/49AK1528-40.jpg",
+                "buyNowUrl": "https://analytics.oemsecrets.com/main.php?p=AC0805FR-0710KL&m=Yageo%20Corporation&q=3169&n=Newark%20Electronics&table=api&media=buynow&source=avinashchip1&event_link=https%3A%2F%2Fwww.tkqlhce.com%2Fclick-100569928-13710449%3Furl%3Dhttps%253A%252F%252Fwww.newark.com%252F49AK0724%253FCMP%253DAFF-CJ%2526sid%253Dapi-avinashchip1",
+                "leadTimeWeeks": "Unknown",
+                "dateCode": "",
+                "distributor": {
+                    "createdOn": "2024-10-24T17:35:26.849Z",
+                    "updatedOn": "2024-10-24T17:35:26.849Z",
+                    "active": true,
+                    "id": "671a8555a9b93815da65c3ff",
+                    "name": "Newark Electronics",
+                    "commonName": "Newark Electronics",
+                    "region": "North America",
+                    "country": "United States",
+                    "logo": "https://media.oemsecrets.com/images/logos/distributors/newark.png",
+                    "distributorId": "18621",
+                    "commonId": "53752"
+                },
+                "compliance": {
+                    "rohs": "false",
+                    "pbStatus": ""
+                },
+                "pricingDetails": [
+                    {
+                        "currency": "USD",
+                        "details": [
+                            {
+                                "unitBreak": "1",
+                                "unitPrice": "0.0050"
+                            },
+                            {
+                                "unitBreak": "25",
+                                "unitPrice": "0.0050"
+                            },
+                            {
+                                "unitBreak": "50",
+                                "unitPrice": "0.0050"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.0050"
+                            },
+                            {
+                                "unitBreak": "250",
+                                "unitPrice": "0.0050"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0050"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "CNY",
+                        "details": [
+                            {
+                                "unitBreak": "1",
+                                "unitPrice": "0.0356"
+                            },
+                            {
+                                "unitBreak": "25",
+                                "unitPrice": "0.0356"
+                            },
+                            {
+                                "unitBreak": "50",
+                                "unitPrice": "0.0356"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.0356"
+                            },
+                            {
+                                "unitBreak": "250",
+                                "unitPrice": "0.0356"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0356"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "EUR",
+                        "details": [
+                            {
+                                "unitBreak": "1",
+                                "unitPrice": "0.0046"
+                            },
+                            {
+                                "unitBreak": "25",
+                                "unitPrice": "0.0046"
+                            },
+                            {
+                                "unitBreak": "50",
+                                "unitPrice": "0.0046"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.0046"
+                            },
+                            {
+                                "unitBreak": "250",
+                                "unitPrice": "0.0046"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0046"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "HKD",
+                        "details": [
+                            {
+                                "unitBreak": "1",
+                                "unitPrice": "0.0388"
+                            },
+                            {
+                                "unitBreak": "25",
+                                "unitPrice": "0.0388"
+                            },
+                            {
+                                "unitBreak": "50",
+                                "unitPrice": "0.0388"
+                            },
+                            {
+                                "unitBreak": "100",
+                                "unitPrice": "0.0388"
+                            },
+                            {
+                                "unitBreak": "250",
+                                "unitPrice": "0.0388"
+                            },
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0388"
+                            }
+                        ]
+                    }
+                ],
+                "countryCode": "DE"
+            },
+            {
+                "createdOn": "2024-10-24T17:35:26.850Z",
+                "updatedOn": "2024-10-24T17:35:26.850Z",
+                "active": true,
+                "origin": {
+                    "namespace": "common",
+                    "scope": "en",
+                    "category": "global",
+                    "key": "origin.OEMSECRETS",
+                    "value": "OEMSECRETS"
+                },
+                "id": "671a855e3289600fa07b9cda",
+                "part": {
+                    "createdOn": "2024-10-24T17:35:26.850Z",
+                    "updatedOn": "2024-10-24T17:35:26.850Z",
+                    "active": true,
+                    "id": "671a3b01a9b93815da65c339",
+                    "mpn": "AC0805FR-0710KL",
+                    "partName": "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD T/R Automotive AEC-Q200",
+                    "manufacturer": {
+                        "id": "6707ea4006b91c102f76d6d4",
+                        "crmId": "1574",
+                        "name": "Yageo"
+                    },
+                    "globalPartId": "47664583",
+                    "partial": false
+                },
+                "manufacturer": "Yageo Corporation",
+                "packaging": "Reel",
+                "sku": "3495316RL",
+                "category": "Passive Components > Resistors - Fixed Value > Chip SMD Resistors",
+                "moq": "500",
+                "sourceManufacturer": "YAGEO",
+                "sourcePackaging": "RE-REELING",
+                "leadTimeFormat": "Unknown",
+                "sourceCurrency": "GBP",
+                "quantityInStock": 234250,
+                "sourcePartNumber": "AC0805FR-0710KL",
+                "distributorAuthorisationStatus": "authorised",
+                "imageUrl": "https://uk.farnell.com/productimages/large/en_GB/1140836-40.jpg",
+                "buyNowUrl": "https://analytics.oemsecrets.com/main.php?p=AC0805FR-0710KL&m=Yageo%20Corporation&q=234250&n=Farnell%20element14%20UK&table=api&media=buynow&source=avinashchip1&event_link=https%3A%2F%2Fwww.jdoqocy.com%2Fclick-100569928-13658747%3Furl%3Dhttps%253A%252F%252Fuk.farnell.com%252F3495316RL%253Fgross_price%253Dtrue%2526CMP%253DAFC-CJ-UK3495316RL%2526sid%253Dapi-avinashchip1",
+                "leadTimeWeeks": "Unknown",
+                "dateCode": "N",
+                "distributor": {
+                    "createdOn": "2024-10-24T17:35:26.850Z",
+                    "updatedOn": "2024-10-24T17:35:26.850Z",
+                    "active": true,
+                    "id": "671a8555a9b93815da65c401",
+                    "name": "Farnell element14 UK",
+                    "commonName": "Farnell",
+                    "region": "Europe",
+                    "country": "United Kingdom",
+                    "logo": "https://media.oemsecrets.com/images/logos/distributors/farnell.png",
+                    "distributorId": "16545",
+                    "commonId": "47736"
+                },
+                "compliance": {
+                    "rohs": "false",
+                    "pbStatus": ""
+                },
+                "pricingDetails": [
+                    {
+                        "currency": "USD",
+                        "details": [
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0103"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0090"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0065"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0039"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0026"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0025"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "CNY",
+                        "details": [
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0737"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0645"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0461"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0276"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0184"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0175"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "EUR",
+                        "details": [
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0096"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0084"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0060"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0036"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0024"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0023"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "HKD",
+                        "details": [
+                            {
+                                "unitBreak": "500",
+                                "unitPrice": "0.0803"
+                            },
+                            {
+                                "unitBreak": "1000",
+                                "unitPrice": "0.0703"
+                            },
+                            {
+                                "unitBreak": "2500",
+                                "unitPrice": "0.0502"
+                            },
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0301"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0201"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0191"
+                            }
+                        ]
+                    }
+                ],
+                "countryCode": "DE"
+            },
+            {
+                "createdOn": "2024-10-24T17:35:26.852Z",
+                "updatedOn": "2024-10-24T17:35:26.852Z",
+                "active": true,
+                "origin": {
+                    "namespace": "common",
+                    "scope": "en",
+                    "category": "global",
+                    "key": "origin.OEMSECRETS",
+                    "value": "OEMSECRETS"
+                },
+                "id": "671a855e3289600fa07b9cdb",
+                "part": {
+                    "createdOn": "2024-10-24T17:35:26.852Z",
+                    "updatedOn": "2024-10-24T17:35:26.852Z",
+                    "active": true,
+                    "id": "671a3b01a9b93815da65c339",
+                    "mpn": "AC0805FR-0710KL",
+                    "partName": "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD T/R Automotive AEC-Q200",
+                    "manufacturer": {
+                        "id": "6707ea4006b91c102f76d6d4",
+                        "crmId": "1574",
+                        "name": "Yageo"
+                    },
+                    "globalPartId": "47664583",
+                    "partial": false
+                },
+                "manufacturer": "Yageo Corporation",
+                "packaging": "Tape & Reel",
+                "sku": "4150186",
+                "category": "Passive Components > Resistors - Fixed Value > Chip SMD Resistors",
+                "moq": "5000",
+                "sourceManufacturer": "YAGEO",
+                "sourcePackaging": "TAPE & REEL FULL",
+                "leadTimeFormat": "Unknown",
+                "sourceCurrency": "GBP",
+                "quantityInStock": 0,
+                "sourcePartNumber": "AC0805FR-0710KL",
+                "distributorAuthorisationStatus": "authorised",
+                "imageUrl": "https://uk.farnell.com/productimages/large/en_GB/1140836-40.jpg",
+                "buyNowUrl": "https://analytics.oemsecrets.com/main.php?p=AC0805FR-0710KL&m=Yageo%20Corporation&q=0&n=Farnell%20element14%20UK&table=api&media=buynow&source=avinashchip1&event_link=https%3A%2F%2Fwww.tkqlhce.com%2Fclick-100569928-13658747%3Furl%3Dhttps%253A%252F%252Fuk.farnell.com%252F4150186%253Fgross_price%253Dtrue%2526CMP%253DAFC-CJ-UK4150186%2526sid%253Dapi-avinashchip1",
+                "leadTimeWeeks": "Unknown",
+                "dateCode": "N",
+                "distributor": {
+                    "createdOn": "2024-10-24T17:35:26.852Z",
+                    "updatedOn": "2024-10-24T17:35:26.852Z",
+                    "active": true,
+                    "id": "671a8555a9b93815da65c401",
+                    "name": "Farnell element14 UK",
+                    "commonName": "Farnell",
+                    "region": "Europe",
+                    "country": "United Kingdom",
+                    "logo": "https://media.oemsecrets.com/images/logos/distributors/farnell.png",
+                    "distributorId": "16545",
+                    "commonId": "47736"
+                },
+                "compliance": {
+                    "rohs": "false",
+                    "pbStatus": ""
+                },
+                "pricingDetails": [
+                    {
+                        "currency": "USD",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0039"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0026"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0025"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "CNY",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0276"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0184"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0175"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "EUR",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0036"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0024"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0023"
+                            }
+                        ]
+                    },
+                    {
+                        "currency": "HKD",
+                        "details": [
+                            {
+                                "unitBreak": "5000",
+                                "unitPrice": "0.0301"
+                            },
+                            {
+                                "unitBreak": "25000",
+                                "unitPrice": "0.0201"
+                            },
+                            {
+                                "unitBreak": "50000",
+                                "unitPrice": "0.0191"
+                            }
+                        ]
+                    }
+                ],
+                "countryCode": "DE"
+            }
+        ]
+    }
+}
+
+## MC1 SANITY TESTS
+
+ 
+Feature/Flow
+Stage
+Prod
+Remarks
+New User Signup from mc1
+ yes
+--
+ 
+Mc1 user invite - signup
+ yes
+--
+On stage should suffice
+Upload Bom & Excess and verify in CRM
+ yes (bom)
+yes (BOM)
+ 
+Manual RFQ
+ yes
+yes
+ 
+Active Quote (create, edit)
+Yes
+yes
+ 
+Sales Order
+(create, edit)
+Yes
+yes
+ 
+Shipping & invoice
+--
+--
+ 
+Lead Account & Transfer
+--
+--
+ 
+Bids
+ --
+--
+ 
+Parts Tracker
+ yes
+yes
+ 
+Search
+ yes
+yes
+ 
+Page Navigations
+ yes
+yes
+ 
+Edit Project
+ yes
+yes
+ 
+Notification Emails
+--
+yes
+ 
+Download excess and Bom Template, fill and upload.
+ --
+yes
+ 
+ 
+
+## CRM SANITY TESTS:
+
+ 
+Feature/Flow
+Stage
+Production
+Remarks
+Create BOM in MC1, check in xcrm and new crm
+ yes
+yes
+ 
+Create RFQ in MC1, check in xcrm and crm
+ yes
+yes
+ 
+Upload BOM from CRM
+ yes
+yes
+ 
+Page Navigations
+ Yes
+yes
+ 
+Deep links for Accounts, RFQs, Quotes and Orders
+ yes
+yes
+ 
+Edit Project
+ yes
+yes
+ 
+Global Search
+yes 
+yes
+ 
+Filters 
+ yes
+yes
+ 
+Sorting of tables
+ yes
+yes
+ 
+Page Search
+yes 
+yes
+ 
+Download excess and Bom Template, fill and upload.
+ ---
+---
+ 
+ Tasks
+ yes
+ yes (projects)

@@ -1,0 +1,52 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Deepti Vaidyula ,  @Harika Guntamukkala",,
+Metadata,Release Info,Release date,2026.05.04,,
+Metadata,Release Info,DB changes,Connect : release/2026.05.04,,
+Metadata,Release Info,Platform,release/2026.05.04,,
+Metadata,Release Info,Notification, No change,,
+Metadata,Release Info,Branch,release/2026.05.04,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2026.05.04.1,,
+Artefacts,Artefacts,fn connect,2026.05.04.0,,
+Deployed Items,General,## PO SHIPMENTS / SHIPPING FEATURES,,@DEEPTI VAIDYULA,
+Deployed Items,Backport to develop,Feat: po shipments tab changes (#3845),verified,,
+Deployed Items,Backport to develop,"Shipments tab on PO — add a Shipments tab to the PO detail view alongside existing tabs. Shows all inbound shipments against the PO: tracking numbers, box count, condition, arrival",verified,,
+Deployed Items,Backport to develop,"date, QC person. Mirrors the SO Warehouse Shipments view.",verified,,
+Deployed Items,Backport to develop,Shipment Details accordion on Stock Line — add an accordion inside the Stock Line detail. Shows the shipment associated with that stock line.,verified,,
+Deployed Items,Backport to develop,Shipments tab on Purchase order view — add a shipments tab on the purchase order view after the PO line and before the receiving lines.,verified,,
+Deployed Items,Backport to develop,"Warehouse shipments view — maintain same tab structure as PO (PO, PO Lines, Shipments, Receiving Lines).",verified,,
+Deployed Items,Note,Not able to test as backend changes are not deployed.,,,
+Deployed Items,Note,"## CAMPAIGN / CONVERSATION UI
+improve message layout and styling (#3846)",,@DEEPTI VAIDYULAVERIFIED,
+Deployed Items,refactor(campaign),"Fix dark mode in campaign message bubbles
+add tooltips for conversation text and standardize color constants (#3847)",,,
+Deployed Items,feat,"## INVOICE / TABLE UI
+use available vertical space for table - Fix not pushed to current release can be ignored",,@HARIKA GUNTAMUKKALA,
+Deployed Items,fix(invoiceLines),"## ACCOUNT CREATION
+require phone number for account creation (#3849)
+phone number mandatory in create account modal",,@HARIKA GUNTAMUKKALAVERIFIED,
+Deployed Items,update,"## SALES ORDER
+disable Create Sales Order button when no quotes are selected (#3851)",,@HARIKA GUNTAMUKKALAVERIFIED,
+Deployed Items,fix,"Disable the ""Create Sales Order"" FAB action when no quotes are selected",,,
+Deployed Items,fix,## ALLOCATION / OPPORTUNITY UPDATES,,@DEEPTI VAIDYULATESTED,
+Deployed Items,fix,Manual Allocation Sync Inbound and Outbound,,,
+Deployed Items,Allocation sync update,Merged to release and part of release validations,,,
+Deployed Items,QE Remarks,Allocation for OB SO is not working:,,,
+Deployed Items,QE Remarks,US26SO00752,,,
+Deployed Items,QE Remarks,Allocated is 10 in Apex but xcrm shows 0.,,,
+Deployed Items,QE Remarks,IB allocation is working,,,
+Deployed Items,QE Remarks,Removing Opportunities updated with Closed status from the list view,Verified,,
+Deployed Items,QE Remarks,## PO PDF / BUYER VIEW,,@DEEPTI VAIDYULATESTED,
+Deployed Items,QE Remarks,PO PDF buyer CSS alignment fix and EXPECTED DELIVERY fix,,,
+Deployed Items,QE Remarks,"PO PDF discrepancies - Alexey Duduk working on buyer alignment changes, planning to patch to release",,,
+Deployed Items,QE remarks,Alignment issues are fixes. The attributes are not updated in PDF.,,,
+Deployed Items,QE remarks,##,,@HARIKA GUNTAMUKKALA,
+Deployed Items,PO Shipping Island,"Add has arrived checkbox (
+) - Partially working as
+expected",,,
+Deployed Items,QE remarks,"User can't select the checkbox manually
+and also the checkbox not selected when the PO status is in Arrived
+## DEV ONLY",,,
+Deployed Items,QE remarks,"Fix React Compiler warnings (#3842)
+fix react compiler warnings part 2 (#3836)",,,

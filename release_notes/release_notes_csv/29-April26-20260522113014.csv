@@ -1,0 +1,130 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Deepti Vaidyula ,  @Harika Guntamukkala",,
+Metadata,Release Info,Release date,2026.04.29,,
+Metadata,Release Info,DB changes,Connect : No change,,
+Metadata,Release Info,Platform,No change,,
+Metadata,Release Info,Notification, No change,,
+Metadata,Release Info,Branch,release/2026.04.29,,
+Artefacts,Artefacts,Chip1 Transaction,2026.04.29.4,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2026.04.29.3,,
+Artefacts,Artefacts,Chip1 Webui,2026.04.29.0,,
+Deployed Items,General,"Invoice changes
+enhance SendQuoteModal with invitation logic and email autofill functionality (",Verified,,
+Deployed Items,feat,),Verified,,
+Deployed Items,Auto-invite,Silently invite selected contact to MyChip1 (if not already joined) before sending quote,,,
+Deployed Items,Email UX,Auto-fill email from primary contact only when user hasn't manually edited it; clear it safely on contact clear,,,
+Deployed Items,Quote link,Include a clickable MyChip1 quote link in the default message body,,,
+Deployed Items,fix(sales orders),OrderOverview MPN overflow tooltip layout (,,,
+Deployed Items,fix(sales orders),),Verified,,
+Deployed Items,fix(sales orders),Show overflow MPNs as a clean vertical list in tooltip (links when available),,,
+Deployed Items,fix(sales orders),"See PR for images.
+default date-picker format across crm app (
+)
+sourcing list misc changes (",,,
+Deployed Items,fix,),Verified,,
+Deployed Items,fix,In Sourcing Sales Activity list columns remove UI based role-based cost hiding,,,
+Deployed Items,fix,"Export  /filtering
+package entry via main/exports for cleaner imports",,@chip1,
+Deployed Items,fix,"Add
+xcrmRoha
+and
+rohsVersion
+fields to market activity tab",,,
+Deployed Items,fix,"Invoice - Create Invoice from shipment, use
+crmNumber
+for invoice # (",,,
+Deployed Items,fix,),Verified,,
+Deployed Items,fix,"Addition of the optional
+crmNumber
+field to the invoice model",,,
+Deployed Items,fix,"Prioritization of
+crmNumber
+in invoice models, UI components, and summary sections",,,
+Deployed Items,fix,"New ""Create Invoice"" action in the shipment details page for shipments with status ""Ready to Ship""",,,
+Deployed Items,fix,MC1 Warehouse - Add Copy icons to some cells (,,,
+Deployed Items,fix,),Verified,,
+Deployed Items,fix,"MC1 WarehouseStock - Rename SPN filter to PO Number, refresh columns visibility config (hide 3 cols) (",,,
+Deployed Items,fix,),Verified,@Deepti Vaidyula,
+Deployed Items,fix,Inbound shipment,Verified,,
+Deployed Items,enhancements(sr-allocation),Sr Allocation similar to So Allocation (,,,
+Deployed Items,enhancements(sr-allocation),),Verified,,
+Deployed Items,enhancements(sr-allocation),Renamed action from Add purchase order to Add Allocation and also updated the modal title,,,
+Deployed Items,enhancements(sr-allocation),"Added Unit to allocate column which is editable
+sr issues (",,,
+Deployed Items,fix,),Verified,,
+Deployed Items,fix,Fix alternate part info not passing to SR — test scenarios (SR from RFQ vs SR from SO) and fix where it breaks,,,
+Deployed Items,fix,"Add SR from SO action: restrict the user with message ""Please have all the approvals secured to raise a Sourcing Request"" if order approvals are not there",,,
+Deployed Items,fix,Removes the standalone,,,
+Deployed Items,fix,PoFilter,,,
+Deployed Items,fix,"in the WarehouseStock panel and forces the warehouse
+stock table to reset the previously stored column visibility state.",Verified,,
+Deployed Items,fix,PO & PO Line detail - Update shipping info accordion (,,,
+Deployed Items,fix,")
+consolidate helper text and remove redundancy (",Verified,,
+Deployed Items,Refactor ECCN fields,),Verified,,
+Deployed Items,Refactor ECCN fields,Consolidates dual-use ECCN fields into helper text and removes redundant components.,Verified,,
+Deployed Items,Refactor ECCN fields,Refactor/filtering improvements (,,,
+Deployed Items,Refactor ECCN fields,),Verified,,
+Deployed Items,Refactor ECCN fields,Shipment - Pass shipment type field (,,,
+Deployed Items,Refactor ECCN fields,")
+update mark as QCReceived flow (",Verified,,
+Deployed Items,Stock,")
+filters on Opportunities , Label changes (",Verified,,
+Deployed Items,Update,),Verified,,
+Deployed Items,Status filter,"hide for Opportunities, keep for RFQ",Verified,,
+Deployed Items,Status filter,"Rename ""Sales Owner"" label on filters to ""Sales Person"" for both RFQ and Opportunities",Verified,,
+Deployed Items,Status filter,Add Region filter on Opportunities (already present in RFQ),Verified,,
+Deployed Items,Status filter,Add Source filter on Opportunities with multi-select,Verified,,
+Deployed Items,Status filter,Sr Allocation details Island changes,Verified,@Deepti Vaidyula,
+Deployed Items,Status filter,Added sr allocation list,,,
+Deployed Items,Status filter,Enable Add allocation button when sr status >= purchase requested,,,
+Deployed Items,Status filter,Enable  sr allocation feature-flag till production,,,
+Deployed Items,Status filter,Aditya Jain - 3 Points regarding the SR duplicate issue - STOP,,,
+Deployed Items,Status filter,creation of SR in Apex during SO approvals happens on xcrm,Verified,@Deepti Vaidyula,
+Deployed Items,Status filter,Let's create SR with RFQ ref(along with SO ref) is created in Apex during tasking in xcrm,Verified,@Deepti Vaidyula,
+Deployed Items,Status filter,Add origin in SR.,Verified,,https://github.com/altirllc/chip1-webui/pull/3811
+Deployed Items,Status filter,Sandeep Thatikonda Om Sreenivasan - this is related to Invoice -> Record payment -> Paid By to show only account's contacts + Create manual; and one UX change for Shipping Details. Working on the other points (separate PR),,,
+Deployed Items,Status filter,Fix for invoice update,,,
+Deployed Items,Status filter,Invoice -> Record payment -> Paid By to show only account's contacts + Create manual; and one UX change for Shipping Details.,,,
+Deployed Items,Status filter,Stopping duplicate SR creation for SO,Verified,,
+Deployed Items,Status filter,Vinay's changes as mentioned,,,
+Deployed Items,Status filter,here,Verified,,
+Deployed Items,Status filter,Dev items,,,
+Deployed Items,Refactor,"Modularize filtering infrastructure for reuse (own package, dev only) (
+)",,,
+Deployed Items,Refactoring and modularization,"Extracted generic filter components, utilities, and infrastructure into a standalone package,  /filtering
+, for shared use across the CRM and MC1 applications.",,@chip1,
+Deployed Items,Filter imports,"Updated CRM imports to use the shared  /filtering
+package, removing duplicate logic in the CRM codebase.",,@chip1,
+Deployed Items,Filter imports,"Replace inline filters with CRM-style modal filter system (
+)",,@chip1,
+Deployed Items,Filter imports,Creation of a,,@chip1,
+Deployed Items,Filter imports,"WarehouseStockFilterBarWrapper
+using
+createFilterBarWrapper",,@chip1,
+Deployed Items,Filter imports,Addition of a,,@chip1,
+Deployed Items,Filter imports,"StockPageTopBar
+featuring a search input and filter button, replacing the inline filters panel",,@chip1,
+Deployed Items,Filter imports,Implementation of,,@chip1,
+Deployed Items,Filter imports,"FiltersModal
+registered in MC1's modal registry",,@chip1,
+Deployed Items,Filter imports,"Replacement of inline warehouse filters with a modal system using the new
+useWarehouseStockModalFilters
+and
+useWarehouseStockFilterDefinitions
+hooks
+1. Invoice / Line Details Page",,@chip1,
+Deployed Items,Open Issues on stage,Under Invoicing & Payment Details:,,,
+Deployed Items,Open Issues on stage,Billing Contact & Email are not being populated,,,
+Deployed Items,Open Issues on stage,Invoice Delivery Mode is not being populated,,,
+Deployed Items,Open Issues on stage,Under Payment Details ->,,,
+Deployed Items,Open Issues on stage,"Tax rate is not being populated
+2. Invoice PDF – Missing Data",,,
+Deployed Items,Open Issues on stage,Freight Costs and Miscellaneous Costs,,,
+Deployed Items,Open Issues on stage,Date Shipped,,,
+Deployed Items,Open Issues on stage,US Dual / Local Dual (available in SO),,,
+Deployed Items,Open Issues on stage,COO (available in Offer),,,
+Deployed Items,Open Issues on stage,Product (available in SO),,,
+Deployed Items,Open Issues on stage,Description (available in Offer),,,

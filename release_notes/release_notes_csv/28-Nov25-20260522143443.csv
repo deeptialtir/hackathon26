@@ -1,0 +1,165 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Deepti Vaidyula ,  @Harika Guntamukkala",,
+Metadata,Release Info,DB changes,Connect : release/2025.11.28,,
+Metadata,Release Info,Platform,release/2025.11.28,,
+Metadata,Release Info,Notification, No changes,,
+Metadata,Release Info,Branch,release/2025.11.28,,
+Artefacts,Artefacts,Chip1 Account,2025.11.28.0,,
+Artefacts,Artefacts,Chip1 Transaction,2025.11.28.4,,
+Artefacts,Artefacts,Chip1 Part,2025.11.28.1,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2025.11.28.3,,
+Artefacts,Artefacts,fn connect,2025.11.28.0,,
+Artefacts,Artefacts,Automation Run,,,
+Artefacts,Artefacts,jenkins.chip1.info https,//jenkins.chip1.info/job/chip1-e2e-tests/job/crm-ui-tests/26/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html,,
+Artefacts,Artefacts,jenkins.chip1.info https,//jenkins.chip1.info/job/chip1-e2e-tests/job/crm-ui-tests/26/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,QE documentation link,https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh,,
+Deployed Items,General,RFQ issues,,,
+Deployed Items,General,Account permissions,,,
+Deployed Items,General,Dashboard and Sourcing fixes,,,
+Deployed Items,Account,"Details to be default tab, Related Accounts lookup keys changes",verified,,
+Deployed Items,CHP-3567,Enhance Column Reordering ,verified,,
+Deployed Items,CHP-3570,Implement new reorder columns for all tables ,verified,,
+Deployed Items,CHP-3571,"Refactored Sequence of island on Account Details tab , and changed the input checkbox's to select 
+market activity table updates",Verified,,
+Deployed Items,CHP-3575,Context Info pane,,,
+Deployed Items,CHP-3575,Enable permissions for account,,,
+Deployed Items,Forms,"Decrease vertical spacing between rows. Part 1 - account, rfqs islands are checked",,,
+Deployed Items,Forms,System components - Highlight Parts Nav bar group when on system componets; dark mode; Navbar improvements,,,
+Deployed Items,Forms,Will be enabled only till Dev or Off,,,
+Deployed Items,CHP-3337,Market offers - List view,,,
+Deployed Items,CHP-3337,Offers List - List view,,,
+Deployed Items,CHP-3354,"Standalone quote changes
+always display account profile tab and add a refresh",,,
+Deployed Items,CHP-3558,Implement Contact Leads Feature,,,
+Deployed Items,CHP-3577,Account Supplier Cards,,,
+Deployed Items,CHP-3577,Enable global search for trips and visits,,,
+Deployed Items,CHP-3577,"Bugs in build
+mc1 signup is failing on stage
+rfq line page search is failing with error
+account list, rfq list, sales order list api taking >10 seconds in response time in stage
+//app.clickup.com/t/8651091/CHP-3596
+)
+lookup corresponding to ID are not loaded on stage",,,
+Deployed Items,RC,"Not found on stage.
+## MC1 SANITY TESTS",,,
+Deployed Items,Note,The sanity tests to check will be selected based on the release,,,
+Deployed Items,Note,Feature/Flow,,,
+Deployed Items,Note,Stage,,,
+Deployed Items,Note,Prod,,,
+Deployed Items,Note,Remarks,,,
+Deployed Items,Note,"New User Signup from mc1
+yes",,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,"Mc1 user invite - signup
+yes",,,
+Deployed Items,Note,On stage should suffice,,,
+Deployed Items,Note,"Upload Bom and verify in CRM
+yes
+yes",,,
+Deployed Items,Note,"Upload Excess and verify in CRM
+yes",,,
+Deployed Items,Note,"Manual RFQ
+yes",,,
+Deployed Items,Note,"RFQ update
+yes",,,
+Deployed Items,Note,"RFQ - multiline
+yes",,,
+Deployed Items,Note,"Active Quote (create)
+yes",,,
+Deployed Items,Note,"Active Quote (edit)
+yes",,,
+Deployed Items,Note,"Active quote - multiline
+yes",,,
+Deployed Items,Note,"Sales Order (create)
+yes",,,
+Deployed Items,Note,"Sales Order (edit)
+yes",,,
+Deployed Items,Note,"Sales Order - multiline
+yes",,,
+Deployed Items,Note,"Quality Control (PO number)
+yes",,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,"Invoice generation
+yes",,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,Invoice generation - shipping in 2 lots,,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,"Lead Account & Transfer
+yes",,,
+Deployed Items,Note,Bids,,,
+Deployed Items,Note,"Parts Tracker
+yes",,,
+Deployed Items,Note,"Search
+yes",,,
+Deployed Items,Note,"Page Navigations
+yes",,,
+Deployed Items,Note,"Edit Project
+yes",,,
+Deployed Items,Note,Notification Emails,,,
+Deployed Items,Note,"Download excess and Bom Template, fill and upload.
+yes",,,
+Deployed Items,Note,"Conceirge Service
+yes",,,
+Deployed Items,Note,"Sorting
+yes",,,
+Deployed Items,Note,"Filters
+yes",,,
+Deployed Items,Note,"Pricing - OEM secrets
+yes",,,
+Deployed Items,Note,"Pricing - IC
+yes",,,
+Deployed Items,Note,"Pricing - xcrm
+yes",,,
+Deployed Items,Note,The sanity tests to check will be selected based on the release,,,
+Deployed Items,Note,Feature/Flow,,,
+Deployed Items,Note,Stage,,,
+Deployed Items,Note,Production,,,
+Deployed Items,Note,Remarks,,,
+Deployed Items,Note,"Create BOM in MC1, check in xcrm and new crm
+yes",,,
+Deployed Items,Note,"Create RFQ in MC1, check in xcrm and crm
+yes",,,
+Deployed Items,Note,"Upload BOM from CRM
+yes",,,
+Deployed Items,Note,"Page Navigations
+yes",,,
+Deployed Items,Note,"Deep links for Accounts, RFQs, Quotes and Orders
+yes",,,
+Deployed Items,Note,"Edit Project
+yes",,,
+Deployed Items,Note,"Projects - price refresh
+yes",,,
+Deployed Items,Note,"Global Search
+yes",,,
+Deployed Items,Note,"Filters
+yes",,,
+Deployed Items,Note,"Sorting of tables
+yes",,,
+Deployed Items,Note,"Page Search
+yes",,,
+Deployed Items,Note,"Download excess and Bom Template, fill and upload.
+yes",,,
+Deployed Items,Note,"Conceirge Service
+yes",,,
+Deployed Items,Note,"Microdashboard counts
+yes",,,
+Deployed Items,Note,"Share project and show in mc1
+yes",,,
+Deployed Items,Note,"Create Contact from crm
+yes",,,
+Deployed Items,Note,"Invite Contact from crm
+yes",,,
+Deployed Items,Note,"Create Task
+yes",,,
+Deployed Items,Note,"FAB icons - for all
+yes",,,
+Deployed Items,Note,"FAB - icon actions - Take a note/Activity/Task
+yes",,,
+Deployed Items,Note,"Light mode - dark mode
+yes",,,
+Deployed Items,Note,"Saved Views
+yes",,,

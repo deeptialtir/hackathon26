@@ -1,0 +1,43 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,@Deepti Vaidyula @Harika Guntamukkala,,
+Metadata,Release Info,Release date,2026.05.15,,
+Metadata,Release Info,DB changes,Connect : release/2026.05.15,,
+Metadata,Release Info,Platform,No Change,,
+Metadata,Release Info,Notification, release/2026.05.15,,
+Metadata,Release Info,Branch,release/2026.05.15,,
+Artefacts,Artefacts,Chip1 Transaction,2026.05.15.2,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2026.05.15.4,,
+Deployed Items,General,QC History,,,
+Deployed Items,QE remarks,PO Approval notification,,,
+Deployed Items,QE remarks,Bank charges sync for invoice,,,
+Deployed Items,QE remarks,Add shipment creation for selected order lines,,,
+Deployed Items,QE Remarks,I have created a multi-line shipment and the CRR generated for this is failing,,@Harika Guntamukkala,
+Deployed Items,QE Remarks,Sales_admin & credit_admin can only update Var,Verified  - Verified,,
+Deployed Items,QE Remarks,Comments was not showing in the email,Verified,,
+Deployed Items,QE Remarks,Notes-In-App will have context data so that UI can redirect to specific Routes Based On the Data,Verified,,
+Deployed Items,QE Remarks,Sourcing offer section in Part Sourcing,Verified,,
+Deployed Items,QE Remarks,"Tasks list - Move multi-select actions from fab to footer
+offers and sr changes (
+)",Verified,,
+Deployed Items,update,Sourcing Request,,,
+Deployed Items,update,show tags column on list view,Verified,,
+Deployed Items,update,Offers,,,
+Deployed Items,update,Set the default expiry to two weeks. On creation always calculate 2 weeks from the day and show it as the expiry date.,Verified,,
+Deployed Items,update,"Currently inside the offer details for market offers we are showing label as ""market offer type"" > should be renamed to ""Offer type""",Verified,,
+Deployed Items,### ISSUES ON STAGE,"I have created a multi-line shipment and the CRR generated for this is failing with the following error: (Currently working as expected. Need to discuss with Product and implement)
+> Generate CRR
+29e612ec-2944-4b02-bb79-0d2ec25577b7
+{
+""None of the requested entities were found"",
+}invoice due, paid, and confirmation flow (#4003",,,
+Deployed Items,"""errorCode""","Is it valid scenario to update stock to Validated status without QC( marking directly marked QC completed, Inspected and all beyond status). In this case CRR / RR / Packing slips won't be created because QC not available. Should we tighten rules around it?",,,
+Deployed Items,"""errorCode""",Users who do not have permission to edit Vat details are seeing,,,
+Deployed Items,"""errorCode""","""","Verified By"" field is as blank",,
+Deployed Items,"""errorCode""","Updated date
+field is not auto populating with updated on date when VAT details are updated
+.",,,
+Deployed Items,"""errorCode""",Under sourcing -> sourcing offers  have  the below issues,,,
+Deployed Items,"""errorCode""",Entity Type| Entity column both values are having the hyperlink option.,,,
+Deployed Items,"""errorCode""",Redirecting to one of the souring offer is showing 404 error,,,

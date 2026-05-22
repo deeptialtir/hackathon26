@@ -1,0 +1,84 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Deepti Vaidyula ,  @Harika Guntamukkala",,
+Metadata,Release Info,Release date,2026.05.05,,
+Metadata,Release Info,DB changes,Connect : release/2026.05.05,,
+Metadata,Release Info,Platform,No change,,
+Metadata,Release Info,Notification, No change,,
+Metadata,Release Info,Branch,release/2026.05.04,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2026.05.05.3,,
+Artefacts,Artefacts,fn connect,2026.05.05.0,,
+Deployed Items,General,Split Stock Functionality (,,,
+Deployed Items,General,),Verified,,
+Deployed Items,General,"In shipment details, indicate inbound vs. outbound somewhere in the header",Verified,,
+Deployed Items,General,Also add a section to show the packaging details that includes box info. ,Verified,,
+Deployed Items,General,"Enable Add arrival action once PO is approved. - For po, po line and receiving line",Verified,,
+Deployed Items,General,In add arrival - remove QC inspector as mandatory field,Verified,,
+Deployed Items,General,"In Arrival step 2, change the view from grid view to add receiving type view. PO line on the top and then add receiving in an indented way. the attributes can be same as that of add receiving. If multiples po lines include all",Verified,,
+Deployed Items,General,Shipment list view - Account should be supplier that is copied from PO,Verified,,
+Deployed Items,General,Shipment list view - Shipping address and ship via can come from PO,Verified,,
+Deployed Items,General,"If a stock line has states > created.. received or any other,  add the option to split line. It can be similar to  add Receiving ",Verified,@Harika Guntamukkala,
+Deployed Items,General,"Invoice sync for inbound and outbound - Outbound sync is not working
+standardize account currency resolution with useAccountCurrency hook (",,,
+Deployed Items,update,),Verified,,
+Deployed Items,update,"Introduce a centralized
+useAccountCurrency",,,
+Deployed Items,update,"hook to unify currency resolution logic across Account Details components.
+add quick look action for invoices in search results (",Verified,,
+Deployed Items,Enable Search for Invoice,),Verified,,
+Deployed Items,Enable Search for Invoice,Integrate,,,
+Deployed Items,Enable Search for Invoice,"ESearchCategory.Invoices
+into
+useSearchQuickLookActions
+to enable opening the invoice information modal directly from search results.",,,
+Deployed Items,Enable Search for Invoice,Added SR alternative chip (,,,
+Deployed Items,Enable Search for Invoice,),Verified,,
+Deployed Items,Enable Search for Invoice,"If a SR has an alternative available, indicate as shown on
+— should be done on list view, info pane, hero card, and line details.",,,https://www.figma.com/design/v5c0jzDP5riw5RFBNzIyqe/Chip-1---Designs?node-id=49452-41459&t=Bljtif8Q…
+Deployed Items,Enable Search for Invoice,"Invoice Enhancements and Sync
+integrate invoices into search and task context (",,,
+Deployed Items,feat,),Verified,,
+Deployed Items,feat,Integrate Invoices into global search with dedicated iconography and result mapping.,Verified,,
+Deployed Items,feat,Enable task context support for Invoices to allow context-aware task and note creation.,Verified,,
+Deployed Items,feat,Add CommonFabActions to InvoiceDetails FAB.,Verified,,
+Deployed Items,Update InvoiceDetails tabs,rename 'Activity' to 'Timeline' and remove the 'Related' tab.,Verified,,
+Deployed Items,Search Integration,"Invoices
+to",,,
+Deployed Items,Search Integration,"ESearchCategory
+, implemented its icon, DTO types, and result title mapping in
+apps/crm/src/api/search.ts",,,
+Deployed Items,Search Integration,.,Verified,,
+Deployed Items,Task Context,"Invoice
+as a new task context (
+context.18
+) and added corresponding utility mapping in
+entityContext.ts",,,
+Deployed Items,Task Context,.,Verified,,
+Deployed Items,UI Enhancements,CommonFabActions,,,
+Deployed Items,UI Enhancements,into the Invoice details FAB to enable quick task/note actions.,Verified,,
+Deployed Items,UI Enhancements,"Renamed the ""Activity"" tab to ""Timeline"" and removed the redundant ""Related"" tab in the Invoice details view.",Verified,,
+Deployed Items,Update,"Changes on Invoice details page (
+)",,,
+Deployed Items,Update,"Refactor Invoice Lines -> OrderLine's with OrderLine columns on Order Details Line Tab, with Invoice column and no purchase related columns.",Verified,,
+Deployed Items,Update,"In Invoice details Costs and Payments Island summary, ""paid"" refers to a Boolean value from the backend (displayed as yes/no on UI).",Verified,,
+Deployed Items,New fields,"insured balance, remaining insurance limit, and insurance status.",Verified - reported issue(,,
+Deployed Items,Harika Guntamukkala,"Save button is enabled for the invoice HK26SO00037 under Invo... | Chip1-Integration | Microsoft Teams
+)
+enhance invoice shipping and payment forms with additional fields (
+)",,,
+Deployed Items,update(invoices),Added billing address autocomplete and a new follow-up emails section to the Invoice Payments form.,Verified,,
+Deployed Items,update(invoices),"Integrated tracking information (tracking number, ship date) and shipping contact details into the Shipping Info form.",Verified,,
+Deployed Items,update(invoices),Enhanced the invoice delivery section with multi-email tag input support and a dedicated URL field for the billing website.,Verified,,
+Deployed Items,update(invoices),"Dev items
+bump pnpm to 10.33.3 (
+)
+create a skill for pdf template editing (uses transaction service)",,,
+Deployed Items,Type Safety & Locales,"TCrmInvoice
+to make
+account
+mandatory and added missing localization strings for search categories and invoice tabs.",,,
+Deployed Items,Type Safety & Locales,Refine Invoice type definitions and provide necessary localization updates.,,,
+Deployed Items,Type Safety & Locales,"Expanded the invoice type definitions and validation schema to include shipping options, account numbers, and notes.",,,
+Deployed Items,Type Safety & Locales,Added corresponding translations for all new invoice fields and sections in the locale configuration.,,,
+Deployed Items,Type Safety & Locales,Improved contact fallback logic in the Invoice Info Summary to ensure a contact ID is always available.,,,

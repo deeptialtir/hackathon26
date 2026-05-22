@@ -1,0 +1,35 @@
+# 27-APRIL26-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+Release date
+ : 2026.04.23
+ 
+DB changes
+ :
+Connect
+ : No change
+Platform
+ : No change
+Notification : 
+No change
+Branch
+  : hotfix/2026.04.24
+ 
+Components Involved
+ 
+& Artefacts
+:
+Chip1 Transaction                            
+    : 2026.04.24.15
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+MC1 stock and for CAT it shows only one available Stock, we need to check if all stock migrated and marked available
+Sanity checks for transaction service

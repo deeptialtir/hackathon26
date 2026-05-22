@@ -1,0 +1,154 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Deepti Vaidyula ,  @Harika Guntamukkala",,
+Metadata,Release Info,Release date,2026.04.02,,
+Metadata,Release Info,DB changes,Connect : release/2026.04.02,,
+Metadata,Release Info,Platform,release/2026.04.02,,
+Metadata,Release Info,Notification, No change,,
+Metadata,Release Info,Branch,release/2026.04.02,,
+Artefacts,Artefacts,Chip1 Part,2026.04.02.0,,
+Artefacts,Artefacts,Chip1 Transaction,2026.04.02.3,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2026.04.02.5,,
+Artefacts,Artefacts,fn-connect,2026.04.02.1,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,## QE DOCUMENTATION LINK,HTTPS://ALTIRLLC.SHAREPOINT.COM/:W:/R/SITES/ALTIR-CHIP1/SHARED%20DOCUMENTS/GENERAL/QUALITY%20ENGINEERING/PROJECT%20DOCUMENTS/CHIP1%20QE%20DOCUMENTATION.DOCX?D=W75141A22221E423A9DD922E367268BB5&CSF=1&WEB=1&E=GWICGH,,
+Deployed Items,General,Add PO,,,
+Deployed Items,outbound mapping,supplier account number (supplier_info.account_number → purchase_account),Verified,,
+Deployed Items,outbound mapping,Add PO,,,
+Deployed Items,outbound mapping,CPN → SPN(spPart) (do NOT use the incorrectly created SPL field — remove that),Verified,,
+Deployed Items,outbound mapping,Confirm Incoterms,,,
+Deployed Items,outbound mapping,and city are mapped in PO outbound (he confirmed they are — just document/close this),Verified,,
+Deployed Items,Add PO outbound mapping,line_posted attribute (PO line posted/locked flag),Verified,,
+Deployed Items,Add PO outbound mapping,"Check if backend is populating part reference fields (ECN, ROHAS, supplier package etc.) from global part into PO — confirm yes or no - Confirmed With Habib
+{NO}- It says NO",,,
+Deployed Items,Add PO outbound mapping,"Check specific account
+(ID posted in chat by Sai) to confirm if any inbound update came through — to validate sync is working for that account - Already Checked In the call & confirmed that we've received update event. - Confirmed By Nikhil",,,
+Deployed Items,Change log,Bulk Add QC Inspector - PO & Stock (,,@Deepti Vaidyula,
+Deployed Items,Change log,),Verified,@Deepti Vaidyula,
+Deployed Items,Dashboard,Add Inactive Accounts Activity card instead of Account Tags (conditionally) (,,,
+Deployed Items,Dashboard,") - enabled on stage
+enhance task handling for Reconfirm Excess actions (",Verified,,
+Deployed Items,feat(task),),Verified,,
+Deployed Items,feat(task),Fix pricing formatting with precise and fixed-5 options (,,,
+Deployed Items,feat(task),),Verified,,
+Deployed Items,feat(task),This change enables support for precise and fixed-5 number formats in various sections of the pricing module to ensure consistent and accurate display. Left: production | Right: local,,,
+Deployed Items,feat(task),"Purchase Order Updates - 2026.04.01 (
+)",,,
+Deployed Items,QE Remarks,"Validate outbound/inbound mapping for supplier fields (
+approved-as-supplier - N/A in API-Hub
+,
+payment terms
+,
+shipping method",,,
+Deployed Items,QE Remarks,"N/A in API-Hub
+,
+account number
+) — confirm all are correctly mapped and syncing
+offers and sr (",,,
+Deployed Items,(feedback,") - This PR cover below
+)
+1. Remove auto-population of suggested suppliers when requesting the offer. Should not be auto added",verified items,,
+Deployed Items,(feedback,"Done
+2. SR - Fab actions - create purchase order - implement the add to an existing purchase order flow",Verified,,
+Deployed Items,(feedback,"In-Progress - Dev Inprogress
+3. Hide buyers KPI section on PO line",,,
+Deployed Items,(feedback,"Done
+4. On PO line - upon clicking on send email - change the status from created approved to created confirmation requested.",Verified,,
+Deployed Items,(feedback,"In-Progress - Dev Inprogress
+5. Move market condition field from part requirements to opportunity section on RFQ",,,
+Deployed Items,(feedback,"Done
+6. Relabel supplier to suggested suppliers on SR",Verified,,
+Deployed Items,(feedback,"Done
+7. IF SO is already approved Fix SR created from Sales Order going into ""Open"" instead of ""Purchase Requested"" — (Generally happening for second sourcing req onwards)",Verified,,
+Deployed Items,(feedback,Done,Verified,@Umamahesh,
+Deployed Items,(feedback,Add supplier_info.shipping_method and supplier_info.account_number to the account detail accordion (below payment details section) - DONE,Verified,,
+Deployed Items,(feedback,Pre-populate shipping method and shipping account number on Create PO form from the supplier account - DONE,Verified,,
+Deployed Items,(feedback,"Remove duplicate ""Approved"" field from supplier page — keep only ""Approved for Purchase"" - DONE",Verified,,
+Deployed Items,(feedback,"Add ECN US, ECN Local, HT USA, ROHAS (free-form text, not dropdown), and Supplier Package (free-form text, second row) fields to Create PO — pre-populate from part details when part is selected. Apply same to Edit PO so both forms are identical. - Added supplier package
+(rest is pending)- Krupa mentioned it just UI field by default empty",,,
+Deployed Items,(feedback,Map SPN/CPN to the CPN field from API (not the new SPL field — do not update that mapping). Confirm with Nikhil on the outbound mapping side. - DONE,Verified,,
+Deployed Items,(feedback,Make CPN/SPN field optional (not required) on the PO line - DONE- Krupa confirmed it should be optional only,,,
+Deployed Items,(feedback,Change ROHAS from dropdown to free-form text everywhere in the application — do this in a batch across all screens- Still a dropdown,,,
+Deployed Items,(feedback,Fix CPN not saving on PO — that is a bug - DONE,Verified,,
+Deployed Items,(feedback,Apply gray color treatment to closed PO lines (same as what was done for SO and RFQ) - DONE,Verified,,
+Deployed Items,(feedback,"Implement the ""include PDF attachment"" optional checkbox on the PO Send Email screen (requires backend coordination)- I dont see any such option",,,
+Deployed Items,(feedback,Ensure bank charges section is pushed to production (currently on stage only),verified,,
+Deployed Items,(feedback,Align Create PO and Edit/Update PO forms to have the same fields - DONE,,,
+Deployed Items,(feedback,Add shipping account number next to Ship Via in the PO details view — move to next line so all shipping fields are grouped together - DONE,verified,,
+Deployed Items,(feedback,"Check if supplier_info.shipping_method is used anywhere in the account UI/payload — confirm where it is and is not presented - DONE- Seems to be confirmation, not change",,,
+Deployed Items,(feedback,"Fix Sentry CancelledError downgrade and add Purchase Order part source (
+)",,,
+Deployed Items,(feedback,Fix CancelledError not being downgraded to warning in Sentry on minified production builds — add fallback check on exception value field,,,
+Deployed Items,(feedback,Add,,,
+Deployed Items,(feedback,"PURCHASEORDER
+to part source enum, config, and translations so the Source column and filter include ""Purchase Order""
+remove tax rate from summary and update billing label (",,,
+Deployed Items,fix(account details),")
+prevent crash on stale modal state after navigation (
+)",,@Deepti Vaidyula,
+Deployed Items,fix(modals),Fix,,,
+Deployed Items,TypeError,"Cannot destructure property 'isOpen' of undefined
+in ModalsProvider
+//altir-chip1.sentry.io/issues/109332437/?alert_rule_id=179716&alert_timestamp=1775113674340&…",,,
+Deployed Items,Fixes  https,PO - Add htsusa field (,,,
+Deployed Items,Fixes  https,),,@Umamahesh,
+Deployed Items,Fixes  https,PO - Add part extended search support (,,,
+Deployed Items,Fixes  https,),,@Umamahesh,
+Deployed Items,Fixes  https,PO - Pre-populate part details (,,,
+Deployed Items,Fixes  https,")
+replace credit insurance info with payment terms in  AccountCreditIsland and add shipping method in AccountInvoicingIsland (",,@Umamahesh,
+Deployed Items,refactor(account details),),,@Deepti Vaidyula,
+Deployed Items,refactor(account details),"Update backend event publishing code to use ""sourcing request"" instead of ""purchase request"" everywhere (timeline, activity log, status change events) ->",,,
+Deployed Items,refactor(account details),Done,,@Umamahesh,
+Deployed Items,refactor(account details),"Implement offer count on SR list view (cross-entity aggregation — parked earlier, now to be picked up)-> it should be detailed view,",,@Umamahesh,
+Deployed Items,refactor(account details),Not a blocker,,,
+Deployed Items,refactor(account details),"Set default task priority to ""Medium"" on task creation->",,,
+Deployed Items,refactor(account details),Done,,@Umamahesh,
+Deployed Items,refactor(account details),for SO and SO details,,@Harika Guntamukkala,
+Deployed Items,refactor(account details),ROHS needs to changed to Apex ROHS,Verified,,
+Deployed Items,refactor(account details),Pass Sourcing Type to backend ,Verified,,
+Deployed Items,refactor(account details),make ROHS editable in details section,Verified,,
+Deployed Items,refactor(account details),Changing the sequence of Date Code week and date code year ,Verified,,
+Deployed Items,refactor(account details),remove phone number required validation on Create RFQ flow,Verified,,
+Deployed Items,refactor(account details),SO,,,
+Deployed Items,refactor(account details),Labels set default value to false - Srinidhi  - DONE,,@Deepti Vaidyula,
+Deployed Items,refactor(account details),Zohaib need to check this. We are sending false → 0 but they are not resolving it.,,,
+Deployed Items,refactor(account details),Send MFG name to xcrm - Srinidhi - DONE,,@Deepti Vaidyula,
+Deployed Items,refactor(account details),PROD and ROHS if,not syncing - Srinidhi - DONE,@Deepti Vaidyula,
+Deployed Items,refactor(account details),Account- Address Issue,,,
+Deployed Items,refactor(account details),Code change - Teja - This is to avoid duplicate request after account address sync is done but UI not refreshed,,@Deepti Vaidyula,
+Deployed Items,PO Sync,PO inbound issues,,@Umamahesh,
+Deployed Items,PO Sync,ROHS is not displayed on UI —,Verified,@Umamahesh,
+Deployed Items,PO Sync,Product is saved as XCRM key instead of resolved value —,,@Umamahesh,
+Deployed Items,PO Sync,"Lookup (its a string in API-HUB)-Okay, has to be value then",,@Umamahesh,
+Deployed Items,PO Sync,Sender Country is saved as XCRM key instead of resolved value —,,@Umamahesh,
+Deployed Items,PO Sync,"Lookup (Fixed In API-Hub, Transaction)",Verified,@Umamahesh,
+Deployed Items,PO Sync,Package is saved as XCRM key instead of resolved value —,,@Umamahesh,
+Deployed Items,PO Sync,"Lookup (supplierPackage - its a string in API-HUB)-Okay, has to be value then",,@Umamahesh,
+Deployed Items,PO Sync,"Payment details are
+(Zohaib needs to check)",not syncing,@Umamahesh,
+Deployed Items,PO Sync,SPN is,not syncing,@Umamahesh,
+Deployed Items,PO Sync,"Tax amount is
+(Calculated - Habib Changes Pending)",not syncing,@Umamahesh,
+Deployed Items,PO Sync,Buyer KPI is,not syncing,@Umamahesh,
+Deployed Items,PO Sync,I see only one user populated,,@Umamahesh,
+Deployed Items,PO Sync,Locked status is,not syncing,@Umamahesh,
+Deployed Items,PO Sync,Account number,not syncing- Verified,@Umamahesh,
+Deployed Items,PO Sync,PO outbound issues,,@Umamahesh,
+Deployed Items,PO Sync,Account Number is,not syncing —  - Verified,@Umamahesh,
+Deployed Items,PO Sync,SPN is,not syncing—   - Verified,@Umamahesh,
+Deployed Items,PO Sync,ROHS is,not syncing,@Umamahesh,
+Deployed Items,PO Sync,Internal and External Notes update is,not syncing correctly (correlationId: 61b3bddf-a244-453c-a583-e970126f93c1)—,@Umamahesh,
+Deployed Items,PO Sync,Still Issue,,@Umamahesh,
+Deployed Items,PO Sync,"Freight, Misc, and Bank Charges update is","not syncing correctly (correlationId: 96b3d3c5-425a-42d2-94c3-2138a390415b)— (Its Working. - Confirmed By UMA)- APex issue, not sync",@Umamahesh,
+Deployed Items,PO Sync,"Payment Details are
+(Zohaib needs to check)",not syncing  (correlationId: f2751e6d-7136-42a1-9eb0-57ca9da1c7ab),@Umamahesh,
+Deployed Items,PO Sync,RFQ→Quote,,@Deepti Vaidyula,
+Deployed Items,PO Sync,Quote→SO,,@Harika Guntamukkala,
+Deployed Items,PO Sync,"SO→PO
+,",,@Umamahesh,
+Deployed Items,PO Sync,PO→QC,,@Umamahesh,
+Deployed Items,PO Sync,"IB and OB Flows of all entities
+, PO attribute level sync checked",,"@Deepti Vaidyula, @Umamahesh",

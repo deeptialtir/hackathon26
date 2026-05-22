@@ -1,0 +1,10 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,good,,
+Metadata,Release Info,Prod release owner,@Umamahesh,,
+Metadata,Release Info,Release date,2026.04.13,,
+Metadata,Release Info,DB changes,Connect : No Change,,
+Metadata,Release Info,Platform,No Change,,
+Metadata,Release Info,Notification, No Change,,
+Metadata,Release Info,Branch,hotfix/2026.04.13,,
+Artefacts,Artefacts,Items Deployed, Ability to create RFQ → SR → Offer confirms basic workflow is functioning Seeing “Target price matched” at RFQ level validates the event service sanity BOM upload can also be tested as part of this flow,,

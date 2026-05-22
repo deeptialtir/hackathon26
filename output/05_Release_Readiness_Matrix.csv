@@ -1,0 +1,137 @@
+Release_File,Release_Label,Release_Date,Environment,Release_Status,DB_Changes,Platform_Branch,CHP_Items_In_Release,Req_Backlog_Coverage_%,Open_Gaps,Readiness_Score,Go_No_Go
+21-May26-20260522113104.csv,21-May26,2026-05-21,Stage,Good,,,1,0.1,None,100,GO
+20-May26-20260522113100.csv,20-May26,2026-05-20,Stage,Good,,,1,0.1,None,100,GO
+15-May26-20260522113056.csv,15-May26,2026-05-15,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+14-May26-20260522113052.csv,14-May26,2026-05-14,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+13-May26-20260522113048.csv,13-May26,2026-05-13,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+12-May26-20260522113043.csv,12-May26,2026-05-12,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+08-May-26-20260522113035.csv,08-May-26,2026-05-08,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+07-May-26-20260522113031.csv,07-May-26,2026-05-07,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+05-May-26-20260522113027.csv,05-May-26,2026-05-05,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+04-May26-20260522113023.csv,04-May26,2026-05-04,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+30-April26-20260522113019.csv,30-April26,2026-04-30,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+29-April26-20260522113014.csv,29-April26,2026-04-29,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+28-April26-20260522113006.csv,28-April26,2026-04-28,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+27-April26-hotfix-20260522112957.csv,27-April26-hotfix,2026-04-27,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+27-April26-hotfix_2-20260522113001.csv,27-April26-hotfix_2,2026-04-27,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+24-April26-hotfix-20260522112953.csv,24-April26-hotfix,2026-04-24,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+23-April26-20260522112949.csv,23-April26,2026-04-23,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+22-April26-hotfix-20260522112937.csv,22-April26-hotfix,2026-04-22,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+22-April26-hotfix2-20260522112943.csv,22-April26-hotfix2,2026-04-22,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+21-April26-20260522112930.csv,21-April26,2026-04-21,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+21-April26-hotfix-20260522112934.csv,21-April26-hotfix,2026-04-21,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+20-Apr26-hotfix-20260522112926.csv,20-Apr26-hotfix,2026-04-20,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+17-Apr26-20260522112922.csv,17-Apr26,2026-04-17,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+16-Apr26-hotfix-20260522112917.csv,16-Apr26-hotfix,2026-04-16,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+15-Apr26-20260522112910.csv,15-Apr26,2026-04-15,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+15-Apr26-hotfix-20260522112914.csv,15-Apr26-hotfix,2026-04-15,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+14-Apr26-20260522112905.csv,14-Apr26,2026-04-14,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+13-Apr26-20260522112900.csv,13-Apr26,2026-04-13,Stage,good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+10-April26-20260522112856.csv,10-April26,2026-04-10,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+09-April26-20260522112852.csv,09-April26,2026-04-09,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+07-April26-20260522112847.csv,07-April26,2026-04-07,Stage,Prod release owner:,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+03-April26-02-20260522112839.csv,03-April26-02,2026-04-03,Stage,Prod release owner:,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+03-April26-02-20260522112843.csv,03-April26-02,2026-04-03,Stage,Prod release owner:,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+02-April26-20260522112829.csv,02-April26,2026-04-02,Stage,Prod release owner:,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+01-April26-20260522112825.csv,01-April26,2026-04-01,Stage,Prod release owner:,,,2,0.1,None,100,GO
+31-March2026-20260522112817.csv,31-March2026,2026-03-31,Stage,Prod release owner:,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+31-March2026-hotfix-20260522112821.csv,31-March2026-hotfix,2026-03-31,Stage,Prod release owner:,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+29-March26-20260522112808.csv,29-March26,2026-03-29,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+26-March26-20260522112803.csv,26-March26,2026-03-26,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+24-March26-20260522112758.csv,24-March26,2026-03-24,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+23-March26-20260522112753.csv,23-March26,2026-03-23,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+20-March26-hotfix-20260522112747.csv,20-March26-hotfix,2026-03-20,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+18-March26-02-20260522112743.csv,18-March26-02,2026-03-18,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+18-March26-20260522112738.csv,18-March26,2026-03-18,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+17-March26-20260522112730.csv,17-March26,2026-03-17,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+17-March26_02-20260522112734.csv,17-March26_02,2026-03-17,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+11-March26-20260522112726.csv,11-March26,2026-03-11,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+27-Feb26-20260522112720.csv,27-Feb26,2026-02-27,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+26-Feb26-20260522112716.csv,26-Feb26,2026-02-26,Stage,Good,,,8,0.5,None,100,GO
+24-Feb26-20260522112704.csv,24-Feb26,2026-02-24,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+24-Feb26-20260522112710.csv,24-Feb26,2026-02-24,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+20-Feb26-20260522112658.csv,20-Feb26,2026-02-20,Stage,Good,,,4,0.2,None,100,GO
+16-Feb26-20260522112653.csv,16-Feb26,2026-02-16,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+12-Feb26-20260522112648.csv,12-Feb26,2026-02-12,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+5-Feb26-20260522112642.csv,5-Feb26,2026-02-05,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+3-Feb26-hotfix-20260522112636.csv,3-Feb26-hotfix,2026-02-03,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+2-Feb26-20260522112632.csv,2-Feb26,2026-02-02,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+30-Jan26-20260522112627.csv,30-Jan26,2026-01-30,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+29-Jan26-20260522112622.csv,29-Jan26,2026-01-29,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+27-Jan26-20260522112613.csv,27-Jan26,2026-01-27,Stage,Good,,,5,0.3,None,100,GO
+24-Jan26-20260522112618.csv,24-Jan26,2026-01-24,Stage,Good,,,28,1.7,None,100,GO
+12-Jan26-20260522112602.csv,12-Jan26,2026-01-12,Stage,Good,,,17,1.0,None,100,GO
+09-Jan26-hotfix-20260522112549.csv,09-Jan26-hotfix,2026-01-09,Stage,Good,,,1,0.1,None,80,GO
+05-Jan26-20260522112519.csv,05-Jan26,2026-01-05,Stage,Good,,,9,0.5,None,100,GO
+05-Jan26-20260522112557.csv,05-Jan26,2026-01-05,Stage,Good,,,9,0.5,None,100,GO
+23-Dec25-hotfix-20260522143523.csv,23-Dec25-hotfix,2025-12-23,Stage,Good,,,1,0.1,None,80,GO
+12-Dec25-20260522143516.csv,12-Dec25,2025-12-12,Stage,Good,,,26,1.5,None,100,GO
+8-Dec25 Release-20260522143509.csv,8-Dec25 Release,2025-12-08,Stage,Good,,,19,1.1,None,100,GO
+3-Dec25-hotfix-20260522143457.csv,3-Dec25-hotfix,2025-12-03,Stage,Good,,,2,0.1,None,80,GO
+02-Dec25-hotfix-20260522143451.csv,02-Dec25-hotfix,2025-12-02,Stage,Good,,,1,0.1,None,80,GO
+28-Nov25-20260522143443.csv,28-Nov25,2025-11-28,Stage,Good,,,9,0.5,None,100,GO
+25-Nov25-20260522143436.csv,25-Nov25,2025-11-25,Stage,Good,,,7,0.4,None,100,GO
+6 Nov25-hotfix-20260522143355.csv,6 Nov25-hotfix,2025-11-06,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+5 Nov25-20260522143348.csv,5 Nov25,2025-11-05,Stage,Good,,,11,0.7,None,100,GO
+31 Oct25-hotfix-20260522143342.csv,31 Oct25-hotfix,2025-10-31,Stage,Good,,,12,0.7,None,80,GO
+29 Oct25-hotfix-20260522143336.csv,29 Oct25-hotfix,2025-10-29,Stage,Good,,,2,0.1,None,80,GO
+28 Oct25-hotfix-20260522143330.csv,28 Oct25-hotfix,2025-10-28,Stage,Good - Conditional sign-off,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+27-Oct25(Sales Release)-20260522143322.csv,27-Oct25(Sales Release),2025-10-27,Stage,Good,,,19,1.1,None,100,GO
+15 Oct25-hotfix-20260522143242.csv,15 Oct25-hotfix,2025-10-15,Stage,Good,,,2,0.1,None,80,GO
+10 Oct25-20260522143236.csv,10 Oct25,2025-10-10,Stage,Good,,,8,0.5,None,100,GO
+10 Oct25-hotfix-20260522143248.csv,10 Oct25-hotfix,2025-10-10,Stage,Good,,,1,0.1,None,80,GO
+30-Sep25-hotfix-20260522143229.csv,30-Sep25-hotfix,2025-09-30,Stage,Good,,,1,0.1,None,80,GO
+24-Sep25-hotfix-20260522143223.csv,24-Sep25-hotfix,2025-09-24,Stage,Good,,,3,0.2,None,80,GO
+23-Sep25-hotfix-20260522143140.csv,23-Sep25-hotfix,2025-09-23,Stage,Good,,,1,0.1,None,80,GO
+16-Sep25-hotfix-20260522143125.csv,16-Sep25-hotfix,2025-09-16,Stage,Good,,,13,0.8,None,80,GO
+12-Sep25-hotfix-20260522143116.csv,12-Sep25-hotfix,2025-09-12,Stage,Good,,,4,0.2,None,80,GO
+10-Sep25-20260522143133.csv,10-Sep25,2025-09-10,Stage,Good,,,42,2.5,None,100,GO
+03-Sep25-hotifx-20260522143106.csv,03-Sep25-hotifx,2025-09-03,Stage,good,,,2,0.1,None,100,GO
+25-Aug25-hotfix-20260522143058.csv,25-Aug25-hotfix,2025-08-25,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+22-Aug25-20260522143052.csv,22-Aug25,2025-08-22,Stage,Good,,,75,4.4,None,100,GO
+13-Aug25-hotfix-20260522143044.csv,13-Aug25-hotfix,2025-08-13,Stage,Good,,,5,0.3,None,80,GO
+06-Aug25-hotfix-20260522143036.csv,06-Aug25-hotfix,2025-08-06,Stage,Good,,,9,0.5,None,80,GO
+01-Aug25-hotfix-20260522143031.csv,01-Aug25-hotfix,2025-08-01,Stage,Good,,,4,0.2,None,80,GO
+29-July25-hotfix-20260522143025.csv,29-July25-hotfix,2025-07-29,Stage,Good,,,1,0.1,None,80,GO
+25-July25(data migration)-20260522143020.csv,25-July25(data migration),2025-07-25,Stage,Good,,,50,3.0,None,100,GO
+14-July25-hotfix-20260522143014.csv,14-July25-hotfix,2025-07-14,Stage,Good,,,3,0.2,None,80,GO
+08-July25-hotfix-20260522143008.csv,08-July25-hotfix,2025-07-08,Stage,Good,,,8,0.5,None,80,GO
+02-July25-hotfix-20260522143002.csv,02-July25-hotfix,2025-07-02,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+26-Jun25-20260522142957.csv,26-Jun25,2025-06-26,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+19-Jun25-hotfix-20260522142947.csv,19-Jun25-hotfix,2025-06-19,Stage,Good,,,1,0.1,None,80,GO
+11-Apr25-20260522142938.csv,11-Apr25,2025-04-11,Stage,Prod release owner:,,,2,0.1,None,100,GO
+07-Apr25-20260522142924.csv,07-Apr25,2025-04-07,Stage,Good,,,6,0.4,None,100,GO
+07-Apr25-hotfix-20260522142930.csv,07-Apr25-hotfix,2025-04-07,Stage,Good,,,1,0.1,None,80,GO
+01-Apr25-hotfix-20260522142918.csv,01-Apr25-hotfix,2025-04-01,Stage,Good,,,3,0.2,None,80,GO
+13-Mar25-20260522141847.csv,13-Mar25,2025-03-13,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+28-Feb25-20260522141841.csv,28-Feb25,2025-02-28,Stage,Good,,,6,0.4,None,100,GO
+24-Feb25-20260522141836.csv,24-Feb25,2025-02-24,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+19-Feb25-hotfix-20260522141830.csv,19-Feb25-hotfix,2025-02-19,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+12-Feb25-20260522141824.csv,12-Feb25,2025-02-12,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+06-feb25-20260522141818.csv,06-feb25,2025-02-06,Stage,Good,,,2,0.1,None,100,GO
+31-Jan25-hotfix-20260522141807.csv,31-Jan25-hotfix,2025-01-31,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+28-Jan25-hotfix-20260522141812.csv,28-Jan25-hotfix,2025-01-28,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+22-Jan25-20260522141757.csv,22-Jan25,2025-01-22,Stage,Good,,,5,0.3,None,100,GO
+10-Jan25-20260522141751.csv,10-Jan25,2025-01-10,Stage,Good,,,14,0.8,None,100,GO
+08-Jan25-20260522141744.csv,08-Jan25,2025-01-08,Stage,Good,,,8,0.5,None,100,GO
+31-Dec24-20260522141739.csv,31-Dec24,2024-12-31,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+20-Dec24-20260522141733.csv,20-Dec24,2024-12-20,Stage,Good,,,1,0.1,None,100,GO
+18-Dec24-hotfix-20260522141725.csv,18-Dec24-hotfix,2024-12-18,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+17-Dec24-20260522141717.csv,17-Dec24,2024-12-17,Stage,Good,,,21,1.2,None,100,GO
+11-Dec24-hotfix-20260522141712.csv,11-Dec24-hotfix,2024-12-11,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+05-Dec24-20260522141700.csv,05-Dec24,2024-12-05,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+05-Dec24-hotfix-20260522141705.csv,05-Dec24-hotfix,2024-12-05,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+02-Dec24-20260522141654.csv,02-Dec24,2024-12-02,Stage,Good,,,7,0.4,None,100,GO
+28-Nov24-hotfix-20260522141647.csv,28-Nov24-hotfix,2024-11-28,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+26-Nov24-hotfix-20260522141642.csv,26-Nov24-hotfix,2024-11-26,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+22-Nov24-20260522141636.csv,22-Nov24,2024-11-22,Stage,Good,,,12,0.7,None,100,GO
+20-Nov24-hotfix-20260522141624.csv,20-Nov24-hotfix,2024-11-20,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL
+19-Nov24-hotifx-20260522141615.csv,19-Nov24-hotifx,2024-11-19,Stage,Good,,,2,0.1,None,100,GO
+18-Nov24-20260522141606.csv,18-Nov24,2024-11-18,Stage,,,,0,0.0,Missing release status; No CHP traceability in release notes,70,CONDITIONAL
+12th Nov Release-20260522143409.csv,12th Nov Release,,Stage,Good,,,26,1.5,None,100,GO
+19th Nov Release-20260522143421.csv,19th Nov Release,,Stage,Good,,,9,0.5,None,100,GO
+13th Nov Release(Purchase Release)-20260522143415.csv,13th Nov Release(Purchase Release),,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+30- March2026-20260522112812.csv,30- March2026,,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+7th Nov Release-20260522143400.csv,7th Nov Release,,Stage,Good,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+QE Release Notes 2026-20260522112607.csv,QE Release Notes 2026,,Stage,Prod release owner:,,,0,0.0,No CHP traceability in release notes,85,CONDITIONAL
+19th Nov-hotfix-20260522143429.csv,19th Nov-hotfix,,Stage,Good,,,0,0.0,No CHP traceability in release notes,65,CONDITIONAL

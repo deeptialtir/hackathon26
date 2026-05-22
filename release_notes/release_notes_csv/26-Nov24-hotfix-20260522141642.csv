@@ -1,0 +1,10 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,@Deepti Vaidyula,,
+Metadata,Release Info,Release date,2024.11.26,,
+Metadata,Release Info,DB changes,Connect : No change,,
+Metadata,Release Info,Platform,release/2024.11.26,,
+Metadata,Release Info,Key Clock,No change,,
+Metadata,Release Info,Branch,No Change,,
+Artefacts,Artefacts,Private ( https,//app.clickup.com/t/8651091/CHP-1063 ) ## TESTING NOTES Add a contact to an account in CRM Send an MC1 invitation to the user Check the email content for OTP and invitation Smoke tests,,

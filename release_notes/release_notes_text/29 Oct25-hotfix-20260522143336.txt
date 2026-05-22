@@ -1,0 +1,77 @@
+# 29 OCT25-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Harika Guntamukkala
+ 
+@Umamahesh
+ 
+DB changes
+ :
+Connect
+ : No changes
+Platform
+ : No changes
+Notification : 
+No changes
+ 
+Branch
+  : hotfix/2025.10.29
+ 
+Components Involved
+ 
+& Artefacts
+:
+Chip1 Part        
+                                     : 2025.10.28.2
+Chip1 Transaction  
+    
+                      
+    :
+ 
+2025.10.28.8
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+Nexperia prices to show in CRM-
+PASS
+Sales order line count calculation fix-Migration to be finished
+Dashboard : added account counts to trending manufacturers-Product signoff
+Added case-insensitive support fo tags-related cards 
+RFQ lines items counts-Migration to be finished
+Status Migration endpoint fix-Migration to be finished
+Issues found on stage:
+Private (
+https://app.clickup.com/t/8651091/CHP-3410
+)
+issues found on prod
+Private (
+https://app.clickup.com/t/8651091/CHP-3411
+)-
+FIXED
+ in a PATCH to hotfix
+
+## MC1 SANITY TESTS
+
+Basic Sanity looks good
+
+## CRM SANITY TESTS
+
+Basic Sanity looks good
+ 
+
+## TESTING NOTES:
+
+Verified the hotfix change for  nexperia part changes, remaining changes passed with product signoff . QE can take look on later stage

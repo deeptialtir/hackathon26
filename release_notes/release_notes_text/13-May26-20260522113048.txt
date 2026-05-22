@@ -1,0 +1,180 @@
+# 13-MAY26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+ 
+@Harika Guntamukkala
+ 
+Release date
+ : 2026.05.13
+ 
+DB changes
+ : 
+Connect
+ : release/2026.05.13
+Platform
+ : release/2026.05.13
+Notification : 
+No Change
+ 
+Branch
+  : release/2026.05.12
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Account         
+    
+                        
+ : 2026.05.13.0
+Chip1 Transaction  
+    
+                        
+ : 2026.05.13.4
+Chip1 CRM WebUI                 
+    
+          
+: 2026.05.13.6
+
+## LIST OF DEPLOYED ITEMS
+
+@Harika Guntamukkala
+ 
+feat(crm): Reorder Account Contacts 3-dot context menu items (
+#3949
+) - 
+Verified
+Feat : Added new fields on Create a Quote and Edit Quote  (
+#3944
+)  -
+ Enabled on dev
+New Added fields :
+Delivering To
+Ship Via
+Shipping Account Number
+Inco terms
+Inco City
+feat: generate PDF per quote item instead of whole quote when specific items are selected (
+#3962
+) 
+Verified
+Added QUOTE_ITEM export type to ECrmExportFileType enum
+Updated export mutation to accept dynamic type override per call
+Modified context menu PDF actions to send quote item ID (type QUOTE_ITEM) instead of quote ID (type QUOTE) when acting on a specific row
+Updated RFQ line FAB bulk PDF action: sends QUOTE_ITEM with selected item IDs when items are checked, falls back to QUOTE with quote ID when nothing selected
+Enabled "Generate Quote PDF" button always (no longer gated on selection)
+Plumbed quoteItemId through QuotePdfMenuItems → useQuotePdfActions so both Quotes list and RFQ Quotes list benefit
+Backward compatible — existing callers of useExportEntityPdf unchanged; type override is optional
+feat: split "View PDF" menu into "View Apex PDF" and "View CRM PDF" in quote/RFQ lists (
+#3951
+) 
+Verified
+Split the single "View PDF" menu item into two separate entries — "View Apex PDF" (uses quote.crmId) and "View CRM PDF" (uses 
+quote.id
+), both using the export PDF API with the appropriate ID
+Extracted a reusable QuotePdfMenuItems component shared between the RFQ detail quote list and the standalone quotes list
+Added viewApexPdf / viewCrmPdf translation keys; removed dependency on getQuotePdfCrmDeepLink and region lookup since the export API already
+fix: hide outbound-only FAB actions for inbound shipments (
+#3958
+) 
+Verified
+Hide "Generate Packing Slip", "Generate CRR", and "Create Invoice" from the ShipmentDetails FAB menu for inbound shipments, where these actions are not applicable
+Related accounts - Show all accounts in the system (
+#3961
+) 
+As a user - I should be able to select any accounts from the system as related accounts.
+Backend is in develop
+@Deepti Vaidyula
+ 
+feat(invoice): Add cancel invoice flag and align additional cost calculation in summary (
+#3952
+) 
+Verified
+Add cancel invoice checkbox to invoice people form/island
+QE remarks: 
+Link
+Replace misc costs label with additional cost in summary (aligned with footer calculation)
+Refactor calculateAdditionalCostAmount to use explicit charge-field sum (shippingCharges + bankCharges + miscCharges + freightInsuranceCharges + tax) instead of total - subtotal fallback
+feat: add campaign end date with add-contacts gating, fix goal-modal auto-close and dark-mode chip (
+#3954
+)  
+Verified
+feat: add campaign endDate field to types, create/update payloads, and validation schema 
+feat: add end date & time pickers to campaign creation form (GeneralDetailsSection)
+feat: wire endDate through create & update flows, show in campaign hero and editable island
+feat: gate "Add Contacts" button + modal behind end-date check, show toast when campaign expired
+fix: campaign-goal creation modal now auto-closes after success (wrapSubmit default onSuccess)
+fix: remove hardcoded primary.contrastText from GoalChip to fix dark-mode contrast
+refactor: extract buildEndDateString and isCampaignEnded into shared utils/campaign.ts
+i18n: add campaign end date translations
+fix(invoices): remove multiline PDF actions from invoices list, not supported by backend (
+#3956
+) 
+Verified
+fix: hide Packing Slip, CRR and Create Invoice from inbound shipment context menu (
+#3957
+) 
+Verified
+Conditionally render Packing Slip, CRR and Create Invoice menu items based on 
+shipmentType
+Refactor invoice actions into table footer for clarity (
+#3941
+) 
+This pull request replaces the floating action button (InvoicesFab) with a footer action bar in the table's existing footer. Actions such as "Generate CRR", "Generate Packing Slip", and "Generate Invoice PDF" are now accessible through this footer. The selection state is centralized in `InvoicesSelectionStore` for consistency and easier management. Additionally, unused code related to the stock-line selection was removed for better maintainability. Styled components are used to enhance button styling.*See PR for images.*
+feat(crm): change insuranceStatus from free-text to lookup (
+#3965
+) 
+Verified
+Changed insuranceStatus type from 
+string
+ to 
+TServerLookup
+ 
+Dev only
+chore(security): harden supply chain with install script blocking and dependency upgrades (
+#3955
+) 
+Lock down install scripts: add onlyBuiltDependencies to block arbitrary lifecycle scripts from dependencies 
+Upgrade axios from ^1.15.0 to ^1.15.2 (fixes 8+ CVEs including prototype pollution, CRLF injection, SSRF)
+Upgrade qs from ^6.14.0 to ^6.15.1 (fixes DoS vulnerabilities)
+Upgrade react-router-dom from ^6.29.0 to ^6.30.2 (fixes XSS via open redirect)
+Refactor : using functions from date-fns (
+#3960
+)
+
+## OPEN ISSUES ON STAGE
+
+1. I have cancelled the invoice. But I don't see it reflecting in the status of Invoice on Apex and Xcrm.
+﻿Chip1Apex
+﻿
+corr_id: 928fe353-be3d-42c6-9532-21ebd9bb8b3b
+And also in the PDF generated for invoice. We should say that it's cancelled.
+We are in a process of adding a status called 'Cancelled'
+﻿
+2. The bank charges are mapped to processing charges in the backend. This needs to be displayed in the UI as well. 
+
+https://crm.stage.chip1.info/sales/invoices/6a057420b169dc4d26f64ad7
+
+### FIXED ON STAGE:
+
+ 
+1. Seeing all SO and Stocklines in Shipments here. 
+FIXED for SO
+
+https://crm.stage.chip1.info/warehouse/shipments/6a03275f2f985d7581c10075
+ We are fetching all SO lines when there is no SO mapping in shipment.
+ 
+2. Without arrival checks the shipment is created in inbound instead of outbound, can you check once 
+FIXED
+
+https://crm.stage.chip1.info/warehouse/shipments/6a0496d0e50d286e9254c6d2
+ 
+3. The processing charges are calculated for invoice but is not in the UI. 
+
+https://crm.stage.chip1.info/sales/invoices/6a04854b2f1cc66e9cb64014
+BE FIXED

@@ -1,0 +1,130 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Deepti Vaidyula ,  @Harika Guntamukkala",,
+Metadata,Release Info,Release date,2026.04.28,,
+Metadata,Release Info,DB changes,Connect : No change,,
+Metadata,Release Info,Platform,release/2026.04.28,,
+Metadata,Release Info,Notification, No change,,
+Metadata,Release Info,Branch,release/2026.04.28,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2026.04.28.1,,
+Artefacts,Artefacts,Chip1 Webui,2026.04.28.0,,
+Deployed Items,General,"fix for
+duplicate id generation.",,,
+Deployed Items,General,(only BE change),Verified,,
+Deployed Items,feat(sr-fab-action),Attach Purchase Order changes (,,,
+Deployed Items,feat(sr-fab-action),")
+offer issues (
+)",Verified,,
+Deployed Items,fix,"On the market offers list view , can you please have this pattern of showing
+""-""",,,
+Deployed Items,fix,for those offers that doesn't have price,Verified,,
+Deployed Items,PO Creation from Offer,"For some offers, the
+date code
+and other data that should come from the",,,
+Deployed Items,PO Creation from Offer,"Sourcing Request
+are missing. if some data is missing on
+offers
+but available on",,,
+Deployed Items,PO Creation from Offer,SR,,,
+Deployed Items,PO Creation from Offer,we should allow user to copy it on PO creation form,Verified,,
+Deployed Items,PO Creation from Offer,PO & Stock Changes - 23.04.2026 (,,,
+Deployed Items,PO Creation from Offer,),Verified,,
+Deployed Items,refactor(invoice),Consolidate date formatting (,,,
+Deployed Items,refactor(invoice),")
+remove unused request ownership logic and clean up UI components (",Verified,,
+Deployed Items,refactor,),Verified,,
+Deployed Items,refactor,"Removed the unused
+resolveDefaultRequestOwnershipAssignee
+utility and cleaned up the
+useDefaultRequestOwnershipAssignee
+hook.",,,
+Deployed Items,refactor,"Simplified the conditional logic for the
+unassigned
+prop within the",,,
+Deployed Items,refactor,"AllAccountList
+component.",,,
+Deployed Items,refactor,Refactored,,,
+Deployed Items,refactor,"ContactMethodsCells
+styling to keep email and phone type tags adjacent to their values by removing redundant flex properties.
+replace unified email/phone columns with distinct ContactMethodsCells components across tables (",,,
+Deployed Items,refactor,),Verified,,
+Deployed Items,refactor,"This PR centralizes the display logic for contact methods (emails and phone numbers) across various CRM tables. By moving cell rendering logic from individual column definitions into a dedicated shared component, we ensure visual consistency, reduce code duplication, and improve maintainability.",,@Harika Guntamukkala,
+Deployed Items,refactor,"Mapping Opportunity origin source for Chip1Website (only db change)
+add default filter overrides for excluded stock statuses (",Verified,,
+Deployed Items,feat(stock -> PartList),")
+add aggregated allocation summary display to Stock tab market activity (
+)
+add aggregated Cell to show the total for the quantity allocation column
+add salesPerson field to RFQ payload (",Verified,,
+Deployed Items,feat,")
+*See PR for images.*
+standardize and enhance MPN Search in CRM Filters (",Verified,,
+Deployed Items,feat,")
+*See PR for images.*
+add null check for email property when matching contacts in account modals (
+)",Verified,,
+Deployed Items,fix,"Added
+e.email
+presence checks before executing string operations to prevent runtime crashes during contact matching in",,,
+Deployed Items,fix,"AttachAccountTable
+and",,,
+Deployed Items,fix,"AttachRFQsAccountModal
+.
+update leadTime lookup source from RFQ to Quote category in QuoteItemForm (
+)",,,
+Deployed Items,fix,"Updated the
+leadTime
+field to fetch options from",,,
+Deployed Items,fix,"Quote
+lookups instead of",,,
+Deployed Items,fix,RFQ,,,
+Deployed Items,fix,"lookups
+update marketplace terminology to third party (
+) - DONE",Verified,,
+Deployed Items,fix,"MC1 Warehouse - Add MPN and Manufacturer filters, add tests (",,,
+Deployed Items,fix,),Verified,,
+Deployed Items,fix,This pull request refactors the,,,
+Deployed Items,fix,"WarehouseStockFiltersPanel
+to replace the",,,
+Deployed Items,fix,"TextInputFilte
+with an",,,
+Deployed Items,fix,"AutocompleteFilter
+for MPN and manufacturer filters. The change enables better search functionality by providing selectable filter options. Additionally, this PR addresses code review findings, finalizes testing and documentation, and ensures improved i18n support. It also implements whitespace normalization for consistent filtering.
+enhance filter options for user and role and misc changes (
+)",,,
+Deployed Items,refactor(account-list-filters),bring back user and role filters in my account list,Verified,,
+Deployed Items,refactor(account-list-filters),"hide user and role filter from open accounts
+fixed default assignment for Germany and United States",Verified,,
+Deployed Items,refactor(account-list-filters),"opportunities tab typo fix for MyChip1
+add tooltip truncation for order overview mpn (",Verified,,
+Deployed Items,refactor,")
+add tooltip truncation for order overview mpn
+limit visible mpns to 3
+added initial contact and boumd to account (
+)",Verified,,
+Deployed Items,Update,"Warehouse stock page improvements for MC1 and CRM (
+)",,,
+Deployed Items,Update,Improves the warehouse stock page in MC1 to better suit the customer-facing context:,,,
+Deployed Items,Update,"Removed Status and Last Updated filters, which are not relevant for customers",Verified,,
+Deployed Items,Update,Added a search box to the filter bar,Verified,,
+Deployed Items,Update,Renamed the SPN column to PO Number and removed the original PO Number column,Verified,,
+Deployed Items,Update,"Updated the info pane to match — shows SPN value under PO Number, removes the redundant SPN field",Verified,,
+Deployed Items,Update,Location column now shows the correct storage location value,Verified,,
+Deployed Items,Update,"Country of Origin, Status/Sub Status, and Last Updated columns are hidden by default",Verified,,
+Deployed Items,Update,Selected row highlight was not cleared after closing the info pane,Verified,,
+Deployed Items,Update,The info pane in MC1 was missing the backdrop shadow present in CRM,Verified,,
+Deployed Items,Update,"Dev Only items
+update dev dependencies
+dev only
+replace manual name joins with standardized getFullName helper across CRM and myChip1
+dev only
+(
+)",,,
+Deployed Items,Request Offer,add user cc list field,Verified,@Deepti Vaidyula,
+Deployed Items,Record Offer,Remove send Email field,Verified,@Deepti Vaidyula,
+Deployed Items,Record Offer,Attach PO Sr Fab action: Enabled till stage (Wont be on Prod),Verified,@Deepti Vaidyula,
+Deployed Items,Record Offer,"This will include chip1-transaction service from develop, release branch will be created.",,@Deepti Vaidyula,
+Deployed Items,Record Offer,Chip1-transaction Service has two changes in develop will be included in release,,@Deepti Vaidyula,
+Deployed Items,Record Offer,Offer CC email,Verified,@Deepti Vaidyula,
+Deployed Items,Bug fix,"Even if SO creation is failing, RFQ is turning to SO created. Now with fix, only successful SO creation will change RFQ status to SO Created.",Verified,@Deepti Vaidyula,

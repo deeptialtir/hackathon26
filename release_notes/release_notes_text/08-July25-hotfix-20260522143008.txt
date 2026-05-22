@@ -1,0 +1,249 @@
+# 08-JULY25-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2025.07.08
+DB changes
+ :
+Connect
+ : No changes
+Platform
+ : No changes
+Notification : 
+No changes
+ 
+Branch
+  : hotfix/2025.07.07
+ 
+Components Involved
+ 
+& Artefacts
+:
+ 
+Chip1 Account      
+                              : 2025.07.07.0
+Chip1 Part        
+                                    : 2025.07.07.0
+Chip1 Transaction  
+    
+                      
+   :
+ 
+2025.07.07.4
+Chip1 WebUI      
+                                 : 2025.07.07.1
+Chip1 CRM WebUI      
+                       : 2025.07.07.1
+
+## LIST OF DEPLOYED ITEMS:
+
+Private (
+https://app.clickup.com/t/8651091/CHP-2438
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-2453
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-2455
+)  # Breaking UI on Prod  
+Private (
+https://app.clickup.com/t/8651091/CHP-2459
+)
+Details:
+CHP-2438
+: Accounts - Add "All" category 
+CHP-2438
+: CRM - Disable new Dashboard on prod and stage 
+CHP-2438
+: RFQ/Quote/Order - Show account stage pill in info pane 
+CHP-2438
+: Search - Add second line for project item, powered by backend 
+CHP-2438
+: Search - Add skeletons for initial loading states 
+CHP-2438
+: Search - Fix Account item second line
+CHP-2438
+: Search - Remove individual category empty messages, use only one 
+CHP-2453
+ : using useDirerectFab (
+#876
+)
+CHP-2453
+: Account summary - Layout for smaller size 
+CHP-2453
+: Account summary - Redo layout
+CHP-2453
+: Part activity - Add a fallback for contexts column
+CHP-2453
+: Part activity - Fix country of origin not mapped correctly
+CHP-2453
+: UAT review part 2 (
+#877
+)
+CHP-2455
+: Part tracker - Don't crash app on empty response (track part modal) (
+#880
+)
+Fab - Create single-option FAB (useDirectFab)
+fix links for bom and excess template links
+PartTracker - Adjust UI to deduplicated contexts values (
+#878
+)
+Search: fix context pill delete button
+QE Tracking:
+ Private (
+https://app.clickup.com/t/8651091/CHP-2465
+)
+
+## MC1 SANITY TESTS
+
+ 
+Feature/Flow
+Stage
+Prod
+Remarks
+New User Signup from mc1
+ NA
+ NA
+ 
+Mc1 user invite - signup
+ NA
+ NA
+On stage should suffice
+Upload Bom & Excess and verify in CRM
+ Yes
+ Yes
+ 
+Manual RFQ
+ Yes
+ Yes
+ 
+Active Quote (create, edit)
+ Yes
+ yes
+ 
+Sales Order
+(create, edit)
+Yes
+ yes
+ 
+Lead Account & Transfer
+Yes
+ NA
+ 
+Bids
+ NA
+ NA
+ 
+Parts Tracker
+ Yes
+Yes 
+ 
+Search
+ Yes
+Yes 
+ 
+Page Navigations
+ Yes
+ Yes
+ 
+Edit Project
+ Yes
+ Yes
+ 
+Notification Emails
+ Yes
+ Not on test account. Mc1userID issue.
+ 
+Download excess and Bom Template, fill and upload.
+ Yes
+ Yes
+ 
+ 
+
+## CRM SANITY TESTS:
+
+ 
+Feature/Flow
+Stage
+Production
+Remarks
+Create BOM in MC1, check in xcrm and new crm
+ Yes
+ Yes
+ 
+Create RFQ in MC1, check in xcrm and crm
+ Yes
+ Yes
+ 
+Upload BOM from CRM
+ Yes
+ Yes
+ 
+Page Navigations
+ Yes
+ Yes
+ 
+Deep links for Accounts, RFQs, Quotes and Orders
+ Yes
+ Yes
+ 
+Edit Project
+ Yes
+ Yes
+ 
+Global Search
+ Yes
+ Yes
+ 
+Filters 
+ Yes
+ Yes
+ 
+Sorting of tables
+ Few
+ Yes
+ 
+Page Search
+ Yes
+ Yes
+ 
+Download excess and Bom Template, fill and upload.
+ Not yes deployed to crm
+ NA
+ 
+ 
+ 
+ 
+ 
+
+## AUTOMATION RUN RESULTS:
+
+CRM UI: 
+
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/crm-ui-tests/5/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+ 
+
+## ISSUES FOUND ON PRODUCTION:
+
+Private (
+https://app.clickup.com/t/8651091/CHP-2469
+) - 
+Fixed
+Root cause: - Fix: RFQ - Origin field is optional
+Not seen on stage. Seeing only on prod.`
+
+## ISSUES FOUND ON STAGE:
+
+Private (
+https://app.clickup.com/t/8651091/CHP-2470
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2462
+)

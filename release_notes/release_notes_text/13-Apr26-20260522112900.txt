@@ -1,0 +1,41 @@
+# 13-APR26
+
+Environment: Stage
+Status: good
+Prod release owner: 
+ 
+@Umamahesh
+ 
+Release date
+ : 2026.04.13
+ 
+DB changes
+ : 
+Connect
+        : No Change
+Platform       
+ : No Change
+Notification  : 
+No Change
+ 
+Branch
+  : hotfix/2026.04.13
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Transaction                
+    
+          
+ : 2026.04.13.1
+Items Deployed:
+Ability to create 
+RFQ → SR → Offer
+ confirms basic workflow is functioning 
+ Seeing 
+“Target price matched” at RFQ level
+ validates the event service sanity 
+BOM upload
+ can also be tested as part of this flow

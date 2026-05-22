@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ORBYT Matrix Downloads</title>
+  <style>
+    :root {
+      --bg: #050914;
+      --panel: rgba(9, 18, 34, 0.9);
+      --line: rgba(123, 252, 255, 0.18);
+      --accent: #43f6c8;
+      --accent2: #7aa7ff;
+      --accent3: #ff4fd8;
+      --text: #eef7ff;
+      --muted: #9db1c8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(115deg, rgba(5,9,20,0.96), rgba(6,16,31,0.9) 46%, rgba(13,11,29,0.94)),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900' viewBox='0 0 1600 900'%3E%3Crect width='1600' height='900' fill='%23030a14'/%3E%3Cg fill='none' stroke='%2335f2d0' stroke-opacity='.26' stroke-width='1.2'%3E%3Cpath d='M0 180h220l70 70h260l80-80h330l70 70h570'/%3E%3Cpath d='M0 540h360l70-70h210l90 90h310l60-60h500'/%3E%3Cpath d='M230 0v220m420-220v170m530-170v250M980 900V630M410 900V650m850 250V610'/%3E%3C/g%3E%3Cg fill='%237aa7ff' fill-opacity='.72'%3E%3Ccircle cx='220' cy='180' r='5'/%3E%3Ccircle cx='550' cy='250' r='4'/%3E%3Ccircle cx='960' cy='170' r='5'/%3E%3Ccircle cx='430' cy='470' r='5'/%3E%3Ccircle cx='730' cy='560' r='4'/%3E%3Ccircle cx='1100' cy='500' r='5'/%3E%3C/g%3E%3Cg fill='%23ff4fd8' fill-opacity='.45'%3E%3Ccircle cx='1280' cy='240' r='3'/%3E%3Ccircle cx='650' cy='170' r='3'/%3E%3Ccircle cx='1260' cy='610' r='3'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.5rem 2.5rem 1rem;
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(18px);
+    }
+    .brand { display: flex; align-items: center; gap: 0.9rem; }
+    .orbyt-logo {
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(67,246,200,0.65);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--accent);
+      font-weight: 800;
+      box-shadow: 0 0 22px rgba(67,246,200,0.26), inset 0 0 20px rgba(122,167,255,0.16);
+      position: relative;
+      background: rgba(5, 13, 27, 0.7);
+    }
+    .orbyt-logo::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 18px;
+      border: 1px solid rgba(255,79,216,0.62);
+      border-radius: 50%;
+      transform: rotate(-24deg);
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.7rem;
+      background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle { color: var(--muted); margin: 0.35rem 0 0; }
+    .back-link, .download-card a {
+      color: #03111b;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      text-decoration: none;
+      padding: 0.55rem 0.85rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    main {
+      display: grid;
+      gap: 1rem;
+      padding: 1.5rem 2.5rem 2.5rem;
+    }
+    .download-card {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 1rem 1.1rem;
+      box-shadow: 0 18px 46px rgba(0,0,0,0.24);
+      backdrop-filter: blur(16px);
+    }
+    .download-card h2 { margin: 0; font-size: 1rem; color: var(--accent); }
+    .download-card p { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.85rem; }
+    .actions { display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: flex-end; }
+    @media (max-width: 760px) {
+      header, .download-card { align-items: flex-start; flex-direction: column; }
+      main, header { padding-left: 1rem; padding-right: 1rem; }
+      .actions { justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="orbyt-logo" aria-label="ORBYT logo">O</div>
+      <div>
+        <h1>ORBYT Matrix Downloads</h1>
+        <p class="subtitle">Generated 2026-05-22 15:50</p>
+      </div>
+    </div>
+    <a class="back-link" href="ORBYT_Test_Matrix_Dashboard.html">Back to Dashboard</a>
+  </header>
+  <main>
+    
+        <article class="download-card" id="ORBYT_Complete_Matrices">
+          <div>
+            <h2>ORBYT Complete Matrices</h2>
+            <p>All generated matrices in one workbook.</p>
+          </div>
+          <div class="actions">
+            <a href="ORBYT_Complete_Matrices.html">View</a>
+            <a download href="ORBYT_Complete_Matrices.xlsx">Download Excel</a>
+          </div>
+        </article>
+        <article class="download-card" id="01_Requirement_Testing_Traceability_Matrix">
+          <div>
+            <h2>01 Requirement Testing Traceability Matrix</h2>
+            <p>1689 rows · Excel and CSV available.</p>
+          </div>
+          <div class="actions">
+            <a href="01_Requirement_Testing_Traceability_Matrix.html">View</a>
+            <a download href="01_Requirement_Testing_Traceability_Matrix.xlsx">Excel</a>
+            <a download href="01_Requirement_Testing_Traceability_Matrix.csv">CSV</a>
+          </div>
+        </article>
+        <article class="download-card" id="01b_Feature_Level_Traceability_Matrix">
+          <div>
+            <h2>01b Feature Level Traceability Matrix</h2>
+            <p>164 rows · Excel and CSV available.</p>
+          </div>
+          <div class="actions">
+            <a href="01b_Feature_Level_Traceability_Matrix.html">View</a>
+            <a download href="01b_Feature_Level_Traceability_Matrix.xlsx">Excel</a>
+            <a download href="01b_Feature_Level_Traceability_Matrix.csv">CSV</a>
+          </div>
+        </article>
+        <article class="download-card" id="10_Sitemap_Category_Coverage">
+          <div>
+            <h2>10 Sitemap Category Coverage</h2>
+            <p>38 rows · Excel and CSV available.</p>
+          </div>
+          <div class="actions">
+            <a href="ORBYT_Downloads.html">View</a>
+            <a download href="10_Sitemap_Category_Coverage.xlsx">Excel</a>
+            <a download href="10_Sitemap_Category_Coverage.csv">CSV</a>
+          </div>
+        </article>
+        <article class="download-card" id="11_Last_10_Releases_Traceability">
+          <div>
+            <h2>11 Last 10 Releases Traceability</h2>
+            <p>10 rows · Excel and CSV available.</p>
+          </div>
+          <div class="actions">
+            <a href="ORBYT_Downloads.html">View</a>
+            <a download href="11_Last_10_Releases_Traceability.xlsx">Excel</a>
+            <a download href="11_Last_10_Releases_Traceability.csv">CSV</a>
+          </div>
+        </article>
+        <article class="download-card" id="02_Impact_Analysis_Matrix">
+          <div>
+            <h2>02 Impact Analysis Matrix</h2>
+            <p>1689 rows · Excel and CSV available.</p>
+          </div>
+          <div class="actions">
+            <a href="02_Impact_Analysis_Matrix.html">View</a>
+            <a download href="02_Impact_Analysis_Matrix.xlsx">Excel</a>
+            <a download href="02_Impact_Analysis_Matrix.csv">CSV</a>
+          </div>
+        </article>
+        <article class="download-card" id="03_AI_Powered_Validation_Matrix">
+          <div>
+            <h2>03 AI Powered Validation Matrix</h2>
+            <p>1689 rows · Excel and CSV available.</p>
+          </div>
+          <div class="actions">
+            <a href="03_AI_Powered_Validation_Matrix.html">View</a>
+            <a download href="03_AI_Powered_Validation_Matrix.xlsx">Excel</a>
+            <a download href="03_AI_Powered_Validation_Matrix.csv">CSV</a>
+          </div>
+        </article>
+        <article class="download-card" id="04_Automation_Stability_Matrix">
+          <div>
+            <h2>04 Automation Stability Matrix</h2>
+            <p>136 rows · Excel and CSV available.</p>
+          </div>
+          <div class="actions">
+            <a href="04_Automation_Stability_Matrix.html">View</a>
+            <a download href="04_Automation_Stability_Matrix.xlsx">Excel</a>
+            <a download href="04_Automation_Stability_Matrix.csv">CSV</a>
+          </div>
+        </article>
+        <article class="download-card" id="05_Release_Readiness_Matrix">
+          <div>
+            <h2>05 Release Readiness Matrix</h2>
+            <p>136 rows · Excel and CSV available.</p>
+          </div>
+          <div class="actions">
+            <a href="05_Release_Readiness_Matrix.html">View</a>
+            <a download href="05_Release_Readiness_Matrix.xlsx">Excel</a>
+            <a download href="05_Release_Readiness_Matrix.csv">CSV</a>
+          </div>
+        </article>
+        <article class="download-card" id="06_Cross_Platform_Sync_Validation_Matrix">
+          <div>
+            <h2>06 Cross Platform Sync Validation Matrix</h2>
+            <p>136 rows · Excel and CSV available.</p>
+          </div>
+          <div class="actions">
+            <a href="06_Cross_Platform_Sync_Validation_Matrix.html">View</a>
+            <a download href="06_Cross_Platform_Sync_Validation_Matrix.xlsx">Excel</a>
+            <a download href="06_Cross_Platform_Sync_Validation_Matrix.csv">CSV</a>
+          </div>
+        </article>
+        <article class="download-card" id="07_Dashboard_Summary_Matrix">
+          <div>
+            <h2>07 Dashboard Summary Matrix</h2>
+            <p>16 rows · Excel and CSV available.</p>
+          </div>
+          <div class="actions">
+            <a href="ORBYT_Downloads.html">View</a>
+            <a download href="07_Dashboard_Summary_Matrix.xlsx">Excel</a>
+            <a download href="07_Dashboard_Summary_Matrix.csv">CSV</a>
+          </div>
+        </article>
+        <article class="download-card" id="08_Strategy_Traceability_Matrix">
+          <div>
+            <h2>08 Strategy Traceability Matrix</h2>
+            <p>7 rows · Excel and CSV available.</p>
+          </div>
+          <div class="actions">
+            <a href="08_Strategy_Traceability_Matrix.html">View</a>
+            <a download href="08_Strategy_Traceability_Matrix.xlsx">Excel</a>
+            <a download href="08_Strategy_Traceability_Matrix.csv">CSV</a>
+          </div>
+        </article>
+        <article class="download-card" id="09_Architecture_Coverage_Matrix">
+          <div>
+            <h2>09 Architecture Coverage Matrix</h2>
+            <p>8 rows · Excel and CSV available.</p>
+          </div>
+          <div class="actions">
+            <a href="09_Architecture_Coverage_Matrix.html">View</a>
+            <a download href="09_Architecture_Coverage_Matrix.xlsx">Excel</a>
+            <a download href="09_Architecture_Coverage_Matrix.csv">CSV</a>
+          </div>
+        </article>
+  </main>
+</body>
+</html>

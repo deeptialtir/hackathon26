@@ -1,0 +1,133 @@
+# 21-APRIL26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Harika Guntamukkala
+ 
+@Deepti Vaidyula
+ 
+Release date
+ : 2026.04.21
+ 
+DB changes
+ : 
+Connect
+ : release/2026.04.17
+Platform
+ : release/2026.04.17
+Notification : 
+No change
+ 
+Branch
+  : release/2026.04.17
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Account  
+    
+                               
+  : 2026.04.21.0
+Chip1 Transaction  
+    
+                        
+  : 2026.04.21.2
+Chip1 CRM WebUI                 
+    
+          
+ : 
+2026.04.21.5  
+  2026.04.21.6
+fn-connect                              
+   
+            
+ : 2026.04.21.1
+
+## LIST OF DEPLOYED ITEMS
+
+Accounts and Contacts: - 
+@Harika Guntamukkala
+ 
+Open Accounts tab for Accounts 
+Verified
+Non-blocking loader and segment handling for the Purchase Orders tab in `AccountPurchaseOrdersTab` and `sourcingRequest`.
+Verified
+Fix Account External IDs with sync -
+Verified and reported issue for supplier id's
+Account Credit Sync fix (inbound)- 
+Verified
+Account Country code fix- 
+Verified
+Changed validations on Contact Details similar to Create flow , Displaying contacts only related to that account on Create Activity Modal 
+Sales: 
+Add Close status option in SR update status action - 
+@Harika Guntamukkala
+ - 
+Verified
+Show Offers in global search and allow create task for them on offer details page- 
+@Harika Guntamukkala
+ - 
+Verified
+Add IncoCity field in SR Details and copy from SO into line details. - 
+@Deepti Vaidyula
+ - Verified
+Opportunity : Sales person datagroups missing on RFQ and copying default region datagroups. - 
+@Deepti Vaidyula
+ - 
+Verified
+
+https://crm.stage.chip1.info/sales/rfqs/69e759ea2b2d18701f4a5372/line/b5bf432d-97f5-4c0f-bbeb-6c30d2852a8e
+Offers Sync  : Offer origin country, supplier package, supplier account mapping, - 
+@Deepti Vaidyula
+  -
+ Origin country not synced 
+- 
+Link
+PO: - 
+@Deepti Vaidyula
+ 
+Show Create Manual Part Option in PO flow - 
+Verified
+Stock: Fix po account and buyer mapping - 
+Verified
+PO Prepayment implementation - 
+Verified
+ but it exists on prod already
+PO Buyers sync bug fix -
+ Not syncing - Syncing with different user.
+Stock: Hide cancel line action for primary line - 
+Verified
+Enforce permissions for stock details tabs  - 
+Verified
+Permission enforcement for stock details tabs so routes and components for stock details are only available to users with the right permissions.
+Verified
+Account contact list presenting phone details 
+Verified
+Option to close Multi RFQ Lines 
+Verified
+
+### OPEN ISSUES ON STAGE:
+
+PDF download is failing for invoices : 
+Link
+ - Srinidhi Gundimi
+Country of origin not syncing for offers : 
+Link
+ - Aditya Jain
+Invoice postal address field is getting removed from UI if I press delete : 
+Link
+ - Shivananda Sai
+Fix Account External IDs with sync - Verified and reported issue for supplier id's : 
+Link
+ - Srinidhi Gundimi
+
+## ISSUES FOUND ON PROD:
+
+I was able to create a PO on production without any receiving lines. I used an older account though and the price is also very low. A default receiving line should be created for every PO. - 
+Link
+
+https://crm.chip1.com/purchasing/purchase-orders/69e77a79a6238035e4a61987/line/69e77a79a6238035e4a6…

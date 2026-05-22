@@ -1,0 +1,61 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,@Deepti Vaidyula @Umamahesh,,
+Metadata,Release Info,DB changes,Connect : No Changes,,
+Metadata,Release Info,Platform,No Change,,
+Metadata,Release Info,Notification, chip1-release/2025.01.22,,
+Metadata,Release Info,Branch,Platform & WebUI : release/2025.01.22,,
+Metadata,Release Info,Notification Services,chip1-release/2025.01.22,,
+Artefacts,Artefacts,Chip1 Part,2025.01.22.0,,
+Artefacts,Artefacts,Chip1 Web UI,2025.01.22.0,,
+Artefacts,Artefacts,fn-notification-common-service,2025.01.22.0,,
+Artefacts,Artefacts,fn-notification-dispatcher,2025.01.22.0 fn-notification-publishe,,
+Artefacts,Artefacts,r,2025.01.22.0,,
+Deployed Items,Private ( https,"//app.clickup.com/t/8651091/CHP-998
+)",,,
+Deployed Items,Private ( https,"Stories & bug fixes
+//app.clickup.com/t/8651091/CHP-1348
+)
+//app.clickup.com/t/8651091/CHP-1370
+)
+//app.clickup.com/t/8651091/CHP-1368
+)",,,
+Deployed Items,Private ( https,"Enhancement ticket raised on prod:
+//app.clickup.com/t/8651091/CHP-1419
+)
+## SMOKE TESTS",,,
+Deployed Items,Private ( https,Feature/Flow,,,
+Deployed Items,Private ( https,Stage,,,
+Deployed Items,Private ( https,Prod,,,
+Deployed Items,Private ( https,"New User Signup from mc1
+yes
+yes",,,
+Deployed Items,Private ( https,"Upload Bom & Excess and verify in CRM
+yes
+yes",,,
+Deployed Items,Private ( https,"Manual RFQ
+yes
+yes",,,
+Deployed Items,Private ( https,"Active Quote (create, edit)
+yes
+yes",,,
+Deployed Items,Private ( https,"Sales Order
+(create, edit)
+yes
+yes",,,
+Deployed Items,Private ( https,"Lead Account & Transfer
+yes",,,
+Deployed Items,Private ( https,NA,,,
+Deployed Items,Private ( https,"Bids
+yes
+yes (with existing account)",,,
+Deployed Items,Private ( https,"Parts Tracker
+yes
+yes",,,
+Deployed Items,Private ( https,"Search
+yes
+yes",,,
+Deployed Items,Private ( https,"Page Navigations
+yes
+yes",,,

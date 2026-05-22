@@ -1,0 +1,157 @@
+# 18-MARCH26-02
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+, 
+@Umamahesh
+ 
+@Harika Guntamukkala
+ 
+ 
+Release date
+ : 2026.03.18
+DB changes
+ : 
+Connect
+ : release/2026.03.18
+Platform
+ : No change
+Notification : 
+release/2026.03.18
+ 
+Branch
+  : release/2026.03.18
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Account  
+    
+                               
+  : 2026.03.18.4
+Chip1 Transaction  
+    
+                        
+  : 2026.03.18.5
+Chip1 CRM WebUI                 
+    
+           
+ : 2026.03.18.5
+fn-connect                                               
+: 2026.03.18.1
+ fn-connect                                           : 2026.03.18.2
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+### FOLLOWING ITEMS ARE PART OF THE RELEASE
+
+Deployed  tickets as part of the 
+release 2026.03.11
+Validation of all the above release items will be performed from QE team once it is deployed 
+ 
+
+## WHAT'S TESTED FOR THE RELEASE?
+
+ 
+Verified
+Changed label preferences text 
+blackLabels
+: Black Labels Accepted
+blankLabels
+:  Blank Labels Accepted
+partialReel
+:  Partial Reels/Tubes Accepted
+noLabelsOk
+: Missing Manufacturer Labels Accepted
+Record Offer: unit price should be required field
+Added HK Stock and CN Stock to Sourcing Summary page
+Populate fundcode from RFQ to Quote create screen and make it readonly
+In Account hero location - need to show only the "city, state"
+In-app & email notification for comments
+ rfq line fab
+     - changed icon for create sourcing request action
+Market offer inbound fixes raised by Uma
+Validation for price > 0 in Quote screen
+SR  Request line details island 
+  - add market condition field
+ create offers and create sr modal
+    - clubbed 
+black Labels
+, 
+Missing Mfr Label
+ and 
+partialReels Label
+ fields into single 
+label preferences
+ multi select field
+Cross check SO validations are skipped as before
+SO 
+(Talk to Tejaswini)
+Create to details → Inco terms and shipping details not getting carried over
+QE remarks: 
+Inco terms  are carry forwarded.
+shipping details:
+Shipping contact email and phone number is not displayed in the UI but BE has it.
+Account approval does not seem to be carried over from Account (e.g., order created in Altir Test Account -US - 6731b29efed56026ca64374b)
+QE remarks: Verified. Tested with account which already has approvals.
+Defaulting of shipping contact to primary contact if not found - verified
+Connect 
+Bug fix for Quote not syncing for Account created on xCRM - Existing issue that tested in the morning  - verified (direct quote, quote from offer, IB quote)
+Zohaib reported in few cases, ROHS is sent as array, fix for it.(can explain this, not always only in particular flow) - verified. No sync for rohs.
+IB quote: US26QU00294 - Rohs in line details is ROHS2 in Apex UI
+                "rohs": {
+                    "namespace": "common",
+                    "scope": "en",
+                    "category": "compliance",
+                    "key": "rohs2",
+                    "value": "ROHS 2"
+                },
+OB quote: US26QU00295 → XCRM shows this as 'Undefined'
+        "rohs": {
+            "namespace": "common",
+            "scope": "en",
+            "category": "compliance",
+            "key": "rohs1",
+            "value": "ROHS 1"
+        },
+Account OB mapping for lookups for payment terms and few as shared in screenshot, only mentioned lookups in the screenshot(reported by Zohaib) - Working. Missing for qc.level2 - will pick this later - 
+link
+Open issues on Stage
+Private (
+https://app.clickup.com/8651091/docs/880ak-50654/880ak-52214
+)
+Issues on stage:
+Link
+Issue Description
+Remarks
+Teams #: March18_06
+SO :
+Create to details → Inco terms and shipping details not getting carried over 
+QE remarks:
+ For Shipping Details -> Shipping contact email and phone number is not displayed in the UI but BE has it. -This needs UI fix. CC: Alexey Duduk, Vinay Bajjuri, Sandeep Thatikonda, Abhinay Sharma
+Teams #: March18_07
+Account OB mapping for lookups for payment terms and few as shared in screenshot, only mentioned lookups in the screenshot(reported by Zohaib) - Working. Missing for qc.level2 
+Fixed
+Teams #: March18_08
+Clicking on 'Approved For Sales' from account -> Fab gives 500 error
+Issues on prod:
+Link
+Issue Description
+Remarks
+Teams Link
+Causing Impact" section in the Dashboard page keeps loading. 
+Teams Link
+Default customer 'Need By' date is coming as past date (yesterday's date). I think because of time difference.
+Impact: When SR is created from RFQ which didn't have need by date, it's taking yesterday's date.

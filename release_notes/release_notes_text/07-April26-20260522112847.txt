@@ -1,0 +1,178 @@
+# 07-APRIL26
+
+Environment: Stage
+Status: 
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2026.04.07
+ 
+DB changes
+ : 
+Connect
+ : release/2026.04.07
+Platform
+ : release/2026.04.07
+Notification : 
+No change
+ 
+Branch
+  : release/2026.04.02
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+ 
+Chip1 Account  
+    
+                               
+  : 2026.04.07.3
+Chip1 Part  
+    
+                               
+          : 2026.04.07.0
+Chip1 Transaction  
+    
+                        
+  : 2026.04.07.5
+Chip1 CRM WebUI                 
+    
+           
+ : 2026.04.07.5
+Chip1 WebUI                 
+    
+                     
+ : 2026.04.07.0
+fn-connect                              
+   
+            
+ : 2026.04.07.4
+
+## LIST OF DEPLOYED ITEMS:
+
+UI
+Local aware Data format (
+US locale uses MM/DD/YYYY, All other locales (including Germany, rest of C1 regions) use DD/MM/YYYY, 
+
+https://github.com/altirllc/chip1-webui/pull/1674
+ see description for more info) :
+Dashboard, Accounts, Parts, Sourcing - 
+@Harika Guntamukkala
+  - 
+Verified
+Projects, Sales, RMA, Contacts, Campaign - 
+@Deepti Vaidyula
+ - 
+verified
+Purchasing, Warehousing, Tasks - 
+@Umamahesh
+ -
+Verified
+Refresh price on Market Activity - 
+@Harika Guntamukkala
+ 
+Verified
+Adding MPN in Order overview - 
+@Deepti Vaidyula
+  - 
+Verified
+Delete Document - 
+@Harika Guntamukkala
+ - 
+Verified
+BE
+MC1 : theme parameter - 
+@Harika Guntamukkala
+ - 
+Verified
+Part service - For parts with different manufacturer name in Part and Global part failing to fetch part details in RFQ creation. Ex: GlUPD720201K8-711-BAC-A, part collection has manufacturer as Renesas Technology and Global part has Renesas Electronics.  - 
+@Harika Guntamukkala
+ - 
+Verified
+Databit migration enhancements from Andrey., Some correction for databit calculations. (Shortly, all databits for all entities should be validated unless something is really broken/null pointer is should not be blocker for release) 
+Verified
+Sales, Accounts, contacts- 
+@Deepti Vaidyula
+  - 
+Verified
+Purchasing, warehousing- - 
+@Umamahesh
+ -
+Verified
+Dashboards - 
+@Harika Guntamukkala
+ 
+Payment terms populating in Quote, SO and Invoice from Account - 
+@Deepti Vaidyula
+ - 
+not fixed
+Connect (Deploying from feature branch : bugfix/fix-so-sync-issues)
+Duplicate contact issue - 
+@Deepti Vaidyula
+ - 
+Verfied
+Account reconcillation fix : 
+Teams #: April03_04
+  
+@Deepti Vaidyula
+ -
+ Issue persists
+PO : - 
+@Umamahesh
+ 
+Implement the same for manufacture like SO. (requires xCRM change as well)- 
+Okay
+PO User name reconciliation -
+Verified
+PO IB -> add a default role -> Buyer- copy to Po line and adding buyer role -Pending for Downstream change- 
+Pending
+SO  - 
+@Deepti Vaidyula
+ - 
+Verified
+Manufacturer name (requires xCRM change as well)
+Tax Percent
+feat(validation): make phone as optional in rfq creation modal (
+#3486
+) - 
+@Deepti Vaidyula
+ - 
+Verified
+feat(sr-fab-action): attach SR to existing PO (
+#3487
+) - 
+@Umamahesh
+ - 
+verified
+Fixes: Offers and SR changes (
+#3489
+) - 
+@Harika Guntamukkala
+ 
+Verified
+Update : Made id fields in account Id section editable , trigger upload relevant document in has NDA , has Quality Aggrement , has Consignment (
+#3488
+) - 
+@Deepti Vaidyula
+ 
+verified
+fix(sales orders): vendor code mapping, hide invoice delivery section and update approvals (
+#3490
+) - 
+@Deepti Vaidyula
+  -
+ Still persists
+Excess offers - Init different details page and model (
+#3461
+) - 
+@Umamahesh
+ -  
+Validation not required

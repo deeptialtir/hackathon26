@@ -1,0 +1,128 @@
+# 23-MARCH26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+, 
+@Umamahesh
+ 
+@Harika Guntamukkala
+ 
+ 
+Release date
+ : 2026.03.23
+ 
+DB changes
+ : 
+Connect
+ : No change
+Platform
+ : No change
+Notification : 
+No change
+ 
+Branch
+  : 
+Chip1 Transaction 
+                        : hotfix/2026.03.19
+Chip1 Transaction                            
+: hotfix/2026.03.19
+fn-notification-commonservice 
+: release/2026.03.23
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Transaction  
+    
+                        
+  : 2026.03.19.6
+Chip1 CRM WebUI                 
+    
+          
+ : 2026.03.19.9
+fn-notification-commonservice     
+: 2026.03.23.0
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## WHAT'S TESTED FOR THE RELEASE?
+
+Opportunities display MC1 User and MC1 Account Info
+PO status fix
+SR data groups setting from RFQ or SO 
+Label formatting fix
+Sourcing Supplier name not shown in case Account region is -1
+RFQ adding mandatory for Request Source, Requirement type and level
+Sourcing : Sourcing filters getting reset when navigating back from entity details page
+Notification Centre, filter email notification
+Campaign left menu using permissions
+ 
+Open issues on Stage
+Private (
+https://app.clickup.com/8651091/docs/880ak-50654/880ak-52214
+)
+ 
+Issues on stage:
+ 
+Link
+Issue Description
+Remarks
+Teams Link
+Purchase order 
+creation
+ is failing in stage with error below, please check. CorrelationId: 
+c4fe2b66-c651-4c66-b2c1-c621e57fa762
+{
+    "status": 500,
+    "message": "Cannot invoke \"co.altir.chip1.transaction.models.dto.CommonAccountDto.getRegionId()\" because \"supplier\" is null"
+}
+Teams #: March23_01
+Offer created is not syncing to xcrm.
+Working in prod
+Teams Link
+Seeing Campaigns -> left nav for following users on stage: 
+Sales Manager
+Credit Admin
+Exp Buyer
+Internal Buyer
+Purchasing Manager
+Senior Purchasing Manager
+Warehouse Manager
+Fixed
+Harika Guntamukkala: Shivananda/Vinay Bajjuri Account Name is showing as blank und... | Chip1-Integration | Microsoft Teams
+Account Name is showing as blank under RFQ details page
+Fixed
+Harika Guntamukkala: Srinidhi, Account is created in US region but RFQ created in ... | Chip1-Integration | Microsoft Teams
+Account is created in US region but RFQ created in DE region
+Fixed
+Harika Guntamukkala: Tejaswini, account creation in prod is failing with 504 Gatew... | Chip1-Integration | Microsoft Teams
+account creation in 
+prod
+ is failing with 504 Gateway Timeout tried 3 times
+Issue with system slowness checking with devops team
+Harika Guntamukkala: Vinay Shivananda, under dashboard -> sales Opportunities s... | Chip1-Integration | Microsoft Teams
+under dashboard -> sales Opportunities section, sourcing completed label is filtering with "Sourcing Requested" status under RFQ list view
+Not yet fixed
+Harika Guntamukkala: Vinay after filling mandatory fields in the RFQ Line#1 sectio... | Chip1-Integration | Microsoft Teams
+after filling mandatory fields in the RFQ Line#1 section under RFQ creation form, indicator (*) is not visible
+Not yet fixed
+Issues on prod:
+ 
+Link
+Issue Description
+Remarks
+---

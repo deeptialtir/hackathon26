@@ -1,0 +1,50 @@
+# 29-JULY25-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+@Deepti Vaidyula
+ 
+Release date
+ : 2025.07.29
+ 
+DB changes
+ : 
+Connect
+ : No changes
+Platform
+ : No changes
+Notification : 
+No changes
+ 
+Branch
+  : hotfix/2025.07.28
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+fn-connect      
+                                 : 2025.07.28.0
+
+## LIST OF DEPLOYED ITEMS
+
+Fix to handle Id reconciliation error for account user entities
+ 
+
+## WHY DO WE NEED THIS HOTFIX?
+
+Fix to handle Id reconciliation error for account user entities
+
+## QE NOTES
+
+Duplicate user issue and missing contacts issue has been fixed. Found few more issues which are tracked separately in 
+CHP-2619
+.
+
+## ISSUE FOUND ON PRODUCTION:
+
+Private (
+https://app.clickup.com/t/8651091/CHP-2619
+)

@@ -1,0 +1,89 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Deepti Vaidyula ,  @Harika Guntamukkala",,
+Metadata,Release Info,Release date,2025.11.05,,
+Metadata,Release Info,DB changes,Connect : No changes,,
+Metadata,Release Info,Platform,No changes,,
+Metadata,Release Info,Notification, No changes,,
+Metadata,Release Info,Branch,release/2025.11.05,,
+Artefacts,Artefacts,Chip1 Part,2025.11.05.0,,
+Artefacts,Artefacts,Chip1 Transaction,2025.11.05.1,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,QE documentation link,https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh,,
+Deployed Items,General,CHP-3430,,,
+Deployed Items,General,CHP-3429,,,
+Deployed Items,Few Dashboard fixes,Trending parts considering data groups,,,
+Deployed Items,Few Dashboard fixes,CHP-3439 - Download Project pricing,,,
+Deployed Items,Few Dashboard fixes,Part Health - Account information populating,,,
+Deployed Items,Few Dashboard fixes,UI enhancements,,,
+Deployed Items,Chore,"Dedupe deps and add nullchecks (
+) - dev only
+update turbo 2.5.8 -> 2.6.0 (
+) - dev only",,,
+Deployed Items,CHP-3342,"Pass and show URL filters (
+)  - Harika - Basic checks done as it is not fully integrated",,,
+Deployed Items,CHP-3342,CHP-3419,,,
+Deployed Items,CHP-3342,"Add Create Visit Form (
+) - Harika",,,
+Deployed Items,CHP-3431,DateCodeYear desc sort order (,,,
+Deployed Items,CHP-3431,) - Deepti,Verified,,
+Deployed Items,CHP-3437,"Enhance Sourcing Tabs (
+) - Harika",,,
+Deployed Items,CHP-3437,Update sourcing list to include manufacturer details (,,,
+Deployed Items,CHP-3437,) - Harika,Verified,,
+Deployed Items,CHP-3438,Add 'all' engagement period option for last activity(,,,
+Deployed Items,CHP-3438,) - Deepti,Verified,,
+Deployed Items,CHP-3439,Integrate export button in Project Pricing Tab (,,,
+Deployed Items,CHP-3439,) - Deepti,Verified,,
+Deployed Items,CHP-3443,"Refactor Order Status Summary (
+) - Deepti - Seeing error. Posted in channel.",,,
+Deployed Items,CHP-3449,Update Project List columns (,,,
+Deployed Items,CHP-3449,") - Uma
+add secondary copy text for manufacturer in historical activity columns (",Verified,,
+Deployed Items,feat(Sourcing),") - Harika
+add category selection persistence and default category handling (",Verified,,
+Deployed Items,feat(SourcingForm),") - Harika
+enhance QuoteList and RfqList (
+) - Uma- dev changes, did sanity on rfq, quote list view
+uncheck showAlternatives option by default (",Verified,,
+Deployed Items,fix(SourcingForm),) - Harika,Verified,,
+Deployed Items,UPD (merged),System Components - Enable feature flag on production,,,
+Deployed Items,Refactor,"Simplify aggregated cell rendering in Sourcing (
+)",,,
+Deployed Items,Refactor,"In historical activity and market activity table, i have removed few padding from the headers groups - Deepti
+(check sales orders(2) from below screenshot)",Verified,,
+Deployed Items,Refactor,"Update account role filter to support multiple IDs instead of a single ID (
+)",,,
+Deployed Items,Refactor,"Account details -> fixed account owner filter, it was not working earlier",,,
+Deployed Items,Refactor,Deepti,Verified,,
+Deployed Items,Backend changes,"Above are UI changes, and below are backend changes,",,,
+Deployed Items,Backend changes,CHP-3430 - DV,verified,,
+Deployed Items,Backend changes,CHP-3429 - DV - Seeing issue. Posted in channel,,,
+Deployed Items,Few Dashboard fixes,Trending parts considering data groups - Uma- Dashboard testing has to hold,,,
+Deployed Items,Few Dashboard fixes,"CHP-3439 - Download Project pricing - DV
+.",Verified,,
+Deployed Items,Few Dashboard fixes,Part Health - Account information populating,Verified,,
+Deployed Items,Few Dashboard fixes,DV,,,
+Deployed Items,Bugs in  stage,"Created Normal priority bug for the index error - CHP-3455
+.  The automation runs are good.",,@Sandeep T,
+Deployed Items,Bugs in  stage,Found non-blocker issues in Sourcing.,,@Sandeep T,
+Deployed Items,Bugs in  stage,Alternatives are not showing up in the summary tab list view as a tag(stil they are showing up in the Alternative dropdown list),,@Sandeep T,
+Deployed Items,Bugs in  stage,"Whatever search happens in main souring tab, it is showing same under any RFQ details -> Tracking Private (
+)",,@Sandeep T,https://app.clickup.com/t/8651091/CHP-3457
+Deployed Items,Bugs in  stage,"When an alternative is added to a part, it does not appear in the UI immediately; it is only visible after a refresh.",,@Sandeep T,
+Deployed Items,Dashboards,In dashboard under Proactive Opportunities data is not coming up which results blank data showing up in UI in the List view,,,
+Deployed Items,Dashboards,"Accessing Orders -> Order line -> All activity is giving following error: Not a blocker. ( same as PROD)
+500,""message"":""Type 'orderLine' does not exist""}
+c11f432b-7963-48ef-8906-f301396bd000",,,https://crm.stage.chip1.info/sales/orders/690b42dbfbecc05f9bdae653/line/690b42dbfbecc05f9bdae652/ac…
+Deployed Items,correlation_id,"Order line -> All activity was not ready. Earlier was seeing Oops page. But now, it keeps loading.",,,
+Deployed Items,correlation_id,Uploading Nexperia BOM failing to download:,,,
+Deployed Items,correlation_id,Nexperia Spec buy 10-15 & 10-16 2.xlsx,,,
+Deployed Items,correlation_id,"Adding manually same part failing to download. Upload a bom and add one of the parts from the project manually, and then export project. This is failing.",,,https://crm.stage.chip1.info/projects/690b5cc037c2aa17e0c4316b/pricing
+Deployed Items,correlation_id,Added ERJ12ZYJ560U to the same project manually and then downloaded the file. :,,,
+Deployed Items,Deepti Vaidyula,"Hi team, seeing the following issues in export project pricing: ... | Accounts, Requests, Quotes and Orders | Microsoft Teams",,,
+Deployed Items,Deepti Vaidyula,This is another issue. We are able to download but the price is showing for different parts which are not in the bom:,,,
+Deployed Items,Deepti Vaidyula,"3. This is another issue. We are able to download but the price i... | Accounts, Requests, Quotes and Orders | Microsoft Teams",,,https://crm.stage.chip1.info/projects/690b8d5707bdef6d0404f4e7/pricing
+Deployed Items,Deepti Vaidyula,"pagination issue for more parts in pricing- newly uploaded project. Seems to be broken for this project alone. Works for
+. Pagination is good on prod as well.",,,https://crm.stage.chip1.info/projects/690b66ea37c2aa17e0c431d8/pricing

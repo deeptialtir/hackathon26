@@ -1,0 +1,249 @@
+# 28-NOV25
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+DB changes
+ :
+Connect
+ : release/2025.11.28
+Platform
+ : release/2025.11.28
+Notification : 
+No changes
+ 
+Branch
+  : release/2025.11.28
+Components Involved
+ 
+& Artefacts
+:
+ 
+Chip1 MC1 Core     
+    
+                      
+    :
+ 
+2025.11.28.1
+Chip1 Account        
+    
+                      
+    :
+ 
+2025.11.28.0
+Chip1 Transaction  
+    
+                      
+   :
+ 
+2025.11.28.4
+Chip1 Part                 
+    
+                      
+   :
+ 
+2025.11.28.1
+Chip1 CRM WebUI                 
+    
+         
+ :
+ 
+2025.11.28.3
+fn connect                 
+    
+                      
+  :
+ 
+2025.11.28.0
+Automation Run:
+jenkins.chip1.info
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/crm-ui-tests/26/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+jenkins.chip1.info
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/crm-ui-tests/26/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+RFQ issues 
+Account permissions
+Dashboard and Sourcing fixes
+Account: Details to be default tab, Related Accounts lookup keys changes - verified
+CHP-3567
+: Enhance Column Reordering - verified
+CHP-3570
+: Implement new reorder columns for all tables - verified
+CHP-3571
+ : Refactored Sequence of island on Account Details tab , and changed the input checkbox's to select - Verified
+CHP-3579
+: market activity table updates 
+CHP-3575
+: Context Info pane 
+Enable permissions for account 
+Forms: Decrease vertical spacing between rows. Part 1 - account, rfqs islands are checked
+System components - Highlight Parts Nav bar group when on system componets; dark mode; Navbar improvements
+Will be enabled only till Dev or Off
+CHP-3337
+: Market offers - List view 
+CHP-3337
+: Offers List - List view
+CHP-3354
+: Standalone quote changes 
+CHP-3526
+ : always display account profile tab and add a refresh
+CHP-3558
+: Implement Contact Leads Feature
+CHP-3577
+ : Account Supplier Cards
+Enable global search for trips and visits
+Bugs in build
+mc1 signup is failing on stage
+rfq line page search is failing with error
+account list, rfq list, sales order list api taking >10 seconds in response time in stage
+Missed Found on production:
+Private (
+https://app.clickup.com/t/8651091/CHP-3596
+)
+RC: lookup corresponding to ID are not loaded on stage
+Not found on stage.
+
+## MC1 SANITY TESTS
+
+Note: The sanity tests to check will be selected based on the release
+Feature/Flow
+Stage
+Prod
+Remarks
+New User Signup from mc1
+yes
+On prod, we test this on need basis
+Mc1 user invite - signup
+yes
+On stage should suffice
+Upload Bom and verify in CRM
+yes
+yes
+Upload Excess and verify in CRM
+yes
+Manual RFQ
+yes
+RFQ update
+yes
+RFQ - multiline
+yes
+Active Quote (create)
+yes
+Active Quote (edit)
+yes
+Active quote - multiline
+yes
+Sales Order (create)
+yes
+Sales Order (edit)
+yes
+Sales Order - multiline
+yes
+Quality Control (PO number)
+yes
+On prod, we test this on need basis
+Invoice generation
+yes
+On prod, we test this on need basis
+Invoice generation - shipping in 2 lots
+--
+On prod, we test this on need basis
+Lead Account & Transfer
+yes
+Bids
+--
+Parts Tracker
+yes
+Search
+yes
+Page Navigations
+yes
+Edit Project
+yes
+Notification Emails
+--
+Download excess and Bom Template, fill and upload.
+yes
+Conceirge Service
+yes
+Sorting
+yes
+Filters
+yes
+Pricing - OEM secrets
+yes
+Pricing - IC
+yes
+Pricing - xcrm
+yes
+
+## CRM SANITY TESTS:
+
+Note: The sanity tests to check will be selected based on the release
+Feature/Flow
+Stage
+Production
+Remarks
+Create BOM in MC1, check in xcrm and new crm
+yes
+Create RFQ in MC1, check in xcrm and crm
+yes
+Upload BOM from CRM
+yes
+Page Navigations
+yes
+Deep links for Accounts, RFQs, Quotes and Orders
+yes
+Edit Project
+yes
+Projects - price refresh
+yes
+Global Search
+yes
+Filters 
+yes
+Sorting of tables
+yes
+Page Search
+yes
+Download excess and Bom Template, fill and upload.
+yes
+Conceirge Service
+yes
+Microdashboard counts
+yes
+Share project and show in mc1
+yes
+Create Contact from crm
+yes
+Invite Contact from crm
+yes
+Create Task
+yes
+FAB icons - for all
+yes
+FAB - icon actions - Take a note/Activity/Task
+yes
+Light mode - dark mode
+yes
+Saved Views
+yes

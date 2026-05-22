@@ -1,0 +1,74 @@
+# 02-DEC24
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+@Umamahesh
+ 
+@Deepti Vaidyula
+ 
+DB changes
+ :
+Connect
+ : No change
+Platform
+ : No change
+Key Clock
+: No change
+Branch
+  : release/2024.12.02
+Components Involved
+ 
+& Artefacts
+:
+Chip1 WebUI                    : 
+2024.12.02.0
+Chip1 Account                : 
+2024.12.02.0
+Chip1 MC1 Core             : 
+2024.12.02.0
+Chip1 Part                        : 
+2024.12.02.0
+Chip1 Transaction.       : 
+2024.12.02.1
+
+## LIST OF DEPLOYED ITEMS
+
+Implement Pricing/Sourcing Tab for Parts to show franchise pricing - Verified
+Private (
+https://app.clickup.com/t/8651091/CHP-1200
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1165
+) - Verified
+Private (
+https://app.clickup.com/t/8651091/CHP-1189
+) - Filters is not yet implemented.
+Private (
+https://app.clickup.com/t/8651091/CHP-1164
+) - Verified
+Private (
+https://app.clickup.com/t/8651091/CHP-614
+) - Verified
+Private (
+https://app.clickup.com/t/8651091/CHP-1157
+) - Verified
+
+## TESTING NOTES
+
+Verified the features and fixes done in the release. Added notes to each ticket.
+Verified that end-to-end scenarios are working.
+Regression tests
+
+## ISSUES ON PRODUCTION
+
+Click-up Ticket
+Type
+Reason
+Private (
+https://app.clickup.com/t/8651091/CHP-1206
+)
+Data
+it is data issue, I see that duplicated quote item 
+US24QU08517
+ was created for the same project item. could you pls confirm if it is created by CRM. I removed one of them - now it should work. we will add corresponding check to don't crash project list in such cases.

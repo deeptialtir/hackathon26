@@ -1,0 +1,271 @@
+# 11-MARCH26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+, 
+@Umamahesh
+ 
+Release date
+ : 2026.03.011
+ 
+DB changes
+ : 
+Connect
+ : release/2026.03.11
+Platform
+ : release/2026.03.11
+Notification : 
+No change
+ 
+Branch
+  : release/2026.03.11
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+ 
+Chip1 MC1 Core   
+    
+                         
+  : 2026.03.11.0
+Chip1 Account  
+    
+                             
+  : 2026.03.11.0
+Chip1 Part
+                                          : 2026.03.11.0
+Chip1 Transaction  
+    
+                      
+  : 2026.03.11.2
+Chip1 CRM WebUI                 
+    
+         
+ : 2026.03.11.3
+Chip1 WebUI                 
+             
+          
+ : 2026.03.11.0
+fn-connect                              
+   
+           
+ : 2026.03.11.3
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+### FOLLOWING ITEMS ARE PART OF THE RELEASE
+
+Deployed  tickets as part of the 
+release 2026.03.11
+Validation of all the above release items will be performed from QE team once it is deployed 
+
+## WHAT'S TESTED FOR THE RELEASE?
+
+Changes to Shipping status
+Invoice Search
+QC changes
+Matches card enabled in dashboard on prod
+
+## UI ISSUES
+
+UI changelog between 
+hotfix/2026.03.05
+ and current develop, deployed to stage (MC1 and CRM)
+ 
+Enable readonly section permissions for Contact, SR, Offer (
+#2860
+) -
+Verified
+Enable readonly section permissions for SO and RFQ (
+#2847
+)-
+Verified(identified issue under SO reported to alexey)
+feat(accounts): Info Pane > Contact Section (
+#2864
+) 
+Accounts List -
+Verified
+Show all emails and phone no. on Contact Section of Account Info pane 
+
+https://www.figma.com/design/v5c0jzDP5riw5RFBNzIyqe/Chip-1---Designs?node-id=46676-52075&m=dev
+Sort option for column 
+Engagement | Potential - -
+Verified
+Rfq 
+Change filter text From Account Owner -> Change it to Sales Person. - 
+Verified
+Purchase Order 
+Fixed sorting issue of total Costs column - 
+Verified
+feat(inner sourcing): add search mpn functionality (
+#2858
+) -
+ For sourcing that is user RFQ/SR/SO, we need to have an option to see the search MPN and potentially change it. We can probably show a search icon and an icnon in the header bar to expand. - 
+Verified(reported issue to shivanand related to SO where sourcing analysis is not available)
+
+https://coda.io/d/Chip-1_dWNX8zdEnCk/Rollout-Kanban_suwpkCIX#Running-Notes-Action-Items_tuKMEBSg/r1…
+See PR for images.
+feat(stocks): Added status and subStatus filters (
+#2856
+) 
+Show options for sub statuses based on selected status filters - 
+Verified
+feat: add missing stock info panes (
+#2862
+)
+Filters - Persist input value on checkbox click; Allocations - adjust for smaller screens (
+#2865
+) 
+Upon selecting one item in search results search term is clearing out, Can we persist to select the rest of the items within that search results. 
+Cleared Search.mov
+The allocation counts are overlapping on to the table for large numbers. This is on 13" mac screen with default resolution. 
+
+https://crm.chip1.com/sales/orders/699d6e393bad624d5a18f04e/line/699d6e393bad624d5a18f04c
+Fix: project part details column and dashboard card (
+#2788
+) 
+add a colour box for this item under dashboard -> Open Orders card- 
+Verified
+under this project, PCN column 1st row values are being overlapped, please check once 
+
+https://crm.stage.chip1.info/projects/69a8375bd6a5492d4a3df8ae
+- 
+Verified
+Impersonate user with regionId (
+#2866
+) - 
+Verified
+MC1 - handle redirects to protected routes for new users (
+#2859
+)  - 
+Verified in dev
+Issue 1: If user clicks on a link like 
+/parts/6731895953aad54e75778d71/documents/datasheets
+, enters MC1, signs up, goes to Profile form, then once Profile is filled up, appears on Dashboard instead of original link
+Issue 2: There was a situation where redirect to Auth or to Profile was not happening, because a part was loaded through loader but redirect had to be handled by component which was never rendered. Switched to privateLoader handling auth redirects as in CRM
+POLine - Add missing shipping fields (
+#2804
+)
+Refactor: SR and Offers changes (
+#2778
+)  - 
+Verified already in Production
+SR Details 
+Align with RFQ: Make Part Details section layout match RFQ pattern exactly – same fields, same order, same
+Change the labels fields to show how it is in RFQ. Single multi selection.
+Change suppliers section to Suggested Suppliers.
+re-order sections as per below: 
+Line Details
+Part Details
+Offers
+Sourcing Analysis
+Tasks
+Timeline
+Documents
+RFQs
+Orders
+Description of part needs to be carried over from RFQ or Part details.
+SR List Info pane - 
+Verified already in Production
+Add Buyer info to info pane (We will only add buyers but not the teams) 
+
+https://www.figma.com/design/v5c0jzDP5riw5RFBNzIyqe/Chip-1---Designs?node-id=47239-146926&t=QEWSrmF…
+Add Instructions to info pane
+RMA Flow - List view (
+#2848
+) - 
+@Abhinay Sharma
+ 
+See PR for images.
+Stock - show available qty in allocation (
+#2863
+) - 
+@Umamahesh
+ 
+Update: Not removing the phone number when user changes the country (
+#2861
+) - 
+Verified
+Update: Changes on Warehouse So List filters, Create Contact Form (
+#2854
+)  - 
+@Umamahesh
+ 
+
+https://coda.io/d/_dWNX8zdEnCk/Rollout-Kanban_suwpkCIX#Running-Notes-Action-Items_tuKMEBSg/r118
+
+https://coda.io/d/_dWNX8zdEnCk/Rollout-Kanban_suwpkCIX#Running-Notes-Action-Items_tuKMEBSg/r191
+ - 
+Verified
+Dev only
+chore: add check for existing changes in develop before backporting (
+#2777
+)
+chore: delete new branch if backport workflow failed (
+#2841
+)
+chore: run backport workflow on PR edit (changing base branch) (
+#2833
+)
+chore: auto-update backport PR when new commits are pushed to source PR (
+#2845
+)
+ The 
+notify-on-update
+ job now: 
+Fetches the backport branch
+Rebases it onto develop (same logic as initial backport)
+Pushes the updated branch
+Comments confirming the update
+Previously it only commented about new commits but didn't actually update the backport PR.
+fix: recreate backport branch from updated source on synchronize (
+#2853
+)
+Refactor backport workflow to streamline process (
+#2846
+)
+ Simplify backport workflow by removing checks for existing changes and comments on PR.
+The last commit in this changelog is 
+2bb2a1bac
+Changes:
+-Fix: Missing Sorting Columns (
+#2872
+) - 
+Verified
+Missing Sorting on below Columns
+Account list
+regionId - 
+Verified
+Purchase Order list
+Tracking Number - 
+Verified
+Expected Delivery Date - 
+Verified
+Remove Notes Tab on SR Details - 
+Verified
+Purchase Order Info Pane -> Show deeplink on Xcrm No. - 
+Not resolving
+-fix(all accounts): minor tweaks (
+#2857
+)
+Disable micro dashbaord - 
+Verified
+Do not show total in the table - 
+Verified
+The add option in left nav, should be against my accounts vs. all accounts. - 
+Verified
+Open issues on Stage
+https://app.clickup.com/8651091/docs/880ak-50654/880ak-52214

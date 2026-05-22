@@ -1,0 +1,69 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Deepti Vaidyula ,  @Umamahesh",,
+Metadata,Release Info,DB changes,Connect : release/2024.11.22,,
+Metadata,Release Info,Platform,No change,,
+Metadata,Release Info,Key Clock,No change,,
+Metadata,Release Info,Branch,release/2024.11.22,,
+Artefacts,Artefacts,Key Clock Server, 2024.11.22.0,,
+Artefacts,Artefacts,Chip1 WebUI, 2024.11.22.0,,
+Artefacts,Artefacts,Chip1 Account, 2024.11.22.0,,
+Artefacts,Artefacts,Chip1 MC1 Core, 2024.11.22.0,,
+Artefacts,Artefacts,Chip1 Part, 2024.11.22.0,,
+Artefacts,Artefacts,Chip1 Transaction., 2024.11.22.2,,
+Artefacts,Artefacts,Sentry integration,,,
+Artefacts,Artefacts,Artefact,2024.11.22.1,,
+Deployed Items,General,"MC1 <> CRM end to end testing
+//app.clickup.com/t/8651091/CHP-1049",,,
+Deployed Items,Private ( https,")
+//app.clickup.com/t/8651091/CHP-1101",Verified,,
+Deployed Items,Private ( https,")
+//app.clickup.com/t/8651091/CHP-717",Verified,,
+Deployed Items,Private ( https,")
+//app.clickup.com/t/8651091/CHP-1113",Verified,,
+Deployed Items,Private ( https,")
+//app.clickup.com/t/8651091/CHP-1098",Verified,,
+Deployed Items,Private ( https,")
+//app.clickup.com/t/8651091/CHP-1156",Verified,,
+Deployed Items,Private ( https,")
+//app.clickup.com/t/8651091/CHP-919",Verified,,
+Deployed Items,Private ( https,")
+//app.clickup.com/t/8651091/CHP-1162
+)
+//app.clickup.com/t/8651091/CHP-1163",Verified,,
+Deployed Items,Private ( https,),Verified,,
+Deployed Items,Private ( https,"Already Hotfix done to Prod
+//app.clickup.com/t/8651091/CHP-1122
+)",,,
+Deployed Items,Private ( https,"Dev Only
+//app.clickup.com/t/8651091/CHP-1130",,,
+Deployed Items,),"Auth - Throw user to login if router loader catches 401 or token is absent  [More like error handling, regression should be enough]",,,
+Deployed Items,Invite flow,"Handling case phone in CRM Invite if country code is missing. [More Info ::: Profile - Allow invited user to save their profile (phoneCountryCode is missing in invitation model hence in invited user model too) Backend now accepsts phoneCountryCode in the send invitation request, so it should not be an isssue now (missing phoneCountryCode caused this issue before)]
+//app.clickup.com/t/8651091/CHP-1121
+)",,,
+Deployed Items,Order,Change mapping for sales person in invoices,,,
+Deployed Items,Order,"Additional locks in fn-keyclock to debug logging issue
+mc1-core handling co-relation id
+## TESTING NOTES",,,
+Deployed Items,End-to-end testing,Can upload BoM,,,
+Deployed Items,End-to-end testing,Can Request a Quote,,,
+Deployed Items,End-to-end testing,Transfer the opportunity (crm bug with contact not getting populated during transfer). Workaround: Transfer the lead account.,,,
+Deployed Items,End-to-end testing,New requests raised from mc1 get the req ID,,,
+Deployed Items,End-to-end testing,Create a Quote,,,
+Deployed Items,End-to-end testing,We can see it in Active quotes,,,
+Deployed Items,End-to-end testing,Raised Order request from active quotes in mc1. Request sent as per UI but couldn't see in crm.,,,
+Deployed Items,End-to-end testing,Raised SO from crm. Can see this in Orders in MC1,,,
+Deployed Items,End-to-end testing,"Click on the order and we can see ""Order Accepted""",,,
+Deployed Items,End-to-end testing,"In CRM, go to Sales -> Purchase Requisition and raise PO",,,
+Deployed Items,End-to-end testing,"The order status in mc1 is still ""Order Accepted""",,,
+Deployed Items,End-to-end testing,From linked account (new and old):,,,
+Deployed Items,End-to-end testing,Raised RFQ,,,
+Deployed Items,End-to-end testing,It's updated as requirement,,,
+Deployed Items,End-to-end testing,Proceeded with steps iv to xi from above,,,
+Deployed Items,End-to-end testing,"Sanity tests
+page navigation
+upload bom and check projects, pricing, source pricing etc
+check all the left side menu tabs
+search",,,
+Deployed Items,End-to-end testing,parts-tracker,Verified the tickets deployed. Updated the status in respective tickets.,,

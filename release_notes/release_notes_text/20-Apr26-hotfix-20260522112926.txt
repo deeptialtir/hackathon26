@@ -1,0 +1,66 @@
+# 20-APR26-HOTFIX🔥
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+, 
+@Harika Guntamukkala
+@Deepti Vaidyula
+ 
+Release date
+ : 2026.04.20
+Release date
+ : 2026.04.20
+ 
+DB changes
+ : 
+Connect
+ : No change
+Platform
+ : No change
+Notification : 
+No change
+ 
+Branch
+  : hotfix/2026.04.20
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Account  
+    
+                               
+  : 2026.04.20.0
+Chip1 Transaction  
+    
+                        
+  : 2026.04.20.1
+Items deployed:
+Populating region and origin source from RFQ/Opportinities created from MC1 - 
+@Harika Guntamukkala
+ 
+Upon cancelling receiving on order quantity is not updating (release issue) - 
+@Umamahesh
+ 
+Account databit migration NPE 
+Migration job - Sanity covers this.
+After the second receiving, the 
+On Order quantity
+ on the PO line is showing an incorrect value. For example, the PO line has an order quantity of 
+700
+, but in the PO list view it is displayed as 500- 
+@Umamahesh
+ 
+Sanity:
+Purchasing - 
+@Umamahesh
+ 
+Inbound - 
+@Harika Guntamukkala
+ 
+Outbound - 
+@Deepti Vaidyula

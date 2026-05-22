@@ -1,0 +1,57 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,@Deepti Vaidyula,,
+Metadata,Release Info,## RELEASE DATE,2026.04.22,,
+Metadata,Release Info,DB changes,Connect : hotfix/2026.04.22,,
+Metadata,Release Info,Platform,hotfix/2026.04.22,,
+Metadata,Release Info,Notification, No change,,
+Metadata,Release Info,Branch,hotfix/2026.04.22,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2026.04.22.3,,
+Artefacts,Artefacts,## FN-CONNECT,2026.04.22.1,,
+Deployed Items,General,Assigning a RFQ,,,
+Deployed Items,General,"When a RFQ from the Opportunities module is assigned to a Salesperson, there have been multiple instances where the RFQ is NOT showing in the Salesperson's RFQ grid - One likely reason is the Account ownership is NOT transferring to the Salesperson
+d. If there is NOT Match and a new Account and Contact has to be created, there was an instance where the contact did not show up (Ex:",Verified,,
+Deployed Items,General,t.flor.de,,@flortronic,
+Deployed Items,General,) - Please check logs if this is created. We are not able to see this created.,Verified,,
+Deployed Items,General,SO outbound sync was failing due to salesperson missing Srinidhi Gundimi,Verified,,
+Deployed Items,General,SO part attributes (Product) sync Srinidhi Gundimi,,,
+Deployed Items,General,"Every opportunity should have
+items.0.originSource",,,
+Deployed Items,General,"Opprtunities created through project should have
+originSource",,,
+Deployed Items,General,too,Verified,,
+Deployed Items,General,"If we select
+xCrmProd
+field in the UI then same should be synced to
+xCRM
+if the field doesn't exist in now then
+xCrmProd
+'s value would be
+(hyphen - hyphen) as
+default",,,
+Deployed Items,General,"Sales Person in xCRM would be coming from
+users
+section of",,,
+Deployed Items,General,"SalesOrder
+rather than createdBy and
+lastEmp
+in
+xCRM
+comes from
+updatedBy - Couldnt validate due to XCRM issue",,,
+Deployed Items,General,PO sync issue Nikhil Kumar Singh,Verified,,
+Deployed Items,Opportunities,Release to sales enabled by default ,Verified,,
+Deployed Items,Opportunities,Fix on the RFQList to always pass isOpportunity as false ,Verified,,
+Deployed Items,Opportunities,"on OpportunityList menu action to disable items based on account instead of crmAccountInfo 
+### ISSUES REPORTED ON STAGE:",Verified,,
+Deployed Items,Opportunities,"I have converted opp->RFQ to a newly created account and selected the 'Connect the MyChip1 account to this Apex Account'. Not seeing this RFQ in MC1. Is this expected?
+//crm.stage.chip1.info/sales/rfqs/69e8c769325fc814822c0f4b/line/5102a4fb-5f79-4129-961c-afff6…",,,
+Deployed Items,US26RQ-1174164.01 https,The account name is blank after opp->RFQ transfer.,,,
+Deployed Items,US26RQ-1174164.01 https,Fixed,,,
+Deployed Items,US26RQ-1174164.01 https,Created an OB SO but it's failing to sync. Seeing remote host (chippydata) terminated the handshake error.,,,
+Deployed Items,Create SO,592f1e17-4584-4053-9e8b-54558761e7bf,,,https://crm.stage.chip1.info/sales/orders/69e8f90e325fc814822c0f64/orderLines
+Deployed Items,Create SO,US26SO-1178923,,,
+Deployed Items,Create SO,"I have created one rfq on xcrm and it's
+//mc1staging.xchangecrm.com/web/requirements/cusreq/update?ID=39614&COMPANY_CODE_=4",not syncing. No logs either in connect.,,
+Deployed Items,NOTE,There's XCRM issue caused us to not validate all the sync flows and issues #3 and #4. We are pushing the release after Sai's approval,,,

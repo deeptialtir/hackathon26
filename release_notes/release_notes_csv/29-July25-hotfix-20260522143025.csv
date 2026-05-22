@@ -1,0 +1,19 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,@Deepti Vaidyula,,
+Metadata,Release Info,Release date,2025.07.29,,
+Metadata,Release Info,DB changes,Connect : No changes,,
+Metadata,Release Info,Platform,No changes,,
+Metadata,Release Info,Notification, No changes,,
+Metadata,Release Info,Branch,hotfix/2025.07.28,,
+Deployed Items,General,"Fix to handle Id reconciliation error for account user entities
+## WHY DO WE NEED THIS HOTFIX?",,,
+Deployed Items,General,"Fix to handle Id reconciliation error for account user entities
+## QE NOTES",,,
+Deployed Items,General,Duplicate user issue and missing contacts issue has been fixed. Found few more issues which are tracked separately in,,,
+Deployed Items,General,"CHP-2619
+.
+## ISSUE FOUND ON PRODUCTION:
+//app.clickup.com/t/8651091/CHP-2619
+)",,,

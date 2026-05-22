@@ -1,0 +1,210 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Deepti Vaidyula ,  @Harika Guntamukkala",,
+Metadata,Release Info,Release date,2025.12.08,,
+Metadata,Release Info,DB changes,Connect : release/2025.12.05,,
+Metadata,Release Info,Platform,release/2025.12.05,,
+Metadata,Release Info,Notification, No changes,,
+Metadata,Release Info,Branch,release/2025.12.05,,
+Artefacts,Artefacts,Chip1 Account,2025.12.05.3,,
+Artefacts,Artefacts,Chip1 Transaction,2025.12.05.1,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2025.12.05.7,,
+Artefacts,Artefacts,Chip1 WebUI,2025.12.05.1,,
+Artefacts,Artefacts,fn connect,2025.12.05.0,,
+Artefacts,Artefacts,fn keyclock,2025.12.05.0,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,QE documentation link,https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh,,
+Deployed Items,Private ( https,"//app.clickup.com/t/8651091/CHP-3386
+)
+//app.clickup.com/t/8651091/CHP-2897
+) - Existing issues
+//app.clickup.com/t/8651091/CHP-3235
+)
+//app.clickup.com/t/8651091/CHP-3597
+)
+//app.clickup.com/t/8651091/CHP-3586
+)
+//app.clickup.com/t/8651091/CHP-3606
+)
+optimize minimum price calculation in aggregated cell logic
+//app.clickup.com/t/8651091/CHP-3576
+) - Link not enabled on prod crm
+//app.clickup.com/t/8651091/CHP-3578
+)
+//app.clickup.com/t/8651091/CHP-3600
+)
+//app.clickup.com/t/8651091/CHP-3605
+)
+//app.clickup.com/t/8651091/CHP-3616
+)
+//app.clickup.com/t/8651091/CHP-3626
+)
+//app.clickup.com/t/8651091/CHP-3570
+)",,,
+Deployed Items,Private ( https,Quote fixes  ,Verified,,
+Deployed Items,Private ( https,"Bugs in build
+1. Quote issue - Ready - deployed Warranty & other info.",,,
+Deployed Items,Private ( https,Habib has a fix for minq and maxq.,,,
+Deployed Items,Private ( https,Habib is checking the warranty related params (2),,,
+Deployed Items,Private ( https,"Quote inbound is failing if we enter warranty details: Private (
+)",,,https://app.clickup.com/t/8651091/CHP-3641
+Deployed Items,Private ( https,2. Invoice page on MC1 is giving Oops error.,,,https://stage.chip1.info/orders/6932fa9bed27af10960c8ac7/invoices
+Deployed Items,User,"altir.test.eu.1111.com
+//app.clickup.com/t/8651091/CHP-3640
+)
+//app.clickup.com/t/8651091/CHP-3639",,@yopmail,
+Deployed Items,),"Timeline tab shows 403 Forbidden and “Oops” error in UI
+//app.clickup.com/t/8651091/CHP-3634",,,
+Deployed Items,),"CRM : 'CPN' and 'Cost per Unit' are missing in Order Line details
+5. Contact Update is failing
+6. Account creation is failing with new contact
+7. mc1 invitation is failing from crm
+8. Unable to create visit due to past date selection on calender
+//app.clickup.com/t/8651091/CHP-3623
+)
+//app.clickup.com/t/8651091/CHP-3650
+)
+//app.clickup.com/t/8651091/CHP-3646
+)
+## MC1 SANITY TESTS",,,
+Deployed Items,Note,The sanity tests to check will be selected based on the release,,,
+Deployed Items,Note,Feature/Flow,,,
+Deployed Items,Note,Stage,,,
+Deployed Items,Note,Prod,,,
+Deployed Items,Note,Remarks,,,
+Deployed Items,Note,New User Signup from mc1,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,Mc1 user invite - signup,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,On stage should suffice,,,
+Deployed Items,Note,Upload Bom and verify in CRM,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Upload Excess and verify in CRM,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Manual RFQ,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,RFQ update,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,RFQ - multiline,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Active Quote (create),,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Active Quote (edit),,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Active quote - multiline,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Sales Order (create),,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Sales Order (edit),,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Sales Order - multiline,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Quality Control (PO number),,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,Invoice generation,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,Invoice generation - shipping in 2 lots,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,"On prod, we test this on need basis",,,
+Deployed Items,Note,Lead Account & Transfer,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Bids,,,
+Deployed Items,Note,Parts Tracker,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Search,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Page Navigations,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Edit Project,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Notification Emails,,,
+Deployed Items,Note,"Download excess and Bom Template, fill and upload.",,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Conceirge Service,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Sorting,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Filters,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Pricing - OEM secrets,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Pricing - IC,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Pricing - xcrm,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,The sanity tests to check will be selected based on the release,,,
+Deployed Items,Note,Feature/Flow,,,
+Deployed Items,Note,Stage,,,
+Deployed Items,Note,Production,,,
+Deployed Items,Note,Remarks,,,
+Deployed Items,Note,"Create BOM in MC1, check in xcrm and new crm",,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,"Create RFQ in MC1, check in xcrm and crm",,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Upload BOM from CRM,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Page Navigations,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,"Deep links for Accounts, RFQs, Quotes and Orders",,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Edit Project,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Projects - price refresh,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Global Search,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Filters,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Sorting of tables,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Page Search,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,"Download excess and Bom Template, fill and upload.",,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Conceirge Service,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Microdashboard counts,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Share project and show in mc1,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Create Contact from crm,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Invite Contact from crm,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Create Task,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,FAB icons - for all,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,FAB - icon actions - Take a note/Activity/Task,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Light mode - dark mode,,,
+Deployed Items,Note,Yes,,,
+Deployed Items,Note,Saved Views,,,
+Deployed Items,Note,Yes,,,

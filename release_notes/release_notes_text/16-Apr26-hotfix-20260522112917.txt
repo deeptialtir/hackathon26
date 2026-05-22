@@ -1,0 +1,47 @@
+# 16-APR26-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+, 
+@Harika Guntamukkala
+, 
+@Deepti Vaidyula
+ 
+Release date
+ : 2026.04.16
+ 
+DB changes
+ : 
+Connect
+ : No change
+Platform
+ : No change
+Notification : 
+No change
+ 
+Branch
+  : hotfix/2026.04.16
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Transaction  
+    
+                        
+  : 2026.04.16.6
+Chip1 CRM WebUI                 
+    
+          
+ : 2026.04.16.1
+ 
+
+### FOLLOWING ITEMS ARE PART OF THE RELEASE
+
+ Adding blankLabel for offers 
+Adding soLineNumber while creating the SR from it.
+Adding Account datagroups on Matching Account in opportunities

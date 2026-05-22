@@ -1,0 +1,514 @@
+# 25-JULY25(DATA MIGRATION)
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+ 
+Release date
+ : 2025.07.22
+DB changes
+ : 
+Connect
+ : release/2025.07.22
+Platform
+ : release/2025.07.22
+Notification : 
+No changes
+Branch
+  : release/2025.07.22
+Components Involved
+ 
+& Artefacts
+:
+fn-connect            
+                               : 2025.07.22.7
+fn-notification-common-service   
+: 2025.07.22.1
+fn-notification-dispatcher
+              : 2025.07.22.1
+fn-notification-publishe
+r                 : 2025.07.22.1
+Chip1 Lookup      
+                                : 2025.07.22.0
+Chip1 Account      
+                              : 2025.07.22.8
+Chip1 MC1 Core 
+                                : 2025.07.22.0
+Chip1 Part        
+                                    : 2025.07.22.0
+Chip1 Transaction  
+    
+                      
+   :
+ 
+2025.07.22.5
+Chip1 WebUI      
+                                 : 2025.07.22.6
+Chip1 CRM WebUI      
+                       : 2025.07.22.6
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+ 
+Account Contact association missing - Done 
+Contact failing for duplicate dummy email issue - Done 
+Adding Index - Done and waiting for validations
+Account process in multi threading - Done
+Concurrent event processing - Done
+User id reconciliation for all the entities - Done
+Private (
+https://app.clickup.com/t/8651091/CHP-2536
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2481
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2479
+)
+Feature tickets:
+Private (
+https://app.clickup.com/t/8651091/CHP-2496
+) - Pass
+Private (
+https://app.clickup.com/t/8651091/CHP-2460
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2456
+)
+Issues in lower env:
+Private (
+https://app.clickup.com/t/8651091/CHP-2522
+) 
+Private (
+https://app.clickup.com/t/8651091/CHP-2523
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2524
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2537
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2527
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2548
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2552
+)
+In release branchcut:
+Private (
+https://app.clickup.com/t/8651091/CHP-2560
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2564
+)
+XCRM: Private (
+https://app.clickup.com/t/8651091/CHP-2579
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2599
+)
+XCRM: Private (
+https://app.clickup.com/t/8651091/CHP-2602
+)
+Also check this release notes: Private (
+https://app.clickup.com/8651091/docs/880ak-39614/880ak-45754
+) 
+We have functional features from here as well.  The following is the list of functional features that also made to the release. There will be one more follow up release which fixes all open issues:
+ 
+ClickUp
+Feature
+Status
+Remarks
+QE
+Open Issues
+Private (
+https://app.clickup.com/t/8651091/CHP-2272
+)
+Account activity 
+(no data. Check on Account update)
+Pass with known issues
+Passed with few minor issues
+Uma
+Private (
+https://app.clickup.com/t/8651091/CHP-2528
+) (Normal)
+Private (
+https://app.clickup.com/t/8651091/CHP-2529
+) (Normal)
+Private (
+https://app.clickup.com/t/8651091/CHP-2530
+) (Normal)
+ 
+Tasks
+(created/assigned by, title and status)
+Pass
+Reported issues are fixed
+Harika
+Private (
+https://app.clickup.com/t/8651091/CHP-2574
+) (Normal)
+ 
+Company details
+(Check with Sai)
+Pass with known issues
+Accounts → Profile tab is hidden if company_id is not there.
+ 
+Works for the account:
+ 
+https://crm.stage.chip1.info/accounts/68128c6b62d24c46a282e04a/profile
+ and 
+https://crm.stage.chip1.info/accounts/68128c6c86d6390158d8764f/profile
+ 
+db.getCollection("accounts").find({"company":{$exists:true}})
+Deepti
+Private (
+https://app.clickup.com/t/8651091/CHP-2535
+) (Normal)
+Private (
+https://app.clickup.com/t/8651091/CHP-2478
+) (Normal)
+Private (
+https://app.clickup.com/t/8651091/CHP-2456
+)
+IC source 
+Pass
+Passed, tested by bypassing IC calls
+Uma
+ 
+ 
+Account - Micro Dashboard 
+Pass with known issues
+The cards count is matching with the list items displayed in the UI. Clicking on the card, filters the list correctly.
+Some counts are not coming up, there is a bug for that.
+Deepti
+Private (
+https://app.clickup.com/t/8651091/CHP-2547
+) (Normal)
+Private (
+https://app.clickup.com/t/8651091/CHP-2551
+)
+ 
+Dashboard 
+Pass with known issue
+Private (
+https://app.clickup.com/t/8651091/CHP-2561
+)
+Harika
+Private (
+https://app.clickup.com/t/8651091/CHP-2580
+) (Low)
+Private (
+https://app.clickup.com/t/8651091/CHP-2290
+)
+MC1 User Invitation from CRM
+Pass
+Passed
+Uma
+Private (
+https://app.clickup.com/t/8651091/CHP-2540
+) (Normal)
+Private (
+https://app.clickup.com/t/8651091/CHP-1685
+)
+Contact details 
+(Check with Sai)
+Pass
+Read only mode
+Uma
+Private (
+https://app.clickup.com/t/8651091/CHP-2539
+) (normal)
+Private (
+https://app.clickup.com/t/8651091/CHP-2541
+) (Normal)
+Private (
+https://app.clickup.com/t/8651091/CHP-2250
+) (Low)
+Private (
+https://app.clickup.com/t/8651091/CHP-2254
+) (Low)
+Private (
+https://app.clickup.com/t/8651091/CHP-2252
+) (Normal)
+ 
+Contacts list view:
+Private (
+https://app.clickup.com/t/8651091/CHP-2557
+) (Normal)
+ Date joined column should be removed from UI as there is no joining date in xCRM. - The filter also should be removed. (Normal)
+ 
+ 
+Tags
+Working on contact tags.
+RFQ - tags
+ 
+Pass
+Read only mode
+Deepti
+ 
+ 
+RFQ Part Details & Price
+Pass.
+Few tabs disabled. We will see Coming Soon.
+Deepti
+Private (
+https://app.clickup.com/t/8651091/CHP-2565
+) (Normal)
+ 
+RFQ list:
+Private (
+https://app.clickup.com/t/8651091/CHP-2567
+) (Normal)
+Private (
+https://app.clickup.com/t/8651091/CHP-2597
+)(high)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Contacts - Micro-dashboard
+(Check for MC1, date joined cards)
+Pass
+The cards count is matching with the list items displayed in the UI. Clicking on the card, filters the list correctly. 
+ 
+There doesn't seem to be any data for NeedOutreach MDC.
+Deepti
+The 'My Chip1' micro-dashboard is displaying records that have 'on Mychip1' as No. Check the interpretation of 'My Chip1'. 
+ 
+Column Selector for lists
+Pass
+ 
+Deepti
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Not all contacts are migrated for the following accounts
+In progress
+Will test once changes are deployed.
+ 
+conTel is inprogress
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-2536
+) (high)
+Private (
+https://app.clickup.com/t/8651091/CHP-2481
+) (High)
+ 
+phone_number+email_adress - backend curl validation
+in progress
+minor fix along with nameInNaturalLanguage change and the isDefault flag for emails which we discussed in standup.
+ 
+It's a lookup field, which will be used to identify firstNameOther and lastNameOther fields information (username → firstName+lastName)
+ 
+ 
+ 
+Other bugs
+ 
+ 
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-2517
+) (Low)
+Private (
+https://app.clickup.com/t/8651091/CHP-2566
+) (Normal)
+Private (
+https://app.clickup.com/t/8651091/CHP-2577
+) (High)
+Private (
+https://app.clickup.com/t/8651091/CHP-2585
+)
+ 
+Bugs in build
+Private (
+https://app.clickup.com/t/8651091/CHP-2606
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2602
+)
+ 
+Issues found on production:
+Private (
+https://app.clickup.com/t/8651091/CHP-2611
+)
+Not seen on stage.
+Team did a work around for projects, it was giving error because of a field 
+items.lastSavedPrice.origin.value
+ , renamed it. This did not occur in stage as this value is not exists for any project
+Private (
+https://app.clickup.com/t/8651091/CHP-2612
+)
+Env vars are updated on prod. Need somehow track infra changes for the 
+release.Like
+ in this case, when env vars were updated for lower env during the testing, but forgotten to be changed in prod..
+Private (
+https://app.clickup.com/t/8651091/CHP-2614
+) 
+Data variation on production.
+Private (
+https://app.clickup.com/t/8651091/CHP-2616
+)
+Created this for tracking. We are currently not supporting RFQ creation from CRM.
+Private (
+https://app.clickup.com/t/8651091/CHP-2617
+) 
+Some quotes failed to sync during migration due to mapping issues. Data variation on production.
+
+## MC1 SANITY TESTS
+
+ 
+Feature/Flow
+Stage
+Prod
+Remarks
+New User Signup from mc1
+ yes
+ yes
+ 
+Mc1 user invite - signup
+ yes
+ yes
+On stage should suffice
+Upload Bom & Excess and verify in CRM
+ yes
+ yes
+ 
+Manual RFQ
+ yes
+ yes
+ 
+Active Quote (create, edit)
+ yes
+yes 
+ 
+Sales Order
+(create, edit)
+ yes
+yes 
+ 
+Lead Account & Transfer
+ yes
+yes
+ 
+Bids
+na 
+ na
+ 
+Parts Tracker
+ yes
+ na
+ 
+Search
+ yes
+ yes
+ 
+Page Navigations
+ yes
+ yes
+ 
+Edit Project
+ yes
+yes 
+ 
+Notification Emails
+ yes
+ yes
+ 
+Download excess and Bom Template, fill and upload.
+ yes
+ yes
+ 
+ 
+
+## CRM SANITY TESTS:
+
+ 
+Feature/Flow
+Stage
+Production
+Remarks
+Create BOM in MC1, check in xcrm and new crm
+ yes
+ yes
+ 
+Create RFQ in MC1, check in xcrm and crm
+ yes
+ yes
+ 
+Upload BOM from CRM
+ yes
+ yes
+ 
+Page Navigations
+ yes
+ yes
+ 
+Deep links for Accounts, RFQs, Quotes and Orders
+ yes
+ yes
+ 
+Edit Project
+ NA
+ NA
+ 
+Global Search
+ yes
+ yes
+ 
+Filters 
+yes 
+ yes
+ 
+Sorting of tables
+ yes
+ yes
+ 
+Page Search
+ yes
+ yes
+ 
+Download excess and Bom Template, fill and upload.
+ yes
+ yes
+ 
+ 
+ 
+ 
+ 
+ 
+
+## AUTOMATION TEST RUN
+
+mc1 report
+jenkins.chip1.info
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/chip1-ui-tests/35/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+ 
+crm report
+jenkins.chip1.info
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/crm-ui-tests/10/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html

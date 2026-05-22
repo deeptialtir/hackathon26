@@ -1,0 +1,78 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Deepti Vaidyula @Harika Guntamukkala",,
+Metadata,Release Info,Release date, 2025.04.07,,
+Metadata,Release Info,DB changes,Connect : No Changes,,
+Metadata,Release Info,Platform,No Change,,
+Metadata,Release Info,Notification, No Changes,,
+Metadata,Release Info,Branch,Platform & Connect : release/2025.04.07,,
+Artefacts,Artefacts,Chip1 webui,2025.04.07.1,,
+Artefacts,Artefacts,Chip1 Accounts,2025.04.07.0,,
+Artefacts,Artefacts,Chip1 Part,2025.04.07.1,,
+Artefacts,Artefacts,Chip1 Transaction,2025.04.07.0,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,QE documentation link,https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh,,
+Deployed Items,General,Project/BOM Health ,Verified,,
+Deployed Items,General,"Change 'Total Quoted Cost' to ""Total Estimated Cost"" (price from OEM/Sourcing plan)",Verified,,
+Deployed Items,General,Redis Client Integration,Verified,,
+Deployed Items,General,Improve OEM secrets integration to consider region and also blank packaging,Verified,,
+Deployed Items,General,Part Pricing - Ignore NA values for packages,Verified,,
+Deployed Items,CHP-1247,Phone utils lib optimization ,Verified,,
+Deployed Items,CHP-1551,Project - Fetch total estimated cost ,Verified,,
+Deployed Items,CHP-1551,"CHP-1689, CHP-1657 Part - pricing improvements, auth layout, project table, fix 2 columns couldn't      been hidden",Verified,,
+Deployed Items,CHP-1702,Project Part      Details -  Table Header text mismatch issue with respective filters      name,Verified,,
+Deployed Items,CHP-1702,"Bugs in build
+//app.clickup.com/t/8651091/CHP-1795
+)
+## SANITY TESTS",,,
+Deployed Items,Missed in production,Feature/Flow,,,
+Deployed Items,Missed in production,Stage,,,
+Deployed Items,Missed in production,Prod,,,
+Deployed Items,Missed in production,Remarks,,,
+Deployed Items,Missed in production,"New User Signup from mc1
+yes
+yes",,,
+Deployed Items,Missed in production,"Mc1 user invite - signup
+yes",,,
+Deployed Items,Missed in production,On stage should suffice,,,
+Deployed Items,Missed in production,"Upload Bom & Excess and verify in CRM
+yes
+yes",,,
+Deployed Items,Missed in production,"Manual RFQ
+yes
+yes",,,
+Deployed Items,Missed in production,"Active Quote (create, edit)
+yes
+yes",,,
+Deployed Items,Missed in production,"Sales Order
+(create, edit)
+yes
+yes",,,
+Deployed Items,Missed in production,"Lead Account & Transfer
+yes
+on stage should suffice",,,
+Deployed Items,Missed in production,"Bids
+yes",,,
+Deployed Items,Stage,"Bids - list is processing. So,",verified with bid for which list is already processed and approved.                          Excess sync validation is good enough in production,,
+Deployed Items,Stage,"Parts Tracker - PCN
+yes
+yes",,,
+Deployed Items,Stage,"Parts Tracker - Stock
+yes
+yes",,,
+Deployed Items,Stage,The crons on stage are not working as expected.,,,
+Deployed Items,Stage,Notification email sent for exisiting values.,,,
+Deployed Items,Stage,"Search
+yes
+yes",,,
+Deployed Items,Stage,"Page Navigations
+yes
+yes",,,
+Deployed Items,Stage,"Edit Project
+yes
+yes",,,
+Deployed Items,Stage,"Notification Emails
+yes
+yes",,,

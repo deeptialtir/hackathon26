@@ -1,0 +1,121 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Deepti Vaidyula ,  @Harika Guntamukkala",,
+Metadata,Release Info,Release date,2026.04.30,,
+Metadata,Release Info,DB changes,Connect : release/2026.04.30,,
+Metadata,Release Info,Platform,No change,,
+Metadata,Release Info,Notification, No change,,
+Metadata,Release Info,Branch,release/2026.04.30,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2026.04.30.5,,
+Artefacts,Artefacts,fn connect,2026.04.30.0,,
+Deployed Items,feat(sr),Allocation Details island changes (,,,
+Deployed Items,feat(sr),),Verified,,
+Deployed Items,feat(sr),Sr Allocation details Island changes,,,
+Deployed Items,feat(sr),Added allocation sr allocation list on line details page,,,
+Deployed Items,feat(sr),Enable Add allocation button when sr status >= purchase requested,,,
+Deployed Items,feat(sr),Enable allocation feature till production,,,
+Deployed Items,feat(sr),Replace Order ID with linked Sales Order number in invoice lines (,,,
+Deployed Items,feat(sr),),Verified,,
+Deployed Items,feat(sr),"Replaces the ""Order ID"" column in invoice lines with a ""Sales Order #"" column. Displays the linked
+salesOrder.orderNumber
+instead of a raw UUID. A hyperlink navigates to the corresponding sales order (
+). The
+salesOrderId
+field now supports
+string | null
+(null when no sales order is linked), and dependencies on
+tOrder
+have been removed from column definitions.",,,
+Deployed Items,/sales/orders/,"See PR for images.
+gate Req Source field with sourceFieldOnUpdate permission (
+)",,,
+Deployed Items,feat(permissions),Adds permission control for the,,,
+Deployed Items,feat(permissions),"Requirement Source
+(
+originSource
+) field on RFQ line and Order line detail views — only users with the
+sourceFieldOnUpdate",,,
+Deployed Items,feat(permissions),"action can edit it after creation
+sourceFieldOnUpdate
+present with
+→ user is allowed to edit (matches existing
+getIsActionAllowed",Verified,,
+Deployed Items,scope,"convention where VIEW = enabled for actions)
+sourceFieldOnUpdate
+absent",Verified,,
+Deployed Items,scope,→ field is read-only,Verified,,
+Deployed Items,scope,"No restrictions on creation forms — all users can set the value when creating an RFQ or Order
+revert to old design in account list for email and phone (",Verified,,
+Deployed Items,fix,),Verified,,
+Deployed Items,fix,"Reverted to old design for email and phone in account list, duplicate contacts list and campaign contact list.",,,
+Deployed Items,fix,See PR for images.,,,
+Deployed Items,Om Sreenivasan,hey guys - Just now Pouya called. Looks like this is happening for... | Sales Flow | Microsoft Teams,Verified,,
+Deployed Items,Om Sreenivasan,Soucring changes,,,
+Deployed Items,Om Sreenivasan,Combine,,,
+Deployed Items,Om Sreenivasan,"RoHS Version
++",,,
+Deployed Items,Om Sreenivasan,"CRM RoHS
+into a single double-decker column (
+rohsVersionCrmRohs",,,
+Deployed Items,Om Sreenivasan,) with client sorting.,Verified,,
+Deployed Items,Om Sreenivasan,Make,,,
+Deployed Items,Om Sreenivasan,Entity Type / Entity,,,
+Deployed Items,Om Sreenivasan,cells link to the right detail page (offer → offer details; pricing entities stay non-link).,Verified,,
+Deployed Items,Om Sreenivasan,Improve Supplier column layout by moving rating to secondary and adding country + “Approved: X” as tertiary.,Verified,,
+Deployed Items,Om Sreenivasan,"Update Market Activity defaults to hide
+exportControls
+and
+rohsVersionCrmRohs
+(plus existing
+c1xOfficeWarehouseAwb",,,
+Deployed Items,Om Sreenivasan,).,Verified,,
+Deployed Items,Om Sreenivasan,"Refresh sourcing translations for new/renamed labels (e.g., “Supplier Details”, “CRM RoHS”, approved label).
+[UI] Include a field for PO search or if the search supports both, then we can call it Stock Search.",Verified,,
+Deployed Items,Om Sreenivasan,Ship via account number is still not updatable,,@Deepti Vaidyula,
+Deployed Items,Om Sreenivasan,We should let the user edit and change the tracking number if they should. Currently updating is not possible,Verified,,
+Deployed Items,Om Sreenivasan,We should restrict the stock allocation when the pending quantity is 0 on the SR,Verified,,
+Deployed Items,QE Remarks,"If Pending stock is 0, then 'Add allocation' is diabled.",,,
+Deployed Items,QE Remarks,[BE] Change the backend logic to update qty as per the formular of  (in stock + on order) - (allocated + reserved). ,Verified,,
+Deployed Items,QE Remarks,[BE] Need to clean up historical data.,Verified,,
+Deployed Items,QE Remarks,"[BE] When UI is calling stock API with qty >0, just apply that filter, do not include on order",Verified,,
+Deployed Items,PO,"Update validations (
+)
+po line issues (
+)",,,
+Deployed Items,Fix,Add Po Doc action on po line level,Verified,,
+Deployed Items,Fix,Replace the,,,
+Deployed Items,Fix,"Supplier Poline island
+with",,,
+Deployed Items,Fix,"Supplier Po island
+as supplier and buyer information should be updated on
+po level
+only.",,,
+Deployed Items,QE Remarks,Download PO doc is at PO line level.,,,
+Deployed Items,Fixes,"SR stock allocation issues (
+)",,,
+Deployed Items,Fixes,Do not allow empty search with MPN field (restricting the API call when search is empty),Verified,,
+Deployed Items,Fixes,Update the search placeholder with text 'Search with mpn or po number',Verified,,
+Deployed Items,Fixes,"Restrict stock allocation when the pending quantity is 0 on the SR
+not redirecting user to RFQ details after doing the match account (",Verified,,
+Deployed Items,Update,),Verified,,
+Deployed Items,Update,"raised pr for SR allocation api changes --release:
+### DEV ITEMS
+restructure",Verified,,https://github.com/altirllc/chip1-webui/pull/3832
+Deployed Items,chore(claude),"CLAUDE.md
+for clarity and enforce documentation rules (dev only) (
+)",,,
+Deployed Items,chore,"Attach Account - extract common functions to utils (dev only) (
+)
+resolve React Compiler try/catch value-block warning in AccountEditAddressModal (dev only) (
+)",,,
+Deployed Items,fix(crm),"Extracts the address payload computation from inside the handleSubmit try/catch into a standalone
+buildAddressFormPayload
+function. The React Compiler can't optimize value expressions (
+,
+??
+,
+||
+,
+?.
+) inside try/catch bodies — moving them outside resolves the warning while preserving identical runtime behavior.",,,

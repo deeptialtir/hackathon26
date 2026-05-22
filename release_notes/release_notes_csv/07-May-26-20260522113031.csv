@@ -1,0 +1,128 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Deepti Vaidyula ,  @Harika Guntamukkala",,
+Metadata,Release Info,Release date,2026.05.07,,
+Metadata,Release Info,DB changes,Connect : release/2026.05.07,,
+Metadata,Release Info,Platform,release/2026.05.07,,
+Metadata,Release Info,Notification, release/2026.05.07,,
+Metadata,Release Info,Branch,release/2026.05.07,,
+Artefacts,Artefacts,Chip1 Part,2026.05.07.0,,
+Artefacts,Artefacts,Chip1 Transaction,2026.05.07.2,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2026.05.07.2,,
+Artefacts,Artefacts,Chip1 WebUI,2026.05.07.0,,
+Artefacts,Artefacts,fn connect,2026.05.07.1,,
+Artefacts,Artefacts,fn notification common service,2026.05.07.0,,
+Artefacts,Artefacts,fn notification dispatcher,2026.05.07.0,,
+Deployed Items,feat,"enable loaders for shipment -> SO/PO lines tabs (
+)
+use ELookupCategory.Rfq for qcLevel in usePurchaseOrderFields (
+)",,,
+Deployed Items,QE note,Did sanity.,"Verified,",,
+Deployed Items,Fix,"Warehouse status filter  (
+)",,,
+Deployed Items,QE note,"PO & Shipment Changes - 2026.05.06 (
+)
+**Purchase Order and Stock**",,,
+Deployed Items,QE note,Remove temp location fields from across stock pages and status update modals,,,
+Deployed Items,QE note,Update grid nested layout for Arrival Check,,,
+Deployed Items,QE note,Enable lock only for PO Lines details accordion (rest other accordion should be editable at all times),,,
+Deployed Items,QE note,Enable Editing Package details,,,
+Deployed Items,QE note,Rearrange weight unit field,,,
+Deployed Items,QE note,Hide shipping address column for inbound shipments list views,,,
+Deployed Items,Stock,"Add ready to ship quantity (
+)
+add new columns to sr allocation modal (
+)",,,
+Deployed Items,Feat,"Add following columns to allocation list on sr allocation modal
+location, region, date code and rohs",,,
+Deployed Items,QE note,Add sourcing request action on Offers tab of SO Line List view: Rename text to 'Request Purchase' instead of 'Request for Purchase',,,
+Deployed Items,QE note,PO Inbound Buyer sync,,,
+Deployed Items,QE note,"PO - OB, Tax Rate, Inco Terms, Shipping Account, Rohs Status",,,
+Deployed Items,QE note,Account stage calculation (active/inactive/prospect) in account service,,,
+Deployed Items,QE note,Stockline list view MPN and MFG dynamic filters as per user feedback,,,
+Deployed Items,QE note,Refactor for stocklines in part sourcing; reduced API calls,,,
+Deployed Items,QE note,Notifications,,,
+Deployed Items,QE note,Notification for SR creation including Alternates,,,
+Deployed Items,QE note,Notification for sales person on release of opportunity,,,
+Deployed Items,QE note,Duplicate Allocation issue fix from BE,,,
+Deployed Items,QE note,Still seeing the issue,,,
+Deployed Items,QE note,PO Line - Allocation accordion,,,
+Deployed Items,QE note,Mapping description in Purchase Order PDF,,,
+Deployed Items,QE note,"Datagroups migration performance improvement, endpoint to calculate for specific entities
+remove the ""Add Sourcing Request"" button (Block creation of SR)  on the UI when an SR already exists for that SO line /RFQ line.",,,
+Deployed Items,QE note,"SO > Offers tab > Rename the button ""Add sourcing Request"" to ""Request Purchase""",,,
+Deployed Items,QE note,"Button visibility- Only show ""Request Purchase"" if no SR exists for that SO/RFQ line.",,,
+Deployed Items,QE note,"On click - no SR exists - Open Create SR modal. Default status to ""Purchase Requested""",,,
+Deployed Items,QE note,"On click — SR exists with status Open (RFQ path);
+trigger a status update on the existing SR to ""Purchase Requested"" similar to line action ""Request for purchasing"" option
+changes to get all the charges from SO to shipment while creating
+provide default empty strings for invoice payment form fields (",,,
+Deployed Items,update,),Verified,,
+Deployed Items,update,"Ensure notes, website, and insuranceStatus fallback to empty strings instead of undefined or null during form submission.",,,
+Deployed Items,Feat,Added stockLines tab on invoice details page (,,,
+Deployed Items,Feat,")
+changes on Order Line Approval Card , Overview Card , label preferences field on Order Line details and Allocations  (
+)",Verified,,
+Deployed Items,Update,in Order Line Details -> Allocation Island summary for P it should be - if the value doesn't exist instead of 0,Verified,,
+Deployed Items,Update,When Order Line is not locked we are not showing some items on Order Checklist Card on Order Line details page,Verified,,
+Deployed Items,Update,remove the locking on Allocation details on Order Line details for now,Verified,,
+Deployed Items,Update,"On Order Details Page , Order Overview card , for Date Ordered should use createdDate , and instead of Delivery Due date lets have Promised Delivered Date  for total Costs check the number of decimals displayed",Verified,,
+Deployed Items,Update,"Order Line details summary , final Order costs summary value should also need to have same decimal's",Verified,,
+Deployed Items,Update,for label preferences add a hover tooltip to display all the selected options,Verified,,
+Deployed Items,Update,"when line is not locked account and document approvals now can be edited but change it to uneditable if line is no locked , so just disable like we do for param approval",Verified,,
+Deployed Items,Update,"RFQ - Regroup fields in Requirements island (
+)",,,
+Deployed Items,Update,Part 1 from,,,
+Deployed Items,Update,"Only #1 related to RFQ
+*See PR for images.*",Verified,,
+Deployed Items,Update,Quality Check - Allow comments and checkbox for images (,,,
+Deployed Items,Update,")
+*See PR for images.*
+sr and po (
+)",Verified,,
+Deployed Items,Fixes,"Part column width too narrow, part name getting cut off - RFQ view ",Verified,,
+Deployed Items,Fixes,Alternative Chip font size too large - RFQ view ,Verified,,
+Deployed Items,Fixes,"SR creation flow from SO — ""Request Purchase"" instead of calling it ""Add sourcing Request"" on SO ",Verified,,
+Deployed Items,Fixes,SR Allocation List - Add SO Id Column,Verified,,
+Deployed Items,Fixes,"""Offered Unit Price"" label should just say ""Unit Price"" - PO creation form",Verified,,
+Deployed Items,Fixes,Currency not defaulting on PO creation form,Verified(It should be loggedin users region based),,
+Deployed Items,Fixes,Contact not mandatory on PO  should be made mandatory on PO creation form ,Verified,,
+Deployed Items,Fixes,"Approval clicking on radio button on hero should open the corresponding approval
+added tooltip for infobit label , fixed the issue on RFQLine details people form (
+)",Verified,,
+Deployed Items,Refactor,"In the RFQ details page (Inbound flow), the Account Info section shows an ""Oops"" error when created with a user (Abhinay/Nabeeha) where reconciliation didn't happen.",Verified,,
+Deployed Items,Refactor,"Under SO hero card, full value of ""Promised Delivered Date"" is not visible on hover.",Verified,,
+Deployed Items,Refactor,Add sourcing request action on Offers tab of SO Line List view: Rename text to 'Request Purchase' instead of 'Request for Purchase',Verified,,
+Deployed Items,Refactor,xCRM Attributes & Sales user sync,Verified,,
+Deployed Items,Refactor,Invoice Outbound,,,
+Deployed Items,Refactor,Not working,,,
+Deployed Items,dev only,"Add a skill for working with API Contract (
+)",,,
+Deployed Items,dev only,"Datagroups migration performance improvement, endpoint to calculate for specific entities",,,
+Deployed Items,Refactor,"Tables - create simple single line cells and shortcut helper & migrate order lines columns (
+)",,,
+Deployed Items,Refactor,Introduces,,,
+Deployed Items,Refactor,"SingleLineLinkCell
+and",,,
+Deployed Items,Refactor,SingleLineCopyCel,,,
+Deployed Items,Refactor,"reusable cell components in  /components/table
+, along with a
+getSimpleCell",,@chip1,
+Deployed Items,Refactor,"API that covers the most common column patterns (plain text, links, copy cells) with consistent styling and minimal boilerplate.",,,
+Deployed Items,Refactor,"OrdersList
+column definitions are migrated as the first consumer. Migration for other lists will follow in subsequent PRs.",,,
+Deployed Items,Refactor,Added,,,
+Deployed Items,Refactor,"SingleLineLinkCell
+and",,,
+Deployed Items,Refactor,"SingleLineCopyCell
+cell components",,,
+Deployed Items,Refactor,"Extended
+getSimpleCells
+with new link and copy variants",,,
+Deployed Items,Refactor,Migrated,,,
+Deployed Items,Refactor,"OrdersList
+column definitions to use the new wrappers",,,
+Deployed Items,Refactor,"Added
+simple-cells.md
+doc with usage patterns",,,

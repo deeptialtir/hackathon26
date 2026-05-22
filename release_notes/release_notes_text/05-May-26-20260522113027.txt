@@ -1,0 +1,169 @@
+# 05-MAY-26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2026.05.05
+ 
+DB changes
+ : 
+Connect
+ : release/2026.05.05
+Platform
+ : No change
+Notification : 
+No change
+ 
+Branch
+  : release/2026.05.04
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Transaction  
+    
+                        
+ : 2026.05.05.0
+Chip1 CRM WebUI                 
+    
+          
+: 2026.05.05.3
+fn connect                                          
+    : 2026.05.05.0
+
+## LIST OF DEPLOYED ITEMS
+
+@Deepti Vaidyula
+ 
+Split Stock Functionality (
+#3861
+) 
+Verified
+In shipment details, indicate inbound vs. outbound somewhere in the header - 
+Verified
+Also add a section to show the packaging details that includes box info. - 
+Verified
+Enable Add arrival action once PO is approved. - For po, po line and receiving line 
+Verified
+In add arrival - remove QC inspector as mandatory field 
+Verified
+In Arrival step 2, change the view from grid view to add receiving type view. PO line on the top and then add receiving in an indented way. the attributes can be same as that of add receiving. If multiples po lines include all 
+Verified
+Shipment list view - Account should be supplier that is copied from PO 
+Verified
+Shipment list view - Shipping address and ship via can come from PO 
+Verified
+If a stock line has states > created.. received or any other,  add the option to split line. It can be similar to  add Receiving 
+Verified
+@Harika Guntamukkala
+ 
+Invoice sync for inbound and outbound - 
+Outbound sync is not working
+ 
+update: standardize account currency resolution with useAccountCurrency hook (
+#3856
+)  - 
+Verified
+Introduce a centralized 
+useAccountCurrency
+ hook to unify currency resolution logic across Account Details components.
+Verified
+Enable Search for Invoice : add quick look action for invoices in search results (
+#3862
+)   
+Verified
+Integrate 
+ESearchCategory.Invoices
+ into 
+useSearchQuickLookActions
+ to enable opening the invoice information modal directly from search results.
+ Added SR alternative chip (
+#3859
+)  
+Verified
+If a SR has an alternative available, indicate as shown on 
+
+https://www.figma.com/design/v5c0jzDP5riw5RFBNzIyqe/Chip-1---Designs?node-id=49452-41459&t=Bljtif8Q…
+ — should be done on list view, info pane, hero card, and line details.
+Invoice Enhancements and Sync  
+feat: integrate invoices into search and task context (
+#3857
+)   
+Verified
+Integrate Invoices into global search with dedicated iconography and result mapping.
+Verified
+Enable task context support for Invoices to allow context-aware task and note creation.
+Verified
+Add CommonFabActions to InvoiceDetails FAB. 
+Verified
+Update InvoiceDetails tabs: rename 'Activity' to 'Timeline' and remove the 'Related' tab. 
+Verified
+Search Integration
+: Added 
+Invoices
+ to 
+ESearchCategory
+, implemented its icon, DTO types, and result title mapping in 
+apps/crm/src/api/search.ts
+.
+Verified
+Task Context
+: Registered 
+Invoice
+ as a new task context (
+context.18
+) and added corresponding utility mapping in 
+entityContext.ts
+.
+Verified
+UI Enhancements
+:  
+Injected 
+CommonFabActions
+ into the Invoice details FAB to enable quick task/note actions.
+Verified
+Renamed the "Activity" tab to "Timeline" and removed the redundant "Related" tab in the Invoice details view.
+Verified
+Update : Changes on Invoice details page (
+#3863
+)  
+Refactor Invoice Lines -> OrderLine's with OrderLine columns on Order Details Line Tab, with Invoice column and no purchase related columns.
+Verified
+In Invoice details Costs and Payments Island summary, "paid" refers to a Boolean value from the backend (displayed as yes/no on UI).
+Verified
+New fields: insured balance, remaining insurance limit, and insurance status. 
+Verified - reported issue(
+Harika Guntamukkala: Save button is enabled for the invoice HK26SO00037 under Invo... | Chip1-Integration | Microsoft Teams
+)
+update(invoices): enhance invoice shipping and payment forms with additional fields (
+#3858
+)  
+Added billing address autocomplete and a new follow-up emails section to the Invoice Payments form.
+Verified
+Integrated tracking information (tracking number, ship date) and shipping contact details into the Shipping Info form. 
+Verified
+Enhanced the invoice delivery section with multi-email tag input support and a dedicated URL field for the billing website.
+Verified
+Dev items
+chore: bump pnpm to 10.33.3 (
+#3860
+)
+chore: create a skill for pdf template editing (uses transaction service)
+Type Safety & Locales
+: Updated 
+TCrmInvoice
+ to make 
+account
+ mandatory and added missing localization strings for search categories and invoice tabs.
+Refine Invoice type definitions and provide necessary localization updates.
+Expanded the invoice type definitions and validation schema to include shipping options, account numbers, and notes.
+Added corresponding translations for all new invoice fields and sections in the locale configuration.
+Improved contact fallback logic in the Invoice Info Summary to ensure a contact ID is always available.

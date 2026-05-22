@@ -1,0 +1,9 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,@Deepti Vaidyula,,
+Metadata,Release Info,Release date,2025.01.24,,
+Metadata,Release Info,DB changes,Connect : No Changes,,
+Metadata,Release Info,Platform,No Change,,
+Metadata,Release Info,Notification, No Change,,
+Metadata,Release Info,Branch,Platform : hotfix/2025.01.28,,

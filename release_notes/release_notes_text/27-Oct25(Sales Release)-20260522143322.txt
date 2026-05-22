@@ -1,0 +1,389 @@
+# 27-OCT25(SALES RELEASE)
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date: 27/10/2025
+Connect
+ : release/2025.10.27
+Platform
+ : release/2025.10.27
+Notification : 
+No changes
+ 
+Branch
+  : release/2025.10.27
+ 
+Components Involved
+ 
+& Artefacts
+:
+ 
+Chip1 MC1 WebUI 
+                              : 2025.10.27.2
+Chip1 CRM WebUI   
+                           : 2025.10.27.2
+Chip1 Account      
+                               : 2025.10.27.3
+Chip1 Part        
+                                     : 2025.10.27.0
+Chip1 Transaction  
+    
+                      
+    :
+ 
+2025.10.27.2
+fn-connect     
+                                      : 2025.10.27.1
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+ 
+
+## BUGS IN BUILD
+
+#### REGRESSION ISSUES:
+
+CRM:: Account hierarchy is breaking whenever we select parent while creation
+CRM:: Updating the address in Account→General is creating multiple addresses
+CRM:: Account Update is not working at our side ( New issue found in the current release version)
+CRM:: Part Health -> product-change-notifications, lot of columns are not having data
+CRM:: Part Health -> health changes, Account and Account owner are not getting displayed
+CRM:: Order lines view from Account seems broken . It is showing second line as 2 but this has only one order line
+CRM:: Create Standalone SO -> import requests -> search is failing with 500
+CRM:: Display xcrm ID of quote in the Quote lines tab in Request line details
+
+#### SYNC ISSUES:
+
+Accounts:
+Account Update from CRM→ XCRM is not working
+Contacts:
+Update Contact XCRM→CRM is not working
+MC1 & Quotes : 
+RFQ + Quote single & multi line( Now syncing to XCRM but duplicated)
+Standalone multi-line quote from crm ->US25QU00363->This created duplicate multi-line quotes in MC1 (P2) and two lines in CRM(pass)
+Orders:
+SO multi-line create from crm - the second line is syncing.
+Duplicate SO lines created and chevrons not updated when Multi-line SO (with RFQ as source) is updated from xCRM (
+CHP-3367
+)
+
+### CONSOLIDATED ISSUES:
+
+Private (
+https://app.clickup.com/t/8651091/CHP-3328
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3307
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3318
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3326
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3321
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3341
+)
+Account Bugs raised for this build
+Private (
+https://app.clickup.com/t/8651091/CHP-3375
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3371
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3370
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3369
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3368
+)
+Contact Bugs raised for this build
+Private (
+https://app.clickup.com/t/8651091/CHP-3376
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3372
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3366
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3364
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3363
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3360
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3353
+)
+
+## PRODUCTION ISSUES:
+
+RFQ update fails: RC: The emails in 
+contact
+ is being nullified whenever a update call is made even though 
+emails
+ exist while creation.  Sandeep Thatikonda, It's backend 
+chip1-transaction
+ issue.
+Account sync issues with new contact on account creation from crm
+ 
+
+# AUTOMATION RUNS
+
+CRM
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/crm-ui-tests/19/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+MC1
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/chip1-ui-tests/44/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+
+## MC1 SANITY TESTS
+
+Note: The sanity tests to check will be selected based on the release
+Feature/Flow
+Stage
+Prod
+Remarks
+New User Signup from mc1
+ Pass
+ Pass
+On prod, we test this on need basis
+Mc1 user invite - signup
+ Pass
+ Pass
+On stage should suffice
+Upload Bom and verify in CRM
+ Pass
+ Pass
+ 
+Upload Excess and verify in CRM
+ Pass
+ Pass
+ 
+Manual RFQ
+ Pass
+ Pass
+ 
+RFQ update
+ Pass
+ Pass
+ 
+RFQ - multiline
+ Pass
+ 
+ 
+Active Quote (create)
+ Pass
+ Pass
+ 
+Active Quote (edit)
+ Pass
+ Pass
+ 
+Active quote - multiline
+ Pass
+ 
+ 
+Sales Order (create)
+ Pass
+Pass 
+ 
+Sales Order (edit)
+ Pass
+ Pass
+ 
+Sales Order - multiline
+ Pass
+ Pass
+ 
+Quality Control (PO number)
+ Pass
+ Pass
+On prod, we test this on need basis
+Invoice generation
+ Pass
+ Pass
+On prod, we test this on need basis
+Invoice generation - shipping in 2 lots
+ Pass
+ Pass
+On prod, we test this on need basis
+Lead Account & Transfer
+ Pass
+ Pass
+ 
+Bids
+ Pass
+ -
+ 
+Parts Tracker
+ Pass
+ Pass
+ 
+Search
+ Pass
+ Pass
+ 
+Page Navigations
+ Pass
+ Pass
+ 
+Edit Project
+ Pass
+ Pass
+ 
+Notification Emails
+ --
+ Pass
+ 
+Download excess and Bom Template, fill and upload.
+ Pass
+ Pass
+ 
+Conceirge Service
+ Pass
+ Pass
+ 
+Sorting
+ Pass
+ Pass
+ 
+Filters
+ Pass
+ Pass
+ 
+Pricing - OEM secrets
+ Pass
+ Pass
+ 
+Pricing - IC
+ Pass
+ Pass
+ 
+Pricing - xcrm
+ Pass
+ Pass
+ 
+ 
+
+## CRM SANITY TESTS:
+
+Note: The sanity tests to check will be selected based on the release
+Feature/Flow
+Stage
+Production
+Remarks
+Create BOM in MC1, check in xcrm and new crm
+Pass
+ Pass
+ 
+Create RFQ in MC1, check in xcrm and crm
+ Pass
+ Pass
+ 
+Upload BOM from CRM
+ Pass
+ Pass
+ 
+Page Navigations
+ Pass
+ Pass
+ 
+Deep links for Accounts, RFQs, Quotes and Orders
+ Pass
+ Pass
+ 
+Edit Project
+ Pass
+Pass 
+ 
+Projects - price refresh
+ Pass
+ Pass
+ 
+Global Search
+ Pass
+ Pass
+ 
+Filters 
+ Pass
+Pass 
+ 
+Sorting of tables
+ Pass
+ Pass
+ 
+Page Search
+ Pass
+ Pass
+ 
+Download excess and Bom Template, fill and upload.
+ Pass
+ Pass
+ 
+Conceirge Service
+ Pass
+ Pass
+ 
+Microdashboard counts
+ Pass
+ Pass
+ 
+Share project and show in mc1
+Pass 
+ Pass
+ 
+Create Contact from crm
+Pass 
+ Pass
+ 
+Invite Contact from crm
+ Pass
+ Pass
+ 
+Create Task
+ Pass
+ Pass
+ 
+FAB icons - for all
+ Pass
+ Pass
+ 
+FAB - icon actions - Take a note/Activity/Task
+ Pass
+ Pass
+ 
+Light mode - dark mode
+ Pass
+ Pass
+ 
+Saved Views
+ Pass
+ Pass

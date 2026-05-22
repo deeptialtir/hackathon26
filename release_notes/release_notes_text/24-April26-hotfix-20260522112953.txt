@@ -1,0 +1,111 @@
+# 24-APRIL26-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+, 
+@Umamahesh
+ 
+Release date
+ : 2026.04.23
+DB changes
+ :
+Connect
+ : hotfix/2026.04.24
+Platform
+ : No change
+Notification : 
+No change
+ 
+Branch
+  : hotfix/2026.04.24
+ 
+Components Involved
+ 
+& Artefacts
+:
+Chip1 Account  
+    
+                        
+        : 2026.04.24.10
+Chip1 Transaction                            
+    : 2026.04.24.12
+Chip1 CRM WebUI                 
+    
+          
+ : 2026.04.24.11
+Chip1 WebUI                 
+    
+          
+           : 2026.04.24.10
+fn-connect                                              
+: 2026.04.24.11
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+fix(AccountCreditIsland): correct fallback to fundCode value instead of key (
+#3755
+) 
+@Deepti Vaidyula
+  - 
+Verified
+MC1 warehouse - Create route, table, info pane, add permissions, (
+#3747
+)
+ Adds a Warehouse Stock section to the MyChip1 customer portal (accessible only to accounts with warehouse permissions).
+ What to test: 
+Navigate to the Warehouse Stock page — it should be visible only for accounts with warehouse access
+The stock list shows part info, status, quantities, PO/allocation references, and a SPN column
+Clicking a row opens a detail panel (info pane) with extended stock information
+Filters work: search by text, filter by status, filter by date
+Column visibility toggle lets you show/hide columns
+Columns can be resized and reordered; certain columns stay pinned on the left
+Accounts without warehouse permissions should not see the page (direct URL access should redirect)
+Dev-only:
+Move AllocationSummary to core and enhance dynamic API scripts (
+#3746
+) 
+ Migrates the 
+AllocationSummary
+ display components and 
+AllocationSummaryCell
+ from the CRM app to the 
+@chip1/core
+ package, enabling shared usage across CRM and MC1 warehouse stock columns. Also introduces a utility function 
+getStockAllocationSummary
+ for 
+TStock
+, and updates CRM import paths to use the new 
+@chip1/core/components/AllocationSummary
+ location.
+refactor navbar (mc1)
+refactor(mc1/navbar): replace useMatch+Link with shared NavbarNavLink
+MC1 stock : On stage enabled for 
+ghhgsdj@yopmail.com
+ in mc1 - 
+@Harika Guntamukkala
+ 
+Verified
+Opportunity Origin source fix - 
+@Deepti Vaidyula
+ 
+Verified
+Open Account datamigration fix (condition to check salesperson not exists or account management) - 
+@Harika Guntamukkala
+ 
+Verified
+Fix for fundCode value fix in credit information 
+link here
+ - 
+@Deepti Vaidyula
+ 
+Verified
+Adding team's datagroup to SR - 
+@Deepti Vaidyula
+ - issue-
+link

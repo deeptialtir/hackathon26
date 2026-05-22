@@ -1,0 +1,48 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Deepti Vaidyula ,  @Harika Guntamukkala ,  @Umamahesh",,
+Metadata,Release Info,Release date,2026.04.23,,
+Metadata,Release Info,DB changes,Connect : hotfix/2026.04.24,,
+Metadata,Release Info,Platform,No change,,
+Metadata,Release Info,Notification, No change,,
+Metadata,Release Info,Branch,hotfix/2026.04.24,,
+Artefacts,Artefacts,Chip1 Transaction,2026.04.24.12,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2026.04.24.11,,
+Artefacts,Artefacts,Chip1 WebUI,2026.04.24.10,,
+Artefacts,Artefacts,fn-connect,2026.04.24.11,,
+Deployed Items,fix(AccountCreditIsland),correct fallback to fundCode value instead of key (,,,
+Deployed Items,fix(AccountCreditIsland),),,@Deepti Vaidyula,
+Deployed Items,fix(AccountCreditIsland),"MC1 warehouse - Create route, table, info pane, add permissions, (
+)",,,
+Deployed Items,fix(AccountCreditIsland),Adds a Warehouse Stock section to the MyChip1 customer portal (accessible only to accounts with warehouse permissions).,,,
+Deployed Items,What to test,Navigate to the Warehouse Stock page — it should be visible only for accounts with warehouse access,,,
+Deployed Items,What to test,"The stock list shows part info, status, quantities, PO/allocation references, and a SPN column",,,
+Deployed Items,What to test,"Clicking a row opens a detail panel (info pane) with extended stock information
+search by text, filter by status, filter by date",,,
+Deployed Items,Filters work,Column visibility toggle lets you show/hide columns,,,
+Deployed Items,Filters work,Columns can be resized and reordered; certain columns stay pinned on the left,,,
+Deployed Items,Filters work,Accounts without warehouse permissions should not see the page (direct URL access should redirect),,,
+Deployed Items,Dev-only,"Move AllocationSummary to core and enhance dynamic API scripts (
+)",,,
+Deployed Items,Dev-only,Migrates the,,,
+Deployed Items,Dev-only,"AllocationSummary
+display components and",,,
+Deployed Items,Dev-only,AllocationSummaryCell,,,
+Deployed Items,Dev-only,"from the CRM app to the  /core
+package, enabling shared usage across CRM and MC1 warehouse stock columns. Also introduces a utility function
+getStockAllocationSummary
+for",,@chip1,
+Deployed Items,Dev-only,TStock,,,
+Deployed Items,Dev-only,", and updates CRM import paths to use the new  /core/components/AllocationSummary
+location.
+refactor navbar (mc1)
+replace useMatch+Link with shared NavbarNav",,@chip1,
+Deployed Items,MC1 stock,On stage enabled for,,,
+Deployed Items,MC1 stock,ghhgsdj.com,,@yopmail,
+Deployed Items,MC1 stock,in mc1,Verified,@Harika Guntamukkala,
+Deployed Items,MC1 stock,Opportunity Origin source fix,Verified,@Deepti Vaidyula,
+Deployed Items,MC1 stock,Open Account datamigration fix (condition to check salesperson not exists or account management),Verified,@Harika Guntamukkala,
+Deployed Items,MC1 stock,Fix for fundCode value fix in credit information  - link here,,,
+Deployed Items,MC1 stock,"Adding team's datagroup to SR
+issue",,@Deepti Vaidyula,

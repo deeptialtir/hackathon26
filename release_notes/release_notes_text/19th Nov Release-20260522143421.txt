@@ -1,0 +1,92 @@
+# 19TH NOV RELEASE
+
+Environment: Stage
+Status: Good
+Prod release owner:  
+@Umamahesh
+ 
+@Harika Guntamukkala
+ 
+Release date
+ : 2025.11.19
+ 
+DB changes
+ : 
+ 
+Branch
+  : release/2025.11.18
+ 
+Components Involved
+ 
+& Artefacts
+: 
+chip1-crm-webui      : 2025.11.19.0
+chip1-account           : 2025.11.19.0
+chip1-transacton.     : 2025.11.19.0
+chip1-db-changement
+chip1-api-hub
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+Changes Involved:
+CHP-3510
+ : Using officeId instead of regionId in link creation (related to Deep linked for RFQ)
+CHP-3517
+: Fixes sourcing historical market
+CHP-3518
+ : UAT Refactoring's related to contact
+CHP-3520
+: Follow-Up Flag Column changes on Accounts & Contacts List
+CHP-3514
+: Contacts: Follow up task flag 
+CHP-3518
+ : added search on account contacts tab
+CHP-3465
+ : Add DataGroups to Account when Account users are added
+CHP-3528
+: Update Date Range
+Timeline - Render table even if data extraction failed for some rows (temp solution)
+CHP-3525
+: Market Activity Enhancement
+CHP-3527
+: Only refetch when pricing data is not available
+Follow Up - Reveal follow-up flag on table row hover
+Account -Show only one notification after navigation from dashboard card
+Won't be enabled in Stage/Prod
+[
+CHP-3434
+] - Visit Complete Form
+[
+CHP-3441
+] - Add visit info pane
+Remaining are related to above mentioned or dev-only changes
+Automation Runs:
+jenkins.chip1.info
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/chip1-ui-tests/51/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+jenkins.chip1.info
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/crm-ui-tests/24/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+Bugs in Build:
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-3532
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3534
+)
+Bugs in production:
+Private (
+https://app.clickup.com/t/8651091/CHP-3536
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3537
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-3538
+)

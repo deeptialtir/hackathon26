@@ -1,0 +1,199 @@
+# 13-AUG25-HOTFIX
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+ 
+Release date
+ : 2025.08.13
+ 
+DB changes
+ : 
+Connect
+ : No changes
+Platform
+ : No changes
+Notification : 
+hotfix/2025.08.08
+ 
+Branch
+  : hotfix/2025.08.08
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Part                
+    
+                      
+   :
+ 
+2025.08.08.0
+Chip1 Transaction  
+    
+                      
+  :
+ 
+2025.08.08.0
+Chip1 CRM WebUI      
+                      : 2025.08.08.0
+Chip1 WebUI 
+                                    : 2025.08.08.0
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+ Private (
+https://app.clickup.com/t/8651091/CHP-2739
+) : BOM upload enhancements in part processing, additional error handling(Private (
+https://app.clickup.com/t/8651091/CHP-2751
+))
+Private (
+https://app.clickup.com/t/8651091/CHP-2738
+) : UI Quote estimate changes, refresh button on project hero
+Private (
+https://app.clickup.com/t/8651091/CHP-2746
+) : Enable CRM modify part
+Private (
+https://app.clickup.com/t/8651091/CHP-2747
+) : IC Source : Show vendor as Chip1 always, Stock & Price as available
+
+## TESTING DONE:
+
+Private (
+https://app.clickup.com/t/8651091/CHP-2768
+)
+
+## MC1 SANITY TESTS
+
+ 
+Feature/Flow
+Stage
+Prod
+Remarks
+New User Signup from mc1
+ yes
+NA
+ 
+Mc1 user invite - signup
+ yes
+NA
+On stage should suffice
+Upload Bom & Excess and verify in CRM
+ yes
+Yes
+ 
+Manual RFQ
+ yes
+Yes
+ 
+Active Quote (create, edit)
+ yes
+Yes
+ 
+Sales Order
+(create, edit)
+ yes
+Yes
+ 
+Shipping & invoice
+yes
+NA
+ 
+Lead Account & Transfer
+yes (basic. creation, bom, excess, rfq transfer)
+NA
+ 
+Bids
+ --
+NA
+ 
+Parts Tracker
+ yes
+Yes
+ 
+Search
+ yes
+Yes
+ 
+Page Navigations
+ yes
+Yes
+ 
+Edit Project
+ yes
+Yes
+ 
+Notification Emails
+--
+Yes
+ 
+Download excess and Bom Template, fill and upload.
+ --
+Yes
+ 
+ 
+
+## CRM SANITY TESTS:
+
+ 
+Feature/Flow
+Stage
+Production
+Remarks
+Create BOM in MC1, check in xcrm and new crm
+ yes
+yes
+ 
+Create RFQ in MC1, check in xcrm and crm
+ yes
+yes
+ 
+Upload BOM from CRM
+ yes
+yes
+ 
+Page Navigations
+ Yes
+yes
+ 
+Deep links for Accounts, RFQs, Quotes and Orders
+ yes
+yes
+ 
+Edit Project
+ yes
+yes
+ 
+Global Search
+yes 
+yes
+ 
+Filters 
+ yes
+yes
+ 
+Sorting of tables
+ yes
+yes
+ 
+Page Search
+yes 
+yes
+ 
+Download excess and Bom Template, fill and upload.
+ ---
+--

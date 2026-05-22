@@ -1,0 +1,116 @@
+# 04-MAY26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2026.05.04
+ 
+DB changes
+ : 
+Connect
+ : release/2026.05.04
+Platform
+ : release/2026.05.04
+Notification : 
+No change
+ 
+Branch
+  : release/2026.05.04
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Transaction  
+    
+                        
+ : 2026.05.04.2
+Chip1 CRM WebUI                 
+    
+          
+: 2026.05.04.1
+fn connect                                          
+    : 2026.05.04.0
+
+## LIST OF DEPLOYED ITEMS
+
+## PO SHIPMENTS / SHIPPING FEATURES@DEEPTI VAIDYULA
+
+Backport to develop: Feat: po shipments tab changes (#3845) 
+verified
+Shipments tab on PO — add a Shipments tab to the PO detail view alongside existing tabs. Shows all inbound shipments against the PO: tracking numbers, box count, condition, arrival 
+verified
+date, QC person. Mirrors the SO Warehouse Shipments view. 
+verified
+Shipment Details accordion on Stock Line — add an accordion inside the Stock Line detail. Shows the shipment associated with that stock line. 
+verified
+Shipments tab on Purchase order view — add a shipments tab on the purchase order view after the PO line and before the receiving lines.
+verified
+Warehouse shipments view — maintain same tab structure as PO (PO, PO Lines, Shipments, Receiving Lines). 
+verified
+Note: Not able to test as backend changes are not deployed.
+
+## CAMPAIGN / CONVERSATION UI@DEEPTI VAIDYULAVERIFIED
+
+refactor(campaign): improve message layout and styling (#3846)
+Fix dark mode in campaign message bubbles
+feat: add tooltips for conversation text and standardize color constants (#3847)
+
+## INVOICE / TABLE UI@HARIKA GUNTAMUKKALA
+
+fix(invoiceLines): use available vertical space for table - 
+Fix not pushed to current release can be ignored
+
+## ACCOUNT CREATION@HARIKA GUNTAMUKKALAVERIFIED
+
+update: require phone number for account creation (#3849)
+phone number mandatory in create account modal
+
+## SALES ORDER@HARIKA GUNTAMUKKALAVERIFIED
+
+fix: disable Create Sales Order button when no quotes are selected (#3851)
+Disable the "Create Sales Order" FAB action when no quotes are selected
+
+## ALLOCATION / OPPORTUNITY UPDATES@DEEPTI VAIDYULATESTED
+
+Manual Allocation Sync Inbound and Outbound
+Allocation sync update : Merged to release and part of release validations
+QE Remarks:
+Allocation for OB SO is not working: 
+US26SO00752
+Allocated is 10 in Apex but xcrm shows 0.
+IB allocation is working 
+ 
+Removing Opportunities updated with Closed status from the list view - 
+Verified
+
+## PO PDF / BUYER VIEW@DEEPTI VAIDYULATESTED
+
+PO PDF buyer CSS alignment fix and EXPECTED DELIVERY fix 
+PO PDF discrepancies - Alexey Duduk working on buyer alignment changes, planning to patch to release
+QE remarks:
+ Alignment issues are fixes. The attributes are not updated in PDF.
+
+## @HARIKA GUNTAMUKKALA
+
+PO Shipping Island: Add has arrived checkbox (
+#3850
+) - 
+Partially working as 
+expected
+ 
+QE remarks : 
+ User can't select the checkbox manually 
+and also the checkbox not selected when the PO status is in Arrived
+
+## DEV ONLY
+
+Fix React Compiler warnings (#3842)
+chore: fix react compiler warnings part 2 (#3836)

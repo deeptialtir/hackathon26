@@ -1,0 +1,361 @@
+# 02-APRIL26
+
+Environment: Stage
+Status: 
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2026.04.02
+ 
+DB changes
+ : 
+Connect
+ : release/2026.04.02
+Platform
+ : release/2026.04.02
+Notification : 
+No change
+ 
+Branch
+  : release/2026.04.02
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+ 
+Chip1 Account  
+    
+                               
+  : 2026.04.02.2
+Chip1 Part  
+    
+                               
+          : 2026.04.02.0
+Chip1 Transaction  
+    
+                        
+  : 2026.04.02.3
+Chip1 CRM WebUI                 
+    
+           
+ : 2026.04.02.5
+fn-connect                              
+   
+            
+ : 2026.04.02.1
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+
+## QE DOCUMENTATION LINK:HTTPS://ALTIRLLC.SHAREPOINT.COM/:W:/R/SITES/ALTIR-CHIP1/SHARED%20DOCUMENTS/GENERAL/QUALITY%20ENGINEERING/PROJECT%20DOCUMENTS/CHIP1%20QE%20DOCUMENTATION.DOCX?D=W75141A22221E423A9DD922E367268BB5&CSF=1&WEB=1&E=GWICGH
+
+## LIST OF DEPLOYED ITEMS:
+
+@Umamahesh
+ 
+Add PO
+ outbound mapping: supplier account number (supplier_info.account_number → purchase_account)
+Verified
+Add PO
+ outbound mapping: CPN → SPN(spPart) (do NOT use the incorrectly created SPL field — remove that)-
+Verified
+Confirm Incoterms
+ and city are mapped in PO outbound (he confirmed they are — just document/close this)-
+Verified
+Add PO outbound mapping
+: line_posted attribute (PO line posted/locked flag)
+Verified
+Check if backend is populating part reference fields (ECN, ROHAS, supplier package etc.) from global part into PO — confirm yes or no - Confirmed With Habib 
+{NO}- 
+It says NO
+Check specific account
+ (ID posted in chat by Sai) to confirm if any inbound update came through — to validate sync is working for that account - Already Checked In the call & confirmed that we've received update event. -
+Confirmed By Nikhil
+ 
+Change log: 
+@Deepti Vaidyula
+ 
+ 
+Bulk Add QC Inspector - PO & Stock (
+#3319
+)  - 
+Verified
+Dashboard: Add Inactive Accounts Activity card instead of Account Tags (conditionally) (
+#3419
+) - enabled on stage - 
+Verified
+feat(task): enhance task handling for Reconfirm Excess actions (
+#3422
+) - 
+Verified
+Fix pricing formatting with precise and fixed-5 options (
+#3313
+) - 
+Verified
+  This change enables support for precise and fixed-5 number formats in various sections of the pricing module to ensure consistent and accurate display. Left: production | Right: local
+Purchase Order Updates - 2026.04.01 (
+#3433
+)
+QE Remarks: 
+
+https://crm.stage.chip1.info/api/transaction/searches/global/WAREHOUSES?scope=LOCAL&filter=%7B%22regionId%22%3A%22671c97e0db505c552f84cdea%22%7D&size=50
+ - 
+Verified
+ 
+Validate outbound/inbound mapping for supplier fields (
+approved-as-supplier - N/A in API-Hub
+, 
+payment terms
+, 
+shipping method
+ 
+ - N/A in API-Hub
+, 
+account number
+) — confirm all are correctly mapped and syncing
+ 
+Arvind Tickets : 
+ 
+@Harika Guntamukkala
+ (feedback: offers and sr (
+#3434
+) - 
+This PR cover below verified items
+)
+1. Remove auto-population of suggested suppliers when requesting the offer. Should not be auto added 
+Done - 
+Verified
+2. SR - Fab actions - create purchase order - implement the add to an existing purchase order flow  
+In-Progress - 
+Dev Inprogress
+3. Hide buyers KPI section on PO line 
+Done - 
+Verified
+4. On PO line - upon clicking on send email - change the status from created approved to created confirmation requested. 
+In-Progress - 
+Dev Inprogress
+5. Move market condition field from part requirements to opportunity section on RFQ 
+Done - 
+Verified
+6. Relabel supplier to suggested suppliers on SR
+ Done - 
+Verified
+7. IF SO is already approved Fix SR created from Sales Order going into "Open" instead of "Purchase Requested" — (Generally happening for second sourcing req onwards) 
+Done - 
+Verified
+ 
+@Umamahesh
+ 
+Add supplier_info.shipping_method and supplier_info.account_number to the account detail accordion (below payment details section) - 
+DONE-
+Verified
+Pre-populate shipping method and shipping account number on Create PO form from the supplier account - 
+DONE-
+Verified
+Remove duplicate "Approved" field from supplier page — keep only "Approved for Purchase" - 
+DONE-
+Verified
+Add ECN US, ECN Local, HT USA, ROHAS (free-form text, not dropdown), and Supplier Package (free-form text, second row) fields to Create PO — pre-populate from part details when part is selected. Apply same to Edit PO so both forms are identical. - 
+Added supplier package
+ (rest is pending)-
+Krupa mentioned it just UI field by default empty
+Map SPN/CPN to the CPN field from API (not the new SPL field — do not update that mapping). Confirm with Nikhil on the outbound mapping side. - 
+DONE-
+Verified
+Make CPN/SPN field optional (not required) on the PO line - 
+DONE-
+Krupa confirmed it should be optional only
+Change ROHAS from dropdown to free-form text everywhere in the application — do this in a batch across all screens-
+Still a dropdown
+Fix CPN not saving on PO — that is a bug - 
+DONE-
+Verified
+Apply gray color treatment to closed PO lines (same as what was done for SO and RFQ) - 
+DONE-
+Verified
+Implement the "include PDF attachment" optional checkbox on the PO Send Email screen (requires backend coordination)-
+I dont see any such option
+Ensure bank charges section is pushed to production (currently on stage only) - 
+verified
+Align Create PO and Edit/Update PO forms to have the same fields - 
+DONE
+Add shipping account number next to Ship Via in the PO details view — move to next line so all shipping fields are grouped together - 
+DONE-
+verified
+Check if supplier_info.shipping_method is used anywhere in the account UI/payload — confirm where it is and is not presented - 
+DONE- 
+Seems to be confirmation, not change
+ 
+ 
+ 
+Fix Sentry CancelledError downgrade and add Purchase Order part source (
+#3443
+)  
+Fix CancelledError not being downgraded to warning in Sentry on minified production builds — add fallback check on exception value field
+Add 
+PURCHASEORDER
+ to part source enum, config, and translations so the Source column and filter include "Purchase Order"
+fix(account details): remove tax rate from summary and update billing label (
+#3442
+) 
+@Deepti Vaidyula
+ - 
+Verified
+fix(modals): prevent crash on stale modal state after navigation (
+#3440
+)  
+Fix 
+TypeError: Cannot destructure property 'isOpen' of undefined
+ in ModalsProvider
+Fixes 
+
+https://altir-chip1.sentry.io/issues/109332437/?alert_rule_id=179716&alert_timestamp=1775113674340&…
+PO - Add htsusa field (
+#3438
+) 
+@Umamahesh
+ -
+Verified
+PO - Add part extended search support (
+#3437
+) 
+@Umamahesh
+ -
+Verified
+PO - Pre-populate part details (
+#3441
+) 
+@Umamahesh
+ -
+Verified
+refactor(account details): replace credit insurance info with payment terms in  AccountCreditIsland and add shipping method in AccountInvoicingIsland (
+#3439
+) 
+@Deepti Vaidyula
+ - -
+Verified
+ 
+ 
+ 
+Update backend event publishing code to use "sourcing request" instead of "purchase request" everywhere (timeline, activity log, status change events) -> 
+Done 
+@Umamahesh
+ -
+Verified
+Implement offer count on SR list view (cross-entity aggregation — parked earlier, now to be picked up)-> it should be detailed view,
+ 
+@Umamahesh
+ -
+Not a blocker
+ -
+link
+Set default task priority to "Medium" on task creation-> 
+Done 
+@Umamahesh
+ -
+Verified
+ 
+for SO and SO details -  
+@Harika Guntamukkala
+ 
+ROHS needs to changed to Apex ROHS 
+Verified
+Pass Sourcing Type to backend 
+Verified
+make ROHS editable in details section 
+Verified
+Changing the sequence of Date Code week and date code year 
+Verified
+remove phone number required validation on Create RFQ flow 
+Verified
+ 
+ 
+ 
+SO
+ 
+Labels set default value to false - Srinidhi  - DONE 
+@Deepti Vaidyula
+  - 
+Zohaib need to check this. We are sending false → 0 but they are not resolving it.
+Send MFG name to xcrm - Srinidhi - DONE 
+@Deepti Vaidyula
+  - 
+Verified
+PROD and ROHS if not syncing - Srinidhi - DONE 
+@Deepti Vaidyula
+ 
+ 
+Account- Address Issue
+Code change - Teja - This is to avoid duplicate request after account address sync is done but UI not refreshed 
+@Deepti Vaidyula
+ 
+ 
+PO Sync: 
+@Umamahesh
+ 
+ 
+PO inbound issues
+ROHS is not displayed on UI — 
+Verified
+Product is saved as XCRM key instead of resolved value — 
+Lookup (its a string in API-HUB)-Okay, has to be value then
+Sender Country is saved as XCRM key instead of resolved value — 
+Lookup (Fixed In API-Hub, Transaction)-Verified
+Package is saved as XCRM key instead of resolved value — 
+Lookup (supplierPackage - its a string in API-HUB)-Okay, has to be value then
+Payment details are not syncing 
+- (Zohaib needs to check)
+SPN is not syncing
+ - Verified
+Tax amount is not syncing
+ - (Calculated - Habib Changes Pending)
+Buyer KPI is not syncing
+ - I see only one user populated
+Locked status is not syncing
+ -
+Verified
+Account number not syncing- 
+Verified
+PO outbound issues
+Account Number is not syncing — 
+Verified
+SPN is not syncing—  
+Verified
+ROHS is not syncing 
+-Verified
+Internal and External Notes update is not syncing correctly (correlationId: 61b3bddf-a244-453c-a583-e970126f93c1)— 
+Still Issue
+Freight, Misc, and Bank Charges update is not syncing correctly (correlationId: 96b3d3c5-425a-42d2-94c3-2138a390415b)— (Its Working. - Confirmed By UMA)- 
+APex issue, not sync
+Payment Details are not syncing  (correlationId: f2751e6d-7136-42a1-9eb0-57ca9da1c7ab) 
+- (Zohaib needs to check)
+ 
+ 
+ 
+RFQ→Quote 
+@Deepti Vaidyula
+ 
+Quote→SO 
+@Harika Guntamukkala
+ 
+SO→PO 
+@Umamahesh
+, 
+PO→QC 
+@Umamahesh
+IB and OB Flows of all entities 
+@Deepti Vaidyula
+ 
+@Umamahesh
+, PO attribute level sync checked

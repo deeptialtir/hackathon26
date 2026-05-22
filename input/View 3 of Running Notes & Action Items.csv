@@ -1,0 +1,35 @@
+Area,Title,Description,Priority,Status,Assigned To,Change,Type,Target Date,QE comments,Created by,Created on
+Offers,Offers Historical Migration,"Do a one time migration of histoical offers that include follow table. Either migrate to a history table in MySQL or to offers in Mongo.
+
+1. Offers
+2. Excess
+3. Excess History
+4. Broker stock list ",P1,In progress,Srinivas Sanka,,Data,"Mar 26, 2026",,Sai Nagboth,"Mar 5, 2026"
+Invoices,Invoice,"Seeing duplicate invoices being created on our side. E.g.,
+DE26INV01355 has 3 invoices migrated over.
+
+69a98709712a405d3aa858df
+69a98386500b170c09839fec
+69a98709712a405d3aa858df",P1,Dev Ready,"Nagababu Guddati,Satish Bathini",Data,Data,,,Sai Nagboth,"Mar 17, 2026"
+Parts,Global parts fetch,Job to fetch global parts for all historical parts,P1,,Srinivas Sanka,,Data,,,Sai Nagboth,"Mar 5, 2026"
+Parts,Duplicate parts script,"Write script to review duplicate parts and mark them as inactive. 
+
+* Any part that is not available from SE flag it to review and clean",P2,,,,Data,,,Sai Nagboth,"Mar 5, 2026"
+Data - General,QC data sync,Data migration sync job for for QC,P0,In progress,"Nagababu Guddati,Srinivas Sanka",,Data,"Mar 12, 2026",,Sai Nagboth,"Mar 5, 2026"
+Data - General,3CX log migration,Job to take the 3CX call log and add to activity,P1,In progress,Srinivas Sanka,,Data,,,Sai Nagboth,"Mar 5, 2026"
+Data - General,Update last activity,Update last activity date based on com log for contact and assocaited account based on the latest in the com log and transaction (RFQ/SO),P1,Dev Ready,"Nagababu Guddati,Srinivas Sanka",,Data,,,Sai Nagboth,"Mar 5, 2026"
+Data - General,Document Migration,"Migrate all assocaited documents from xCRM.
+
+1. Migrate the data to the documents collection.
+2. Update the path based on moving it to an S3 bucket
+3. Finalize doc types available across all entities",P1,In progress,"Srinivas Sanka,Nagababu Guddati,Om Sreenivasan",Data,Data,,,Sai Nagboth,"Mar 5, 2026"
+Data - General,Migrate Files,Migrate files from xCRM to Apex S3 bucket. Devops can help,P1,In progress,Sandeep Thatikonda,Other,"Data,Other",,,Sai Nagboth,"Mar 10, 2026"
+Data - General,RMA Migration,"Build RMA migration script either via connect or directly ",P2,,,,Data,,,Sai Nagboth,"Mar 5, 2026"
+Data - General,,,,,,,Data,,,Srinivas Sanka,"May 18, 2026"
+Accounts → Lists,,"Accounts
+
+1. Engagement Metrics → For suppliers showing quoted? Does not make sense. Data bits issue? (BE) - P1 - Andrey/Srini/Nagababu
+2. Check for Active accounts marked as prospects.  (data team - In progress) - P0 - Andrey/Srini/Nagababu",P0,Ready for Test,"Andrey Kuznetcov,Srinivas Sanka,Nagababu Guddati",BE,Data,"Mar 30, 2026",,Dipak Majhi,"Mar 27, 2026"
+SO sync issues,Historic allocation data sync,The existing allocation data in the xcrm should be moved to Apex,P0,In progress,"Nagababu Guddati,Srinivas Sanka",Sync,"Sales,Purchasing,Data","May 22, 2026","[Pranab, 19/05] - First pass is done, need to review again.",Pranab Dutta,"May 4, 2026"
+PO PDF issues,,American companies wrong phone number (Canny Link),P0,Dev Ready,"Srinivas Sanka,Nagababu Guddati","Sync,Data",Data,,,Dipak Majhi,"May 12, 2026"
+PO PDF issues,,Parts MPN not accurate (Canny Link),P2,To be Defined,Phani Yedidi,,Data,,,Dipak Majhi,"May 12, 2026"

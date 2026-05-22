@@ -1,0 +1,73 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,@Deepti Vaidyula,,
+Metadata,Release Info,Release date,2025.09.23,,
+Metadata,Release Info,DB changes,Connect : No changes,,
+Metadata,Release Info,Platform,No changes,,
+Metadata,Release Info,Notification, No changes,,
+Metadata,Release Info,Branch,release/2025.09.23,,
+Artefacts,Artefacts,Chip1 Transaction,2025.09.23.0 2025.09.23.,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,QE documentation link,https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh,,
+Deployed Items,Private ( https,"//app.clickup.com/t/8651091/CHP-3135
+)
+//app.clickup.com/t/8651091/CHP-3136
+) - Reduced priority from High to low post the release. Using same ticket for tracking optimization changes.",,,
+Deployed Items,Private ( https,"Issues Observed on Build on stage:
+//app.clickup.com/t/8651091/CHP-3145
+) - Normal priority - intermittent issue
+## MC1 SANITY TESTS",,,
+Deployed Items,Note,The sanity tests to check will be selected based on the release,,,
+Deployed Items,Note,Feature/Flow,,,
+Deployed Items,Note,Stage,,,
+Deployed Items,Note,Prod,,,
+Deployed Items,Note,Remarks,,,
+Deployed Items,Note,"Upload Bom and verify in CRM
+yes
+yes",,,
+Deployed Items,Note,"Manual RFQ
+yes
+yes",,,
+Deployed Items,Note,US25RQ13576,,,
+Deployed Items,Note,"RFQ update
+yes
+yes",,,
+Deployed Items,Note,"Search
+yes
+yes",,,
+Deployed Items,Note,"Page Navigations
+yes
+yes",,,
+Deployed Items,Note,"Edit Project
+yes
+yes",,,
+Deployed Items,Note,The sanity tests to check will be selected based on the release,,,
+Deployed Items,Note,Feature/Flow,,,
+Deployed Items,Note,Stage,,,
+Deployed Items,Note,Production,,,
+Deployed Items,Note,Remarks,,,
+Deployed Items,Note,"Create BOM in MC1, check in xcrm and new crm
+yes
+yes",,,
+Deployed Items,Note,"Create RFQ in MC1, check in xcrm and crm
+yes
+yes",,,
+Deployed Items,Note,"Page Navigations
+yes
+yes",,,
+Deployed Items,Note,"Edit Project
+yes
+yes",,,
+Deployed Items,Note,"Global Search
+yes
+yes",,,
+Deployed Items,Note,Light mode - dark mode,,,
+Deployed Items,Note,"Yes
+yes",,,
+Deployed Items,Note,Saved Views,,,
+Deployed Items,Note,"Yes
+yes
+## TESTING NOTES FOR BOM ANALYSIS:",,,
+Deployed Items,Note,Re_ BOM health Analysis - test results.eml,,,

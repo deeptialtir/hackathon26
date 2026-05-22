@@ -1,0 +1,506 @@
+# 09-APRIL26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Harika Guntamukkala
+ 
+ 
+Release date
+ : 2026.04.09
+ 
+Branch
+  : release/2026.04.02
+DB changes
+ : 
+Connect
+ : release/2026.04.09
+Platform
+ : release/2026.04.09
+Notification : 
+No change
+Components Involved
+ 
+& Artefacts
+:
+Chip1 Account  
+    
+                               
+  : 2026.04.09.0
+Chip1 Transaction  
+    
+                        
+  : 2026.04.09.3
+Chip1 CRM WebUI                 
+    
+           
+ : 2026.04.09.3
+fn-connect                              
+   
+            
+ : 2026.04.09.6
+ 
+9th April:
+ 
+@Harika Guntamukkala
+ 
+Task sync added new attribute "priority", only Outbound 
+Verified
+RFQ feedback - 07.04.2026 (
+#3515
+) 
+Many users use enter to input a field and then go to the next one. Can we allow that behaviour as well - We can push back if you guys have objections Currently we are using enter to submit the modal. People here are not used to this. We have to think whether to keep it or remove. For dates - can we use enter to default to current date ? 10 ) Can we do changes to the create quote for multiple RFQs ? - We need to allow editing of quantity, add currency and package field here
+Teams #: April08_01: Add truncated and clickable MPN list with tooltip in OrderOverview (
+#3518
+) - 
+Verified
+Added truncated MPN (Manufacturer Part Number) lists to the OrderOverview component, ensuring cleaner and more readable displays when part lists are long.
+Integrated an overflow tooltip to allow users to view the full MPN when hovering over truncated entries.
+Enabled clickable MPN links for unique parts within the OrderOverview component, improving accessibility and navigation.
+feat(rfq): make quote datecode fields mandatory when quantity is entered (
+#3524
+) - 
+Verified
+Updated the RFQ validation schema to ensure that Date Code Year and Date Code Week are mandatory within the Quote Details section whenever a quantity is specified. - 
+Verified
+feat: add hideDefaultCountry prop to phone input components across CRM forms and modals (
+#3527
+) - 
+Verified
+ Don't show default "+1" country code in phone fields in CRM - Om Sreenivasan - 
+Verified
+fix(crm): ensured fundCode is sent as an object for new sales order lines (
+#3534
+) - 
+Verified
+Problem
+: When adding a new part to a Sales Order via the 
+"Add Another Part"
+ button, the fundCode was being initialized with a raw 
+string
+ (e.g., 'USD') instead of a 
+LookupDto
+ object. This was caused by a fallback to the regional default currency string in
+useAccountFieldsSync
+. This led to a backend JSON parse error because the API requires a lookup object. -
+Solution
+: Refactored 
+accountCurrency
+ in 
+useAccountFieldsSync.ts
+ to ensure it always returns a lookup object 
+({ key, value })
+. If 
+accountDetails.fundCode
+ is missing, it now correctly "boxes" the default currency string from 
+useSuspenseRegionCurrencyGetter
+ into the expected lookup format. -
+This pull request introduces various improvements and fixes across the application: - 
+Deploying UI to stage: 8 April
+Click a non-task notification (SO, Quote, RFQ, Offer) → correct entity info modal opens - 
+@Harika Guntamukkala
+  - 
+Seen entity info modal for offer and sourcing request not for So,Quote,RFQ
+ 
+[item 24]
+ Guard new-line creation on approved SOs — "Add Line" now shows a confirmation dialog when the SO has active approvals, warning that they may be reset - 
+@Harika Guntamukkala
+  - 
+Verified
+[item 26]
+ Part numbers on SO overview card — aggregates MPNs from all order lines and displays them in the order ID card header - 
+@Harika Guntamukkala
+  - 
+Verified
+[item 27]
+ Notification click routing — clicks now open the correct entity info modal (
+order.showInfo
+, 
+quote.showInfo
+, 
+rfq.showInfo
+, 
+offer.showInfo
+) based on 
+entityType
+, instead of always opening 
+task.showInfo 
+  - 
+@Harika Guntamukkala
+ 
+Verified
+Wrapped 
+<CreateOrderLineForm>
+ in a 
+<Suspense>
+ boundary with a 
+CreateOrderLineFormSkeleton
+ fallback - 
+@Harika Guntamukkala
+  - 
+Verified
+@Umamahesh
+ 
+Stock duplicate issue fix - this is happening once Stock created, and received update couple of times. -
+Verified
+fixes : PO issues (
+#3511
+) 
+Populate sender country based on supplier country.- 
+Verified
+Add supplier country into the supplier information section if it is not currently shown.-
+Verified
+Add sourcing request and offer references into PO line details so the connection is clear.-
+Verified
+Make the main PO identifier the meaningful clickable link.- 
+Verified
+fixes: PO and Warehouse Quality Tab issues (
+#3517
+) 
+Create PO: Prepopulate package from supplier package in the part-
+Not working
+Warehouse > Stock / Receiving Lines > Quality Tab: Move stock column before mpn column and add navigation link to stock and mpn columns- 
+stock column is not clickable hyperlink
+PO Line info pane: move xcrm link into next row below the part link-
+Verified
+feat: enforce mandatory CPN, improve SO creation defaults, and fix required indicator logic (
+#3522
+) 
+Mandatory CPN: Enforced cpn (Customer Part Number) as a required field across all Sales Order and Order Line validation schemas and UI forms.-
+Verified
+Smart Defaults: Implemented logic to automatically pre-populate partConditionAcceptedBySales (defaults to "New") and warrantyAcceptedBySales when creating Sales Orders from Quotes, reducing manual data entry.-
+Verified
+DatePicker UX: Enhanced the DatePickerField by adding a clickable calendar icon toggle for improved accessibility and visibility.-
+Verified
+QC Level Refactor: Removed qcLevel from the Sales Order creation payload and forms, centralizing its management in the Order Line Details interface.
+Verified
+Remove Lead time field from SO (Order Line Details)-
+Verified
+feat: update ReconfirmExcessTaskModal (
+#3520
+)  - 
+Verified
+MFG is not auto populating correctly - MFG is picking up some other value
+Target Price, Date Code Week, Date Code Year should NOT be mandatory
+Lead Time should default to 'ASAP' - User can select other option if they need other than ASAP
+For 'Due Date' - exclude weekends (make it next day - 24 hours on a working day)
+'Labels' has been made mandatory but the red astrix is not there. Add one more value under Labels - "No Restriction" - This should be default
+PO & PO Line cancel flow (
+#3521
+) -
+Verified
+fix: clean up account labels, prevent accidental value changes in NumberField, set default quote expiration and update week and date formatting order (
+#3532
+) -
+dev only
+NumberField UX Improvement
+: Updated the 
+NumberField
+ component to prevent mouse wheel events from modifying values while the field is focused. This prevents accidental value changes when users are simply scrolling the page.
+Localization Audit
+: Simplified labels in the Account module (
+account.json
+) by removing redundant "Has" prefixes for several fields (NDA, Quality Agreement, Consignment, and Credit Insurance), creating a cleaner and more professional look.
+feat: set default quote expiration to 14 days
+refactor: update week and date formatting order
+Send PO email replace simple text with rich text field (
+#3530
+) -
+Verified
+text  at last 
+please reach out to — at —.
+ isn't clear
+some dashes at closing note (chip1 signature)
+On PO line details we need the tab for part details to show global part details, similar to what we do for SO and other entities. Sandeep need to add 
+"part-details"
+ tabs permission from the backend.-
+Verified
+Need to expand Send email to a wider modal similar to that of share and include following -
+Verified
+Subject line
+CC line - they can add a set of emails.
+Option to attach PDF
+@Deepti Vaidyula
+ 
+Account validations for not triggering account already approved - to fix bug mentioned 
+here
+ 
+Verified
+Lead time added ASAP lookup - 
+Verified
+Sales Documents enhancements (
+if any gaps found can be fixed, should not be a blocker unless doc is broken)- 
+Verified
+Testing: 
+SO detail → billing section has no "Invoice Delivery Mode"; invoice text field still present - 
+"Invoice Delivery Mode" not present
+SO with existing approvals → "Add Line" shows warning dialog before opening the form
+Verified
+SO with multiple lines → overview card shows all part MPNs
+Verified
+Click a non-task notification (SO, Quote, RFQ, Offer) → correct entity info modal opens
+Add Line on any SO → skeleton shows briefly before form renders
+Verified
+Update : SO refactorings (
+#3513
+) - 
+removed free shipping field 
+Verified
+changed the sequence of sections on OrderLineDetailsForm on the SO Line details section 
+Verified
+Updated Add OrderLine form to match SO Line details on CreateOrderLine 
+Verified
+Changed the position of showInMyChip1 on CreateSO  
+Verified
+fix(phone): normalize (0) trunk-prefix and unify Order contact phone display (
+#3519
+) - 
+Problem 
+Some contacts in the database store their phone number in a single field with no country code, using the European 
+(0)
+ trunk-prefix notation: 
+{ "countryCode": "", "phone": "+31 (0) 40 295 0870 ", "type": "General", "isDefault": true }
+This caused two separate display bugs:
+Contact Details → Communications island — phone shown as 
+(0)40 2950870
+ instead of 
++31
+ / 
+40 295 0870
+Order Details / Order Line Details → General → Contact — country code shown as 
+—
+ and phone shown as 
+040 295 0870
+ instead of 
++31
+ / 
+40 295 0870
+crmPhoneToE164
+ — strips 
+(0)
+ trunk-prefix notation before extracting digits (
++31 (0) 40 295 0870
+ → 
++31402950870
+)
+formatCrmPhone
+ / 
+formatFullPhone
+ — delegate to 
+crmPhoneToE164
+ for normalisation; auto-detect country when 
+countryCode
+ is empty
+convertCrmPhoneToPhone
+ — auto-detects country from the E164 number when 
+countryCode
+ is absent
+OrderContactInfo
+ — replaced ad-hoc flag + formatting logic with 
+PhoneField readOnly
+; falls back to dash placeholders when no usable phone is present
+Open the contact's detail page
+The Communications island expand→ the phone field should show:
+Country:
+ 🇳🇱 
++31
+Phone input:
+ 
+40 295 0870
+ 
+(not 
+(0)40 2950870
+)
+Open any order that has Cees Stork as a contact
+In the General island (read-only summary), the Contact row should show:
+Country:
+ 🇳🇱 
++31
+ 
+(not 
+—
+)
+Phone Number:
+ 
+40 295 0870
+ 
+(not 
+040 295 0870
+)
+Same in 
+Order Line Details → General
+Open an order whose contact has no phone on record
+The General island should show:
+Country:
+ 
+—
+Phone Number:
+ 
+—
+(two visible dash placeholders, not two blank inputs)
+Open an order with a US contact (e.g. 
+countryCode: "+1", areaCode: "252", phone: "2378171"
+)
+General island should still show:
+Country:
+ 🇺🇸 
++1
+Phone Number:
+ 
+(252) 237-8171
+Same for UK (
++44
+), Germany (
++49
+), and other international numbers
+feat(order-details): add permission granularity for requirement source field (
+#3528
+) - 
+Quote duplicate issue fix - this is happening once Quote created, and received update couple of times.
+Deploying UI to stage: 8 April
+Update : SO refactorings (
+#3513
+)   - 
+@Deepti Vaidyula
+ 
+removed free shipping field - 
+Verified
+changed the sequence of sections on OrderLineDetailsForm on the SO Line details section - 
+verified
+Updated Add OrderLine form to match SO Line details on CreateOrderLine 
+Verified
+Changed the position of showInMyChip1 on CreateSO 
+Verified
+ 
+feat: UI feedback fixes batch 2 (
+#3516
+) 
+[item 16]
+ Remove invoice delivery mode section from SO billing detail — 
+preferredInvoiceMethod
+ and its conditional postal/web/email sub-fields removed; invoice text field preserved - 
+@Deepti Vaidyula
+ - 
+Verified
+SO detail → billing section has no "Invoice Delivery Mode"; invoice text field still present  - 
+@Deepti Vaidyula
+ - 
+Verified
+SO with existing approvals → "Add Line" shows warning dialog before opening the form - 
+@Deepti Vaidyula
+ - 
+Verfied
+SO with multiple lines → overview card shows all part MPNs - 
+@Deepti Vaidyula
+ - 
+Issue
+Add Line on any SO → skeleton shows briefly before form renders - 
+@Deepti Vaidyula
+  - 
+Verified
+ 
+[item 24]
+ Guard new-line creation on approved SOs — "Add Line" now shows a confirmation dialog when the SO has active approvals, warning that they may be reset - 
+@Deepti Vaidyula
+ 
+[item 26]
+ Part numbers on SO overview card — aggregates MPNs from all order lines and displays them in the order ID card header - 
+@Deepti Vaidyula
+ 
+[item 27]
+ Notification click routing — clicks now open the correct entity info modal - 
+@Harika Guntamukkala
+ (
+order.showInfo
+, 
+quote.showInfo
+, 
+rfq.showInfo
+, 
+offer.showInfo
+) based on 
+entityType
+, instead of always opening 
+task.showInfo 
+Wrapped 
+<CreateOrderLineForm>
+ in a 
+<Suspense>
+ boundary with a 
+CreateOrderLineFormSkeleton
+ fallback - 
+@Harika Guntamukkala
+ 
+Dev only
+chore(vite): replace nullish coalescing with OR for Sentry config (
+#3523
+)
+Sentry build (
+#3525
+)
+ Inject Sentry auth token as BuildKit secret in CI build pipelines Pass SENTRY_AUTH_TOKEN via --secret to both myChip1 and CRM Docker builds
+Update Sentry plugin and source map integration (dev only) (
+#3514
+)
+ This pull request introduces updates to improve the integration and usage of Sentry within the build process and production environment. Key changes include: 
+Enhancements to 
+createSentryPlugin
+ to support project-specific settings, hidden source maps, source map upload, and post-upload cleanup.
+Fixes for build configuration defaults, improved documentation, and alignment with code review feedback.
+Introduced a new feature to block source map file access in NGINX with a 404 response for added security.
+Update dependencies for maintenance (
+#3531
+) 
+ Updated various dependencies to their latest versions for improved stability and compatibility. This is a routine maintenance update.
+Improve error handling and miscellaneous fixes (
+#3536
+)
+Fix enum label retrieval and adjust Vite configuration (dev only) (
+#3535
+)
+This pull request addresses an issue with part status retrieval by ensuring enum labels are fetched silently. Additionally, it updates the Vite configuration to set the default log level to 'warn' and disables the compressed size report, optimizing the development build process.
+ 
+There is explanation added in UI changes, so kept as is for understanding them
+ 
+There are few enhancements as well like "Improve error handling and miscellaneous fixes" regression/sanity related that area should be enough
+ 
+Deploying UI to stage: 8 April
+ 
+Excess offers - Create Bid (
+#3494
+) - 
+@Harika Guntamukkala
+ 
+Not ready for testing
+Add a new CRM 
+Create a Bid
+ flow for excess offer bundles, including FAB entrypoint, modal registration, selection persistence, bid-type handling, and validation.
+Support both 
+Buy
+ and 
+Consignment Contract
+ bid modes with bid-specific fields, table columns, footer totals, and i18n labels.
+Add end-to-end-style tests for the FAB trigger and 
+CreateOfferBidModal
+, covering defaults, validation, conditional UI, totals, and submit-close behavior.
+RFQ feedback - 07.04.2026 (
+#3515
+) 
+Many users use enter to input a field and then go to the next one. Can we allow that behaviour as well - We can push back if you guys have objections Currently we are using enter to submit the modal. People here are not used to this. We have to think whether to keep it or remove. For dates - can we use enter to default to current date ? 10 ) Can we do changes to the create quote for multiple RFQs ? - We need to allow editing of quantity, add currency and package field here  - 
+@Harika Guntamukkala
+, 
+@Deepti Vaidyula
+ 
+Dev Only
+Update Sentry plugin and source map integration (dev only) (
+#3514
+)
+ This pull request introduces updates to improve the integration and usage of Sentry within the build process and production environment. Key changes include: 
+Enhancements to 
+createSentryPlugin
+ to support project-specific settings, hidden source maps, source map upload, and post-upload cleanup.
+Fixes for build configuration defaults, improved documentation, and alignment with code review feedback.
+Introduced a new feature to block source map file access in NGINX with a 404 response for added security.

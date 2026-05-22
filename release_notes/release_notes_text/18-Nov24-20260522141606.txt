@@ -1,0 +1,48 @@
+# 18-NOV24
+
+Environment: Stage
+Status on stage: Good
+Status on production: 
+InProgress
+ - Raised CHP-1125 
+Prod release owner:
+ 
+@Deepti Vaidyula
+ 
+Release date:
+ 18th Nov, 2024
+Branch
+  : release/2024.11.18
+DB changes
+Connect  : release/2024.11.18
+Platform  : release/2024.11.18
+Components Involved
+ 
+& Artefacts
+:
+fn-connect                :  2024.11.18.0
+chip1-mc1-core        :  2024.11.18.0
+chip1-transaction.    :  2024.11.18.1
+
+## FEATURES RELEASED
+
+Lead account
+Lead contact
+Opportunities 
+
+## TESTING NOTES
+
+Sanity tests
+Feature testing for lead account, lead contacts and opportunity:
+Signed up as a new user on mc1
+It's marked as Lead account in crm
+Raised a rfq (click on 'Request a Quote') and it's seen under opportunity in crm
+Invited another user from the same account and it can be seen as 'Contacts' for the lead account.
+Transferred the lead account from crm.
+Verified that a new account is created, the opportunity is converted to requirement and we can see the same in mc1. The contacts are transferred as well. - Raised CHP-1125
+
+## BUGS FOUND ON PRODUCTION
+
+Private (
+https://app.clickup.com/t/8651091/CHP-1125
+)

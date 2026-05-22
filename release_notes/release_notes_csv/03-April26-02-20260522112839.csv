@@ -1,0 +1,71 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Deepti Vaidyula ,  @Harika Guntamukkala",,
+Metadata,Release Info,Release date,2026.04.03,,
+Metadata,Release Info,DB changes,Connect : No Change,,
+Metadata,Release Info,Platform,No Change,,
+Metadata,Release Info,Notification, No Change,,
+Metadata,Release Info,Branch,release/2026.04.03,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2026.04.03.1,,
+Artefacts,Artefacts,fn connect,2026.04.03.0,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,## QE DOCUMENTATION LINK,HTTPS://ALTIRLLC.SHAREPOINT.COM/:W:/R/SITES/ALTIR-CHIP1/SHARED%20DOCUMENTS/GENERAL/QUALITY%20ENGINEERING/PROJECT%20DOCUMENTS/CHIP1%20QE%20DOCUMENTATION.DOCX?D=W75141A22221E423A9DD922E367268BB5&CSF=1&WEB=1&E=GWICGH,,
+Deployed Items,PO,Implement the same for manufacture like SO. - Nikhil(requires xCRM change as well)- OK,,@Umamahesh,
+Deployed Items,PO,PO User name reconciliation - Nikhil- Couldn't validate as XCRM not sending event in stage,,@Umamahesh,
+Deployed Items,PO,"PO IB -> add a default role -> Buyer- Couldn't validate as XCRM not sending event in stage
+ui changes (",,@Umamahesh,
+Deployed Items,fixes,),,@Umamahesh,
+Deployed Items,fixes,Market Offers details navigating to sourcing offers list instead of market offers.,Verified,,
+Deployed Items,fixes,Default filter sourcing type filter issue on offer list page.,Verified,,
+Deployed Items,fixes,marker offerline - add missing fields and align with other screens.,Verified,,
+Deployed Items,fixes,PO Changes - 2026.04.03 (,,,
+Deployed Items,fixes,")
+,",,@Umamahesh,
+Deployed Items,Alexey's changelog,Add lock icon to Order Line Details accordion (,,,
+Deployed Items,Alexey's changelog,),,@Harika Guntamukkala,
+Deployed Items,Alexey's changelog,Add a dedicated indicator column to,,,
+Deployed Items,Alexey's changelog,CollapsibleIsland,,,
+Deployed Items,Alexey's changelog,grid layout for header actions,verified,,
+Deployed Items,Alexey's changelog,"Show a lock icon with ""Section is locked for editing"" tooltip on the Order Line Details accordion when the line is locked",verified,,
+Deployed Items,Alexey's changelog,"Support
+headerAction
+prop in",,,
+Deployed Items,Alexey's changelog,"CollapsibleIslandSummary
+and",,,
+Deployed Items,Alexey's changelog,OrderLineIslandTemplate,,,
+Deployed Items,Alexey's changelog,for rendering icons in the indicator column,verified,,
+Deployed Items,Alexey's changelog,Create RFQ - Currency field for Copy & paste (,,,
+Deployed Items,Alexey's changelog,")
+allow to set theme with URL query param (",verified,@Harika Guntamukkala,
+Deployed Items,feat,),,@Harika Guntamukkala,
+Deployed Items,feat,"Add
+?theme=light
+or
+?theme=dark",,,
+Deployed Items,feat,query parameter to any URL for MC1 or CRM to set theme.,verified - for both MC1 &  Apex,,"https://crm.dev.chip1.info/accounts/details?theme=light, https://crm.dev.chip1.info/accounts/details?theme=dark"
+Deployed Items,Update,P1 issues on SO (,,,
+Deployed Items,Update,),,@Harika Guntamukkala,
+Deployed Items,Update,Customer vendor Code and customer number on Create SO form with sync from account,verified,,
+Deployed Items,Update,Removed notes from OrderBillingIsland,verified,,
+Deployed Items,Update,Fix notifications layout (,,,
+Deployed Items,Update,),,@Deepti Vaidyula,
+Deployed Items,Update,"Changed notifications list layout (F - Figma, B - Before, A - After)",,,
+Deployed Items,Update,Changed notification toast layout,,,
+Deployed Items,Update,SO feedback - batch 1 (,,,
+Deployed Items,Update,),,@Deepti Vaidyula,
+Deployed Items,Fixed list,"When creating an quote, or sales order, the date code must always be mandatory field - Date code is not made mandatory when quote is created from RFQ",,,
+Deployed Items,Fixed list,"When creating a quote, the net terms should come from the account's billing and shipping details, not from the supplier's net terms",Verified,,
+Deployed Items,Fixed list,"When the phone number is fixed at the account level, the prefix is not displayed in the SO",Verified,,
+Deployed Items,Fixed list,"In the shipping contact field, all contacts from the entire database are shown instead of only relevant ones - Seeing contact from entire database instead of from account as per the PR
+(
+)",,,
+Deployed Items,Fixed list,"When an SO is created, the shipping options field is wrongly displayed with the default value: ""Ship Majority Required.""
+. Shipping options now don't fill any default value.",Verified,,
+Deployed Items,Fixed list,"When an SO has multiple lines and only a few lines are unlocked, users should be able to see exactly which lines were unlocked",Verified,,
+Deployed Items,QE remarks,Can see in order list view and details view as well,,,
+Deployed Items,QE remarks,"When creating a Quote, users should be able to modify MPN or add MPN manually",Verified,,
+Deployed Items,QE remarks,SO ,,@Deepti Vaidyula,
+Deployed Items,QE remarks,Manufacturer name (requires xCRM change as well),,,
+Deployed Items,QE remarks,Tax Percent,,,

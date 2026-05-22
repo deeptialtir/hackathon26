@@ -1,0 +1,59 @@
+Area,Title,Description,Priority,Status,Assigned To,Change,Type,Target Date,QE comments,Owner,Release Date,Created by,Created on
+Quality Control,"QC History and historical reports. Ability to have more reports ","QC history changes 
+
+* Add ability to open/initiate QC on an existing stock line (In the case of an old stock or stock older than 1 year)
+* Ability to show all related reports (current vs historical) on the stock line and also if need be they can add more - Support more than QC reports ",P0,Ready for Test,Phani Yedidi,UI,Warehouse,,,,,Sai Nagboth,"Feb 22, 2026"
+"WH - Stocks ",Create Stock Line,Allow creation of stock line - manual,P1,Ready for Test,Krupa Panchal,UI,Warehouse,"Mar 4, 2026",,,,Sai Nagboth,"Feb 23, 2026"
+"WH - Stocks ",,Closed flag similar to other entities on list views across Receiving lines various list views,P1,Ready for Test,Alexey Duduk,UI,Warehouse,"Mar 13, 2026","Even without selecting closed flag, closed items showing up in stock",,,Phani Yedidi,"Feb 25, 2026"
+"WH - Stocks ",Stock line/ Receiving line on PO & WH,"Any column on the list view that has filter support should have sort support ",P1,Ready for Test,Arvind Dhakar,,Warehouse,"May 20, 2026","Warehouse→Stock MPN view has no sort on any of the fields
+no columns on list (Date updated, users, roles, region, warehouse, lot) which are filters",,,Phani Yedidi,"Feb 26, 2026"
+"WH - Stocks ",Duplicate Stock Line,"Looks like Stock lines are getting duplicated as per users reported issue. Examples.
+
+* US26SL-72896 
+* US26SL-73200  
+* US26SL-73208
+
+Canny Item",P0,Ready for Test,Pranab Dutta,BE,Warehouse,"Mar 24, 2026","still an existing issue, listed in sheet",,,Sai Nagboth,"Mar 23, 2026"
+"WH - Stocks ",WH > STock > Stock line,"For the WH > stock > stock lines page, the logic should be changed to show all stock lines when quantity available is greater than 0 irrespective of the state",P0,Ready for Test,Arvind Dhakar,,Warehouse,,,,,Phani Yedidi,"Apr 24, 2026"
+WH - Receiving Lines,WH > RL,"Manual stock line creation from page fab actions ",P0,Ready for Test,Krupa Panchal,,Warehouse,,,,,Phani Yedidi,"Mar 2, 2026"
+WH - Receiving Lines,"inbound shipments - Length and Height fields ",Introduce Length and Height fields as well during the arrival check and in the line details as well along with weight information,P0,Ready for Test,Krupa Panchal,,Warehouse,,,,,Phani Yedidi,"May 18, 2026"
+Accounts → Lists,,"Accounts
+
+1. Engagement Metrics → For suppliers showing quoted? Does not make sense. Data bits issue? (BE) - P1 - Andrey/Srini/Nagababu
+2. Check for Active accounts marked as prospects.  (data team - In progress) - P0 - Andrey/Srini/Nagababu",P0,Ready for Test,"Andrey Kuznetcov,Srinivas Sanka,Nagababu Guddati",BE,Data,"Mar 30, 2026",,,,Dipak Majhi,"Mar 27, 2026"
+General,Offers,"There are a few data carry forward issues (high priority) reported by QE team:
+
+ 
+
+Record an Offer
+
+ExpiresOn - Not carried forward from RFQ❌
+
+Country of Origin - Not carried forward from Request offer❌",P0,Ready for Test,"Tejaswini Allagadda,Alexey Duduk,Vinay Bajjuri,Shivananda Sai",BE,Purchasing,"May 21, 2026",,,,Sai Nagboth,"Mar 26, 2026"
+Offers,Offer gaps on attributes,Reconcile offer attribute mapping between xCRM and Apex across various scenarios,P1,Ready for Test,Aditya Jain,BE,Purchasing,,"QE comments : ROHS,COO is not displayed as expected in xcrm.",,,Sai Nagboth,"Mar 10, 2026"
+Offers,Request & Record offers,Visual treatment : We need to highlight any MPN other than the one mentioned on the SR if there is a difference.,P0,Ready for Test,Arvind Dhakar,UI,Purchasing,,,,,Phani Yedidi,"May 18, 2026"
+Offers,Offer improvements,"* Set the default expiry to two weeks. On creation always calculate 2 weeks from the day and show it as the expiry date. 
+* Should rename the ""sourcing offer"" to ""Sourced Offer""
+* Currently inside the offer details for market offers we are showing label as ""market offer type"" > should be renamed to ""Offer type""
+* We need to bring a micro dashboard cards on offers page to show case various type of offers and the data associated to the type. Andrey need your help here on monday. ",P1,Ready for Test,Arvind Dhakar,"BE,UI",Purchasing,"May 19, 2026",,,,Phani Yedidi,"May 18, 2026"
+Offers,,need to take out the offers received status on update status line action when the status is offers requested/awaiting response. We already have it via record response. That’s failing and serving no purpose,P0,Ready for Test,Arvind Dhakar,,Purchasing,,,,,Phani Yedidi,"May 18, 2026"
+"Purchase Order ",,Closed flag similar to other entities on all list views for PO and PO line,P0,Ready for Test,Phani Yedidi,,Purchasing,,,,,Phani Yedidi,"Mar 26, 2026"
+Sourcing Request,Add allocation,"UI not filtering to only ""available"" stock lines — it is passing all lines",P0,Ready for Test,Arvind Dhakar,UI,Purchasing,"May 21, 2026",,,,Phani Yedidi,"May 19, 2026"
+Sourcing Request,,"Add 'Target Price per Unit' in SR
+
+(Canny List)
+
+",P0,Ready for Test,Arvind Dhakar,UI,Purchasing,"May 19, 2026",,,,Dipak Majhi,"Apr 27, 2026"
+Sourcing Request,,Implement auto-close logic for tasks when parent entity is closed,P0,Ready for Test,Aditya Jain,,Purchasing,,there is no way to close SR,,,Phani Yedidi,"Apr 6, 2026"
+Sourcing Request,"SR list view ","add tags to the list view of SRs? As they need the ability to hold, we are going to suggest them to add hold tag",P0,Ready for Test,Arvind Dhakar,UI,Purchasing,,,,,Phani Yedidi,"May 18, 2026"
+Sourcing Request,SR list view,"Bulk Send Offer Request from SR List View (Missing Feature) — No option to select multiple SRs and send a single offer request to a supplier. Must go inside each SR individually.
+
+
+
+Bulk offer request action to be supported from SR list view when the supplier is the same. If the supplier is not existing/or different we wont let them bulk create. We will create multiple individual offer requests for all the MPN’s selected. 1 per each MPN",P0,Ready for Test,"Arvind Dhakar,Aditya Jain",UI,Purchasing,"May 20, 2026",,,,Phani Yedidi,"Apr 22, 2026"
+Quote,Additional Attributes,"The below fields needs to be added in Quote. 
+
+image.png
+
+",P1,Ready for Test,"Shivananda Sai,Srinidhi Gundimi","UI,BE",Sales,"May 20, 2026",,Om Sreenivasan,,Om Sreenivasan,"May 19, 2026"
+Quote,Ability to pick and choose Quotes items,Users want an ability to pick and choose only few quote items and also have an ability to generate Quote PDF only for those options. Currently Quote PDF is created for all quote lines in the RFQ,P1,Ready for Test,"Shivananda Sai,Srinidhi Gundimi","UI,BE",Sales,"May 20, 2026",,Om Sreenivasan,,Om Sreenivasan,"May 19, 2026"

@@ -1,0 +1,46 @@
+# 27-APRIL26-HOTFIX:2
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+Release date
+ : 2026.04.28
+ 
+DB changes
+ : 
+Connect
+ : No change
+Platform
+ : No change
+Notification : 
+No change
+ 
+Branch
+  : hotfix/2026.04.24
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Transaction                            
+    : 2026.04.27.0
+Chip1 CRM WebUI                            
+    : 2026.04.27.3
+
+## LIST OF DEPLOYED ITEMS:
+
+Opportunity tab filtering fix
+
+## TESTING DONE:
+
+Verified all tab filters
+Verified opp page validations
+Ran basic sanity checks
+
+## OPEN ITEMS ON STAGE:
+
+loop.cloud.microsoft
+https://loop.cloud.microsoft/p/eyJ1IjoiaHR0cHM6Ly9hbHRpcmxsYy1teS5zaGFyZXBvaW50LmNvbS9wZXJzb25hbC9kdmFpZHl1bGFfYWx0aXJfY28%2FbmF2PWN6MGxNa1p3WlhKemIyNWhiQ1V5Um1SMllXbGtlWFZzWVY5aGJIUnBjbDlqYnlaa1BXSWhjMlY0VEdjM2JVNWhWWEY1VlhObk1rVjJMVTVMUTFsTlpERk9ZbkJOZUU5cVgxQmhUbWt4TlVGSFVWTkxPVzQyTFMxTFJsTlpjbWxJZG5rM2VFNTNiU1ptUFRBeFFsSkpVek5SU0ZoTlYxWTNTMDVOU1VkR1FreFpTakkwVFZOSVFreFJOVUVtWXowbE1rWW1abXgxYVdROU1TWmhQVlJsWVcxekpuQTlKVFF3Wm14MWFXUjRKVEpHYkc5dmNDMXdZV2RsTFdOdmJuUmhhVzVsY2c9PSJ9

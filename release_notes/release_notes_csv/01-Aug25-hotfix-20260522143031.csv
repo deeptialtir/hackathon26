@@ -1,0 +1,110 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,"@Umamahesh ,  @Deepti Vaidyula ,  @Harika Guntamukkala",,
+Metadata,Release Info,Release date,2025.08.01,,
+Metadata,Release Info,DB changes,Connect : No changes,,
+Metadata,Release Info,Platform,No changes,,
+Metadata,Release Info,Notification, No changes,,
+Metadata,Release Info,Branch,hotfix/2025.08.01,,
+Artefacts,Artefacts,Chip1 Transaction,2025.08.01.0,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2025.08.01.0,,
+Artefacts,Artefacts,Production Test Data,,,
+Artefacts,Artefacts,Update production test data generated here,https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0,,
+Artefacts,Artefacts,QE documentation link,https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh,,
+Deployed Items,Private ( https,"//app.clickup.com/t/8651091/CHP-2583
+)
+//app.clickup.com/t/8651091/CHP-2623
+)
+//app.clickup.com/t/8651091/CHP-2656
+)",,,
+Deployed Items,Private ( https,"Bugs in build
+//app.clickup.com/t/8651091/CHP-2667
+) --→ This is likely a data issue
+## MC1 SANITY TESTS",,,
+Deployed Items,mc1,Feature/Flow,,,
+Deployed Items,mc1,Stage,,,
+Deployed Items,mc1,Prod,,,
+Deployed Items,mc1,Remarks,,,
+Deployed Items,mc1,"New User Signup from mc1
+yes",,,
+Deployed Items,mc1,"Mc1 user invite - signup
+yes",,,
+Deployed Items,mc1,On stage should suffice,,,
+Deployed Items,mc1,"Upload Bom & Excess and verify in CRM
+yes
+yes",,,
+Deployed Items,mc1,"Manual RFQ
+yes
+yes",,,
+Deployed Items,mc1,"Active Quote (create,
+edit
+)
+yes
+yes",,,
+Deployed Items,mc1,"Sales Order
+(create,
+edit
+)
+yes
+yes",,,
+Deployed Items,mc1,"Shipping & invoice
+yes",,,
+Deployed Items,mc1,"Lead Account & Transfer
+yes (basic. creation and transfer)",,,
+Deployed Items,mc1,Bids,,,
+Deployed Items,mc1,"Parts Tracker
+yes
+yes",,,
+Deployed Items,mc1,"Search
+yes
+yes",,,
+Deployed Items,mc1,"Page Navigations
+yes
+yes",,,
+Deployed Items,mc1,"Edit Project
+yes
+yes",,,
+Deployed Items,mc1,"Notification Emails
+yes (quote, so)
+yes(quote&so)",,,
+Deployed Items,mc1,"Download excess and Bom Template, fill and upload.
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,Feature/Flow,,,
+Deployed Items,## CRM SANITY TESTS,Stage,,,
+Deployed Items,## CRM SANITY TESTS,Production,,,
+Deployed Items,## CRM SANITY TESTS,Remarks,,,
+Deployed Items,## CRM SANITY TESTS,"Create BOM in MC1, check in xcrm and new crm
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Create RFQ in MC1, check in xcrm and crm
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Upload BOM from CRM
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,Page Navigations,,,
+Deployed Items,## CRM SANITY TESTS,"Yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Deep links for Accounts, RFQs, Quotes and Orders
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Edit Project
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Global Search
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Filters
+yes
+yes(few)",,,
+Deployed Items,## CRM SANITY TESTS,"Sorting of tables
+yes
+yes (few)",,,
+Deployed Items,## CRM SANITY TESTS,"Page Search
+yes
+yes",,,
+Deployed Items,## CRM SANITY TESTS,"Download excess and Bom Template, fill and upload.
+yes
+yes",,,

@@ -1,0 +1,93 @@
+# 17-MARCH26_02
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+, 
+@Umamahesh
+ 
+@Harika Guntamukkala
+ 
+ 
+elease date
+ : 2026.03.017
+ 
+DB changes
+ : 
+Connect
+ : No change
+Platform
+ : release/2026.03.17
+Notification : 
+release/2026.03.17
+ 
+Branch
+  : release/2026.03.17
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+ 
+Chip1 Account  
+    
+                               
+  : 2026.03.17.1
+Chip1 Transaction  
+    
+                        
+  : 2026.03.17.1
+Chip1 CRM WebUI                 
+    
+           
+ : 2026.03.17.6
+fn-connect                              
+   
+             
+ : 2026.03.17.0
+fn-notification-common-service    
+: 2026.03.17.0
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+### FOLLOWING ITEMS ARE PART OF THE RELEASE
+
+Deployed  tickets as part of the 
+release 2026.03.11
+Validation of all the above release items will be performed from QE team once it is deployed 
+ 
+ 
+
+## WHAT'S TESTED FOR THE RELEASE?
+
+ 
+- open parts info pane for sales RFQ when hasAccessToDetails is false
+- All Accounts added under feature flag till stage
+- Fixed View PDF to open xCRM page
+- Export PDF fixed for quotes
+Fix for Buyer's KPI crash issue
+Updated condition for displaying start QC FAB
+Minor fix for updating stockline status when PO Line is marked as approved
+toggle offer match cards(based on feedback) only till Stage
+rohs field issue on 
+PO
+ and 
+Offer
+ line details
+ 
+Open issues on Stage
+Private (
+https://app.clickup.com/8651091/docs/880ak-50654/880ak-52214
+)
+Issues on prod:

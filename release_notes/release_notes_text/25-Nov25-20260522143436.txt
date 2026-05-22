@@ -1,0 +1,363 @@
+# 25-NOV25
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Umamahesh
+ , 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2025.11.25
+ 
+DB changes
+ : 
+Connect
+ : release/2025.11.25
+Platform
+ : No changes
+Notification : 
+No changes
+ 
+Branch
+  : release/2025.11.25
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Account        
+    
+                      
+    :
+ 
+2025.11.25.0
+Chip1 Transaction  
+    
+                      
+   :
+ 
+2025.11.25.0
+Chip1 Part                 
+    
+                      
+   :
+ 
+2025.11.25.1
+Chip1 CRM WebUI                 
+    
+         
+ :
+ 
+2025.11.25.0
+fn connect                 
+    
+                      
+  :
+ 
+2025.11.25.0
+ 
+Chip1 Transaction  
+    
+                      
+   :
+ 
+2025.11.25.2
+Chip1 CRM WebUI                 
+    
+         
+ :
+ 
+2025.11.25.1
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+ 
+CHP-3556
+: Add Part Share Functionality 
+CHP-3563
+: Sourcing Enhancement 21st Nov   
+fix the dark mode view for historical and market activity tab
+click anywhere in the group header should open and close the collapsible
+in market activity → separate columns for 'Stock | Allocated' and 'Available'
+add 'Date Code' column in historical and market activity tab
+CHP-3547
+: Sourcing Form 'starts with' by default selected UAT Review -> Nov19 -> 2a - 
+CHP-3546
+  :
+Update terminology from Sales Requests to RFQs across application -
+  
+Follow-Up related changes from UAT Review : To show account name and contact before first field than in title bar
+CHP-3567
+: Account List Reorder Columns
+CHP-3339
+: Offer details - Page & Details tab
+Offer Sync - Inbound 
+Pricing Enhancements refactored code
+CHP-3548
+ : RFQ Sync issues
+Automation:
+jenkins.chip1.info
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/chip1-ui-tests/52/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+jenkins.chip1.info
+https://jenkins.chip1.info/job/chip1-e2e-tests/job/crm-ui-tests/25/cucumber-html-reports_8aee61a9-c742-380b-b7bf-06c49080f4be/overview-features.html
+Bugs in build
+ 
+Missed in production:
+Offer inbound event is not reaching our system in production; example offer created in XCRM: 
+US25OF679667
+.- 
+XCRM team not deployed sync code
+Unable to request an offer; request fails with 
+An error occurred while processing the request.
+correlationId: 
+fdaaab08-2919-4d5a-baab-f1d8e5eee263- P
+atched by removing contact as non mandatory 
+The tab name in the Purchasing module should be renamed back to "
+ Request 
+from
+ RFQ”-P
+atched 
+ 
+
+## MC1 SANITY TESTS
+
+Note: The sanity tests to check will be selected based on the release
+Feature/Flow
+Stage
+Prod
+Remarks
+New User Signup from mc1
+ yes
+ --
+On prod, we test this on need basis
+Mc1 user invite - signup
+ yes
+ --
+On stage should suffice
+Upload Bom and verify in CRM
+ yes
+ yes
+ 
+Upload Excess and verify in CRM
+ yes
+ --
+ 
+Manual RFQ
+ yes
+ yes
+US25RQ22218 
+RFQ update
+  yes
+ yes
+ 
+RFQ - multiline
+  --
+ --
+ 
+Active Quote (create)
+ Yes
+yes 
+ 
+Active Quote (edit)
+ yes
+ yes
+ 
+Active quote - multiline
+   --
+-- 
+ 
+Sales Order (create)
+ yes
+yes 
+ 
+Sales Order (edit)
+ yes
+ yes
+ 
+Sales Order - multiline
+ yes
+ yes
+ 
+Quality Control (PO number)
+ yes
+ --
+On prod, we test this on need basis
+Invoice generation
+ yes
+ --
+On prod, we test this on need basis
+Invoice generation - shipping in 2 lots
+ --
+ --
+On prod, we test this on need basis
+Lead Account & Transfer
+ --
+ --
+ 
+Bids
+ --
+ --
+ 
+Parts Tracker
+ yes
+ yes
+ 
+Search
+ yes
+yes 
+ 
+Page Navigations
+ yes
+ yes
+ 
+Edit Project
+yes 
+ yes
+ 
+Notification Emails
+  --
+ --
+ 
+Download excess and Bom Template, fill and upload.
+ yes
+yes
+ 
+Conceirge Service
+ yes
+ --
+ 
+Sorting
+ yes
+ yes
+ 
+Filters
+yes 
+ yes
+ 
+Pricing - OEM secrets
+ yes
+ yes
+ 
+Pricing - IC
+ yes
+ yes
+ 
+Pricing - xcrm
+yes 
+ yes
+ 
+ 
+
+## CRM SANITY TESTS:
+
+Note: The sanity tests to check will be selected based on the release
+Feature/Flow
+Stage
+Production
+Remarks
+Create BOM in MC1, check in xcrm and new crm
+ yes
+ Yes
+https://crm.chip1.com/projects/6925763bb6359b6ad2a8305d
+ 
+Create RFQ in MC1, check in xcrm and crm
+ yes
+ Yes
+US25RQ22217 
+Upload BOM from CRM
+yes 
+ Yes
+https://crm.chip1.com/projects/6925754f65d2162a1fe60df7
+ 
+Page Navigations
+ yes
+ Yes
+ 
+Deep links for Accounts, RFQs, Quotes and Orders
+ yes
+ Yes
+US25RQ22217 - US25QU06689 - 
+US25SO01513
+Edit Project
+ yes
+ Yes
+ 
+Projects - price refresh
+yes 
+ Yes
+ 
+Global Search
+yes 
+ Yes
+ 
+Filters 
+ yes
+ Yes
+ 
+Sorting of tables
+ yes
+ Yes
+ 
+Page Search
+ yes
+ Yes
+ 
+Download excess and Bom Template, fill and upload.
+ yes
+ Yes
+ 
+Conceirge Service
+ yes
+ Yes
+ 
+Microdashboard counts
+ yes
+ Yes
+ 
+Share project and show in mc1
+ yes
+ Yes
+ 
+Create Contact from crm
+ yes
+ yes
+69257b01d251372bf58771ba 
+Invite Contact from crm
+ yes
+ yes
+ 
+Create Task
+ yes
+ yes
+ 
+FAB icons - for all
+ yes
+ yes
+ 
+FAB - icon actions - Take a note/Activity/Task
+ yes
+ yes
+ 
+Light mode - dark mode
+ yes
+ yes
+ 
+Saved Views
+ yes
+ yes

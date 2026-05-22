@@ -1,0 +1,19 @@
+Section,Category,Item_Description,Status_Value,Owner,Links
+Metadata,Release Info,Environment,Stage,,
+Metadata,Release Info,Status,Good,,
+Metadata,Release Info,Prod release owner,@Deepti Vaidyula @Harika Guntamukkala,,
+Metadata,Release Info,Release date,2026.05.14,,
+Metadata,Release Info,DB changes,Connect : release/2026.05.13,,
+Metadata,Release Info,Platform,release/2026.05.13,,
+Metadata,Release Info,Notification, No Change,,
+Metadata,Release Info,Branch,release/2026.05.13,,
+Artefacts,Artefacts,Chip1 Transaction,2026.05.13.4 2026.05.13.7,,
+Artefacts,Artefacts,Chip1 CRM WebUI,2026.05.13.6 2026.05.13.9,,
+Deployed Items,General,Charges entered in invoice created from shipment is not saving all the charges,,,
+Deployed Items,General,Skip credit card validations if payment term is credit card for SO creation,,,
+Deployed Items,General,Display the xCRM Invoice ID in Invoice list view,,,
+Deployed Items,## TESTING DONE,"Ran basic sanity checks
+## OPEN ISSUES ON STAGE",,,
+Deployed Items,## TESTING DONE,For newly created in Apex(OB) invoice xcrm id is not showing up,,,
+Deployed Items,## TESTING DONE,"US26INV00156
+in the list view/details page -> xcrm team needs to update on their end.",,,

@@ -1,0 +1,243 @@
+# 07-MAY-26
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+ 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2026.05.07
+ 
+DB changes
+ : 
+Connect
+ : release/2026.05.07
+Platform
+ : release/2026.05.07
+Notification : 
+release/2026.05.07
+ 
+Branch
+  : release/2026.05.07
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Account         
+    
+                        
+ : 2026.05.07.0
+Chip1 Part                 
+    
+                        
+ : 2026.05.07.0
+Chip1 Transaction  
+    
+                        
+ : 2026.05.07.2
+Chip1 CRM WebUI                 
+    
+          
+: 2026.05.07.2
+Chip1 WebUI                            
+    
+          
+: 2026.05.07.0
+fn connect                                          
+    : 2026.05.07.1
+fn notification common service     
+: 2026.05.07.0
+fn notification dispatcher                 
+: 2026.05.07.0
+
+## LIST OF DEPLOYED ITEMS
+
+@Deepti Vaidyula
+ 
+feat: enable loaders for shipment -> SO/PO lines tabs (
+#3878
+)
+QE note: Verified
+fix: use ELookupCategory.Rfq for qcLevel in usePurchaseOrderFields (
+#3887
+)
+QE note: Did sanity. Verified,
+Fix: Warehouse status filter  (
+#3885
+)
+QE note: Verified
+PO & Shipment Changes - 2026.05.06 (
+#3881
+) 
+**Purchase Order and Stock** 
+Remove temp location fields from across stock pages and status update modals
+Update grid nested layout for Arrival Check
+Enable lock only for PO Lines details accordion (rest other accordion should be editable at all times)
+Enable Editing Package details
+Rearrange weight unit field
+Hide shipping address column for inbound shipments list views
+QE note: Verified all 6 points
+Stock: Add ready to ship quantity (
+#3891
+)
+QE note: Verified
+Feat: add new columns to sr allocation modal (
+#3895
+) 
+Add following columns to allocation list on sr allocation modal 
+location, region, date code and rohs
+QE note: Verified
+Add sourcing request action on Offers tab of SO Line List view: Rename text to 'Request Purchase' instead of 'Request for Purchase'
+QE note: Verified
+PO Inbound Buyer sync 
+QE note: Verified
+ PO - OB, Tax Rate, Inco Terms, Shipping Account, Rohs Status 
+QE note: Verified
+ Account stage calculation (active/inactive/prospect) in account service 
+QE note: Verified
+ Stockline list view MPN and MFG dynamic filters as per user feedback 
+QE note: Verified
+ Refactor for stocklines in part sourcing; reduced API calls 
+QE note: did sanity
+ Notifications 
+ Notification for SR creation including Alternates 
+QE note: Verified
+ Notification for sales person on release of opportunity 
+QE note: Verified 2a89660b-db26-4440-b430-b63bdeb5fc95
+ Duplicate Allocation issue fix from BE 
+QE note: Still seeing the issue 
+Link
+ PO Line - Allocation accordion 
+QE note: Verified
+ Mapping description in Purchase Order PDF 
+QE note: Verified
+ Datagroups migration performance improvement, endpoint to calculate for specific entities 
+QE note: did sanity
+remove the "Add Sourcing Request" button (Block creation of SR)  on the UI when an SR already exists for that SO line /RFQ line.
+QE note: Verified
+SO > Offers tab > Rename the button "Add sourcing Request" to "Request Purchase"
+QE note: Verified
+Button visibility- 
+Only show "Request Purchase" if no SR exists for that SO/RFQ line.
+QE note: Verified
+On click - no SR exists - 
+Open Create SR modal. Default status to "Purchase Requested"
+QE note: Verified
+On click — SR exists with status Open (RFQ path); 
+trigger a status update on the existing SR to "Purchase Requested" similar to line action "Request for purchasing" option
+QE note: Verified
+changes to get all the charges from SO to shipment while creating
+QE note: Verified 
+Link
+@Harika Guntamukkala
+ 
+update: provide default empty strings for invoice payment form fields (
+#3892
+) - 
+Verified
+Ensure notes, website, and insuranceStatus fallback to empty strings instead of undefined or null during form submission.
+Feat : Added stockLines tab on invoice details page (
+#3884
+) 
+Verified
+Update : changes on Order Line Approval Card , Overview Card , label preferences field on Order Line details and Allocations  (
+#3883
+) 
+in Order Line Details -> Allocation Island summary for P it should be - if the value doesn't exist instead of 0 - 
+Verified
+When Order Line is not locked we are not showing some items on Order Checklist Card on Order Line details page 
+Verified
+remove the locking on Allocation details on Order Line details for now 
+Verified
+On Order Details Page , Order Overview card , for Date Ordered should use createdDate , and instead of Delivery Due date lets have Promised Delivered Date  for total Costs check the number of decimals displayed 
+Verified
+Order Line details summary , final Order costs summary value should also need to have same decimal's
+Verified
+for label preferences add a hover tooltip to display all the selected options 
+Verified
+when line is not locked account and document approvals now can be edited but change it to uneditable if line is no locked , so just disable like we do for param approval
+Verified
+RFQ - Regroup fields in Requirements island (
+#3879
+) 
+Part 1 from 
+#3843
+ - 
+Only #1 related to RFQ 
+Verified
+*See PR for images.*
+Quality Check - Allow comments and checkbox for images (
+#3882
+) 
+Verified
+*See PR for images.*
+Fixes: sr and po (
+#3886
+) 
+Part column width too narrow, part name getting cut off - RFQ view  
+Verified
+Alternative Chip font size too large - RFQ view  
+Verified
+SR creation flow from SO — "Request Purchase" instead of calling it "Add sourcing Request" on SO 
+Verified
+SR Allocation List - Add SO Id Column 
+Verified
+"Offered Unit Price" label should just say "Unit Price" - PO creation form 
+Verified
+Currency not defaulting on PO creation form 
+Verified(It should be loggedin users region based)
+Contact not mandatory on PO  should be made mandatory on PO creation form  
+Verified
+Approval clicking on radio button on hero should open the corresponding approval 
+Verified
+Refactor : added tooltip for infobit label , fixed the issue on RFQLine details people form (
+#3894
+) 
+In the RFQ details page (Inbound flow), the Account Info section shows an "Oops" error when created with a user (Abhinay/Nabeeha) where reconciliation didn't happen.
+Verified
+Under SO hero card, full value of "Promised Delivered Date" is not visible on hover. 
+Verified
+Add sourcing request action on Offers tab of SO Line List view: Rename text to 'Request Purchase' instead of 'Request for Purchase' 
+Verified
+xCRM Attributes & Sales user sync 
+Verified
+ Invoice Outbound 
+Not working
+dev only:
+Add a skill for working with API Contract (
+#3877
+) 
+Datagroups migration performance improvement, endpoint to calculate for specific entities
+Refactor: Tables - create simple single line cells and shortcut helper & migrate order lines columns (
+#3880
+) 
+Introduces 
+SingleLineLinkCell
+ and 
+SingleLineCopyCel
+ reusable cell components in 
+@chip1/components/table
+, along with a 
+getSimpleCell
+ API that covers the most common column patterns (plain text, links, copy cells) with consistent styling and minimal boilerplate.
+OrdersList
+ column definitions are migrated as the first consumer. Migration for other lists will follow in subsequent PRs. 
+Added 
+SingleLineLinkCell
+ and 
+SingleLineCopyCell
+ cell components
+Extended 
+getSimpleCells
+ with new link and copy variants
+Migrated 
+OrdersList
+ column definitions to use the new wrappers
+Added 
+simple-cells.md
+ doc with usage patterns

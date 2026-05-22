@@ -1,0 +1,244 @@
+# 26-JUN25
+
+Environment: Stage
+Status: Good
+Prod release owner: 
+@Deepti Vaidyula
+, 
+@Harika Guntamukkala
+ 
+Release date
+ : 2025.06.26
+DB changes
+ : 
+Connect
+ : No changes
+Platform
+ : release/2025.06.26
+Notification : 
+No changes
+Branch
+  : release/2025.06.26
+ 
+Components Involved
+ 
+& Artefacts
+: 
+ 
+Chip1 Account      
+                              : 2025.06.26.0
+Chip1 MC1 Core 
+                                : 2025.06.26.0
+Chip1 Part        
+                                    : 2025.06.26.1
+Chip1 Transaction  
+    
+                      
+   :
+ 
+2025.06.26.1
+Chip1 WebUI      
+                                 : 2025.06.26.0
+Chip1 CRM WebUI      
+                       : 2025.06.26.0
+
+## LIST OF ITEMS DEPLOYED:
+
+@Harika Guntamukkala
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-2214
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2182
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2201
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2295
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2195
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2216
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2292
+) - Updated feature flag for rfq creation on pricing tab in MC1 
+Private (
+https://app.clickup.com/t/8651091/CHP-2291
+)
+FundCode changes on MC1
+@Deepti Vaidyula
+ 
+Private (
+https://app.clickup.com/t/8651091/CHP-2138
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2193
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1994
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1786
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2052
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2074
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2282
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2144
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2119
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2145
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2146
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2218
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2247
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2277
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2295
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2314
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2316
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2297
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2147
+)
+Dev only
+Private (
+https://app.clickup.com/t/8651091/CHP-2271
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2304
+) - Add env-based feature flag, hide some features fon higher environments 
+Sentry - Filter out zoho script errors on MC1
+ 
+Merged as it is UX change but will be hidden for Production
+Private (
+https://app.clickup.com/t/8651091/CHP-2100
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2270
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1908
+)
+Not enabled on prod: Contact Details
+Private (
+https://app.clickup.com/t/8651091/CHP-2251
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1678
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-1678
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2152
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2121
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2178
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2181
+)
+Bugs found on stage:
+Private (
+https://app.clickup.com/t/8651091/CHP-2350
+)
+Private (
+https://app.clickup.com/t/8651091/CHP-2352
+)
+Bugs found on production:
+Private (
+https://app.clickup.com/t/8651091/CHP-2364
+)
+
+## SANITY TESTS
+
+ 
+Feature/Flow
+Stage
+Prod
+Remarks
+New User Signup from mc1
+ yes
+ Yes
+ 
+Mc1 user invite - signup
+ yes
+ Yes
+On stage should suffice
+Upload Bom & Excess and verify in CRM
+ yes
+ Yes
+ 
+Manual RFQ
+ yes
+ Yes
+ 
+Active Quote (create, edit)
+ yes
+ Yes
+ 
+Sales Order
+(create, edit)
+ yes
+ Yes
+ 
+Lead Account & Transfer
+ yes
+ Yes
+ 
+Bids
+ yes
+ Yes
+ 
+Parts Tracker
+ yes (notification not working. Event routing to be disabled)
+ Yes
+ 
+Search
+ yes
+ Yes
+ 
+Page Navigations
+ yes
+ Yes
+ 
+Edit Project
+ yes
+ Yes
+ 
+Notification Emails
+NA
+ Yes

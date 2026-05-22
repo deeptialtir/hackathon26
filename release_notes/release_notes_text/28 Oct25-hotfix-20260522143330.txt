@@ -1,0 +1,163 @@
+# 28 OCT25-HOTFIX
+
+Environment: Stage
+Status: Good - Conditional sign-off
+Prod release owner: 
+ 
+@Deepti Vaidyula
+ 
+DB changes
+ :
+Connect
+ : No changes
+Platform
+ : No changes
+Notification : 
+No changes
+ 
+Branch
+  : hotfix/2025.10.28
+ 
+Components Involved
+ 
+& Artefacts
+:
+ 
+Chip1 MC1 WebUI 
+                              : 2025.10.28.1
+Chip1 CRM WebUI   
+                           : 2025.10.28.1
+Chip1 Account      
+                               : 2025.10.28.1
+Chip1 Part        
+                                     : 2025.10.28.1
+Chip1 Transaction  
+    
+                      
+    :
+ 
+2025.10.28.5
+fn-connect     
+                                      : 2025.10.28.0
+ 
+Production Test Data:
+Update production test data generated here: 
+
+https://docs.google.com/spreadsheets/d/1jQQV8nW7Rlz6OD6bs4qdRfk517clUb5TRfFz47FoR3s/edit?gid=0#gid=0
+ 
+ 
+QE documentation link: 
+
+https://altirllc.sharepoint.com/:w:/r/sites/Altir-Chip1/Shared%20Documents/General/Quality%20Engineering/Project%20documents/Chip1%20QE%20Documentation.docx?d=w75141a22221e423a9dd922e367268bb5&csf=1&web=1&e=gWiCGh
+ 
+
+## LIST OF DEPLOYED ITEMS
+
+Backend changes
+RFQ Line item list populating Account for migrated records 
+Only UI changes 
+Dashboard minor adjustments
+add source and date columns in part health and update add alternative modal
+enable sorting on RFQ List
+enhance contact display in RFQ list
+pass sort from list loader
+update orders list to include incoCity in shippingInfo
+update rfq filters for account, contact, part and project list
+Fix: Accounts Parts Tab: Fixed part comparison action issue 
+UAT Refactorings on Contact List and Contact Details and News 
+Account details fab menu 
+ 
+More info on Part Activity and Part health changes
+ 
+Part Alternatives
+Replaced 
+Description
+ text field with 
+Notes
+ text area in the “Add Alternative” modal, along with an info tooltip (text: 
+Key Differences
+).
+Renamed column 
+Description
+ to
+ 
+Key Differences
+ (values for SE alternatives come from UI mapping, and for user-added alternatives from notes).
+Added a new column 
+Source
+ with values 
+Silicon Expert Alternatives
+ and 
+Other Alternatives
+.
+Part Health
+Updated navbar and breadcrumb text from 
+Health Report
+ to 
+Part Health
+.
+Added 
+Updated On
+ | 
+Previous
+ column.
+update rfq filters for account, contact, part and project list: Krupa
+ Added filters (Status, Account Owner, Contact, Requirement Level, Last Updated) to Account->RFQ Page
+ Added filters (Account, Status, Account Owner, Requirement Level, Last Updated) to Contact->RFQ Page
+ Added filters (Account, Status, Account Owner, Contact, Requirement Level, Last Updated) to Parts->RFQ Page
+ Added filters (Account, Status, Account Owner, Contact, Requirement Level, Last Updated) to Project->RFQ Page
+ 
+Fix: Accounts Parts Tab: Fixed part comparison action issue: 
+ Added compare parts modal to Account->Parts tab
+ 
+UAT Refactorings on Contact List and Contact Details and News: 
+ added fixed height for news contaciner
+ cloning filters from AccountList to ContactList
+ decrease the width of salutation field
+ decreasing the width of suffix too
+ remove validation on Account in CreateContact Modal
+ made dimensionUnits as non mandatory
+ moved setCreditInfo to a new line
+ refactored AccountCountryFilter to follow TagsFilter
+ made language not required
+Issues found on stage:
+Section Path
+Filters Not Working
+Missing Columns
+Account → RFQ Lines
+Account Owner, Requirement Level
+Requirement Level
+Contact → RFQ Lines
+Account Owner, Last Update
+Requirement Level
+Contact → RFQ
+Account Owner, Status
+Requirement Level
+Specific Part → RFQs → RFQ Lines
+Last Updated,  Contact
+Contact, Account, Requirement Level
+Specific Part → RFQs
+Status, Account Owner
+Requirement Level
+Projects → RFQs → RFQ Lines
+Last Updated, Account Owner
+Requirement Level
+Projects → RFQs
+Status, Account Owner
+Requirement Level
+Contacts
+Last Activity, Tags and Account Owner
+ 
+
+## MC1 SANITY TESTS
+
+Basic Sanity looks good
+
+## CRM SANITY TESTS
+
+Basic Sanity looks good
+ 
+
+## TESTING NOTES:
+
+Verified the hotfix change.
